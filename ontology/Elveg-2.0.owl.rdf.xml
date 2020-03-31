@@ -19,13 +19,15 @@
     <dcat:record>	
       <owl:NamedIndividual rdf:about="http://sosi.geonorge.no/sosi-modellregister/katalog-over-objekttypebegreper/Elveg.katalogpost"/>	
       <rdf:type rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>	
-      <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://sosi.geonorge.no/informasjonsmodeller/Elveg-2.0.owl.rdf.xml</dc:identifier>	
+      <!-- Generert med EA-vbskript listRDFXMLExample.vbs "2020-03-31T12:24:20Z"-->	
+      <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://sosi.geonorge.no/informasjonsmodeller/Elveg 2.0.owl.rdf.xml</dc:identifier>	
       <dc:title xml:lang="nb">SOSI-modellregister</dc:title>	
       <foaf:primaryTopic>	
-          <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Elveg-2.0">	
-          <rdf:type rdf:resource="http://data.norge.no/informationmodel/InformationModel"/>	
-  	
         <!-- Pakken med informasjonsmodellen -->	
+          <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Elveg 2.0">	
+          <rdf:type rdf:resource="http://data.norge.no/informationmodel/InformationModel"/>	
+            <dcatno:name xml:lang="nb">Elveg 2.0</dcatno:name>	
+  	
  	
           <!-- Pakkenavn Elveg 2.0  -->	
  	
@@ -150,7 +152,6 @@
             <dcatno:type rdf:resource="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/LineærPosisjonStrekning"/>	
             <dcatno:name xml:lang="nb">lineærPosisjon</dcatno:name>	
             <dcatno:propertyType>attributt</dcatno:propertyType>	
-            <xsd:maxOccurs rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">*</xsd:maxOccurs>	
             <xsd:minOccurs rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</xsd:minOccurs>	
             <dcatno:description xml:lang="nb">Angivelse av posisjon på det lineære objektet.</dcatno:description>	
             </owl:NamedIndividual>	
@@ -232,7 +233,6 @@
             <dcatno:type rdf:resource="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/LineærPosisjonStrekning"/>	
             <dcatno:name xml:lang="nb">lineærPosisjon</dcatno:name>	
             <dcatno:propertyType>attributt</dcatno:propertyType>	
-            <xsd:maxOccurs rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">*</xsd:maxOccurs>	
             <xsd:minOccurs rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</xsd:minOccurs>	
             <dcatno:description xml:lang="nb">Angivelse av posisjon på det lineære objektet.</dcatno:description>	
             </owl:NamedIndividual>	
@@ -410,7 +410,6 @@
             <dcatno:type rdf:resource="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/LineærPosisjonStrekning"/>	
             <dcatno:name xml:lang="nb">lineærPosisjon</dcatno:name>	
             <dcatno:propertyType>attributt</dcatno:propertyType>	
-            <xsd:maxOccurs rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">*</xsd:maxOccurs>	
             <xsd:minOccurs rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</xsd:minOccurs>	
             <dcatno:description xml:lang="nb">Angivelse av posisjon på det lineære objektet.</dcatno:description>	
             </owl:NamedIndividual>	
@@ -468,7 +467,6 @@
             <dcatno:type rdf:resource="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/LineærPosisjonStrekning"/>	
             <dcatno:name xml:lang="nb">lineærPosisjon</dcatno:name>	
             <dcatno:propertyType>attributt</dcatno:propertyType>	
-            <xsd:maxOccurs rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">*</xsd:maxOccurs>	
             <xsd:minOccurs rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</xsd:minOccurs>	
             <dcatno:description xml:lang="nb">Angivelse av posisjon på det lineære objektet.</dcatno:description>	
             </owl:NamedIndividual>	
@@ -610,7 +608,6 @@
             <dcatno:type rdf:resource="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/LineærPosisjonStrekning"/>	
             <dcatno:name xml:lang="nb">lineærPosisjon</dcatno:name>	
             <dcatno:propertyType>attributt</dcatno:propertyType>	
-            <xsd:maxOccurs rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">*</xsd:maxOccurs>	
             <xsd:minOccurs rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</xsd:minOccurs>	
             <dcatno:description xml:lang="nb">Angivelse av posisjon på det lineære objektet.</dcatno:description>	
             </owl:NamedIndividual>	
@@ -788,7 +785,6 @@
             <dcatno:type rdf:resource="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/LineærPosisjonStrekning"/>	
             <dcatno:name xml:lang="nb">lineærPosisjon</dcatno:name>	
             <dcatno:propertyType>attributt</dcatno:propertyType>	
-            <xsd:maxOccurs rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">*</xsd:maxOccurs>	
             <xsd:minOccurs rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</xsd:minOccurs>	
             <dcatno:description xml:lang="nb">Angivelse av posisjon på det lineære objektet.</dcatno:description>	
             </owl:NamedIndividual>	
@@ -846,7 +842,6 @@
             <dcatno:type rdf:resource="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/LineærPosisjonStrekning"/>	
             <dcatno:name xml:lang="nb">lineærPosisjon</dcatno:name>	
             <dcatno:propertyType>attributt</dcatno:propertyType>	
-            <xsd:maxOccurs rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">*</xsd:maxOccurs>	
             <xsd:minOccurs rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</xsd:minOccurs>	
             <dcatno:description xml:lang="nb">Angivelse av posisjon på det lineære objektet.</dcatno:description>	
             </owl:NamedIndividual>	
@@ -950,7 +945,6 @@
             <dcatno:type rdf:resource="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/LineærPosisjonStrekning"/>	
             <dcatno:name xml:lang="nb">lineærPosisjon</dcatno:name>	
             <dcatno:propertyType>attributt</dcatno:propertyType>	
-            <xsd:maxOccurs rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">*</xsd:maxOccurs>	
             <xsd:minOccurs rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</xsd:minOccurs>	
             <dcatno:description xml:lang="nb">Angivelse av posisjon på det lineære objektet.</dcatno:description>	
             </owl:NamedIndividual>	
@@ -1020,7 +1014,6 @@
             <dcatno:type rdf:resource="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/LineærPosisjonStrekning"/>	
             <dcatno:name xml:lang="nb">lineærPosisjon</dcatno:name>	
             <dcatno:propertyType>attributt</dcatno:propertyType>	
-            <xsd:maxOccurs rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">*</xsd:maxOccurs>	
             <xsd:minOccurs rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</xsd:minOccurs>	
             <dcatno:description xml:lang="nb">Angivelse av posisjon på det lineære objektet.</dcatno:description>	
             </owl:NamedIndividual>	
@@ -1054,7 +1047,6 @@
             <dcatno:type rdf:resource="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/LineærPosisjonStrekning"/>	
             <dcatno:name xml:lang="nb">lineærPosisjon</dcatno:name>	
             <dcatno:propertyType>attributt</dcatno:propertyType>	
-            <xsd:maxOccurs rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">*</xsd:maxOccurs>	
             <xsd:minOccurs rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</xsd:minOccurs>	
             <dcatno:description xml:lang="nb">Angivelse av posisjon på det lineære objektet.</dcatno:description>	
             </owl:NamedIndividual>	
@@ -1182,7 +1174,6 @@
             <dcatno:type rdf:resource="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/LineærPosisjonStrekning"/>	
             <dcatno:name xml:lang="nb">lineærPosisjon</dcatno:name>	
             <dcatno:propertyType>attributt</dcatno:propertyType>	
-            <xsd:maxOccurs rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">*</xsd:maxOccurs>	
             <xsd:minOccurs rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</xsd:minOccurs>	
             <dcatno:description xml:lang="nb">Angivelse av posisjon på det lineære objektet.</dcatno:description>	
             </owl:NamedIndividual>	
@@ -1408,7 +1399,6 @@
             <dcatno:type rdf:resource="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/LineærPosisjonStrekning"/>	
             <dcatno:name xml:lang="nb">lineærPosisjon</dcatno:name>	
             <dcatno:propertyType>attributt</dcatno:propertyType>	
-            <xsd:maxOccurs rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">*</xsd:maxOccurs>	
             <xsd:minOccurs rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</xsd:minOccurs>	
             <dcatno:description xml:lang="nb">Angivelse av posisjon på det lineære objektet.</dcatno:description>	
             </owl:NamedIndividual>	
@@ -1745,7 +1735,7 @@
             </owl:NamedIndividual>	
           </dcatno:hasProperty>	
  	
-          <dcatno:description xml:lang="nb">Abstrakt objekttype for nettverkslenker, med mulighet for å angi posisjon i en sekvens av lenker.    Merknad: Lenkens posisjon i et nettverk og skalering av lengde i forhold til geometrilengde  kan angis på flere alternative måter:       Kun startVerdi. Målt lengde og sluttverdi er lik geometrilengde             Kombinasjonen startVerdi-sluttVerdi. Målt lengde er lik differansen mellom disse egenskapene.         Kombinasjonen startVerdi-måltLengde. Sluttverdi er lik summen av disse egenskapene.         Kun måltLengde. startverdi er lik 0, og sluttverdi er lik målt lengde         Ingen av egenskapene angitt. Kun geometrien benyttes for beregning av posisjoner.            Realisering av INSPIRE Network:Link.</dcatno:description>	
+          <dcatno:description xml:lang="nb">Abstrakt objekttype for nettverkslenker, med mulighet for å angi posisjon i en sekvens av lenker.    Merknad: Lenkens posisjon i et nettverk og skalering av lengde i forhold til geometrilengde  kan angis på flere alternative måter:      Kun startVerdi. Målt lengde og sluttverdi er lik geometrilengde             Kombinasjonen startVerdi-sluttVerdi. Målt lengde er lik differansen mellom disse egenskapene.         Kombinasjonen startVerdi-måltLengde. Sluttverdi er lik summen av disse egenskapene.         Kun måltLengde. startverdi er lik 0, og sluttverdi er lik målt lengde         Ingen av egenskapene angitt. Kun geometrien benyttes for beregning av posisjoner.            Realisering av INSPIRE Network:Link.</dcatno:description>	
           <dcatno:modelElementType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objekttype</dcatno:modelElementType>	
           <dcatno:name xml:lang="nb">Lenke</dcatno:name>	
         </owl:NamedIndividual>	
@@ -2091,7 +2081,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Referanseretning/med">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">med</dcatno:name>	
+            <dcatno:name xml:lang="nb">med</dcatno:name>	
               <dcatno:description xml:lang="nb">Retning med geometrien</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2099,7 +2089,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Referanseretning/mot">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">mot</dcatno:name>	
+            <dcatno:name xml:lang="nb">mot</dcatno:name>	
               <dcatno:description xml:lang="nb">Retning mot geometrien</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2116,7 +2106,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeVeg/kanalisertVeg">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">kanalisertVeg</dcatno:name>	
+            <dcatno:name xml:lang="nb">kanalisertVeg</dcatno:name>	
               <dcatno:description xml:lang="nb">Kanalisert veg: veg som har fysisk adskilte kjørebaner med rekkverk eller annen fysisk barriere.  INSPIRE: FormOfWay=dualCarriageway</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2124,7 +2114,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeVeg/enkelBilveg">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">enkelBilveg</dcatno:name>	
+            <dcatno:name xml:lang="nb">enkelBilveg</dcatno:name>	
               <dcatno:description xml:lang="nb">Enkel bilveg: øvrige bilveger  INSPIRE: FormOfWay=singleCarriageway</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2132,7 +2122,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeVeg/rampe">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">rampe</dcatno:name>	
+            <dcatno:name xml:lang="nb">rampe</dcatno:name>	
               <dcatno:description xml:lang="nb">Rampe: veg for på- eller avkjøring av annen veg.  INSPIRE: FormOfWay=slipRoad</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2140,7 +2130,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeVeg/rundkjøring">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">rundkjøring</dcatno:name>	
+            <dcatno:name xml:lang="nb">rundkjøring</dcatno:name>	
               <dcatno:description xml:lang="nb">Rundkjøring.  INSPIRE: FormOfWay=roundabout</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2148,7 +2138,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeVeg/bilferje">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">bilferje</dcatno:name>	
+            <dcatno:name xml:lang="nb">bilferje</dcatno:name>	
               <dcatno:description xml:lang="nb">Bilferje: strekning trafikkert av bilferjer som del av vegnettet.  INSPIRE: FeatureType=FerryUse, FerryUseValue=cars</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2156,7 +2146,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeVeg/passasjerferje">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">passasjerferje</dcatno:name>	
+            <dcatno:name xml:lang="nb">passasjerferje</dcatno:name>	
               <dcatno:description xml:lang="nb">Passasjerferje: strekning trafikkert av passasjerferjer som del av nettverket.  INSPIRE: FeatureType=FerryUse, FerryUseValue=passengers</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2164,7 +2154,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeVeg/gangOgSykkelveg">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">gangOgSykkelveg</dcatno:name>	
+            <dcatno:name xml:lang="nb">gangOgSykkelveg</dcatno:name>	
               <dcatno:description xml:lang="nb">Gang- og sykkelveg: veg som er bestemt for gående, syklende eller kombinert gang- og sykkeltrafikk. Vegen er skilt fra annen veg med gressplen, grøft, gjerde, kantstein eller på annen måte. Normalt skiltet med skilt 522.  INSPIRE: FormOfWay=bicycleRoad</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2172,7 +2162,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeVeg/sykkelveg">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">sykkelveg</dcatno:name>	
+            <dcatno:name xml:lang="nb">sykkelveg</dcatno:name>	
               <dcatno:description xml:lang="nb">Sykkelveg: veg som er bestemt for syklende. Vegen er skilt fra annen veg med gressplen, grøft, gjerde, kantstein eller på annen måte. Normalt skiltet med skilt 520.  INSPIRE: FormOfWay=bicycleRoad</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2180,7 +2170,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeVeg/gangveg">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">gangveg</dcatno:name>	
+            <dcatno:name xml:lang="nb">gangveg</dcatno:name>	
               <dcatno:description xml:lang="nb">Gangveg: veg som er bestemt for gående. Vegen er skilt fra annen veg med gressplen, grøft, gjerde, kantstein eller på annen måte.  INSPIRE: FormOfWay=walkway</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2188,7 +2178,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeVeg/gatetun">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">gatetun</dcatno:name>	
+            <dcatno:name xml:lang="nb">gatetun</dcatno:name>	
               <dcatno:description xml:lang="nb">boliggate hvor det er iverksatt fysiske tiltak for å etablere et uteareal for alle trafikantkategorier, hvor all kjøring skjer på fotgjengernes vilkår.  </dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2196,7 +2186,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeVeg/gågate">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">gågate</dcatno:name>	
+            <dcatno:name xml:lang="nb">gågate</dcatno:name>	
               <dcatno:description xml:lang="nb">Gågate: område hvor det er forbudt å kjøre motorvogn og hvor trafikkreglenes bestemmelser om gågate gjelder. Skiltet med skilt 548.  INSPIRE:FormOfWay=pedestrianZone</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2204,7 +2194,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeVeg/gangfelt">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">gangfelt</dcatno:name>	
+            <dcatno:name xml:lang="nb">gangfelt</dcatno:name>	
               <dcatno:description xml:lang="nb">Gangfelt: kryssingssted for gående hvor trafikkreglenes bestemmelser om gangfelt gjelder. Oppmerket og eventuelt skiltet med skilt 516.  INSPIRE: FormOfWay=walkway</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2212,7 +2202,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeVeg/fortau">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">fortau</dcatno:name>	
+            <dcatno:name xml:lang="nb">fortau</dcatno:name>	
               <dcatno:description xml:lang="nb">Fortau: del av veg reservert for gående. Ligger høyere enn vegbanen og er adskilt fra denne med kantstein  INSPIRE: FormOfWay=walkway</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2220,7 +2210,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeVeg/trapp">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">trapp</dcatno:name>	
+            <dcatno:name xml:lang="nb">trapp</dcatno:name>	
               <dcatno:description xml:lang="nb">Trapp: trapp som naturlig inngår i nettverket</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2237,7 +2227,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Vegdetaljnivå/kjørebane">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">kjørebane</dcatno:name>	
+            <dcatno:name xml:lang="nb">kjørebane</dcatno:name>	
               <dcatno:description xml:lang="nb">del av veg som består av ett eller flere kjørefelt som ligger inntil hverandre og i samme plan</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2245,7 +2235,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Vegdetaljnivå/kjørefelt">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">kjørefelt</dcatno:name>	
+            <dcatno:name xml:lang="nb">kjørefelt</dcatno:name>	
               <dcatno:description xml:lang="nb">del av veg som er bestemt for en vognrekke</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2262,7 +2252,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Vegkategori/europaveg">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">europaveg</dcatno:name>	
+            <dcatno:name xml:lang="nb">europaveg</dcatno:name>	
               <dcatno:description xml:lang="nb">Europaveg. SVV er vegmyndighet. Unik nummerering ihht. internasjonale avtaler (AGR).</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2270,7 +2260,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Vegkategori/riksveg">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">riksveg</dcatno:name>	
+            <dcatno:name xml:lang="nb">riksveg</dcatno:name>	
               <dcatno:description xml:lang="nb">Riksveg. SVV er vegmyndighet. Unik nummerering på nasjonalt nivå.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2278,7 +2268,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Vegkategori/fylkesveg">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">fylkesveg</dcatno:name>	
+            <dcatno:name xml:lang="nb">fylkesveg</dcatno:name>	
               <dcatno:description xml:lang="nb">Fylkesveg. Fylkeskommunen er vegmyndighet. Unik nummerering på nasjonalt nivå.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2286,7 +2276,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Vegkategori/kommunalVeg">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">kommunalVeg</dcatno:name>	
+            <dcatno:name xml:lang="nb">kommunalVeg</dcatno:name>	
               <dcatno:description xml:lang="nb">Kommunal veg. Kommunen er vegmyndighet. Unik nummerering innenfor kommunen.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2294,7 +2284,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Vegkategori/privatVeg">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">privatVeg</dcatno:name>	
+            <dcatno:name xml:lang="nb">privatVeg</dcatno:name>	
               <dcatno:description xml:lang="nb">Privat veg. Evt. nummerering er unik innenfor kommunen.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2302,7 +2292,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Vegkategori/skogsveg">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">skogsveg</dcatno:name>	
+            <dcatno:name xml:lang="nb">skogsveg</dcatno:name>	
               <dcatno:description xml:lang="nb">Skogsveg. Private landbruksveger som brukes til skogbruksformål. Nummerering ihht ØKS.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2319,7 +2309,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/AdskilteLøp/med">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">med</dcatno:name>	
+            <dcatno:name xml:lang="nb">med</dcatno:name>	
               <dcatno:description xml:lang="nb">Medstrekning for adskilte løp der kjøreretning er med metreringsretning.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2327,7 +2317,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/AdskilteLøp/mot">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">mot</dcatno:name>	
+            <dcatno:name xml:lang="nb">mot</dcatno:name>	
               <dcatno:description xml:lang="nb">Motstrekning for adskilte løp der kjøreretning er mot metreringsretning.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2344,7 +2334,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Vegfase/eksisterendeVeg">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">eksisterendeVeg</dcatno:name>	
+            <dcatno:name xml:lang="nb">eksisterendeVeg</dcatno:name>	
               <dcatno:description xml:lang="nb">veg som er del av operativt vegnett</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2509,7 +2499,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Synbarhet/fulltSynligOgGjenfinnbarITerrenget">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">fulltSynligOgGjenfinnbarITerrenget</dcatno:name>	
+            <dcatno:name xml:lang="nb">fulltSynligOgGjenfinnbarITerrenget</dcatno:name>	
               <dcatno:description xml:lang="nb">Fullt ut synlig/gjenfinnbar i terrenget  Default</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2517,7 +2507,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Synbarhet/dårligGjenfinnbarITerrenget">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">dårligGjenfinnbarITerrenget</dcatno:name>	
+            <dcatno:name xml:lang="nb">dårligGjenfinnbarITerrenget</dcatno:name>	
               <dcatno:description xml:lang="nb">Dårlig gjenfinnbari terreng.  Forøvrig grei å innmåle. (Benyttes bl.a. for innmåling av ledninger på lukket grøft)</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2525,7 +2515,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Synbarhet/middelsSynligIFlybilde">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">middelsSynligIFlybilde</dcatno:name>	
+            <dcatno:name xml:lang="nb">middelsSynligIFlybilde</dcatno:name>	
               <dcatno:description xml:lang="nb">Middels synlig i flybilde/modell</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2533,7 +2523,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Synbarhet/dårligSynligIFlybilde">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">dårligSynligIFlybilde</dcatno:name>	
+            <dcatno:name xml:lang="nb">dårligSynligIFlybilde</dcatno:name>	
               <dcatno:description xml:lang="nb">Dårlig/ikke synlig i flybilde/modell</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2560,7 +2550,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Medium/iBygning">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">iBygning</dcatno:name>	
+            <dcatno:name xml:lang="nb">iBygning</dcatno:name>	
               <dcatno:description xml:lang="nb">I bygning/bygningsmessig anlegg</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2568,7 +2558,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Medium/tidvisUnderVann">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">tidvisUnderVann</dcatno:name>	
+            <dcatno:name xml:lang="nb">tidvisUnderVann</dcatno:name>	
               <dcatno:description xml:lang="nb">Tidvis under vann</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2576,7 +2566,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Medium/påIsbre">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">påIsbre</dcatno:name>	
+            <dcatno:name xml:lang="nb">påIsbre</dcatno:name>	
               <dcatno:description xml:lang="nb">På isbre</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2584,7 +2574,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Medium/underIsbre">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">underIsbre</dcatno:name>	
+            <dcatno:name xml:lang="nb">underIsbre</dcatno:name>	
               <dcatno:description xml:lang="nb">Under isbre</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2592,7 +2582,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Medium/iLuft">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">iLuft</dcatno:name>	
+            <dcatno:name xml:lang="nb">iLuft</dcatno:name>	
               <dcatno:description xml:lang="nb">I luft</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2600,7 +2590,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Medium/påVannoverflaten">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">påVannoverflaten</dcatno:name>	
+            <dcatno:name xml:lang="nb">påVannoverflaten</dcatno:name>	
               <dcatno:description xml:lang="nb">På vannoverflaten</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2608,7 +2598,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Medium/påSjøbunnen">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">påSjøbunnen</dcatno:name>	
+            <dcatno:name xml:lang="nb">påSjøbunnen</dcatno:name>	
               <dcatno:description xml:lang="nb">På sjøbunnen</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2616,7 +2606,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Medium/påTerrenget">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">påTerrenget</dcatno:name>	
+            <dcatno:name xml:lang="nb">påTerrenget</dcatno:name>	
               <dcatno:description xml:lang="nb">På terrenget/på bakkenivå. default</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2624,7 +2614,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Medium/underTerrenget">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">underTerrenget</dcatno:name>	
+            <dcatno:name xml:lang="nb">underTerrenget</dcatno:name>	
               <dcatno:description xml:lang="nb">Under terrenget</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2632,7 +2622,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Medium/alltidIVann">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">alltidIVann</dcatno:name>	
+            <dcatno:name xml:lang="nb">alltidIVann</dcatno:name>	
               <dcatno:description xml:lang="nb">Alltid i vann</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2640,7 +2630,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Medium/underSjøbunnen">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">underSjøbunnen</dcatno:name>	
+            <dcatno:name xml:lang="nb">underSjøbunnen</dcatno:name>	
               <dcatno:description xml:lang="nb">Under sjøbunnen</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2648,7 +2638,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Medium/ukjent">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">ukjent</dcatno:name>	
+            <dcatno:name xml:lang="nb">ukjent</dcatno:name>	
               <dcatno:description xml:lang="nb">ukjent</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2667,7 +2657,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Funksjon/betalingssperring">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">betalingssperring</dcatno:name>	
+            <dcatno:name xml:lang="nb">betalingssperring</dcatno:name>	
               <dcatno:description xml:lang="nb">Bom eller annen type vegsperring som kan åpnes ved betaling</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2675,7 +2665,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Funksjon/bussluse">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">bussluse</dcatno:name>	
+            <dcatno:name xml:lang="nb">bussluse</dcatno:name>	
               <dcatno:description xml:lang="nb">Grop i vegen som hindrer biltrafikk. Tilgjengelig for buss (brede kjøretøy)</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2683,7 +2673,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Funksjon/fjernstyrtSperring">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">fjernstyrtSperring</dcatno:name>	
+            <dcatno:name xml:lang="nb">fjernstyrtSperring</dcatno:name>	
               <dcatno:description xml:lang="nb">Bom eller annen type vegsperring som kan åpnes vha SMS, bombrikke, oppringning, vaktsentral e.l.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2691,7 +2681,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Funksjon/låstSperring">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">låstSperring</dcatno:name>	
+            <dcatno:name xml:lang="nb">låstSperring</dcatno:name>	
               <dcatno:description xml:lang="nb">Bom eller annen type vegsperring som kan åpnes med nøkkel eller kode</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2699,7 +2689,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Funksjon/trafikkavviser">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">trafikkavviser</dcatno:name>	
+            <dcatno:name xml:lang="nb">trafikkavviser</dcatno:name>	
               <dcatno:description xml:lang="nb">Stein, blokk, pullert, rørgelender eller andre vegsperringer som ikke kan flyttes eller åpnes uten verktøy eller store kjøretøyer.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2707,7 +2697,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Funksjon/ulåstSperring">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">ulåstSperring</dcatno:name>	
+            <dcatno:name xml:lang="nb">ulåstSperring</dcatno:name>	
               <dcatno:description xml:lang="nb">Bom eller annen type vegsperring som kan åpnes manuelt uten nøkkel eller kode</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2724,7 +2714,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/EierVegsperring/StatensVegvesen">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">StatensVegvesen</dcatno:name>	
+            <dcatno:name xml:lang="nb">StatensVegvesen</dcatno:name>	
               <dcatno:description xml:lang="nb">Stat, Statens vegvesen</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2732,7 +2722,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/EierVegsperring/NyeVeier">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">NyeVeier</dcatno:name>	
+            <dcatno:name xml:lang="nb">NyeVeier</dcatno:name>	
               <dcatno:description xml:lang="nb">Stat, Nye Veier</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2740,7 +2730,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/EierVegsperring/fylkeskommune">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">fylkeskommune</dcatno:name>	
+            <dcatno:name xml:lang="nb">fylkeskommune</dcatno:name>	
               <dcatno:description xml:lang="nb">Fylkeskommune</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2748,7 +2738,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/EierVegsperring/kommune">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">kommune</dcatno:name>	
+            <dcatno:name xml:lang="nb">kommune</dcatno:name>	
               <dcatno:description xml:lang="nb">Kommune</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2756,7 +2746,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/EierVegsperring/privat">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">privat</dcatno:name>	
+            <dcatno:name xml:lang="nb">privat</dcatno:name>	
               <dcatno:description xml:lang="nb">Privat</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2764,7 +2754,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/EierVegsperring/uavklart">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">uavklart</dcatno:name>	
+            <dcatno:name xml:lang="nb">uavklart</dcatno:name>	
               <dcatno:description xml:lang="nb">Verdi benyttes inntil det er avklart hvem som er eier (ingen verdi tolkes som at vegeier er eier).</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2781,7 +2771,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/FartsgrenseVerdi/5">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">5</dcatno:name>	
+            <dcatno:name xml:lang="nb">5</dcatno:name>	
               <dcatno:description xml:lang="nb">15</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2789,7 +2779,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/FartsgrenseVerdi/20">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">20</dcatno:name>	
+            <dcatno:name xml:lang="nb">20</dcatno:name>	
               <dcatno:description xml:lang="nb">20</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2797,7 +2787,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/FartsgrenseVerdi/30">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">30</dcatno:name>	
+            <dcatno:name xml:lang="nb">30</dcatno:name>	
               <dcatno:description xml:lang="nb">30</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2805,7 +2795,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/FartsgrenseVerdi/40">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">40</dcatno:name>	
+            <dcatno:name xml:lang="nb">40</dcatno:name>	
               <dcatno:description xml:lang="nb">40</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2813,7 +2803,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/FartsgrenseVerdi/50">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">50</dcatno:name>	
+            <dcatno:name xml:lang="nb">50</dcatno:name>	
               <dcatno:description xml:lang="nb">50</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2821,7 +2811,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/FartsgrenseVerdi/60">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">60</dcatno:name>	
+            <dcatno:name xml:lang="nb">60</dcatno:name>	
               <dcatno:description xml:lang="nb">60</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2829,7 +2819,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/FartsgrenseVerdi/70">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">70</dcatno:name>	
+            <dcatno:name xml:lang="nb">70</dcatno:name>	
               <dcatno:description xml:lang="nb">70</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2837,7 +2827,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/FartsgrenseVerdi/80">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">80</dcatno:name>	
+            <dcatno:name xml:lang="nb">80</dcatno:name>	
               <dcatno:description xml:lang="nb">80</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2845,7 +2835,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/FartsgrenseVerdi/90">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">90</dcatno:name>	
+            <dcatno:name xml:lang="nb">90</dcatno:name>	
               <dcatno:description xml:lang="nb">90</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2853,7 +2843,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/FartsgrenseVerdi/100">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">100</dcatno:name>	
+            <dcatno:name xml:lang="nb">100</dcatno:name>	
               <dcatno:description xml:lang="nb">100</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2861,7 +2851,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/FartsgrenseVerdi/110">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">110</dcatno:name>	
+            <dcatno:name xml:lang="nb">110</dcatno:name>	
               <dcatno:description xml:lang="nb">110</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2869,7 +2859,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/FartsgrenseVerdi/120">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">120</dcatno:name>	
+            <dcatno:name xml:lang="nb">120</dcatno:name>	
               <dcatno:description xml:lang="nb">120</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2886,7 +2876,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/FartsgrenseVerdiVariabel/20">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">20</dcatno:name>	
+            <dcatno:name xml:lang="nb">20</dcatno:name>	
               <dcatno:description xml:lang="nb">20</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2894,7 +2884,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/FartsgrenseVerdiVariabel/30">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">30</dcatno:name>	
+            <dcatno:name xml:lang="nb">30</dcatno:name>	
               <dcatno:description xml:lang="nb">30</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2902,7 +2892,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/FartsgrenseVerdiVariabel/40">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">40</dcatno:name>	
+            <dcatno:name xml:lang="nb">40</dcatno:name>	
               <dcatno:description xml:lang="nb">40</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2910,7 +2900,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/FartsgrenseVerdiVariabel/50">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">50</dcatno:name>	
+            <dcatno:name xml:lang="nb">50</dcatno:name>	
               <dcatno:description xml:lang="nb">50</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2918,7 +2908,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/FartsgrenseVerdiVariabel/60">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">60</dcatno:name>	
+            <dcatno:name xml:lang="nb">60</dcatno:name>	
               <dcatno:description xml:lang="nb">60</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2926,7 +2916,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/FartsgrenseVerdiVariabel/70">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">70</dcatno:name>	
+            <dcatno:name xml:lang="nb">70</dcatno:name>	
               <dcatno:description xml:lang="nb">70</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2934,7 +2924,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/FartsgrenseVerdiVariabel/80">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">80</dcatno:name>	
+            <dcatno:name xml:lang="nb">80</dcatno:name>	
               <dcatno:description xml:lang="nb">80</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2942,7 +2932,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/FartsgrenseVerdiVariabel/90">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">90</dcatno:name>	
+            <dcatno:name xml:lang="nb">90</dcatno:name>	
               <dcatno:description xml:lang="nb">90</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2950,7 +2940,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/FartsgrenseVerdiVariabel/100">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">100</dcatno:name>	
+            <dcatno:name xml:lang="nb">100</dcatno:name>	
               <dcatno:description xml:lang="nb">100</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2958,7 +2948,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/FartsgrenseVerdiVariabel/110">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">110</dcatno:name>	
+            <dcatno:name xml:lang="nb">110</dcatno:name>	
               <dcatno:description xml:lang="nb">110</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2966,7 +2956,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/FartsgrenseVerdiVariabel/120">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">120</dcatno:name>	
+            <dcatno:name xml:lang="nb">120</dcatno:name>	
               <dcatno:description xml:lang="nb">120</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2983,7 +2973,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/GjentakelsesintervallVærutsattVeg/flereGangerPerMåned">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">flereGangerPerMåned</dcatno:name>	
+            <dcatno:name xml:lang="nb">flereGangerPerMåned</dcatno:name>	
               <dcatno:description xml:lang="nb">Flere ganger per måned</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2991,7 +2981,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/GjentakelsesintervallVærutsattVeg/flereGangerPerÅr">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">flereGangerPerÅr</dcatno:name>	
+            <dcatno:name xml:lang="nb">flereGangerPerÅr</dcatno:name>	
               <dcatno:description xml:lang="nb">Flere ganger per år</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -2999,7 +2989,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/GjentakelsesintervallVærutsattVeg/fra1til2GangerÅrlig">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">fra1til2GangerÅrlig</dcatno:name>	
+            <dcatno:name xml:lang="nb">fra1til2GangerÅrlig</dcatno:name>	
               <dcatno:description xml:lang="nb">1-2 ganger årlig</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3007,7 +2997,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/GjentakelsesintervallVærutsattVeg/hver2til5År">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">hver2til5År</dcatno:name>	
+            <dcatno:name xml:lang="nb">hver2til5År</dcatno:name>	
               <dcatno:description xml:lang="nb">Hver 2.-5. år</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3015,7 +3005,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/GjentakelsesintervallVærutsattVeg/sjeldnereEnnHvert5År">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">sjeldnereEnnHvert5År</dcatno:name>	
+            <dcatno:name xml:lang="nb">sjeldnereEnnHvert5År</dcatno:name>	
               <dcatno:description xml:lang="nb">Sjeldnere enn hvert 5. år</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3032,7 +3022,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/KjøringTilEiendommeneTillatt/ja">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">ja</dcatno:name>	
+            <dcatno:name xml:lang="nb">ja</dcatno:name>	
               <dcatno:description xml:lang="nb">Ja</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3040,7 +3030,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/KjøringTilEiendommeneTillatt/nei">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">nei</dcatno:name>	
+            <dcatno:name xml:lang="nb">nei</dcatno:name>	
               <dcatno:description xml:lang="nb">Nei</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3057,7 +3047,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/KlasseLandbruksveg/helårsBilveg">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">helårsBilveg</dcatno:name>	
+            <dcatno:name xml:lang="nb">helårsBilveg</dcatno:name>	
               <dcatno:description xml:lang="nb">helårs bilveg som bygges i samarbeid med det offentlige slik at den senere kan inngå i det offentlige vegnett. Krav til geometrisk utforming m.m. skal være i samsvar med de spesifikasjoner Statens vegvesen har fastsatt for den avtalte vegklasse.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3065,7 +3055,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/KlasseLandbruksveg/helårsLandbruksbilveg">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">helårsLandbruksbilveg</dcatno:name>	
+            <dcatno:name xml:lang="nb">helårsLandbruksbilveg</dcatno:name>	
               <dcatno:description xml:lang="nb">helårs bilveg med høy standard som skal kunne trafikkeres med lass hele året. Denne vegklassen skal brukes på grendeveger med blandet trafikkgrunnlag og på skogsbilveger, gardsveger og seterveger med stor trafikkbelastning av tunge kjøretøyer.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3073,7 +3063,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/KlasseLandbruksveg/landbruksbilveg">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">landbruksbilveg</dcatno:name>	
+            <dcatno:name xml:lang="nb">landbruksbilveg</dcatno:name>	
               <dcatno:description xml:lang="nb">standarden for skogsbilveger med moderat til lavt trafikkgrunnlag, og for enkle gards- og seterveger. Vegen skal kunne trafikkeres med lass hele året, unntatt i teleløsningsperioden og i perioder med spesielt mye nedbør.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3081,7 +3071,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/KlasseLandbruksveg/sommerbilvegTømmerbilMedHenger">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">sommerbilvegTømmerbilMedHenger</dcatno:name>	
+            <dcatno:name xml:lang="nb">sommerbilvegTømmerbilMedHenger</dcatno:name>	
               <dcatno:description xml:lang="nb">bilveger som bygges for transport av tømmer i barmarksperioden, enkle seterveger etc. Vegklassen bør bare bygges i områder der tømmerkvantum og transportavstand tilsier biltransport, men der terrengforhold og tilgjengelige ressurser ikke gir økonomisk grunnlag for å bygge en helårsveg.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3089,7 +3079,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/KlasseLandbruksveg/sommerbilvegTømmerbilUtenHenger">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">sommerbilvegTømmerbilUtenHenger</dcatno:name>	
+            <dcatno:name xml:lang="nb">sommerbilvegTømmerbilUtenHenger</dcatno:name>	
               <dcatno:description xml:lang="nb">bilveger beregnet for tømmertransport med bil uten henger utelukkende i barmarksperioden. Vegklassen må bare bygges på steder der det ikke er teknisk mulig eller økonomisk forsvarlig å bygge en høyere vegstandard. Denne vegklassen skal bare benyttes i unntakstilfeller.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3097,7 +3087,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/KlasseLandbruksveg/vinterbilveg">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">vinterbilveg</dcatno:name>	
+            <dcatno:name xml:lang="nb">vinterbilveg</dcatno:name>	
               <dcatno:description xml:lang="nb">bilveger for tømmertransport på vinterføre, der vegens bæreevne baseres på tele og snø. Vegklassen egner seg i strøk med stabile vinterforhold og lange transportavstander, og på steder der tømmerdriftene kan konsentreres på enkelte år med flere års mellomrom. Vegklassen bør bare brukes der det ikke er økonomisk grunnlag for å bygge helårsveg, og der den videre skogbehandling ikke krever bedre vegstandard.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3105,7 +3095,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/KlasseLandbruksveg/traktorveg">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">traktorveg</dcatno:name>	
+            <dcatno:name xml:lang="nb">traktorveg</dcatno:name>	
               <dcatno:description xml:lang="nb">veger for transport av landbruksprodukter og tømmer med lastetraktor og landbrukstraktor med henger. Generelt skal disse vegene kunne nyttes til transport hele året unntatt i teleløsningen. Svake partier i undergrunnen må forsterkes med bærelag.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3113,7 +3103,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/KlasseLandbruksveg/enkelTraktorveg">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">enkelTraktorveg</dcatno:name>	
+            <dcatno:name xml:lang="nb">enkelTraktorveg</dcatno:name>	
               <dcatno:description xml:lang="nb">veger for slepkjøring av tømmer og transport av landbruksprodukter og redskap med landbrukstraktor eller annet lettere transportutstyr. Vegklassen omfatter enklere traktorveger som inngår i det permanente landbruksvegnettet og som medfører varige terrenginngrep. Standarden må i stor grad tilpasses det formål og transportutstyr vegen bygges for.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3130,7 +3120,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/MålemetodeHøydebegrensning/laser">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">laser</dcatno:name>	
+            <dcatno:name xml:lang="nb">laser</dcatno:name>	
               <dcatno:description xml:lang="nb">Laser</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3138,7 +3128,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/MålemetodeHøydebegrensning/målestav">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">målestav</dcatno:name>	
+            <dcatno:name xml:lang="nb">målestav</dcatno:name>	
               <dcatno:description xml:lang="nb">Målestav</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3146,7 +3136,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/MålemetodeHøydebegrensning/scanningAvHvelv">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">scanningAvHvelv</dcatno:name>	
+            <dcatno:name xml:lang="nb">scanningAvHvelv</dcatno:name>	
               <dcatno:description xml:lang="nb">Scanning av hvelv</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3154,7 +3144,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/MålemetodeHøydebegrensning/teoretiskGrunnlag">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">teoretiskGrunnlag</dcatno:name>	
+            <dcatno:name xml:lang="nb">teoretiskGrunnlag</dcatno:name>	
               <dcatno:description xml:lang="nb">Høyder er beregnet ut fra teoretisk grunnlag, f.eks digital 3D-modell</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3171,7 +3161,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Motorvegtype/motorveg">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">motorveg</dcatno:name>	
+            <dcatno:name xml:lang="nb">motorveg</dcatno:name>	
               <dcatno:description xml:lang="nb">Motorveg</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3179,7 +3169,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Motorvegtype/motortrafikkveg">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">motortrafikkveg</dcatno:name>	
+            <dcatno:name xml:lang="nb">motortrafikkveg</dcatno:name>	
               <dcatno:description xml:lang="nb">Motortrafikkveg</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3196,7 +3186,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Trafikkreguleringstype/forbudtForAlleKjøretøy">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">forbudtForAlleKjøretøy</dcatno:name>	
+            <dcatno:name xml:lang="nb">forbudtForAlleKjøretøy</dcatno:name>	
               <dcatno:description xml:lang="nb">Forbudt for alle kjøretøy</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3204,7 +3194,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Trafikkreguleringstype/forbudtForGående">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">forbudtForGående</dcatno:name>	
+            <dcatno:name xml:lang="nb">forbudtForGående</dcatno:name>	
               <dcatno:description xml:lang="nb">Forbudt for gående</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3212,7 +3202,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Trafikkreguleringstype/forbudtForGåendeOgSyklende">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">forbudtForGåendeOgSyklende</dcatno:name>	
+            <dcatno:name xml:lang="nb">forbudtForGåendeOgSyklende</dcatno:name>	
               <dcatno:description xml:lang="nb">Forbudt for gående og syklende, regulert vha skilt</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3220,7 +3210,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Trafikkreguleringstype/forbudtForLastebilOgTrekkbil">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">forbudtForLastebilOgTrekkbil</dcatno:name>	
+            <dcatno:name xml:lang="nb">forbudtForLastebilOgTrekkbil</dcatno:name>	
               <dcatno:description xml:lang="nb">Forbudt for lastebil og trekkbil</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3228,7 +3218,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Trafikkreguleringstype/forbudtForLastebilOgTrekkbilUnntattKjøringTilVirksomhetEllerAdresse">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">forbudtForLastebilOgTrekkbilUnntattKjøringTilVirksomhetEllerAdresse</dcatno:name>	
+            <dcatno:name xml:lang="nb">forbudtForLastebilOgTrekkbilUnntattKjøringTilVirksomhetEllerAdresse</dcatno:name>	
               <dcatno:description xml:lang="nb">Forbudt for lastebil og trekkbil unntatt kjøring til virksomhet eller adresse Virksomhet eller adresse spesifiseres som Merknad.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3236,7 +3226,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Trafikkreguleringstype/forbudtForMotorsykkel">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">forbudtForMotorsykkel</dcatno:name>	
+            <dcatno:name xml:lang="nb">forbudtForMotorsykkel</dcatno:name>	
               <dcatno:description xml:lang="nb">Forbudt for motorsykkel</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3244,7 +3234,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Trafikkreguleringstype/forbudtForMotorsykkelOgMoped">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">forbudtForMotorsykkelOgMoped</dcatno:name>	
+            <dcatno:name xml:lang="nb">forbudtForMotorsykkelOgMoped</dcatno:name>	
               <dcatno:description xml:lang="nb">Forbudt for motorsykkel og moped</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3252,7 +3242,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Trafikkreguleringstype/forbudtForMotortrafikk">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">forbudtForMotortrafikk</dcatno:name>	
+            <dcatno:name xml:lang="nb">forbudtForMotortrafikk</dcatno:name>	
               <dcatno:description xml:lang="nb">Forbudt for motortrafikk</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3260,7 +3250,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Trafikkreguleringstype/forbudtForMotortrafikkUnntattBuss">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">forbudtForMotortrafikkUnntattBuss</dcatno:name>	
+            <dcatno:name xml:lang="nb">forbudtForMotortrafikkUnntattBuss</dcatno:name>	
               <dcatno:description xml:lang="nb">Forbudt for motortrafikk unntatt buss</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3268,7 +3258,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Trafikkreguleringstype/forbudtForMotortrafikkUnntattBussOgTaxi">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">forbudtForMotortrafikkUnntattBussOgTaxi</dcatno:name>	
+            <dcatno:name xml:lang="nb">forbudtForMotortrafikkUnntattBussOgTaxi</dcatno:name>	
               <dcatno:description xml:lang="nb">Forbudt for motortrafikk unntatt buss og taxi</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3276,7 +3266,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Trafikkreguleringstype/forbudtForMotortrafikkUnntattMoped">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">forbudtForMotortrafikkUnntattMoped</dcatno:name>	
+            <dcatno:name xml:lang="nb">forbudtForMotortrafikkUnntattMoped</dcatno:name>	
               <dcatno:description xml:lang="nb">Forbudt for motortrafikk unntatt moped</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3284,7 +3274,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Trafikkreguleringstype/forbudtForMotortrafikkUnntattSpesiellMotorvogntype">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">forbudtForMotortrafikkUnntattSpesiellMotorvogntype</dcatno:name>	
+            <dcatno:name xml:lang="nb">forbudtForMotortrafikkUnntattSpesiellMotorvogntype</dcatno:name>	
               <dcatno:description xml:lang="nb">Forbudt for motortrafikk unntatt spesiell motorvogntype. Motorvogntype spesifiseres som Merknad.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3292,7 +3282,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Trafikkreguleringstype/forbudtForMotortrafikkUnntattTaxi">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">forbudtForMotortrafikkUnntattTaxi</dcatno:name>	
+            <dcatno:name xml:lang="nb">forbudtForMotortrafikkUnntattTaxi</dcatno:name>	
               <dcatno:description xml:lang="nb">Forbudt for motortrafikk unntatt taxi</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3300,7 +3290,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Trafikkreguleringstype/forbudtForMotortrafikkUnntattVaretransport">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">forbudtForMotortrafikkUnntattVaretransport</dcatno:name>	
+            <dcatno:name xml:lang="nb">forbudtForMotortrafikkUnntattVaretransport</dcatno:name>	
               <dcatno:description xml:lang="nb">Forbudt for motortrafikk unntatt varetransport</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3308,7 +3298,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Trafikkreguleringstype/forbudtForSyklende">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">forbudtForSyklende</dcatno:name>	
+            <dcatno:name xml:lang="nb">forbudtForSyklende</dcatno:name>	
               <dcatno:description xml:lang="nb">Forbudt for syklende, regulert vha skilt</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3316,7 +3306,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Trafikkreguleringstype/forbudtForTraktor">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">forbudtForTraktor</dcatno:name>	
+            <dcatno:name xml:lang="nb">forbudtForTraktor</dcatno:name>	
               <dcatno:description xml:lang="nb">Forbudt for traktor</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3324,7 +3314,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Trafikkreguleringstype/gjennomkjøringForbudt">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">gjennomkjøringForbudt</dcatno:name>	
+            <dcatno:name xml:lang="nb">gjennomkjøringForbudt</dcatno:name>	
               <dcatno:description xml:lang="nb">Gjennomkjøring forbudt</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3332,7 +3322,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Trafikkreguleringstype/gjennomkjøringForbudtForLastebilOgTrekkbil">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">gjennomkjøringForbudtForLastebilOgTrekkbil</dcatno:name>	
+            <dcatno:name xml:lang="nb">gjennomkjøringForbudtForLastebilOgTrekkbil</dcatno:name>	
               <dcatno:description xml:lang="nb">Gjennomkjøring forbudt for lastebil og trekkbil</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3340,7 +3330,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Trafikkreguleringstype/gjennomkjøringForbudtTilVegEllerGate">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">gjennomkjøringForbudtTilVegEllerGate</dcatno:name>	
+            <dcatno:name xml:lang="nb">gjennomkjøringForbudtTilVegEllerGate</dcatno:name>	
               <dcatno:description xml:lang="nb">Gjennomkjøring forbudt til veg eller gate. Veg eller gate som Merknad.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3348,7 +3338,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Trafikkreguleringstype/motortrafikkKunTillattForKjøringTilEiendommer">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">motortrafikkKunTillattForKjøringTilEiendommer</dcatno:name>	
+            <dcatno:name xml:lang="nb">motortrafikkKunTillattForKjøringTilEiendommer</dcatno:name>	
               <dcatno:description xml:lang="nb">Forbudt for motortrafikk, med unntak av kjøring til eiendommer.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3356,7 +3346,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Trafikkreguleringstype/motortrafikkKunTillattForKjøringTilVirksomhetEllerAdresse">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">motortrafikkKunTillattForKjøringTilVirksomhetEllerAdresse</dcatno:name>	
+            <dcatno:name xml:lang="nb">motortrafikkKunTillattForKjøringTilVirksomhetEllerAdresse</dcatno:name>	
               <dcatno:description xml:lang="nb">Motortrafikk kun tillatt for kjøring til virksomhet eller adresse. Virksomhet eller adresse spesifiseres som Merknad.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3364,7 +3354,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Trafikkreguleringstype/motortrafikkKunTillattForVaretransport">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">motortrafikkKunTillattForVaretransport</dcatno:name>	
+            <dcatno:name xml:lang="nb">motortrafikkKunTillattForVaretransport</dcatno:name>	
               <dcatno:description xml:lang="nb">Forbudt for motortrafikk, med unntak av varetransport</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3372,7 +3362,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Trafikkreguleringstype/motortrafikkKunTillattForVaretransportOgKjøringTilEiendommer">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">motortrafikkKunTillattForVaretransportOgKjøringTilEiendommer</dcatno:name>	
+            <dcatno:name xml:lang="nb">motortrafikkKunTillattForVaretransportOgKjøringTilEiendommer</dcatno:name>	
               <dcatno:description xml:lang="nb">Forbudt for motortrafikk, med unntak av varetransport og kjøring til eiendommer.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3380,7 +3370,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Trafikkreguleringstype/syklingMotKjøreretningenTillatt">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">syklingMotKjøreretningenTillatt</dcatno:name>	
+            <dcatno:name xml:lang="nb">syklingMotKjøreretningenTillatt</dcatno:name>	
               <dcatno:description xml:lang="nb">Sykling mot kjøreretning er tillatt, og dette er regulert vha skilt. Gjelder der det ikke er merket opp egne sykkelfelt.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3397,7 +3387,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeJernbanekryssing/vegUnder">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">vegUnder</dcatno:name>	
+            <dcatno:name xml:lang="nb">vegUnder</dcatno:name>	
               <dcatno:description xml:lang="nb">Veg under</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3405,7 +3395,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeJernbanekryssing/vegOver">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">vegOver</dcatno:name>	
+            <dcatno:name xml:lang="nb">vegOver</dcatno:name>	
               <dcatno:description xml:lang="nb">Veg over</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3413,7 +3403,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeJernbanekryssing/iPlan">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">iPlan</dcatno:name>	
+            <dcatno:name xml:lang="nb">iPlan</dcatno:name>	
               <dcatno:description xml:lang="nb">I plan</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3421,7 +3411,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeJernbanekryssing/iPlan_Lysregulert">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">iPlan_Lysregulert</dcatno:name>	
+            <dcatno:name xml:lang="nb">iPlan_Lysregulert</dcatno:name>	
               <dcatno:description xml:lang="nb">I plan, lysregulert</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3429,7 +3419,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeJernbanekryssing/iPlan_LysregulertOgBom">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">iPlan_LysregulertOgBom</dcatno:name>	
+            <dcatno:name xml:lang="nb">iPlan_LysregulertOgBom</dcatno:name>	
               <dcatno:description xml:lang="nb">I plan, lysregulert og bom</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3437,7 +3427,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeJernbanekryssing/iPlan_LysregulertBomHel">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">iPlan_LysregulertBomHel</dcatno:name>	
+            <dcatno:name xml:lang="nb">iPlan_LysregulertBomHel</dcatno:name>	
               <dcatno:description xml:lang="nb">I plan, lysregulert, bom, hel</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3445,7 +3435,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeJernbanekryssing/iPlan_LysregulertBomHalv">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">iPlan_LysregulertBomHalv</dcatno:name>	
+            <dcatno:name xml:lang="nb">iPlan_LysregulertBomHalv</dcatno:name>	
               <dcatno:description xml:lang="nb">I plan, lysregulert, bom, halv</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3453,7 +3443,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeJernbanekryssing/iPlan_LysregulertGrind">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">iPlan_LysregulertGrind</dcatno:name>	
+            <dcatno:name xml:lang="nb">iPlan_LysregulertGrind</dcatno:name>	
               <dcatno:description xml:lang="nb">I plan, lysregulert, grind</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3461,7 +3451,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeJernbanekryssing/iPlan_UtenSikring ">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">iPlan_UtenSikring </dcatno:name>	
+            <dcatno:name xml:lang="nb">iPlan_UtenSikring </dcatno:name>	
               <dcatno:description xml:lang="nb">I plan, uten sikring</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3478,7 +3468,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Vegklasse/0">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">0</dcatno:name>	
+            <dcatno:name xml:lang="nb">0</dcatno:name>	
               <dcatno:description xml:lang="nb">De viktigste vegene i et vegnettverk, f.eks. motorveger.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3486,7 +3476,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Vegklasse/1">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">1</dcatno:name>	
+            <dcatno:name xml:lang="nb">1</dcatno:name>	
               <dcatno:description xml:lang="nb">De nest viktigste vegene i et vegnettverk, f.eks. større riksveger.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3494,7 +3484,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Vegklasse/2">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">2</dcatno:name>	
+            <dcatno:name xml:lang="nb">2</dcatno:name>	
               <dcatno:description xml:lang="nb">De tredje viktigste vegene i et vegnettverk, f.eks. mindre riksveger.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3502,7 +3492,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Vegklasse/3">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">3</dcatno:name>	
+            <dcatno:name xml:lang="nb">3</dcatno:name>	
               <dcatno:description xml:lang="nb">De fjerde viktigste vegene i et vegnettverk, f.eks. større fylkesveger.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3510,7 +3500,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Vegklasse/4">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">4</dcatno:name>	
+            <dcatno:name xml:lang="nb">4</dcatno:name>	
               <dcatno:description xml:lang="nb">De femte viktigste vegene i et vegnettverk, f.eks. mindre fylkesveger.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3518,7 +3508,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Vegklasse/5">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">5</dcatno:name>	
+            <dcatno:name xml:lang="nb">5</dcatno:name>	
               <dcatno:description xml:lang="nb">De sjette viktigste vegene i et vegnettverk, f.eks. de minste fylkesvegene og viktige kommunale veger.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3526,7 +3516,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Vegklasse/6">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">6</dcatno:name>	
+            <dcatno:name xml:lang="nb">6</dcatno:name>	
               <dcatno:description xml:lang="nb">De sjuende viktigste vegene i et vegnettverk, f.eks. kommunale veger.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3534,7 +3524,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Vegklasse/7">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">7</dcatno:name>	
+            <dcatno:name xml:lang="nb">7</dcatno:name>	
               <dcatno:description xml:lang="nb">De åttende viktigste vegene i et vegnettverk, f.eks. private veger.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3542,7 +3532,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Vegklasse/8">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">8</dcatno:name>	
+            <dcatno:name xml:lang="nb">8</dcatno:name>	
               <dcatno:description xml:lang="nb">De niende viktigste vegene i et vegnettverk, f.eks. skogsbilveger.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3550,7 +3540,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Vegklasse/9">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">9</dcatno:name>	
+            <dcatno:name xml:lang="nb">9</dcatno:name>	
               <dcatno:description xml:lang="nb">De minst viktige vegene i et vegnettverk, f.eks. veger det ikke er anbefalt å kjøre på, men mulig å kjøre på.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3567,7 +3557,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/HovedproblemVærutsattVeg/snøfokk">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">snøfokk</dcatno:name>	
+            <dcatno:name xml:lang="nb">snøfokk</dcatno:name>	
               <dcatno:description xml:lang="nb">Problem med dårlig sikt og oppbygging av snøfonner, vind uten snø er mindre problematisk</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3575,7 +3565,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/HovedproblemVærutsattVeg/vind">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">vind</dcatno:name>	
+            <dcatno:name xml:lang="nb">vind</dcatno:name>	
               <dcatno:description xml:lang="nb">Problem med sterk vind selv om det ikke snør eller er bølger.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3583,7 +3573,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/HovedproblemVærutsattVeg/bølger">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">bølger</dcatno:name>	
+            <dcatno:name xml:lang="nb">bølger</dcatno:name>	
               <dcatno:description xml:lang="nb">Problem med bølger som slår over veg selv om det ikke nødvendigvis er stormflo</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3591,7 +3581,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/HovedproblemVærutsattVeg/stormflo">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">stormflo</dcatno:name>	
+            <dcatno:name xml:lang="nb">stormflo</dcatno:name>	
               <dcatno:description xml:lang="nb">Kan være problem med oversvømmelse av vegen (selv uten vind/bølger). Vurderes med tanke på stormflonivået i 2050</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3599,7 +3589,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/HovedproblemVærutsattVeg/flom">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">flom</dcatno:name>	
+            <dcatno:name xml:lang="nb">flom</dcatno:name>	
               <dcatno:description xml:lang="nb">Strekning utsatt for sterk vind og sandtransport som kan gi redusert sikt.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3607,7 +3597,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/HovedproblemVærutsattVeg/sandflukt">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">sandflukt</dcatno:name>	
+            <dcatno:name xml:lang="nb">sandflukt</dcatno:name>	
               <dcatno:description xml:lang="nb">Stor vannføring som kan føre til erosjon og/ eller oversvømmelse som er til hinder for trafikkavvikling. Kan være som følge av regn og/ eller snøsmelting.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3615,7 +3605,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/HovedproblemVærutsattVeg/isgang">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">isgang</dcatno:name>	
+            <dcatno:name xml:lang="nb">isgang</dcatno:name>	
               <dcatno:description xml:lang="nb">Det at isen i elver og innsjøer brekkes opp på grunn av økt vannføring, og føres med strømmen nedover vassdraget. Dette skaper periodevis  trafikale problemer på gitt vegstrekning</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3632,7 +3622,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeFartsgrenseVariabel/vinterfartsgrense">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">vinterfartsgrense</dcatno:name>	
+            <dcatno:name xml:lang="nb">vinterfartsgrense</dcatno:name>	
               <dcatno:description xml:lang="nb">Vinterfartsgrense</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3640,7 +3630,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeFartsgrenseVariabel/sommerfartsgrense">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">sommerfartsgrense</dcatno:name>	
+            <dcatno:name xml:lang="nb">sommerfartsgrense</dcatno:name>	
               <dcatno:description xml:lang="nb">Sommerfartsgrense</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3648,7 +3638,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeFartsgrenseVariabel/skole">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">skole</dcatno:name>	
+            <dcatno:name xml:lang="nb">skole</dcatno:name>	
               <dcatno:description xml:lang="nb">Skole</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3656,7 +3646,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeFartsgrenseVariabel/miljøfartsgrense">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">miljøfartsgrense</dcatno:name>	
+            <dcatno:name xml:lang="nb">miljøfartsgrense</dcatno:name>	
               <dcatno:description xml:lang="nb">Miljøfartsgrense</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3673,7 +3663,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeHinder/undergangBru">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">undergangBru</dcatno:name>	
+            <dcatno:name xml:lang="nb">undergangBru</dcatno:name>	
               <dcatno:description xml:lang="nb">Undergang/Bru</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3681,7 +3671,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeHinder/skredoverbygg">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">skredoverbygg</dcatno:name>	
+            <dcatno:name xml:lang="nb">skredoverbygg</dcatno:name>	
               <dcatno:description xml:lang="nb">Skredoverbygg</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3689,7 +3679,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeHinder/brustag">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">brustag</dcatno:name>	
+            <dcatno:name xml:lang="nb">brustag</dcatno:name>	
               <dcatno:description xml:lang="nb">Bru-stag</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3697,7 +3687,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeHinder/kjøreledning">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">kjøreledning</dcatno:name>	
+            <dcatno:name xml:lang="nb">kjøreledning</dcatno:name>	
               <dcatno:description xml:lang="nb">Kjøreledning</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3705,7 +3695,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeHinder/brukabler">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">brukabler</dcatno:name>	
+            <dcatno:name xml:lang="nb">brukabler</dcatno:name>	
               <dcatno:description xml:lang="nb">Kabel</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3713,7 +3703,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeHinder/kabel">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">kabel</dcatno:name>	
+            <dcatno:name xml:lang="nb">kabel</dcatno:name>	
               <dcatno:description xml:lang="nb">Brukabler</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3721,7 +3711,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeHinder/skiltportalWire">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">skiltportalWire</dcatno:name>	
+            <dcatno:name xml:lang="nb">skiltportalWire</dcatno:name>	
               <dcatno:description xml:lang="nb">Skiltportal/wire</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3729,7 +3719,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeHinder/ferjesamband">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">ferjesamband</dcatno:name>	
+            <dcatno:name xml:lang="nb">ferjesamband</dcatno:name>	
               <dcatno:description xml:lang="nb">Høydebegrensing på standard ferje på gitt ferjesamband</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3737,7 +3727,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeHinder/tunnel">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">tunnel</dcatno:name>	
+            <dcatno:name xml:lang="nb">tunnel</dcatno:name>	
               <dcatno:description xml:lang="nb">Tunnel</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3745,7 +3735,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeHinder/bygning">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">bygning</dcatno:name>	
+            <dcatno:name xml:lang="nb">bygning</dcatno:name>	
               <dcatno:description xml:lang="nb">Bygning</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3753,7 +3743,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeHinder/annetHinder">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">annetHinder</dcatno:name>	
+            <dcatno:name xml:lang="nb">annetHinder</dcatno:name>	
               <dcatno:description xml:lang="nb">Type høydebegrensing som ikke dekkes av de andre verdiene.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3770,7 +3760,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeVegsperring/låstBom">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">låstBom</dcatno:name>	
+            <dcatno:name xml:lang="nb">låstBom</dcatno:name>	
               <dcatno:description xml:lang="nb">Bom på tvers av vegen.  I permanent låst posisjon.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3778,7 +3768,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeVegsperring/rørgelender">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">rørgelender</dcatno:name>	
+            <dcatno:name xml:lang="nb">rørgelender</dcatno:name>	
               <dcatno:description xml:lang="nb">Rørgelender/trafikkgjerde plassert slik at det stenger for biltrafikk.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3786,7 +3776,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeVegsperring/steinblokk">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">steinblokk</dcatno:name>	
+            <dcatno:name xml:lang="nb">steinblokk</dcatno:name>	
               <dcatno:description xml:lang="nb">Steinblokker plassert slik at det stenger for biltrafikk.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3794,7 +3784,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeVegsperring/newJersey">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">newJersey</dcatno:name>	
+            <dcatno:name xml:lang="nb">newJersey</dcatno:name>	
               <dcatno:description xml:lang="nb">New Jersey-steiner o.l. plassert slik at det stenger for biltrafikk.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3802,7 +3792,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeVegsperring/betongkjegle">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">betongkjegle</dcatno:name>	
+            <dcatno:name xml:lang="nb">betongkjegle</dcatno:name>	
               <dcatno:description xml:lang="nb">Kjegle(r)/pullert(er) av betong plassert slik at det stenger for biltrafikk.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3810,7 +3800,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeVegsperring/bussluse">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">bussluse</dcatno:name>	
+            <dcatno:name xml:lang="nb">bussluse</dcatno:name>	
               <dcatno:description xml:lang="nb">Grop i vegen som hindrer biltrafikk.  Tilgjengelig for buss (brede kjøretøy)</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3818,7 +3808,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeVegsperring/trafikkavviser">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">trafikkavviser</dcatno:name>	
+            <dcatno:name xml:lang="nb">trafikkavviser</dcatno:name>	
               <dcatno:description xml:lang="nb">Stolper, steiner, blokker etc plassert i vegen eller i overgang mellom veg og fotgjengerareal for å stenge for biltrafikk (egen).</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3826,7 +3816,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeVegsperring/bilsperre">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">bilsperre</dcatno:name>	
+            <dcatno:name xml:lang="nb">bilsperre</dcatno:name>	
               <dcatno:description xml:lang="nb">Bilsperre</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3834,7 +3824,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/TypeVegsperring/bomMedAutomatiskÅpner">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">bomMedAutomatiskÅpner</dcatno:name>	
+            <dcatno:name xml:lang="nb">bomMedAutomatiskÅpner</dcatno:name>	
               <dcatno:description xml:lang="nb">Bom som åpner seg automatisk på signal fra kjøretøy</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3851,7 +3841,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Høyfjellsstrekning/ja">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">ja</dcatno:name>	
+            <dcatno:name xml:lang="nb">ja</dcatno:name>	
               <dcatno:description xml:lang="nb">Ja</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3859,7 +3849,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Høyfjellsstrekning/nei">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">nei</dcatno:name>	
+            <dcatno:name xml:lang="nb">nei</dcatno:name>	
               <dcatno:description xml:lang="nb">Nei</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3867,7 +3857,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Høyfjellsstrekning/uavklart">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">uavklart</dcatno:name>	
+            <dcatno:name xml:lang="nb">uavklart</dcatno:name>	
               <dcatno:description xml:lang="nb">Angis dersom det ikke er vurdert/tatt stilling til om det er høyfjellsstrekning eller ikke.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3884,7 +3874,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Ukedag/hverdager">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">hverdager</dcatno:name>	
+            <dcatno:name xml:lang="nb">hverdager</dcatno:name>	
               <dcatno:description xml:lang="nb">Mandag - Lørdag</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3892,7 +3882,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Ukedag/hverdagerUtenLørdag">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">hverdagerUtenLørdag</dcatno:name>	
+            <dcatno:name xml:lang="nb">hverdagerUtenLørdag</dcatno:name>	
               <dcatno:description xml:lang="nb">Mandag - Fredag</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3900,7 +3890,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Ukedag/lørdagOgSøndag">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">lørdagOgSøndag</dcatno:name>	
+            <dcatno:name xml:lang="nb">lørdagOgSøndag</dcatno:name>	
               <dcatno:description xml:lang="nb">Lørdag - Søndag</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3908,7 +3898,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Ukedag/mandag">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">mandag</dcatno:name>	
+            <dcatno:name xml:lang="nb">mandag</dcatno:name>	
               <dcatno:description xml:lang="nb">Mandag</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3916,7 +3906,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Ukedag/tirsdag">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">tirsdag</dcatno:name>	
+            <dcatno:name xml:lang="nb">tirsdag</dcatno:name>	
               <dcatno:description xml:lang="nb">Tirsdag</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3924,7 +3914,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Ukedag/onsdag">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">onsdag</dcatno:name>	
+            <dcatno:name xml:lang="nb">onsdag</dcatno:name>	
               <dcatno:description xml:lang="nb">Onsdag</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3932,7 +3922,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Ukedag/torsdag">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">torsdag</dcatno:name>	
+            <dcatno:name xml:lang="nb">torsdag</dcatno:name>	
               <dcatno:description xml:lang="nb">Torsdag</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3940,7 +3930,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Ukedag/fredag">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">fredag</dcatno:name>	
+            <dcatno:name xml:lang="nb">fredag</dcatno:name>	
               <dcatno:description xml:lang="nb">Fredag</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3948,7 +3938,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Ukedag/lørdag">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">lørdag</dcatno:name>	
+            <dcatno:name xml:lang="nb">lørdag</dcatno:name>	
               <dcatno:description xml:lang="nb">Lørdag</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3956,7 +3946,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Ukedag/søndag">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">søndag</dcatno:name>	
+            <dcatno:name xml:lang="nb">søndag</dcatno:name>	
               <dcatno:description xml:lang="nb">Søndag</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3973,7 +3963,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/StedligBeredskap/ja">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">ja</dcatno:name>	
+            <dcatno:name xml:lang="nb">ja</dcatno:name>	
               <dcatno:description xml:lang="nb">Ja</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -3981,7 +3971,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/StedligBeredskap/nei">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">nei</dcatno:name>	
+            <dcatno:name xml:lang="nb">nei</dcatno:name>	
               <dcatno:description xml:lang="nb">Nei</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -4000,7 +3990,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Retningskode/med">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">med</dcatno:name>	
+            <dcatno:name xml:lang="nb">med</dcatno:name>	
               <dcatno:description xml:lang="nb">Retning med geometrien</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -4008,7 +3998,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Retningskode/mot">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">mot</dcatno:name>	
+            <dcatno:name xml:lang="nb">mot</dcatno:name>	
               <dcatno:description xml:lang="nb">Retning mot geometrien</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -4025,7 +4015,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Høydeposisjon/over">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">over</dcatno:name>	
+            <dcatno:name xml:lang="nb">over</dcatno:name>	
               <dcatno:description xml:lang="nb">Over: LEVEL_OVER_T  Ligger over.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -4033,7 +4023,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Høydeposisjon/på">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">på</dcatno:name>	
+            <dcatno:name xml:lang="nb">på</dcatno:name>	
               <dcatno:description xml:lang="nb">På: LEVEL_ON_T  Ligger på.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -4041,7 +4031,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Høydeposisjon/under">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">under</dcatno:name>	
+            <dcatno:name xml:lang="nb">under</dcatno:name>	
               <dcatno:description xml:lang="nb">Under: LEVEL_UNDER_T  Ligger under.</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -4217,7 +4207,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Sideposisjon/venstre">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">venstre</dcatno:name>	
+            <dcatno:name xml:lang="nb">venstre</dcatno:name>	
               <dcatno:description xml:lang="nb">Venstre: Angir at vegobjektet er stedfestet på venstre side av vegen (LEFT)</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -4225,7 +4215,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Sideposisjon/høyre">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">høyre</dcatno:name>	
+            <dcatno:name xml:lang="nb">høyre</dcatno:name>	
               <dcatno:description xml:lang="nb">Høyre: Angir at vegobjektet er stedfestet på høyre side av vegen. (RIGHT)</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -4233,7 +4223,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Sideposisjon/høyreOgVenstre">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">høyreOgVenstre</dcatno:name>	
+            <dcatno:name xml:lang="nb">høyreOgVenstre</dcatno:name>	
               <dcatno:description xml:lang="nb">Høyre og venstre: Angir at vegobjektet er stedfestet delvis på høyre og delvis på venstre side av vegen (LEFT_AND_RIGHT)</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -4241,7 +4231,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Sideposisjon/midten">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">midten</dcatno:name>	
+            <dcatno:name xml:lang="nb">midten</dcatno:name>	
               <dcatno:description xml:lang="nb">Midten: Angir at vegobjektet er stedfestet på midtrabatt (MIDDLE)</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -4249,7 +4239,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Sideposisjon/kryssende">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">kryssende</dcatno:name>	
+            <dcatno:name xml:lang="nb">kryssende</dcatno:name>	
               <dcatno:description xml:lang="nb">Kryssende: Angir at vegobjektet krysser vegen. (CROSSING)</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -4257,7 +4247,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Sideposisjon/midten_Venstre">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">midten_Venstre</dcatno:name>	
+            <dcatno:name xml:lang="nb">midten_Venstre</dcatno:name>	
               <dcatno:description xml:lang="nb">Midten, venstre: Angir at vegobjektet er stedfestet på venstre side av midtrabatt (MIDDLE_LEFT)</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -4265,7 +4255,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Sideposisjon/midten_Høyre">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">midten_Høyre</dcatno:name>	
+            <dcatno:name xml:lang="nb">midten_Høyre</dcatno:name>	
               <dcatno:description xml:lang="nb">Midten, høyre: Angir at vegobjektet er stedfestet på høyre side av midtrabatt (MIDDLE_RIGHT)</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -4273,7 +4263,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Sideposisjon/venstreTilfart">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">venstreTilfart</dcatno:name>	
+            <dcatno:name xml:lang="nb">venstreTilfart</dcatno:name>	
               <dcatno:description xml:lang="nb">Venstre tilfart: Angir at vegobjektet er stedfestet i tilknytning til sideveg/avkjørsel på venstre side av vegen (LEFT_ACCESS)</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -4281,7 +4271,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Sideposisjon/høyreTilfart">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">høyreTilfart</dcatno:name>	
+            <dcatno:name xml:lang="nb">høyreTilfart</dcatno:name>	
               <dcatno:description xml:lang="nb">Høyre tilfart: Angir at vegobjektet er stedfestet i tilknytning til sideveg/avkjørsel på høyre side av vegen (RIGHT_ACCESS)</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -4289,7 +4279,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Sideposisjon/rundkjøring_Senter">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">rundkjøring_Senter</dcatno:name>	
+            <dcatno:name xml:lang="nb">rundkjøring_Senter</dcatno:name>	
               <dcatno:description xml:lang="nb">Rundkjøring, senter: Angir at vegobjektet er stedfestet på sentraløya i rundkjøring (ROUNDABOUT_CENTRE)</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -4297,7 +4287,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/Sideposisjon/langs">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">langs</dcatno:name>	
+            <dcatno:name xml:lang="nb">langs</dcatno:name>	
               <dcatno:description xml:lang="nb">Langs: Angir at vegobjektet ligger langs med vegen (LONGITUDINAL)</dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -4314,7 +4304,7 @@
           <dcatno:containsCodename>	
             <owl:NamedIndividual rdf:about="http://skjema.geonorge.no/SOSI/produktspesifikasjon/Elveg/2.0/LineærReferanseMetode/normalisert">	
               <rdf:type rdf:resource="http://data.norge.no/informationmodel/Codename"/>	
-              <dcatno:name xml:lang="nb">normalisert</dcatno:name>	
+            <dcatno:name xml:lang="nb">normalisert</dcatno:name>	
               <dcatno:description xml:lang="nb">posisjon fra start av nettverkselementet, angitt som et desimaltall mellom 0 og 1, i forhold til start (0) og slutt (1) på nettverkselementet (lenken)    Merknad:   ISO19148: LR_LinearReferencingMethod:     type: "Interpolative"     units: "0..1"    </dcatno:description>	
             </owl:NamedIndividual>	
           </dcatno:containsCodename>	
@@ -4328,4 +4318,4 @@
       </foaf:primaryTopic>	
     </dcat:record>	
   </owl:NamedIndividual>	
-</rdf:RDF>	
+</rdf:RDF>
