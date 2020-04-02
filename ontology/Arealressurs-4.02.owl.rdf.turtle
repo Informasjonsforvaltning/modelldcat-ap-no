@@ -1,0 +1,1028 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns0: <http://data.norge.no/informationmodel/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://sosi.geonorge.no/sosi-modellregister/katalog-over-objekttypebegreper>
+  a owl:NamedIndividual, dcat:Catalog ;
+  dc:description "Katalog over elementer fra geomatikknorges UML-modeller"@nb ;
+  dc:publisher <http://sosi.geonorge.no/sosi-modellregister/katalog-over-objekttypebegreper> ;
+  dc:title "SOSI-modellregister"@nb ;
+  dcat:record <http://sosi.geonorge.no/sosi-modellregister/katalog-over-objekttypebegreper/FKB-AR5.katalogpost>, [ a rdf:type ], [ a dc:identifier ], [ a dc:title ], [
+    a foaf:primaryTopic ;
+    owl:NamedIndividual [ a rdf:type ], [ a <http://data.norge.no/informationmodel/name> ], <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursArealtype>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursAvgrensingType>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursFlate>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrense>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrenseFiktiv>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrunnforhold>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursKartstandard>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursSkogbonitet>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursTreslag>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Fellesegenskaper>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/FellesegenskaperFiktiv>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/KantUtsnitt>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Kopidata>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Posisjonskvalitet>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Registreringsversjon>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Synbarhet>
+  ] .
+
+<http://sosi.geonorge.no/sosi-modellregister/katalog-over-objekttypebegreper/FKB-AR5.katalogpost> a owl:NamedIndividual .
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursArealtype>
+  a owl:NamedIndividual, <http://data.norge.no/informationmodel/CodeList> ;
+  ns0:containsCodename <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursArealtype/Bebygd>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursArealtype/Samferdsel>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursArealtype/Fulldyrka jord>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursArealtype/Overflatedyrka jord>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursArealtype/Innmarksbeite>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursArealtype/Skog>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursArealtype/Åpen fastmark>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursArealtype/Myr>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursArealtype/Snøisbre>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursArealtype/Vann>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursArealtype/Ikke kartlagt> ;
+  ns0:description "hovedinndeling etter kriterier for vegetasjon, naturlig drenering og kulturpåvirkning      -- Definition - -   main categorization according to criteria for vegetation, natural drainage and cultural impact"@nb ;
+  ns0:modelElementType "kodeliste"^^xsd:string ;
+  ns0:name "ArealressursArealtype"@nb, "AreaResourceAreaType"@en .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursArealtype/Bebygd>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Bebygd"@nb, "Developed area"@en ;
+  ns0:description "areal som er utbygd eller i betydelig grad opparbeida, samt tilstøtende arealer som i funksjon er nært knytta til bebyggelsen    -- Definition --   area which has been developed or significantly built up, along with adjacent areas with functions closely related to the development"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursArealtype/Samferdsel>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Samferdsel"@nb, "Communications/traffic"@en ;
+  ns0:description "areal som brukes til samferdsel    -- Definition --   area used for communications/traffic"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursArealtype/Fulldyrka jord>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Fulldyrka jord"@nb, "Fully cultivated land"@en ;
+  ns0:description "jordbruksareal som er dyrka til vanlig pløyedybde, og som kan benyttes til åkervekster eller til eng, og som kan fornyes ved pløying    -- Definition --   farmland which is cultivated at ordinary ploughing depth, and which may be used for field crops or as meadow, or which may be reconditioned by ploughing."@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursArealtype/Overflatedyrka jord>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Overflatedyrka jord"@nb, "Superficially cultivated land"@en ;
+  ns0:description "jordbruksareal som for det meste er rydda og jevna i overflata, slik at maskinell høsting er mulig    -- Definition --   farmland which is mostly cleared and where the surface has been evened out, allowing for mechanical harvesting"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursArealtype/Innmarksbeite>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Innmarksbeite"@nb, "Home fields grazing land"@en ;
+  ns0:description "jordbruksareal som kan benyttes som beite, men som ikke kan høstes maskinelt. Minst 50 % av arealet skal være dekt av grasarter    -- Definition --   farmland which can be used as grazing land, but which cannot be machine-harvested At least 50% of the acreage must be covered by some type of grass"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursArealtype/Skog>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Skog"@nb, "Forest"@en ;
+  ns0:description "areal med minst 6 trær per dekar som er eller kan bli 5 meter høye, og disse bør være jevnt fordelt på arealet.    -- Definition --   area with at least 60 trees per hectare which are or  may become 5 metres tall, and which should be evenly distributed over the area"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursArealtype/Åpen fastmark>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Åpen fastmark"@nb, "Open firm ground"@en ;
+  ns0:description "fastmark som ikke er jordbruksareal, skog, bebygd eller samferdsel    -- Definition --   firm ground which is not farmland, forest, developed or usedfor communications purposes"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursArealtype/Myr>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Myr"@nb, "Marsh"@en ;
+  ns0:description "areal med myrvegetasjon og minst 30 cm tjukt torvlag    -- Definition --   area with marsh vegetation and a peat layer at least 30 cmthick"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursArealtype/Snøisbre>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Snøisbre"@nb, "Snowy glacier??"@en ;
+  ns0:description "blanding av snø og isbre som ikke smelter i løpet av sommeren    -- Definition --   mix of snow and ice which does not melt during the summer"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursArealtype/Vann>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Vann"@nb, "Water"@en ;
+  ns0:description "uspesifisert vannflate    -- Definition --   unspecified water surface"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursArealtype/Ikke kartlagt>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Ikke kartlagt"@nb, "Not surveyed"@en ;
+  ns0:description "areal som har ukjent beskaffenhet.    -- Definition --   area of unknown character."@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursAvgrensingType>
+  a owl:NamedIndividual, ns0:CodeList ;
+  ns0:containsCodename <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursAvgrensingType/ArealressursGrense>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursAvgrensingType/IkkeKartlagtgrense>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursAvgrensingType/Isbregrense>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursAvgrensingType/Lagringsenhetgrense>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursAvgrensingType/Samferdselsgrense>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursAvgrensingType/Vanngrense> ;
+  ns0:description "informasjon om grense som er henta fra annet datasett      -- Definition - -   information relating to boundary retrieved from another set of data"@nb ;
+  ns0:modelElementType "kodeliste"^^xsd:string ;
+  ns0:name "ArealressursAvgrensingType"@nb, "AreaResourceDelimitationType"@en .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursAvgrensingType/ArealressursGrense>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "ArealressursGrense"@nb, "AreaResourceBoundary"@en ;
+  ns0:description "grense mot annet arealressurskartlagt areal    -- Definition --   boundary toward another area resource surveyed area"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursAvgrensingType/IkkeKartlagtgrense>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "IkkeKartlagtgrense"@nb, "NonSurveyedBoundary"@en ;
+  ns0:description "grense mot ikke kartlagt område    -- Definition --   boundary on a non-surveyed area"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursAvgrensingType/Isbregrense>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Isbregrense"@nb, "GlacierBoundary"@en ;
+  ns0:description "grense mot isbre    -- Definition --   boundary on a glacier"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursAvgrensingType/Lagringsenhetgrense>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Lagringsenhetgrense"@nb, "Storage Unit Boundary"@en ;
+  ns0:description "grense for lagringsenhet    -- Definition --   boundary for storage unit"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursAvgrensingType/Samferdselsgrense>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Samferdselsgrense"@nb, "Traffic boundary"@en ;
+  ns0:description "grense mot samferdselsområde    -- Definition --   boundary on traffic area"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursAvgrensingType/Vanngrense>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Vanngrense"@nb, "Water boundary"@en ;
+  ns0:description "grense mot vann    -- Definition --   boundary on water"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursFlate>
+  a owl:NamedIndividual, ns0:ModelElement ;
+  ns0:isSubtypeOf <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Fellesegenskaper> ;
+  ns0:hasProperty <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursFlate/område>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursFlate/arealtype>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursFlate/skogbonitet>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursFlate/treslag>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursFlate/grunnforhold>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursFlate/kartstandard>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursFlate/kantutsnittavgrensning>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursFlate/avgrensning>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursFlate/fiktivavgrensning> ;
+  ns0:description "et sammenhengende areal som er tilordnet de samme egenskapsverdiene i henhold til et Arealressursklassifikasjonssystem      -- Definition --   a continuous area which has been assigned the same attribute values in accordance with an area resource classification system"@nb ;
+  ns0:modelElementType "objekttype"^^xsd:string ;
+  ns0:name "ArealressursFlate"@nb, "AreaResourceSurface"@en .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursFlate/område>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/geometri/Flate> ;
+  ns0:name "område"@nb, "extent"@en ;
+  ns0:propertyType "attributt" ;
+  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "1"^^xsd:nonNegativeInteger ;
+  ns0:description "objektets utstrekning    -- Definition --   area over which an object extends"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursFlate/arealtype>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursArealtype> ;
+  ns0:name "arealtype"@nb, "areaType"@en ;
+  ns0:propertyType "attributt" ;
+  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "1"^^xsd:nonNegativeInteger ;
+  ns0:description "hovedinndeling etter kriterier for vegetasjon, naturlig drenering og kulturpåvirkning    -- Definition --   main categorization according to criteria for vegetation, natural drainage and cultural impact"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursFlate/skogbonitet>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursSkogbonitet> ;
+  ns0:name "skogbonitet"@nb, "forestSiteQuality"@en ;
+  ns0:propertyType "attributt" ;
+  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "1"^^xsd:nonNegativeInteger ;
+  ns0:description "inndeling etter arealets evne til å produsere trevirke    -- Definition --   categorization according to the ability of the area to produce wood"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursFlate/treslag>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursTreslag> ;
+  ns0:name "treslag"@nb, "type of wood"@en ;
+  ns0:propertyType "attributt" ;
+  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "1"^^xsd:nonNegativeInteger ;
+  ns0:description "inndeling etter fordeling av kronedekket mellom bartrær og lauvtrær    -- Definition --    categorization according to the distribution of crown cover between coniferous and deciduous trees"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursFlate/grunnforhold>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrunnforhold> ;
+  ns0:name "grunnforhold"@nb, "groundConditions"@en ;
+  ns0:propertyType "attributt" ;
+  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "1"^^xsd:nonNegativeInteger ;
+  ns0:description "inndeling etter tjukkelse, type og fordeling av jorddekket    -- Definition --   categorization according to thickness, type and distribution of soil cover"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursFlate/kartstandard>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursKartstandard> ;
+  ns0:name "kartstandard"@nb, "mapStandard"@en ;
+  ns0:propertyType "attributt" ;
+  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "1"^^xsd:nonNegativeInteger ;
+  ns0:description "informasjon om hvilket klassifikasjonssystem som er brukt    -- Definition --   information concerning which classification system has been used"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursFlate/kantutsnittavgrensning>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/KantUtsnitt> ;
+  ns0:name "kantutsnittavgrensning"@nb ;
+  ns0:propertyType "rolle" ;
+  xsd:minOccurs "0"^^xsd:nonNegativeInteger ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursFlate/avgrensning>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrense> ;
+  ns0:name "avgrensning"@nb, "boundary"@en ;
+  ns0:propertyType "rolle" ;
+  xsd:minOccurs "0"^^xsd:nonNegativeInteger ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursFlate/fiktivavgrensning>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrenseFiktiv> ;
+  ns0:name "fiktivavgrensning"@nb ;
+  ns0:propertyType "rolle" ;
+  xsd:minOccurs "0"^^xsd:nonNegativeInteger ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrense>
+  a owl:NamedIndividual, ns0:ModelElement ;
+  ns0:isSubtypeOf <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Fellesegenskaper> ;
+  ns0:hasProperty <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrense/grense>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrense/avgrensingType>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrense/> ;
+  ns0:description "avgrensing for en eller to arealressursflater      -- Definition --   delimitation for one or two area resource surfaces"@nb ;
+  ns0:modelElementType "objekttype"^^xsd:string ;
+  ns0:name "ArealressursGrense"@nb, "AreaResourceBoundary"@en .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrense/grense>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/geometri/Kurve> ;
+  ns0:name "grense"@nb, "border"@en ;
+  ns0:propertyType "attributt" ;
+  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "1"^^xsd:nonNegativeInteger ;
+  ns0:description "forløp som følger overgang mellom ulike fenomener    -- Definition --   course follwing the transition between different real world phenomena"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrense/avgrensingType>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursAvgrensingType> ;
+  ns0:name "avgrensingType"@nb, "delimitationType"@en ;
+  ns0:propertyType "attributt" ;
+  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "0"^^xsd:nonNegativeInteger ;
+  ns0:description "informasjon om grense som er henta fra annet datasett    -- Definition --   information relating to boundaries retrieved from other datasets"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrense/>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursFlate> ;
+  ns0:name ""@nb ;
+  ns0:propertyType "rolle" ;
+  xsd:maxOccurs "2"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "1"^^xsd:nonNegativeInteger ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrenseFiktiv>
+  a owl:NamedIndividual, ns0:ModelElement ;
+  ns0:isSubtypeOf <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/FellesegenskaperFiktiv> ;
+  ns0:hasProperty <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrenseFiktiv/grense>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrenseFiktiv/> ;
+  ns0:description "avgrensing mellom to arealressursflater som har like egenskapsverdier      -- Definition --   delimitation between two area resource surfaces with identical attribute values"@nb ;
+  ns0:modelElementType "objekttype"^^xsd:string ;
+  ns0:name "ArealressursGrenseFiktiv"@nb, "AreaResourceBoundaryFictitious"@en .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrenseFiktiv/grense>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/geometri/Kurve> ;
+  ns0:name "grense"@nb, "border"@en ;
+  ns0:propertyType "attributt" ;
+  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "1"^^xsd:nonNegativeInteger ;
+  ns0:description "forløp som følger overgang mellom ulike fenomener    -- Definition --   course follwing the transition between different real world phenomena"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrenseFiktiv/>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursFlate> ;
+  ns0:name ""@nb ;
+  ns0:propertyType "rolle" ;
+  xsd:maxOccurs "2"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "1"^^xsd:nonNegativeInteger ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrunnforhold>
+  a owl:NamedIndividual, ns0:CodeList ;
+  ns0:containsCodename <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrunnforhold/Blokkmark>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrunnforhold/Fjell i dagen>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrunnforhold/Grunnlendt>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrunnforhold/Jorddekt>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrunnforhold/Organiske jordlag>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrunnforhold/Ikke relevant>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrunnforhold/Ikke registrert> ;
+  ns0:description "inndeling etter tjukkelse, type og fordeling av jorddekket      -- Definition - -   categorization according to thickness, type and distribution of the soil cover"@nb ;
+  ns0:modelElementType "kodeliste"^^xsd:string ;
+  ns0:name "ArealressursGrunnforhold"@nb, "AreaResourceSoilConditions"@en .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrunnforhold/Blokkmark>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Blokkmark"@nb, "Boulder land"@en ;
+  ns0:description "areal der overflata i hovedsak er dekt med steinblokker.    -- Definition --   area which is mainly covered with boulders"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrunnforhold/Fjell i dagen>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Fjell i dagen"@nb, "Exposed bedrock"@en ;
+  ns0:description "areal der mer enn 50 % er bart fjell og mindre enn 10 % har jord dypere enn 30 cm.    -- Definition --   area where more than 50% is exposed bedrock, and less than 10% has a soil depth of more than 30 cm"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrunnforhold/Grunnlendt>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Grunnlendt"@nb, "Shallow soil"@en ;
+  ns0:description "areal der mer enn 50 % har mindre jorddybde enn 30 cm, men som ikke kan klassifiseres som fjell i dagen.    -- Definition --   area where more than 50% has a soil depth of less than 30 cm, but which cannot be classified as exposed bedrock."@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrunnforhold/Jorddekt>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Jorddekt"@nb, "Soil-covered"@en ;
+  ns0:description "fastmark der mer enn 50 % av arealet har større jorddybde enn 30 cm    -- Definition --   firm ground where more than 50% of the acreage has a soil depth of more than 30 cm"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrunnforhold/Organiske jordlag>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Organiske jordlag"@nb, "Organic soil"@en ;
+  ns0:description "areal som har et organisk jordlag tjukkere enn 30 cm (20 cm)    -- Definition --   area with a layer of organic soil thicker than 30 cm (20 cm)"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrunnforhold/Ikke relevant>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Ikke relevant"@nb, "Not relevant"@en ;
+  ns0:description "opplysning om grunnforhold er ikke relevant.    -- Definition --   information concerning soil conditions is not relevant"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursGrunnforhold/Ikke registrert>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Ikke registrert"@nb, "Not registered"@en ;
+  ns0:description "opplysning om grunnforhold er ikke registrert.    -- Definition --   information concerning ground conditions has not been registered"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursKartstandard>
+  a owl:NamedIndividual, ns0:CodeList ;
+  ns0:containsCodename <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursKartstandard/AR5>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursKartstandard/AR5 enkel> ;
+  ns0:description "informasjon om hvilket klassifikasjonssystem som er brukt      -- Definition - -   information concerning which classification system has been used"@nb ;
+  ns0:modelElementType "kodeliste"^^xsd:string ;
+  ns0:name "ArealressursKartstandard"@nb, "AreaResourceMapStandard"@en .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursKartstandard/AR5>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "AR5"@nb, "AR5"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursKartstandard/AR5 enkel>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "AR5 enkel"@nb, "AR5 single"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursSkogbonitet>
+  a owl:NamedIndividual, ns0:CodeList ;
+  ns0:containsCodename <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursSkogbonitet/Impediment>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursSkogbonitet/Lav>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursSkogbonitet/Middels>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursSkogbonitet/Høy>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursSkogbonitet/Særs høy>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursSkogbonitet/Ikke relevant>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursSkogbonitet/Ikke registrert> ;
+  ns0:description "inndeling etter arealets evne til å produsere trevirke      -- Definition - -   categorization according to the area's ability to produce wood"@nb ;
+  ns0:modelElementType "kodeliste"^^xsd:string ;
+  ns0:name "ArealressursSkogbonitet"@nb, "AreaResourceForestSiteQuality"@en .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursSkogbonitet/Impediment>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Impediment"@nb, "Impediment"@en ;
+  ns0:description "mindre enn 0,1 m³ tilvekst per dekar og år    -- Definition --   less than 1.0 m³ growth per hectare per year"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursSkogbonitet/Lav>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Lav"@nb, "Low"@en ;
+  ns0:description "0,1 - 0,3 m³ tilvekst per dekar og år    -- Definition --   1.0 - 3.0 m³ growth per hectare per year"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursSkogbonitet/Middels>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Middels"@nb, "Medium"@en ;
+  ns0:description "0,3 - 0,5 m³ tilvekst per dekar og år    -- Definition --   3.0 - 5.0 m³ growth per hectare per year"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursSkogbonitet/Høy>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Høy"@nb, "High"@en ;
+  ns0:description "0,5 - 1,0 m³ tilvekst per dekar og år    -- Definition --   5.0 - 10.0 m³ growth per hectare per year"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursSkogbonitet/Særs høy>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Særs høy"@nb, " Particularly high"@en ;
+  ns0:description "mer enn 1,0 m³ tilvekst per dekar og år    -- Definition --   more than 10.0 m³ growth per hectare per year"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursSkogbonitet/Ikke relevant>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Ikke relevant"@nb, "Not relevant"@en ;
+  ns0:description "opplysning om skogbonitet er ikke relevant    -- Definition --   information relating to the forest productivity class is not relevant"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursSkogbonitet/Ikke registrert>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Ikke registrert"@nb, "Not registered"@en ;
+  ns0:description "opplysning om skogbonitet er ikke registrert    -- Definition --   information relating to the forest productivity class has not been registered:"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursTreslag>
+  a owl:NamedIndividual, ns0:CodeList ;
+  ns0:containsCodename <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursTreslag/Barskog>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursTreslag/Lauvskog>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursTreslag/Blandingsskog>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursTreslag/Ikke tresatt>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursTreslag/Ikke relevant>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursTreslag/Ikke registrert> ;
+  ns0:description "inndeling etter fordeling av kronedekket mellom bartrær og lauvtrær      -- Definition - -   categorization according to the distribution of the crown cover between coniferous and deciduous trees"@nb ;
+  ns0:modelElementType "kodeliste"^^xsd:string ;
+  ns0:name "ArealressursTreslag"@nb, "AreaResourceTypeOfWood"@en .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursTreslag/Barskog>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Barskog"@nb, "Coniferous forest"@en ;
+  ns0:description "minst 50 % av skogdekt areal er dekt av bartrær    -- Definition --   at least 50% of the area is covered by conifers"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursTreslag/Lauvskog>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Lauvskog"@nb, "Deciduous forest "@en ;
+  ns0:description "mindre enn 20 % av skogdekt areal er dekt av bartrær    -- Definition --   less than 20% of the forested area is covered by conifers"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursTreslag/Blandingsskog>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Blandingsskog"@nb, "Mixied forest"@en ;
+  ns0:description "mellom 20 - 50 % av skogdekt areal er dekt av bartrær    -- Definition --   between 20 and 50% of the forested area is covered by conifers"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursTreslag/Ikke tresatt>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Ikke tresatt"@nb, "No growth of trees"@en ;
+  ns0:description "arealet har ikke tresetting som holder kravet til skog    -- Definition --   the area does not have sufficient trees to warrant the definition forest"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursTreslag/Ikke relevant>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Ikke relevant"@nb, "Not relevant"@en ;
+  ns0:description "opplysning om treslag er ikke relevant    -- Definition --   information concerning type of wood is not relevant"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursTreslag/Ikke registrert>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Ikke registrert"@nb, "Not registered"@en ;
+  ns0:description "opplysning om treslag er ikke registrert    -- Definition --   information concerning type of wood has not been registered"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Fellesegenskaper>
+  a owl:NamedIndividual, ns0:ModelElement ;
+  ns0:hasProperty <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Fellesegenskaper/datafangstdato>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Fellesegenskaper/verifiseringsdato>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Fellesegenskaper/oppdateringsdato>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Fellesegenskaper/kvalitet>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Fellesegenskaper/opphav>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Fellesegenskaper/prosesshistorie>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Fellesegenskaper/kopidata>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Fellesegenskaper/informasjon>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Fellesegenskaper/registreringsversjon> ;
+  ns0:description "abstrakt objekt som bærer en rekke egenskaper som er fagområde-uavhengige og kan benyttes for alle objekttyper    Merknad:  Spesielt i produktspesifikasjonsarbeid vil en velge egenskaper og av grensningslinjer fra denne klassen."@nb ;
+  ns0:modelElementType "objekttype"^^xsd:string ;
+  ns0:name "Fellesegenskaper"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Fellesegenskaper/datafangstdato>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/basistype/DateTime> ;
+  ns0:name "datafangstdato"@nb ;
+  ns0:propertyType "attributt" ;
+  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "1"^^xsd:nonNegativeInteger ;
+  ns0:description "dato når objektet siste gang ble registrert/observert/målt i terrenget    Merknad: I mange tilfeller er denne forskjellig fra Oppdateringsdato, da registrerte endringer kan bufres i en kortere eller lengre periode før disse legges inn i databasen.  Ved førstegangsregistrering settes Datafangstdato lik førsteDatafangstdato."@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Fellesegenskaper/verifiseringsdato>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/basistype/DateTime> ;
+  ns0:name "verifiseringsdato"@nb ;
+  ns0:propertyType "attributt" ;
+  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "1"^^xsd:nonNegativeInteger ;
+  ns0:description "dato når dataene er fastslått å være i samsvar med virkeligheten    Merknad: Verifiseringsdato er identisk med ..DATO i tidligere versjoner av SOSI"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Fellesegenskaper/oppdateringsdato>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/basistype/DateTime> ;
+  ns0:name "oppdateringsdato"@nb ;
+  ns0:propertyType "attributt" ;
+  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "0"^^xsd:nonNegativeInteger ;
+  ns0:description "dato for siste endring på objektetdataene     Merknad:   Oppdateringsdato kan være forskjellig fra Datafangsdato ved at data som er registrert kan bufres en kortere eller lengre periode før disse legges inn i datasystemet (databasen).    -Definition-  Date and time at which this version of the spatial object was inserted or changed in the spatial data set."@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Fellesegenskaper/kvalitet>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Posisjonskvalitet> ;
+  ns0:name "kvalitet"@nb ;
+  ns0:propertyType "attributt" ;
+  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "1"^^xsd:nonNegativeInteger ;
+  ns0:description "beskrivelse av kvaliteten på stedfestingen    Merknad: Denne er identisk med ..KVALITET i tidligere versjoner av SOSI."@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Fellesegenskaper/opphav>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/basistype/CharacterString> ;
+  ns0:name "opphav"@nb ;
+  ns0:propertyType "attributt" ;
+  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "0"^^xsd:nonNegativeInteger ;
+  ns0:description "referanse til opphavsmaterialet, kildematerialet, organisasjons/publiseringskilde    Merknad:   Kan også beskrive navn på person og årsak til oppdatering"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Fellesegenskaper/prosesshistorie>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/basistype/CharacterString> ;
+  ns0:name "prosesshistorie"@nb ;
+  ns0:propertyType "attributt" ;
+  xsd:minOccurs "0"^^xsd:nonNegativeInteger ;
+  ns0:description "beskrivelse av de prosesser som dataene er gått gjennom som kan ha betydning for kvaliteten og bruken av dataene    Merknad:  Prosesshistorie vil kunne inneholde informasjon om transformasjoner. Hva slags informasjon som angis er ofte gitt i andre standarder, f.eks kvalitet og kvalitetsikring."@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Fellesegenskaper/kopidata>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Kopidata> ;
+  ns0:name "kopidata"@nb ;
+  ns0:propertyType "attributt" ;
+  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "0"^^xsd:nonNegativeInteger ;
+  ns0:description "angivelse av at objektet er hentet fra et kopidatasett og ikke fra originaldatasettet    Merknad: Inneholder informasjon om når kopidatasettet ble kopiert fra originaldatasettet og hvem som er originaldataansvarlig"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Fellesegenskaper/informasjon>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/basistype/CharacterString> ;
+  ns0:name "informasjon"@nb ;
+  ns0:propertyType "attributt" ;
+  xsd:minOccurs "0"^^xsd:nonNegativeInteger ;
+  ns0:description "generell opplysning    Merknad:  mulighet til å legge inn utfyllende informasjon om objektet"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Fellesegenskaper/registreringsversjon>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Registreringsversjon> ;
+  ns0:name "registreringsversjon"@nb ;
+  ns0:propertyType "attributt" ;
+  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "0"^^xsd:nonNegativeInteger ;
+  ns0:description "angivelse av hvilken produktspesifikasjon som er utgangspunkt  for dataene"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/FellesegenskaperFiktiv>
+  a owl:NamedIndividual, ns0:ModelElement ;
+  ns0:hasProperty <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/FellesegenskaperFiktiv/datafangstdato>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/FellesegenskaperFiktiv/oppdateringsdato>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/FellesegenskaperFiktiv/opphav>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/FellesegenskaperFiktiv/prosesshistorie>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/FellesegenskaperFiktiv/kopidata>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/FellesegenskaperFiktiv/informasjon>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/FellesegenskaperFiktiv/registreringsversjon> ;
+  ns0:description "abstrakt objekt som bærer en rekke egenskaper som er fagområde-uavhengige og kan benyttes for alle objekttyper    Merknad:  Spesielt i produktspesifikasjonsarbeid vil en velge egenskaper og av grensningslinjer fra denne klassen."@nb ;
+  ns0:modelElementType "objekttype"^^xsd:string ;
+  ns0:name "FellesegenskaperFiktiv"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/FellesegenskaperFiktiv/datafangstdato>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/basistype/DateTime> ;
+  ns0:name "datafangstdato"@nb ;
+  ns0:propertyType "attributt" ;
+  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "1"^^xsd:nonNegativeInteger ;
+  ns0:description "dato når objektet siste gang ble registrert/observert/målt i terrenget    Merknad: I mange tilfeller er denne forskjellig fra Oppdateringsdato, da registrerte endringer kan bufres i en kortere eller lengre periode før disse legges inn i databasen.  Ved førstegangsregistrering settes Datafangstdato lik førsteDatafangstdato."@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/FellesegenskaperFiktiv/oppdateringsdato>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/basistype/DateTime> ;
+  ns0:name "oppdateringsdato"@nb ;
+  ns0:propertyType "attributt" ;
+  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "0"^^xsd:nonNegativeInteger ;
+  ns0:description "dato for siste endring på objektetdataene     Merknad:   Oppdateringsdato kan være forskjellig fra Datafangsdato ved at data som er registrert kan bufres en kortere eller lengre periode før disse legges inn i datasystemet (databasen).    -Definition-  Date and time at which this version of the spatial object was inserted or changed in the spatial data set."@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/FellesegenskaperFiktiv/opphav>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/basistype/CharacterString> ;
+  ns0:name "opphav"@nb ;
+  ns0:propertyType "attributt" ;
+  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "0"^^xsd:nonNegativeInteger ;
+  ns0:description "referanse til opphavsmaterialet, kildematerialet, organisasjons/publiseringskilde    Merknad:   Kan også beskrive navn på person og årsak til oppdatering"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/FellesegenskaperFiktiv/prosesshistorie>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/basistype/CharacterString> ;
+  ns0:name "prosesshistorie"@nb ;
+  ns0:propertyType "attributt" ;
+  xsd:minOccurs "0"^^xsd:nonNegativeInteger ;
+  ns0:description "beskrivelse av de prosesser som dataene er gått gjennom som kan ha betydning for kvaliteten og bruken av dataene    Merknad:  Prosesshistorie vil kunne inneholde informasjon om transformasjoner. Hva slags informasjon som angis er ofte gitt i andre standarder, f.eks kvalitet og kvalitetsikring."@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/FellesegenskaperFiktiv/kopidata>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Kopidata> ;
+  ns0:name "kopidata"@nb ;
+  ns0:propertyType "attributt" ;
+  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "0"^^xsd:nonNegativeInteger ;
+  ns0:description "angivelse av at objektet er hentet fra et kopidatasett og ikke fra originaldatasettet    Merknad: Inneholder informasjon om når kopidatasettet ble kopiert fra originaldatasettet og hvem som er originaldataansvarlig"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/FellesegenskaperFiktiv/informasjon>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/basistype/CharacterString> ;
+  ns0:name "informasjon"@nb ;
+  ns0:propertyType "attributt" ;
+  xsd:minOccurs "0"^^xsd:nonNegativeInteger ;
+  ns0:description "generell opplysning    Merknad:  mulighet til å legge inn utfyllende informasjon om objektet"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/FellesegenskaperFiktiv/registreringsversjon>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Registreringsversjon> ;
+  ns0:name "registreringsversjon"@nb ;
+  ns0:propertyType "attributt" ;
+  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "0"^^xsd:nonNegativeInteger ;
+  ns0:description "angivelse av hvilken produktspesifikasjon som er utgangspunkt  for dataene"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/KantUtsnitt>
+  a owl:NamedIndividual, ns0:ModelElement ;
+  ns0:hasProperty <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/KantUtsnitt/grense>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/KantUtsnitt/> ;
+  ns0:description "avgrensning av et utsnitt      -- Definition --   delimitation of a view"@nb ;
+  ns0:modelElementType "objekttype"^^xsd:string ;
+  ns0:name "KantUtsnitt"@nb, "EdgeView"@en .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/KantUtsnitt/grense>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/geometri/Kurve> ;
+  ns0:name "grense"@nb, "border"@en ;
+  ns0:propertyType "attributt" ;
+  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "1"^^xsd:nonNegativeInteger ;
+  ns0:description "forløp som følger overgang mellom ulike fenomener    -- Definition --   course follwing the transition between different real world phenomena"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/KantUtsnitt/>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/ArealressursFlate> ;
+  ns0:name ""@nb ;
+  ns0:propertyType "rolle" ;
+  xsd:maxOccurs "2"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "1"^^xsd:nonNegativeInteger ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Kopidata>
+  a owl:NamedIndividual, ns0:ModelElement ;
+  ns0:hasProperty <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Kopidata/områdeId>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Kopidata/originalDatavert>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Kopidata/kopidato> ;
+  ns0:description "angivelse av at objektet er hentet fra en kopi av originaldata    Merknad:   Kan benyttes dersom man gjør et uttak av en database som ikke inneholder originaldataene.  "@nb ;
+  ns0:modelElementType "datatype"^^xsd:string ;
+  ns0:name "Kopidata"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Kopidata/områdeId>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/basistype/Integer> ;
+  ns0:name "områdeId"@nb ;
+  ns0:propertyType "attributt" ;
+  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "1"^^xsd:nonNegativeInteger ;
+  ns0:description "identifikasjon av område som dataene dekker    Merknad: Kan angis med kommunenummer eller fylkesnummer. Disse bør spesifiseres nærmere."@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Kopidata/originalDatavert>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/basistype/CharacterString> ;
+  ns0:name "originalDatavert"@nb ;
+  ns0:propertyType "attributt" ;
+  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "1"^^xsd:nonNegativeInteger ;
+  ns0:description "ansvarlig etat for forvaltning av data"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Kopidata/kopidato>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/basistype/DateTime> ;
+  ns0:name "kopidato"@nb ;
+  ns0:propertyType "attributt" ;
+  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "1"^^xsd:nonNegativeInteger ;
+  ns0:description "dato når objektet ble kopiert fra originaldatasettet      Merknad:  Er en del av egenskapen Kopidata. Brukes i de tilfeller hvor en kopidatabase brukes til distribusjon.  Å kopiere et datasett til en kopidatabase skal ikke føre til at Oppdateringsdato blir endret.  Eventuell redigering av data i et kopidatasett medfører ny Oppdateringsdato, Datafangstdato og/eller Verifiseringsdato."@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode>
+  a owl:NamedIndividual, ns0:CodeList ;
+  ns0:containsCodename <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Terrengmålt>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Totalstasjon>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Teodolitt med elektronisk avstandsmåler>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Teodolitt med målebånd>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Ortogonalmetoden>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Utmål>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Tatt fra plan>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Annet  (denne har ingen mening, bør fjernes?)>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Stereoinstrument>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Aerotriangulert>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Analytisk plotter>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Autograf - vanlig registrering>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Digitalt stereoinstrument>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Scannet fra kart>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Scannet fra blyantoriginal>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Scannet fra rissefolie>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Scannet fra transparent folie - god kvalitet>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Scannet fra transparent folie - mindre god kvalitet>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Scannet fra papirkopi>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Flybåren laserscanner>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Digitalisert på dig.bord fra ortofoto/flybilde>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Digitalisert fra ortofoto - film>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Digitalisert fra ortofoto - fotokopi>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Digitalisert fra flybilde - monodigitalisert fra film>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Digitalisert fra flybilde - monodigitalisert fra fotokopi>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Digitalisert fra ortofoto>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Digitalisert på skjerm fra satellittbilde>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Digitalisert på dig.bord fra strek-kart>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Digitalisert på dig.bord fra blyantoriginal>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Digitalisert på dig.bord fra rissefolie>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Digitalisert på dig.bord fra transparent film - god kvalitet>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Digitalisert på dig.bord fra transparent film - mindre god kvalitet>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Digitalisert på dig.bord fra papirkopi>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Dig. på skjerm fra scannet samkopi>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Genererte data (interpolasjon)>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Generert i terrengmodell>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Vektet middel>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Generert sirkelgeometri>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Generalisert>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Generert sentralpunkt>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Sammenknytningspunkt/randpunkt>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Koordinater hentet fra GAB>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Koordinater hentet fra JREG>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Beregnet>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Spesielle metoder>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Målt med stikkstang>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Målt med waterstang>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Målt med målehjul>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Målt med stigningsmåler>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Fastsatt punkt>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Fastsatt ved dom eller kongelig resolusjon>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Annet (spesifiseres i filhode) ( bør vel fjernes, blir borte ved overføring mellom systemer)>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Frihåndstegning>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Digitalisert fra krokering på kart>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Direkte innlagt på skjerm>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Treghetsstedfesting>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/GPS Kodemåling, relative målinger>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/GPS Kodemåling, enkeltmålinger>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/GPS Fasemåling, statisk måling>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/GPS Fasemåling, andre metoder>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Kombinasjon av GPS/Treghet>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/GPS Fasemåling RTK>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/GPS Fasemåling, float-løsning>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Ukjent målemetode> ;
+  ns0:description "metode som ligger til grunn for registrering av posisjon      -- Definition - -   method on which registration of position is based"@nb ;
+  ns0:modelElementType "kodeliste"^^xsd:string ;
+  ns0:name "Målemetode"@nb, "MeasuringMethod"@en .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Terrengmålt>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Terrengmålt"@nb, "Measured in terrain"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Totalstasjon>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Totalstasjon"@nb, "Total station"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Teodolitt med elektronisk avstandsmåler>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Teodolitt med elektronisk avstandsmåler"@nb, "Theodolite with electronic rangefinder"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Teodolitt med målebånd>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Teodolitt med målebånd"@nb, "Theodolite with measuring tape"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Ortogonalmetoden>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Ortogonalmetoden"@nb, "Orthogonal method"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Utmål>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Utmål"@nb, "MeasureOut"@en ;
+  ns0:description "Punkt beregnet på bakgrunn av andre punkter, slik som to avstander eller avstand + retning    -- Definition --   Point calculated on the basis of other items, such as two distances or distance + direction."@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Tatt fra plan>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Tatt fra plan"@nb, "Taken from plan"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Annet  (denne har ingen mening, bør fjernes?)>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Annet  (denne har ingen mening, bør fjernes?)"@nb ;
+  ns0:description "Annet"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Stereoinstrument>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Stereoinstrument"@nb, "Stereo instrument"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Aerotriangulert>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Aerotriangulert"@nb, "Aerotriangulated"@en ;
+  ns0:description "(Pkt. beregnet v/ aerotriangulering)    -- Definition --   Point calculated by aerotriangulation"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Analytisk plotter>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Analytisk plotter"@nb, "Analytical plotter"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Autograf - vanlig registrering>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Autograf - vanlig registrering"@nb, "Autograph - normal registration"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Digitalt stereoinstrument>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Digitalt stereoinstrument"@nb, "Digital stereo instrument"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Scannet fra kart>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Scannet fra kart"@nb, "Scanned from map"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Scannet fra blyantoriginal>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Scannet fra blyantoriginal"@nb, "Scannet from pencilled original"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Scannet fra rissefolie>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Scannet fra rissefolie"@nb, "Scanned from ??scribing folio"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Scannet fra transparent folie - god kvalitet>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Scannet fra transparent folie - god kvalitet"@nb, "Scanned from transparency folio - good quality"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Scannet fra transparent folie - mindre god kvalitet>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Scannet fra transparent folie - mindre god kvalitet"@nb, "Scanned from transparency folio - inferior quality"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Scannet fra papirkopi>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Scannet fra papirkopi"@nb, "Scannet from paper / hard copy"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Flybåren laserscanner>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Flybåren laserscanner"@nb, "Airbourne laser scanner"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Digitalisert på dig.bord fra ortofoto/flybilde>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Digitalisert på dig.bord fra ortofoto/flybilde"@nb, "Digitised on dig.table from orthophoto/aerial photo"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Digitalisert fra ortofoto - film>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Digitalisert fra ortofoto - film"@nb, "Digitised from orthophoto - film"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Digitalisert fra ortofoto - fotokopi>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Digitalisert fra ortofoto - fotokopi"@nb, "Digitised from orthophoto - photocopy"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Digitalisert fra flybilde - monodigitalisert fra film>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Digitalisert fra flybilde - monodigitalisert fra film"@nb, "Digitised from aerial photo - mono-digitised from film"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Digitalisert fra flybilde - monodigitalisert fra fotokopi>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Digitalisert fra flybilde - monodigitalisert fra fotokopi"@nb, "Digitised from aerial photo - mono-digitised from photocopy"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Digitalisert fra ortofoto>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Digitalisert fra ortofoto"@nb, "Digitised from orthophoto"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Digitalisert på skjerm fra satellittbilde>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Digitalisert på skjerm fra satellittbilde"@nb, "Digitised on screen from satellite photo"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Digitalisert på dig.bord fra strek-kart>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Digitalisert på dig.bord fra strek-kart"@nb, "Digitised on dig.table from line-map"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Digitalisert på dig.bord fra blyantoriginal>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Digitalisert på dig.bord fra blyantoriginal"@nb, "Digitised on dig.table from pencilled original"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Digitalisert på dig.bord fra rissefolie>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Digitalisert på dig.bord fra rissefolie"@nb, "Digitised on dig.table from ??scribing folio"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Digitalisert på dig.bord fra transparent film - god kvalitet>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Digitalisert på dig.bord fra transparent film - god kvalitet"@nb, "Digitised on dig.table from transparency film - good quality"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Digitalisert på dig.bord fra transparent film - mindre god kvalitet>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Digitalisert på dig.bord fra transparent film - mindre god kvalitet"@nb, "Digitised on dig.table from transparency film - lower quality"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Digitalisert på dig.bord fra papirkopi>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Digitalisert på dig.bord fra papirkopi"@nb, "Digitised on dig.table from paper copy"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Dig. på skjerm fra scannet samkopi>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Dig. på skjerm fra scannet samkopi"@nb, "Digitised on screen from scanned photographic combination"@en ;
+  ns0:description "(Raster)"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Genererte data (interpolasjon)>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Genererte data (interpolasjon)"@nb, "Generated data (interpolation)"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Generert i terrengmodell>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Generert i terrengmodell"@nb, "Generated in terrain model"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Vektet middel>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Vektet middel"@nb, "Weighted mean"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Generert sirkelgeometri>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Generert sirkelgeometri"@nb, "Generated circular geometry"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Generalisert>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Generalisert"@nb, "Generalised"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Generert sentralpunkt>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Generert sentralpunkt"@nb, "Generated central point"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Sammenknytningspunkt/randpunkt>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Sammenknytningspunkt/randpunkt"@nb, "Connection point/edge point"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Koordinater hentet fra GAB>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Koordinater hentet fra GAB"@nb, "Coordinates retrieved from GAB"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Koordinater hentet fra JREG>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Koordinater hentet fra JREG"@nb, "Coordinates retrieved from JREG"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Beregnet>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Beregnet"@nb, "Calculated"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Spesielle metoder>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Spesielle metoder"@nb, "Special methods"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Målt med stikkstang>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Målt med stikkstang"@nb, "Measured with range pole"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Målt med waterstang>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Målt med waterstang"@nb, "Measured with "@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Målt med målehjul>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Målt med målehjul"@nb, "Measured with measuring wheel"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Målt med stigningsmåler>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Målt med stigningsmåler"@nb, "Measured with rate of climb indicator "@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Fastsatt punkt>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Fastsatt punkt"@nb ;
+  ns0:description "punkt fastsatt ut fra et grunnlag f.eks ved partenes enighet ved oppmålingsforretning."@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Fastsatt ved dom eller kongelig resolusjon>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Fastsatt ved dom eller kongelig resolusjon"@nb, "Stipulated by court decision or royal decree"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Annet (spesifiseres i filhode) ( bør vel fjernes, blir borte ved overføring mellom systemer)>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Annet (spesifiseres i filhode) ( bør vel fjernes, blir borte ved overføring mellom systemer)"@nb, "????"@en ;
+  ns0:description "Annet (spesifiseres i filhode)"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Frihåndstegning>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Frihåndstegning"@nb, "Free-hand drawing"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Digitalisert fra krokering på kart>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Digitalisert fra krokering på kart"@nb, "Digitised from sketching on map"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Direkte innlagt på skjerm>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Direkte innlagt på skjerm"@nb, "Directly input on screen"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Treghetsstedfesting>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Treghetsstedfesting"@nb, "Inertial ??positioning/localization"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/GPS Kodemåling, relative målinger>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "GPS Kodemåling, relative målinger"@nb, "GPS code measurement, relatively measurements"@en ;
+  ns0:description "Tidligere GPS-Differensiell, pseudorange    -- Definition --   Previous GPS differential, pseudorange"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/GPS Kodemåling, enkeltmålinger>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "GPS Kodemåling, enkeltmålinger"@nb, "GPS code measurement, individual measurements"@en ;
+  ns0:description "Tidligere GPS, Absolutt, pseudorange    -- Definition --   Previous GPS, absolute, pseudorange"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/GPS Fasemåling, statisk måling>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "GPS Fasemåling, statisk måling"@nb, "GPS phase measurement, static measurement"@en ;
+  ns0:description "Tidligere GPS, Differensiell    -- Definition --   Previous GPS, differential"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/GPS Fasemåling, andre metoder>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "GPS Fasemåling, andre metoder"@nb, "GPS phase measurement, other methods"@en ;
+  ns0:description "(utenom RTK). Tidligere GPS-Absolutt, fase    -- Definition --   (not including RTK). Previous Absolute GPS, phase"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Kombinasjon av GPS/Treghet>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Kombinasjon av GPS/Treghet"@nb, "Combination of GPS/Inertia"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/GPS Fasemåling RTK>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "GPS Fasemåling RTK"@nb, "GPS phase measurement RTK"@en ;
+  ns0:description "(Realtids kinematisk måling). Tidligere GPS kinematisk (Real time kinematic)    -- Definition --   (Real time kinematic measurement). Previous GPS kinematic (Real time kinematic)"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/GPS Fasemåling, float-løsning>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "GPS Fasemåling, float-løsning"@nb, "GPS phase measurement, float solution"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode/Ukjent målemetode>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Ukjent målemetode"@nb, "Unknown measurement method"@en ;
+  ns0:description ""@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Posisjonskvalitet>
+  a owl:NamedIndividual, ns0:ModelElement ;
+  ns0:hasProperty <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Posisjonskvalitet/målemetode>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Posisjonskvalitet/nøyaktighet>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Posisjonskvalitet/synbarhet> ;
+  ns0:description "beskrivelse av kvaliteten på stedfestingen"@nb ;
+  ns0:modelElementType "datatype"^^xsd:string ;
+  ns0:name "Posisjonskvalitet"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Posisjonskvalitet/målemetode>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Målemetode> ;
+  ns0:name "målemetode"@nb ;
+  ns0:propertyType "attributt" ;
+  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "1"^^xsd:nonNegativeInteger ;
+  ns0:description "metode for måling i grunnriss (x,y), og høyde (z) når metoden er den samme som ved måling i grunnriss"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Posisjonskvalitet/nøyaktighet>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/basistype/Integer> ;
+  ns0:name "nøyaktighet"@nb ;
+  ns0:propertyType "attributt" ;
+  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "0"^^xsd:nonNegativeInteger ;
+  ns0:description "punktstandardavviket i grunnriss for punkter samt tverravvik for linjer    Merknad:  Oppgitt i cm"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Posisjonskvalitet/synbarhet>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Synbarhet> ;
+  ns0:name "synbarhet"@nb ;
+  ns0:propertyType "attributt" ;
+  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "0"^^xsd:nonNegativeInteger ;
+  ns0:description "hvor godt den kartlagte detalj var synbar ved kartleggingen"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Registreringsversjon>
+  a owl:NamedIndividual, ns0:ModelElement ;
+  ns0:hasProperty <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Registreringsversjon/produkt>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Registreringsversjon/versjon> ;
+  ns0:description "angir hvilken versjon av registreringsinstruksen som ble benyttet ved datafangst    Eksempel:  I et datasett kan det finnes objekter som er etablert fra ulike registreringsversjoner. For eksempel har registreringsinstruksen for objekttypen Takkant i FKB blitt endret fra SOSI/FKB-versjon 3.4 til versjon 4.0. Dersom en kommune ønsker å ajourføre Takkant for et delområde av kommunen etter FKB/SOSI-versjon 4.0, vil han etter ajourføring ha et kommunedekkende datasett der Takkant er registrert med forskjellig registreringsinstruks. I disse tilfellene kan det være nyttig å kunne skille på objektnivå hvilken registreringsversjon som er benyttet ved datafangst. Egenskapen kan benyttes til dette.  "@nb ;
+  ns0:modelElementType "datatype"^^xsd:string ;
+  ns0:name "Registreringsversjon"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Registreringsversjon/produkt>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/basistype/CharacterString> ;
+  ns0:name "produkt"@nb ;
+  ns0:propertyType "attributt" ;
+  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "1"^^xsd:nonNegativeInteger ;
+  ns0:description "entydig navn på produktet i form av et kortnavn"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Registreringsversjon/versjon>
+  a owl:NamedIndividual, ns0:Property ;
+  ns0:type <http://skjema.geonorge.no/SOSI/basistype/CharacterString> ;
+  ns0:name "versjon"@nb ;
+  ns0:propertyType "attributt" ;
+  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
+  xsd:minOccurs "1"^^xsd:nonNegativeInteger ;
+  ns0:description "versjonsnummer"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Synbarhet>
+  a owl:NamedIndividual, ns0:CodeList ;
+  ns0:containsCodename <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Synbarhet/Fullt ut synlig/gjenfinnbar i terrenget>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Synbarhet/Dårlig gjenfinnbar i terreng>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Synbarhet/Middels synlig i flybilde/modell>, <http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Synbarhet/Dårlig/ikke synlig i flybilde/modell> ;
+  ns0:description "hvor godt den kartlagte detalj var synbar ved kartleggingen  "@nb ;
+  ns0:modelElementType "kodeliste"^^xsd:string ;
+  ns0:name "Synbarhet"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Synbarhet/Fullt ut synlig/gjenfinnbar i terrenget>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Fullt ut synlig/gjenfinnbar i terrenget"@nb ;
+  ns0:description "Default  "@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Synbarhet/Dårlig gjenfinnbar i terreng>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Dårlig gjenfinnbar i terreng"@nb ;
+  ns0:description "Forøvrig grei å innmåle. (Benyttes bl.a. for innmåling av ledninger på lukket grøft)"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Synbarhet/Middels synlig i flybilde/modell>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Middels synlig i flybilde/modell"@nb ;
+  ns0:description "Middels synlig i flybilde/modell"@nb .
+
+<http://skjema.geonorge.no/SOSI/produktspesifikasjon/Arealressurs/4.02/Synbarhet/Dårlig/ikke synlig i flybilde/modell>
+  a owl:NamedIndividual, ns0:Codename ;
+  ns0:name "Dårlig/ikke synlig i flybilde/modell"@nb ;
+  ns0:description "Dårlig/ikke synlig i flybilde/modell"@nb .
