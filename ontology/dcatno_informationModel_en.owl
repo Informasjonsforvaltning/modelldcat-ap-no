@@ -1,5 +1,4 @@
-@prefix : <http://example.com/ns/dummy/> .
-@prefix dcatnoinfo: <http://data.norge.no/informationmodel/> .
+@prefix : <https://data.norge.no/vocabulary/modelldcatno/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -15,9 +14,10 @@
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix skebase: <http://data.skatteetaten.no/ns/modell/basetyper/> .
-@base <http://data.norge.no/informationmodel> .
+@prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
+@base <https://data.norge.no/vocabulary/modelldcatno> .
 
-<http://data.norge.no/informationmodel> rdf:type owl:Ontology .
+<https://data.norge.no/vocabulary/modelldcatno> rdf:type owl:Ontology .
 
 #################################################################
 #    Annotation properties
@@ -31,75 +31,75 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  http://data.norge.no/informationmodel/codename
-dcatnoinfo:codename rdf:type owl:ObjectProperty ;
-                    owl:equivalentProperty dcatnoinfo:containsCodename .
+###  https://data.norge.no/vocabulary/modelldcatno#codename
+modelldcatno:codename rdf:type owl:ObjectProperty ;
+                    owl:equivalentProperty modelldcatno:containsCodename .
 
 
-###  http://data.norge.no/informationmodel/concept
-dcatnoinfo:concept rdf:type owl:ObjectProperty ;
-                   owl:equivalentProperty dcatnoinfo:term ;
+###  https://data.norge.no/vocabulary/modelldcatno#concept
+modelldcatno:concept rdf:type owl:ObjectProperty ;
+                   owl:equivalentProperty modelldcatno:term ;
                    rdf:type owl:FunctionalProperty ;
-                   rdfs:domain dcatnoinfo:NamedElement ;
-                   rdfs:range dcatnoinfo:Concept .
+                   rdfs:domain modelldcatno:NamedElement ;
+                   rdfs:range modelldcatno:Concept .
 
 
-###  http://data.norge.no/informationmodel/containsCodename
-dcatnoinfo:containsCodename rdf:type owl:ObjectProperty ;
-                            owl:equivalentProperty dcatnoinfo:enumerator ;
-                            rdfs:domain dcatnoinfo:CodeList ;
-                            rdfs:range dcatnoinfo:Codename .
+###  https://data.norge.no/vocabulary/modelldcatno#containsCodename
+modelldcatno:containsCodename rdf:type owl:ObjectProperty ;
+                            owl:equivalentProperty modelldcatno:enumerator ;
+                            rdfs:domain modelldcatno:CodeList ;
+                            rdfs:range modelldcatno:Codename .
 
 
-###  http://data.norge.no/informationmodel/containsModelElement
-dcatnoinfo:containsModelElement rdf:type owl:ObjectProperty ;
-                                owl:equivalentProperty dcatnoinfo:modelElement ;
-                                rdfs:domain dcatnoinfo:InformationModel ;
-                                rdfs:range dcatnoinfo:ModelElement .
+###  https://data.norge.no/vocabulary/modelldcatno#containsModelElement
+modelldcatno:containsModelElement rdf:type owl:ObjectProperty ;
+                                owl:equivalentProperty modelldcatno:modelElement ;
+                                rdfs:domain modelldcatno:InformationModel ;
+                                rdfs:range modelldcatno:ModelElement .
 
 
-###  http://data.norge.no/informationmodel/enumerator
-dcatnoinfo:enumerator rdf:type owl:ObjectProperty .
+###  https://data.norge.no/vocabulary/modelldcatno#enumerator
+modelldcatno:enumerator rdf:type owl:ObjectProperty .
 
 
-###  http://data.norge.no/informationmodel/hasProperty
-dcatnoinfo:hasProperty rdf:type owl:ObjectProperty ;
-                       owl:equivalentProperty dcatnoinfo:property ;
+###  https://data.norge.no/vocabulary/modelldcatno#hasProperty
+modelldcatno:hasProperty rdf:type owl:ObjectProperty ;
+                       owl:equivalentProperty modelldcatno:property ;
                        rdf:type owl:AsymmetricProperty ;
-                       rdfs:domain dcatnoinfo:ModelElement ;
-                       rdfs:range dcatnoinfo:Property .
+                       rdfs:domain modelldcatno:ModelElement ;
+                       rdfs:range modelldcatno:Property .
 
 
-###  http://data.norge.no/informationmodel/isSubclassOf
-dcatnoinfo:isSubclassOf rdf:type owl:ObjectProperty ,
+###  https://data.norge.no/vocabulary/modelldcatno#isSubclassOf
+modelldcatno:isSubclassOf rdf:type owl:ObjectProperty ,
                                  owl:IrreflexiveProperty ;
-                        rdfs:domain dcatnoinfo:ModelElement ;
-                        rdfs:range dcatnoinfo:ModelElement ;
+                        rdfs:domain modelldcatno:ModelElement ;
+                        rdfs:range modelldcatno:ModelElement ;
                         rdfs:label "Spesialiserer"@nb ,
                                    "Subclass Of"@en .
 
 
-###  http://data.norge.no/informationmodel/modelElement
-dcatnoinfo:modelElement rdf:type owl:ObjectProperty ;
+###  https://data.norge.no/vocabulary/modelldcatno#modelElement
+modelldcatno:modelElement rdf:type owl:ObjectProperty ;
                         rdfs:comment "Modellelement"@nb .
 
 
-###  http://data.norge.no/informationmodel/property
-dcatnoinfo:property rdf:type owl:ObjectProperty ;
+###  https://data.norge.no/vocabulary/modelldcatno#property
+modelldcatno:property rdf:type owl:ObjectProperty ;
                     rdfs:comment "egenskap"@nb .
 
 
-###  http://data.norge.no/informationmodel/term
-dcatnoinfo:term rdf:type owl:ObjectProperty ;
+###  https://data.norge.no/vocabulary/modelldcatno#term
+modelldcatno:term rdf:type owl:ObjectProperty ;
                 rdfs:comment "begrep" .
 
 
-###  http://data.norge.no/informationmodel/type
-dcatnoinfo:type rdf:type owl:ObjectProperty ,
+###  https://data.norge.no/vocabulary/modelldcatno#type
+modelldcatno:type rdf:type owl:ObjectProperty ,
                          owl:FunctionalProperty ,
                          owl:AsymmetricProperty ;
-                rdfs:domain dcatnoinfo:Property ;
-                rdfs:range dcatnoinfo:ModelElement ;
+                rdfs:domain modelldcatno:Property ;
+                rdfs:range modelldcatno:ModelElement ;
                 rdfs:comment "Knytter egenskap til element (objectType, dataType, Codelist) som definerer innholdet"@nb ;
                 skos:prefLabel "type"@nb .
 
@@ -113,7 +113,7 @@ dcterms:publisher rdf:type owl:ObjectProperty ;
 
 ###  http://purl.org/dc/terms/temporal
 dcterms:temporal rdf:type owl:ObjectProperty ;
-                 rdfs:domain dcatnoinfo:InformationModel ;
+                 rdfs:domain modelldcatno:InformationModel ;
                  rdfs:range dcterms:PeriodOfTime ;
                  skos:prefLabel "Temporal Coverage"@en ,
                                 "gyldighetsperiode"@nb .
@@ -141,10 +141,10 @@ foaf:primaryTopic rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
-###  http://data.norge.no/informationmodel/belongsToModule
-dcatnoinfo:belongsToModule rdf:type owl:DatatypeProperty ,
+###  https://data.norge.no/vocabulary/modelldcatno#belongsToModule
+modelldcatno:belongsToModule rdf:type owl:DatatypeProperty ,
                                     owl:FunctionalProperty ;
-                           rdfs:domain dcatnoinfo:NamedElement ;
+                           rdfs:domain modelldcatno:NamedElement ;
                            rdfs:range [ rdf:type rdfs:Datatype ;
                                         owl:unionOf ( rdfs:Literal
                                                       xsd:anyURI
@@ -153,79 +153,79 @@ dcatnoinfo:belongsToModule rdf:type owl:DatatypeProperty ,
                            skos:prefLabel "Tillhører modul"@nb .
 
 
-###  http://data.norge.no/informationmodel/choiceGroupIdentifier
-dcatnoinfo:choiceGroupIdentifier rdf:type owl:DatatypeProperty ;
-                                 rdfs:subPropertyOf dcatnoinfo:properties ;
-                                 rdfs:domain dcatnoinfo:Property ;
+###  https://data.norge.no/vocabulary/modelldcatno#choiceGroupIdentifier
+modelldcatno:choiceGroupIdentifier rdf:type owl:DatatypeProperty ;
+                                 rdfs:subPropertyOf modelldcatno:properties ;
+                                 rdfs:domain modelldcatno:Property ;
                                  rdfs:range xsd:string ;
                                  rdfs:comment "Fjernet inntil videre"@nb ;
                                  rdfs:label "Valg gruppe"@nb ;
                                  owl:deprecated "true"^^xsd:boolean .
 
 
-###  http://data.norge.no/informationmodel/choiceOption
-dcatnoinfo:choiceOption rdf:type owl:DatatypeProperty ;
-                        rdfs:subPropertyOf dcatnoinfo:properties ;
+###  https://data.norge.no/vocabulary/modelldcatno#choiceOption
+modelldcatno:choiceOption rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf modelldcatno:properties ;
                         rdf:type owl:FunctionalProperty ;
-                        rdfs:domain dcatnoinfo:Property ;
+                        rdfs:domain modelldcatno:Property ;
                         rdfs:range xsd:boolean ;
                         rdfs:comment "Fjernet inntil videre"@nb ;
                         rdfs:label "Valg egenskap"@nb ;
                         owl:deprecated "true"^^xsd:boolean .
 
 
-###  http://data.norge.no/informationmodel/codeListReference
-dcatnoinfo:codeListReference rdf:type owl:DatatypeProperty ,
+###  https://data.norge.no/vocabulary/modelldcatno#codeListReference
+modelldcatno:codeListReference rdf:type owl:DatatypeProperty ,
                                       owl:FunctionalProperty ;
-                             rdfs:domain dcatnoinfo:CodeList ;
+                             rdfs:domain modelldcatno:CodeList ;
                              rdfs:range xsd:anyURI ;
                              rdfs:label "Ekstern kodeliste"@nb .
 
 
-###  http://data.norge.no/informationmodel/conceptDefinition
-dcatnoinfo:conceptDefinition rdf:type owl:DatatypeProperty ;
-                             rdfs:domain dcatnoinfo:Concept ;
+###  https://data.norge.no/vocabulary/modelldcatno#conceptDefinition
+modelldcatno:conceptDefinition rdf:type owl:DatatypeProperty ;
+                             rdfs:domain modelldcatno:Concept ;
                              rdfs:range rdfs:Literal .
 
 
-###  http://data.norge.no/informationmodel/description
-dcatnoinfo:description rdf:type owl:DatatypeProperty ;
+###  https://data.norge.no/vocabulary/modelldcatno#description
+modelldcatno:description rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf owl:topDataProperty ;
-                       rdfs:domain dcatnoinfo:NamedElement ;
+                       rdfs:domain modelldcatno:NamedElement ;
                        rdfs:range rdfs:Literal ;
                        rdfs:label "beskrivelse"@nb .
 
 
-###  http://data.norge.no/informationmodel/elementIdentifier
-dcatnoinfo:elementIdentifier rdf:type owl:DatatypeProperty ;
+###  https://data.norge.no/vocabulary/modelldcatno#elementIdentifier
+modelldcatno:elementIdentifier rdf:type owl:DatatypeProperty ;
                              rdfs:subPropertyOf owl:topDataProperty ;
-                             rdfs:domain dcatnoinfo:NamedElement ;
+                             rdfs:domain modelldcatno:NamedElement ;
                              rdfs:range rdfs:Literal ;
                              rdfs:comment "Dette er elementenes id slik det fremkomer av den som har laget modellen."@nb ;
                              rdfs:isDefinedBy dcterms:identifier ;
                              rdfs:label "Elementidentifikator"@nb .
 
 
-###  http://data.norge.no/informationmodel/informationModelIdentifier
-dcatnoinfo:informationModelIdentifier rdf:type owl:DatatypeProperty ;
-                                      rdfs:subPropertyOf dcatnoinfo:elementIdentifier ;
+###  https://data.norge.no/vocabulary/modelldcatno#informationModelIdentifier
+modelldcatno:informationModelIdentifier rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf modelldcatno:elementIdentifier ;
                                       rdfs:range xsd:anyURI .
 
 
-###  http://data.norge.no/informationmodel/isDescribedBy
-dcatnoinfo:isDescribedBy rdf:type owl:DatatypeProperty ,
+###  https://data.norge.no/vocabulary/modelldcatno#isDescribedBy
+modelldcatno:isDescribedBy rdf:type owl:DatatypeProperty ,
                                   owl:FunctionalProperty ;
-                         rdfs:domain dcatnoinfo:NamedElement ;
+                         rdfs:domain modelldcatno:NamedElement ;
                          rdfs:range xsd:anyURI ;
                          rdfs:comment "Brukes for å peke til eksternt publisert begrep" ;
                          skos:prefLabel "begrepsreferanse" .
 
 
-###  http://data.norge.no/informationmodel/modelElementType
-dcatnoinfo:modelElementType rdf:type owl:DatatypeProperty ;
+###  https://data.norge.no/vocabulary/modelldcatno#modelElementType
+modelldcatno:modelElementType rdf:type owl:DatatypeProperty ;
                             rdfs:subPropertyOf owl:topDataProperty ;
                             rdf:type owl:FunctionalProperty ;
-                            rdfs:domain dcatnoinfo:ModelElement ;
+                            rdfs:domain modelldcatno:ModelElement ;
                             rdfs:range [ rdf:type rdfs:Datatype ;
                                          owl:oneOf [ rdf:type rdf:List ;
                                                      rdf:first "codeList" ;
@@ -261,37 +261,37 @@ dcatnoinfo:modelElementType rdf:type owl:DatatypeProperty ;
                                        ] .
 
 
-###  http://data.norge.no/informationmodel/multiplicity
-dcatnoinfo:multiplicity rdf:type owl:DatatypeProperty ;
-                        rdfs:subPropertyOf dcatnoinfo:properties ;
+###  https://data.norge.no/vocabulary/modelldcatno#multiplicity
+modelldcatno:multiplicity rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf modelldcatno:properties ;
                         rdfs:label "Multiplisitet"@nb .
 
 
-###  http://data.norge.no/informationmodel/name
-dcatnoinfo:name rdf:type owl:DatatypeProperty ;
+###  https://data.norge.no/vocabulary/modelldcatno#name
+modelldcatno:name rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf owl:topDataProperty ;
-                rdfs:domain dcatnoinfo:NamedElement ;
+                rdfs:domain modelldcatno:NamedElement ;
                 rdfs:range rdfs:Literal ;
                 rdfs:label "navn"@nb .
 
 
-###  http://data.norge.no/informationmodel/prefLabel
-dcatnoinfo:prefLabel rdf:type owl:DatatypeProperty ;
-                     rdfs:domain dcatnoinfo:Concept ;
+###  https://data.norge.no/vocabulary/modelldcatno#prefLabel
+modelldcatno:prefLabel rdf:type owl:DatatypeProperty ;
+                     rdfs:domain modelldcatno:Concept ;
                      rdfs:range rdfs:Literal .
 
 
-###  http://data.norge.no/informationmodel/properties
-dcatnoinfo:properties rdf:type owl:DatatypeProperty ;
+###  https://data.norge.no/vocabulary/modelldcatno#properties
+modelldcatno:properties rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf owl:topDataProperty ;
                       rdfs:label "Egenskaper"@nb .
 
 
-###  http://data.norge.no/informationmodel/propertyType
-dcatnoinfo:propertyType rdf:type owl:DatatypeProperty ;
-                        rdfs:subPropertyOf dcatnoinfo:properties ;
+###  https://data.norge.no/vocabulary/modelldcatno#propertyType
+modelldcatno:propertyType rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf modelldcatno:properties ;
                         rdf:type owl:FunctionalProperty ;
-                        rdfs:domain dcatnoinfo:Property ;
+                        rdfs:domain modelldcatno:Property ;
                         rdfs:range [ rdf:type rdfs:Datatype ;
                                      owl:oneOf [ rdf:type rdf:List ;
                                                  rdf:first "attribute" ;
@@ -310,33 +310,33 @@ dcatnoinfo:propertyType rdf:type owl:DatatypeProperty ;
                         rdfs:label "Egenskapstype"@nb .
 
 
-###  http://data.norge.no/informationmodel/simpleTypes
-dcatnoinfo:simpleTypes rdf:type owl:DatatypeProperty ;
+###  https://data.norge.no/vocabulary/modelldcatno#simpleTypes
+modelldcatno:simpleTypes rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf owl:topDataProperty ;
                        rdfs:label "enekelttyper"@nb .
 
 
-###  http://data.norge.no/informationmodel/typeDefinitionReference
-dcatnoinfo:typeDefinitionReference rdf:type owl:DatatypeProperty ;
-                                   rdfs:subPropertyOf dcatnoinfo:simpleTypes ;
+###  https://data.norge.no/vocabulary/modelldcatno#typeDefinitionReference
+modelldcatno:typeDefinitionReference rdf:type owl:DatatypeProperty ;
+                                   rdfs:subPropertyOf modelldcatno:simpleTypes ;
                                    rdf:type owl:FunctionalProperty ;
-                                   rdfs:domain dcatnoinfo:SimpleType ;
+                                   rdfs:domain modelldcatno:SimpleType ;
                                    rdfs:range xsd:anyURI ;
                                    rdfs:comment "External definition of the type in question, before adding any restrictions." .
 
 
-###  http://data.norge.no/informationmodel/version
-dcatnoinfo:version rdf:type owl:DatatypeProperty ;
+###  https://data.norge.no/vocabulary/modelldcatno#version
+modelldcatno:version rdf:type owl:DatatypeProperty ;
                    owl:equivalentProperty owl:versionInfo ;
                    rdfs:subPropertyOf owl:topDataProperty ;
-                   rdfs:domain dcatnoinfo:InformationModel ;
+                   rdfs:domain modelldcatno:InformationModel ;
                    rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/abstract
 dcterms:abstract rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf dcterms:description ;
-                 rdfs:domain dcatnoinfo:InformationModel ;
+                 rdfs:domain modelldcatno:InformationModel ;
                  rdfs:range rdfs:Literal .
 
 
@@ -366,7 +366,7 @@ dcterms:identifier rdf:type owl:DatatypeProperty ;
 
 ###  http://purl.org/dc/terms/isReplacedBy
 dcterms:isReplacedBy rdf:type owl:DatatypeProperty ;
-                     rdfs:domain dcatnoinfo:InformationModel ;
+                     rdfs:domain modelldcatno:InformationModel ;
                      rdfs:range xsd:anyURI ;
                      skos:prefLabel "erstattet av"@nb .
 
@@ -394,7 +394,7 @@ dcterms:modified rdf:type owl:DatatypeProperty ;
 
 ###  http://purl.org/dc/terms/replaces
 dcterms:replaces rdf:type owl:DatatypeProperty ;
-                 rdfs:domain dcatnoinfo:InformationModel ;
+                 rdfs:domain modelldcatno:InformationModel ;
                  rdfs:range xsd:anyURI ;
                  skos:prefLabel "erstatter"@nb .
 
@@ -413,7 +413,7 @@ dcterms:title rdf:type owl:DatatypeProperty ;
 ###  http://purl.org/dc/terms/type
 dcterms:type rdf:type owl:DatatypeProperty ;
              rdfs:domain [ rdf:type owl:Class ;
-                           owl:unionOf ( dcatnoinfo:InformationModel
+                           owl:unionOf ( modelldcatno:InformationModel
                                          foaf:Agent
                                        )
                          ] ;
@@ -423,39 +423,39 @@ dcterms:type rdf:type owl:DatatypeProperty ;
 
 ###  http://www.w3.org/2001/XMLSchema#fractionDigits
 xsd:fractionDigits rdf:type owl:DatatypeProperty ;
-                   rdfs:subPropertyOf dcatnoinfo:simpleTypes ;
+                   rdfs:subPropertyOf modelldcatno:simpleTypes ;
                    rdf:type owl:FunctionalProperty ;
-                   rdfs:domain dcatnoinfo:SimpleType ;
+                   rdfs:domain modelldcatno:SimpleType ;
                    rdfs:range xsd:nonNegativeInteger .
 
 
 ###  http://www.w3.org/2001/XMLSchema#length
 xsd:length rdf:type owl:DatatypeProperty ;
-           rdfs:subPropertyOf dcatnoinfo:simpleTypes ;
+           rdfs:subPropertyOf modelldcatno:simpleTypes ;
            rdf:type owl:FunctionalProperty ;
-           rdfs:domain dcatnoinfo:SimpleType ;
+           rdfs:domain modelldcatno:SimpleType ;
            rdfs:range xsd:nonNegativeInteger .
 
 
 ###  http://www.w3.org/2001/XMLSchema#maxInclusive
 xsd:maxInclusive rdf:type owl:DatatypeProperty ;
-                 rdfs:subPropertyOf dcatnoinfo:simpleTypes ;
+                 rdfs:subPropertyOf modelldcatno:simpleTypes ;
                  rdf:type owl:FunctionalProperty ;
-                 rdfs:domain dcatnoinfo:SimpleType ;
+                 rdfs:domain modelldcatno:SimpleType ;
                  rdfs:range xsd:decimal .
 
 
 ###  http://www.w3.org/2001/XMLSchema#maxLength
 xsd:maxLength rdf:type owl:DatatypeProperty ;
-              rdfs:subPropertyOf dcatnoinfo:simpleTypes ;
+              rdfs:subPropertyOf modelldcatno:simpleTypes ;
               rdf:type owl:FunctionalProperty ;
-              rdfs:domain dcatnoinfo:SimpleType ;
+              rdfs:domain modelldcatno:SimpleType ;
               rdfs:range xsd:nonNegativeInteger .
 
 
 ###  http://www.w3.org/2001/XMLSchema#maxOccurs
 xsd:maxOccurs rdf:type owl:DatatypeProperty ;
-              rdfs:subPropertyOf dcatnoinfo:multiplicity ;
+              rdfs:subPropertyOf modelldcatno:multiplicity ;
               rdfs:range [ rdf:type rdfs:Datatype ;
                            owl:unionOf ( xsd:nonNegativeInteger
                                          [ rdf:type rdfs:Datatype ;
@@ -470,39 +470,39 @@ xsd:maxOccurs rdf:type owl:DatatypeProperty ;
 
 ###  http://www.w3.org/2001/XMLSchema#minInclusive
 xsd:minInclusive rdf:type owl:DatatypeProperty ;
-                 rdfs:subPropertyOf dcatnoinfo:simpleTypes ;
+                 rdfs:subPropertyOf modelldcatno:simpleTypes ;
                  rdf:type owl:FunctionalProperty ;
-                 rdfs:domain dcatnoinfo:SimpleType ;
+                 rdfs:domain modelldcatno:SimpleType ;
                  rdfs:range xsd:decimal .
 
 
 ###  http://www.w3.org/2001/XMLSchema#minLength
 xsd:minLength rdf:type owl:DatatypeProperty ;
-              rdfs:subPropertyOf dcatnoinfo:simpleTypes ;
+              rdfs:subPropertyOf modelldcatno:simpleTypes ;
               rdf:type owl:FunctionalProperty ;
-              rdfs:domain dcatnoinfo:SimpleType ;
+              rdfs:domain modelldcatno:SimpleType ;
               rdfs:range xsd:nonNegativeInteger .
 
 
 ###  http://www.w3.org/2001/XMLSchema#minOccurs
 xsd:minOccurs rdf:type owl:DatatypeProperty ;
-              rdfs:subPropertyOf dcatnoinfo:multiplicity ;
+              rdfs:subPropertyOf modelldcatno:multiplicity ;
               rdfs:range xsd:nonNegativeInteger .
 
 
 ###  http://www.w3.org/2001/XMLSchema#pattern
 xsd:pattern rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf dcatnoinfo:simpleTypes ;
+            rdfs:subPropertyOf modelldcatno:simpleTypes ;
             rdf:type owl:FunctionalProperty ;
-            rdfs:domain dcatnoinfo:SimpleType ;
+            rdfs:domain modelldcatno:SimpleType ;
             rdfs:range xsd:string .
 
 
 ###  http://www.w3.org/2001/XMLSchema#totalDigits
 xsd:totalDigits rdf:type owl:DatatypeProperty ;
-                rdfs:subPropertyOf dcatnoinfo:simpleTypes ;
+                rdfs:subPropertyOf modelldcatno:simpleTypes ;
                 rdf:type owl:FunctionalProperty ;
-                rdfs:domain dcatnoinfo:SimpleType ;
+                rdfs:domain modelldcatno:SimpleType ;
                 rdfs:range xsd:nonNegativeInteger .
 
 
@@ -514,7 +514,7 @@ owl:versionInfo rdf:type owl:DatatypeProperty ;
 
 ###  http://www.w3.org/ns/adms#status
 adms:status rdf:type owl:DatatypeProperty ;
-            rdfs:domain dcatnoinfo:InformationModel ;
+            rdfs:domain modelldcatno:InformationModel ;
             rdfs:range [ rdf:type rdfs:Datatype ;
                          owl:oneOf [ rdf:type rdf:List ;
                                      rdf:first "fullført" ;
@@ -584,69 +584,69 @@ foaf:name rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
-###  http://data.norge.no/informationmodel/CodeList
-dcatnoinfo:CodeList rdf:type owl:Class ;
-                    rdfs:subClassOf dcatnoinfo:ModelElement ,
+###  https://data.norge.no/vocabulary/modelldcatno#CodeList
+modelldcatno:CodeList rdf:type owl:Class ;
+                    rdfs:subClassOf modelldcatno:ModelElement ,
                                     [ rdf:type owl:Restriction ;
-                                      owl:onProperty dcatnoinfo:hasProperty ;
+                                      owl:onProperty modelldcatno:hasProperty ;
                                       owl:qualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                      owl:onClass dcatnoinfo:Property
+                                      owl:onClass modelldcatno:Property
                                     ] ,
                                     [ rdf:type owl:Restriction ;
-                                      owl:onProperty dcatnoinfo:isSubclassOf ;
+                                      owl:onProperty modelldcatno:isSubclassOf ;
                                       owl:qualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                      owl:onClass dcatnoinfo:CodeList
+                                      owl:onClass modelldcatno:CodeList
                                     ] ;
                     rdfs:label "Kodeliste"@nb .
 
 
-###  http://data.norge.no/informationmodel/Codename
-dcatnoinfo:Codename rdf:type owl:Class ;
-                    rdfs:subClassOf dcatnoinfo:NamedElement ;
+###  https://data.norge.no/vocabulary/modelldcatno#Codename
+modelldcatno:Codename rdf:type owl:Class ;
+                    rdfs:subClassOf modelldcatno:NamedElement ;
                     rdfs:label "Kodenavn"@nb .
 
 
-###  http://data.norge.no/informationmodel/Concept
-dcatnoinfo:Concept rdf:type owl:Class ;
+###  https://data.norge.no/vocabulary/modelldcatno#Concept
+modelldcatno:Concept rdf:type owl:Class ;
                    rdfs:isDefinedBy "skosno:Concept"@nb ;
                    skos:prefLabel "Begrep"@nb .
 
 
-###  http://data.norge.no/informationmodel/InformationModel
-dcatnoinfo:InformationModel rdf:type owl:Class ;
-                            rdfs:subClassOf dcatnoinfo:NamedElement ,
+###  https://data.norge.no/vocabulary/modelldcatno#InformationModel
+modelldcatno:InformationModel rdf:type owl:Class ;
+                            rdfs:subClassOf modelldcatno:NamedElement ,
                                             dcat:Resource ;
                             rdfs:label "Informasjonsmodell"@nb .
 
 
-###  http://data.norge.no/informationmodel/ModelElement
-dcatnoinfo:ModelElement rdf:type owl:Class ;
-                        rdfs:subClassOf dcatnoinfo:NamedElement ,
+###  https://data.norge.no/vocabulary/modelldcatno#ModelElement
+modelldcatno:ModelElement rdf:type owl:Class ;
+                        rdfs:subClassOf modelldcatno:NamedElement ,
                                         [ rdf:type owl:Restriction ;
-                                          owl:onProperty dcatnoinfo:term ;
-                                          owl:someValuesFrom dcatnoinfo:NamedElement
+                                          owl:onProperty modelldcatno:term ;
+                                          owl:someValuesFrom modelldcatno:NamedElement
                                         ] ;
                         skos:prefLabel "Modell element"@nb .
 
 
-###  http://data.norge.no/informationmodel/NamedElement
-dcatnoinfo:NamedElement rdf:type owl:Class ;
+###  https://data.norge.no/vocabulary/modelldcatno#NamedElement
+modelldcatno:NamedElement rdf:type owl:Class ;
                         rdfs:label "Navngitt element"@nb .
 
 
-###  http://data.norge.no/informationmodel/Property
-dcatnoinfo:Property rdf:type owl:Class ;
-                    rdfs:subClassOf dcatnoinfo:NamedElement ;
+###  https://data.norge.no/vocabulary/modelldcatno#Property
+modelldcatno:Property rdf:type owl:Class ;
+                    rdfs:subClassOf modelldcatno:NamedElement ;
                     rdfs:label "Egenskap"@nb .
 
 
-###  http://data.norge.no/informationmodel/SimpleType
-dcatnoinfo:SimpleType rdf:type owl:Class ;
-                      rdfs:subClassOf dcatnoinfo:ModelElement ,
+###  https://data.norge.no/vocabulary/modelldcatno#SimpleType
+modelldcatno:SimpleType rdf:type owl:Class ;
+                      rdfs:subClassOf modelldcatno:ModelElement ,
                                       [ rdf:type owl:Restriction ;
-                                        owl:onProperty dcatnoinfo:hasProperty ;
+                                        owl:onProperty modelldcatno:hasProperty ;
                                         owl:qualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                        owl:onClass dcatnoinfo:Property
+                                        owl:onClass modelldcatno:Property
                                       ] ;
                       rdfs:label "Enkeltype"@nb .
 
@@ -686,7 +686,7 @@ dcat:Dataset rdf:type owl:Class ;
 
 ###  http://www.w3.org/ns/dcat#Resource
 dcat:Resource rdf:type owl:Class ;
-              rdfs:comment "Fungerer som superklasse både for katalogen (dcat:Catalog) og selve modellen (dcatnoinfo:InformationModel)"@nb .
+              rdfs:comment "Fungerer som superklasse både for katalogen (dcat:Catalog) og selve modellen (modelldcatno:InformationModel)"@nb .
 
 
 ###  http://xmlns.com/foaf/0.1/Agent
@@ -700,18 +700,18 @@ foaf:Agent rdf:type owl:Class ;
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/Ingenoppgaver
 pass:Ingenoppgaver rdf:type owl:NamedIndividual ,
-                            dcatnoinfo:Codename ;
-                   dcatnoinfo:name "ingenoppgaver"^^xsd:string .
+                            modelldcatno:Codename ;
+                   modelldcatno:name "ingenoppgaver"^^xsd:string .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/InntektsårType
 pass:InntektsårType rdf:type owl:NamedIndividual ,
-                             dcatnoinfo:SimpleType ;
-                    dcatnoinfo:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/inntektsaar"^^xsd:anyURI ;
-                    dcatnoinfo:isDescribedBy "https://data.skatteetaten.no/begrep/fa86c460-d685-11e7-9676-0050568351d2"^^xsd:anyURI ;
-                    dcatnoinfo:modelElementType "enkeltype" ;
-                    dcatnoinfo:name "Inntektsår"@nb ;
-                    dcatnoinfo:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#integer"^^xsd:anyURI ;
+                             modelldcatno:SimpleType ;
+                    modelldcatno:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/inntektsaar"^^xsd:anyURI ;
+                    modelldcatno:isDescribedBy "https://data.skatteetaten.no/begrep/fa86c460-d685-11e7-9676-0050568351d2"^^xsd:anyURI ;
+                    modelldcatno:modelElementType "enkeltype" ;
+                    modelldcatno:name "Inntektsår"@nb ;
+                    modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#integer"^^xsd:anyURI ;
                     xsd:totalDigits "4"^^xsd:nonNegativeInteger ;
                     rdfs:comment "Lokal definert enkeltype"@nb .
 
@@ -724,82 +724,82 @@ pass:KontaktOss rdf:type owl:NamedIndividual ,
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/KontaktinformasjonType
 pass:KontaktinformasjonType rdf:type owl:NamedIndividual ,
-                                     dcatnoinfo:ModelElement ;
-                            dcatnoinfo:hasProperty pass:navn ,
+                                     modelldcatno:ModelElement ;
+                            modelldcatno:hasProperty pass:navn ,
                                                    pass:telefonnummer ,
                                                    pass:varselEpostadresse ,
                                                    pass:varselSmsMobilnummer ;
-                            dcatnoinfo:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/kontaktinformasjon"^^xsd:anyURI ;
-                            dcatnoinfo:isDescribedBy "https://data.skatteetaten.no/begreper/20b52ad9-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
-                            dcatnoinfo:modelElementType "datatype"^^xsd:string ;
-                            dcatnoinfo:name "Kontaktinformasjon"@nb .
+                            modelldcatno:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/kontaktinformasjon"^^xsd:anyURI ;
+                            modelldcatno:isDescribedBy "https://data.skatteetaten.no/begreper/20b52ad9-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
+                            modelldcatno:modelElementType "datatype"^^xsd:string ;
+                            modelldcatno:name "Kontaktinformasjon"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/Leveranse
 pass:Leveranse rdf:type owl:NamedIndividual ,
-                        dcatnoinfo:ModelElement ;
-               dcatnoinfo:hasProperty pass:inntektsår ,
+                        modelldcatno:ModelElement ;
+               modelldcatno:hasProperty pass:inntektsår ,
                                       pass:kildesystem ,
                                       pass:leveransetype ,
                                       pass:oppgaveRolle ,
                                       pass:oppgavegiverRolle ,
                                       pass:oppgavegiversLeveransereferanse ,
                                       pass:oppgavesummeringRolle ;
-               dcatnoinfo:description "samling av oppgaver fra en og samme oppgavegiver for en oppgavetype"@nb ;
-               dcatnoinfo:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/leveranse"^^xsd:anyURI ;
-               dcatnoinfo:isDescribedBy "http://begrepskatalog/begrep/20b2e302-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
-               dcatnoinfo:modelElementType "objekttype"^^xsd:string ;
-               dcatnoinfo:name "Leveranse"@nb .
+               modelldcatno:description "samling av oppgaver fra en og samme oppgavegiver for en oppgavetype"@nb ;
+               modelldcatno:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/leveranse"^^xsd:anyURI ;
+               modelldcatno:isDescribedBy "http://begrepskatalog/begrep/20b2e302-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
+               modelldcatno:modelElementType "objekttype"^^xsd:string ;
+               modelldcatno:name "Leveranse"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/LeveranseKategori
 pass:LeveranseKategori rdf:type owl:NamedIndividual ,
-                                dcatnoinfo:CodeList ;
-                       dcatnoinfo:containsCodename pass:Ingenoppgaver ,
+                                modelldcatno:CodeList ;
+                       modelldcatno:containsCodename pass:Ingenoppgaver ,
                                                    pass:Ordinær ;
-                       dcatnoinfo:isDescribedBy "https://data.skatteetaten.no/begrep/20b2e2d4-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
-                       dcatnoinfo:modelElementType "kodeliste" ;
-                       dcatnoinfo:name "Leveransetype"@nb .
+                       modelldcatno:isDescribedBy "https://data.skatteetaten.no/begrep/20b2e2d4-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
+                       modelldcatno:modelElementType "kodeliste" ;
+                       modelldcatno:name "Leveransetype"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/Melding
 pass:Melding rdf:type owl:NamedIndividual ,
-                      dcatnoinfo:ModelElement ;
-             dcatnoinfo:hasProperty pass:leveranseRolle ;
-             dcatnoinfo:description "Innholdet i en sending"@nb ;
-             dcatnoinfo:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/melding"^^xsd:anyURI ;
-             dcatnoinfo:isDescribedBy "http://begrepskatalog/begrep/20b2e303-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
-             dcatnoinfo:modelElementType "rotObjektstype" ;
-             dcatnoinfo:name "Melding"@nb .
+                      modelldcatno:ModelElement ;
+             modelldcatno:hasProperty pass:leveranseRolle ;
+             modelldcatno:description "Innholdet i en sending"@nb ;
+             modelldcatno:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/melding"^^xsd:anyURI ;
+             modelldcatno:isDescribedBy "http://begrepskatalog/begrep/20b2e303-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
+             modelldcatno:modelElementType "rotObjektstype" ;
+             modelldcatno:name "Melding"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/NavnType
 pass:NavnType rdf:type owl:NamedIndividual ,
-                       dcatnoinfo:SimpleType ;
-              dcatnoinfo:description """Navnet på oppgaveeier (forsørger). Valgfri rekkefølge på fornavn og etternavn, men ønsket format er fornavn, mellomnavn og
+                       modelldcatno:SimpleType ;
+              modelldcatno:description """Navnet på oppgaveeier (forsørger). Valgfri rekkefølge på fornavn og etternavn, men ønsket format er fornavn, mellomnavn og
 etternavn med blankt tegn imellom hver. Tekststreng på maks 100 tegn."""@nb ;
-              dcatnoinfo:modelElementType "enkeltype" ;
-              dcatnoinfo:name "Navn"@nb ;
-              dcatnoinfo:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI ;
+              modelldcatno:modelElementType "enkeltype" ;
+              modelldcatno:name "Navn"@nb ;
+              modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI ;
               xsd:maxLength "100"^^xsd:nonNegativeInteger ;
               rdfs:comment "Lokalt definert enkelttype"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/OppgaveBarnepass
 pass:OppgaveBarnepass rdf:type owl:NamedIndividual ,
-                               dcatnoinfo:ModelElement ;
-                      dcatnoinfo:hasProperty pass:oppgaveeierRolle ,
+                               modelldcatno:ModelElement ;
+                      modelldcatno:hasProperty pass:oppgaveeierRolle ,
                                              pass:påløptBeløp ;
-                      dcatnoinfo:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/oppgavebarnepass"^^xsd:anyURI ;
-                      dcatnoinfo:isDescribedBy "http://begrepskatalog/begrep/20b2e2d8-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
-                      dcatnoinfo:modelElementType "objekttype"^^xsd:string ;
-                      dcatnoinfo:name "OppgaveBarnepass"^^xsd:string .
+                      modelldcatno:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/oppgavebarnepass"^^xsd:anyURI ;
+                      modelldcatno:isDescribedBy "http://begrepskatalog/begrep/20b2e2d8-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
+                      modelldcatno:modelElementType "objekttype"^^xsd:string ;
+                      modelldcatno:name "OppgaveBarnepass"^^xsd:string .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/OppgaveOverPassOgStellAvBarn
 pass:OppgaveOverPassOgStellAvBarn rdf:type owl:NamedIndividual ,
-                                           dcatnoinfo:InformationModel ;
-                                  dcatnoinfo:containsModelElement pass:Leveranse ,
+                                           modelldcatno:InformationModel ;
+                                  modelldcatno:containsModelElement pass:Leveranse ,
                                                                   pass:Melding ,
                                                                   pass:OppgaveBarnepass ,
                                                                   pass:Oppgaveeier ,
@@ -808,14 +808,15 @@ pass:OppgaveOverPassOgStellAvBarn rdf:type owl:NamedIndividual ,
                                   dcterms:publisher pass:utgiver ;
                                   dcterms:temporal pass:gyldighetsintervall ;
                                   dcat:contactPoint pass:KontaktOss ;
-                                  dcatnoinfo:description "Barnehager og skolefritidsordninger skal levere opplysninger til Skatteetaten om kostnader foreldrene har hatt til pass og stell av barn."@nb ;
-                                  dcatnoinfo:informationModelIdentifier "urn:ske:fastsetting:innsamling:barnepass:v2"^^xsd:anyURI ;
-                                  dcatnoinfo:name "OppgaveOverPassOgStellAvBarn-2.0"^^xsd:string ;
-                                  dcatnoinfo:version "2.0"^^xsd:string ;
+                                  modelldcatno:description "Barnehager og skolefritidsordninger skal levere opplysninger til Skatteetaten om kostnader foreldrene har hatt til pass og stell av barn."@nb ;
+                                  modelldcatno:informationModelIdentifier "urn:ske:fastsetting:innsamling:barnepass:v2"^^xsd:anyURI ;
+                                  modelldcatno:name "OppgaveOverPassOgStellAvBarn-2.0"^^xsd:string ;
+                                  modelldcatno:version "2.0"^^xsd:string ;
                                   dcterms:identifier "digdir:45" ;
                                   dcterms:issued "2020-03-30T18:35:07.950+02:00"^^xsd:dateTime ;
-                                  dcterms:language "no"^^xsd:string ;
-                                  dcterms:title "Skatteetatens oppgave over utgifter til stell og pass av barn"@nb .
+                                  dcterms:language "nb"^^xsd:string ;
+                                  dcterms:title "Skatteetatens oppgave over utgifter til stell og pass av barn"@nb ;
+                                  dcat:landingPage "http:skatteetaten.no/"^^xsd:anyURI .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource pass:OppgaveOverPassOgStellAvBarn ;
@@ -826,7 +827,7 @@ pass:OppgaveOverPassOgStellAvBarn rdf:type owl:NamedIndividual ,
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource pass:OppgaveOverPassOgStellAvBarn ;
-   owl:annotatedProperty dcatnoinfo:name ;
+   owl:annotatedProperty modelldcatno:name ;
    owl:annotatedTarget "OppgaveOverPassOgStellAvBarn-2.0"^^xsd:string ;
    rdfs:comment "Dette er navnet modellen har, på det stedet den blir laget. Kan være en intern betegnelse, og bør være lik med hva modellen heter internt i en etat."@nb
  ] .
@@ -848,47 +849,47 @@ pass:OppgaveOverPassOgStellAvBarn rdf:type owl:NamedIndividual ,
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/Oppgaveeier
 pass:Oppgaveeier rdf:type owl:NamedIndividual ,
-                          dcatnoinfo:ModelElement ;
-                 dcatnoinfo:hasProperty pass:fødselsnummer ,
+                          modelldcatno:ModelElement ;
+                 modelldcatno:hasProperty pass:fødselsnummer ,
                                         pass:oppgaveeiernavn ;
-                 dcatnoinfo:description """Forsørger som har betalt for pass og stell av barn.
+                 modelldcatno:description """Forsørger som har betalt for pass og stell av barn.
 
 Se type Oppgaveeier."""@nb ,
                                         "den som oppgaven vanligvis gjelder"@nb ;
-                 dcatnoinfo:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/oppgavebarnepass/oppgaveeier"^^xsd:anyURI ;
-                 dcatnoinfo:isDescribedBy "https://data.skatteetaten.no/begreper/20b52ab9-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
-                 dcatnoinfo:modelElementType "objekttype"^^xsd:string ;
-                 dcatnoinfo:name "Oppgaveeier"@nb .
+                 modelldcatno:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/oppgavebarnepass/oppgaveeier"^^xsd:anyURI ;
+                 modelldcatno:isDescribedBy "https://data.skatteetaten.no/begreper/20b52ab9-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
+                 modelldcatno:modelElementType "objekttype"^^xsd:string ;
+                 modelldcatno:name "Oppgaveeier"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/Oppgavegiver
 pass:Oppgavegiver rdf:type owl:NamedIndividual ,
-                           dcatnoinfo:ModelElement ;
-                  dcatnoinfo:hasProperty pass:kontaktinformasjon ,
+                           modelldcatno:ModelElement ;
+                  modelldcatno:hasProperty pass:kontaktinformasjon ,
                                          pass:organisasjonsnavn ,
                                          pass:organisasjonsnummer ;
-                  dcatnoinfo:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/oppgavegiver"^^xsd:anyURI ;
-                  dcatnoinfo:isDescribedBy "https://data.skatteetaten.no/begreper/20b52aba-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
-                  dcatnoinfo:modelElementType "objekttype"^^xsd:string ;
-                  dcatnoinfo:name "Oppgavegiver"@nb .
+                  modelldcatno:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/oppgavegiver"^^xsd:anyURI ;
+                  modelldcatno:isDescribedBy "https://data.skatteetaten.no/begreper/20b52aba-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
+                  modelldcatno:modelElementType "objekttype"^^xsd:string ;
+                  modelldcatno:name "Oppgavegiver"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/Oppgaveoppsumering
 pass:Oppgaveoppsumering rdf:type owl:NamedIndividual ,
-                                 dcatnoinfo:ModelElement ;
-                        dcatnoinfo:hasProperty pass:antallOppgaver ,
+                                 modelldcatno:ModelElement ;
+                        modelldcatno:hasProperty pass:antallOppgaver ,
                                                pass:sumBeløp ;
-                        dcatnoinfo:description "oppsummering av alle oppgavene for gave til organisasjoner i en leveranse med kontrollsummer av antall oppgaver og utvalgte beløpsfelt"@nb ;
-                        dcatnoinfo:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/oppgaveoppsummering"^^xsd:anyURI ;
-                        dcatnoinfo:isDescribedBy "https://data.skatteetaten.no/begreper/20b52abc-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
-                        dcatnoinfo:modelElementType "objekttype"^^xsd:string ;
-                        dcatnoinfo:name "Oppgaveoppsummering"@nb .
+                        modelldcatno:description "oppsummering av alle oppgavene for gave til organisasjoner i en leveranse med kontrollsummer av antall oppgaver og utvalgte beløpsfelt"@nb ;
+                        modelldcatno:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/oppgaveoppsummering"^^xsd:anyURI ;
+                        modelldcatno:isDescribedBy "https://data.skatteetaten.no/begreper/20b52abc-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
+                        modelldcatno:modelElementType "objekttype"^^xsd:string ;
+                        modelldcatno:name "Oppgaveoppsummering"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/Ordinær
 pass:Ordinær rdf:type owl:NamedIndividual ,
-                      dcatnoinfo:Codename ;
-             dcatnoinfo:name "ordinær"@nb .
+                      modelldcatno:Codename ;
+             modelldcatno:name "ordinær"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/SkattKatalog
@@ -908,30 +909,30 @@ pass:SkattKatalog rdf:type owl:NamedIndividual ,
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/antallOppgaver
 pass:antallOppgaver rdf:type owl:NamedIndividual ,
-                             dcatnoinfo:Property ;
-                    dcatnoinfo:type skebase:AntallType ;
-                    dcatnoinfo:description """Sum av alle påløpte beløp i oppgavene til en
+                             modelldcatno:Property ;
+                    modelldcatno:type skebase:AntallType ;
+                    modelldcatno:description """Sum av alle påløpte beløp i oppgavene til en
 leveranse.
 Beløpet oppgis som et heltall"""@nb ;
-                    dcatnoinfo:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/oppgaveoppsummering/antalloppgaver"^^xsd:anyURI ;
-                    dcatnoinfo:isDescribedBy "https://data.skatteetaten.no/begreper/20b52ab1-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
-                    dcatnoinfo:name "antallOppgaver"@nb ;
+                    modelldcatno:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/oppgaveoppsummering/antalloppgaver"^^xsd:anyURI ;
+                    modelldcatno:isDescribedBy "https://data.skatteetaten.no/begreper/20b52ab1-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
+                    modelldcatno:name "antallOppgaver"@nb ;
                     xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                     xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/fødselsnummer
 pass:fødselsnummer rdf:type owl:NamedIndividual ,
-                            dcatnoinfo:Property ;
-                   dcatnoinfo:type skebase:FødselsnummerType ;
-                   dcatnoinfo:description """Oppgaveeiers (forsørgers) fødselsnummer eller d-nummer.
+                            modelldcatno:Property ;
+                   modelldcatno:type skebase:FødselsnummerType ;
+                   modelldcatno:description """Oppgaveeiers (forsørgers) fødselsnummer eller d-nummer.
 
 Ellevesifret identifikasjonsnummer for personer bosatt i Norge, der de seks første sifrene angir fødselsdato og de fem siste
 personnumme."""@nb ;
-                   dcatnoinfo:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/oppgaveeier/foedselsnummer"^^xsd:anyURI ;
-                   dcatnoinfo:isDescribedBy "https://data.skatteetaten.no/begreper/5138da11-be20-11e6-8004-005056825ca0"^^xsd:anyURI ;
-                   dcatnoinfo:name "fødselsnummer"@nb ;
-                   dcatnoinfo:propertyType "attributt" ;
+                   modelldcatno:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/oppgaveeier/foedselsnummer"^^xsd:anyURI ;
+                   modelldcatno:isDescribedBy "https://data.skatteetaten.no/begreper/5138da11-be20-11e6-8004-005056825ca0"^^xsd:anyURI ;
+                   modelldcatno:name "fødselsnummer"@nb ;
+                   modelldcatno:propertyType "attributt" ;
                    xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                    xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
@@ -944,11 +945,11 @@ pass:gyldighetsintervall rdf:type owl:NamedIndividual ,
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/inntektsår
 pass:inntektsår rdf:type owl:NamedIndividual ,
-                         dcatnoinfo:Property ;
-                dcatnoinfo:type pass:InntektsårType ;
-                dcatnoinfo:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/leveranse/inntektsaar"^^xsd:anyURI ;
-                dcatnoinfo:name "inntektsår"@nb ;
-                dcatnoinfo:propertyType "attributt" ;
+                         modelldcatno:Property ;
+                modelldcatno:type pass:InntektsårType ;
+                modelldcatno:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/leveranse/inntektsaar"^^xsd:anyURI ;
+                modelldcatno:name "inntektsår"@nb ;
+                modelldcatno:propertyType "attributt" ;
                 xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                 xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
@@ -963,178 +964,178 @@ pass:katalogdelPass rdf:type owl:NamedIndividual ,
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/kildesystem
 pass:kildesystem rdf:type owl:NamedIndividual ,
-                          dcatnoinfo:Property ;
-                 dcatnoinfo:type skebase:KildesystemType ;
-                 dcatnoinfo:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/leveranse/kildesystem"^^xsd:anyURI ;
-                 dcatnoinfo:name "kildesystem"^^xsd:string ;
-                 dcatnoinfo:propertyType "attributt" ;
+                          modelldcatno:Property ;
+                 modelldcatno:type skebase:KildesystemType ;
+                 modelldcatno:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/leveranse/kildesystem"^^xsd:anyURI ;
+                 modelldcatno:name "kildesystem"^^xsd:string ;
+                 modelldcatno:propertyType "attributt" ;
                  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                  xsd:minOccurs "0"^^xsd:nonNegativeInteger .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/kontaktinformasjon
 pass:kontaktinformasjon rdf:type owl:NamedIndividual ,
-                                 dcatnoinfo:Property ;
-                        dcatnoinfo:type pass:KontaktinformasjonType ;
-                        dcatnoinfo:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/oppgavegiver/kontaktinformasjon"^^xsd:anyURI ;
-                        dcatnoinfo:name "kontaktinformasjon"@nb ;
-                        dcatnoinfo:propertyType "attributt" ;
+                                 modelldcatno:Property ;
+                        modelldcatno:type pass:KontaktinformasjonType ;
+                        modelldcatno:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/oppgavegiver/kontaktinformasjon"^^xsd:anyURI ;
+                        modelldcatno:name "kontaktinformasjon"@nb ;
+                        modelldcatno:propertyType "attributt" ;
                         xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                         xsd:minOccurs "0"^^xsd:nonNegativeInteger .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/leveranseRolle
 pass:leveranseRolle rdf:type owl:NamedIndividual ,
-                             dcatnoinfo:Property ;
-                    dcatnoinfo:type pass:Leveranse ;
-                    dcatnoinfo:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/melding/leveranse"^^xsd:anyURI ;
-                    dcatnoinfo:name "leveranse"^^xsd:string ;
-                    dcatnoinfo:propertyType "rolle" ;
+                             modelldcatno:Property ;
+                    modelldcatno:type pass:Leveranse ;
+                    modelldcatno:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/melding/leveranse"^^xsd:anyURI ;
+                    modelldcatno:name "leveranse"^^xsd:string ;
+                    modelldcatno:propertyType "rolle" ;
                     xsd:maxOccurs "*"^^rdfs:Literal ;
                     xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/leveransetype
 pass:leveransetype rdf:type owl:NamedIndividual ,
-                            dcatnoinfo:Property ;
-                   dcatnoinfo:type pass:LeveranseKategori ;
-                   dcatnoinfo:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/leveranse/leveransetype"^^xsd:anyURI ;
-                   dcatnoinfo:name "leveransetype"^^xsd:string ;
-                   dcatnoinfo:propertyType "attributt" ;
+                            modelldcatno:Property ;
+                   modelldcatno:type pass:LeveranseKategori ;
+                   modelldcatno:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/leveranse/leveransetype"^^xsd:anyURI ;
+                   modelldcatno:name "leveransetype"^^xsd:string ;
+                   modelldcatno:propertyType "attributt" ;
                    xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                    xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/navn
 pass:navn rdf:type owl:NamedIndividual ,
-                   dcatnoinfo:Property ;
-          dcatnoinfo:type pass:NavnType ;
-          dcatnoinfo:isDescribedBy "https://data.skatteetaten.no/begreper/20b2e243-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
-          dcatnoinfo:name "navn"@nb ;
-          dcatnoinfo:propertyType "attributt" .
+                   modelldcatno:Property ;
+          modelldcatno:type pass:NavnType ;
+          modelldcatno:isDescribedBy "https://data.skatteetaten.no/begreper/20b2e243-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
+          modelldcatno:name "navn"@nb ;
+          modelldcatno:propertyType "attributt" .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/oppgaveRolle
 pass:oppgaveRolle rdf:type owl:NamedIndividual ,
-                           dcatnoinfo:Property ;
-                  dcatnoinfo:type pass:OppgaveBarnepass ;
-                  dcatnoinfo:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/leveranse/oppgave"^^xsd:anyURI ;
-                  dcatnoinfo:name "oppgave"@nb ;
-                  dcatnoinfo:propertyType "rolle"^^xsd:string ;
+                           modelldcatno:Property ;
+                  modelldcatno:type pass:OppgaveBarnepass ;
+                  modelldcatno:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/leveranse/oppgave"^^xsd:anyURI ;
+                  modelldcatno:name "oppgave"@nb ;
+                  modelldcatno:propertyType "rolle"^^xsd:string ;
                   xsd:maxOccurs "*"^^rdfs:Literal ;
                   xsd:minOccurs "0"^^xsd:nonNegativeInteger .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/oppgaveeierRolle
 pass:oppgaveeierRolle rdf:type owl:NamedIndividual ,
-                               dcatnoinfo:Property ;
-                      dcatnoinfo:type pass:Oppgaveeier ;
-                      dcatnoinfo:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/oppgavebarnepass/oppgaveeier"@nb ;
-                      dcatnoinfo:name "oppgaveeier"^^xsd:string ;
-                      dcatnoinfo:propertyType "rolle"^^xsd:string ;
+                               modelldcatno:Property ;
+                      modelldcatno:type pass:Oppgaveeier ;
+                      modelldcatno:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/oppgavebarnepass/oppgaveeier"@nb ;
+                      modelldcatno:name "oppgaveeier"^^xsd:string ;
+                      modelldcatno:propertyType "rolle"^^xsd:string ;
                       xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                       xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/oppgaveeiernavn
 pass:oppgaveeiernavn rdf:type owl:NamedIndividual ,
-                              dcatnoinfo:Property ;
-                     dcatnoinfo:type pass:NavnType ;
-                     dcatnoinfo:name "navn"@nb ;
-                     dcatnoinfo:propertyType "attributt" ;
+                              modelldcatno:Property ;
+                     modelldcatno:type pass:NavnType ;
+                     modelldcatno:name "navn"@nb ;
+                     modelldcatno:propertyType "attributt" ;
                      xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                      xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/oppgavegiverRolle
 pass:oppgavegiverRolle rdf:type owl:NamedIndividual ,
-                                dcatnoinfo:Property ;
-                       dcatnoinfo:type pass:Oppgavegiver ;
-                       dcatnoinfo:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/leveranse/oppgavegiver"^^xsd:anyURI ;
-                       dcatnoinfo:name "oppgavegiver"@nb ;
-                       dcatnoinfo:propertyType "rolle"^^xsd:string ;
+                                modelldcatno:Property ;
+                       modelldcatno:type pass:Oppgavegiver ;
+                       modelldcatno:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/leveranse/oppgavegiver"^^xsd:anyURI ;
+                       modelldcatno:name "oppgavegiver"@nb ;
+                       modelldcatno:propertyType "rolle"^^xsd:string ;
                        xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                        xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/oppgavegiversLeveransereferanse
 pass:oppgavegiversLeveransereferanse rdf:type owl:NamedIndividual ,
-                                              dcatnoinfo:Property ;
-                                     dcatnoinfo:type skebase:LeveranseReferanseType ;
-                                     dcatnoinfo:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/leveranse/oppgavegiversleveransereferanse"^^xsd:anyURI ;
-                                     dcatnoinfo:name "oppgavegiversLeveransereferanse"@nb ;
-                                     dcatnoinfo:propertyType "attributt" ;
+                                              modelldcatno:Property ;
+                                     modelldcatno:type skebase:LeveranseReferanseType ;
+                                     modelldcatno:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/leveranse/oppgavegiversleveransereferanse"^^xsd:anyURI ;
+                                     modelldcatno:name "oppgavegiversLeveransereferanse"@nb ;
+                                     modelldcatno:propertyType "attributt" ;
                                      xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                                      xsd:minOccurs "0"^^xsd:nonNegativeInteger .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/oppgavesummeringRolle
 pass:oppgavesummeringRolle rdf:type owl:NamedIndividual ,
-                                    dcatnoinfo:Property ;
-                           dcatnoinfo:type pass:Oppgaveoppsumering ;
-                           dcatnoinfo:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/leveranse/oppgavesummering"^^xsd:anyURI ;
-                           dcatnoinfo:name "oppgavesummering"^^xsd:string ;
-                           dcatnoinfo:propertyType "rolle"^^xsd:string ;
+                                    modelldcatno:Property ;
+                           modelldcatno:type pass:Oppgaveoppsumering ;
+                           modelldcatno:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/leveranse/oppgavesummering"^^xsd:anyURI ;
+                           modelldcatno:name "oppgavesummering"^^xsd:string ;
+                           modelldcatno:propertyType "rolle"^^xsd:string ;
                            xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                            xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/organisasjonsnavn
 pass:organisasjonsnavn rdf:type owl:NamedIndividual ,
-                                dcatnoinfo:Property ;
-                       dcatnoinfo:type skebase:OrganisasjonsnavnType ;
-                       dcatnoinfo:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/oppgavegiver/organisasjonsnavn"^^xsd:anyURI ;
-                       dcatnoinfo:name "organisasjonsnavn"^^xsd:string ;
-                       dcatnoinfo:propertyType "attributt" ;
+                                modelldcatno:Property ;
+                       modelldcatno:type skebase:OrganisasjonsnavnType ;
+                       modelldcatno:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/oppgavegiver/organisasjonsnavn"^^xsd:anyURI ;
+                       modelldcatno:name "organisasjonsnavn"^^xsd:string ;
+                       modelldcatno:propertyType "attributt" ;
                        xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                        xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/organisasjonsnummer
 pass:organisasjonsnummer rdf:type owl:NamedIndividual ,
-                                  dcatnoinfo:Property ;
-                         dcatnoinfo:type skebase:OrganisasjonsnummerType ;
-                         dcatnoinfo:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/oppgavegiver/organisasjonsnummer"^^xsd:anyURI ;
-                         dcatnoinfo:name "organisasjonsnummer"@nb ;
-                         dcatnoinfo:propertyType "attributt" ;
+                                  modelldcatno:Property ;
+                         modelldcatno:type skebase:OrganisasjonsnummerType ;
+                         modelldcatno:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/oppgavegiver/organisasjonsnummer"^^xsd:anyURI ;
+                         modelldcatno:name "organisasjonsnummer"@nb ;
+                         modelldcatno:propertyType "attributt" ;
                          xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                          xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/påløptBeløp
 pass:påløptBeløp rdf:type owl:NamedIndividual ,
-                          dcatnoinfo:Property ;
-                 dcatnoinfo:type skebase:BeløpType ;
-                 dcatnoinfo:description """Sum beløp som er fakturert en
+                          modelldcatno:Property ;
+                 modelldcatno:type skebase:BeløpType ;
+                 modelldcatno:description """Sum beløp som er fakturert en
 foresatt/forsørger fra barnepassvirksomhet(er) i
 løpet av inntektsåret. Oppgavegiver skal oppgi
 ett summert beløp per oppgaveeier.
 
 Beløpet oppgis som et positivt heltall."""@nb ;
-                 dcatnoinfo:name "påløptBeløp"@nb ;
-                 dcatnoinfo:propertyType "attributt" ;
+                 modelldcatno:name "påløptBeløp"@nb ;
+                 modelldcatno:propertyType "attributt" ;
                  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                  xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/sumBeløp
 pass:sumBeløp rdf:type owl:NamedIndividual ,
-                       dcatnoinfo:Property ;
-              dcatnoinfo:type skebase:BeløpType ;
-              dcatnoinfo:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/oppgaveoppsummering/sumbeloep"^^xsd:anyURI ;
-              dcatnoinfo:name "sumBeløp"@nb ;
-              dcatnoinfo:propertyType "attributt" ;
+                       modelldcatno:Property ;
+              modelldcatno:type skebase:BeløpType ;
+              modelldcatno:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/oppgaveoppsummering/sumbeloep"^^xsd:anyURI ;
+              modelldcatno:name "sumBeløp"@nb ;
+              modelldcatno:propertyType "attributt" ;
               xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
               xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/telefonnummer
 pass:telefonnummer rdf:type owl:NamedIndividual ,
-                            dcatnoinfo:Property ;
-                   dcatnoinfo:type skebase:TelefonnummerType ;
-                   dcatnoinfo:isDescribedBy "https://data.skatteetaten.no/begreper/20b2e128-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
-                   dcatnoinfo:name "telefonnummer"@nb ;
-                   dcatnoinfo:propertyType "attributt" .
+                            modelldcatno:Property ;
+                   modelldcatno:type skebase:TelefonnummerType ;
+                   modelldcatno:isDescribedBy "https://data.skatteetaten.no/begreper/20b2e128-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
+                   modelldcatno:name "telefonnummer"@nb ;
+                   modelldcatno:propertyType "attributt" .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/utgiver
@@ -1146,219 +1147,219 @@ pass:utgiver rdf:type owl:NamedIndividual ,
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/varselEpostadresse
 pass:varselEpostadresse rdf:type owl:NamedIndividual ,
-                                 dcatnoinfo:Property ;
-                        dcatnoinfo:type skebase:EpostadresseType ;
-                        dcatnoinfo:isDescribedBy "https://data.skatteetaten.no/begreper/20b2e108-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
-                        dcatnoinfo:name "varselEpostadresse"@nb ;
-                        dcatnoinfo:propertyType "attributt" .
+                                 modelldcatno:Property ;
+                        modelldcatno:type skebase:EpostadresseType ;
+                        modelldcatno:isDescribedBy "https://data.skatteetaten.no/begreper/20b2e108-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
+                        modelldcatno:name "varselEpostadresse"@nb ;
+                        modelldcatno:propertyType "attributt" .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/varselSmsMobilnummer
 pass:varselSmsMobilnummer rdf:type owl:NamedIndividual ,
-                                   dcatnoinfo:Property ;
-                          dcatnoinfo:type skebase:TelefonnummerType ;
-                          dcatnoinfo:isDescribedBy "https://data.skatteetaten.no/begreper/20b2e126-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
-                          dcatnoinfo:name "varselSmsMobilnummer"@nb ;
-                          dcatnoinfo:propertyType "attributt" .
+                                   modelldcatno:Property ;
+                          modelldcatno:type skebase:TelefonnummerType ;
+                          modelldcatno:isDescribedBy "https://data.skatteetaten.no/begreper/20b2e126-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
+                          modelldcatno:name "varselSmsMobilnummer"@nb ;
+                          modelldcatno:propertyType "attributt" .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/AntallType
 skebase:AntallType rdf:type owl:NamedIndividual ,
-                            dcatnoinfo:SimpleType ;
-                   dcatnoinfo:description "mengde som utgjør eller kan uttrykkes i et visst tall"@nb ;
-                   dcatnoinfo:isDescribedBy "https://data.skatteetaten.no/begrep/20b2e145-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
-                   dcatnoinfo:modelElementType "enkeltype" ;
-                   dcatnoinfo:name "Antall"@nb ;
-                   dcatnoinfo:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#long"^^xsd:anyURI ;
+                            modelldcatno:SimpleType ;
+                   modelldcatno:description "mengde som utgjør eller kan uttrykkes i et visst tall"@nb ;
+                   modelldcatno:isDescribedBy "https://data.skatteetaten.no/begrep/20b2e145-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
+                   modelldcatno:modelElementType "enkeltype" ;
+                   modelldcatno:name "Antall"@nb ;
+                   modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#long"^^xsd:anyURI ;
                    xsd:maxInclusive "9223372036854775807"^^xsd:int ;
                    xsd:minInclusive "-9223372036854775808"^^xsd:int .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/BeløpSomHeltallType
 skebase:BeløpSomHeltallType rdf:type owl:NamedIndividual ,
-                                     dcatnoinfo:SimpleType ;
-                            dcatnoinfo:description "en sum av penger i hele kroner brukt i en kontekst. Dette kan være en transaksjon, saldo o.l."^^xsd:anyURI ;
-                            dcatnoinfo:isDescribedBy "https://data.skatteetaten.no/begrep/20b2e146-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
-                            dcatnoinfo:modelElementType "enkeltype" ;
-                            dcatnoinfo:name "BeløpSomHeltall"@nb ;
-                            dcatnoinfo:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#integer"^^xsd:anyURI .
+                                     modelldcatno:SimpleType ;
+                            modelldcatno:description "en sum av penger i hele kroner brukt i en kontekst. Dette kan være en transaksjon, saldo o.l."@nb ;
+                            modelldcatno:isDescribedBy "https://data.skatteetaten.no/begrep/20b2e146-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
+                            modelldcatno:modelElementType "enkeltype" ;
+                            modelldcatno:name "BeløpSomHeltall"@nb ;
+                            modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#integer"^^xsd:anyURI .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/BeløpType
 skebase:BeløpType rdf:type owl:NamedIndividual ,
-                           dcatnoinfo:SimpleType ;
-                  dcatnoinfo:isDescribedBy "https://data.skatteetaten.no/begrep/20b2e146-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
-                  dcatnoinfo:modelElementType "enkeltype" ;
-                  dcatnoinfo:name "Beløp"@nb ;
-                  dcatnoinfo:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#integer"^^xsd:anyURI ;
+                           modelldcatno:SimpleType ;
+                  modelldcatno:isDescribedBy "https://data.skatteetaten.no/begrep/20b2e146-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
+                  modelldcatno:modelElementType "enkeltype" ;
+                  modelldcatno:name "Beløp"@nb ;
+                  modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#integer"^^xsd:anyURI ;
                   xsd:minInclusive 0 .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/BoolskType
 skebase:BoolskType rdf:type owl:NamedIndividual ,
-                            dcatnoinfo:SimpleType ;
-                   dcatnoinfo:description "angir verdien sann eller usann"@nb ;
-                   dcatnoinfo:isDescribedBy "https://data.skatteetaten.no/begrep/20b52aec-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
-                   dcatnoinfo:modelElementType "enkeltype" ;
-                   dcatnoinfo:name "Boolsk"@nb ;
-                   dcatnoinfo:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#boolean"^^xsd:anyURI .
+                            modelldcatno:SimpleType ;
+                   modelldcatno:description "angir verdien sann eller usann"@nb ;
+                   modelldcatno:isDescribedBy "https://data.skatteetaten.no/begrep/20b52aec-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
+                   modelldcatno:modelElementType "enkeltype" ;
+                   modelldcatno:name "Boolsk"@nb ;
+                   modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#boolean"^^xsd:anyURI .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/DatoType
 skebase:DatoType rdf:type owl:NamedIndividual ,
-                          dcatnoinfo:SimpleType ;
-                 dcatnoinfo:description """gir verdier for år, måned og dag. Kodes som en tekststreng etter datoformatering spesifisert i  ISO 8601 (ISO 8601:2004 Data elements and interchange formats -- Information interchange -- Representation of dates and times). 
+                          modelldcatno:SimpleType ;
+                 modelldcatno:description """gir verdier for år, måned og dag. Kodes som en tekststreng etter datoformatering spesifisert i  ISO 8601 (ISO 8601:2004 Data elements and interchange formats -- Information interchange -- Representation of dates and times).
 Eksempel : 1998-12-21 eller 19981221."""@nb ;
-                 dcatnoinfo:isDescribedBy "https://data.skatteetaten.no/begrep/20b52aed-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
-                 dcatnoinfo:modelElementType "enkeltype" ;
-                 dcatnoinfo:name "Dato"@nb ;
-                 dcatnoinfo:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#date"^^xsd:anyURI .
+                 modelldcatno:isDescribedBy "https://data.skatteetaten.no/begrep/20b52aed-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
+                 modelldcatno:modelElementType "enkeltype" ;
+                 modelldcatno:name "Dato"@nb ;
+                 modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#date"^^xsd:anyURI .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/EpostadresseType
 skebase:EpostadresseType rdf:type owl:NamedIndividual ,
-                                  dcatnoinfo:SimpleType ;
-                         dcatnoinfo:isDescribedBy "https://data.skatteetaten.no/begrep/20b2e108-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
-                         dcatnoinfo:modelElementType "enkeltype" ;
-                         dcatnoinfo:name "Epostadresse"@nb ;
-                         dcatnoinfo:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI ;
+                                  modelldcatno:SimpleType ;
+                         modelldcatno:isDescribedBy "https://data.skatteetaten.no/begrep/20b2e108-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
+                         modelldcatno:modelElementType "enkeltype" ;
+                         modelldcatno:name "Epostadresse"@nb ;
+                         modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI ;
                          xsd:maxLength "254"^^xsd:nonNegativeInteger .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/FødselsnummerType
 skebase:FødselsnummerType rdf:type owl:NamedIndividual ,
-                                   dcatnoinfo:SimpleType ;
-                          dcatnoinfo:description "ellevesifret identifikasjonsnummer for personer bosatt i Norge, der de seks første sifrene angir fødselsdato og de fem siste personnummer."@nb ;
-                          dcatnoinfo:isDescribedBy "https://data.skatteetaten.no/begrep/5138da10-be20-11e6-8004-005056825ca0"^^xsd:anyURI ;
-                          dcatnoinfo:modelElementType "enkeltype" ;
-                          dcatnoinfo:name "Fødselsnummer"@nb ;
-                          dcatnoinfo:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI ;
+                                   modelldcatno:SimpleType ;
+                          modelldcatno:description "ellevesifret identifikasjonsnummer for personer bosatt i Norge, der de seks første sifrene angir fødselsdato og de fem siste personnummer."@nb ;
+                          modelldcatno:isDescribedBy "https://data.skatteetaten.no/begrep/5138da10-be20-11e6-8004-005056825ca0"^^xsd:anyURI ;
+                          modelldcatno:modelElementType "enkeltype" ;
+                          modelldcatno:name "Fødselsnummer"@nb ;
+                          modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI ;
                           xsd:length "11"^^xsd:nonNegativeInteger ;
                           xsd:pattern "[0-9]+"^^xsd:string .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/KildesystemType
 skebase:KildesystemType rdf:type owl:NamedIndividual ,
-                                 dcatnoinfo:SimpleType ;
-                        dcatnoinfo:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/leveranse/kildesystem"^^xsd:anyURI ;
-                        dcatnoinfo:modelElementType "enkeltype" ;
-                        dcatnoinfo:name "Kildesystem"@nb ;
-                        dcatnoinfo:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI ;
+                                 modelldcatno:SimpleType ;
+                        modelldcatno:elementIdentifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/leveranse/kildesystem"^^xsd:anyURI ;
+                        modelldcatno:modelElementType "enkeltype" ;
+                        modelldcatno:name "Kildesystem"@nb ;
+                        modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI ;
                         xsd:maxLength "100"^^xsd:nonNegativeInteger .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/LeveranseReferanseType
 skebase:LeveranseReferanseType rdf:type owl:NamedIndividual ,
-                                        dcatnoinfo:SimpleType ;
-                               dcatnoinfo:isDescribedBy "https://data.skatteetaten.no/begrep/20b2e2df-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
-                               dcatnoinfo:modelElementType "enkeltype" ;
-                               dcatnoinfo:name "LeveranseReferanse"@nb ;
-                               dcatnoinfo:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI ;
+                                        modelldcatno:SimpleType ;
+                               modelldcatno:isDescribedBy "https://data.skatteetaten.no/begrep/20b2e2df-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
+                               modelldcatno:modelElementType "enkeltype" ;
+                               modelldcatno:name "LeveranseReferanse"@nb ;
+                               modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI ;
                                xsd:maxLength "100"^^xsd:nonNegativeInteger .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/OrganisasjonsnavnType
 skebase:OrganisasjonsnavnType rdf:type owl:NamedIndividual ,
-                                       dcatnoinfo:SimpleType ;
-                              dcatnoinfo:modelElementType "enkeltype" ;
-                              dcatnoinfo:name "Organisasjonsnavn"@nb ;
-                              dcatnoinfo:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI ;
+                                       modelldcatno:SimpleType ;
+                              modelldcatno:modelElementType "enkeltype" ;
+                              modelldcatno:name "Organisasjonsnavn"@nb ;
+                              modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI ;
                               xsd:maxLength "100"^^xsd:int .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/OrganisasjonsnummerType
 skebase:OrganisasjonsnummerType rdf:type owl:NamedIndividual ,
-                                         dcatnoinfo:SimpleType ;
-                                dcatnoinfo:description "9 sifret nummer gitt de som er registrert i Enhetsregisteret."@nb ;
-                                dcatnoinfo:isDescribedBy "https://data.skatteetaten.no/begrep/20b2e1a8-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
-                                dcatnoinfo:modelElementType "enkeltype" ;
-                                dcatnoinfo:name "Organisasjonsnummer"@nb ;
-                                dcatnoinfo:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI ;
+                                         modelldcatno:SimpleType ;
+                                modelldcatno:description "9 sifret nummer gitt de som er registrert i Enhetsregisteret."@nb ;
+                                modelldcatno:isDescribedBy "https://data.skatteetaten.no/begrep/20b2e1a8-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
+                                modelldcatno:modelElementType "enkeltype" ;
+                                modelldcatno:name "Organisasjonsnummer"@nb ;
+                                modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI ;
                                 xsd:length "9"^^xsd:nonNegativeInteger ;
                                 xsd:pattern "[0-9]+"^^xsd:string .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/TekstType
 skebase:TekstType rdf:type owl:NamedIndividual ,
-                           dcatnoinfo:SimpleType ;
-                  dcatnoinfo:modelElementType "enkeltype" ;
-                  dcatnoinfo:name "Tekst"@nb ;
-                  dcatnoinfo:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI ;
+                           modelldcatno:SimpleType ;
+                  modelldcatno:modelElementType "enkeltype" ;
+                  modelldcatno:name "Tekst"@nb ;
+                  modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI ;
                   xsd:maxLength "4000"^^xsd:int .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/TelefonnummerType
 skebase:TelefonnummerType rdf:type owl:NamedIndividual ,
-                                   dcatnoinfo:SimpleType ;
-                          dcatnoinfo:isDescribedBy "https://data.skatteetaten.no/begrep/20b2e128-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
-                          dcatnoinfo:modelElementType "enkeltype" ;
-                          dcatnoinfo:name "Telefonnummer"@nb ;
-                          dcatnoinfo:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI ;
+                                   modelldcatno:SimpleType ;
+                          modelldcatno:isDescribedBy "https://data.skatteetaten.no/begrep/20b2e128-9fe1-11e5-a9f8-e4115b280940"^^xsd:anyURI ;
+                          modelldcatno:modelElementType "enkeltype" ;
+                          modelldcatno:name "Telefonnummer"@nb ;
+                          modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI ;
                           xsd:maxLength "20"^^xsd:nonNegativeInteger .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/ÅrstallType
 skebase:ÅrstallType rdf:type owl:NamedIndividual ,
-                             dcatnoinfo:SimpleType ;
-                    dcatnoinfo:modelElementType "enkeltype" ;
-                    dcatnoinfo:name "Årstall"@nb ;
-                    dcatnoinfo:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#gYear"^^xsd:anyURI .
+                             modelldcatno:SimpleType ;
+                    modelldcatno:modelElementType "enkeltype" ;
+                    modelldcatno:name "Årstall"@nb ;
+                    modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#gYear"^^xsd:anyURI .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/ArbeidTrygdOgPensjon
 ssg:ArbeidTrygdOgPensjon rdf:type owl:NamedIndividual ,
-                                  dcatnoinfo:ModelElement ;
-                         dcatnoinfo:isSubclassOf ssg:Spesifisering ;
-                         dcatnoinfo:modelElementType "objectType" ;
-                         dcatnoinfo:name "ArbeidTrygdOgPensjon"@nb .
+                                  modelldcatno:ModelElement ;
+                         modelldcatno:isSubclassOf ssg:Spesifisering ;
+                         modelldcatno:modelElementType "objectType" ;
+                         modelldcatno:name "ArbeidTrygdOgPensjon"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/BankLånOgForsikring
 ssg:BankLånOgForsikring rdf:type owl:NamedIndividual ,
-                                 dcatnoinfo:ModelElement ;
-                        dcatnoinfo:isSubclassOf ssg:Spesifisering ;
-                        dcatnoinfo:modelElementType "objectType" ;
-                        dcatnoinfo:name "BankLånOgForsikring"@nb .
+                                 modelldcatno:ModelElement ;
+                        modelldcatno:isSubclassOf ssg:Spesifisering ;
+                        modelldcatno:modelElementType "objectType" ;
+                        modelldcatno:name "BankLånOgForsikring"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/EiendelerOgFasteEiendommer
 ssg:EiendelerOgFasteEiendommer rdf:type owl:NamedIndividual ,
-                                        dcatnoinfo:ModelElement ;
-                               dcatnoinfo:isSubclassOf ssg:Spesifisering ;
-                               dcatnoinfo:modelElementType "objectType" ;
-                               dcatnoinfo:name "EiendelerOgFasteEiendommer"@nb .
+                                        modelldcatno:ModelElement ;
+                               modelldcatno:isSubclassOf ssg:Spesifisering ;
+                               modelldcatno:modelElementType "objectType" ;
+                               modelldcatno:name "EiendelerOgFasteEiendommer"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/Finans
 ssg:Finans rdf:type owl:NamedIndividual ,
-                    dcatnoinfo:ModelElement ;
-           dcatnoinfo:isSubclassOf ssg:Spesifisering ;
-           dcatnoinfo:modelElementType "objectType" ;
-           dcatnoinfo:name "Finans"@nb .
+                    modelldcatno:ModelElement ;
+           modelldcatno:isSubclassOf ssg:Spesifisering ;
+           modelldcatno:modelElementType "objectType" ;
+           modelldcatno:name "Finans"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/Generisk
 ssg:Generisk rdf:type owl:NamedIndividual ,
-                      dcatnoinfo:ModelElement ;
-             dcatnoinfo:hasProperty ssg:generiskBeløp ,
+                      modelldcatno:ModelElement ;
+             modelldcatno:hasProperty ssg:generiskBeløp ,
                                     ssg:kildebeskrivelse ,
                                     ssg:kildenavn ;
-             dcatnoinfo:isSubclassOf ssg:Spesifisering ;
-             dcatnoinfo:modelElementType "objectType" ;
-             dcatnoinfo:name "Generisk"@nb .
+             modelldcatno:isSubclassOf ssg:Spesifisering ;
+             modelldcatno:modelElementType "objectType" ;
+             modelldcatno:name "Generisk"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/Spesifisering
 ssg:Spesifisering rdf:type owl:NamedIndividual ,
-                           dcatnoinfo:ModelElement ;
-                  dcatnoinfo:modelElementType "objectType" ;
-                  dcatnoinfo:name "Spesifisering"@nb .
+                           modelldcatno:ModelElement ;
+                  modelldcatno:modelElementType "objectType" ;
+                  modelldcatno:name "Spesifisering"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/SpesifisertSummertSkattegrunnlag
 ssg:SpesifisertSummertSkattegrunnlag rdf:type owl:NamedIndividual ,
-                                              dcatnoinfo:ModelElement ;
-                                     dcatnoinfo:hasProperty ssg:grunnlag ,
+                                              modelldcatno:ModelElement ;
+                                     modelldcatno:hasProperty ssg:grunnlag ,
                                                             ssg:inntektsår ,
                                                             ssg:kildeskattPåLønnGrunnlag ,
                                                             ssg:personidentifikator ,
@@ -1367,24 +1368,24 @@ ssg:SpesifisertSummertSkattegrunnlag rdf:type owl:NamedIndividual ,
                                                             ssg:skjønnsfastsatt ,
                                                             ssg:svalbardGrunnlag ,
                                                             ssg:svalbardSkjønnsfastsatt ;
-                                     dcatnoinfo:description "SpesifiserSummertSkattegrunnlag inneholder skattegrunnlag med spesifisering av disse."@nb ;
-                                     dcatnoinfo:modelElementType "rootObjectType" ;
-                                     dcatnoinfo:name "SpesifisertSummertSkattegrunnlag"@nb .
+                                     modelldcatno:description "SpesifiserSummertSkattegrunnlag inneholder skattegrunnlag med spesifisering av disse."@nb ;
+                                     modelldcatno:modelElementType "rootObjectType" ;
+                                     modelldcatno:name "SpesifisertSummertSkattegrunnlag"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/SpesifisertSummertSkattegrunnlagsModell
 ssg:SpesifisertSummertSkattegrunnlagsModell rdf:type owl:NamedIndividual ,
-                                                     dcatnoinfo:InformationModel ;
-                                            dcatnoinfo:containsModelElement ssg:BankLånOgForsikring ,
+                                                     modelldcatno:InformationModel ;
+                                            modelldcatno:containsModelElement ssg:BankLånOgForsikring ,
                                                                             ssg:EiendelerOgFasteEiendommer ,
                                                                             ssg:Finans ,
                                                                             ssg:Generisk ,
                                                                             ssg:Spesifisering ,
                                                                             ssg:SpesifisertSummertSkattegrunnlag ,
                                                                             ssg:SummertSkattegrunnlagsobjekt ;
-                                            dcatnoinfo:informationModelIdentifier "urn:no:skatteetaten:datasamarbeid:spesifisertsummertskattegrunnlag:v1"^^xsd:anyURI ;
-                                            dcatnoinfo:name "SpesifisertSummertSkattegrunnlagsModell"@nb ;
-                                            dcatnoinfo:version "1.14"^^xsd:string ;
+                                            modelldcatno:informationModelIdentifier "urn:no:skatteetaten:datasamarbeid:spesifisertsummertskattegrunnlag:v1"^^xsd:anyURI ;
+                                            modelldcatno:name "SpesifisertSummertSkattegrunnlagsModell"@nb ;
+                                            modelldcatno:version "1.14"^^xsd:string ;
                                             dcterms:issued "2020-03-31T22:36:19.478+02:00"^^xsd:dateTime ;
                                             dcterms:language "no"^^xsd:string ;
                                             dcterms:title "Konstruksjonsmodell for spesifisert summert skattegrunnlag"@nb .
@@ -1392,47 +1393,47 @@ ssg:SpesifisertSummertSkattegrunnlagsModell rdf:type owl:NamedIndividual ,
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/SummertSkattegrunnlagsobjekt
 ssg:SummertSkattegrunnlagsobjekt rdf:type owl:NamedIndividual ,
-                                          dcatnoinfo:ModelElement ;
-                                 dcatnoinfo:hasProperty ssg:beløp ,
+                                          modelldcatno:ModelElement ;
+                                 modelldcatno:hasProperty ssg:beløp ,
                                                         ssg:kategori ,
                                                         ssg:spesifisering ,
                                                         ssg:tekniskNavn ;
-                                 dcatnoinfo:modelElementType "objectType" ;
-                                 dcatnoinfo:name "SummertSkattegrunnlagsobjekt"@nb .
+                                 modelldcatno:modelElementType "objectType" ;
+                                 modelldcatno:name "SummertSkattegrunnlagsobjekt"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/beløp
 ssg:beløp rdf:type owl:NamedIndividual ,
-                   dcatnoinfo:Property ;
-          dcatnoinfo:type skebase:BeløpSomHeltallType ;
-          dcatnoinfo:name "beløp"@nb ;
+                   modelldcatno:Property ;
+          modelldcatno:type skebase:BeløpSomHeltallType ;
+          modelldcatno:name "beløp"@nb ;
           xsd:maxOccurs "1"^^xsd:int ;
           xsd:minOccurs "1"^^xsd:int .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/generiskBeløp
 ssg:generiskBeløp rdf:type owl:NamedIndividual ,
-                           dcatnoinfo:Property ;
-                  dcatnoinfo:type skebase:BeløpSomHeltallType ;
-                  dcatnoinfo:name "beløp"@nb ;
+                           modelldcatno:Property ;
+                  modelldcatno:type skebase:BeløpSomHeltallType ;
+                  modelldcatno:name "beløp"@nb ;
                   xsd:maxOccurs "1"^^xsd:int ;
                   xsd:minOccurs "0"^^xsd:int .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/grunnlag
 ssg:grunnlag rdf:type owl:NamedIndividual ,
-                      dcatnoinfo:Property ;
-             dcatnoinfo:type ssg:SummertSkattegrunnlagsobjekt ;
-             dcatnoinfo:name "grunnlag"@nb ;
+                      modelldcatno:Property ;
+             modelldcatno:type ssg:SummertSkattegrunnlagsobjekt ;
+             modelldcatno:name "grunnlag"@nb ;
              xsd:maxOccurs "*"^^xsd:string ;
              xsd:minOccurs "0"^^xsd:int .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/inntektsår
 ssg:inntektsår rdf:type owl:NamedIndividual ,
-                        dcatnoinfo:Property ;
-               dcatnoinfo:type skebase:ÅrstallType ;
-               dcatnoinfo:name "inntektsår"@nb ;
+                        modelldcatno:Property ;
+               modelldcatno:type skebase:ÅrstallType ;
+               modelldcatno:name "inntektsår"@nb ;
                xsd:maxOccurs "1"^^xsd:int ;
                xsd:minOccurs "1"^^xsd:int .
 
@@ -1447,105 +1448,105 @@ ssg:katalogdelSSG rdf:type owl:NamedIndividual ,
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/kategori
 ssg:kategori rdf:type owl:NamedIndividual ,
-                      dcatnoinfo:Property ;
-             dcatnoinfo:type skebase:TekstType ;
-             dcatnoinfo:name "kategori"@nb ;
+                      modelldcatno:Property ;
+             modelldcatno:type skebase:TekstType ;
+             modelldcatno:name "kategori"@nb ;
              xsd:maxOccurs "*"^^xsd:string ;
              xsd:minOccurs "0"^^xsd:int .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/kildebeskrivelse
 ssg:kildebeskrivelse rdf:type owl:NamedIndividual ,
-                              dcatnoinfo:Property ;
-                     dcatnoinfo:type skebase:TekstType ;
-                     dcatnoinfo:name "kildebeskrivelse"@nb ;
+                              modelldcatno:Property ;
+                     modelldcatno:type skebase:TekstType ;
+                     modelldcatno:name "kildebeskrivelse"@nb ;
                      xsd:minOccurs "0"^^xsd:int ,
                                    "1"^^xsd:int .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/kildenavn
 ssg:kildenavn rdf:type owl:NamedIndividual ,
-                       dcatnoinfo:Property ;
-              dcatnoinfo:type skebase:TekstType ;
-              dcatnoinfo:name "kildenavn"@nb ;
+                       modelldcatno:Property ;
+              modelldcatno:type skebase:TekstType ;
+              modelldcatno:name "kildenavn"@nb ;
               xsd:maxOccurs "1"^^xsd:int ;
               xsd:minOccurs "0"^^xsd:int .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/kildeskattPåLønnGrunnlag
 ssg:kildeskattPåLønnGrunnlag rdf:type owl:NamedIndividual ,
-                                      dcatnoinfo:Property ;
-                             dcatnoinfo:type ssg:SummertSkattegrunnlagsobjekt ;
-                             dcatnoinfo:name "kildeskattPåLønnGrunnlag"@nb ;
+                                      modelldcatno:Property ;
+                             modelldcatno:type ssg:SummertSkattegrunnlagsobjekt ;
+                             modelldcatno:name "kildeskattPåLønnGrunnlag"@nb ;
                              xsd:maxOccurs "*"^^xsd:string ;
                              xsd:minOccurs "0"^^xsd:int .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/personidentifikator
 ssg:personidentifikator rdf:type owl:NamedIndividual ,
-                                 dcatnoinfo:Property ;
-                        dcatnoinfo:type skebase:FødselsnummerType ;
-                        dcatnoinfo:name "personidentifikator"@nb ;
+                                 modelldcatno:Property ;
+                        modelldcatno:type skebase:FødselsnummerType ;
+                        modelldcatno:name "personidentifikator"@nb ;
                         xsd:maxOccurs "1"^^xsd:int ;
                         xsd:minOccurs "1"^^xsd:int .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/skatteoppgjørsdato
 ssg:skatteoppgjørsdato rdf:type owl:NamedIndividual ,
-                                dcatnoinfo:Property ;
-                       dcatnoinfo:type skebase:DatoType ;
-                       dcatnoinfo:name "personidentifikator"@nb ;
+                                modelldcatno:Property ;
+                       modelldcatno:type skebase:DatoType ;
+                       modelldcatno:name "personidentifikator"@nb ;
                        xsd:maxOccurs "1"^^xsd:int ;
                        xsd:minOccurs "0"^^xsd:int .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/skjermet
 ssg:skjermet rdf:type owl:NamedIndividual ,
-                      dcatnoinfo:Property ;
-             dcatnoinfo:type skebase:BoolskType ;
-             dcatnoinfo:name "skjermet"@nb ;
+                      modelldcatno:Property ;
+             modelldcatno:type skebase:BoolskType ;
+             modelldcatno:name "skjermet"@nb ;
              xsd:maxOccurs "1"^^xsd:int ;
              xsd:minOccurs "1"^^xsd:int .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/skjønnsfastsatt
 ssg:skjønnsfastsatt rdf:type owl:NamedIndividual ,
-                             dcatnoinfo:Property ;
-                    dcatnoinfo:type skebase:BoolskType ;
-                    dcatnoinfo:name "skjønnsfastsatt"@nb ;
+                             modelldcatno:Property ;
+                    modelldcatno:type skebase:BoolskType ;
+                    modelldcatno:name "skjønnsfastsatt"@nb ;
                     xsd:maxOccurs "1"^^xsd:int ;
                     xsd:minOccurs "0"^^xsd:int .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/spesifisering
 ssg:spesifisering rdf:type owl:NamedIndividual ,
-                           dcatnoinfo:Property ;
-                  dcatnoinfo:name "spesifisering"@nb .
+                           modelldcatno:Property ;
+                  modelldcatno:name "spesifisering"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/svalbardGrunnlag
 ssg:svalbardGrunnlag rdf:type owl:NamedIndividual ,
-                              dcatnoinfo:Property ;
-                     dcatnoinfo:type ssg:SummertSkattegrunnlagsobjekt ;
-                     dcatnoinfo:name "svalbardGrunnlag"@nb ;
+                              modelldcatno:Property ;
+                     modelldcatno:type ssg:SummertSkattegrunnlagsobjekt ;
+                     modelldcatno:name "svalbardGrunnlag"@nb ;
                      xsd:maxOccurs "*"^^xsd:string ;
                      xsd:minOccurs "1"^^xsd:int .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/svalbardSkjønnsfastsatt
 ssg:svalbardSkjønnsfastsatt rdf:type owl:NamedIndividual ,
-                                     dcatnoinfo:Property ;
-                            dcatnoinfo:type skebase:BoolskType ;
-                            dcatnoinfo:name "svalbardSkjønnsfastsatt"@nb ;
+                                     modelldcatno:Property ;
+                            modelldcatno:type skebase:BoolskType ;
+                            modelldcatno:name "svalbardSkjønnsfastsatt"@nb ;
                             xsd:maxOccurs "1"^^xsd:int ;
                             xsd:minOccurs "0"^^xsd:int .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/tekniskNavn
 ssg:tekniskNavn rdf:type owl:NamedIndividual ,
-                         dcatnoinfo:Property ;
-                dcatnoinfo:type skebase:TekstType ;
-                dcatnoinfo:name "tekniskNavn"@nb ;
+                         modelldcatno:Property ;
+                modelldcatno:type skebase:TekstType ;
+                modelldcatno:name "tekniskNavn"@nb ;
                 xsd:maxOccurs "1"^^xsd:int ;
                 xsd:minOccurs "1"^^xsd:int .
 
@@ -1555,9 +1556,9 @@ ssg:tekniskNavn rdf:type owl:NamedIndividual ,
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( dcatnoinfo:InformationModel
-                dcatnoinfo:ModelElement
-                dcatnoinfo:Property
+  owl:members ( modelldcatno:InformationModel
+                modelldcatno:ModelElement
+                modelldcatno:Property
               )
 ] .
 
