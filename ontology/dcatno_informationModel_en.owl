@@ -37,6 +37,19 @@ dcterms:isReplacedBy rdf:type owl:ObjectProperty ;
                      rdfs:label "erstattet av"@nb .
 
 
+###  http://purl.org/dc/terms/language
+dcterms:language rdf:type owl:ObjectProperty ;
+                 rdfs:domain dcat:Resource ;
+                 rdfs:range dcterms:LinguisticSystem ;
+                 rdfs:label "språk"@nb .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:ObjectProperty ;
+                rdfs:domain dcat:Resource ;
+                rdfs:range dcterms:LicenseDocument .
+
+
 ###  http://purl.org/dc/terms/publisher
 dcterms:publisher rdf:type owl:ObjectProperty ;
                   rdfs:domain dcat:Resource ;
@@ -57,6 +70,12 @@ dcterms:replaces rdf:type owl:ObjectProperty ;
                  rdfs:label "erstatter"@nb .
 
 
+###  http://purl.org/dc/terms/spatial
+dcterms:spatial rdf:type owl:ObjectProperty ;
+                rdfs:domain dcat:Resource ;
+                rdfs:range dcterms:Location .
+
+
 ###  http://purl.org/dc/terms/temporal
 dcterms:temporal rdf:type owl:ObjectProperty ;
                  rdfs:domain modelldcatno:InformationModel ;
@@ -69,6 +88,19 @@ dcterms:temporal rdf:type owl:ObjectProperty ;
 dcat:contactPoint rdf:type owl:ObjectProperty ;
                   rdfs:domain dcat:Resource ;
                   rdfs:range vcard:Kind .
+
+
+###  http://www.w3.org/ns/dcat#themeTaxonomy
+dcat:themeTaxonomy rdf:type owl:ObjectProperty ;
+                   rdfs:domain dcat:Resource ;
+                   rdfs:range skos:ConceptScheme .
+
+
+###  http://xmlns.com/foaf/0.1/homepage
+foaf:homepage rdf:type owl:ObjectProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain dcat:Resource ;
+              rdfs:range foaf:Document .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#containsCode
@@ -141,30 +173,41 @@ dcterms:description rdf:type owl:DatatypeProperty ;
                     rdfs:label "beskrivelse"@nb .
 
 
+###  http://purl.org/dc/terms/identifier
+dcterms:identifier rdf:type owl:DatatypeProperty ;
+                   rdfs:domain dcat:Resource ;
+                   rdfs:range [ rdf:type rdfs:Datatype ;
+                                owl:unionOf ( rdfs:Literal
+                                              xsd:anyURI
+                                            )
+                              ] .
+
+
 ###  http://purl.org/dc/terms/issued
 dcterms:issued rdf:type owl:DatatypeProperty ;
                rdfs:domain dcat:Resource ;
-               rdfs:range xsd:dateTime ;
+               rdfs:range [ rdf:type rdfs:Datatype ;
+                            owl:unionOf ( rdfs:Literal
+                                          xsd:dateTime
+                                        )
+                          ] ;
                rdfs:label "utgivelsesdato"@nb .
-
-
-###  http://purl.org/dc/terms/language
-dcterms:language rdf:type owl:DatatypeProperty ;
-                 rdfs:domain dcat:Resource ;
-                 rdfs:range xsd:string ;
-                 rdfs:label "språk"@nb .
 
 
 ###  http://purl.org/dc/terms/modified
 dcterms:modified rdf:type owl:DatatypeProperty ;
                  rdfs:domain dcat:Resource ;
-                 rdfs:range xsd:dateTime ;
+                 rdfs:range [ rdf:type rdfs:Datatype ;
+                              owl:unionOf ( rdfs:Literal
+                                            xsd:dateTime
+                                          )
+                            ] ;
                  rdfs:label "endringsdato"@nb .
 
 
 ###  http://purl.org/dc/terms/title
 dcterms:title rdf:type owl:DatatypeProperty ;
-              rdfs:domain modelldcatno:InformationModel ;
+              rdfs:domain dcat:Resource ;
               rdfs:range rdfs:Literal ;
               rdfs:label "tittel"@nb .
 
@@ -522,9 +565,25 @@ modelldcatno:version rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
+###  http://purl.org/dc/terms/LicenseDocument
+dcterms:LicenseDocument rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/LinguisticSystem
+dcterms:LinguisticSystem rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/Location
+dcterms:Location rdf:type owl:Class .
+
+
 ###  http://purl.org/dc/terms/PeriodOfTime
 dcterms:PeriodOfTime rdf:type owl:Class ;
                      rdfs:label "Tidsintervall"@nb .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+skos:ConceptScheme rdf:type owl:Class .
 
 
 ###  http://www.w3.org/2006/vcard/ns#Kind
@@ -533,8 +592,196 @@ vcard:Kind rdf:type owl:Class .
 
 ###  http://www.w3.org/ns/dcat#Catalog
 dcat:Catalog rdf:type owl:Class ;
-             rdfs:subClassOf dcat:Dataset ;
+             rdfs:subClassOf dcat:Dataset ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dcterms:hasPart ;
+                               owl:someValuesFrom modelldcatno:InformationModel
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dcterms:language ;
+                               owl:someValuesFrom dcterms:LinguisticSystem
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dcterms:license ;
+                               owl:someValuesFrom dcterms:LicenseDocument
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dcterms:spatial ;
+                               owl:someValuesFrom dcterms:Location
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dcat:themeTaxonomy ;
+                               owl:someValuesFrom skos:ConceptScheme
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty foaf:homepage ;
+                               owl:someValuesFrom foaf:Document
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dcterms:publisher ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass foaf:Agent
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dcterms:issued ;
+                               owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                    owl:unionOf ( rdfs:Literal
+                                                                  xsd:dateTime
+                                                                )
+                                                  ]
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dcterms:modified ;
+                               owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                    owl:unionOf ( rdfs:Literal
+                                                                  xsd:dateTime
+                                                                )
+                                                  ]
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dcterms:description ;
+                               owl:minCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dcterms:identifier ;
+                               owl:minCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dcterms:title ;
+                               owl:minCardinality "1"^^xsd:nonNegativeInteger
+                             ] ;
              rdfs:label "Katalog"@nb .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource dcat:Catalog ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dcterms:hasPart ;
+                         owl:someValuesFrom modelldcatno:InformationModel
+                       ] ;
+   rdfs:comment "Binder de forskjellige delene til katalogen"@nb
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource dcat:Catalog ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dcterms:language ;
+                         owl:someValuesFrom dcterms:LinguisticSystem
+                       ] ;
+   rdfs:comment """This property specifies the language used in a catalogue to describe
+textual metadata of the Datasets in a Registry Catalogue. This property should be repeated in case there are various versions of the text in different languages."""@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource dcat:Catalog ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dcterms:license ;
+                         owl:someValuesFrom dcterms:LicenseDocument
+                       ] ;
+   rdfs:comment "This property refers to the licence under which the catalogue can be used or reused."@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource dcat:Catalog ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dcterms:spatial ;
+                         owl:someValuesFrom dcterms:Location
+                       ] ;
+   rdfs:comment "This property indicates a geographical/administrative area that is covered by a Registry Catalogue. This property may be repeated in case there are several resources involved."@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource dcat:Catalog ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dcat:themeTaxonomy ;
+                         owl:someValuesFrom skos:ConceptScheme
+                       ] ;
+   rdfs:comment """This property refers to a knowledge organisation system (i.e.,
+thesaurus, taxonomy) used to classify Datasets in a Registry Catalogue."""@nb
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource dcat:Catalog ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty foaf:homepage ;
+                         owl:someValuesFrom foaf:Document
+                       ] ;
+   rdfs:comment "This property refers to a main page as entry point for a Registry Catalogue."@nb
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource dcat:Catalog ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dcterms:publisher ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass foaf:Agent
+                       ] ;
+   rdfs:comment "This property refers to an agent (organisation or person) that makes the Catalogue available and accessible."@nb
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource dcat:Catalog ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dcterms:issued ;
+                         owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                              owl:unionOf ( rdfs:Literal
+                                                            xsd:dateTime
+                                                          )
+                                            ]
+                       ] ;
+   rdfs:comment "This property contains the date of first publication of a Registry Catalogue. This property should be typed as xsd:date or xsd:dateTime."@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource dcat:Catalog ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dcterms:modified ;
+                         owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                              owl:unionOf ( rdfs:Literal
+                                                            xsd:dateTime
+                                                          )
+                                            ]
+                       ] ;
+   rdfs:comment "This property contains the most recent date on which the Registry Catalogue was modified. This property should be typed as xsd:date or xsd:dateTime."@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource dcat:Catalog ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dcterms:description ;
+                         owl:minCardinality "1"^^xsd:nonNegativeInteger
+                       ] ;
+   rdfs:comment "This property contains a textual description of a Registry Catalogue. This property should be repeated in case there are various versions of the text in different languages."@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource dcat:Catalog ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dcterms:identifier ;
+                         owl:minCardinality "1"^^xsd:nonNegativeInteger
+                       ] ;
+   rdfs:comment "This property contains an identifier for the catalogue."@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource dcat:Catalog ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dcterms:title ;
+                         owl:minCardinality "1"^^xsd:nonNegativeInteger
+                       ] ;
+   rdfs:comment "This property contains a descriptive name of the Registry Catalogue. This property should be repeated in case there are various versions of the text in different languages."@nb
+ ] .
 
 
 ###  http://www.w3.org/ns/dcat#Dataset
@@ -550,6 +797,10 @@ dcat:Resource rdf:type owl:Class ;
 ###  http://xmlns.com/foaf/0.1/Agent
 foaf:Agent rdf:type owl:Class ;
            rdfs:label "Enhet"@nb .
+
+
+###  http://xmlns.com/foaf/0.1/Document
+foaf:Document rdf:type owl:Class .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#Code
@@ -570,6 +821,7 @@ modelldcatno:CodeList rdf:type owl:Class ;
                                         owl:qualifiedCardinality "0"^^xsd:nonNegativeInteger ;
                                         owl:onClass modelldcatno:CodeList
                                       ] ;
+                      owl:disjointWith modelldcatno:SimpleType ;
                       rdfs:label "Kodeliste"@nb .
 
 
@@ -689,6 +941,7 @@ pass:OppgaveBarnepass rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/OppgaveOverPassOgStellAvBarn
 pass:OppgaveOverPassOgStellAvBarn rdf:type owl:NamedIndividual ,
                                            modelldcatno:InformationModel ;
+                                  dcterms:language <http://id.loc.gov/vocabulary/iso639-1/nb> ;
                                   dcterms:publisher pass:utgiver ;
                                   dcterms:temporal pass:gyldighetsintervall ;
                                   dcat:contactPoint pass:KontaktOss ;
@@ -699,7 +952,6 @@ pass:OppgaveOverPassOgStellAvBarn rdf:type owl:NamedIndividual ,
                                                                     pass:Oppgavegiver ,
                                                                     pass:Oppgaveoppsumering ;
                                   dcterms:issued "2020-03-30T18:35:07.950+02:00"^^xsd:dateTime ;
-                                  dcterms:language "nb"^^xsd:string ;
                                   dcterms:title "Skatteetatens oppgave over utgifter til stell og pass av barn"@nb ;
                                   dcat:landingPage "http:skatteetaten.no/"^^xsd:anyURI ;
                                   modelldcatno:informationModelIdentifier "urn:ske:fastsetting:innsamling:barnepass:v2"^^xsd:anyURI ;
@@ -759,7 +1011,8 @@ pass:SkattKatalog rdf:type owl:NamedIndividual ,
                   dcterms:description "To modeller fra Skatteetaten"@nb ,
                                       "Two information models from The Tax Administration"@en ;
                   dcterms:issued "2020-03-30T16:00:00+02:00"^^xsd:dateTime ;
-                  dcterms:title "Skattemodellkatalogen™"@nb ;
+                  dcterms:title "Skattemodellkatalogen™"@nb ,
+                                "The tax catalog™"@en ;
                   dcat:keyword "Arkitektur"@nb ,
                                "Datamodeller"@nb ,
                                "Skatt"@nb .
@@ -1135,6 +1388,7 @@ ssg:SpesifisertSummertSkattegrunnlag rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/SpesifisertSummertSkattegrunnlagsModell
 ssg:SpesifisertSummertSkattegrunnlagsModell rdf:type owl:NamedIndividual ,
                                                      modelldcatno:InformationModel ;
+                                            dcterms:language <http://id.loc.gov/vocabulary/iso639-1/nb> ;
                                             modelldcatno:containsModelElement ssg:BankLånOgForsikring ,
                                                                               ssg:EiendelerOgFasteEiendommer ,
                                                                               ssg:Finans ,
@@ -1143,7 +1397,6 @@ ssg:SpesifisertSummertSkattegrunnlagsModell rdf:type owl:NamedIndividual ,
                                                                               ssg:SpesifisertSummertSkattegrunnlag ,
                                                                               ssg:SummertSkattegrunnlagsobjekt ;
                                             dcterms:issued "2020-03-31T22:36:19.478+02:00"^^xsd:dateTime ;
-                                            dcterms:language "no"^^xsd:string ;
                                             dcterms:title "Konstruksjonsmodell for spesifisert summert skattegrunnlag"@nb ;
                                             modelldcatno:informationModelIdentifier "urn:no:skatteetaten:datasamarbeid:spesifisertsummertskattegrunnlag:v1"^^xsd:anyURI ;
                                             modelldcatno:version "1.14"^^xsd:string .
@@ -1289,10 +1542,10 @@ ssg:tekniskNavn rdf:type owl:NamedIndividual ,
                 xsd:minOccurs "1"^^xsd:int .
 
 
-#################################################################
-#    General axioms
-#################################################################
-
+###  http://id.loc.gov/vocabulary/iso639-1/nb
+<http://id.loc.gov/vocabulary/iso639-1/nb> rdf:type owl:NamedIndividual ,
+                                                    dcterms:LinguisticSystem ;
+                                           rdfs:label "Norsk bokmål"@nb .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
