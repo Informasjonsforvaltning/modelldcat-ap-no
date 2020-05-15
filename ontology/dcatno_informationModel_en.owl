@@ -364,7 +364,6 @@ modelldcatno:informationModelDescription rdf:type owl:DatatypeProperty ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#informationModelIdentifier
 modelldcatno:informationModelIdentifier rdf:type owl:DatatypeProperty ;
-                                        
                                         rdfs:domain modelldcatno:InformationModel ;
                                         rdfs:range xsd:anyURI .
 
@@ -513,13 +512,6 @@ modelldcatno:relationshipName rdf:type owl:DatatypeProperty ;
                               rdfs:range rdfs:Literal .
 
 
-###  https://data.norge.no/vocabulary/modelldcatno#simpleTypes
-modelldcatno:simpleTypes rdf:type owl:DatatypeProperty ;
-                         rdfs:domain modelldcatno:SimpleType ;
-                         rdfs:comment "Superproperty, av egenskaper for en enkeltype, ikke bruk denne direkte"@nb ;
-                         rdfs:label "enekelttyper"@nb .
-
-
 ###  https://data.norge.no/vocabulary/modelldcatno#typeDefinitionReference
 modelldcatno:typeDefinitionReference rdf:type owl:DatatypeProperty ,
                                               owl:FunctionalProperty ;
@@ -607,7 +599,8 @@ modelldcatno:Property rdf:type owl:Class ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#Relationship
 modelldcatno:Relationship rdf:type owl:Class ;
-                          rdfs:comment "For andre typer relasjoner mellom modelelementer" .
+                          rdfs:comment "For andre typer relasjoner mellom modelelementer" ;
+                          rdfs:label "Relasjon"@nb .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#SimpleType
@@ -697,7 +690,8 @@ pass:OppgaveBarnepass rdf:type owl:NamedIndividual ,
                                modelldcatno:ModelElement ;
                       modelldcatno:hasProperty pass:oppgaveeierRolle ,
                                                pass:påløptBeløp ;
-                      modelldcatno:modelElementType "objekttype"^^xsd:string .
+                      modelldcatno:modelElementType "objekttype"^^xsd:string ;
+                      rdfs:label "Oppgave barnepass"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/OppgaveOverPassOgStellAvBarn
@@ -717,7 +711,9 @@ pass:OppgaveOverPassOgStellAvBarn rdf:type owl:NamedIndividual ,
                                   dcterms:title "Skatteetatens oppgave over utgifter til stell og pass av barn"@nb ;
                                   dcat:landingPage "http:skatteetaten.no/"^^xsd:anyURI ;
                                   modelldcatno:informationModelIdentifier "urn:ske:fastsetting:innsamling:barnepass:v2"^^xsd:anyURI ;
-                                  modelldcatno:version "2.0"^^xsd:string .
+                                  modelldcatno:version "2.0"^^xsd:string ;
+                                  rdfs:label "Oppgave over pass og stell av barn"@nb ,
+                                             "Oppgåve over kostnadar til pass og stell av barn"@nn .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource pass:OppgaveOverPassOgStellAvBarn ;
