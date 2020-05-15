@@ -20,6 +20,14 @@
 <https://data.norge.no/vocabulary/modelldcatno> rdf:type owl:Ontology .
 
 #################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
 #    Object Properties
 #################################################################
 
@@ -84,10 +92,24 @@ dcterms:temporal rdf:type owl:ObjectProperty ;
                             "gyldighetsperiode"@nb .
 
 
+###  http://www.w3.org/ns/adms#status
+adms:status rdf:type owl:ObjectProperty ;
+            rdfs:domain modelldcatno:InformationModel ;
+            rdfs:range skos:Concept ;
+            rdfs:label "modellstatus"@nb .
+
+
 ###  http://www.w3.org/ns/dcat#contactPoint
 dcat:contactPoint rdf:type owl:ObjectProperty ;
                   rdfs:domain dcat:Resource ;
                   rdfs:range vcard:Kind .
+
+
+###  http://www.w3.org/ns/dcat#theme
+dcat:theme rdf:type owl:ObjectProperty ;
+           rdfs:domain dcat:Resource ;
+           rdfs:range skos:Concept ;
+           rdfs:label "tema"@nb .
 
 
 ###  http://www.w3.org/ns/dcat#themeTaxonomy
@@ -132,6 +154,13 @@ modelldcatno:isSubclassOf rdf:type owl:ObjectProperty ,
                                      "Subclass Of"@en .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#modelElementType
+modelldcatno:modelElementType rdf:type owl:ObjectProperty ,
+                                       owl:FunctionalProperty ;
+                              rdfs:domain modelldcatno:ModelElement ;
+                              rdfs:range skos:Concept .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#qualifiedRelation
 modelldcatno:qualifiedRelation rdf:type owl:ObjectProperty ;
                                rdfs:domain modelldcatno:ModelElement ;
@@ -158,13 +187,6 @@ modelldcatno:type rdf:type owl:ObjectProperty ,
 #################################################################
 #    Data properties
 #################################################################
-
-###  http://purl.org/dc/terms/abstract
-dcterms:abstract rdf:type owl:DatatypeProperty ;
-                 rdfs:subPropertyOf dcterms:description ;
-                 rdfs:domain modelldcatno:InformationModel ;
-                 rdfs:range rdfs:Literal .
-
 
 ###  http://purl.org/dc/terms/description
 dcterms:description rdf:type owl:DatatypeProperty ;
@@ -303,27 +325,6 @@ owl:versionInfo rdf:type owl:DatatypeProperty ;
                 rdfs:range rdfs:Literal .
 
 
-###  http://www.w3.org/ns/adms#status
-adms:status rdf:type owl:DatatypeProperty ;
-            rdfs:domain modelldcatno:InformationModel ;
-            rdfs:range [ rdf:type rdfs:Datatype ;
-                         owl:oneOf [ rdf:type rdf:List ;
-                                     rdf:first "fullført" ;
-                                     rdf:rest [ rdf:type rdf:List ;
-                                                rdf:first "trukket tilbake" ;
-                                                rdf:rest [ rdf:type rdf:List ;
-                                                           rdf:first "under utvikling" ;
-                                                           rdf:rest [ rdf:type rdf:List ;
-                                                                      rdf:first "utgått" ;
-                                                                      rdf:rest rdf:nil
-                                                                    ]
-                                                         ]
-                                              ]
-                                   ]
-                       ] ;
-            rdfs:label "modellstatus"@nb .
-
-
 ###  http://www.w3.org/ns/adms#versionNotes
 adms:versionNotes rdf:type owl:DatatypeProperty ;
                   rdfs:domain dcat:Resource ;
@@ -357,18 +358,10 @@ dcat:startDate rdf:type owl:DatatypeProperty ;
                rdfs:range xsd:dateTime .
 
 
-###  http://www.w3.org/ns/dcat#theme
-dcat:theme rdf:type owl:DatatypeProperty ;
-           rdfs:domain dcat:Resource ;
-           rdfs:range xsd:anyURI ;
-           rdfs:label "tema"@nb .
-
-
 ###  http://xmlns.com/foaf/0.1/name
 foaf:name rdf:type owl:DatatypeProperty ;
           rdfs:domain foaf:Agent ;
-          rdfs:range rdfs:Literal ;
-          rdfs:label "navn"@nb .
+          rdfs:range rdfs:Literal .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#codeDescription
@@ -448,45 +441,6 @@ modelldcatno:modelElementIsDescribedBy rdf:type owl:DatatypeProperty ;
 modelldcatno:modelElementName rdf:type owl:DatatypeProperty ;
                               rdfs:domain modelldcatno:ModelElement ;
                               rdfs:range rdfs:Literal .
-
-
-###  https://data.norge.no/vocabulary/modelldcatno#modelElementType
-modelldcatno:modelElementType rdf:type owl:DatatypeProperty ,
-                                       owl:FunctionalProperty ;
-                              rdfs:domain modelldcatno:ModelElement ;
-                              rdfs:range [ rdf:type rdfs:Datatype ;
-                                           owl:oneOf [ rdf:type rdf:List ;
-                                                       rdf:first "codeList" ;
-                                                       rdf:rest [ rdf:type rdf:List ;
-                                                                  rdf:first "dataType" ;
-                                                                  rdf:rest [ rdf:type rdf:List ;
-                                                                             rdf:first "datatype" ;
-                                                                             rdf:rest [ rdf:type rdf:List ;
-                                                                                        rdf:first "enkeltype" ;
-                                                                                        rdf:rest [ rdf:type rdf:List ;
-                                                                                                   rdf:first "kodeliste" ;
-                                                                                                   rdf:rest [ rdf:type rdf:List ;
-                                                                                                              rdf:first "objectType" ;
-                                                                                                              rdf:rest [ rdf:type rdf:List ;
-                                                                                                                         rdf:first "objekttype" ;
-                                                                                                                         rdf:rest [ rdf:type rdf:List ;
-                                                                                                                                    rdf:first "rootObjectType" ;
-                                                                                                                                    rdf:rest [ rdf:type rdf:List ;
-                                                                                                                                               rdf:first "rotObjektstype" ;
-                                                                                                                                               rdf:rest [ rdf:type rdf:List ;
-                                                                                                                                                          rdf:first "simpleType" ;
-                                                                                                                                                          rdf:rest rdf:nil
-                                                                                                                                                        ]
-                                                                                                                                             ]
-                                                                                                                                  ]
-                                                                                                                       ]
-                                                                                                            ]
-                                                                                                 ]
-                                                                                      ]
-                                                                           ]
-                                                                ]
-                                                     ]
-                                         ] .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#propertyDescription
@@ -580,6 +534,10 @@ dcterms:Location rdf:type owl:Class .
 ###  http://purl.org/dc/terms/PeriodOfTime
 dcterms:PeriodOfTime rdf:type owl:Class ;
                      rdfs:label "Tidsintervall"@nb .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class .
 
 
 ###  http://www.w3.org/2004/02/skos/core#ConceptScheme
@@ -812,6 +770,13 @@ modelldcatno:Code rdf:type owl:Class ;
 modelldcatno:CodeList rdf:type owl:Class ;
                       rdfs:subClassOf modelldcatno:ModelElement ,
                                       [ rdf:type owl:Restriction ;
+                                        owl:onProperty modelldcatno:modelElementType ;
+                                        owl:someValuesFrom [ rdf:type owl:Class ;
+                                                             owl:oneOf ( modelldcatno:codeListType
+                                                                       )
+                                                           ]
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
                                         owl:onProperty modelldcatno:hasProperty ;
                                         owl:qualifiedCardinality "0"^^xsd:nonNegativeInteger ;
                                         owl:onClass modelldcatno:Property
@@ -827,8 +792,80 @@ modelldcatno:CodeList rdf:type owl:Class ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#InformationModel
 modelldcatno:InformationModel rdf:type owl:Class ;
-                              rdfs:subClassOf dcat:Resource ;
+                              rdfs:subClassOf dcat:Resource ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dcterms:publisher ;
+                                                owl:someValuesFrom foaf:Agent
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dcterms:spatial ;
+                                                owl:someValuesFrom dcterms:Location
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dcterms:temporal ;
+                                                owl:someValuesFrom dcterms:PeriodOfTime
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty adms:status ;
+                                                owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                     owl:oneOf ( modelldcatno:completedStatus
+                                                                                 modelldcatno:goneStatus
+                                                                                 modelldcatno:under_developmentStatus
+                                                                                 modelldcatno:withdrawnStatus
+                                                                               )
+                                                                   ]
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dcat:contactPoint ;
+                                                owl:someValuesFrom vcard:Kind
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dcat:keyword ;
+                                                owl:someValuesFrom rdfs:Literal
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dcterms:description ;
+                                                owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dcterms:identifier ;
+                                                owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dcterms:title ;
+                                                owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                              ] ;
                               rdfs:label "Informasjonsmodell"@nb .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource modelldcatno:InformationModel ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dcterms:description ;
+                         owl:minCardinality "1"^^xsd:nonNegativeInteger
+                       ] ;
+   rdfs:comment "This property contains descriptive textual information about the Information Model. This property should be repeated in case there are various versions of the text in different languages."@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource modelldcatno:InformationModel ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dcterms:identifier ;
+                         owl:minCardinality "1"^^xsd:nonNegativeInteger
+                       ] ;
+   rdfs:comment "This property contains an identifier for the Information Model"@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource modelldcatno:InformationModel ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dcterms:title ;
+                         owl:minCardinality "1"^^xsd:nonNegativeInteger
+                       ] ;
+   rdfs:comment "This property refers to the descriptive title or name of a Information Model. This property should be repeated in case there are various versions of the text in different languages."@en
+ ] .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#ModelElement
@@ -871,9 +908,9 @@ pass:Ingenoppgaver rdf:type owl:NamedIndividual ,
 pass:InntektsårType rdf:type owl:NamedIndividual ,
                              modelldcatno:SimpleType ;
                     xsd:totalDigits "4"^^xsd:nonNegativeInteger ;
-                    modelldcatno:modelElementType "enkeltype" ;
                     modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#integer"^^xsd:anyURI ;
-                    rdfs:comment "Lokal definert enkeltype"@nb .
+                    rdfs:comment "Lokal definert enkeltype"@nb ;
+                    modelldcatno:modelElementType "enkeltype" .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/KontaktOss
@@ -924,9 +961,9 @@ pass:Melding rdf:type owl:NamedIndividual ,
 pass:NavnType rdf:type owl:NamedIndividual ,
                        modelldcatno:SimpleType ;
               xsd:maxLength "100"^^xsd:nonNegativeInteger ;
-              modelldcatno:modelElementType "enkeltype" ;
               modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI ;
-              rdfs:comment "Lokalt definert enkelttype"@nb .
+              rdfs:comment "Lokalt definert enkelttype"@nb ;
+              modelldcatno:modelElementType "enkeltype" .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/OppgaveBarnepass
@@ -934,8 +971,8 @@ pass:OppgaveBarnepass rdf:type owl:NamedIndividual ,
                                modelldcatno:ModelElement ;
                       modelldcatno:hasProperty pass:oppgaveeierRolle ,
                                                pass:påløptBeløp ;
-                      modelldcatno:modelElementType "objekttype"^^xsd:string ;
-                      rdfs:label "Oppgave barnepass"@nb .
+                      rdfs:label "Oppgave barnepass"@nb ;
+                      modelldcatno:modelElementType "objekttype"^^xsd:string .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/OppgaveOverPassOgStellAvBarn
@@ -1220,45 +1257,45 @@ skebase:AntallType rdf:type owl:NamedIndividual ,
                             modelldcatno:SimpleType ;
                    xsd:maxInclusive "9223372036854775807"^^xsd:int ;
                    xsd:minInclusive "-9223372036854775808"^^xsd:int ;
-                   modelldcatno:modelElementType "enkeltype" ;
-                   modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#long"^^xsd:anyURI .
+                   modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#long"^^xsd:anyURI ;
+                   modelldcatno:modelElementType "enkeltype" .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/BeløpSomHeltallType
 skebase:BeløpSomHeltallType rdf:type owl:NamedIndividual ,
                                      modelldcatno:SimpleType ;
-                            modelldcatno:modelElementType "enkeltype" ;
-                            modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#integer"^^xsd:anyURI .
+                            modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#integer"^^xsd:anyURI ;
+                            modelldcatno:modelElementType "enkeltype" .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/BeløpType
 skebase:BeløpType rdf:type owl:NamedIndividual ,
                            modelldcatno:SimpleType ;
                   xsd:minInclusive 0 ;
-                  modelldcatno:modelElementType "enkeltype" ;
-                  modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#integer"^^xsd:anyURI .
+                  modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#integer"^^xsd:anyURI ;
+                  modelldcatno:modelElementType "enkeltype" .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/BoolskType
 skebase:BoolskType rdf:type owl:NamedIndividual ,
                             modelldcatno:SimpleType ;
-                   modelldcatno:modelElementType "enkeltype" ;
-                   modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#boolean"^^xsd:anyURI .
+                   modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#boolean"^^xsd:anyURI ;
+                   modelldcatno:modelElementType "enkeltype" .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/DatoType
 skebase:DatoType rdf:type owl:NamedIndividual ,
                           modelldcatno:SimpleType ;
-                 modelldcatno:modelElementType "enkeltype" ;
-                 modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#date"^^xsd:anyURI .
+                 modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#date"^^xsd:anyURI ;
+                 modelldcatno:modelElementType "enkeltype" .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/EpostadresseType
 skebase:EpostadresseType rdf:type owl:NamedIndividual ,
                                   modelldcatno:SimpleType ;
                          xsd:maxLength "254"^^xsd:nonNegativeInteger ;
-                         modelldcatno:modelElementType "enkeltype" ;
-                         modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI .
+                         modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI ;
+                         modelldcatno:modelElementType "enkeltype" .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/FødselsnummerType
@@ -1266,32 +1303,32 @@ skebase:FødselsnummerType rdf:type owl:NamedIndividual ,
                                    modelldcatno:SimpleType ;
                           xsd:length "11"^^xsd:nonNegativeInteger ;
                           xsd:pattern "[0-9]+"^^xsd:string ;
-                          modelldcatno:modelElementType "enkeltype" ;
-                          modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI .
+                          modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI ;
+                          modelldcatno:modelElementType "enkeltype" .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/KildesystemType
 skebase:KildesystemType rdf:type owl:NamedIndividual ,
                                  modelldcatno:SimpleType ;
                         xsd:maxLength "100"^^xsd:nonNegativeInteger ;
-                        modelldcatno:modelElementType "enkeltype" ;
-                        modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI .
+                        modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI ;
+                        modelldcatno:modelElementType "enkeltype" .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/LeveranseReferanseType
 skebase:LeveranseReferanseType rdf:type owl:NamedIndividual ,
                                         modelldcatno:SimpleType ;
                                xsd:maxLength "100"^^xsd:nonNegativeInteger ;
-                               modelldcatno:modelElementType "enkeltype" ;
-                               modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI .
+                               modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI ;
+                               modelldcatno:modelElementType "enkeltype" .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/OrganisasjonsnavnType
 skebase:OrganisasjonsnavnType rdf:type owl:NamedIndividual ,
                                        modelldcatno:SimpleType ;
                               xsd:maxLength "100"^^xsd:int ;
-                              modelldcatno:modelElementType "enkeltype" ;
-                              modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI .
+                              modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI ;
+                              modelldcatno:modelElementType "enkeltype" .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/OrganisasjonsnummerType
@@ -1299,31 +1336,31 @@ skebase:OrganisasjonsnummerType rdf:type owl:NamedIndividual ,
                                          modelldcatno:SimpleType ;
                                 xsd:length "9"^^xsd:nonNegativeInteger ;
                                 xsd:pattern "[0-9]+"^^xsd:string ;
-                                modelldcatno:modelElementType "enkeltype" ;
-                                modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI .
+                                modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI ;
+                                modelldcatno:modelElementType "enkeltype" .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/TekstType
 skebase:TekstType rdf:type owl:NamedIndividual ,
                            modelldcatno:SimpleType ;
                   xsd:maxLength "4000"^^xsd:int ;
-                  modelldcatno:modelElementType "enkeltype" ;
-                  modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI .
+                  modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI ;
+                  modelldcatno:modelElementType "enkeltype" .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/TelefonnummerType
 skebase:TelefonnummerType rdf:type owl:NamedIndividual ,
                                    modelldcatno:SimpleType ;
                           xsd:maxLength "20"^^xsd:nonNegativeInteger ;
-                          modelldcatno:modelElementType "enkeltype" ;
-                          modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI .
+                          modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI ;
+                          modelldcatno:modelElementType "enkeltype" .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/ÅrstallType
 skebase:ÅrstallType rdf:type owl:NamedIndividual ,
                              modelldcatno:SimpleType ;
-                    modelldcatno:modelElementType "enkeltype" ;
-                    modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#gYear"^^xsd:anyURI .
+                    modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#gYear"^^xsd:anyURI ;
+                    modelldcatno:modelElementType "enkeltype" .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/ArbeidTrygdOgPensjon
@@ -1546,6 +1583,69 @@ ssg:tekniskNavn rdf:type owl:NamedIndividual ,
 <http://id.loc.gov/vocabulary/iso639-1/nb> rdf:type owl:NamedIndividual ,
                                                     dcterms:LinguisticSystem ;
                                            rdfs:label "Norsk bokmål"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#codeListType
+modelldcatno:codeListType rdf:type owl:NamedIndividual ,
+                                   skos:Concept ;
+                          skos:prefLabel "Code List"@en ,
+                                         "Kodeliste"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#completedStatus
+modelldcatno:completedStatus rdf:type owl:NamedIndividual ,
+                                      skos:Concept ;
+                             skos:prefLabel "completed"@en ,
+                                            "fullført"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#dataType
+modelldcatno:dataType rdf:type owl:NamedIndividual ,
+                               skos:Concept ;
+                      skos:prefLabel "Data Type"@en ,
+                                     "Datatype"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#goneStatus
+modelldcatno:goneStatus rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:prefLabel "gone"@en ,
+                                       "utgått"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#objectType
+modelldcatno:objectType rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:prefLabel "Object Type"@en ,
+                                       "Objekttype"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#rootObjectType
+modelldcatno:rootObjectType rdf:type owl:NamedIndividual ,
+                                     skos:Concept ;
+                            skos:prefLabel "Root Object Type"@en ,
+                                           "Rotobjektstype"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#simpleType
+modelldcatno:simpleType rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:prefLabel "Enkeltype"@nb ,
+                                       "Simple Type"@en .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#under_developmentStatus
+modelldcatno:under_developmentStatus rdf:type owl:NamedIndividual ,
+                                              skos:Concept ;
+                                     skos:prefLabel "under development"@en ,
+                                                    "under utvikling"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#withdrawnStatus
+modelldcatno:withdrawnStatus rdf:type owl:NamedIndividual ,
+                                      skos:Concept ;
+                             skos:prefLabel "trukket tilbake"@nb ,
+                                            "withdrawn"@en .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
