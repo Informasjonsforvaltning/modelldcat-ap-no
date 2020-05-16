@@ -870,6 +870,15 @@ modelldcatno:InformationModel rdf:type owl:Class ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#ModelElement
 modelldcatno:ModelElement rdf:type owl:Class ;
+                          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                            owl:onProperty modelldcatno:modelElementType ;
+                                            owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                 owl:oneOf ( modelldcatno:dataType
+                                                                             modelldcatno:objectType
+                                                                             modelldcatno:rootObjectType
+                                                                           )
+                                                               ]
+                                          ] ;
                           rdfs:label "Modell element"@nb .
 
 
@@ -887,6 +896,13 @@ modelldcatno:Relationship rdf:type owl:Class ;
 ###  https://data.norge.no/vocabulary/modelldcatno#SimpleType
 modelldcatno:SimpleType rdf:type owl:Class ;
                         rdfs:subClassOf modelldcatno:ModelElement ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty modelldcatno:modelElementType ;
+                                          owl:someValuesFrom [ rdf:type owl:Class ;
+                                                               owl:oneOf ( modelldcatno:simpleType
+                                                                         )
+                                                             ]
+                                        ] ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty modelldcatno:hasProperty ;
                                           owl:qualifiedCardinality "0"^^xsd:nonNegativeInteger ;
