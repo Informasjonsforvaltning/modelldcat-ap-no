@@ -199,6 +199,12 @@ modelldcatno:isSubclassOf rdf:type owl:ObjectProperty ,
                                      "Subclass Of"@en .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#modelElementIsDescribedBy
+modelldcatno:modelElementIsDescribedBy rdf:type owl:ObjectProperty ;
+                                       rdfs:domain modelldcatno:ModelElement ;
+                                       rdfs:range skos:Consept .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#modelElementType
 modelldcatno:modelElementType rdf:type owl:ObjectProperty ,
                                        owl:FunctionalProperty ;
@@ -232,7 +238,9 @@ modelldcatno:type rdf:type owl:ObjectProperty ;
                            owl:AsymmetricProperty ;
                   rdfs:domain modelldcatno:Property ;
                   rdfs:range modelldcatno:ModelElement ;
-                  rdfs:comment "Knytter egenskap til element (objectType, dataType, Codelist) som definerer innholdet"@nb ;
+                  rdfs:comment """Knytter egenskap til element (objectType, dataType, Codelist) som definerer innholdet
+
+Erstattet av en serie nye forbindelser"""@nb ;
                   rdfs:label "type"@nb ;
                   owl:deprecated "true"^^xsd:boolean .
 
@@ -484,12 +492,6 @@ modelldcatno:modelElementIdentifier rdf:type owl:DatatypeProperty ;
                                     rdfs:range rdfs:Literal .
 
 
-###  https://data.norge.no/vocabulary/modelldcatno#modelElementIsDescribedBy
-modelldcatno:modelElementIsDescribedBy rdf:type owl:DatatypeProperty ;
-                                       rdfs:domain modelldcatno:ModelElement ;
-                                       rdfs:range xsd:anyURI .
-
-
 ###  https://data.norge.no/vocabulary/modelldcatno#modelElementName
 modelldcatno:modelElementName rdf:type owl:DatatypeProperty ;
                               rdfs:domain modelldcatno:ModelElement ;
@@ -512,12 +514,6 @@ modelldcatno:propertyIdentifier rdf:type owl:DatatypeProperty ;
 modelldcatno:propertyName rdf:type owl:DatatypeProperty ;
                           rdfs:domain modelldcatno:Property ;
                           rdfs:range rdfs:Literal .
-
-
-###  https://data.norge.no/vocabulary/modelldcatno#relationshipIdentificator
-modelldcatno:relationshipIdentificator rdf:type owl:DatatypeProperty ;
-                                       rdfs:domain modelldcatno:Relationship ;
-                                       rdfs:range rdfs:Literal .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#relationshipIdentifier
@@ -580,6 +576,10 @@ skos:Concept rdf:type owl:Class .
 
 ###  http://www.w3.org/2004/02/skos/core#ConceptScheme
 skos:ConceptScheme rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Consept
+skos:Consept rdf:type owl:Class .
 
 
 ###  http://www.w3.org/2006/vcard/ns#Kind
@@ -818,13 +818,6 @@ modelldcatno:Code rdf:type owl:Class ;
 modelldcatno:CodeList rdf:type owl:Class ;
                       rdfs:subClassOf modelldcatno:ModelElement ,
                                       [ rdf:type owl:Restriction ;
-                                        owl:onProperty modelldcatno:modelElementType ;
-                                        owl:someValuesFrom [ rdf:type owl:Class ;
-                                                             owl:oneOf ( modelldcatno:codeListType
-                                                                       )
-                                                           ]
-                                      ] ,
-                                      [ rdf:type owl:Restriction ;
                                         owl:onProperty modelldcatno:hasProperty ;
                                         owl:qualifiedCardinality "0"^^xsd:nonNegativeInteger ;
                                         owl:onClass modelldcatno:Property
@@ -834,7 +827,6 @@ modelldcatno:CodeList rdf:type owl:Class ;
                                         owl:qualifiedCardinality "0"^^xsd:nonNegativeInteger ;
                                         owl:onClass modelldcatno:CodeList
                                       ] ;
-                      owl:disjointWith modelldcatno:SimpleType ;
                       rdfs:label "Kodeliste"@nb .
 
 
@@ -933,15 +925,6 @@ modelldcatno:InformationModel rdf:type owl:Class ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#ModelElement
 modelldcatno:ModelElement rdf:type owl:Class ;
-                          rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                            owl:onProperty modelldcatno:modelElementType ;
-                                            owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                 owl:oneOf ( modelldcatno:dataType
-                                                                             modelldcatno:objectType
-                                                                             modelldcatno:rootObjectType
-                                                                           )
-                                                               ]
-                                          ] ;
                           rdfs:label "Modell element"@nb .
 
 
@@ -974,13 +957,6 @@ modelldcatno:RootObjectType rdf:type owl:Class ;
 ###  https://data.norge.no/vocabulary/modelldcatno#SimpleType
 modelldcatno:SimpleType rdf:type owl:Class ;
                         rdfs:subClassOf modelldcatno:ModelElement ,
-                                        [ rdf:type owl:Restriction ;
-                                          owl:onProperty modelldcatno:modelElementType ;
-                                          owl:someValuesFrom [ rdf:type owl:Class ;
-                                                               owl:oneOf ( modelldcatno:simpleType
-                                                                         )
-                                                             ]
-                                        ] ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty modelldcatno:hasProperty ;
                                           owl:qualifiedCardinality "0"^^xsd:nonNegativeInteger ;
@@ -1723,6 +1699,14 @@ modelldcatno:withdrawnStatus rdf:type owl:NamedIndividual ,
 
 
 #################################################################
+#    Annotations
+#################################################################
+
+modelldcatno:modelElementType owl:deprecated "true"^^xsd:boolean ;
+                              rdfs:comment "Denne skulle ikke være nødvendig lenger" .
+
+
+#################################################################
 #    General axioms
 #################################################################
 
@@ -1732,6 +1716,16 @@ modelldcatno:withdrawnStatus rdf:type owl:NamedIndividual ,
                 modelldcatno:Collection
                 modelldcatno:Composition
                 modelldcatno:Role
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( modelldcatno:CodeList
+                modelldcatno:DataType
+                modelldcatno:ObjectType
+                modelldcatno:RootObjectType
+                modelldcatno:SimpleType
               )
 ] .
 
