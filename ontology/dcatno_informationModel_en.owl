@@ -842,7 +842,9 @@ modelldcatno:Composition rdf:type owl:Class ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#DataType
 modelldcatno:DataType rdf:type owl:Class ;
-                      rdfs:subClassOf modelldcatno:ModelElement .
+                      rdfs:subClassOf modelldcatno:ModelElement ;
+                      rdfs:label "Data type"@en ,
+                                 "Datatype"@nb .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#InformationModel
