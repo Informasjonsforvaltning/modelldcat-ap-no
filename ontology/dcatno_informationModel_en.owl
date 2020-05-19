@@ -27,6 +27,12 @@
 skos:prefLabel rdf:type owl:AnnotationProperty .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#modelElementType
+modelldcatno:modelElementType rdf:type owl:AnnotationProperty ;
+                              rdfs:comment "Denne skulle ikke være nødvendig lenger" ;
+                              owl:deprecated "true"^^xsd:boolean .
+
+
 #################################################################
 #    Object Properties
 #################################################################
@@ -94,7 +100,11 @@ dct:temporal rdf:type owl:ObjectProperty ;
 
 ###  http://purl.org/dc/terms/type
 dct:type rdf:type owl:ObjectProperty ;
-         rdfs:domain foaf:Agent ;
+         rdfs:domain [ rdf:type owl:Class ;
+                       owl:unionOf ( foaf:Agent
+                                     modelldcatno:InformationModel
+                                   )
+                     ] ;
          rdfs:range skos:Consept ;
          rdfs:label "type eller genre"@nb .
 
@@ -130,6 +140,21 @@ foaf:homepage rdf:type owl:ObjectProperty ,
                        owl:FunctionalProperty ;
               rdfs:domain dcat:Resource ;
               rdfs:range foaf:Document .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#codeIsDescribedBy
+modelldcatno:codeIsDescribedBy rdf:type owl:ObjectProperty ;
+                               rdfs:domain modelldcatno:Code ;
+                               rdfs:range skos:Concept .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#codeListReference
+modelldcatno:codeListReference rdf:type owl:ObjectProperty ,
+                                        owl:FunctionalProperty ,
+                                        owl:IrreflexiveProperty ;
+                               rdfs:domain modelldcatno:CodeList ;
+                               rdfs:range modelldcatno:CodeList ;
+                               rdfs:label "Ekstern kodeliste"@nb .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#contains
@@ -209,20 +234,21 @@ modelldcatno:isSubclassOf rdf:type owl:ObjectProperty ,
 ###  https://data.norge.no/vocabulary/modelldcatno#modelElementIsDescribedBy
 modelldcatno:modelElementIsDescribedBy rdf:type owl:ObjectProperty ;
                                        rdfs:domain modelldcatno:ModelElement ;
-                                       rdfs:range skos:Consept .
-
-
-###  https://data.norge.no/vocabulary/modelldcatno#modelElementType
-modelldcatno:modelElementType rdf:type owl:ObjectProperty ,
-                                       owl:FunctionalProperty ;
-                              rdfs:domain modelldcatno:ModelElement ;
-                              rdfs:range skos:Concept .
+                                       rdfs:range skos:Consept ;
+                                       rdfs:label "Modellelementet er beskrevet av"@nb .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#modelRelation
 modelldcatno:modelRelation rdf:type owl:ObjectProperty ;
                            rdfs:domain modelldcatno:Property ;
                            rdfs:range modelldcatno:ModelElement .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#propertyIsDescribedBy
+modelldcatno:propertyIsDescribedBy rdf:type owl:ObjectProperty ;
+                                   rdfs:domain modelldcatno:Property ;
+                                   rdfs:range skos:Concept ;
+                                   rdfs:label "Egenskapen er beskrevet av"@nb .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#qualifiedRelation
@@ -438,14 +464,6 @@ modelldcatno:codeIdentifier rdf:type owl:DatatypeProperty ;
                             rdfs:range rdfs:Literal .
 
 
-###  https://data.norge.no/vocabulary/modelldcatno#codeListReference
-modelldcatno:codeListReference rdf:type owl:DatatypeProperty ,
-                                        owl:FunctionalProperty ;
-                               rdfs:domain modelldcatno:CodeList ;
-                               rdfs:range xsd:anyURI ;
-                               rdfs:label "Ekstern kodeliste"@nb .
-
-
 ###  https://data.norge.no/vocabulary/modelldcatno#codeName
 modelldcatno:codeName rdf:type owl:DatatypeProperty ;
                       rdfs:domain modelldcatno:Code ;
@@ -515,6 +533,12 @@ modelldcatno:propertyIdentifier rdf:type owl:DatatypeProperty ;
 modelldcatno:propertyName rdf:type owl:DatatypeProperty ;
                           rdfs:domain modelldcatno:Property ;
                           rdfs:range rdfs:Literal .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#relationshipDescription
+modelldcatno:relationshipDescription rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain modelldcatno:Relationship ;
+                                     rdfs:range rdfs:Literal .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#relationshipIdentifier
@@ -982,8 +1006,7 @@ pass:InntektsårType rdf:type owl:NamedIndividual ,
                              modelldcatno:SimpleType ;
                     xsd:totalDigits "4"^^xsd:nonNegativeInteger ;
                     modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#integer"^^xsd:anyURI ;
-                    rdfs:comment "Lokal definert enkeltype"@nb ;
-                    modelldcatno:modelElementType "enkeltype" .
+                    rdfs:comment "Lokal definert enkeltype"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/KontaktOss
@@ -1699,14 +1722,6 @@ modelldcatno:withdrawnStatus rdf:type owl:NamedIndividual ,
                                       skos:Concept ;
                              skos:prefLabel "trukket tilbake"@nb ,
                                             "withdrawn"@en .
-
-
-#################################################################
-#    Annotations
-#################################################################
-
-modelldcatno:modelElementType owl:deprecated "true"^^xsd:boolean ;
-                              rdfs:comment "Denne skulle ikke være nødvendig lenger" .
 
 
 #################################################################
