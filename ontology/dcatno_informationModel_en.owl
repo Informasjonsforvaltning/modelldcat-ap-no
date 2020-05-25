@@ -41,8 +41,8 @@ modelldcatno:modelElementType rdf:type owl:AnnotationProperty ;
 dct:hasPart rdf:type owl:ObjectProperty ;
             owl:inverseOf dct:isPartOf ;
             rdf:type owl:IrreflexiveProperty ;
-            rdfs:domain dcat:Catalog ;
-            rdfs:range dcat:Catalog ;
+            rdfs:domain dcat:Resource ;
+            rdfs:range dcat:Resource ;
             rdfs:label "har del"@nb ,
                        "has part"@en .
 
@@ -50,8 +50,8 @@ dct:hasPart rdf:type owl:ObjectProperty ;
 ###  http://purl.org/dc/terms/isPartOf
 dct:isPartOf rdf:type owl:ObjectProperty ,
                       owl:IrreflexiveProperty ;
-             rdfs:domain dcat:Catalog ;
-             rdfs:range dcat:Catalog ;
+             rdfs:domain dcat:Resource ;
+             rdfs:range dcat:Resource ;
              rdfs:label "er en del av"@nb ,
                         "is part of"@en .
 
@@ -121,7 +121,7 @@ dct:type rdf:type owl:ObjectProperty ;
                                      modelldcatno:InformationModel
                                    )
                      ] ;
-         rdfs:range skos:Consept ;
+         rdfs:range skos:Concept ;
          rdfs:label "type eller genre"@nb .
 
 
@@ -259,7 +259,7 @@ modelldcatno:model rdf:type owl:ObjectProperty ;
 ###  https://data.norge.no/vocabulary/modelldcatno#modelElementIsDescribedBy
 modelldcatno:modelElementIsDescribedBy rdf:type owl:ObjectProperty ;
                                        rdfs:domain modelldcatno:ModelElement ;
-                                       rdfs:range skos:Consept ;
+                                       rdfs:range skos:Concept ;
                                        rdfs:label "Modellelementet er beskrevet av"@nb .
 
 
@@ -435,7 +435,6 @@ xsd:totalDigits rdf:type owl:DatatypeProperty ,
 
 ###  http://www.w3.org/2002/07/owl#versionInfo
 owl:versionInfo rdf:type owl:DatatypeProperty ;
-                owl:equivalentProperty modelldcatno:version ;
                 rdfs:domain dcat:Resource ;
                 rdfs:range rdfs:Literal .
 
@@ -631,17 +630,13 @@ skos:Concept rdf:type owl:Class .
 skos:ConceptScheme rdf:type owl:Class .
 
 
-###  http://www.w3.org/2004/02/skos/core#Consept
-skos:Consept rdf:type owl:Class .
-
-
 ###  http://www.w3.org/2006/vcard/ns#Kind
 vcard:Kind rdf:type owl:Class .
 
 
 ###  http://www.w3.org/ns/dcat#Catalog
 dcat:Catalog rdf:type owl:Class ;
-             rdfs:subClassOf dcat:Dataset ,
+             rdfs:subClassOf dcat:Resource ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty dct:language ;
                                owl:someValuesFrom dct:LinguisticSystem
@@ -699,6 +694,7 @@ dcat:Catalog rdf:type owl:Class ;
                                owl:onProperty dct:title ;
                                owl:minCardinality "1"^^xsd:nonNegativeInteger
                              ] ;
+             owl:disjointWith modelldcatno:InformationModel ;
              rdfs:label "Katalog"@nb .
 
 [ rdf:type owl:Axiom ;
@@ -833,11 +829,6 @@ thesaurus, taxonomy) used to classify Datasets in a Registry Catalogue."""@nb
  ] .
 
 
-###  http://www.w3.org/ns/dcat#Dataset
-dcat:Dataset rdf:type owl:Class ;
-             rdfs:subClassOf dcat:Resource .
-
-
 ###  http://www.w3.org/ns/dcat#Resource
 dcat:Resource rdf:type owl:Class ;
               rdfs:comment "Fungerer som superklasse både for katalogen (dcat:Catalog) og selve modellen (modelldcatno:InformationModel)"@nb .
@@ -904,6 +895,14 @@ modelldcatno:DataType rdf:type owl:Class ;
 modelldcatno:InformationModel rdf:type owl:Class ;
                               rdfs:subClassOf dcat:Resource ,
                                               [ rdf:type owl:Restriction ;
+                                                owl:onProperty dct:isPartOf ;
+                                                owl:someValuesFrom modelldcatno:InformationModel
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dct:language ;
+                                                owl:someValuesFrom dct:LinguisticSystem
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
                                                 owl:onProperty dct:publisher ;
                                                 owl:someValuesFrom foaf:Agent
                                               ] ,
@@ -914,6 +913,10 @@ modelldcatno:InformationModel rdf:type owl:Class ;
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty dct:temporal ;
                                                 owl:someValuesFrom dct:PeriodOfTime
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dct:type ;
+                                                owl:someValuesFrom skos:Concept
                                               ] ,
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty adms:status ;
@@ -930,15 +933,43 @@ modelldcatno:InformationModel rdf:type owl:Class ;
                                                 owl:someValuesFrom vcard:Kind
                                               ] ,
                                               [ rdf:type owl:Restriction ;
+                                                owl:onProperty dcat:theme ;
+                                                owl:someValuesFrom skos:Concept
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dct:identifier ;
+                                                owl:someValuesFrom rdfs:Literal
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dct:issued ;
+                                                owl:someValuesFrom rdfs:Literal
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dct:modified ;
+                                                owl:someValuesFrom rdfs:Literal
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
                                                 owl:onProperty dcat:keyword ;
                                                 owl:someValuesFrom rdfs:Literal
                                               ] ,
                                               [ rdf:type owl:Restriction ;
-                                                owl:onProperty dct:description ;
-                                                owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                owl:onProperty modelldcatno:informationModelDescription ;
+                                                owl:someValuesFrom rdfs:Literal
                                               ] ,
                                               [ rdf:type owl:Restriction ;
-                                                owl:onProperty dct:identifier ;
+                                                owl:onProperty modelldcatno:informationModelIdentifier ;
+                                                owl:someValuesFrom rdfs:Literal
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty modelldcatno:informationModelName ;
+                                                owl:someValuesFrom rdfs:Literal
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty modelldcatno:version ;
+                                                owl:someValuesFrom rdfs:Literal
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dct:description ;
                                                 owl:minCardinality "1"^^xsd:nonNegativeInteger
                                               ] ,
                                               [ rdf:type owl:Restriction ;
@@ -951,20 +982,20 @@ modelldcatno:InformationModel rdf:type owl:Class ;
    owl:annotatedSource modelldcatno:InformationModel ;
    owl:annotatedProperty rdfs:subClassOf ;
    owl:annotatedTarget [ rdf:type owl:Restriction ;
-                         owl:onProperty dct:description ;
-                         owl:minCardinality "1"^^xsd:nonNegativeInteger
+                         owl:onProperty dct:identifier ;
+                         owl:someValuesFrom rdfs:Literal
                        ] ;
-   rdfs:comment "This property contains descriptive textual information about the Information Model. This property should be repeated in case there are various versions of the text in different languages."@en
+   rdfs:comment "This property contains an identifier for the Information Model"@en
  ] .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource modelldcatno:InformationModel ;
    owl:annotatedProperty rdfs:subClassOf ;
    owl:annotatedTarget [ rdf:type owl:Restriction ;
-                         owl:onProperty dct:identifier ;
+                         owl:onProperty dct:description ;
                          owl:minCardinality "1"^^xsd:nonNegativeInteger
                        ] ;
-   rdfs:comment "This property contains an identifier for the Information Model"@en
+   rdfs:comment "This property contains descriptive textual information about the Information Model. This property should be repeated in case there are various versions of the text in different languages."@en
  ] .
 
 [ rdf:type owl:Axiom ;
