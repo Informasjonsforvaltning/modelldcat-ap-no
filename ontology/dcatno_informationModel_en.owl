@@ -196,6 +196,13 @@ modelldcatno:containsModelElement rdf:type owl:ObjectProperty ;
                                   rdfs:label "containsModelElement"@en .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#containsObjectType
+modelldcatno:containsObjectType rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf modelldcatno:modelRelation ;
+                                rdfs:domain modelldcatno:Attribute ;
+                                rdfs:range modelldcatno:ObjectType .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#hasDataType
 modelldcatno:hasDataType rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf modelldcatno:modelRelation ;
@@ -215,11 +222,7 @@ modelldcatno:hasMember rdf:type owl:ObjectProperty ;
 modelldcatno:hasObjectType rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf modelldcatno:modelRelation ;
                            rdf:type owl:FunctionalProperty ;
-                           rdfs:domain [ rdf:type owl:Class ;
-                                         owl:unionOf ( modelldcatno:Attribute
-                                                       modelldcatno:Role
-                                                     )
-                                       ] ;
+                           rdfs:domain modelldcatno:Role ;
                            rdfs:range modelldcatno:ObjectType .
 
 
