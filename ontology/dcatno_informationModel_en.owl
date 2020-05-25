@@ -215,7 +215,11 @@ modelldcatno:hasMember rdf:type owl:ObjectProperty ;
 modelldcatno:hasObjectType rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf modelldcatno:modelRelation ;
                            rdf:type owl:FunctionalProperty ;
-                           rdfs:domain modelldcatno:Role ;
+                           rdfs:domain [ rdf:type owl:Class ;
+                                         owl:unionOf ( modelldcatno:Attribute
+                                                       modelldcatno:Role
+                                                     )
+                                       ] ;
                            rdfs:range modelldcatno:ObjectType .
 
 
