@@ -267,6 +267,13 @@ modelldcatno:hasSupplier rdf:type owl:ObjectProperty ;
                          rdfs:range modelldcatno:ModelElement .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#hasValueFrom
+modelldcatno:hasValueFrom rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf modelldcatno:modelRelation ;
+                          rdfs:domain modelldcatno:Attribute ;
+                          rdfs:range modelldcatno:CodeList .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#model
 modelldcatno:model rdf:type owl:ObjectProperty ;
                    rdfs:domain dcat:Catalog ;
