@@ -1,5 +1,6 @@
 @prefix : <https://data.norge.no/vocabulary/modelldcatno/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ex: <http://ex.org/ex#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -615,12 +616,6 @@ modelldcatno:typeDefinitionReference rdf:type owl:DatatypeProperty ,
                                      rdfs:comment "External definition of the type in question, before adding any restrictions." .
 
 
-###  https://data.norge.no/vocabulary/modelldcatno#version
-modelldcatno:version rdf:type owl:DatatypeProperty ;
-                     rdfs:domain modelldcatno:InformationModel ;
-                     rdfs:range rdfs:Literal .
-
-
 #################################################################
 #    Classes
 #################################################################
@@ -855,6 +850,16 @@ foaf:Agent rdf:type owl:Class ;
 foaf:Document rdf:type owl:Class .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#Abstraction
+modelldcatno:Abstraction rdf:type owl:Class ;
+                         rdfs:subClassOf modelldcatno:Property .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#Assosiation
+modelldcatno:Assosiation rdf:type owl:Class ;
+                         rdfs:subClassOf modelldcatno:Property .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#Attribute
 modelldcatno:Attribute rdf:type owl:Class ;
                        rdfs:subClassOf modelldcatno:Property .
@@ -954,6 +959,10 @@ modelldcatno:InformationModel rdf:type owl:Class ;
                                                 owl:someValuesFrom xsd:dateTime
                                               ] ,
                                               [ rdf:type owl:Restriction ;
+                                                owl:onProperty owl:versionInfo ;
+                                                owl:someValuesFrom rdfs:Literal
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
                                                 owl:onProperty dcat:keyword ;
                                                 owl:someValuesFrom rdfs:Literal
                                               ] ,
@@ -967,10 +976,6 @@ modelldcatno:InformationModel rdf:type owl:Class ;
                                               ] ,
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty modelldcatno:informationModelName ;
-                                                owl:someValuesFrom rdfs:Literal
-                                              ] ,
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty modelldcatno:version ;
                                                 owl:someValuesFrom rdfs:Literal
                                               ] ,
                                               [ rdf:type owl:Restriction ;
@@ -1039,12 +1044,6 @@ modelldcatno:Realization rdf:type owl:Class ;
                          rdfs:subClassOf modelldcatno:Property .
 
 
-###  https://data.norge.no/vocabulary/modelldcatno#Relationship
-modelldcatno:Relationship rdf:type owl:Class ;
-                          rdfs:comment "For andre typer relasjoner mellom modelelementer" ;
-                          rdfs:label "Relasjon"@nb .
-
-
 ###  https://data.norge.no/vocabulary/modelldcatno#Role
 modelldcatno:Role rdf:type owl:Class ;
                   rdfs:subClassOf modelldcatno:Property ,
@@ -1076,11 +1075,6 @@ modelldcatno:Specialization rdf:type owl:Class ;
                             rdfs:subClassOf modelldcatno:Property ;
                             rdfs:label "Spesialisering"@nb ,
                                        "specialization"@en .
-
-
-###  https://data.norge.no/vocabulary/modelldcatno#assosiation
-modelldcatno:assosiation rdf:type owl:Class ;
-                         rdfs:subClassOf modelldcatno:Property .
 
 
 #################################################################
@@ -1179,7 +1173,6 @@ pass:OppgaveOverPassOgStellAvBarn rdf:type owl:NamedIndividual ,
                                   dct:issued "2020-03-30T18:35:07.950+02:00"^^xsd:dateTime ;
                                   dct:title "Skatteetatens oppgave over utgifter til stell og pass av barn"@nb ;
                                   modelldcatno:informationModelIdentifier "urn:ske:fastsetting:innsamling:barnepass:v2"^^xsd:anyURI ;
-                                  modelldcatno:version "2.0"^^xsd:string ;
                                   rdfs:label "Oppgave over pass og stell av barn"@nb ,
                                              "Oppgåve over kostnadar til pass og stell av barn"@nn .
 
@@ -1581,8 +1574,7 @@ ssg:SpesifisertSummertSkattegrunnlagsModell rdf:type owl:NamedIndividual ,
                                                                               ssg:SummertSkattegrunnlagsobjekt ;
                                             dct:issued "2020-03-31T22:36:19.478+02:00"^^xsd:dateTime ;
                                             dct:title "Konstruksjonsmodell for spesifisert summert skattegrunnlag"@nb ;
-                                            modelldcatno:informationModelIdentifier "urn:no:skatteetaten:datasamarbeid:spesifisertsummertskattegrunnlag:v1"^^xsd:anyURI ;
-                                            modelldcatno:version "1.14"^^xsd:string .
+                                            modelldcatno:informationModelIdentifier "urn:no:skatteetaten:datasamarbeid:spesifisertsummertskattegrunnlag:v1"^^xsd:anyURI .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/SummertSkattegrunnlagsobjekt
@@ -1725,6 +1717,39 @@ ssg:tekniskNavn rdf:type owl:NamedIndividual ,
                 xsd:minOccurs "1"^^xsd:int .
 
 
+###  http://ex.org/ex#apple
+ex:apple rdf:type owl:NamedIndividual ,
+                  modelldcatno:ObjectType .
+
+
+###  http://ex.org/ex#orange
+ex:orange rdf:type owl:NamedIndividual ,
+                   modelldcatno:ObjectType ;
+          dct:description "De sinaasappel (ook wel appelsien genoemd) is de vrucht van desinaasappelboom (Citrus sinensis), die tot het geslacht Citrus behoort. De soort wordt ook wel zoete sinaasappel genoemd, om hem te onderscheiden van de zure of bittere sinaasappel (Citrus aurantium). De boom werd vroeger in koudere klimaatgebieden in een overwinteringsvertrek gehouden, dat aan oranger, frans voor sinaasappelboom, de benaming oranjerie ontleent."@nl ;
+          dct:title "Sinaasappel"@nl .
+
+
+###  http://ex.org/ex#selectFruit
+ex:selectFruit rdf:type owl:NamedIndividual ,
+                        modelldcatno:Choice ;
+               modelldcatno:hasOneOf ex:apple ,
+                                     ex:orange ;
+               dct:title "Velg en frukt"@nb ;
+               rdfs:comment """Valget:
+Valggruppe var en måte å grupere noe langs en annen akse, noe som hadde samme valggruppeverdi var i gruppe. 
+
+Er nok bedre å gjøre det slik at man gruperer med en spesialegenskap som også impliserer at man velger en.
+
+Da får vi likt mønster med de andre egenskapene klassen kan ha-"""@nb .
+
+
+###  http://ex.org/ex#someObject
+ex:someObject rdf:type owl:NamedIndividual ,
+                       modelldcatno:ObjectType ;
+              modelldcatno:hasProperty ex:selectFruit ;
+              rdfs:comment "Representerer en del av en modell"@nb .
+
+
 ###  http://id.loc.gov/vocabulary/iso639-1/nb
 <http://id.loc.gov/vocabulary/iso639-1/nb> rdf:type owl:NamedIndividual ,
                                                     dct:LinguisticSystem ;
@@ -1742,11 +1767,16 @@ ssg:tekniskNavn rdf:type owl:NamedIndividual ,
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( modelldcatno:Attribute
+  owl:members ( modelldcatno:Abstraction
+                modelldcatno:Assosiation
+                modelldcatno:Attribute
                 modelldcatno:Choice
                 modelldcatno:Collection
                 modelldcatno:Composition
+                modelldcatno:Note
+                modelldcatno:Realization
                 modelldcatno:Role
+                modelldcatno:Specialization
               )
 ] .
 
