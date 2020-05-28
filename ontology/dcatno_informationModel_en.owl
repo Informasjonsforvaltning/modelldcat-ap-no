@@ -731,7 +731,7 @@ textual metadata of the Datasets in a Registry Catalogue. This property should b
                          owl:someValuesFrom skos:ConceptScheme
                        ] ;
    rdfs:comment """This property refers to a knowledge organisation system (i.e.,
-thesaurus, taxonomy) used to classify Datasets in a Registry Catalogue."""@nb
+thesaurus, taxonomy) used to classify Datasets in a Registry Catalogue."""@en
  ] .
 
 [ rdf:type owl:Axiom ;
