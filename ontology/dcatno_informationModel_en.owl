@@ -28,12 +28,6 @@
 skos:prefLabel rdf:type owl:AnnotationProperty .
 
 
-###  https://data.norge.no/vocabulary/modelldcatno#modelElementType
-modelldcatno:modelElementType rdf:type owl:AnnotationProperty ;
-                              rdfs:comment "Denne skulle ikke være nødvendig lenger" ;
-                              owl:deprecated "true"^^xsd:boolean .
-
-
 #################################################################
 #    Object Properties
 #################################################################
