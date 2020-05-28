@@ -300,13 +300,6 @@ modelldcatno:references rdf:type owl:ObjectProperty ;
                         rdfs:range modelldcatno:ModelElement .
 
 
-###  https://data.norge.no/vocabulary/modelldcatno#sameAs
-modelldcatno:sameAs rdf:type owl:ObjectProperty ,
-                             owl:SymmetricProperty ;
-                    rdfs:domain modelldcatno:ModelElement ;
-                    rdfs:range modelldcatno:ModelElement .
-
-
 #################################################################
 #    Data properties
 #################################################################
