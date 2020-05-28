@@ -457,13 +457,6 @@ owl:versionInfo rdf:type owl:DatatypeProperty ;
                 rdfs:range rdfs:Literal .
 
 
-###  http://www.w3.org/ns/adms#versionNotes
-adms:versionNotes rdf:type owl:DatatypeProperty ;
-                  rdfs:domain dcat:Resource ;
-                  rdfs:range rdfs:Literal ;
-                  rdfs:label "endring fra siste versjon"@nb .
-
-
 ###  http://www.w3.org/ns/dcat#endDate
 dcat:endDate rdf:type owl:DatatypeProperty ;
              rdfs:domain dct:PeriodOfTime ;
