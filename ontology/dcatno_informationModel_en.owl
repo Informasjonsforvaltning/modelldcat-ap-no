@@ -1,5 +1,6 @@
 @prefix : <https://data.norge.no/vocabulary/modelldcatno/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ex: <http://ex.org/ex#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -182,7 +183,7 @@ modelldcatno:codeListReference rdf:type owl:ObjectProperty ,
 
 ###  https://data.norge.no/vocabulary/modelldcatno#contains
 modelldcatno:contains rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf modelldcatno:modelRelation ;
+                      rdfs:subPropertyOf modelldcatno:hasType ;
                       rdfs:domain modelldcatno:Composition ;
                       rdfs:range modelldcatno:ModelElement .
 
@@ -202,14 +203,14 @@ modelldcatno:containsModelElement rdf:type owl:ObjectProperty ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#containsObjectType
 modelldcatno:containsObjectType rdf:type owl:ObjectProperty ;
-                                rdfs:subPropertyOf modelldcatno:modelRelation ;
+                                rdfs:subPropertyOf modelldcatno:hasType ;
                                 rdfs:domain modelldcatno:Attribute ;
                                 rdfs:range modelldcatno:ObjectType .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#hasDataType
 modelldcatno:hasDataType rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf modelldcatno:modelRelation ;
+                         rdfs:subPropertyOf modelldcatno:hasType ;
                          rdf:type owl:FunctionalProperty ;
                          rdfs:domain modelldcatno:Attribute ;
                          rdfs:range modelldcatno:DataType .
@@ -217,21 +218,21 @@ modelldcatno:hasDataType rdf:type owl:ObjectProperty ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#hasGeneralConsept
 modelldcatno:hasGeneralConsept rdf:type owl:ObjectProperty ;
-                               rdfs:subPropertyOf modelldcatno:modelRelation ;
+                               rdfs:subPropertyOf modelldcatno:hasType ;
                                rdfs:domain modelldcatno:Specialization ;
                                rdfs:range modelldcatno:ModelElement .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#hasMember
 modelldcatno:hasMember rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf modelldcatno:modelRelation ;
+                       rdfs:subPropertyOf modelldcatno:hasType ;
                        rdfs:domain modelldcatno:Collection ;
                        rdfs:range modelldcatno:ModelElement .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#hasObjectType
 modelldcatno:hasObjectType rdf:type owl:ObjectProperty ;
-                           rdfs:subPropertyOf modelldcatno:modelRelation ;
+                           rdfs:subPropertyOf modelldcatno:hasType ;
                            rdf:type owl:FunctionalProperty ;
                            rdfs:domain modelldcatno:Role ;
                            rdfs:range modelldcatno:ObjectType .
@@ -239,7 +240,7 @@ modelldcatno:hasObjectType rdf:type owl:ObjectProperty ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#hasOneOf
 modelldcatno:hasOneOf rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf modelldcatno:modelRelation ;
+                      rdfs:subPropertyOf modelldcatno:hasType ;
                       rdfs:domain modelldcatno:Choice ;
                       rdfs:range modelldcatno:ModelElement .
 
@@ -253,7 +254,7 @@ modelldcatno:hasProperty rdf:type owl:ObjectProperty ,
 
 ###  https://data.norge.no/vocabulary/modelldcatno#hasSimpletype
 modelldcatno:hasSimpletype rdf:type owl:ObjectProperty ;
-                           rdfs:subPropertyOf modelldcatno:modelRelation ;
+                           rdfs:subPropertyOf modelldcatno:hasType ;
                            rdf:type owl:FunctionalProperty ;
                            rdfs:domain modelldcatno:Attribute ;
                            rdfs:range modelldcatno:SimpleType .
@@ -261,21 +262,28 @@ modelldcatno:hasSimpletype rdf:type owl:ObjectProperty ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#hasSupplier
 modelldcatno:hasSupplier rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf modelldcatno:modelRelation ;
-                         rdfs:domain modelldcatno:Specialization ;
+                         rdfs:subPropertyOf modelldcatno:hasType ;
+                         rdfs:domain modelldcatno:Realization ;
                          rdfs:range modelldcatno:ModelElement .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#hasType
+modelldcatno:hasType rdf:type owl:ObjectProperty ;
+                     rdfs:domain modelldcatno:Property ;
+                     rdfs:range modelldcatno:ModelElement .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#hasValueFrom
+modelldcatno:hasValueFrom rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf modelldcatno:hasType ;
+                          rdfs:domain modelldcatno:Attribute ;
+                          rdfs:range modelldcatno:CodeList .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#model
 modelldcatno:model rdf:type owl:ObjectProperty ;
                    rdfs:domain dcat:Catalog ;
                    rdfs:range modelldcatno:InformationModel .
-
-
-###  https://data.norge.no/vocabulary/modelldcatno#modelRelation
-modelldcatno:modelRelation rdf:type owl:ObjectProperty ;
-                           rdfs:domain modelldcatno:Property ;
-                           rdfs:range modelldcatno:ModelElement .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#propertyIsDescribedBy
@@ -285,25 +293,18 @@ modelldcatno:propertyIsDescribedBy rdf:type owl:ObjectProperty ;
                                    rdfs:label "Egenskapen er beskrevet av"@nb .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#references
+modelldcatno:references rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf modelldcatno:hasType ;
+                        rdfs:domain modelldcatno:Assosiation ;
+                        rdfs:range modelldcatno:ModelElement .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#sameAs
 modelldcatno:sameAs rdf:type owl:ObjectProperty ,
                              owl:SymmetricProperty ;
                     rdfs:domain modelldcatno:ModelElement ;
                     rdfs:range modelldcatno:ModelElement .
-
-
-###  https://data.norge.no/vocabulary/modelldcatno#type
-modelldcatno:type rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf modelldcatno:modelRelation ;
-                  rdf:type owl:FunctionalProperty ,
-                           owl:AsymmetricProperty ;
-                  rdfs:domain modelldcatno:Property ;
-                  rdfs:range modelldcatno:ModelElement ;
-                  rdfs:comment """Knytter egenskap til element (objectType, dataType, Codelist) som definerer innholdet
-
-Erstattet av en serie nye forbindelser"""@nb ;
-                  rdfs:label "type"@nb ;
-                  owl:deprecated "true"^^xsd:boolean .
 
 
 #################################################################
@@ -615,12 +616,6 @@ modelldcatno:typeDefinitionReference rdf:type owl:DatatypeProperty ,
                                      rdfs:comment "External definition of the type in question, before adding any restrictions." .
 
 
-###  https://data.norge.no/vocabulary/modelldcatno#version
-modelldcatno:version rdf:type owl:DatatypeProperty ;
-                     rdfs:domain modelldcatno:InformationModel ;
-                     rdfs:range rdfs:Literal .
-
-
 #################################################################
 #    Classes
 #################################################################
@@ -855,6 +850,16 @@ foaf:Agent rdf:type owl:Class ;
 foaf:Document rdf:type owl:Class .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#Abstraction
+modelldcatno:Abstraction rdf:type owl:Class ;
+                         rdfs:subClassOf modelldcatno:Property .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#Assosiation
+modelldcatno:Assosiation rdf:type owl:Class ;
+                         rdfs:subClassOf modelldcatno:Property .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#Attribute
 modelldcatno:Attribute rdf:type owl:Class ;
                        rdfs:subClassOf modelldcatno:Property .
@@ -954,6 +959,10 @@ modelldcatno:InformationModel rdf:type owl:Class ;
                                                 owl:someValuesFrom xsd:dateTime
                                               ] ,
                                               [ rdf:type owl:Restriction ;
+                                                owl:onProperty owl:versionInfo ;
+                                                owl:someValuesFrom rdfs:Literal
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
                                                 owl:onProperty dcat:keyword ;
                                                 owl:someValuesFrom rdfs:Literal
                                               ] ,
@@ -967,10 +976,6 @@ modelldcatno:InformationModel rdf:type owl:Class ;
                                               ] ,
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty modelldcatno:informationModelName ;
-                                                owl:someValuesFrom rdfs:Literal
-                                              ] ,
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty modelldcatno:version ;
                                                 owl:someValuesFrom rdfs:Literal
                                               ] ,
                                               [ rdf:type owl:Restriction ;
@@ -1039,12 +1044,6 @@ modelldcatno:Realization rdf:type owl:Class ;
                          rdfs:subClassOf modelldcatno:Property .
 
 
-###  https://data.norge.no/vocabulary/modelldcatno#Relationship
-modelldcatno:Relationship rdf:type owl:Class ;
-                          rdfs:comment "For andre typer relasjoner mellom modelelementer" ;
-                          rdfs:label "Relasjon"@nb .
-
-
 ###  https://data.norge.no/vocabulary/modelldcatno#Role
 modelldcatno:Role rdf:type owl:Class ;
                   rdfs:subClassOf modelldcatno:Property ,
@@ -1076,11 +1075,6 @@ modelldcatno:Specialization rdf:type owl:Class ;
                             rdfs:subClassOf modelldcatno:Property ;
                             rdfs:label "Spesialisering"@nb ,
                                        "specialization"@en .
-
-
-###  https://data.norge.no/vocabulary/modelldcatno#assosiation
-modelldcatno:assosiation rdf:type owl:Class ;
-                         rdfs:subClassOf modelldcatno:Property .
 
 
 #################################################################
@@ -1179,7 +1173,6 @@ pass:OppgaveOverPassOgStellAvBarn rdf:type owl:NamedIndividual ,
                                   dct:issued "2020-03-30T18:35:07.950+02:00"^^xsd:dateTime ;
                                   dct:title "Skatteetatens oppgave over utgifter til stell og pass av barn"@nb ;
                                   modelldcatno:informationModelIdentifier "urn:ske:fastsetting:innsamling:barnepass:v2"^^xsd:anyURI ;
-                                  modelldcatno:version "2.0"^^xsd:string ;
                                   rdfs:label "Oppgave over pass og stell av barn"@nb ,
                                              "Oppgåve over kostnadar til pass og stell av barn"@nn .
 
@@ -1276,7 +1269,6 @@ pass:inntektsår rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/kildesystem
 pass:kildesystem rdf:type owl:NamedIndividual ,
                           modelldcatno:Property ;
-                 modelldcatno:type skebase:KildesystemType ;
                  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                  xsd:minOccurs "0"^^xsd:nonNegativeInteger .
 
@@ -1284,7 +1276,6 @@ pass:kildesystem rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/kontaktinformasjon
 pass:kontaktinformasjon rdf:type owl:NamedIndividual ,
                                  modelldcatno:Property ;
-                        modelldcatno:type pass:KontaktinformasjonType ;
                         xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                         xsd:minOccurs "0"^^xsd:nonNegativeInteger .
 
@@ -1292,7 +1283,6 @@ pass:kontaktinformasjon rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/leveranseRolle
 pass:leveranseRolle rdf:type owl:NamedIndividual ,
                              modelldcatno:Property ;
-                    modelldcatno:type pass:Leveranse ;
                     xsd:maxOccurs "*"^^rdfs:Literal ;
                     xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
@@ -1300,15 +1290,13 @@ pass:leveranseRolle rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/leveransetype
 pass:leveransetype rdf:type owl:NamedIndividual ,
                             modelldcatno:Property ;
-                   modelldcatno:type pass:LeveranseKategori ;
                    xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                    xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/navn
 pass:navn rdf:type owl:NamedIndividual ,
-                   modelldcatno:Property ;
-          modelldcatno:type pass:NavnType .
+                   modelldcatno:Property .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/oppgaveRolle
@@ -1322,7 +1310,6 @@ pass:oppgaveRolle rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/oppgaveeierRolle
 pass:oppgaveeierRolle rdf:type owl:NamedIndividual ,
                                modelldcatno:Property ;
-                      modelldcatno:type pass:Oppgaveeier ;
                       xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                       xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
@@ -1330,7 +1317,6 @@ pass:oppgaveeierRolle rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/oppgaveeiernavn
 pass:oppgaveeiernavn rdf:type owl:NamedIndividual ,
                               modelldcatno:Property ;
-                     modelldcatno:type pass:NavnType ;
                      xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                      xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
@@ -1338,7 +1324,6 @@ pass:oppgaveeiernavn rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/oppgavegiverRolle
 pass:oppgavegiverRolle rdf:type owl:NamedIndividual ,
                                 modelldcatno:Property ;
-                       modelldcatno:type pass:Oppgavegiver ;
                        xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                        xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
@@ -1354,7 +1339,6 @@ pass:oppgavegiversLeveransereferanse rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/oppgavesummeringRolle
 pass:oppgavesummeringRolle rdf:type owl:NamedIndividual ,
                                     modelldcatno:Property ;
-                           modelldcatno:type pass:Oppgaveoppsumering ;
                            xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                            xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
@@ -1362,7 +1346,6 @@ pass:oppgavesummeringRolle rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/organisasjonsnavn
 pass:organisasjonsnavn rdf:type owl:NamedIndividual ,
                                 modelldcatno:Property ;
-                       modelldcatno:type skebase:OrganisasjonsnavnType ;
                        xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                        xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
@@ -1370,7 +1353,6 @@ pass:organisasjonsnavn rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/organisasjonsnummer
 pass:organisasjonsnummer rdf:type owl:NamedIndividual ,
                                   modelldcatno:Property ;
-                         modelldcatno:type skebase:OrganisasjonsnummerType ;
                          xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                          xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
@@ -1378,7 +1360,6 @@ pass:organisasjonsnummer rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/påløptBeløp
 pass:påløptBeløp rdf:type owl:NamedIndividual ,
                           modelldcatno:Property ;
-                 modelldcatno:type skebase:BeløpType ;
                  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                  xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
@@ -1581,8 +1562,7 @@ ssg:SpesifisertSummertSkattegrunnlagsModell rdf:type owl:NamedIndividual ,
                                                                               ssg:SummertSkattegrunnlagsobjekt ;
                                             dct:issued "2020-03-31T22:36:19.478+02:00"^^xsd:dateTime ;
                                             dct:title "Konstruksjonsmodell for spesifisert summert skattegrunnlag"@nb ;
-                                            modelldcatno:informationModelIdentifier "urn:no:skatteetaten:datasamarbeid:spesifisertsummertskattegrunnlag:v1"^^xsd:anyURI ;
-                                            modelldcatno:version "1.14"^^xsd:string .
+                                            modelldcatno:informationModelIdentifier "urn:no:skatteetaten:datasamarbeid:spesifisertsummertskattegrunnlag:v1"^^xsd:anyURI .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/SummertSkattegrunnlagsobjekt
@@ -1598,7 +1578,6 @@ ssg:SummertSkattegrunnlagsobjekt rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/beløp
 ssg:beløp rdf:type owl:NamedIndividual ,
                    modelldcatno:Property ;
-          modelldcatno:type skebase:BeløpSomHeltallType ;
           xsd:maxOccurs "1"^^xsd:int ;
           xsd:minOccurs "1"^^xsd:int .
 
@@ -1606,7 +1585,6 @@ ssg:beløp rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/generiskBeløp
 ssg:generiskBeløp rdf:type owl:NamedIndividual ,
                            modelldcatno:Property ;
-                  modelldcatno:type skebase:BeløpSomHeltallType ;
                   xsd:maxOccurs "1"^^xsd:int ;
                   xsd:minOccurs "0"^^xsd:int .
 
@@ -1614,7 +1592,6 @@ ssg:generiskBeløp rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/grunnlag
 ssg:grunnlag rdf:type owl:NamedIndividual ,
                       modelldcatno:Property ;
-             modelldcatno:type ssg:SummertSkattegrunnlagsobjekt ;
              xsd:maxOccurs "*"^^xsd:string ;
              xsd:minOccurs "0"^^xsd:int .
 
@@ -1622,7 +1599,6 @@ ssg:grunnlag rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/inntektsår
 ssg:inntektsår rdf:type owl:NamedIndividual ,
                         modelldcatno:Property ;
-               modelldcatno:type skebase:ÅrstallType ;
                xsd:maxOccurs "1"^^xsd:int ;
                xsd:minOccurs "1"^^xsd:int .
 
@@ -1635,7 +1611,6 @@ ssg:katalogdelSSG rdf:type owl:NamedIndividual ;
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/kategori
 ssg:kategori rdf:type owl:NamedIndividual ,
                       modelldcatno:Property ;
-             modelldcatno:type skebase:TekstType ;
              xsd:maxOccurs "*"^^xsd:string ;
              xsd:minOccurs "0"^^xsd:int .
 
@@ -1643,7 +1618,6 @@ ssg:kategori rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/kildebeskrivelse
 ssg:kildebeskrivelse rdf:type owl:NamedIndividual ,
                               modelldcatno:Property ;
-                     modelldcatno:type skebase:TekstType ;
                      xsd:minOccurs "0"^^xsd:int ,
                                    "1"^^xsd:int .
 
@@ -1651,7 +1625,6 @@ ssg:kildebeskrivelse rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/kildenavn
 ssg:kildenavn rdf:type owl:NamedIndividual ,
                        modelldcatno:Property ;
-              modelldcatno:type skebase:TekstType ;
               xsd:maxOccurs "1"^^xsd:int ;
               xsd:minOccurs "0"^^xsd:int .
 
@@ -1659,7 +1632,6 @@ ssg:kildenavn rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/kildeskattPåLønnGrunnlag
 ssg:kildeskattPåLønnGrunnlag rdf:type owl:NamedIndividual ,
                                       modelldcatno:Property ;
-                             modelldcatno:type ssg:SummertSkattegrunnlagsobjekt ;
                              xsd:maxOccurs "*"^^xsd:string ;
                              xsd:minOccurs "0"^^xsd:int .
 
@@ -1667,7 +1639,6 @@ ssg:kildeskattPåLønnGrunnlag rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/personidentifikator
 ssg:personidentifikator rdf:type owl:NamedIndividual ,
                                  modelldcatno:Property ;
-                        modelldcatno:type skebase:FødselsnummerType ;
                         xsd:maxOccurs "1"^^xsd:int ;
                         xsd:minOccurs "1"^^xsd:int .
 
@@ -1675,7 +1646,6 @@ ssg:personidentifikator rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/skatteoppgjørsdato
 ssg:skatteoppgjørsdato rdf:type owl:NamedIndividual ,
                                 modelldcatno:Property ;
-                       modelldcatno:type skebase:DatoType ;
                        xsd:maxOccurs "1"^^xsd:int ;
                        xsd:minOccurs "0"^^xsd:int .
 
@@ -1683,7 +1653,6 @@ ssg:skatteoppgjørsdato rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/skjermet
 ssg:skjermet rdf:type owl:NamedIndividual ,
                       modelldcatno:Property ;
-             modelldcatno:type skebase:BoolskType ;
              xsd:maxOccurs "1"^^xsd:int ;
              xsd:minOccurs "1"^^xsd:int .
 
@@ -1691,7 +1660,6 @@ ssg:skjermet rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/skjønnsfastsatt
 ssg:skjønnsfastsatt rdf:type owl:NamedIndividual ,
                              modelldcatno:Property ;
-                    modelldcatno:type skebase:BoolskType ;
                     xsd:maxOccurs "1"^^xsd:int ;
                     xsd:minOccurs "0"^^xsd:int .
 
@@ -1704,7 +1672,6 @@ ssg:spesifisering rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/svalbardGrunnlag
 ssg:svalbardGrunnlag rdf:type owl:NamedIndividual ,
                               modelldcatno:Property ;
-                     modelldcatno:type ssg:SummertSkattegrunnlagsobjekt ;
                      xsd:maxOccurs "*"^^xsd:string ;
                      xsd:minOccurs "1"^^xsd:int .
 
@@ -1712,7 +1679,6 @@ ssg:svalbardGrunnlag rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/svalbardSkjønnsfastsatt
 ssg:svalbardSkjønnsfastsatt rdf:type owl:NamedIndividual ,
                                      modelldcatno:Property ;
-                            modelldcatno:type skebase:BoolskType ;
                             xsd:maxOccurs "1"^^xsd:int ;
                             xsd:minOccurs "0"^^xsd:int .
 
@@ -1720,9 +1686,55 @@ ssg:svalbardSkjønnsfastsatt rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/tekniskNavn
 ssg:tekniskNavn rdf:type owl:NamedIndividual ,
                          modelldcatno:Property ;
-                modelldcatno:type skebase:TekstType ;
                 xsd:maxOccurs "1"^^xsd:int ;
                 xsd:minOccurs "1"^^xsd:int .
+
+
+###  http://ex.org/ex#apple
+ex:apple rdf:type owl:NamedIndividual ,
+                  modelldcatno:ObjectType .
+
+
+###  http://ex.org/ex#lim
+ex:lim rdf:type owl:NamedIndividual ,
+                modelldcatno:Assosiation ;
+       modelldcatno:hasType ex:otherObject ;
+       dct:description "Dette kan beskrive forholdet den ene har til den andre klassen"@nb ;
+       dct:title "navnet til en assosiasjon"@nb .
+
+
+###  http://ex.org/ex#orange
+ex:orange rdf:type owl:NamedIndividual ,
+                   modelldcatno:ObjectType ;
+          dct:description "De sinaasappel (ook wel appelsien genoemd) is de vrucht van desinaasappelboom (Citrus sinensis), die tot het geslacht Citrus behoort. De soort wordt ook wel zoete sinaasappel genoemd, om hem te onderscheiden van de zure of bittere sinaasappel (Citrus aurantium). De boom werd vroeger in koudere klimaatgebieden in een overwinteringsvertrek gehouden, dat aan oranger, frans voor sinaasappelboom, de benaming oranjerie ontleent."@nl ;
+          dct:title "Sinaasappel"@nl .
+
+
+###  http://ex.org/ex#otherObject
+ex:otherObject rdf:type owl:NamedIndividual ,
+                        modelldcatno:ObjectType .
+
+
+###  http://ex.org/ex#selectFruit
+ex:selectFruit rdf:type owl:NamedIndividual ,
+                        modelldcatno:Choice ;
+               modelldcatno:hasOneOf ex:apple ,
+                                     ex:orange ;
+               dct:title "Velg en frukt"@nb ;
+               rdfs:comment """Valget:
+Valggruppe var en måte å grupere noe langs en annen akse, noe som hadde samme valggruppeverdi var i gruppe. 
+
+Er nok bedre å gjøre det slik at man gruperer med en spesialegenskap som også impliserer at man velger en.
+
+Da får vi likt mønster med de andre egenskapene klassen kan ha-"""@nb .
+
+
+###  http://ex.org/ex#someObject
+ex:someObject rdf:type owl:NamedIndividual ,
+                       modelldcatno:ObjectType ;
+              modelldcatno:hasProperty ex:lim ,
+                                       ex:selectFruit ;
+              rdfs:comment "Representerer en del av en modell"@nb .
 
 
 ###  http://id.loc.gov/vocabulary/iso639-1/nb
@@ -1742,11 +1754,16 @@ ssg:tekniskNavn rdf:type owl:NamedIndividual ,
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( modelldcatno:Attribute
+  owl:members ( modelldcatno:Abstraction
+                modelldcatno:Assosiation
+                modelldcatno:Attribute
                 modelldcatno:Choice
                 modelldcatno:Collection
                 modelldcatno:Composition
+                modelldcatno:Note
+                modelldcatno:Realization
                 modelldcatno:Role
+                modelldcatno:Specialization
               )
 ] .
 
