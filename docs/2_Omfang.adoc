@@ -1,4 +1,4 @@
-== 2      Omfang og avgrensing
+= Omfang og avgrensing [[omfang]]
 
 Spesifikasjonen er anbefalt brukt for å beskrive informasjonsmodeller. Den vil gjelde alle typer informasjonsmodeller _som beskrives med tanke på oppføring i en katalog eller «inventarliste» (intern eller ekstern)_. +
 

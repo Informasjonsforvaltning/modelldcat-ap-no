@@ -1,5 +1,5 @@
 
-== Formål
+= Formål [[formal]]
 
 Offentlige virksomheter forvalter en rekke informasjonsmodeller knyttet til prosesser og data som understøtter deres samfunnsoppdrag. Det er et stort potensial i å effektivisere informasjonsdelingen mellom virksomhetene ved å ha en felles tilnærming til utforming og forvaltning av modellene. Lik tilnærming gjør det også mulig å sammenligne informasjonsmodeller på tvers av virksomheter for å avdekke likheter som grunnlag for samordning og forenkling.
 
