@@ -514,7 +514,7 @@ dcat:bbox rdf:type owl:DatatypeProperty ;
           rdfs:domain dct:Location ;
           rdfs:range rdfs:Literal ;
           rdfs:label "bounding box"@en ,
-                     "geografisk område"@en .
+                     "geografisk område"@nb .
 
 
 ###  http://www.w3.org/ns/dcat#centroid
