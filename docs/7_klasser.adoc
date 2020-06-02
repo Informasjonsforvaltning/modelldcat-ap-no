@@ -26,7 +26,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Status|Obligatorisk
 |===
 
-=== Begrep [[klasse-begrep]]
+=== Begrep [[klasse-begrep-1]]
 
 [cols="30s,70"]
 |===
@@ -324,7 +324,7 @@ Kodelisteelementer: 1 - Heltid, 2 -  Deltid
 |Status|Valgfri
 |===
 
-=== Begrep [[klasse-begrep]]
+=== Begrep [[klasse-begrep-2]]
 
 [cols="30s,70"]
 |===
