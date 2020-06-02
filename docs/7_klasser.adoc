@@ -212,10 +212,9 @@ Klasse som representerer modellen som skal utveksles.
 [cols="30s,70"]
 |===
 |Engelsk navn|Property
-|Beskrivelse|En egenskap ved en objekttype eller datatype.
+|Beskrivelse|Brukes til å beskrive en egenskap ved et modellelement.
 |URI|modelldcatno:Property
 |Referanse|
-|Kommentar|Kun objekttyper, rotobjekttyper og datatyper kan ha egenskaper.
 |Status|Anbefalt
 |===
 
