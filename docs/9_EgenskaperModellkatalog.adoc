@@ -59,7 +59,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Engelsk navn| publisher
 |URI| dct:publisher
 |Range| foaf:Agent
-|Beskrivelse| Refererer til en aktør (organisasjon) som er ansvarlig for å gjøre katalogen tilgjengelig. Bør være autoritativ URI for enhet, sekundært organisasjonsnummer.
+|Beskrivelse| Refererer til en aktør (organisasjon) som er ansvarlig for å gjøre katalogen tilgjengelig. Bør være autoritativ URI for aktøren, sekundært organisasjonsnummer.
 |Multiplisitet| 1..1
 |Status| Obligatorisk
 |===
@@ -109,7 +109,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Engelsk navn| licence
 |URI| dct:license
 |Range| dct:LicenseDocument
-|Beskrivelse| Viser til lisens for datakatalogen som beskriver hvordan den kan viderebrukes.
+|Beskrivelse| Viser til lisens for modellkatalogen som beskriver hvordan den kan viderebrukes.
 |Multiplisitet| 0..1
 |Status| Anbefalt
 |===
