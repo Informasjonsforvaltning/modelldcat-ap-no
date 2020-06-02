@@ -77,7 +77,7 @@ dct:license rdf:type owl:ObjectProperty ;
             rdfs:domain dcat:Resource ;
             rdfs:range dct:LicenseDocument ;
             rdfs:label "license"@en ,
-                       "lisense"@nb .
+                       "lisens"@nb .
 
 
 ###  http://purl.org/dc/terms/publisher
