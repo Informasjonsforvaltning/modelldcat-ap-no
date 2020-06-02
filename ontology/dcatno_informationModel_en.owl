@@ -234,7 +234,7 @@ modelldcatno:hasDataType rdf:type owl:ObjectProperty ;
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#hasGeneralConsept
-modelldcatno:hasGeneralConsept rdf:type owl:ObjectProperty ;
+modelldcatno:hasGeneralConcept rdf:type owl:ObjectProperty ;
                                rdfs:subPropertyOf modelldcatno:hasType ;
                                rdfs:domain modelldcatno:Specialization ;
                                rdfs:range modelldcatno:ModelElement ;
