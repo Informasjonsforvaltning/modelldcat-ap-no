@@ -1,18 +1,10 @@
 
-= Innledning
+= Formål [[formal]]
 
 Offentlige virksomheter forvalter en rekke informasjonsmodeller knyttet til prosesser og data som understøtter deres samfunnsoppdrag. Det er et stort potensial i å effektivisere informasjonsdelingen mellom virksomhetene ved å ha en felles tilnærming til utforming og forvaltning av modellene. Lik tilnærming gjør det også mulig å sammenligne informasjonsmodeller på tvers av virksomheter for å avdekke likheter som grunnlag for samordning og forenkling.
 
-== Behov
+Denne spesifikasjonen foreslår en felles måte å uttrykke informasjonsmodeller på ved hjelp av en metamodell. Dette vil gjøre det enklere å oppdage og forstå informasjonsmodeller i offentlig sektor, utveksle informasjonsmodeller maskinelt, samt gjenbruke informasjonsmodeller eller elementer i dem.
 
-Vi har identifisert tre overordnede behov knyttet til informasjonsmodeller:
-
-** Oppdage og forstå informasjonsmodeller i offentlig sektor
-** Utveksle informasjonsmodeller maskinelt
-** Gjenbruke informasjonsmodeller eller elementer i dem.
-
-Forslag til metamodell under svarer til behov 1 der en forsøker å bli enige om en felles måte å uttrykke  informasjonsmodeller på gjennom en metamodell.
-
-ModellDCAT-AP-NO er basert på W3Cs Data Catalog Vocabulary, versjon 2.
+ModellDCAT-AP-NO er basert på DCAT-AP-NO v.2.0 og inngår i Rammeverk for informasjonsforvaltning.
 
 Egenskapsnavnene fra den underliggende DCAT-standarden er gitt norske navn. Siden ModellDCAT-AP-NO legger til rette for internasjonal utveksling, skal engelske egenskapsnavn i form av URIer benyttes.

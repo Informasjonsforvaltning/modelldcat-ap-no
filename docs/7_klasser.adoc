@@ -1,0 +1,406 @@
+= Klasser
+
+== Obligatoriske klasser i katalogdelen
+
+=== Aktør [[klasse-aktor]]
+
+Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsregisteret (Brønnøysundregistrene) har på enheten/virksomheten dersom den finnes i registeret.
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Agent
+|Beskrivelse|Brukes til å representere en aktør som er assosiert med modellkatalogen og/eller modellene. Dersom aktøren er en organisasjon er det anbefalt å bruke «Organization Ontology».
+|URI|foaf:Agent
+|Referanse|http://http://xmlns.com/foaf/spec/#term_Agent[http://xmlns.com/foaf/spec/#term_Agent]
+|Status|Obligatorisk
+|===
+
+=== Katalogisert ressurs [[klasse-katalogisert-ressurs]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Catalogued Resource
+|Beskrivelse|Brukes til å representere en ressurs som er beskrevet i en katalog.
+|URI|dcat:Resource
+|Referanse|https://www.w3.org/TR/vocab-dcat-2/#Class:Resource[https://www.w3.org/TR/vocab-dcat-2/#Class:Resource]
+|Status|Obligatorisk
+|===
+
+=== Begrep [[klasse-begrep]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Concept
+|Beskrivelse|Brukes til å representere begrep som er viktig for å forstå eller tolke en informasjonsmodell eller et modellelement.
+|URI|skos:concept
+|Referanse|http://https://www.w3.org/2009/08/skos-reference/skos.html#Concept[https://www.w3.org/2009/08/skos-reference/skos.html#Concept]
+|Status|Obligatorisk
+|===
+
+=== Modellkatalog [[klasse-modellkatalog]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Catalog
+|Beskrivelse|Brukes til å representere en katalog eller repository som inneholder beskrivelsene av modellene.
+|URI|dcat:Catalog
+|Referanse|http://http://xmlns.com/foaf/spec/#term_Agent[http://xmlns.com/foaf/spec/#term_Agent]
+|Status|Obligatorisk
+|===
+
+=== Literal [[klasse-literal]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Literal
+|Beskrivelse|Brukes til å representere en literal-verdi slik som en streng eller heltall (integer). Literaler kan inneholde datatype, og for eksempel være formatert som en dato. Literaler som inneholder maskinlesbar tekst har en valgfri språk-tag, definert av BCP47 (no=norsk, nb=bokmål, nn=nynorsk, en=engelsk).
+|URI|rdfs:Literal
+|Referanse|https://www.w3.org/TR/rdf-concepts/#section-Literals[https://www.w3.org/TR/rdf-concepts/#section-Literals]
+|Status|Obligatorisk
+|===
+
+=== Tematisk skjema [[klasse-tematisk-skjema]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Thematic scheme
+|Beskrivelse|Brukes til å representere en taksonomi eller en annen type kontrollert vokabular hvor emnet er definert.
+|URI|skos:ConceptScheme
+|Referanse|https://www.w3.org/TR/vocab-dcat/#Class:Concept_Scheme[https://www.w3.org/TR/vocab-dcat/#Class:Concept_Scheme]
+|Status|Obligatorisk
+|Kommentar|Norsk utvidelse i DCAT-AP-NO. Endret fra anbefalt til obligatorisk (allerede i DCAT-AP-NO v.1.1).
+|===
+
+== Anbefalte klasser i katalogdelen
+
+=== Lisensdokument [[klasse-lisensdokument]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|License document
+|Beskrivelse|Brukes til å representere et juridisk dokument som gir offisiell tillatelse til å gjøre noe med en modell.
+|URI|dct:LicenseDocument
+|Referanse|http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=terms#LicenseDocument[http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=terms#LicenseDocument]
+|Status|Anbefalt
+|===
+
+== Valgfrie klasser i katalogdelen
+
+=== Identifikator [[klasse-identifikator]]
+
+[cols="30s,70d"]
+|===
+| Engelsk navn | Identifier
+| Beskrivelse | Brukes til å representere en identifikator i en bestemt kontekst, bestående av strengen som er identifikatoren; en valgfri identifikator for identifikatorsystemet; en valgfri identifikator for versjonen av identifikatorsystemet; en valgfri identifikator for etaten som administrerer identifikatorsystemet.
+| URI | adms:Identifier
+| Referanse | http://www.w3.org/TR/vocab-adms/#identifier
+| Status | Valgfri
+|===
+
+=== Kontaktpunkt [[klasse-kontaktpunkt]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Kind
+|Beskrivelse|Brukes til å representere en beskrivelse av et kontaktpunkt i henhold til vCard-spesifikasjonen. Her kan man for eksempel oppgi telefonnr og/eller epost. Merk at beskrivelsen må være en instans av en av fire typer: individ, organisasjon, lokasjon eller gruppe.
+|URI|vcard:Kind
+|Referanse|http://www.w3.org/TR/2014/NOTE-vcard-rdf-20140522/#d4e181[http://www.w3.org/TR/2014/NOTE-vcard-rdf-20140522/#d4e181]
+|Status|Valgfri
+|===
+
+=== Lokasjon [[klasse-lokasjon]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Location
+|Beskrivelse|Brukes til å representere en region eller et navngitt sted. Det kan representeres ved hjelp av et kontrollert vokabular eller med geografiske koordinater.
+|URI|dct:Location
+|Referanse|http://dublincore.org/documents/dcmi-terms/#terms-Location[http://dublincore.org/documents/dcmi-terms/#terms-Location]
+|Status|Valgfri
+|===
+
+=== Språksystem [[klasse-spraksystem]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Linguistic system
+|Beskrivelse|Brukes til å representere et system av tegn, symboler, lyder, gester, eller regler som brukes i kommunikasjon, for eksempel et språk.
+|URI|dct:LinguisticSystem
+|Referanse|http://dublincore.org/documents/dcmi-terms/#terms-LinguisticSystem[http://dublincore.org/documents/dcmi-terms/#terms-LinguisticSystem]
+|Status|Valgfri
+|===
+
+=== Tidsrom [[klasse-tidsrom]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Periode of time
+|Beskrivelse|Et tidsintervall som er navngitt eller definert av en start- og sluttdato.
+|URI|dct:PeriodeOfTime
+|Referanse|http://dublincore.org/documents/dcmi-terms/#terms-PeriodOfTime[http://dublincore.org/documents/dcmi-terms/#terms-PeriodOfTime]
+|Status|Valgfri
+|===
+
+=== Tema [[klasse-tema]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Theme
+|Beskrivelse|Brukes til å representere et tema/temaområde for en modell beskrevet i en katalog
+|URI|skos:Concept
+|Referanse|https://www.w3.org/TR/vocab-dcat/#Class:Concept[https://www.w3.org/TR/vocab-dcat/#Class:Concept]
+|Status|Valgfri
+|Kommentar|Norsk utvidelse i DCAT-AP-NO.
+|===
+
+== Obligatoriske klasser i modelldelen
+
+=== Informasjonsmodell [[klasse-informasjonsmodell]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Information model
+|Beskrivelse|Informasjonsmodell for en spesifikk informasjonsutveksling eller applikasjon.
+|URI|modelldcatno:InformationModel
+|Subklasse av|dcat:Resource
+|Referanse|
+|Kommentar|Synonym: løsningsmodell, meldingsmodell, tjenestemodell, datamodell, implementasjonsmodell, konstruksjonsmodell.
+Klasse som representerer modellen som skal utveksles.
+|Status|Obligatorisk
+|===
+
+== Anbefalte klasser i modelldelen
+
+=== Assosiasjon [[klasse-assosiasjon]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Assosiation
+|Beskrivelse|
+|URI|modelldcatno:Assosiation
+|Subklasse av|modelldcatno:Property
+|Referanse|
+|Status|Anbefalt
+|===
+
+=== Attributt
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Attribute
+|Beskrivelse|
+|URI|modelldcatno:Attribute
+|Subklasse av|modelldcatno:Property
+|Referanse|
+|Status|Anbefalt
+|===
+
+=== Datatype [[klasse-datatype]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Data type
+|Beskrivelse|
+|URI|modelldcatno:DataType
+|Subklasse av|modelldcatno:ModelElement
+|Referanse|
+|Status|Anbefalt
+|===
+
+=== Egenskap [[klasse-egenskap]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Property
+|Beskrivelse|En egenskap ved en objekttype eller datatype.
+|URI|modelldcatno:Property
+|Referanse|
+|Kommentar|Kun objekttyper, rotobjekttyper og datatyper kan ha egenskaper.
+|Status|Anbefalt
+|===
+
+=== Enkeltype [[klasse-enkeltype]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Simple type
+|Beskrivelse|Beskriver verdidomenet for et attributt.
+|URI|modelldcatno:SimpleType
+|Subklasse av|modelldcatno:ModelElement
+|Referanse|
+|Status|Anbefalt
+|===
+
+=== Kodeliste [[klasse-kodeliste]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Code list
+|Beskrivelse|Et sett av lovlige verdier for et attributt.
+|URI|modelldcatno:CodeList
+|Subklasse av|modelldcatno:ModelElement
+|Referanse|
+|Kommentar|Eksempler:
+Kodeliste for heldeltid
+1 - Heltid
+2 - Deltid
+Koder: 1, 2
+Kategorier: Heltid, Deltid
+Kodelisteelementer: 1 - Heltid, 2 -  Deltid
+|Status|Anbefalt
+|===
+
+=== Modellelement [[klasse-modellelement]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Model element
+|Beskrivelse|
+|URI|modelldcatno:ModelElement
+|Referanse|
+|Kommentar|Typer modellelementer er objekttype, rotobjekttype, kodeliste, enkeltype og datatype.
+|Status|Anbefalt
+|===
+
+=== Objekttype [[klasse-objekttype]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Object type
+|Beskrivelse|
+|URI|modelldcatno:ObjectType
+|Subklasse av|modelldcatno:ModelElement
+|Referanse|
+|Status|Anbefalt
+|===
+
+=== Rolle [[klasse-rolle]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Role
+|Beskrivelse|
+|URI|modelldcatno:Role
+|Subklasse av|modelldcatno:Property
+|Referanse|
+|Status|Anbefalt
+|===
+
+=== Rotobjekttype[[klasse-rotobjekttype]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Root object type
+|Beskrivelse|
+|URI|modelldcatno:RootObjectType
+|Subklasse av|modelldcatno:ModelElement
+|Referanse|
+|Status|Anbefalt
+|===
+
+== Valgfrie klasser i modelldelen
+
+=== Abstraksjon [[klasse-Abstraksjon]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Abstraction
+|Beskrivelse|
+|URI|modelldcatno:Abstraction
+|Subklasse av|modelldcatno:Property
+|Referanse|
+|Status|Valgfri
+|===
+
+=== Aggregering
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Collection
+|Beskrivelse|
+|URI|modelldcatno:Collection
+|Subklasse av|modelldcatno:Property
+|Referanse|
+|Status|Valgfri
+|===
+
+=== Begrep [[klasse-begrep]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Concept
+|Beskrivelse|Et begrep som er viktig for å forstå eller tolke modellen eller modellelementene.
+|URI|skos:Concept
+|Referanse|
+|Status|Valgfri
+|===
+
+=== Dokument [[klasse-dokument]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Document
+|Beskrivelse|Brukes til å representere en tekstlig ressurs som inneholder informasjon beregnet på mennesker. For eksempel en nettside om en modell.
+|URI|foaf:Document
+|Referanse|http://xmlns.com/foaf/spec/#term_Document[http://xmlns.com/foaf/spec/#term_Document]
+|Status|Valgfri
+|===
+
+=== Kode [[klasse-kode]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Code
+|Beskrivelse|Navngitt og verdisatt element i et verdidomene for en kodeliste.
+|URI|modelldcatno:Code
+|Referanse|
+|Status|Valgfri
+|===
+
+=== Komposisjon [[klasse-komposisjon]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Composition
+|Beskrivelse|
+|URI|modelldcatno:Composition
+|Subklasse av|modelldcatno:Property
+|Referanse|
+|Status|Valgfri
+|===
+
+=== Note [[klasse-note]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Note
+|Beskrivelse|
+|URI|modelldcatno:Note
+|Subklasse av|modelldcatno:Property
+|Referanse|
+|Status|Valgfri
+|===
+
+=== Spesialisering [[klasse-spesialisering]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Specialization
+|Beskrivelse|
+|URI|modelldcatno:Specialization
+|Subklasse av|modelldcatno:Property
+|Referanse|
+|Status|Valgfri
+|===
+
+=== Valg [[klasse-valg]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Choice
+|Beskrivelse|
+|URI|modelldcatno:Choice
+|Subklasse av|modelldcatno:Property
+|Referanse|
+|Status|Valgfri
+|===

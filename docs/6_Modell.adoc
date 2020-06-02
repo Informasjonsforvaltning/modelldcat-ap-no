@@ -1,0 +1,4 @@
+= Forenklet modell for ModellDCAT-AP-NO
+
+.Forenklet modell for ModellDCAT-AP-NO.
+image::images/ModellDCAT-ap-no.png[]
