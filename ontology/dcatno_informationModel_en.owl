@@ -113,7 +113,7 @@ dct:subject rdf:type owl:ObjectProperty ;
                                       )
                         ] ;
             rdfs:range skos:Concept ;
-            rdfs:label "omhandler"@nb ,
+            rdfs:label "begrep"@nb ,
                        "subject"@en .
 
 
@@ -233,7 +233,7 @@ modelldcatno:hasDataType rdf:type owl:ObjectProperty ;
                                     "has data type"@en .
 
 
-###  https://data.norge.no/vocabulary/modelldcatno#hasGeneralConsept
+###  https://data.norge.no/vocabulary/modelldcatno#hasGeneralConcept
 modelldcatno:hasGeneralConcept rdf:type owl:ObjectProperty ;
                                rdfs:subPropertyOf modelldcatno:hasType ;
                                rdfs:domain modelldcatno:Specialization ;
@@ -591,6 +591,7 @@ modelldcatno:modelElementBelongsToModule rdf:type owl:DatatypeProperty ,
 ###  https://data.norge.no/vocabulary/modelldcatno#sequenceNumber
 modelldcatno:sequenceNumber rdf:type owl:DatatypeProperty ;
                             rdfs:domain modelldcatno:Property ;
+                            rdfs:range xsd:nonNegativeInteger ;
                             rdfs:comment "Der man har en modell der elementenes orden er vesentlig, f. eks. slik det jo ofte er i XML"@nb ;
                             rdfs:label "Sekvensnummer"@nb ,
                                        "sequence number"@en .
@@ -602,8 +603,8 @@ modelldcatno:typeDefinitionReference rdf:type owl:DatatypeProperty ,
                                      rdfs:domain modelldcatno:SimpleType ;
                                      rdfs:range xsd:anyURI ;
                                      rdfs:comment "External definition of the type in question, before adding any restrictions." ;
-                                     rdfs:label "ekstern typedefinisjonsreferanse"@nb ,
-                                                "type definition reference"@en .
+                                     rdfs:label "type definition"@en ,
+                                                "typedefinisjon"@nb .
 
 
 #################################################################
@@ -1045,8 +1046,8 @@ modelldcatno:ModelElement rdf:type owl:Class ;
 ###  https://data.norge.no/vocabulary/modelldcatno#Note
 modelldcatno:Note rdf:type owl:Class ;
                   rdfs:subClassOf modelldcatno:Property ;
-                  rdfs:label "Notat"@nb ,
-                             "Note"@en .
+                  rdfs:label "Note"@en ,
+                             "Note"@nb .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#ObjectType
