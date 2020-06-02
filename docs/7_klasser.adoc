@@ -41,7 +41,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 
 [cols="30s,70"]
 |===
-|Engelsk navn|Catalog
+|Engelsk navn|Catalogue
 |Beskrivelse|Brukes til å representere en katalog eller repository som inneholder beskrivelsene av modellene.
 |URI|dcat:Catalog
 |Referanse|http://http://xmlns.com/foaf/spec/#term_Agent[http://xmlns.com/foaf/spec/#term_Agent]
