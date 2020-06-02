@@ -47,6 +47,6 @@ include::10_EgenskaperLisensdok.adoc[]
 
 include::11_EgenskaperLokasjon.adoc[]
 
-include::12_EgenskaperSamlingKomposisjonAttributt.adoc
+include::12_EgenskaperSamlingKomposisjonAttributt.adoc[]
 
-include::13_EgenskaperEgenskap.adoc
+include::13_EgenskaperEgenskap.adoc[]
