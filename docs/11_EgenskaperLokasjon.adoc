@@ -15,7 +15,7 @@ Klassen _Lokasjon_ er valgfri.
 |Status| Anbefalt
 |===
 
-=== Lokasjon: geografisk midtpunkt [[lokasjon-geografisk-midtpunkt]]
+===== Lokasjon: geografisk midtpunkt [[lokasjon-geografisk-midtpunkt]]
 
 [cols="30s,70d"]
 |===
@@ -27,9 +27,9 @@ Klassen _Lokasjon_ er valgfri.
 |Status| Anbefalt
 |===
 
-== Valgfrie egenskaper for klassen _Lokasjon_
+==== Valgfrie egenskaper for klassen _Lokasjon_
 
-=== Lokasjon: geometri [[lokasjon-geometri]]
+===== Lokasjon: geometri [[lokasjon-geometri]]
 
 [cols="30s,70d"]
 |===
