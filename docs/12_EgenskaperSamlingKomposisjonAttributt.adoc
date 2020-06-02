@@ -1,0 +1,91 @@
+== Modelldel
+
+=== Samling [[samling]]
+
+Klassen Samling er valgfri
+
+==== Obligatoriske egenskaper for klassen Samling
+
+===== Samling: har medlem [[samling-har-medlem]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| has member
+|URI| modelldcatno:hasMember
+|Range| modelldcatno:ModelElement
+|Beskrivelse| Refererer til modellelementet som inngår som et medlem i en samling.
+|Multiplisitet| 1..n
+|Status| Obligatorisk
+|===
+
+=== Komposisjon [[komposisjon]]
+
+Klassen Komposisjon er valgfri
+
+==== Obligatoriske egenskaper for klassen Komposisjon
+
+===== Komposisjon: inneholder [[komposisjon-inneholder]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| contains
+|URI| modelldcatno:contains
+|Range| modelldcatno:ModelElement
+|Beskrivelse| Refererer til modellelementet som inngår som et medlem i en komposisjon.
+|Multiplisitet| 1..n
+|Status| Obligatorisk
+|===
+
+=== Attributt [[attributt]]
+
+Klassen Attributt er anbefalt
+
+==== Anbefalte egenskaper for klassen Attributt
+
+===== Attributt: har objekttype
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| has object type
+|URI| modelldcatno:hasObjectType
+|Range| modelldcatno:ObjectType
+|Beskrivelse| Angir at attributtet har en objekttype som type.
+|Multiplisitet| 0..1
+|Status| Anbefalt
+|===
+
+===== Attributt: har enkeltype
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| has simple type
+|URI| modelldcatno: hasSimpletype
+|Range| modelldcatno: SimpleType
+|Beskrivelse| Angir at attributtet har en enkeltype som type.
+|Multiplisitet| 0..1
+|Status| Anbefalt
+|===
+
+===== Attributt: har datatype
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| has data type
+|URI| modelldcatno: hasDataType
+|Range| modelldcatno:DataType
+|Beskrivelse| Angir at attributtet har en datatype som type.
+|Multiplisitet| 0..1
+|Status| Anbefalt
+|===
+
+===== Attributt: har verdier fra
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| has value from
+|URI|modelldcatno: hasValueFrom
+|Range| Code list
+|Beskrivelse| Angir at attributtet har en kodeliste som type.
+|Multiplisitet| 0..1
+|Status| Anbefalt
+|===
