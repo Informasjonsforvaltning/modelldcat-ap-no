@@ -23,8 +23,8 @@ Klassen Enkeltype er valgfri
 [cols="30s,70d"]
 |===
 |Engelsk navn| length
-|URI| xsd:nonNegativeInteger
-|Range| xsd:anyURI
+|URI| xsd:maxLength
+|Range| xsd:nonNegativeInteger
 |Beskrivelse|Eksakt lengde på en streng.
 |Multiplisitet| 0..1
 |Status| Valgfri
