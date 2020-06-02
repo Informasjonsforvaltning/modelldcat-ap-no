@@ -1,0 +1,43 @@
+= Spesifikasjon for beskrivelse av informasjonsmodeller (ModellDCAT-AP-NO)
+Høringsutkast til Versjon 1.0
+:doctype: book
+:docinfo:
+:icons: font
+:toc: left
+:toc-title: Innholdsfortegnelse
+:toclevels: 4
+:sectlinks:
+:table-stripes: even
+:leveloffset: +1
+
+:title-logo-image: image:images/digitaliseringsdirektoratet.png[pdfwidth=30vw]
+
+image::images/digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
+
+Status: Høringsutkast +
+Publisert: 2020-06-02 +
+
+Dette er et høringsutkast til versjon 1.0 av "Spesifikasjon for beskrivelse av informasjonsmodeller (ModellDCAT-AP-NO)". Spesifikasjonen skal sikre at beskrivelser av informasjonsmodeller utføres på en felles, strukturert måte og i en maskinlesbar form. Spesifikasjonen stiller krav til hva som _skal_, _bør_ og _kan_ være med i beskrivelsene, med spesifikasjon av dataformat.
+
+NOTE: *Innmelding av feil og mangler:* +
+Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på https://github.com/Informasjonsforvaltning/modelldcat-ap-no/issues[Github Issues]. Dersom man ikke allerede har bruker på Github kan man opprette bruker gratis.
+
+include::shared/download.adoc[]
+
+include::locale/attributes.adoc[]
+
+include::1_Formaal.adoc[]
+
+include::2_Omfang.adoc[]
+
+include::3_Forvaltningsregime.adoc[]
+
+include::4_Om kravene.adoc[]
+
+include::5_URIer_i_bruk.adoc[]
+
+include::6_Modell.adoc[]
+
+include::7_klasser.adoc[]
+
+include::8_EgenskaperPrKlasse_Aktor.adoc[]
