@@ -44,3 +44,5 @@ include::8_EgenskaperPrKlasse_Aktor.adoc[]
 include::9_EgenskaperModellkatalog.adoc[]
 
 include::10_EgenskaperLisensdok.adoc[]
+
+include::11_EgenskaperLokasjon.adoc[]
