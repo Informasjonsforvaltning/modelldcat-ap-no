@@ -40,3 +40,7 @@ include::6_Modell.adoc[]
 include::7_klasser.adoc[]
 
 include::8_EgenskaperPrKlasse_Aktor.adoc[]
+
+include::9_EgenskaperModellkatalog.adoc[]
+
+include::10_EgenskaperLisensdok.adoc[]
