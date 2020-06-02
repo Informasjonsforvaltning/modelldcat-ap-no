@@ -2,3 +2,5 @@
 
 .Forenklet modell for ModellDCAT-AP-NO.
 image::images/ModellDCAT-ap-no.png[]
+
+link:images/ModellDCAT-ap-no.png[Last ned diagram som png]
