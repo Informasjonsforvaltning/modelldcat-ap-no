@@ -9,7 +9,7 @@
 |dct|http://purl.org/dc/terms/|DCMI Metadata Terms
 |foaf|http://xmlns.com/foaf/0.1/|FOAF Vocabulary
 |locn|http://www.w3.org/ns/locn#|ISA Programme Core Location Vocabulary
-|modelldcatno|https://data.norge.no/vocabulary/modelldcatno|Spesifikasjon for beskrivelse av informasjonsmodeller
+|modelldcatno|https://data.norge.no/vocabulary/modelldcatno#|Spesifikasjon for beskrivelse av informasjonsmodeller
 |owl|http://www.w3.org/2002/07/owl#|OWL Web Ontology Language
 |rdfs|http://www.w3.org/2000/01/rdf-schema#|RDF Vocabulary Description Language 1.0: RDF Schema
 |schema|http://schema.org/|schema.org

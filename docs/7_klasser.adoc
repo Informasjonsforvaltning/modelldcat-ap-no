@@ -1,8 +1,8 @@
-== Klasser
+= Klasser
 
-=== Obligatoriske klasser i katalogdelen
+== Obligatoriske klasser i katalogdelen
 
-==== Aktør [[klasse-aktor]]
+=== Aktør [[klasse-aktor]]
 
 Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsregisteret (Brønnøysundregistrene) har på enheten/virksomheten dersom den finnes i registeret.
 
@@ -15,7 +15,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Status|Obligatorisk
 |===
 
-==== Katalogisert ressurs [[klasse-katalogisert-ressurs]]
+=== Katalogisert ressurs [[klasse-katalogisert-ressurs]]
 
 [cols="30s,70"]
 |===
@@ -26,18 +26,18 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Status|Obligatorisk
 |===
 
-==== Begrep [[klasse-begrep]]
+=== Begrep [[klasse-begrep]]
 
 [cols="30s,70"]
 |===
 |Engelsk navn|Concept
-|Beskrivelse|Brukes til å representere en mental forestilling om et konkret eller abstrakt fenomen i den virkelige verden.
+|Beskrivelse|Brukes til å representere begrep som er viktig for å forstå eller tolke en informasjonsmodell eller et modellelement.
 |URI|skos:concept
 |Referanse|http://https://www.w3.org/2009/08/skos-reference/skos.html#Concept[https://www.w3.org/2009/08/skos-reference/skos.html#Concept]
 |Status|Obligatorisk
 |===
 
-==== Modellkatalog [[klasse-modellkatalog]]
+=== Modellkatalog [[klasse-modellkatalog]]
 
 [cols="30s,70"]
 |===
@@ -48,7 +48,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Status|Obligatorisk
 |===
 
-==== Literal [[klasse-literal]]
+=== Literal [[klasse-literal]]
 
 [cols="30s,70"]
 |===
@@ -59,7 +59,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Status|Obligatorisk
 |===
 
-==== Tematisk skjema [[klasse-tematisk-skjema]]
+=== Tematisk skjema [[klasse-tematisk-skjema]]
 
 [cols="30s,70"]
 |===
@@ -71,9 +71,9 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Kommentar|Norsk utvidelse i DCAT-AP-NO. Endret fra anbefalt til obligatorisk (allerede i DCAT-AP-NO v.1.1).
 |===
 
-=== Anbefalte klasser i katalogdelen
+== Anbefalte klasser i katalogdelen
 
-==== Lisensdokument [[klasse-lisensdokument]]
+=== Lisensdokument [[klasse-lisensdokument]]
 
 [cols="30s,70"]
 |===
@@ -84,9 +84,9 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Status|Anbefalt
 |===
 
-=== Valgfrie klasser i katalogdelen
+== Valgfrie klasser i katalogdelen
 
-==== Identifikator [[klasse-identifikator]]
+=== Identifikator [[klasse-identifikator]]
 
 [cols="30s,70d"]
 |===
@@ -97,7 +97,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 | Status | Valgfri
 |===
 
-==== Kontaktpunkt [[klasse-kontaktpunkt]]
+=== Kontaktpunkt [[klasse-kontaktpunkt]]
 
 [cols="30s,70"]
 |===
@@ -108,7 +108,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Status|Valgfri
 |===
 
-==== Lokasjon [[klasse-lokasjon]]
+=== Lokasjon [[klasse-lokasjon]]
 
 [cols="30s,70"]
 |===
@@ -119,7 +119,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Status|Valgfri
 |===
 
-==== Språksystem [[klasse-spraksystem]]
+=== Språksystem [[klasse-spraksystem]]
 
 [cols="30s,70"]
 |===
@@ -130,7 +130,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Status|Valgfri
 |===
 
-==== Tidsrom [[klasse-tidsrom]]
+=== Tidsrom [[klasse-tidsrom]]
 
 [cols="30s,70"]
 |===
@@ -141,7 +141,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Status|Valgfri
 |===
 
-==== Tema [[klasse-tema]]
+=== Tema [[klasse-tema]]
 
 [cols="30s,70"]
 |===
@@ -153,74 +153,73 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Kommentar|Norsk utvidelse i DCAT-AP-NO.
 |===
 
-=== Obligatoriske klasser i modelldelen
+== Obligatoriske klasser i modelldelen
 
-==== Informasjonsmodell [[klasse-informasjonsmodell]]
+=== Informasjonsmodell [[klasse-informasjonsmodell]]
 
 [cols="30s,70"]
 |===
 |Engelsk navn|Information model
 |Beskrivelse|Informasjonsmodell for en spesifikk informasjonsutveksling eller applikasjon.
-|Subklasse av|dcat:Resource
 |URI|modelldcatno:InformationModel
+|Subklasse av|dcat:Resource
 |Referanse|
 |Kommentar|Synonym: løsningsmodell, meldingsmodell, tjenestemodell, datamodell, implementasjonsmodell, konstruksjonsmodell.
 Klasse som representerer modellen som skal utveksles.
 |Status|Obligatorisk
 |===
 
-=== Anbefalte klasser i modelldelen
+== Anbefalte klasser i modelldelen
 
-==== Assosiasjon [[klasse-assosiasjon]]
+=== Assosiasjon [[klasse-assosiasjon]]
 
 [cols="30s,70"]
 |===
 |Engelsk navn|Assosiation
 |Beskrivelse|
-|URI|Modelldcatno:Assosiation
+|URI|modelldcatno:Assosiation
 |Subklasse av|modelldcatno:Property
 |Referanse|
 |Status|Anbefalt
 |===
 
-==== Attributt
+=== Attributt
 
 [cols="30s,70"]
 |===
 |Engelsk navn|Attribute
 |Beskrivelse|
-|URI|Modelldcatno:Attribute
+|URI|modelldcatno:Attribute
 |Subklasse av|modelldcatno:Property
 |Referanse|
 |Status|Anbefalt
 |===
 
-==== Datatype [[klasse-datatype]]
+=== Datatype [[klasse-datatype]]
 
 [cols="30s,70"]
 |===
 |Engelsk navn|Data type
 |Beskrivelse|
-|URI|Modelldcatno:DataType
+|URI|modelldcatno:DataType
 |Subklasse av|modelldcatno:ModelElement
 |Referanse|
 |Status|Anbefalt
 |===
 
-==== Egenskap [[klasse-egenskap]]
+=== Egenskap [[klasse-egenskap]]
 
 [cols="30s,70"]
 |===
 |Engelsk navn|Property
 |Beskrivelse|En egenskap ved en objekttype eller datatype.
 |URI|modelldcatno:Property
-|Subklasse av|modelldcatno:Property
 |Referanse|
 |Kommentar|Kun objekttyper, rotobjekttyper og datatyper kan ha egenskaper.
 |Status|Anbefalt
 |===
 
-==== Enkeltype [[klasse-enkeltype]]
+=== Enkeltype [[klasse-enkeltype]]
 
 [cols="30s,70"]
 |===
@@ -232,7 +231,7 @@ Klasse som representerer modellen som skal utveksles.
 |Status|Anbefalt
 |===
 
-==== Kodeliste [[klasse-kodeliste]]
+=== Kodeliste [[klasse-kodeliste]]
 
 [cols="30s,70"]
 |===
@@ -251,7 +250,7 @@ Kodelisteelementer: 1 - Heltid, 2 -  Deltid
 |Status|Anbefalt
 |===
 
-==== Modellelement [[klasse-modellelement]]
+=== Modellelement [[klasse-modellelement]]
 
 [cols="30s,70"]
 |===
@@ -263,7 +262,7 @@ Kodelisteelementer: 1 - Heltid, 2 -  Deltid
 |Status|Anbefalt
 |===
 
-==== Objekttype [[klasse-objekttype]]
+=== Objekttype [[klasse-objekttype]]
 
 [cols="30s,70"]
 |===
@@ -275,7 +274,7 @@ Kodelisteelementer: 1 - Heltid, 2 -  Deltid
 |Status|Anbefalt
 |===
 
-==== Rolle [[klasse-rolle]]
+=== Rolle [[klasse-rolle]]
 
 [cols="30s,70"]
 |===
@@ -287,7 +286,7 @@ Kodelisteelementer: 1 - Heltid, 2 -  Deltid
 |Status|Anbefalt
 |===
 
-==== Rotobjekttype[[klasse-rotobjekttype]]
+=== Rotobjekttype[[klasse-rotobjekttype]]
 
 [cols="30s,70"]
 |===
@@ -299,9 +298,9 @@ Kodelisteelementer: 1 - Heltid, 2 -  Deltid
 |Status|Anbefalt
 |===
 
-=== Valgfrie klasser i modelldelen
+== Valgfrie klasser i modelldelen
 
-==== Abstraksjon [[klasse-Abstraksjon]]
+=== Abstraksjon [[klasse-Abstraksjon]]
 
 [cols="30s,70"]
 |===
@@ -313,7 +312,7 @@ Kodelisteelementer: 1 - Heltid, 2 -  Deltid
 |Status|Valgfri
 |===
 
-==== Aggregering
+=== Aggregering
 
 [cols="30s,70"]
 |===
@@ -325,19 +324,18 @@ Kodelisteelementer: 1 - Heltid, 2 -  Deltid
 |Status|Valgfri
 |===
 
-==== Begrep [[klasse-begrep]]
+=== Begrep [[klasse-begrep]]
 
 [cols="30s,70"]
 |===
 |Engelsk navn|Concept
 |Beskrivelse|Et begrep som er viktig for å forstå eller tolke modellen eller modellelementene.
 |URI|skos:Concept
-|Subklasse av|m
 |Referanse|
 |Status|Valgfri
 |===
 
-==== Dokument [[klasse-dokument]]
+=== Dokument [[klasse-dokument]]
 
 [cols="30s,70"]
 |===
@@ -348,7 +346,7 @@ Kodelisteelementer: 1 - Heltid, 2 -  Deltid
 |Status|Valgfri
 |===
 
-==== Kode [[klasse-kode]]
+=== Kode [[klasse-kode]]
 
 [cols="30s,70"]
 |===
@@ -359,7 +357,7 @@ Kodelisteelementer: 1 - Heltid, 2 -  Deltid
 |Status|Valgfri
 |===
 
-==== Komposisjon [[klasse-komposisjon]]
+=== Komposisjon [[klasse-komposisjon]]
 
 [cols="30s,70"]
 |===
@@ -371,7 +369,7 @@ Kodelisteelementer: 1 - Heltid, 2 -  Deltid
 |Status|Valgfri
 |===
 
-==== Notat [[klasse-notat]]
+=== Note [[klasse-note]]
 
 [cols="30s,70"]
 |===
@@ -383,7 +381,7 @@ Kodelisteelementer: 1 - Heltid, 2 -  Deltid
 |Status|Valgfri
 |===
 
-==== Spesialisering [[klasse-spesialisering]]
+=== Spesialisering [[klasse-spesialisering]]
 
 [cols="30s,70"]
 |===
@@ -395,7 +393,7 @@ Kodelisteelementer: 1 - Heltid, 2 -  Deltid
 |Status|Valgfri
 |===
 
-==== Valg [[klasse-valg]]
+=== Valg [[klasse-valg]]
 
 [cols="30s,70"]
 |===
