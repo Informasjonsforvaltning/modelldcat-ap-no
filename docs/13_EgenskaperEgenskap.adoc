@@ -23,8 +23,8 @@ Klassen Egenskap er anbefalt
 |Engelsk navn| title
 |URI| dct:title
 |Range| rdfs:Literal
-|Beskrivelse| Navn på en egenskap.
-|Multiplisitet| 1..1
+|Beskrivelse| Navn på en egenskap. Bør gjentas for parallelle språkversjoner.
+|Multiplisitet| 1..n
 |Status| Obligatorisk
 |===
 
@@ -49,7 +49,7 @@ Klassen Egenskap er anbefalt
 |Engelsk navn| subject
 |URI| dct:subject
 |Range| skos:Concept
-|Beskrivelse| Referanse til sentralt begrep som er viktige for å forstå og tolke egenskapen. Representeres som URI-er.
+|Beskrivelse| Referanse til sentralt begrep som er viktig for å forstå og tolke egenskapen. Representeres som URI-er.
 |Multiplisitet| 0..1
 |Status| Anbefalt
 |===
@@ -87,8 +87,8 @@ Klassen Egenskap er anbefalt
 |Engelsk navn| description
 |URI|dct:description
 |Range| rdfs:Literal
-|Beskrivelse| Tekstlig beskrivelse av egenskapen.
-|Multiplisitet| 0..1
+|Beskrivelse| Tekstlig beskrivelse av egenskapen. Bør gjentas for parallelle språkversjoner.
+|Multiplisitet| 0..n
 |Status| Valgfri
 |===
 
@@ -98,7 +98,7 @@ Klassen Egenskap er anbefalt
 |===
 |Engelsk navn| sequence number
 |URI|modelldcatno:sequenceNumber
-|Range|
+|Range|xsd:positiveInteger
 |Beskrivelse| En numerisk, sekvensielt stigende verdi som kan brukes til å identifisere og holde orden på rekkefølgen på egenskapene til et modellelement. Der man har en modell der elementenes orden er vesentlig. F.eks. slik det ofte er i XML.
 |Multiplisitet| 0..1
 |Status| Valgfri
