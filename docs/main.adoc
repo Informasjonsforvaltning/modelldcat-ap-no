@@ -64,3 +64,5 @@ include::18_EgenskaperModellelement.adoc[]
 include::19_EgenskaperRolle.adoc[]
 
 include::20_EgenskaperSpesialisering.adoc[]
+
+include::21_EgenskaperValg.adoc[]
