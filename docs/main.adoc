@@ -5,7 +5,7 @@ Høringsutkast til Versjon 1.0
 :icons: font
 :toc: left
 :toc-title: Innholdsfortegnelse
-:toclevels: 4
+:toclevels: 5
 :sectlinks:
 :table-stripes: even
 :leveloffset: +1
