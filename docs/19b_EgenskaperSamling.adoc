@@ -1,0 +1,17 @@
+=== Samling [[samling]]
+
+Klassen Samling er valgfri
+
+==== Obligatoriske egenskaper for klassen Samling
+
+===== Samling: har medlem [[samling-har-medlem]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| has member
+|URI| modelldcatno:hasMember
+|Range| modelldcatno:ModelElement
+|Beskrivelse| Refererer til modellelementet som inngår som et medlem i en samling.
+|Multiplisitet| 1..n
+|Status| Obligatorisk
+|===
