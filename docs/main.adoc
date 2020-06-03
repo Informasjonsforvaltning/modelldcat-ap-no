@@ -50,3 +50,7 @@ include::11_EgenskaperLokasjon.adoc[]
 include::12_EgenskaperSamlingKomposisjonAttributt.adoc[]
 
 include::13_EgenskaperEgenskap.adoc[]
+
+include::14_EgenskaperEnkeltype.adoc[]
+
+include::15_EgenskaperInformasjonsmodell.adoc[]
