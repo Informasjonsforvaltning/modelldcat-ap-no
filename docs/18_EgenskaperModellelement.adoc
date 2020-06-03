@@ -5,7 +5,7 @@ Klassen _Modellelement_ er anbefalt.
 ==== Obligatoriske egenskaper for klassen _Modellelement_
 
 
-=====  Modellelement: identifikator [[modellelement- identifikator]]
+=====  Modellelement: identifikator [[modellelement-identifikator]]
 
 [cols="30s,70d"]
 |===
