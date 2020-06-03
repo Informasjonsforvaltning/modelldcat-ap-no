@@ -2,9 +2,9 @@
 
 === Attributt [[attributt]]
 
-Klassen Attributt er anbefalt
+Klassen _Attributt_ er anbefalt
 
-==== Anbefalte egenskaper for klassen Attributt
+==== Anbefalte egenskaper for klassen _Attributt_
 
 ===== Attributt: har datatype
 
