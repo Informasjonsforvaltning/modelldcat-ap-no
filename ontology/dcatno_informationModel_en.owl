@@ -238,7 +238,7 @@ modelldcatno:hasGeneralConcept rdf:type owl:ObjectProperty ;
                                rdfs:domain modelldcatno:Specialization ;
                                rdfs:range modelldcatno:ModelElement ;
                                rdfs:label "har generelt konsept"@nb ,
-                                          "has general consept"@en .
+                                          "has general concept"@en .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#hasMember
@@ -641,12 +641,13 @@ dct:PeriodOfTime rdf:type owl:Class ;
 ###  http://www.w3.org/2004/02/skos/core#Concept
 skos:Concept rdf:type owl:Class ;
              rdfs:label "Begrep"@nb ,
-                        "Consept"@en .
+                        "Concept"@en .
 
 
 ###  http://www.w3.org/2004/02/skos/core#ConceptScheme
 skos:ConceptScheme rdf:type owl:Class ;
-                   rdfs:label "Consept Scheme"@en .
+                   rdfs:label "Concept Scheme"@en ,
+                              "Tematisk skjema"@nb .
 
 
 ###  http://www.w3.org/2006/vcard/ns#Kind
