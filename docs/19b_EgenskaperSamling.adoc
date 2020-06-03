@@ -1,8 +1,8 @@
 === Samling [[samling]]
 
-Klassen Samling er valgfri
+Klassen _Samling_ er valgfri
 
-==== Obligatoriske egenskaper for klassen Samling
+==== Obligatoriske egenskaper for klassen _Samling_
 
 ===== Samling: har medlem [[samling-har-medlem]]
 
