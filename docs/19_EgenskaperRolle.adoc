@@ -1,0 +1,17 @@
+=== Rolle
+
+Klassen _Rolle_ er anbefalt.
+
+==== Obligatoriske  egenskaper for klassen _Rolle_
+
+
+===== Rolle: har objekttype
+
+[cols="30s,70d"]
+|===
+|URI|modelldcatno:hasObjectType
+|Range|modelldcatno:ObjectType
+|Beskrivelse|Referanse til objekttypen som er knyttet til en rolle.
+|Multiplisitet|1..1
+|Status|Obligatorisk
+|===
