@@ -200,7 +200,7 @@ Klasse som representerer modellen som skal utveksles.
 [cols="30s,70"]
 |===
 |Engelsk navn|Data type
-|Beskrivelse|
+|Beskrivelse|Brukes for å beskrive av en sammensatt verdistruktur uten identitet.
 |URI|modelldcatno:DataType
 |Subklasse av|modelldcatno:ModelElement
 |Referanse|
@@ -279,7 +279,7 @@ Kodelisteelementer: 1 - Heltid, 2 -  Deltid
 [cols="30s,70"]
 |===
 |Engelsk navn|Role
-|Beskrivelse|
+|Beskrivelse|Brukes til å beskrive rolle objekter har overfor hverandre i en assosiasjon.
 |URI|modelldcatno:Role
 |Subklasse av|modelldcatno:Property
 |Referanse|
@@ -291,7 +291,7 @@ Kodelisteelementer: 1 - Heltid, 2 -  Deltid
 [cols="30s,70"]
 |===
 |Engelsk navn|Root object type
-|Beskrivelse|
+|Beskrivelse|Brukes til å beskrive den overordnede objekttypen som omslutter alle de andre modellelementene i en modell.
 |URI|modelldcatno:RootObjectType
 |Subklasse av|modelldcatno:ModelElement
 |Referanse|
@@ -305,22 +305,23 @@ Kodelisteelementer: 1 - Heltid, 2 -  Deltid
 [cols="30s,70"]
 |===
 |Engelsk navn|Abstraction
-|Beskrivelse|
+|Beskrivelse|Brukes til å beskrive at et modellelement er en abstraksjon av et annet.
 |URI|modelldcatno:Abstraction
 |Subklasse av|modelldcatno:Property
 |Referanse|
 |Status|Valgfri
 |===
 
-=== Aggregering
+=== Samling [[klasse-samling]]
 
 [cols="30s,70"]
 |===
 |Engelsk navn|Collection
-|Beskrivelse|
+|Beskrivelse|Brukes til å beskrive en relasjon mellom to modellelementer, hvor det ene modellelement inngår som en del av et annet som representerer helheten.
 |URI|modelldcatno:Collection
 |Subklasse av|modelldcatno:Property
 |Referanse|
+|Kommentar||I UML omtales dette som aggregering.
 |Status|Valgfri
 |===
 
@@ -374,7 +375,7 @@ Kodelisteelementer: 1 - Heltid, 2 -  Deltid
 [cols="30s,70"]
 |===
 |Engelsk navn|Note
-|Beskrivelse|
+|Beskrivelse|Brukes til å beskrive en merknad, forklaring eller tilleggsopplysning til ett eller flere modellelementer.
 |URI|modelldcatno:Note
 |Subklasse av|modelldcatno:Property
 |Referanse|
@@ -386,7 +387,7 @@ Kodelisteelementer: 1 - Heltid, 2 -  Deltid
 [cols="30s,70"]
 |===
 |Engelsk navn|Specialization
-|Beskrivelse|
+|Beskrivelse|Brukes til å beskrive et arveforhold mellom modellelementer, hvor en subtype er en spesialisering av en mer generell type (supertype).
 |URI|modelldcatno:Specialization
 |Subklasse av|modelldcatno:Property
 |Referanse|
@@ -398,7 +399,7 @@ Kodelisteelementer: 1 - Heltid, 2 -  Deltid
 [cols="30s,70"]
 |===
 |Engelsk navn|Choice
-|Beskrivelse|
+|Beskrivelse|Egenskap som beskriver at kun ett element av et sett av valgbare elementer kan inngå i det bærende modellelement.
 |URI|modelldcatno:Choice
 |Subklasse av|modelldcatno:Property
 |Referanse|
