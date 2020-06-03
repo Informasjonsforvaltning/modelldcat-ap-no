@@ -31,18 +31,6 @@ Klassen _Modellelement_ er anbefalt.
 
 ====  Anbefalte egenskaper for klassen _Modellelement_
 
-
-===== Modellelement: har egenskap [[modellelement-har-egenskap]]
-
-[cols="30s,70d"]
-|===
-|URI|modelldcatno:hasProperty
-|Range|modelldcatno:Property
-|Beskrivelse|Egenskapen til et modellelement.
-|Multiplisitet|0..n
-|Status|Anbefalt
-|===
-
 ===== Modellelement: begrep [[modellelement-begrep]]
 
 [cols="30s,70d"]
@@ -55,20 +43,19 @@ Klassen _Modellelement_ er anbefalt.
 |===
 
 
-==== Valgfrie egenskaper for klassen _Modellelement_
-
-
-=====  Modellelement: tilhørerModul [[modellelement-tilhørerModul]]
+===== Modellelement: har egenskap [[modellelement-har-egenskap]]
 
 [cols="30s,70d"]
 |===
-|URI|modelldcatno:modelElementBelongsToModule
-|Range|rdfs:Literal or xsd:anyURI
-|Beskrivelse|Beskriver hvilken modellmodul et modellelement inngår i.
-|Multiplisitet|0..1
-|Status|Valgfri
-|Kommentar|Modeller kan bestå av moduler, som beslektede modellelementer er gruppert under.
+|URI|modelldcatno:hasProperty
+|Range|modelldcatno:Property
+|Beskrivelse|Egenskapen til et modellelement.
+|Multiplisitet|0..n
+|Status|Anbefalt
 |===
+
+
+==== Valgfrie egenskaper for klassen _Modellelement_
 
 
 ===== Modellelement: beskrivelse [[modellelement-beskrivelse]]
@@ -80,4 +67,16 @@ Klassen _Modellelement_ er anbefalt.
 |Beskrivelse|Fritekstbeskrivelse av modellelementet.
 |Multiplisitet|0..1
 |Status|Valgfri
+|===
+
+=====  Modellelement: tilhørerModul [[modellelement-tilhørerModul]]
+
+[cols="30s,70d"]
+|===
+|URI|modelldcatno:modelElementBelongsToModule
+|Range|rdfs:Literal or xsd:anyURI
+|Beskrivelse|Beskriver hvilken modellmodul et modellelement inngår i.
+|Multiplisitet|0..1
+|Status|Valgfri
+|Kommentar|Modeller kan bestå av moduler, som beslektede modellelementer er gruppert under.
 |===

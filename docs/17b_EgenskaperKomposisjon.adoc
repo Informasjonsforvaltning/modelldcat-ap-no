@@ -1,0 +1,17 @@
+=== Komposisjon [[komposisjon]]
+
+Klassen Komposisjon er valgfri
+
+==== Obligatoriske egenskaper for klassen _Komposisjon_
+
+===== Komposisjon: inneholder [[komposisjon-inneholder]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| contains
+|URI| modelldcatno:contains
+|Range| modelldcatno:ModelElement
+|Beskrivelse| Refererer til modellelementet som inngår som et medlem i en komposisjon.
+|Multiplisitet| 1..n
+|Status| Obligatorisk
+|===

@@ -4,17 +4,6 @@ Klassen _Lokasjon_ er valgfri.
 
 ==== Anbefalte egenskaper for klassen _Lokasjon_
 
-===== Lokasjon: område [[lokasjon-område]]
-[cols="30s,70d"]
-|===
-|Engelsk navn| bounding box
-|URI| dcat:bbox
-|Range| rdfs:Literal
-|Beskrivelse| Refererer til et avgrenset område (bounding box) for en ressurs.
-|Multiplisitet| 0..1
-|Status| Anbefalt
-|===
-
 ===== Lokasjon: geografisk midtpunkt [[lokasjon-geografisk-midtpunkt]]
 
 [cols="30s,70d"]
@@ -23,6 +12,17 @@ Klassen _Lokasjon_ er valgfri.
 |URI| dcat:centroid
 |Range| rdfs:Literal
 |Beskrivelse| Refererer til et geografisk midtpunkt (centroid) for en ressurs.
+|Multiplisitet| 0..1
+|Status| Anbefalt
+|===
+
+===== Lokasjon: område [[lokasjon-område]]
+[cols="30s,70d"]
+|===
+|Engelsk navn| bounding box
+|URI| dcat:bbox
+|Range| rdfs:Literal
+|Beskrivelse| Refererer til et avgrenset område (bounding box) for en ressurs.
 |Multiplisitet| 0..1
 |Status| Anbefalt
 |===

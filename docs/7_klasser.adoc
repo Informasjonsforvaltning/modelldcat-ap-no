@@ -15,17 +15,6 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Status|Obligatorisk
 |===
 
-=== Katalogisert ressurs [[klasse-katalogisert-ressurs]]
-
-[cols="30s,70"]
-|===
-|Engelsk navn|Catalogued Resource
-|Beskrivelse|Brukes til å representere en ressurs som er beskrevet i en katalog.
-|URI|dcat:Resource
-|Referanse|https://www.w3.org/TR/vocab-dcat-2/#Class:Resource[https://www.w3.org/TR/vocab-dcat-2/#Class:Resource]
-|Status|Obligatorisk
-|===
-
 === Begrep [[klasse-begrep-1]]
 
 [cols="30s,70"]
@@ -37,14 +26,14 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Status|Obligatorisk
 |===
 
-=== Modellkatalog [[klasse-modellkatalog]]
+=== Katalogisert ressurs [[klasse-katalogisert-ressurs]]
 
 [cols="30s,70"]
 |===
-|Engelsk navn|Catalog
-|Beskrivelse|Brukes til å representere en katalog eller repository som inneholder beskrivelsene av modellene.
-|URI|dcat:Catalog
-|Referanse|http://http://xmlns.com/foaf/spec/#term_Agent[http://xmlns.com/foaf/spec/#term_Agent]
+|Engelsk navn|Catalogued Resource
+|Beskrivelse|Brukes til å representere en ressurs som er beskrevet i en katalog.
+|URI|dcat:Resource
+|Referanse|https://www.w3.org/TR/vocab-dcat-2/#Class:Resource[https://www.w3.org/TR/vocab-dcat-2/#Class:Resource]
 |Status|Obligatorisk
 |===
 
@@ -56,6 +45,17 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Beskrivelse|Brukes til å representere en literal-verdi slik som en streng eller heltall (integer). Literaler kan inneholde datatype, og for eksempel være formatert som en dato. Literaler som inneholder maskinlesbar tekst har en valgfri språk-tag, definert av BCP47 (no=norsk, nb=bokmål, nn=nynorsk, en=engelsk).
 |URI|rdfs:Literal
 |Referanse|https://www.w3.org/TR/rdf-concepts/#section-Literals[https://www.w3.org/TR/rdf-concepts/#section-Literals]
+|Status|Obligatorisk
+|===
+
+=== Modellkatalog [[klasse-modellkatalog]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Catalog
+|Beskrivelse|Brukes til å representere en katalog eller repository som inneholder beskrivelsene av modellene.
+|URI|dcat:Catalog
+|Referanse|http://http://xmlns.com/foaf/spec/#term_Agent[http://xmlns.com/foaf/spec/#term_Agent]
 |Status|Obligatorisk
 |===
 
@@ -130,17 +130,6 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Status|Valgfri
 |===
 
-=== Tidsrom [[klasse-tidsrom]]
-
-[cols="30s,70"]
-|===
-|Engelsk navn|Periode of time
-|Beskrivelse|Et tidsintervall som er navngitt eller definert av en start- og sluttdato.
-|URI|dct:PeriodeOfTime
-|Referanse|http://dublincore.org/documents/dcmi-terms/#terms-PeriodOfTime[http://dublincore.org/documents/dcmi-terms/#terms-PeriodOfTime]
-|Status|Valgfri
-|===
-
 === Tema [[klasse-tema]]
 
 [cols="30s,70"]
@@ -151,6 +140,17 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Referanse|https://www.w3.org/TR/vocab-dcat/#Class:Concept[https://www.w3.org/TR/vocab-dcat/#Class:Concept]
 |Status|Valgfri
 |Kommentar|Norsk utvidelse i DCAT-AP-NO.
+|===
+
+=== Tidsrom [[klasse-tidsrom]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Periode of time
+|Beskrivelse|Et tidsintervall som er navngitt eller definert av en start- og sluttdato.
+|URI|dct:PeriodeOfTime
+|Referanse|http://dublincore.org/documents/dcmi-terms/#terms-PeriodOfTime[http://dublincore.org/documents/dcmi-terms/#terms-PeriodOfTime]
+|Status|Valgfri
 |===
 
 == Obligatoriske klasser i modelldelen
@@ -304,19 +304,6 @@ Klasse som representerer modellen som skal utveksles.
 |Status|Valgfri
 |===
 
-=== Samling [[klasse-samling]]
-
-[cols="30s,70"]
-|===
-|Engelsk navn|Collection
-|Beskrivelse|Brukes til å beskrive en relasjon mellom to modellelementer, hvor det ene modellelement inngår som en del av et annet som representerer helheten.
-|URI|modelldcatno:Collection
-|Subklasse av|modelldcatno:Property
-|Referanse|
-|Kommentar||I UML omtales dette som aggregering.
-|Status|Valgfri
-|===
-
 === Begrep [[klasse-begrep-2]]
 
 [cols="30s,70"]
@@ -371,6 +358,19 @@ Klasse som representerer modellen som skal utveksles.
 |URI|modelldcatno:Note
 |Subklasse av|modelldcatno:Property
 |Referanse|
+|Status|Valgfri
+|===
+
+=== Samling [[klasse-samling]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Collection
+|Beskrivelse|Brukes til å beskrive en relasjon mellom to modellelementer, hvor det ene modellelement inngår som en del av et annet som representerer helheten.
+|URI|modelldcatno:Collection
+|Subklasse av|modelldcatno:Property
+|Referanse|
+|Kommentar||I UML omtales dette som aggregering.
 |Status|Valgfri
 |===
 

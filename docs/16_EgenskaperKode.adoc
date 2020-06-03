@@ -1,10 +1,10 @@
-=== Kode
+=== Kode [[kode]]
 
 Klassen _Kode_ er anbefalt.
 
-==== Obligatoriske egenskaper for klassen Kode
+==== Obligatoriske egenskaper for klassen _Kode_
 
-===== Kode: identifikator
+===== Kode: identifikator [[kode-identifikator]]
 
 [cols="30s,70d"]
 |===
@@ -16,7 +16,7 @@ Klassen _Kode_ er anbefalt.
 |===
 
 
-===== Kode:tittel
+===== Kode: tittel [[kode-tittel]]
 
 [cols="30s,70d"]
 |===
@@ -27,9 +27,9 @@ Klassen _Kode_ er anbefalt.
 |Status|Obligatorisk
 |===
 
-==== Anbefalte egenskaper for klassen Kode
+==== Anbefalte egenskaper for klassen _Kode_
 
-===== Kode: begrep
+===== Kode: begrep [[kode-begrep]]
 
 [cols="30s,70d"]
 |===
@@ -40,9 +40,9 @@ Klassen _Kode_ er anbefalt.
 |Status|Anbefalt
 |===
 
-====  Valgfrie egenskaper for klassen Kode
+====  Valgfrie egenskaper for klassen _Kode_
 
-===== Kode: beskrivelse
+===== Kode: beskrivelse [[kode-beskrivelse]]
 
 [cols="30s,70d"]
 |===
