@@ -4,7 +4,7 @@ Klassen _Kode_ er anbefalt.
 
 ==== Obligatoriske egenskaper for klassen Kode
 
-===== Kode: kodeidentifikator
+===== Kode: identifikator
 
 [cols="30s,70d"]
 |===
