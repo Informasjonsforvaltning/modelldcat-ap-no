@@ -279,7 +279,7 @@ Kodelisteelementer: 1 - Heltid, 2 -  Deltid
 [cols="30s,70"]
 |===
 |Engelsk navn|Role
-|Beskrivelse|Brukes til å beskrive rolle objekter har overfor hverandre i en assosiasjon.
+|Beskrivelse|Brukes til å beskrive en rolle et objekt har overfor et annet i en assosiasjon.
 |URI|modelldcatno:Role
 |Subklasse av|modelldcatno:Property
 |Referanse|
