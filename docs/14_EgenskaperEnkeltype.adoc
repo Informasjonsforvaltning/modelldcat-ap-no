@@ -23,7 +23,7 @@ Klassen Enkeltype er valgfri
 [cols="30s,70d"]
 |===
 |Engelsk navn| length
-|URI| xsd:maxLength
+|URI| xsd:length
 |Range| xsd:nonNegativeInteger
 |Beskrivelse|Eksakt lengde på en streng.
 |Multiplisitet| 0..1
@@ -104,7 +104,7 @@ Klassen Enkeltype er valgfri
 
 ===== Enkeltype: mønster [[enkeltype-mønster]]
 
-cols="30s,70d"]
+[cols="30s,70d"]
 |===
 |Engelsk navn| pattern
 |URI| xsd:pattern
