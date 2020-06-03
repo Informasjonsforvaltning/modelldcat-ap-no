@@ -56,3 +56,5 @@ include::14_EgenskaperEnkeltype.adoc[]
 include::15_EgenskaperInformasjonsmodell.adoc[]
 
 include::16_EgenskaperKode.adoc[]
+
+include::17_EgenskaperKodeliste[]
