@@ -129,8 +129,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |===
 |URI|modelldcatno:informationModelIdentifier
 |Range|rdfs:Literal
-|Beskrivelse|Elementenes identifikator slik det fremkommer av den som har laget modellen
-|Merknad|Elementenes id slik det fremkommer av den som har laget modellen
+|Beskrivelse|Modellens identifikator slik det fremkommer av den som har laget modellen
 |Multiplisitet|0..1
 |Status|Anbefalt
 |Kommentar|Dette er typisk hva elementet er kjent som i modelleringsverktøyet hvor modellen er laget.
@@ -227,7 +226,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |===
 |URI|foaf:homepage
 |Range|foaf:Document
-|Beskrivelse|Brukes til å referere til hjemmesiden til tjenesten.
+|Beskrivelse|Brukes til å referere til hjemmesiden til modellen.
 |Multiplisitet|0..1
 |Status|Valgfri
 |===
@@ -309,6 +308,6 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |URI|adms:versionNotes
 |Range|rdfs:Literal
 |Beskrivelse|Egenskap som beskriver forskjellene mellom denne og en tidligere versjon av modellen. Kan gjentas for parallelle språkversjoner av versjonsnotater.
-|Multiplisitet                                                  	|0..n
+|Multiplisitet|0..n
 |Status|Valgfri
 |===
