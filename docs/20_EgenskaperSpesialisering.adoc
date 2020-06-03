@@ -1,0 +1,28 @@
+=== Spesialisering [[spesialisering]]
+
+Klassen _Spesialisering_ er anbefalt
+
+==== Obligatoriske egenskaper for klassen _Spesialisering_
+
+
+===== Spesialisering: har generelt konsept [[spesialisering-har-generelt-konsept]]
+
+[cols="30s,70"]
+|===
+|URI|modelldcatno:hasGeneralConcept
+|Range|modelldcatno:ModelElement
+|Beskrivelse|Refererer til det generelle konseptet (supertypen) i et arveforhold.
+|Multiplisitet|1..1
+|Status|Obligatorisk
+|===
+
+===== Spesialisering: har leverandør [[spesialisering-har-leverandør]]
+
+[cols="30s,70"]
+|===
+|URI|modelldcatno:hasSupplier
+|Range|modelldcatno:ModelElement
+|Beskrivelse|Refererer til det spesialiserte konseptet (subtypen) i et arveforhold.
+|Multiplisitet|1..1
+|Status|Obligatorisk
+|===
