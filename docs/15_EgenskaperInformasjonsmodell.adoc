@@ -1,0 +1,314 @@
+=== Informasjonsmodell
+
+Klassen _Informasjonsmodell_ er obligatorisk
+
+==== Obligatoriske egenskaper for klassen Informasjonsmodell
+
+===== Informasjonsmodell: beskrivelse
+
+[cols="30s,70d"]
+|===
+|URI|dct:description
+|Range|rdfs:Literal
+|Beskrivelse|Inneholder fritekstbeskrivelse av modellen. Bør gjentas for parallelle språkversjoner.
+|Multiplisitet|1..n
+|Status|Obligatorisk
+|===
+
+=====  Informasjonsmodell: identifikator
+
+[cols="30s,70d"]
+|===
+|URI|dct:identifier
+|Range|rdfs:Literal
+|Beskrivelse|Hovedidentifikator for modellen.
+|Multiplisitet|1..1.
+|Status|Obligatorisk
+|Kommentar|F.eks. URI eller annen identifikator som er stabil og globalt unik.
+|===
+
+=====  Informasjonsmodell: tema
+
+[cols="30s,70d"]
+|===
+|URI|dcat:theme
+|Range|skos:Concept
+|Beskrivelse|Referanse til et hovedtema for modellen. Et datasett kan assosieres med flere tema. Bruk av vokabularet Data theme som er publisert av EUs Publications Office er påkrevd. Bruk av Digitaliseringsdirektoratets Los-vokabular er anbefalt. Også andre nasjonale og internasjonale vokabular kan brukes om de oppfyller denne standardens krav til kontrollerte vokabularer.
+|Multiplisitet|1..n
+|Status|Obligatorisk
+|===
+
+
+===== Informasjonsmodell: tittel
+
+[cols="30s,70d"]
+|===
+|URI|dct:title
+|Range|rdfs:Literal
+|Beskrivelse|Navn på modell.
+|Multiplisitet|1..n
+|Status|Obligatorisk
+|Kommentar| Bør gjentas for parallelle språkversjoner.
+|===
+
+===== Informasjonsmodell: utgiver
+
+[cols="30s,70d"]
+|===
+|URI|dct:publisher
+|Range|foaf:Agent
+|Beskrivelse|Referanse til en enhet (organisasjon) som er ansvarlig for å gjøre modellen tilgjengelig. Bør være autoritativ URI for enhet, sekundært organisasjonsnummer.
+|Multiplisitet|1..1
+|Status|Obligatorisk
+|===
+
+
+==== Anbefalte egenskaper i klassen Informasjonsmodell
+
+=====  Informasjonsmodell: begrep
+
+[cols="30s,70d"]
+|===
+|URI|dct:subject
+|Range|skos:Concept
+|Beskrivelse|Referanse til sentrale begrep som er viktige for å forstå og tolke modellen. Representeres som URI-er.
+|Multiplisitet|0..n
+|Status|Anbefalt
+|===
+
+===== Informasjonsmodell: dekningsområde
+
+[cols="30s,70d"]
+|===
+|URI|dct:spatial
+|Range|dct:Location
+|Beskrivelse|Brukes til å referere til et geografisk eller administrativt område dekket av modellen.
+|Multiplisitet|0..n
+|Status|Anbefalt
+|===
+
+
+=====  Informasjonsmodell: inneholder modellelement
+
+[cols="30s,70d"]
+|===
+|URI|modelldcatno:containsModelElement
+|Range|modelldcatno:ModelElement
+|Beskrivelse|Kobler modellen til modellelementene som er en del av modellen.
+|Multiplisitet|0..n
+|Status|Anbefalt
+|===
+
+
+=====  Informasjonsmodell: kontaktpunkt
+
+[cols="30s,70d"]
+|===
+|URI|dcat:contactPoint
+|Range|vcard:Kind
+|Beskrivelse|Referanse til kontaktpunktsobjekt med kontaktopplysninger. Disse kan brukes til å sende kommentarer om modellen.
+|Multiplisitet|0..n
+|Status|Anbefalt
+|===
+
+=====  Informasjonsmodell: lisens
+
+[cols="30s,70d"]
+|===
+|URI|dct:license
+|Range|dct:LicenseDocument
+|Beskrivelse|Viser til lisens for informasjonsmodellen som beskriver hvordan den kan viderebrukes.
+|Multiplisitet|0..1
+|Status|Anbefalt
+|===
+
+
+===== Informasjonsmodell: informasjonsmodellidentifikator
+
+[cols="30s,70d"]
+|===
+|URI|modelldcatno:informationModelIdentifier
+|Range|rdfs:Literal
+|Beskrivelse|Elementenes identifikator slik det fremkommer av den som har laget modellen
+|Merknad|Elementenes id slik det fremkommer av den som har laget modellen
+|Multiplisitet|0..1
+|Status|Anbefalt
+|Kommentar|Dette er typisk hva elementet er kjent som i modelleringsverktøyet hvor modellen er laget.
+|===
+
+
+
+====  Valgfrie egenskaper til klassen Informasjonsmodell
+
+
+=====  Informasjonsmodell: emneord
+
+[cols="30s,70d"]
+|===
+|URI|dcat:keyword
+|Range|rdfs:Literal
+|Beskrivelse|Inneholder emneord (eller tag) som beskriver modellen.
+|Multiplisitet|0..n
+|Status|Valgfri
+|===
+
+=====  Informasjonsmodell: endringsdato
+
+[cols="30s,70d"]
+|===
+|URI|dct:modified
+|Range|rdfs:Literal typed as xsd:dateTime
+|Beskrivelse|Dato for siste oppdatering av modellen.
+|Multiplisitet|0..1
+|Status|Valgfri
+|===
+
+=====  Informasjonsmodell: er del av
+
+[cols="30s,70d"]
+|===
+|URI|dct:isPartOf
+|Range|modelldcatno:InformationModel
+|Beskrivelse|Referanse til en annen modell som denne modellen er en del av.
+|Multiplisitet|0..n
+|Status|Valgfri
+|===
+
+
+=====  Informasjonsmodell: erstatter
+
+[cols="30s,70d"]
+|===
+|URI|dct:replaces
+|Range|modelldcatno:InformationModel
+|Beskrivelse|Referanse til eldre utgått modell denne modellen er ment å erstatte.
+|Multiplisitet|0..n
+|Status|Valgfri
+|===
+
+
+=====  Informasjonsmodell: er erstattet av
+
+[cols="30s,70d"]
+|===
+|URI|dct:isReplacedBy
+|Range|modelldcatno:InformationModel
+|Beskrivelse|Referanse til oppdatert og nyere modell som erstatter modellen.
+|Multiplisitet|0..n
+|Status|Valgfri
+|===
+
+===== Informasjonsmodell: gyldighetsperiode
+
+[cols="30s,70d"]
+|===
+|URI|dct:temporal
+|Range|dct:PeriodeOfTime
+|Beskrivelse|Modellens gyldighetsintervall.
+|Multiplisitet|0..n
+|Status|Valgfri
+|===
+
+===== Informasjonsmodell: har del
+
+[cols="30s,70d"]
+|===
+|URI|dct:isPartOf
+|Range|modelldcatno:InformationModel
+|Beskrivelse|Referanse til en annen modell som er en del av denne modellen.
+|Multiplisitet|0..n
+|Status|Valgfri
+|===
+
+
+===== Informasjonsmodell: hjemmeside
+
+[cols="30s,70d"]
+|===
+|URI|foaf:homepage
+|Range|foaf:Document
+|Beskrivelse|Brukes til å referere til hjemmesiden til tjenesten.
+|Multiplisitet|0..1
+|Status|Valgfri
+|===
+
+
+===== Informasjonsmodell: modellstatus
+
+[cols="30s,70d"]
+|===
+|URI|adms:status
+|Range|skos:Concept
+|Beskrivelse|Modellens modenhet. Må ha en av verdiene Completed, Deprecated, Under Development, Withdrawn.
+|Multiplisitet|0..1
+|Status|Valgfri
+|===
+
+===== Informasjonsmodell: produsent
+
+[cols="30s,70d"]
+|===
+|URI|dct:creator
+|Range|foaf:Agent
+|Beskrivelse|Referanse til enhet som er produsent av modellen.
+|Multiplisitet|0..1
+|Status|Valgfri
+|===
+
+
+===== Informasjonsmodell: språk
+
+[cols="30s,70d"]
+|===
+|URI|dct:language
+|Range| dct:LinguisticSystem
+|Beskrivelse|Referanse til språket som er brukt i modellen.
+|Multiplisitet|0..n
+|Status|Valgfri
+|===
+
+===== Informasjonsmodell: type
+
+[cols="30s,70d"]
+|===
+|URI|dct:type
+|Range|skos:Concept
+|Beskrivelse|Referanse til typedefinisjoner som kategoriserer modellen og abstraksjonsnivået.
+|Multiplisitet|0..1
+|Status|Valgfri
+|===
+
+===== Informasjonsmodell: utgivelsesdato
+
+[cols="30s,70d"]
+|===
+|URI|dct:issued
+|Range|rdfs:Literal typed as xsd:dateTime
+|Beskrivelse|Dato for den formelle utgivelsen av modellen.
+|Multiplisitet|0..1
+|Status|Valgfri
+|===
+
+
+===== Informasjonsmodell: versjon
+
+[cols="30s,70d"]
+|===
+|URI|owl:versionInfo
+|Range|rdfs:Literal
+|Beskrivelse|Et versjonsnummer eller annen versjonsbetegnelse for modellen.
+|Multiplisitet|0..1
+|Status|Valgfri
+|===
+
+
+===== Informasjonsmodell: versjonsnote
+
+[cols="30s,70d"]
+|===
+|URI|adms:versionNotes
+|Range|rdfs:Literal
+|Beskrivelse|Egenskap som beskriver forskjellene mellom denne og en tidligere versjon av modellen. Kan gjentas for parallelle språkversjoner av versjonsnotater.
+|Multiplisitet                                                  	|0..n
+|Status|Valgfri
+|===
