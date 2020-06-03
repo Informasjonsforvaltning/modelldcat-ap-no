@@ -1,8 +1,8 @@
 === Egenskap [[egenskap]]
 
-Klassen Egenskap er anbefalt
+Klassen _Egenskap_ er anbefalt
 
-==== Obligatoriske egenskaper for klassen Egenskap
+==== Obligatoriske egenskaper for klassen _Egenskap_
 
 ===== Egenskap: identifikator [[egenskap-identifikator]]
 
@@ -28,19 +28,7 @@ Klassen Egenskap er anbefalt
 |Status| Obligatorisk
 |===
 
-==== Anbefalte egenskaper for klassen Egenskap
-
-===== Egenskap: har type [[egenskap-har-type]]
-
-[cols="30s,70d"]
-|===
-|Engelsk navn| has type
-|URI| modelldcatno:hasType
-|Range| modelldcatno:ModelElement
-|Beskrivelse| En generell beskrivelse av verdidomenet til en egenskap.
-|Multiplisitet| 0..1
-|Status| Anbefalt
-|===
+==== Anbefalte egenskaper for klassen _Egenskap_
 
 ===== Egenskap: begrep [[egenskap-begrep]]
 
@@ -50,6 +38,18 @@ Klassen Egenskap er anbefalt
 |URI| dct:subject
 |Range| skos:Concept
 |Beskrivelse| Referanse til sentralt begrep som er viktig for å forstå og tolke egenskapen. Representeres som URI-er.
+|Multiplisitet| 0..1
+|Status| Anbefalt
+|===
+
+===== Egenskap: har type [[egenskap-har-type]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| has type
+|URI| modelldcatno:hasType
+|Range| modelldcatno:ModelElement
+|Beskrivelse| En generell beskrivelse av verdidomenet til en egenskap.
 |Multiplisitet| 0..1
 |Status| Anbefalt
 |===
@@ -78,7 +78,7 @@ Klassen Egenskap er anbefalt
 |Status| Anbefalt
 |===
 
-==== Valgfrie egenskaper for klassen Egenskap
+==== Valgfrie egenskaper for klassen _Egenskap_
 
 ===== Egenskap: beskrivelse [[egenskap-beskrivelse]]
 
