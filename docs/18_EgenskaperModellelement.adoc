@@ -1,0 +1,83 @@
+=== Modellelement
+
+Klassen _Modellelement_ er anbefalt.
+
+==== Obligatoriske egenskaper for klassen _Modellelement_
+
+
+=====  Modellelement: identifikator [[modellelement- identifikator]]
+
+[cols="30s,70d"]
+|===
+|URI|dct:identifier
+|Range|rdfs:Literal
+|Beskrivelse|Unik og persistent identifisering av et modellelement.
+|Multiplisitet|1..1
+|Status|Obligatorisk
+|===
+
+
+===== Modellelement: tittel [[modellelement-tittel]]
+
+[cols="30s,70d"]
+|===
+|URI|dct:title
+|Range|rdfs:Literal
+|Beskrivelse|Navn på modellelement.
+|Multiplisitet|1..n
+|Status|Obligatorisk
+|Kommentar|Ved navn på flere språk. Bør gjentas for parallelle språkversjoner.
+|===
+
+====  Anbefalte egenskaper for klassen _Modellelement_
+
+
+===== Modellelement: har egenskap [[modellelement-har-egenskap]]
+
+[cols="30s,70d"]
+|===
+|URI|modelldcatno:hasProperty
+|Range|modelldcatno:Property
+|Beskrivelse|Egenskapen til et modellelement.
+|Multiplisitet|0..n
+|Status|Anbefalt
+|===
+
+===== Modellelement: begrep [[modellelement-begrep]]
+
+[cols="30s,70d"]
+|===
+|URI|dct:subject
+|Range|skos:Concept
+|Beskrivelse|Referanse til sentralt begrep som er viktig for å forstå og tolke modellelementet. Representeres som URI-er.
+|Multiplisitet|0..1
+|Status|Anbefalt
+|===
+
+
+==== Valgfrie egenskaper for klassen _Modellelement_
+
+
+=====  Modellelement: tilhørerModul [[modellelement-tilhørerModul]]
+
+[cols="30s,70d"]
+|===
+|URI|modelldcatno:modelElementBelongsToModule
+|Range|rdfs:Literal or xsd:anyURI
+|Beskrivelse|Beskriver hvilken modellmodul et modellelement inngår i.
+|Multiplisitet|0..1
+|Status|Valgfri
+|Kommentar|Modeller kan bestå av moduler, som beslektede modellelementer er gruppert under.
+|===
+
+
+===== Modellelement: beskrivelse [[modellelement-beskrivelse]]
+
+[cols="30s,70d"]
+|===
+|URI|dct:description
+|Range|rdfs:Literal
+|Beskrivelse|Fritekstbeskrivelse av modellelementet.
+|Multiplisitet|0..1
+|Status|Valgfri
+|===
