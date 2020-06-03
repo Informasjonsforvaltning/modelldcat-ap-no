@@ -11,7 +11,7 @@ Klassen _Modellelement_ er anbefalt.
 |===
 |URI|dct:identifier
 |Range|rdfs:Literal
-|Beskrivelse|Unik og persistent identifisering av en egenskap.
+|Beskrivelse|Unik og persistent identifisering av et modellelement.
 |Multiplisitet|1..1
 |Status|Obligatorisk
 |===
@@ -24,9 +24,9 @@ Klassen _Modellelement_ er anbefalt.
 |URI|dct:title
 |Range|rdfs:Literal
 |Beskrivelse|Navn på modellelement.
-|Multiplisitet|1..1
+|Multiplisitet|1..n
 |Status|Obligatorisk
-|Kommentar|Ved navn på flere språk, benyttes språk-tags.
+|Kommentar|Ved navn på flere språk. Bør gjentas for parallelle språkversjoner.
 |===
 
 ====  Anbefalte egenskaper for klassen _Modellelement_
@@ -49,7 +49,7 @@ Klassen _Modellelement_ er anbefalt.
 |===
 |URI|dct:subject
 |Range|skos:Concept
-|Beskrivelse|Referanse til sentralt begrep som er viktige for å forstå og tolke modellen. Representeres som URI-er.
+|Beskrivelse|Referanse til sentralt begrep som er viktig for å forstå og tolke modellelementet. Representeres som URI-er.
 |Multiplisitet|0..1
 |Status|Anbefalt
 |===
@@ -64,7 +64,7 @@ Klassen _Modellelement_ er anbefalt.
 |===
 |URI|modelldcatno:modelElementBelongsToModule
 |Range|rdfs:Literal or xsd:anyURI
-|Beskrivelse|Beskriver hvilken modellmodul en modell inngår i.
+|Beskrivelse|Beskriver hvilken modellmodul et modellelement inngår i.
 |Multiplisitet|0..1
 |Status|Valgfri
 |Kommentar|Modeller kan bestå av moduler, som beslektede modellelementer er gruppert under.
