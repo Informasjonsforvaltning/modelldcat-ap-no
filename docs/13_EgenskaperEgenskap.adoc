@@ -1,0 +1,105 @@
+=== Egenskap [[egenskap]]
+
+Klassen Egenskap er anbefalt
+
+==== Obligatoriske egenskaper for klassen Egenskap
+
+===== Egenskap: identifikator [[egenskap-identifikator]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| identifier
+|URI| dct:identifier
+|Range| rdfs:Literal
+|Beskrivelse| Unik og persistent identifisering av en egenskap.
+|Multiplisitet| 1..1
+|Status| Obligatorisk
+|===
+
+===== Egenskap: tittel [[egenskap-tittel]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| title
+|URI| dct:title
+|Range| rdfs:Literal
+|Beskrivelse| Navn på en egenskap.
+|Multiplisitet| 1..1
+|Status| Obligatorisk
+|===
+
+==== Anbefalte egenskaper for klassen Egenskap
+
+===== Egenskap: har type [[egenskap-har-type]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| has type
+|URI| modelldcatno:hasType
+|Range| modelldcatno:ModelElement
+|Beskrivelse| En generell beskrivelse av verdidomenet til en egenskap.
+|Multiplisitet| 0..1
+|Status| Anbefalt
+|===
+
+===== Egenskap: begrep [[egenskap-begrep]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| subject
+|URI| dct:subject
+|Range| skos:Concept
+|Beskrivelse| Referanse til sentralt begrep som er viktige for å forstå og tolke egenskapen. Representeres som URI-er.
+|Multiplisitet| 0..1
+|Status| Anbefalt
+|===
+
+===== Egenskap: nedre multiplisitet [[egenskap-nedre-multiplisitet]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| min occurs
+|URI| xsd:minOccurs
+|Range| xsd:nonNegativeInteger
+|Beskrivelse| Angir det minste antallet lovlige forekomster en egenskap kan ha.
+|Multiplisitet| 0..1
+|Status| Anbefalt
+|===
+
+===== Egenskap: øvre multiplisitet [[egenskap-øvre-multiplisitet]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| max occurs
+|URI| xsd:maxOccurs
+|Range| xsd:nonNegativeInteger
+|Beskrivelse| Angir det største antallet lovlige forekomster en egenskap kan ha.
+|Multiplisitet| 0..1
+|Status| Anbefalt
+|===
+
+==== Valgfrie egenskaper for klassen Egenskap
+
+===== Egenskap: beskrivelse [[egenskap-beskrivelse]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| description
+|URI|dct:description
+|Range| rdfs:Literal
+|Beskrivelse| Tekstlig beskrivelse av egenskapen.
+|Multiplisitet| 0..1
+|Status| Valgfri
+|===
+
+===== Egenskap: sekvensnummer [[egenskap-sekvensnummer]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| sequence number
+|URI|modelldcatno:sequenceNumber
+|Range|
+|Beskrivelse| En numerisk, sekvensielt stigende verdi som kan brukes til å identifisere og holde orden på rekkefølgen på egenskapene til et modellelement. Der man har en modell der elementenes orden er vesentlig. F.eks. slik det ofte er i XML.
+|Multiplisitet| 0..1
+|Status| Valgfri
+|===
