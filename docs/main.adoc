@@ -62,3 +62,5 @@ include::17_EgenskaperKodeliste.adoc[]
 include::18_EgenskaperModellelement.adoc[]
 
 include::19_EgenskaperRolle.adoc[]
+
+include::20_EgenskaperSpesialisering.adoc[]
