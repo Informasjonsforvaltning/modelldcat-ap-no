@@ -41,13 +41,13 @@ include::7_klasser.adoc[]
 
 include::8_EgenskaperPrKlasse_Aktor.adoc[]
 
-include::9_EgenskaperModellkatalog.adoc[]
-
 include::10_EgenskaperLisensdok.adoc[]
 
 include::11_EgenskaperLokasjon.adoc[]
 
-include::12_EgenskaperSamlingKomposisjonAttributt.adoc[]
+include::9_EgenskaperModellkatalog.adoc[]
+
+include::12_EgenskaperAttributt.adoc[]
 
 include::13_EgenskaperEgenskap.adoc[]
 
@@ -59,9 +59,13 @@ include::16_EgenskaperKode.adoc[]
 
 include::17_EgenskaperKodeliste.adoc[]
 
+include::17b_EgenskaperKomposisjon.adoc[]
+
 include::18_EgenskaperModellelement.adoc[]
 
 include::19_EgenskaperRolle.adoc[]
+
+include::19b_EgenskaperSamling.adoc[]
 
 include::20_EgenskaperSpesialisering.adoc[]
 
