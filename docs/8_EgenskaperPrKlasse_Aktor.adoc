@@ -5,7 +5,9 @@
 
 === Aktør [[aktor]]
 
-==== Obligatoriske egenskaper for klassen Aktør
+Klassen _Aktør_ er obligatorisk. 
+
+==== Obligatoriske egenskaper for klassen _Aktør_
 
 ===== Aktør: navn [[aktor-navn]]
 
