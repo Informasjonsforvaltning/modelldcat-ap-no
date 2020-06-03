@@ -35,7 +35,7 @@ Klassen _Kode_ er anbefalt.
 |===
 |URI|dct:subject
 |Range|skos:Concept
-|Beskrivelse|Referanse til sentralt begrep som er viktige for å forstå og tolke koden. Representeres som URI-er.
+|Beskrivelse|Referanse til sentralt begrep som er viktig for å forstå og tolke koden. Representeres som URI-er.
 |Multiplisitet|0..1
 |Status|Anbefalt
 |===
