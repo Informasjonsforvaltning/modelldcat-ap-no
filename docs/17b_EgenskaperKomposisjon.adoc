@@ -2,7 +2,7 @@
 
 Klassen Komposisjon er valgfri
 
-==== Obligatoriske egenskaper for klassen Komposisjon
+==== Obligatoriske egenskaper for klassen _Komposisjon_
 
 ===== Komposisjon: inneholder [[komposisjon-inneholder]]
 
