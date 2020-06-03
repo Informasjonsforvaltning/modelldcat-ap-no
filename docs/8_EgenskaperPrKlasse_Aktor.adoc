@@ -20,9 +20,9 @@
 |Kommentar| Norsk utvidelse. For parallelle språkversjoner av navnet, benyttes språk-tags.
 |===
 
-== Anbefalte egenskaper for klassen _Aktør_
+==== Anbefalte egenskaper for klassen _Aktør_
 
-=== Aktør: organisasjonsidentifikator [[aktor-organisasjonsidentifikator]]
+===== Aktør: organisasjonsidentifikator [[aktor-organisasjonsidentifikator]]
 
 [cols="30s,70d"]
 |===
@@ -35,7 +35,7 @@
 |Kommentar| Norsk utvidelse. Denne er ikke eksplisitt tatt med i BRegDCAT-AP, men var med i DCAT-AP-NO v.1.1 og allerede da som en norsk utvidelse.
 |===
 
-=== Aktør: utgivertype [[aktor-utgivertype]]
+===== Aktør: utgivertype [[aktor-utgivertype]]
 
 [cols="30s,70d"]
 |===

@@ -26,7 +26,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Status|Obligatorisk
 |===
 
-=== Begrep [[klasse-begrep]]
+=== Begrep [[klasse-begrep-1]]
 
 [cols="30s,70"]
 |===
@@ -176,7 +176,7 @@ Klasse som representerer modellen som skal utveksles.
 [cols="30s,70"]
 |===
 |Engelsk navn|Assosiation
-|Beskrivelse|
+|Beskrivelse|Brukes til å beskrive et forhold mellom to modellelementer.
 |URI|modelldcatno:Assosiation
 |Subklasse av|modelldcatno:Property
 |Referanse|
@@ -212,10 +212,9 @@ Klasse som representerer modellen som skal utveksles.
 [cols="30s,70"]
 |===
 |Engelsk navn|Property
-|Beskrivelse|En egenskap ved en objekttype eller datatype.
+|Beskrivelse|Brukes til å beskrive en egenskap ved et modellelement.
 |URI|modelldcatno:Property
 |Referanse|
-|Kommentar|Kun objekttyper, rotobjekttyper og datatyper kan ha egenskaper.
 |Status|Anbefalt
 |===
 
@@ -236,17 +235,10 @@ Klasse som representerer modellen som skal utveksles.
 [cols="30s,70"]
 |===
 |Engelsk navn|Code list
-|Beskrivelse|Et sett av lovlige verdier for et attributt.
+|Beskrivelse|Beskriver et sett av lovlige verdier for et attributt.
 |URI|modelldcatno:CodeList
 |Subklasse av|modelldcatno:ModelElement
 |Referanse|
-|Kommentar|Eksempler:
-Kodeliste for heldeltid
-1 - Heltid
-2 - Deltid
-Koder: 1, 2
-Kategorier: Heltid, Deltid
-Kodelisteelementer: 1 - Heltid, 2 -  Deltid
 |Status|Anbefalt
 |===
 
@@ -324,7 +316,7 @@ Kodelisteelementer: 1 - Heltid, 2 -  Deltid
 |Status|Valgfri
 |===
 
-=== Begrep [[klasse-begrep]]
+=== Begrep [[klasse-begrep-2]]
 
 [cols="30s,70"]
 |===
