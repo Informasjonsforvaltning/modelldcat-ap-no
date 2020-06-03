@@ -13,17 +13,23 @@ Høringsutkast til Versjon 1.0
 
 image::images/digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
 
-Status: Høringsutkast +
-Publisert: 2020-06-02 +
+include::shared/download.adoc[]
 
-Dette er et høringsutkast til versjon 1.0 av "Spesifikasjon for beskrivelse av informasjonsmodeller (ModellDCAT-AP-NO)". Spesifikasjonen skal sikre at beskrivelser av informasjonsmodeller utføres på en felles, strukturert måte og i en maskinlesbar form. Spesifikasjonen stiller krav til hva som _skal_, _bør_ og _kan_ være med i beskrivelsene, med spesifikasjon av dataformat.
+include::locale/attributes.adoc[]
+
 
 NOTE: *Innmelding av feil og mangler:* +
 Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på https://github.com/Informasjonsforvaltning/modelldcat-ap-no/issues[Github Issues]. Dersom man ikke allerede har bruker på Github kan man opprette bruker gratis.
 
-include::shared/download.adoc[]
+*Status*: Høringsutkast +
+*Publisert*: 2020-06-02 +
 
-include::locale/attributes.adoc[]
+*Gjeldende versjon*: Gjeldende versjon vil bli publisert til https://data.norge.no/specification/modelldcat-ap-no/ (kommer etter høringen sammen med DCAT-AP-NO)
+
+*Ontologi*: Det er utarbeidet et https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/review/ontology/dcatno_informationModel_en.owl[utkast til ontologien for ModellDCAT-AP-NO]. Gjeldende versjon av ontologien vil bli publisert til https://data.norge.no/vocabulary/modelldcatno# (kommer etter høringen).
+
+Dette er et høringsutkast til versjon 1.0 av "Spesifikasjon for beskrivelse av informasjonsmodeller (ModellDCAT-AP-NO)". Spesifikasjonen skal sikre at beskrivelser av informasjonsmodeller utføres på en felles, strukturert måte og i en maskinlesbar form. Spesifikasjonen stiller krav til hva som _skal_, _bør_ og _kan_ være med i beskrivelsene, med spesifikasjon av dataformat.
+
 
 include::1_Formaal.adoc[]
 
