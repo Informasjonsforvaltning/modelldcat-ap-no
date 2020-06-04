@@ -45,10 +45,9 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |===
 |URI|dct:title
 |Range|rdfs:Literal
-|Beskrivelse|Navn på modell.
+|Beskrivelse|Navn på modell. Bør gjentas for parallelle språkversjoner.
 |Multiplisitet|1..n
 |Status|Obligatorisk
-|Kommentar| Bør gjentas for parallelle språkversjoner.
 |===
 
 ===== Informasjonsmodell: utgiver [[informasjonsmodell-utgiver]]

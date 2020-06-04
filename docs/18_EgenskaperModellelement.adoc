@@ -23,10 +23,9 @@ Klassen _Modellelement_ er anbefalt.
 |===
 |URI|dct:title
 |Range|rdfs:Literal
-|Beskrivelse|Navn på modellelement.
+|Beskrivelse|Navn på modellelement. Bør gjentas for parallelle språkversjoner.
 |Multiplisitet|1..n
 |Status|Obligatorisk
-|Kommentar|Ved navn på flere språk. Bør gjentas for parallelle språkversjoner.
 |===
 
 ====  Anbefalte egenskaper for klassen _Modellelement_
