@@ -1,6 +1,6 @@
 === Komposisjon [[komposisjon]]
 
-Klassen Komposisjon er valgfri
+Klassen _Komposisjon_ er valgfri
 
 ==== Obligatoriske egenskaper for klassen _Komposisjon_
 
