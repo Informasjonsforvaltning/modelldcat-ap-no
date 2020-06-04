@@ -21,7 +21,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |===
 |Engelsk navn|Concept
 |Beskrivelse|Brukes til å representere begrep som er viktig for å forstå eller tolke en informasjonsmodell eller et modellelement.
-|URI|skos:concept
+|URI|skos:Concept
 |Referanse|http://https://www.w3.org/2009/08/skos-reference/skos.html#Concept[https://www.w3.org/2009/08/skos-reference/skos.html#Concept]
 |Status|Obligatorisk
 |===
@@ -68,7 +68,6 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |URI|skos:ConceptScheme
 |Referanse|https://www.w3.org/TR/vocab-dcat/#Class:Concept_Scheme[https://www.w3.org/TR/vocab-dcat/#Class:Concept_Scheme]
 |Status|Obligatorisk
-|Kommentar|Norsk utvidelse i DCAT-AP-NO. Endret fra anbefalt til obligatorisk (allerede i DCAT-AP-NO v.1.1).
 |===
 
 == Anbefalte klasser i katalogdelen
@@ -139,7 +138,6 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |URI|skos:Concept
 |Referanse|https://www.w3.org/TR/vocab-dcat/#Class:Concept[https://www.w3.org/TR/vocab-dcat/#Class:Concept]
 |Status|Valgfri
-|Kommentar|Norsk utvidelse i DCAT-AP-NO.
 |===
 
 === Tidsrom [[klasse-tidsrom]]
@@ -147,7 +145,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 [cols="30s,70"]
 |===
 |Engelsk navn|Periode of time
-|Beskrivelse|Et tidsintervall som er navngitt eller definert av en start- og sluttdato.
+|Beskrivelse|Brukes til å beskrive et tidsintervall som er navngitt eller definert av en start- og sluttdato.
 |URI|dct:PeriodeOfTime
 |Referanse|http://dublincore.org/documents/dcmi-terms/#terms-PeriodOfTime[http://dublincore.org/documents/dcmi-terms/#terms-PeriodOfTime]
 |Status|Valgfri
@@ -160,7 +158,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 [cols="30s,70"]
 |===
 |Engelsk navn|Information model
-|Beskrivelse|Informasjonsmodell for en spesifikk informasjonsutveksling eller applikasjon.
+|Beskrivelse|Brukes til å beskrive en informasjonsmodell for en spesifikk informasjonsutveksling eller applikasjon.
 |URI|modelldcatno:InformationModel
 |Subklasse av|dcat:Resource
 |Referanse|
@@ -188,7 +186,7 @@ Klasse som representerer modellen som skal utveksles.
 [cols="30s,70"]
 |===
 |Engelsk navn|Attribute
-|Beskrivelse|
+|Beskrivelse|Brukes til å beskrive en basisegenskap ved et modellelement.
 |URI|modelldcatno:Attribute
 |Subklasse av|modelldcatno:Property
 |Referanse|
@@ -200,7 +198,7 @@ Klasse som representerer modellen som skal utveksles.
 [cols="30s,70"]
 |===
 |Engelsk navn|Data type
-|Beskrivelse|Brukes for å beskrive av en sammensatt verdistruktur uten identitet.
+|Beskrivelse|Brukes til å beskrive en sammensatt verdistruktur uten identitet.
 |URI|modelldcatno:DataType
 |Subklasse av|modelldcatno:ModelElement
 |Referanse|
@@ -223,7 +221,7 @@ Klasse som representerer modellen som skal utveksles.
 [cols="30s,70"]
 |===
 |Engelsk navn|Simple type
-|Beskrivelse|Beskriver verdidomenet for et attributt.
+|Beskrivelse|Brukes til å beskrive verdidomenet for et attributt.
 |URI|modelldcatno:SimpleType
 |Subklasse av|modelldcatno:ModelElement
 |Referanse|
@@ -235,7 +233,7 @@ Klasse som representerer modellen som skal utveksles.
 [cols="30s,70"]
 |===
 |Engelsk navn|Code list
-|Beskrivelse|Beskriver et sett av lovlige verdier for et attributt.
+|Beskrivelse|Brukes til å beskrive et sett av lovlige verdier for et attributt.
 |URI|modelldcatno:CodeList
 |Subklasse av|modelldcatno:ModelElement
 |Referanse|
@@ -247,7 +245,7 @@ Klasse som representerer modellen som skal utveksles.
 [cols="30s,70"]
 |===
 |Engelsk navn|Model element
-|Beskrivelse|
+|Beskrivelse|Brukes til å beskrive en navngitt og elementær komponent i en modell som kan ha en eller flere egenskaper.
 |URI|modelldcatno:ModelElement
 |Referanse|
 |Kommentar|Typer modellelementer er objekttype, rotobjekttype, kodeliste, enkeltype og datatype.
@@ -259,7 +257,7 @@ Klasse som representerer modellen som skal utveksles.
 [cols="30s,70"]
 |===
 |Engelsk navn|Object type
-|Beskrivelse|
+|Beskrivelse|Brukes til å beskrive en klasse av objekter med felles egenskaper.
 |URI|modelldcatno:ObjectType
 |Subklasse av|modelldcatno:ModelElement
 |Referanse|
@@ -309,7 +307,7 @@ Klasse som representerer modellen som skal utveksles.
 [cols="30s,70"]
 |===
 |Engelsk navn|Concept
-|Beskrivelse|Et begrep som er viktig for å forstå eller tolke modellen eller modellelementene.
+|Beskrivelse|Brukes til å beskrive et begrep som er viktig for å forstå eller tolke modellen eller modellelementene.
 |URI|skos:Concept
 |Referanse|
 |Status|Valgfri
@@ -331,7 +329,7 @@ Klasse som representerer modellen som skal utveksles.
 [cols="30s,70"]
 |===
 |Engelsk navn|Code
-|Beskrivelse|Navngitt og verdisatt element i et verdidomene for en kodeliste.
+|Beskrivelse|Brukes til å beskrive et navngitt og verdisatt element i et verdidomene for en kodeliste.
 |URI|modelldcatno:Code
 |Referanse|
 |Status|Valgfri
@@ -342,7 +340,7 @@ Klasse som representerer modellen som skal utveksles.
 [cols="30s,70"]
 |===
 |Engelsk navn|Composition
-|Beskrivelse|
+|Beskrivelse|Brukes til å beskrive en relasjon mellom to modellelementer, hvor et modellelement inngår som en del av et annet som representerer helheten, og der levetiden av delen kun eksisterer i levetiden til helhet.
 |URI|modelldcatno:Composition
 |Subklasse av|modelldcatno:Property
 |Referanse|
@@ -391,7 +389,7 @@ Klasse som representerer modellen som skal utveksles.
 [cols="30s,70"]
 |===
 |Engelsk navn|Choice
-|Beskrivelse|Egenskap som beskriver at kun ett element av et sett av valgbare elementer kan inngå i det bærende modellelement.
+|Beskrivelse|Brukes til å beskrive en egenskap som beskriver at kun ett element av et sett av valgbare elementer kan inngå i det bærende modellelement.
 |URI|modelldcatno:Choice
 |Subklasse av|modelldcatno:Property
 |Referanse|

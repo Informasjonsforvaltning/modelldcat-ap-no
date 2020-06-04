@@ -162,7 +162,6 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Beskrivelse| Referanse til en beslektet katalog som denne katalogen fysisk eller logisk er inkludert i.
 |Multiplisitet| 0..1
 |Status| Valgfri
-|Kommentar| Norsk utvidelse - Denne egenskapen er ikke eksplisitt tatt med i BRegDCAT-AP, men den var med i DCAT-AP-NO v.1.1 og i DCAT-AP v.2.0.0 som BRegDCAT-AP er basert på.
 |===
 
 ===== Modellkatalog: har del [[modellkatalog-har-del]]
@@ -175,5 +174,4 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Beskrivelse| Referanse til en beslektet katalog som er en del av den beskrevne katalogen.
 |Multiplisitet| 0..n
 |Status| Valgfri
-|Kommentar| Norsk utvidelse - Denne egenskapen er ikke eksplisitt tatt med i BRegDCAT-AP, men den var med i DCAT-AP-NO v.1.1 og i DCAT-AP v.2.0.0 som BRegDCAT-AP er basert på.
 |===

@@ -5,7 +5,7 @@
 
 === Aktør [[aktor]]
 
-Klassen _Aktør_ er obligatorisk. 
+Klassen _Aktør_ er obligatorisk.
 
 ==== Obligatoriske egenskaper for klassen _Aktør_
 
@@ -19,7 +19,6 @@ Klassen _Aktør_ er obligatorisk.
 |Beskrivelse| Navn på aktøren. Denne egenskapen kan gjentas for ulike versjoner av navnet (som navnet på forskjellige språk).
 |Multiplisitet| 1..n
 |Status| Obligatorisk
-|Kommentar| Norsk utvidelse. For parallelle språkversjoner av navnet, benyttes språk-tags.
 |===
 
 ==== Anbefalte egenskaper for klassen _Aktør_
@@ -34,7 +33,6 @@ Klassen _Aktør_ er obligatorisk.
 |Beskrivelse| Egenskap som angir organisasjonens identifikasjonsnummer, for eksempel i henhold til Enhetsregisterets organisasjonsnummer.
 |Multiplisitet| 0..1
 |Status| Anbefalt
-|Kommentar| Norsk utvidelse. Denne er ikke eksplisitt tatt med i BRegDCAT-AP, men var med i DCAT-AP-NO v.1.1 og allerede da som en norsk utvidelse.
 |===
 
 ===== Aktør: utgivertype [[aktor-utgivertype]]
@@ -47,5 +45,4 @@ Klassen _Aktør_ er obligatorisk.
 |Beskrivelse| Refererer til type aktør som gjør katalogen eller ressursen tilgjengelig.
 |Multiplisitet| 0..1
 |Status| Anbefalt
-|Kommentar| Norsk utvidelse. Denne er ikke eksplisitt tatt med i BRegDCAT-AP, men var med i DCAT-AP-NO v.1.1.
 |===
