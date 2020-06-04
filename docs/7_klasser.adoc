@@ -68,7 +68,6 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |URI|skos:ConceptScheme
 |Referanse|https://www.w3.org/TR/vocab-dcat/#Class:Concept_Scheme[https://www.w3.org/TR/vocab-dcat/#Class:Concept_Scheme]
 |Status|Obligatorisk
-|Kommentar|Norsk utvidelse i DCAT-AP-NO. Endret fra anbefalt til obligatorisk (allerede i DCAT-AP-NO v.1.1).
 |===
 
 == Anbefalte klasser i katalogdelen
@@ -139,7 +138,6 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |URI|skos:Concept
 |Referanse|https://www.w3.org/TR/vocab-dcat/#Class:Concept[https://www.w3.org/TR/vocab-dcat/#Class:Concept]
 |Status|Valgfri
-|Kommentar|Norsk utvidelse i DCAT-AP-NO.
 |===
 
 === Tidsrom [[klasse-tidsrom]]
