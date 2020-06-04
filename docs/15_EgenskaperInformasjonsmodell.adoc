@@ -212,7 +212,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 
 [cols="30s,70d"]
 |===
-|URI|dct:isPartOf
+|URI|dct:hasPart
 |Range|modelldcatno:InformationModel
 |Beskrivelse|Referanse til en annen modell som er en del av denne modellen.
 |Multiplisitet|0..n
