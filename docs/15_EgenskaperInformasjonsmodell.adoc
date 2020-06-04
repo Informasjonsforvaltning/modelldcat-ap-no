@@ -56,7 +56,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |===
 |URI|dct:publisher
 |Range|foaf:Agent
-|Beskrivelse|Referanse til en enhet (organisasjon) som er ansvarlig for å gjøre modellen tilgjengelig. Bør være autoritativ URI for enhet, sekundært organisasjonsnummer.
+|Beskrivelse|Referanse til en aktør (organisasjon) som er ansvarlig for å gjøre modellen tilgjengelig. Bør være autoritativ URI for aktøren, sekundært organisasjonsnummer.
 |Multiplisitet|1..1
 |Status|Obligatorisk
 |===
@@ -248,7 +248,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |===
 |URI|dct:creator
 |Range|foaf:Agent
-|Beskrivelse|Referanse til enhet som er produsent av modellen.
+|Beskrivelse|Referanse til aktøren som er produsent av modellen.
 |Multiplisitet|0..1
 |Status|Valgfri
 |===
