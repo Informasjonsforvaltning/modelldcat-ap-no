@@ -64,8 +64,8 @@ Klassen _Modellelement_ er anbefalt.
 |===
 |URI|dct:description
 |Range|rdfs:Literal
-|Beskrivelse|Fritekstbeskrivelse av modellelementet.
-|Multiplisitet|0..1
+|Beskrivelse|Fritekstbeskrivelse av modellelementet. Bør gjentas for parallelle språkversjoner.
+|Multiplisitet|0..n
 |Status|Valgfri
 |===
 

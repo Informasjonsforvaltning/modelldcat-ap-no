@@ -48,7 +48,7 @@ Klassen _Kode_ er anbefalt.
 |===
 |URI|dct:description
 |Range|rdfs:Literal
-|Beskrivelse|Fritekstbeskrivelse av koden.
-|Multiplisitet|0..1
+|Beskrivelse|Fritekstbeskrivelse av koden. Bør gjentas for parallelle språkversjoner.
+|Multiplisitet|0..n
 |Status|Valgfri
 |===
