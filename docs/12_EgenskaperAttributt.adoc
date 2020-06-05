@@ -2,7 +2,9 @@
 
 === Attributt [[attributt]]
 
-Klassen _Attributt_ er anbefalt
+Klassen _Attributt_ er anbefalt.
+
+Egenskapene i denne klassen er gjensidig utelukkende. 
 
 ==== Anbefalte egenskaper for klassen _Attributt_
 
