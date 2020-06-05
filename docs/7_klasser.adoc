@@ -35,6 +35,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |URI|dcat:Resource
 |Referanse|https://www.w3.org/TR/vocab-dcat-2/#Class:Resource[https://www.w3.org/TR/vocab-dcat-2/#Class:Resource]
 |Status|Obligatorisk
+|Kommentar|Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av spesialiseringene.
 |===
 
 === Literal [[klasse-literal]]
@@ -214,6 +215,7 @@ Klasse som representerer modellen som skal utveksles.
 |URI|modelldcatno:Property
 |Referanse|
 |Status|Anbefalt
+|Kommentar|Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av spesialiseringene.
 |===
 
 === Enkeltype [[klasse-enkeltype]]
@@ -250,6 +252,7 @@ Klasse som representerer modellen som skal utveksles.
 |Referanse|
 |Kommentar|Typer modellelementer er objekttype, rotobjekttype, kodeliste, enkeltype og datatype.
 |Status|Anbefalt
+|Kommentar|Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av spesialiseringene.
 |===
 
 === Objekttype [[klasse-objekttype]]

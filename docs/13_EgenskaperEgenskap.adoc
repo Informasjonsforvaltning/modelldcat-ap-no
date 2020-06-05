@@ -1,6 +1,8 @@
 === Egenskap [[egenskap]]
 
-Klassen _Egenskap_ er anbefalt
+Klassen _Egenskap_ er anbefalt.
+
+Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av spesialiseringene.
 
 ==== Obligatoriske egenskaper for klassen _Egenskap_
 

@@ -2,6 +2,8 @@
 
 Klassen _Modellelement_ er anbefalt.
 
+Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av spesialiseringene.
+
 ==== Obligatoriske egenskaper for klassen _Modellelement_
 
 
