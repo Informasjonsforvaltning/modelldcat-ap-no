@@ -235,6 +235,7 @@ modelldcatno:hasDataType rdf:type owl:ObjectProperty ;
 ###  https://data.norge.no/vocabulary/modelldcatno#hasGeneralConcept
 modelldcatno:hasGeneralConcept rdf:type owl:ObjectProperty ;
                                rdfs:subPropertyOf modelldcatno:hasType ;
+                               rdf:type owl:FunctionalProperty ;
                                rdfs:domain modelldcatno:Specialization ;
                                rdfs:range modelldcatno:ModelElement ;
                                rdfs:label "har generelt konsept"@nb ,
@@ -263,7 +264,6 @@ modelldcatno:hasObjectType rdf:type owl:ObjectProperty ;
 ###  https://data.norge.no/vocabulary/modelldcatno#hasOneOf
 modelldcatno:hasOneOf rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf modelldcatno:hasType ;
-                      rdf:type owl:FunctionalProperty ;
                       rdfs:domain modelldcatno:Choice ;
                       rdfs:range modelldcatno:ModelElement ;
                       rdfs:label "har en av"@nb ,
@@ -292,6 +292,7 @@ modelldcatno:hasSimpletype rdf:type owl:ObjectProperty ;
 ###  https://data.norge.no/vocabulary/modelldcatno#hasSupplier
 modelldcatno:hasSupplier rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf modelldcatno:hasType ;
+                         rdf:type owl:FunctionalProperty ;
                          rdfs:domain modelldcatno:Realization ;
                          rdfs:range modelldcatno:ModelElement ;
                          rdfs:label "har leverandør"@nb ,
@@ -309,6 +310,7 @@ modelldcatno:hasType rdf:type owl:ObjectProperty ;
 ###  https://data.norge.no/vocabulary/modelldcatno#hasValueFrom
 modelldcatno:hasValueFrom rdf:type owl:ObjectProperty ;
                           rdfs:subPropertyOf modelldcatno:hasType ;
+                          rdf:type owl:FunctionalProperty ;
                           rdfs:domain modelldcatno:Attribute ;
                           rdfs:range modelldcatno:CodeList ;
                           rdfs:label "har verdier fra"@nb ,
@@ -326,6 +328,7 @@ modelldcatno:model rdf:type owl:ObjectProperty ;
 ###  https://data.norge.no/vocabulary/modelldcatno#references
 modelldcatno:references rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf modelldcatno:hasType ;
+                        rdf:type owl:FunctionalProperty ;
                         rdfs:domain modelldcatno:Assosiation ;
                         rdfs:range modelldcatno:ModelElement ;
                         rdfs:label "references"@en ,
@@ -877,24 +880,7 @@ modelldcatno:Assosiation rdf:type owl:Class ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#Attribute
 modelldcatno:Attribute rdf:type owl:Class ;
-                       rdfs:subClassOf modelldcatno:Property ;
                        rdfs:subClassOf modelldcatno:Property ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty modelldcatno:hasDataType ;
-                                         owl:someValuesFrom modelldcatno:DataType
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty modelldcatno:hasObjectType ;
-                                         owl:someValuesFrom modelldcatno:ObjectType
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty modelldcatno:hasSimpletype ;
-                                         owl:someValuesFrom modelldcatno:SimpleType
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty modelldcatno:hasValueFrom ;
-                                         owl:someValuesFrom modelldcatno:CodeList
-                                       ] ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty modelldcatno:hasType ;
                                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
