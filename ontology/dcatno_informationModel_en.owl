@@ -329,7 +329,7 @@ modelldcatno:model rdf:type owl:ObjectProperty ;
 modelldcatno:references rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf modelldcatno:hasType ;
                         rdf:type owl:FunctionalProperty ;
-                        rdfs:domain modelldcatno:Assosiation ;
+                        rdfs:domain modelldcatno:Association ;
                         rdfs:range modelldcatno:ModelElement ;
                         rdfs:label "references"@en ,
                                    "refererer"@nb .
@@ -871,11 +871,11 @@ modelldcatno:Abstraction rdf:type owl:Class ;
                                     "Abstraksjon"@nb .
 
 
-###  https://data.norge.no/vocabulary/modelldcatno#Assosiation
-modelldcatno:Assosiation rdf:type owl:Class ;
+###  https://data.norge.no/vocabulary/modelldcatno#Association
+modelldcatno:Association rdf:type owl:Class ;
                          rdfs:subClassOf modelldcatno:Property ;
-                         rdfs:label "Assosiasjon"@nb ,
-                                    "Assosiation"@en .
+                         rdfs:label "Association"@en ,
+                                    "Assosiasjon"@nb .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#Attribute
@@ -1122,7 +1122,7 @@ modelldcatno:Specialization rdf:type owl:Class ;
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( modelldcatno:Abstraction
-                modelldcatno:Assosiation
+                modelldcatno:Association
                 modelldcatno:Attribute
                 modelldcatno:Choice
                 modelldcatno:Collection
