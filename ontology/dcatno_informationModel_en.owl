@@ -227,7 +227,9 @@ modelldcatno:containsObjectType rdf:type owl:ObjectProperty ;
 modelldcatno:formsSymmetryWith rdf:type owl:ObjectProperty ,
                                         owl:SymmetricProperty ;
                                rdfs:domain modelldcatno:Property ;
-                               rdfs:range modelldcatno:Property .
+                               rdfs:range modelldcatno:Property ;
+                               rdfs:label "Forms symmetry with"@en ,
+                                          "Utgjør symetrisk relasjon med"@nb .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#hasDataType
@@ -608,7 +610,9 @@ modelldcatno:sequenceNumber rdf:type owl:DatatypeProperty ;
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#symmetryLabel
-modelldcatno:symmetryLabel rdf:type owl:DatatypeProperty .
+modelldcatno:symmetryLabel rdf:type owl:DatatypeProperty ;
+                           rdfs:label "Egenskapspar-navn"@nb ,
+                                      "Symmetry Label"@en .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#typeDefinitionReference
