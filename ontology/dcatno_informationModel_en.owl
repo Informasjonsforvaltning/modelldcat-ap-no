@@ -289,6 +289,14 @@ modelldcatno:hasSimpletype rdf:type owl:ObjectProperty ;
                                       "has simple type"@en .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#hasSome
+modelldcatno:hasSome rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf modelldcatno:hasOneOf ;
+                     rdfs:comment "Brukes for å betegne at en valgmulighet ikke er ekskusiv, dvs. at man kan velge mer enn en."@nb ;
+                     rdfs:label "has some"@nb ,
+                                "kan ha"@nb .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#hasSupplier
 modelldcatno:hasSupplier rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf modelldcatno:hasType ;
