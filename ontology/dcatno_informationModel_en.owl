@@ -590,6 +590,18 @@ modelldcatno:modelElementBelongsToModule rdf:type owl:DatatypeProperty ,
                                                     "modelelementet tilhører modul"@nb .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#prepertyBelongsToModule
+modelldcatno:prepertyBelongsToModule rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain modelldcatno:Property ;
+                                     rdfs:range [ rdf:type rdfs:Datatype ;
+                                                  owl:unionOf ( rdfs:Literal
+                                                                xsd:anyURI
+                                                              )
+                                                ] ;
+                                     rdfs:label "Egenskap er hentet fra modul"@nb ,
+                                                "property belongs to module"@en .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#sequenceNumber
 modelldcatno:sequenceNumber rdf:type owl:DatatypeProperty ;
                             rdfs:domain modelldcatno:Property ;
