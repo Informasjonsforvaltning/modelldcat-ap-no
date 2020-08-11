@@ -592,9 +592,13 @@ modelldcatno:modelElementBelongsToModule rdf:type owl:DatatypeProperty ,
 
 ###  https://data.norge.no/vocabulary/modelldcatno#sequenceNumber
 modelldcatno:sequenceNumber rdf:type owl:DatatypeProperty ;
-                            rdfs:domain modelldcatno:Property ;
+                            rdfs:domain [ rdf:type owl:Class ;
+                                          owl:unionOf ( modelldcatno:Code
+                                                        modelldcatno:Property
+                                                      )
+                                        ] ;
                             rdfs:range xsd:nonNegativeInteger ;
-                            rdfs:comment "Der man har en modell der elementenes orden er vesentlig, f. eks. slik det jo ofte er i XML"@nb ;
+                            rdfs:comment "Der man har en modell der elementenes orden er vesentlig, f. eks. slik det kan være i XML eller en kodeliste."@nb ;
                             rdfs:label "Sekvensnummer"@nb ,
                                        "sequence number"@en .
 
