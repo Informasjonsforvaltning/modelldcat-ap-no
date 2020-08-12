@@ -1,5 +1,4 @@
 @prefix : <https://data.norge.no/vocabulary/modelldcatno/> .
-@prefix ex: <http://example.com/test#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -12,6 +11,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix exbidir: <http://example.com/test#> .
 @prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
 @base <https://data.norge.no/vocabulary/modelldcatno> .
 
@@ -1170,67 +1170,67 @@ modelldcatno:Specialization rdf:type owl:Class ;
 #################################################################
 
 ###  http://example.com/test#A
-ex:A rdf:type owl:NamedIndividual ,
-              modelldcatno:ObjectType ;
-     modelldcatno:hasProperty ex:ab .
+exbidir:A rdf:type owl:NamedIndividual ,
+                   modelldcatno:ObjectType ;
+          modelldcatno:hasProperty exbidir:ab .
 
 
 ###  http://example.com/test#B
-ex:B rdf:type owl:NamedIndividual ,
-              modelldcatno:ObjectType ;
-     modelldcatno:hasProperty ex:ba .
+exbidir:B rdf:type owl:NamedIndividual ,
+                   modelldcatno:ObjectType ;
+          modelldcatno:hasProperty exbidir:ba .
 
 
 ###  http://example.com/test#C
-ex:C rdf:type owl:NamedIndividual ,
-              modelldcatno:ObjectType ;
-     modelldcatno:hasProperty ex:cd .
+exbidir:C rdf:type owl:NamedIndividual ,
+                   modelldcatno:ObjectType ;
+          modelldcatno:hasProperty exbidir:cd .
 
 
 ###  http://example.com/test#D
-ex:D rdf:type owl:NamedIndividual ,
-              modelldcatno:ObjectType ;
-     modelldcatno:hasProperty ex:dc .
+exbidir:D rdf:type owl:NamedIndividual ,
+                   modelldcatno:ObjectType ;
+          modelldcatno:hasProperty exbidir:dc .
 
 
 ###  http://example.com/test#ab
-ex:ab rdf:type owl:NamedIndividual ,
-               modelldcatno:Role ;
-      modelldcatno:formsSymmetryWith ex:ba ;
-      modelldcatno:hasObjectType ex:B ;
-      dct:title "B sin rolle" ;
-      xsd:maxOccurs "*"^^xsd:string ;
-      xsd:minOccurs "1"^^xsd:int ;
-      modelldcatno:symmetryLabel "Navn på relasjonen (Kan settes på ab og/eller ba)"@nb .
+exbidir:ab rdf:type owl:NamedIndividual ,
+                    modelldcatno:Role ;
+           modelldcatno:formsSymmetryWith exbidir:ba ;
+           modelldcatno:hasObjectType exbidir:B ;
+           dct:title "B sin rolle" ;
+           xsd:maxOccurs "*"^^xsd:string ;
+           xsd:minOccurs "1"^^xsd:int ;
+           modelldcatno:symmetryLabel "Navn på relasjonen (Kan settes på ab og/eller ba)"@nb .
 
 
 ###  http://example.com/test#ba
-ex:ba rdf:type owl:NamedIndividual ,
-               modelldcatno:Role ;
-      modelldcatno:hasObjectType ex:A ;
-      dct:title "A sin rolle" ;
-      xsd:maxOccurs "1"^^xsd:int ;
-      xsd:minOccurs "0"^^xsd:int .
+exbidir:ba rdf:type owl:NamedIndividual ,
+                    modelldcatno:Role ;
+           modelldcatno:hasObjectType exbidir:A ;
+           dct:title "A sin rolle" ;
+           xsd:maxOccurs "1"^^xsd:int ;
+           xsd:minOccurs "0"^^xsd:int .
 
 
 ###  http://example.com/test#cd
-ex:cd rdf:type owl:NamedIndividual ,
-               modelldcatno:Composition ;
-      modelldcatno:contains ex:D ;
-      modelldcatno:formsSymmetryWith ex:dc ;
-      dct:title "D sin rolle" ;
-      xsd:maxOccurs "*"^^xsd:string ;
-      xsd:minOccurs "1"^^xsd:int ;
-      modelldcatno:symmetryLabel "Relasjonen C D"@nb .
+exbidir:cd rdf:type owl:NamedIndividual ,
+                    modelldcatno:Composition ;
+           modelldcatno:contains exbidir:D ;
+           modelldcatno:formsSymmetryWith exbidir:dc ;
+           dct:title "D sin rolle" ;
+           xsd:maxOccurs "*"^^xsd:string ;
+           xsd:minOccurs "1"^^xsd:int ;
+           modelldcatno:symmetryLabel "Relasjonen C D"@nb .
 
 
 ###  http://example.com/test#dc
-ex:dc rdf:type owl:NamedIndividual ,
-               modelldcatno:Role ;
-      modelldcatno:hasObjectType ex:C ;
-      dct:title "C sin rolle" ;
-      xsd:maxOccurs "1"^^xsd:int ;
-      xsd:minOccurs "0"^^xsd:int .
+exbidir:dc rdf:type owl:NamedIndividual ,
+                    modelldcatno:Role ;
+           modelldcatno:hasObjectType exbidir:C ;
+           dct:title "C sin rolle" ;
+           xsd:maxOccurs "1"^^xsd:int ;
+           xsd:minOccurs "0"^^xsd:int .
 
 
 #################################################################
