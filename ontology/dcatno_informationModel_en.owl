@@ -1172,7 +1172,9 @@ modelldcatno:Specialization rdf:type owl:Class ;
 ###  http://example.com/test#A
 exbidir:A rdf:type owl:NamedIndividual ,
                    modelldcatno:ObjectType ;
-          modelldcatno:hasProperty exbidir:ab .
+          modelldcatno:hasProperty exbidir:ab ;
+          rdfs:comment "Denne grafen viser to enveis forenklede relasjoner, satt sammen, for å beskrive en tovegsrelasjon."@nb ;
+          rdfs:seeAlso <https://www.dropbox.com/s/4agk1n05f46mwnv/bidireksjonal.tiff?dl=0> .
 
 
 ###  http://example.com/test#B
