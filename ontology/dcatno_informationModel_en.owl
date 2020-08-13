@@ -1176,9 +1176,10 @@ pass:Ingenoppgaver rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/InntektsårType
 pass:InntektsårType rdf:type owl:NamedIndividual ,
                              modelldcatno:SimpleType ;
+                    dct:description "Lokal definert enkeltype"@nb ;
+                    dct:title "Inntektsår"@nb ;
                     xsd:totalDigits "4"^^xsd:nonNegativeInteger ;
-                    modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#integer"^^xsd:anyURI ;
-                    rdfs:comment "Lokal definert enkeltype"@nb .
+                    modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#integer"^^xsd:anyURI .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/KontaktOss
@@ -1189,17 +1190,17 @@ pass:KontaktOss rdf:type owl:NamedIndividual ,
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/KontaktinformasjonType
 pass:KontaktinformasjonType rdf:type owl:NamedIndividual ,
-                                     modelldcatno:ModelElement ;
+                                     modelldcatno:DataType ;
                             modelldcatno:hasProperty pass:navn ,
                                                      pass:telefonnummer ,
                                                      pass:varselEpostadresse ,
                                                      pass:varselSmsMobilnummer ;
-                            modelldcatno:modelElementType "datatype"^^xsd:string .
+                            dct:title "KontaktinformasjonType"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/Leveranse
 pass:Leveranse rdf:type owl:NamedIndividual ,
-                        modelldcatno:ModelElement ;
+                        modelldcatno:ObjectType ;
                modelldcatno:hasProperty pass:inntektsår ,
                                         pass:kildesystem ,
                                         pass:leveransetype ,
@@ -1207,7 +1208,7 @@ pass:Leveranse rdf:type owl:NamedIndividual ,
                                         pass:oppgavegiverRolle ,
                                         pass:oppgavegiversLeveransereferanse ,
                                         pass:oppgavesummeringRolle ;
-               modelldcatno:modelElementType "objekttype"^^xsd:string .
+               dct:title "Leveranse"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/LeveranseKategori
@@ -1215,32 +1216,32 @@ pass:LeveranseKategori rdf:type owl:NamedIndividual ,
                                 modelldcatno:CodeList ;
                        modelldcatno:containsCode pass:Ingenoppgaver ,
                                                  pass:Ordinær ;
-                       modelldcatno:modelElementType "kodeliste" .
+                       dct:title "Leveransetype"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/Melding
 pass:Melding rdf:type owl:NamedIndividual ,
                       modelldcatno:RootObjectType ;
              modelldcatno:hasProperty pass:leveranseRolle ;
-             rdfs:label "Melding"@nb .
+             dct:description "En rapport  over utgifter i forbindelse med barnepass"@nb ;
+             dct:title "Melding"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/NavnType
 pass:NavnType rdf:type owl:NamedIndividual ,
                        modelldcatno:SimpleType ;
+              dct:description "Lokalt definert enekelttype"@nb ;
+              dct:title "Navn"@nb ;
               xsd:maxLength "100"^^xsd:nonNegativeInteger ;
-              modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI ;
-              rdfs:comment "Lokalt definert enkelttype"@nb ;
-              modelldcatno:modelElementType "enkeltype" .
+              modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/OppgaveBarnepass
 pass:OppgaveBarnepass rdf:type owl:NamedIndividual ,
-                               modelldcatno:ModelElement ;
+                               modelldcatno:ObjectType ;
                       modelldcatno:hasProperty pass:oppgaveeierRolle ,
                                                pass:påløptBeløp ;
-                      rdfs:label "Oppgave barnepass"@nb ;
-                      modelldcatno:modelElementType "objekttype"^^xsd:string .
+                      dct:title "Oppgave barnepass"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/OppgaveOverPassOgStellAvBarn
@@ -1283,6 +1284,7 @@ pass:Oppgaveeier rdf:type owl:NamedIndividual ,
                           modelldcatno:ModelElement ;
                  modelldcatno:hasProperty pass:fødselsnummer ,
                                           pass:oppgaveeiernavn ;
+                 dct:title "Oppgaveeier"@nb ;
                  modelldcatno:modelElementType "objekttype"^^xsd:string .
 
 
@@ -1292,6 +1294,7 @@ pass:Oppgavegiver rdf:type owl:NamedIndividual ,
                   modelldcatno:hasProperty pass:kontaktinformasjon ,
                                            pass:organisasjonsnavn ,
                                            pass:organisasjonsnummer ;
+                  dct:title "Oppgavegiver"@nb ;
                   modelldcatno:modelElementType "objekttype"^^xsd:string .
 
 
@@ -1300,12 +1303,14 @@ pass:Oppgaveoppsumering rdf:type owl:NamedIndividual ,
                                  modelldcatno:ObjectType ;
                         modelldcatno:hasProperty pass:antallOppgaver ,
                                                  pass:sumBeløp ;
+                        dct:title "Oppgaveoppsumering"@nb ;
                         modelldcatno:modelElementType "objekttype"^^xsd:string .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/Ordinær
 pass:Ordinær rdf:type owl:NamedIndividual ,
-                      modelldcatno:Code .
+                      modelldcatno:Code ;
+             dct:title "Ordinær"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/SkattKatalog
@@ -1327,6 +1332,7 @@ pass:SkattKatalog rdf:type owl:NamedIndividual ,
 pass:antallOppgaver rdf:type owl:NamedIndividual ,
                              modelldcatno:Attribute ;
                     modelldcatno:hasSimpletype skebase:AntallType ;
+                    dct:title "antallOppgaver"@nb ;
                     xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                     xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
@@ -1335,6 +1341,7 @@ pass:antallOppgaver rdf:type owl:NamedIndividual ,
 pass:fødselsnummer rdf:type owl:NamedIndividual ,
                             modelldcatno:Attribute ;
                    modelldcatno:hasSimpletype skebase:FødselsnummerType ;
+                   dct:title "fødselsnummer"@nb ;
                    xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                    xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
@@ -1349,13 +1356,16 @@ pass:gyldighetsintervall rdf:type owl:NamedIndividual ,
 pass:inntektsår rdf:type owl:NamedIndividual ,
                          modelldcatno:Attribute ;
                 modelldcatno:hasSimpletype pass:InntektsårType ;
+                dct:title "inntektsår"@nb ;
                 xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                 xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/kildesystem
 pass:kildesystem rdf:type owl:NamedIndividual ,
-                          modelldcatno:Property ;
+                          modelldcatno:Attribute ;
+                 modelldcatno:hasSimpletype skebase:KildesystemType ;
+                 dct:title "kildesystem"@nb ;
                  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                  xsd:minOccurs "0"^^xsd:nonNegativeInteger .
 
@@ -1363,33 +1373,39 @@ pass:kildesystem rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/kontaktinformasjon
 pass:kontaktinformasjon rdf:type owl:NamedIndividual ,
                                  modelldcatno:Property ;
+                        dct:title "kontaktinformasjon"@nb ;
                         xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                         xsd:minOccurs "0"^^xsd:nonNegativeInteger .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/leveranseRolle
 pass:leveranseRolle rdf:type owl:NamedIndividual ,
-                             modelldcatno:Property ;
-                    xsd:maxOccurs "*"^^rdfs:Literal ;
+                             modelldcatno:Role ;
+                    modelldcatno:hasObjectType pass:Leveranse ;
+                    dct:title "leveranse"@nb ;
+                    xsd:maxOccurs "*"^^xsd:string ;
                     xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/leveransetype
 pass:leveransetype rdf:type owl:NamedIndividual ,
                             modelldcatno:Property ;
+                   dct:title "Leveranse"@nb ;
                    xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                    xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/navn
 pass:navn rdf:type owl:NamedIndividual ,
-                   modelldcatno:Property .
+                   modelldcatno:Property ;
+          dct:title "oppgavesummering"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/oppgaveRolle
 pass:oppgaveRolle rdf:type owl:NamedIndividual ,
                            modelldcatno:Role ;
                   modelldcatno:hasObjectType pass:OppgaveBarnepass ;
+                  dct:title "oppgave"@nb ;
                   xsd:maxOccurs "*"^^rdfs:Literal ;
                   xsd:minOccurs "0"^^xsd:nonNegativeInteger .
 
@@ -1397,6 +1413,7 @@ pass:oppgaveRolle rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/oppgaveeierRolle
 pass:oppgaveeierRolle rdf:type owl:NamedIndividual ,
                                modelldcatno:Property ;
+                      dct:title "oppgaveeier"@nb ;
                       xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                       xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
@@ -1404,6 +1421,7 @@ pass:oppgaveeierRolle rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/oppgaveeiernavn
 pass:oppgaveeiernavn rdf:type owl:NamedIndividual ,
                               modelldcatno:Property ;
+                     dct:title "oppgaveeiernavn"@nb ;
                      xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                      xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
@@ -1411,6 +1429,7 @@ pass:oppgaveeiernavn rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/oppgavegiverRolle
 pass:oppgavegiverRolle rdf:type owl:NamedIndividual ,
                                 modelldcatno:Property ;
+                       dct:title "oppgavegiverRolle"@nb ;
                        xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                        xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
@@ -1419,6 +1438,7 @@ pass:oppgavegiverRolle rdf:type owl:NamedIndividual ,
 pass:oppgavegiversLeveransereferanse rdf:type owl:NamedIndividual ,
                                               modelldcatno:Attribute ;
                                      modelldcatno:hasSimpletype skebase:LeveranseReferanseType ;
+                                     dct:title "oppgavegiversLeveransereferanse"@nb ;
                                      xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                                      xsd:minOccurs "0"^^xsd:nonNegativeInteger .
 
@@ -1426,6 +1446,7 @@ pass:oppgavegiversLeveransereferanse rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/oppgavesummeringRolle
 pass:oppgavesummeringRolle rdf:type owl:NamedIndividual ,
                                     modelldcatno:Property ;
+                           dct:title "oppgavesummering"@nb ;
                            xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                            xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
@@ -1433,6 +1454,7 @@ pass:oppgavesummeringRolle rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/organisasjonsnavn
 pass:organisasjonsnavn rdf:type owl:NamedIndividual ,
                                 modelldcatno:Property ;
+                       dct:title "organisasjonsnavn"@nb ;
                        xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                        xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
@@ -1440,6 +1462,7 @@ pass:organisasjonsnavn rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/organisasjonsnummer
 pass:organisasjonsnummer rdf:type owl:NamedIndividual ,
                                   modelldcatno:Property ;
+                         dct:title "organisasjonsnummer"@nb ;
                          xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                          xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
@@ -1447,6 +1470,7 @@ pass:organisasjonsnummer rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/påløptBeløp
 pass:påløptBeløp rdf:type owl:NamedIndividual ,
                           modelldcatno:Property ;
+                 dct:title "påløptBeløp\"@nb"^^xsd:string ;
                  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                  xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
@@ -1455,6 +1479,7 @@ pass:påløptBeløp rdf:type owl:NamedIndividual ,
 pass:sumBeløp rdf:type owl:NamedIndividual ,
                        modelldcatno:Attribute ;
               modelldcatno:hasSimpletype skebase:BeløpType ;
+              dct:title "sumBeløp"@nb ;
               xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
               xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
@@ -1462,7 +1487,8 @@ pass:sumBeløp rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/telefonnummer
 pass:telefonnummer rdf:type owl:NamedIndividual ,
                             modelldcatno:Attribute ;
-                   modelldcatno:hasSimpletype skebase:TelefonnummerType .
+                   modelldcatno:hasSimpletype skebase:TelefonnummerType ;
+                   dct:title "telefonnummer"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/utgiver
@@ -1474,103 +1500,131 @@ pass:utgiver rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/varselEpostadresse
 pass:varselEpostadresse rdf:type owl:NamedIndividual ,
                                  modelldcatno:Attribute ;
-                        modelldcatno:hasSimpletype skebase:EpostadresseType .
+                        modelldcatno:hasSimpletype skebase:EpostadresseType ;
+                        dct:title "varselEpostadresse"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/varselSmsMobilnummer
 pass:varselSmsMobilnummer rdf:type owl:NamedIndividual ,
                                    modelldcatno:Attribute ;
-                          modelldcatno:hasSimpletype skebase:TelefonnummerType .
+                          modelldcatno:hasSimpletype skebase:TelefonnummerType ;
+                          dct:title "Ingenoppgaver"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/AntallType
 skebase:AntallType rdf:type owl:NamedIndividual ,
                             modelldcatno:SimpleType ;
+                   dct:title "Antall"@nb ;
                    xsd:maxInclusive "9223372036854775807"^^xsd:int ;
                    xsd:minInclusive "-9223372036854775808"^^xsd:int ;
+                   modelldcatno:belongsToModule "TyperForGrunnlagsdata"@nb ;
                    modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#long"^^xsd:anyURI .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/BeløpSomHeltallType
 skebase:BeløpSomHeltallType rdf:type owl:NamedIndividual ,
                                      modelldcatno:SimpleType ;
+                            dct:title "BeløpSomHeltall"@nb ;
+                            modelldcatno:belongsToModule "TyperForGrunnlagsdata"@nb ;
                             modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#integer"^^xsd:anyURI .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/BeløpType
 skebase:BeløpType rdf:type owl:NamedIndividual ,
                            modelldcatno:SimpleType ;
+                  dct:title "Beløp"@nb ;
                   xsd:minInclusive 0 ;
+                  modelldcatno:belongsToModule "TyperForGrunnlagsdata"@nb ;
                   modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#integer"^^xsd:anyURI .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/BoolskType
 skebase:BoolskType rdf:type owl:NamedIndividual ,
                             modelldcatno:SimpleType ;
+                   dct:title "BoolskType"@nb ;
+                   modelldcatno:belongsToModule "TyperForGrunnlagsdata"@nb ;
                    modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#boolean"^^xsd:anyURI .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/DatoType
 skebase:DatoType rdf:type owl:NamedIndividual ,
                           modelldcatno:SimpleType ;
+                 dct:title "Dato"@nb ;
+                 modelldcatno:belongsToModule "TyperForGrunnlagsdata"@nb ;
                  modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#date"^^xsd:anyURI .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/EpostadresseType
 skebase:EpostadresseType rdf:type owl:NamedIndividual ,
                                   modelldcatno:SimpleType ;
+                         dct:title "Epostadresse"@nb ;
                          xsd:maxLength "254"^^xsd:nonNegativeInteger ;
+                         modelldcatno:belongsToModule "TyperForGrunnlagsdata"@nb ;
                          modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/FødselsnummerType
 skebase:FødselsnummerType rdf:type owl:NamedIndividual ,
                                    modelldcatno:SimpleType ;
+                          dct:title "Fødselsnummer"@nb ;
                           xsd:length "11"^^xsd:nonNegativeInteger ;
                           xsd:pattern "[0-9]+"^^xsd:string ;
+                          modelldcatno:belongsToModule "TyperForGrunnlagsdata"@nb ;
                           modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/KildesystemType
 skebase:KildesystemType rdf:type owl:NamedIndividual ,
                                  modelldcatno:SimpleType ;
+                        dct:title "Kildesystem"@nb ;
                         xsd:maxLength "100"^^xsd:nonNegativeInteger ;
+                        modelldcatno:belongsToModule "TyperForGrunnlagsdata"@nb ;
                         modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/LeveranseReferanseType
 skebase:LeveranseReferanseType rdf:type owl:NamedIndividual ,
                                         modelldcatno:SimpleType ;
+                               dct:title "LeveranseReferanseType"@nb ;
                                xsd:maxLength "100"^^xsd:nonNegativeInteger ;
+                               modelldcatno:belongsToModule "TyperForGrunnlagsdata"@nb ;
                                modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/OrganisasjonsnavnType
 skebase:OrganisasjonsnavnType rdf:type owl:NamedIndividual ,
                                        modelldcatno:SimpleType ;
+                              dct:title "OrganisasjonsnavnType"@nb ;
                               xsd:maxLength "100"^^xsd:int ;
+                              modelldcatno:belongsToModule "TyperForGrunnlagsdata"@nb ;
                               modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/OrganisasjonsnummerType
 skebase:OrganisasjonsnummerType rdf:type owl:NamedIndividual ,
                                          modelldcatno:SimpleType ;
+                                dct:title "Organisasjonsnummer"@nb ;
                                 xsd:length "9"^^xsd:nonNegativeInteger ;
                                 xsd:pattern "[0-9]+"^^xsd:string ;
+                                modelldcatno:belongsToModule "TyperForGrunnlagsdata"@nb ;
                                 modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/TekstType
 skebase:TekstType rdf:type owl:NamedIndividual ,
                            modelldcatno:SimpleType ;
+                  dct:title "Tekst"@nb ;
                   xsd:maxLength "4000"^^xsd:int ;
+                  modelldcatno:belongsToModule "TyperForGrunnlagsdata"@nb ;
                   modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/TelefonnummerType
 skebase:TelefonnummerType rdf:type owl:NamedIndividual ,
                                    modelldcatno:SimpleType ;
+                          dct:title "Telefonnummer"@nb ;
                           xsd:maxLength "20"^^xsd:nonNegativeInteger ;
+                          modelldcatno:belongsToModule "TyperForGrunnlagsdata"@nb ;
                           modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI ;
                           modelldcatno:modelElementType "enkeltype" .
 
@@ -1578,6 +1632,8 @@ skebase:TelefonnummerType rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/basetyper/ÅrstallType
 skebase:ÅrstallType rdf:type owl:NamedIndividual ,
                              modelldcatno:SimpleType ;
+                    dct:title "Årstall"@nb ;
+                    modelldcatno:belongsToModule "TyperForGrunnlagsdata"@nb ;
                     modelldcatno:typeDefinitionReference "http://www.w3.org/2001/XMLSchema#gYear"^^xsd:anyURI ;
                     modelldcatno:modelElementType "enkeltype" .
 
@@ -1585,24 +1641,28 @@ skebase:ÅrstallType rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/ArbeidTrygdOgPensjon
 ssg:ArbeidTrygdOgPensjon rdf:type owl:NamedIndividual ,
                                   modelldcatno:ModelElement ;
+                         dct:title "ArbeidTrygdOgPensjon"@nb ;
                          modelldcatno:modelElementType "objectType" .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/BankLånOgForsikring
 ssg:BankLånOgForsikring rdf:type owl:NamedIndividual ,
                                  modelldcatno:ModelElement ;
+                        dct:title "BankLånOgForsikring"@nb ;
                         modelldcatno:modelElementType "objectType" .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/EiendelerOgFasteEiendommer
 ssg:EiendelerOgFasteEiendommer rdf:type owl:NamedIndividual ,
                                         modelldcatno:ModelElement ;
+                               dct:title "EiendelerOgFasteEiendommer"@nb ;
                                modelldcatno:modelElementType "objectType" .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/Finans
 ssg:Finans rdf:type owl:NamedIndividual ,
                     modelldcatno:ModelElement ;
+           dct:title "Finans"@nb ;
            modelldcatno:modelElementType "objectType" .
 
 
@@ -1612,12 +1672,14 @@ ssg:Generisk rdf:type owl:NamedIndividual ,
              modelldcatno:hasProperty ssg:generiskBeløp ,
                                       ssg:kildebeskrivelse ,
                                       ssg:kildenavn ;
+             dct:title "Generisk"@nb ;
              modelldcatno:modelElementType "objectType" .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/Spesifisering
 ssg:Spesifisering rdf:type owl:NamedIndividual ,
                            modelldcatno:ModelElement ;
+                  dct:title "Spesifisering"@nb ;
                   modelldcatno:modelElementType "objectType" .
 
 
@@ -1633,6 +1695,7 @@ ssg:SpesifisertSummertSkattegrunnlag rdf:type owl:NamedIndividual ,
                                                               ssg:skjønnsfastsatt ,
                                                               ssg:svalbardGrunnlag ,
                                                               ssg:svalbardSkjønnsfastsatt ;
+                                     dct:title "SpesifisertSummertSkattegrunnlag"@nb ;
                                      modelldcatno:modelElementType "rootObjectType" .
 
 
@@ -1659,12 +1722,14 @@ ssg:SummertSkattegrunnlagsobjekt rdf:type owl:NamedIndividual ,
                                                           ssg:kategori ,
                                                           ssg:spesifisering ,
                                                           ssg:tekniskNavn ;
+                                 dct:title "SummertSkattegrunnlagsobjekt"@nb ;
                                  modelldcatno:modelElementType "objectType" .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/beløp
 ssg:beløp rdf:type owl:NamedIndividual ,
                    modelldcatno:Property ;
+          dct:title "beløp"@nb ;
           xsd:maxOccurs "1"^^xsd:int ;
           xsd:minOccurs "1"^^xsd:int .
 
@@ -1672,6 +1737,7 @@ ssg:beløp rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/generiskBeløp
 ssg:generiskBeløp rdf:type owl:NamedIndividual ,
                            modelldcatno:Property ;
+                  dct:title "generiskBeløp"@nb ;
                   xsd:maxOccurs "1"^^xsd:int ;
                   xsd:minOccurs "0"^^xsd:int .
 
@@ -1679,6 +1745,7 @@ ssg:generiskBeløp rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/grunnlag
 ssg:grunnlag rdf:type owl:NamedIndividual ,
                       modelldcatno:Property ;
+             dct:title "grunnlag"@nb ;
              xsd:maxOccurs "*"^^xsd:string ;
              xsd:minOccurs "0"^^xsd:int .
 
@@ -1686,6 +1753,7 @@ ssg:grunnlag rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/inntektsår
 ssg:inntektsår rdf:type owl:NamedIndividual ,
                         modelldcatno:Property ;
+               dct:title "inntektsår"@nb ;
                xsd:maxOccurs "1"^^xsd:int ;
                xsd:minOccurs "1"^^xsd:int .
 
@@ -1698,6 +1766,7 @@ ssg:katalogdelSSG rdf:type owl:NamedIndividual ;
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/kategori
 ssg:kategori rdf:type owl:NamedIndividual ,
                       modelldcatno:Property ;
+             dct:title "kategori"@nb ;
              xsd:maxOccurs "*"^^xsd:string ;
              xsd:minOccurs "0"^^xsd:int .
 
@@ -1705,6 +1774,7 @@ ssg:kategori rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/kildebeskrivelse
 ssg:kildebeskrivelse rdf:type owl:NamedIndividual ,
                               modelldcatno:Property ;
+                     dct:title "kildebeskrivelse "@nb ;
                      xsd:minOccurs "0"^^xsd:int ,
                                    "1"^^xsd:int .
 
@@ -1712,6 +1782,7 @@ ssg:kildebeskrivelse rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/kildenavn
 ssg:kildenavn rdf:type owl:NamedIndividual ,
                        modelldcatno:Property ;
+              dct:title "kildenavn"@nb ;
               xsd:maxOccurs "1"^^xsd:int ;
               xsd:minOccurs "0"^^xsd:int .
 
@@ -1719,6 +1790,7 @@ ssg:kildenavn rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/kildeskattPåLønnGrunnlag
 ssg:kildeskattPåLønnGrunnlag rdf:type owl:NamedIndividual ,
                                       modelldcatno:Property ;
+                             dct:title "kildeskattPåLønnGrunnlag"@nb ;
                              xsd:maxOccurs "*"^^xsd:string ;
                              xsd:minOccurs "0"^^xsd:int .
 
@@ -1726,6 +1798,7 @@ ssg:kildeskattPåLønnGrunnlag rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/personidentifikator
 ssg:personidentifikator rdf:type owl:NamedIndividual ,
                                  modelldcatno:Property ;
+                        dct:title "personidentifikator"@nb ;
                         xsd:maxOccurs "1"^^xsd:int ;
                         xsd:minOccurs "1"^^xsd:int .
 
@@ -1733,6 +1806,7 @@ ssg:personidentifikator rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/skatteoppgjørsdato
 ssg:skatteoppgjørsdato rdf:type owl:NamedIndividual ,
                                 modelldcatno:Property ;
+                       dct:title "skatteoppgjørsdato"@nb ;
                        xsd:maxOccurs "1"^^xsd:int ;
                        xsd:minOccurs "0"^^xsd:int .
 
@@ -1740,6 +1814,7 @@ ssg:skatteoppgjørsdato rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/skjermet
 ssg:skjermet rdf:type owl:NamedIndividual ,
                       modelldcatno:Property ;
+             dct:title "skjermet"@nb ;
              xsd:maxOccurs "1"^^xsd:int ;
              xsd:minOccurs "1"^^xsd:int .
 
@@ -1747,18 +1822,21 @@ ssg:skjermet rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/skjønnsfastsatt
 ssg:skjønnsfastsatt rdf:type owl:NamedIndividual ,
                              modelldcatno:Property ;
+                    dct:title "skjønnsfastsatt"@nb ;
                     xsd:maxOccurs "1"^^xsd:int ;
                     xsd:minOccurs "0"^^xsd:int .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/spesifisering
 ssg:spesifisering rdf:type owl:NamedIndividual ,
-                           modelldcatno:Property .
+                           modelldcatno:Property ;
+                  dct:title "spesifisering"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/svalbardGrunnlag
 ssg:svalbardGrunnlag rdf:type owl:NamedIndividual ,
                               modelldcatno:Property ;
+                     dct:title "svalbardGrunnlag"@nb ;
                      xsd:maxOccurs "*"^^xsd:string ;
                      xsd:minOccurs "1"^^xsd:int .
 
@@ -1766,6 +1844,7 @@ ssg:svalbardGrunnlag rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/svalbardSkjønnsfastsatt
 ssg:svalbardSkjønnsfastsatt rdf:type owl:NamedIndividual ,
                                      modelldcatno:Property ;
+                            dct:title "svalbardSkjønnsfastsatt"@nb ;
                             xsd:maxOccurs "1"^^xsd:int ;
                             xsd:minOccurs "0"^^xsd:int .
 
@@ -1773,6 +1852,7 @@ ssg:svalbardSkjønnsfastsatt rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/tekniskNavn
 ssg:tekniskNavn rdf:type owl:NamedIndividual ,
                          modelldcatno:Property ;
+                dct:title "tekniskNavn"@nb ;
                 xsd:maxOccurs "1"^^xsd:int ;
                 xsd:minOccurs "1"^^xsd:int .
 
