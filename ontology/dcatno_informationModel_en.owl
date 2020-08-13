@@ -11,6 +11,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix exbidir: <http://example.com/test#> .
 @prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
 @base <https://data.norge.no/vocabulary/modelldcatno> .
 
@@ -568,6 +569,23 @@ foaf:name rdf:type owl:DatatypeProperty ;
                      "navn"@nb .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#belongsToModule
+modelldcatno:belongsToModule rdf:type owl:DatatypeProperty ,
+                                      owl:FunctionalProperty ;
+                             rdfs:domain [ rdf:type owl:Class ;
+                                           owl:unionOf ( modelldcatno:ModelElement
+                                                         modelldcatno:Property
+                                                       )
+                                         ] ;
+                             rdfs:range [ rdf:type rdfs:Datatype ;
+                                          owl:unionOf ( rdfs:Literal
+                                                        xsd:anyURI
+                                                      )
+                                        ] ;
+                             rdfs:label "belongs to module"@en ,
+                                        "konseptet tilhører modul"@nb .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#informationModelIdentifier
 modelldcatno:informationModelIdentifier rdf:type owl:DatatypeProperty ;
                                         rdfs:domain modelldcatno:InformationModel ;
@@ -575,31 +593,6 @@ modelldcatno:informationModelIdentifier rdf:type owl:DatatypeProperty ;
                                         rdfs:isDefinedBy dct:identifier ;
                                         rdfs:label "informasjonsmodell-identifikator"@nb ,
                                                    "information model identifier"@en .
-
-
-###  https://data.norge.no/vocabulary/modelldcatno#modelElementBelongsToModule
-modelldcatno:modelElementBelongsToModule rdf:type owl:DatatypeProperty ,
-                                                  owl:FunctionalProperty ;
-                                         rdfs:domain modelldcatno:ModelElement ;
-                                         rdfs:range [ rdf:type rdfs:Datatype ;
-                                                      owl:unionOf ( rdfs:Literal
-                                                                    xsd:anyURI
-                                                                  )
-                                                    ] ;
-                                         rdfs:label "model element belongs to module"@en ,
-                                                    "modelelementet tilhører modul"@nb .
-
-
-###  https://data.norge.no/vocabulary/modelldcatno#prepertyBelongsToModule
-modelldcatno:prepertyBelongsToModule rdf:type owl:DatatypeProperty ;
-                                     rdfs:domain modelldcatno:Property ;
-                                     rdfs:range [ rdf:type rdfs:Datatype ;
-                                                  owl:unionOf ( rdfs:Literal
-                                                                xsd:anyURI
-                                                              )
-                                                ] ;
-                                     rdfs:label "Egenskap er hentet fra modul"@nb ,
-                                                "property belongs to module"@en .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#sequenceNumber
