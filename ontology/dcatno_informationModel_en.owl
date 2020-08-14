@@ -1248,9 +1248,11 @@ pass:OppgaveBarnepass rdf:type owl:NamedIndividual ,
 pass:OppgaveOverPassOgStellAvBarn rdf:type owl:NamedIndividual ,
                                            modelldcatno:InformationModel ;
                                   dct:language <http://id.loc.gov/vocabulary/iso639-1/nb> ;
-                                  dct:publisher pass:utgiver ;
+                                  dct:license <https://creativecommons.org/licenses/by-nc-sa/4.0/> ;
+                                  dct:publisher <https://w2.brreg.no/enhet/sok/detalj.jsp?orgnr=974761076> ;
                                   dct:temporal pass:gyldighetsintervall ;
                                   dcat:contactPoint pass:KontaktOss ;
+                                  dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
                                   foaf:homepage <http://www.skatteetaten.no/Barnepassiden> ;
                                   modelldcatno:containsModelElement pass:Leveranse ,
                                                                     pass:Melding ,
@@ -1260,23 +1262,11 @@ pass:OppgaveOverPassOgStellAvBarn rdf:type owl:NamedIndividual ,
                                                                     pass:Oppgaveoppsumering ;
                                   dct:issued "2020-03-30T18:35:07.950+02:00"^^xsd:dateTime ;
                                   dct:title "Skatteetatens oppgave over utgifter til stell og pass av barn"@nb ;
+                                  dcat:keyword "Barnepass"@nb ,
+                                               "Innberettning"@nb ;
                                   modelldcatno:informationModelIdentifier "urn:ske:fastsetting:innsamling:barnepass:v2"^^xsd:anyURI ;
                                   rdfs:label "Oppgave over pass og stell av barn"@nb ,
                                              "Oppgåve over kostnadar til pass og stell av barn"@nn .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource pass:OppgaveOverPassOgStellAvBarn ;
-   owl:annotatedProperty dct:publisher ;
-   owl:annotatedTarget pass:utgiver ;
-   rdfs:comment "Denne kan brukes, der katalogen er en sammlinng av f. eks. modeller fra ulike etater. Denne vil da betegne hvem som er ansvarlig utgiver for hver av katalogdelene."@nb
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource pass:OppgaveOverPassOgStellAvBarn ;
-   owl:annotatedProperty dct:title ;
-   owl:annotatedTarget "Skatteetatens oppgave over utgifter til stell og pass av barn"@nb ;
-   rdfs:comment "Tittelen som betegner ressursens publisering."
- ] .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/Oppgaveeier
@@ -1314,8 +1304,10 @@ pass:Ordinær rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/SkattKatalog
 pass:SkattKatalog rdf:type owl:NamedIndividual ,
                            dcat:Catalog ;
-                  dct:publisher pass:utgiver ;
-                  modelldcatno:model pass:OppgaveOverPassOgStellAvBarn ;
+                  dct:license <https://creativecommons.org/licenses/by-nc-sa/4.0/> ;
+                  dct:publisher <https://w2.brreg.no/enhet/sok/detalj.jsp?orgnr=974761076> ;
+                  modelldcatno:model pass:OppgaveOverPassOgStellAvBarn ,
+                                     ssg:SpesifisertSummertSkattegrunnlagsModell ;
                   dct:description "To modeller fra Skatteetaten"@nb ,
                                   "Two information models from The Tax Administration"@en ;
                   dct:issued "2020-03-30T16:00:00+02:00"^^xsd:dateTime ;
@@ -1495,12 +1487,6 @@ pass:telefonnummer rdf:type owl:NamedIndividual ,
                             modelldcatno:Attribute ;
                    modelldcatno:hasSimpletype skebase:TelefonnummerType ;
                    dct:title "telefonnummer"@nb .
-
-
-###  http://data.skatteetaten.no/ns/modell/PassStellBarn/utgiver
-pass:utgiver rdf:type owl:NamedIndividual ,
-                      foaf:Agent ;
-             foaf:name "Skatteetaten"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/varselEpostadresse
@@ -1934,10 +1920,28 @@ exbidir:dc rdf:type owl:NamedIndividual ,
                                            rdfs:label "Norsk bokmål"@nb .
 
 
+###  http://publications.europa.eu/resource/authority/data-theme/ECON
+<http://publications.europa.eu/resource/authority/data-theme/ECON> rdf:type owl:NamedIndividual ,
+                                                                            skos:Concept ;
+                                                                   skos:prefLabel "Økonomi og finans"@no .
+
+
 ###  http://www.skatteetaten.no/Barnepassiden
 <http://www.skatteetaten.no/Barnepassiden> rdf:type owl:NamedIndividual ,
                                                     foaf:Document ;
                                            rdfs:label "Skatteetatens landingsside for barnepassoppgaver"@nb .
+
+
+###  https://creativecommons.org/licenses/by-nc-sa/4.0/
+<https://creativecommons.org/licenses/by-nc-sa/4.0/> rdf:type owl:NamedIndividual ,
+                                                              dct:LicenseDocument ;
+                                                     skos:prefLabel "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"@en .
+
+
+###  https://w2.brreg.no/enhet/sok/detalj.jsp?orgnr=974761076
+<https://w2.brreg.no/enhet/sok/detalj.jsp?orgnr=974761076> rdf:type owl:NamedIndividual ,
+                                                                    foaf:Agent ;
+                                                           foaf:name "Skatteetaten"@nb .
 
 
 #################################################################
