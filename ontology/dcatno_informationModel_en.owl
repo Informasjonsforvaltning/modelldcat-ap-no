@@ -13,8 +13,10 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix begrep: <https://data.skatteetaten.no/begrep/> .
 @prefix exbidir: <http://example.com/test#> .
 @prefix skebase: <http://data.skatteetaten.no/ns/modell/basetyper/> .
+@prefix begreper: <https://data.skatteetaten.no/begreper/> .
 @prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
 @base <https://data.norge.no/vocabulary/modelldcatno> .
 
@@ -1191,16 +1193,19 @@ pass:KontaktOss rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/KontaktinformasjonType
 pass:KontaktinformasjonType rdf:type owl:NamedIndividual ,
                                      modelldcatno:DataType ;
+                            dct:subject <https://data.skatteetaten.no/begreper/20b52ad9-9fe1-11e5-a9f8-e4115b280940> ;
                             modelldcatno:hasProperty pass:navn ,
                                                      pass:telefonnummer ,
                                                      pass:varselEpostadresse ,
                                                      pass:varselSmsMobilnummer ;
+                            dct:description "informasjon som kan brukes for uformell kontakt med parten"@nb ;
                             dct:title "KontaktinformasjonType"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/Leveranse
 pass:Leveranse rdf:type owl:NamedIndividual ,
                         modelldcatno:ObjectType ;
+               dct:subject <https://data.skatteetaten.no/begreper/20b2e302-9fe1-11e5-a9f8-e4115b280940> ;
                modelldcatno:hasProperty pass:inntektsår ,
                                         pass:kildesystem ,
                                         pass:leveransetype ,
@@ -1208,6 +1213,8 @@ pass:Leveranse rdf:type owl:NamedIndividual ,
                                         pass:oppgavegiverRolle ,
                                         pass:oppgavegiversLeveransereferanse ,
                                         pass:oppgavesummeringRolle ;
+               dct:description "samling av oppgaver fra en og samme oppgavegiver for en oppgavetype"@nb ;
+               dct:identifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/leveranse"^^xsd:anyURI ;
                dct:title "Leveranse"@nb .
 
 
@@ -1216,14 +1223,16 @@ pass:LeveranseKategori rdf:type owl:NamedIndividual ,
                                 modelldcatno:CodeList ;
                        modelldcatno:containsCode pass:Ingenoppgaver ,
                                                  pass:Ordinær ;
+                       dct:description "type av leveranse som angir om leveransen inneholder ordinære oppgaver eller om oppgavegiver angir at det ikke er noen oppgaver å innrapportere"@nb ;
                        dct:title "Leveransetype"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/Melding
 pass:Melding rdf:type owl:NamedIndividual ,
                       modelldcatno:RootObjectType ;
+             dct:subject <https://data.skatteetaten.no/begrep/20b2e303-9fe1-11e5-a9f8-e4115b280940> ;
              modelldcatno:hasProperty pass:leveranseRolle ;
-             dct:description "En rapport  over utgifter i forbindelse med barnepass"@nb ;
+             dct:description "innholdet i en innsending"@nb ;
              dct:title "Melding"@nb .
 
 
@@ -1239,8 +1248,11 @@ pass:NavnType rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/OppgaveBarnepass
 pass:OppgaveBarnepass rdf:type owl:NamedIndividual ,
                                modelldcatno:ObjectType ;
+                      dct:subject <https://data.skatteetaten.no/begreper/20b2e22a-9fe1-11e5-a9f8-e4115b280940> ;
                       modelldcatno:hasProperty pass:oppgaveeierRolle ,
                                                pass:påløptBeløp ;
+                      dct:description "ligningsoppgave over kostnader for pass og stell av barn"@nb ;
+                      dct:identifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/oppgavebarnepass"^^xsd:anyURI ;
                       dct:title "Oppgave barnepass"@nb .
 
 
@@ -1272,25 +1284,34 @@ pass:OppgaveOverPassOgStellAvBarn rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/Oppgaveeier
 pass:Oppgaveeier rdf:type owl:NamedIndividual ,
                           modelldcatno:ObjectType ;
+                 dct:subject <https://data.skatteetaten.no/begreper/20b52ab9-9fe1-11e5-a9f8-e4115b280940> ;
                  modelldcatno:hasProperty pass:fødselsnummer ,
                                           pass:oppgaveeiernavn ;
+                 dct:description "den som oppgaven vanligvis gjelder"@nb ;
+                 dct:identifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/oppgaveeier"^^xsd:anyURI ;
                  dct:title "Oppgaveeier"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/Oppgavegiver
 pass:Oppgavegiver rdf:type owl:NamedIndividual ,
                            modelldcatno:ObjectType ;
+                  dct:subject <https://data.skatteetaten.no/begreper/20b52aba-9fe1-11e5-a9f8-e4115b280940> ;
                   modelldcatno:hasProperty pass:kontaktinformasjon ,
                                            pass:organisasjonsnavn ,
                                            pass:organisasjonsnummer ;
+                  dct:description "tredjepart som har opplysningsplikt om å sende inn oppgaver til Skatteetaten"@nb ;
+                  dct:identifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/oppgavegiver"^^xsd:anyURI ;
                   dct:title "Oppgavegiver"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/Oppgaveoppsumering
 pass:Oppgaveoppsumering rdf:type owl:NamedIndividual ,
                                  modelldcatno:ObjectType ;
+                        dct:subject <https://data.skatteetaten.no/begreper/20b52abc-9fe1-11e5-a9f8-e4115b280940> ;
                         modelldcatno:hasProperty pass:antallOppgaver ,
                                                  pass:sumBeløp ;
+                        dct:description "oppsummering av alle oppgavene for gave til organisasjoner i en leveranse med kontrollsummer av antall oppgaver og utvalgte beløpsfelt"@nb ;
+                        dct:identifier "urn:ske:oppgaveoverpassogstellavbarn-2.0/oppgaveoppsummering"^^xsd:anyURI ;
                         dct:title "Oppgaveoppsumering"@nb ;
                         modelldcatno:modelElementType "objekttype"^^xsd:string .
 
@@ -1331,6 +1352,8 @@ pass:antallOppgaver rdf:type owl:NamedIndividual ,
 pass:fødselsnummer rdf:type owl:NamedIndividual ,
                             modelldcatno:Attribute ;
                    modelldcatno:hasSimpletype skebase:FødselsnummerType ;
+                   dct:description """Oppgaveeiers (forsørgers) fødselsnummer eller d-nummer.  Ellevesifret identifikasjonsnummer for personer bosatt i Norge, der de seks første sifrene angir fødselsdato og de fem siste personnumme.  
+fødselsnummer: personidentifikasjonsnummer for de som er, eller har vært, bosatt i Norge, samt personer som er \"ikke bosatt\""""@nb ;
                    dct:title "fødselsnummer"@nb ;
                    xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                    xsd:minOccurs "1"^^xsd:nonNegativeInteger .
@@ -1346,6 +1369,8 @@ pass:gyldighetsintervall rdf:type owl:NamedIndividual ,
 pass:inntektsår rdf:type owl:NamedIndividual ,
                          modelldcatno:Attribute ;
                 modelldcatno:hasSimpletype pass:InntektsårType ;
+                dct:description """årstallet som oppgave eller likning gjelder for 
+inntektsår: det kalenderår inntekter og kostnader henføres til"""@nb ;
                 dct:title "inntektsår"@nb ;
                 xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                 xsd:minOccurs "1"^^xsd:nonNegativeInteger .
@@ -1364,6 +1389,8 @@ pass:kildesystem rdf:type owl:NamedIndividual ,
 pass:kontaktinformasjon rdf:type owl:NamedIndividual ,
                                  modelldcatno:Attribute ;
                         modelldcatno:hasDataType pass:KontaktinformasjonType ;
+                        dct:description """Generell kontaktinformasjon for Skatteetaten knyttet til innrapportering av denne oppgavetypen. Varsel om melding i Altinn vil også bruke denne informasjonen for formidling. Må fylles inn hvis en innsender sender på vegne av flere oppgavegivere, dvs. det sendes flere leveranser. For innsender som kun sender på vegne av seg selv (dvs. innsender = oppgavegiver) vil denne informasjonen være levert i Altinn innsendingsskjema, og kan utelukkes fra filen. 
+kontaktinformasjon: informasjon som kan brukes for uformell kontakt med parten"""@nb ;
                         dct:title "kontaktinformasjon"@nb ;
                         xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                         xsd:minOccurs "0"^^xsd:nonNegativeInteger .
@@ -1373,6 +1400,7 @@ pass:kontaktinformasjon rdf:type owl:NamedIndividual ,
 pass:leveranseRolle rdf:type owl:NamedIndividual ,
                              modelldcatno:Role ;
                     modelldcatno:hasObjectType pass:Leveranse ;
+                    dct:description "everanse: en samling oppgaver fra en og samme oppgavegiver, som er levert samtidig. Inngår i en innsending."@nb ;
                     dct:title "leveranse"@nb ;
                     xsd:maxOccurs "*"^^xsd:string ;
                     xsd:minOccurs "1"^^xsd:nonNegativeInteger .
@@ -1382,7 +1410,9 @@ pass:leveranseRolle rdf:type owl:NamedIndividual ,
 pass:leveransetype rdf:type owl:NamedIndividual ,
                             modelldcatno:Attribute ;
                    modelldcatno:hasSimpletype skebase:LeveranseReferanseType ;
-                   dct:title "Leveranse"@nb ;
+                   dct:description """type av leveranse som angir om leveransen inneholder ordinære oppgaver eller om oppgavegiver angir at det ikke er noen oppgaver å innrapportere 
+leveransetype: type av leveranse som angir om leveransen inneholder ordinære oppgaver eller om oppgavegiver angir at det ikke er noen oppgaver å innrapportere"""@nb ;
+                   dct:title "Leveransetype"@nb ;
                    xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                    xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
@@ -1391,6 +1421,7 @@ pass:leveransetype rdf:type owl:NamedIndividual ,
 pass:navn rdf:type owl:NamedIndividual ,
                    modelldcatno:Attribute ;
           modelldcatno:hasSimpletype pass:NavnType ;
+          dct:description "navn: ord som noen eller noe kalles for å referere til"@nb ;
           dct:title "navn"@nb .
 
 
@@ -1398,6 +1429,7 @@ pass:navn rdf:type owl:NamedIndividual ,
 pass:oppgaveRolle rdf:type owl:NamedIndividual ,
                            modelldcatno:Role ;
                   modelldcatno:hasObjectType pass:OppgaveBarnepass ;
+                  dct:description "oppgave: samling av opplysninger i en leveranse, gjeldende én oppgaveeier (normalt skattepliktig). Fellesbetegnelse for ligningsoppgave og kontrolloppgave."@nb ;
                   dct:title "oppgave"@nb ;
                   xsd:maxOccurs "*"^^xsd:string ;
                   xsd:minOccurs "0"^^xsd:nonNegativeInteger .
@@ -1407,6 +1439,8 @@ pass:oppgaveRolle rdf:type owl:NamedIndividual ,
 pass:oppgaveeierRolle rdf:type owl:NamedIndividual ,
                                modelldcatno:Role ;
                       modelldcatno:hasObjectType pass:Oppgaveeier ;
+                      dct:description """Forsørger som har betalt for pass og stell av barn.  Se type Oppgaveeier. 
+oppgaveeier: den oppgaven gjelder. Normalt en skattpliktig, men kan også være en virksomhet som ikke er skattepliktig."""@nb ;
                       dct:title "oppgaveeier"@nb ;
                       xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                       xsd:minOccurs "1"^^xsd:nonNegativeInteger .
@@ -1416,6 +1450,8 @@ pass:oppgaveeierRolle rdf:type owl:NamedIndividual ,
 pass:oppgaveeiernavn rdf:type owl:NamedIndividual ,
                               modelldcatno:Property ;
                      modelldcatno:hasSimpletype pass:NavnType ;
+                     dct:description """Navnet på oppgaveeier (forsørger). Valgfri rekkefølge på fornavn og etternavn, men ønsket format er fornavn, mellomnavn og etternavn med blankt tegn imellom hver. Tekststreng på maks 100 tegn. 
+navn: ord som noen eller noe kalles for å referere til"""@nb ;
                      dct:title "navn"@nb ;
                      xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                      xsd:minOccurs "1"^^xsd:nonNegativeInteger .
@@ -1425,7 +1461,8 @@ pass:oppgaveeiernavn rdf:type owl:NamedIndividual ,
 pass:oppgavegiverRolle rdf:type owl:NamedIndividual ,
                                 modelldcatno:Role ;
                        modelldcatno:hasObjectType pass:Oppgavegiver ;
-                       dct:title "oppgavegiverRolle"@nb ;
+                       dct:description "oppgavegiver: tredjepart som rapporterer opplysning til Skatteetaten"@nb ;
+                       dct:title "oppgavegiver"@nb ;
                        xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                        xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
@@ -1434,6 +1471,8 @@ pass:oppgavegiverRolle rdf:type owl:NamedIndividual ,
 pass:oppgavegiversLeveransereferanse rdf:type owl:NamedIndividual ,
                                               modelldcatno:Attribute ;
                                      modelldcatno:hasSimpletype skebase:LeveranseReferanseType ;
+                                     dct:description """referanse til en leveranse som er gitt av oppgavegiver 
+oppgavegivers leveranse referanse: oppgavegivers referanse til leveransen"""@nb ;
                                      dct:title "oppgavegiversLeveransereferanse"@nb ;
                                      xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                                      xsd:minOccurs "0"^^xsd:nonNegativeInteger .
@@ -1443,6 +1482,8 @@ pass:oppgavegiversLeveransereferanse rdf:type owl:NamedIndividual ,
 pass:oppgavesummeringRolle rdf:type owl:NamedIndividual ,
                                     modelldcatno:Role ;
                            modelldcatno:hasObjectType pass:Oppgaveoppsumering ;
+                           dct:description """oppsummering av alle oppgavene i en leveranse med kontrollsummer av antall oppgaver og utvalgte beløpsfelt 
+oppgaveoppsummering: kontrollsummer for oppgaver beregnet på leveransenivå."""@nb ;
                            dct:title "oppgavesummering"@nb ;
                            xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                            xsd:minOccurs "1"^^xsd:nonNegativeInteger .
@@ -1451,6 +1492,7 @@ pass:oppgavesummeringRolle rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/organisasjonsnavn
 pass:organisasjonsnavn rdf:type owl:NamedIndividual ,
                                 modelldcatno:Attribute ;
+                       dct:description "navn på organisasjon"@nb ;
                        dct:title "organisasjonsnavn"@nb ;
                        xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                        xsd:minOccurs "1"^^xsd:nonNegativeInteger .
@@ -1459,6 +1501,8 @@ pass:organisasjonsnavn rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/organisasjonsnummer
 pass:organisasjonsnummer rdf:type owl:NamedIndividual ,
                                   modelldcatno:Attribute ;
+                         dct:description """nisifret identifikasjonsnummer og starter på tallet 8 eller 9  
+organisasjonsnummer: organisasjonsnummer brukes for å identifisere juridiske personer (enheter) i Norge, og tildeles ved registrering i Enhetsregisteret. Organisasjonsnummeret består av ni siffer og starter på tallet 8 eller 9."""@nb ;
                          dct:title "organisasjonsnummer"@nb ;
                          xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                          xsd:minOccurs "1"^^xsd:nonNegativeInteger .
@@ -1468,6 +1512,8 @@ pass:organisasjonsnummer rdf:type owl:NamedIndividual ,
 pass:påløptBeløp rdf:type owl:NamedIndividual ,
                           modelldcatno:Attribute ;
                  modelldcatno:hasSimpletype skebase:BeløpType ;
+                 dct:description """Sum beløp som er fakturert en foresatt/forsørger fra barnepassvirksomhet(er) i løpet av inntektsåret. Oppgavegiver skal oppgi ett summert beløp per oppgaveeier.  Beløpet oppgis som et positivt heltall. 
+kostnader for pass og stell av barn: summen av beløp som en gitt skattepliktig avstår for tilsyn av barn, og/eller kostnader for merkjøring for å bringe og hente barn i en bestemt skattleggingsperiode, for barn som gir rett til foreldrefradrag  """@nb ;
                  dct:title "påløptBeløp"@nb ;
                  xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                  xsd:minOccurs "1"^^xsd:nonNegativeInteger .
@@ -1477,6 +1523,7 @@ pass:påløptBeløp rdf:type owl:NamedIndividual ,
 pass:sumBeløp rdf:type owl:NamedIndividual ,
                        modelldcatno:Attribute ;
               modelldcatno:hasSimpletype skebase:BeløpType ;
+              dct:description "Sum av alle påløpte beløp i oppgavene til en leveranse. Beløpet oppgis som et heltall"@nb ;
               dct:title "sumBeløp"@nb ;
               xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
               xsd:minOccurs "1"^^xsd:nonNegativeInteger .
@@ -1486,6 +1533,7 @@ pass:sumBeløp rdf:type owl:NamedIndividual ,
 pass:telefonnummer rdf:type owl:NamedIndividual ,
                             modelldcatno:Attribute ;
                    modelldcatno:hasSimpletype skebase:TelefonnummerType ;
+                   dct:description "tallkode som telenettet bruker for å få fram teletrafikk til riktig adressat"@nb ;
                    dct:title "telefonnummer"@nb .
 
 
@@ -1493,6 +1541,7 @@ pass:telefonnummer rdf:type owl:NamedIndividual ,
 pass:varselEpostadresse rdf:type owl:NamedIndividual ,
                                  modelldcatno:Attribute ;
                         modelldcatno:hasSimpletype skebase:EpostadresseType ;
+                        dct:description "navngitt elektronisk adresse for mottak av e-post"@nb ;
                         dct:title "varselEpostadresse"@nb .
 
 
@@ -1500,6 +1549,7 @@ pass:varselEpostadresse rdf:type owl:NamedIndividual ,
 pass:varselSmsMobilnummer rdf:type owl:NamedIndividual ,
                                    modelldcatno:Attribute ;
                           modelldcatno:hasSimpletype skebase:TelefonnummerType ;
+                          dct:description "t nummer som entydig identifiserer et abonnement i et GSM- eller UMTS-mobilnett og som dermed kan benyttes for å adressere beskjeder i et \"meldingssystem for korte beskjeder\" innen mobilnett"@nb ;
                           dct:title "varselSmsMobilnummer"@nb .
 
 
@@ -1631,52 +1681,46 @@ skebase:ÅrstallType rdf:type owl:NamedIndividual ,
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/ArbeidTrygdOgPensjon
 ssg:ArbeidTrygdOgPensjon rdf:type owl:NamedIndividual ,
-                                  modelldcatno:ModelElement ;
-                         dct:title "ArbeidTrygdOgPensjon"@nb ;
-                         modelldcatno:modelElementType "objectType" .
+                                  modelldcatno:ObjectType ;
+                         dct:title "ArbeidTrygdOgPensjon"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/BankLånOgForsikring
 ssg:BankLånOgForsikring rdf:type owl:NamedIndividual ,
-                                 modelldcatno:ModelElement ;
-                        dct:title "BankLånOgForsikring"@nb ;
-                        modelldcatno:modelElementType "objectType" .
+                                 modelldcatno:ObjectType ;
+                        dct:title "BankLånOgForsikring"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/EiendelerOgFasteEiendommer
 ssg:EiendelerOgFasteEiendommer rdf:type owl:NamedIndividual ,
-                                        modelldcatno:ModelElement ;
-                               dct:title "EiendelerOgFasteEiendommer"@nb ;
-                               modelldcatno:modelElementType "objectType" .
+                                        modelldcatno:ObjectType ;
+                               dct:title "EiendelerOgFasteEiendommer"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/Finans
 ssg:Finans rdf:type owl:NamedIndividual ,
-                    modelldcatno:ModelElement ;
-           dct:title "Finans"@nb ;
-           modelldcatno:modelElementType "objectType" .
+                    modelldcatno:ObjectType ;
+           dct:title "Finans"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/Generisk
 ssg:Generisk rdf:type owl:NamedIndividual ,
-                      modelldcatno:ModelElement ;
+                      modelldcatno:ObjectType ;
              modelldcatno:hasProperty ssg:generiskBeløp ,
                                       ssg:kildebeskrivelse ,
                                       ssg:kildenavn ;
-             dct:title "Generisk"@nb ;
-             modelldcatno:modelElementType "objectType" .
+             dct:title "Generisk"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/Spesifisering
 ssg:Spesifisering rdf:type owl:NamedIndividual ,
-                           modelldcatno:ModelElement ;
-                  dct:title "Spesifisering"@nb ;
-                  modelldcatno:modelElementType "objectType" .
+                           modelldcatno:ObjectType ;
+                  dct:title "Spesifisering"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/SpesifisertSummertSkattegrunnlag
 ssg:SpesifisertSummertSkattegrunnlag rdf:type owl:NamedIndividual ,
-                                              modelldcatno:ModelElement ;
+                                              modelldcatno:RootObjectType ;
                                      modelldcatno:hasProperty ssg:grunnlag ,
                                                               ssg:inntektsår ,
                                                               ssg:kildeskattPåLønnGrunnlag ,
@@ -1686,14 +1730,15 @@ ssg:SpesifisertSummertSkattegrunnlag rdf:type owl:NamedIndividual ,
                                                               ssg:skjønnsfastsatt ,
                                                               ssg:svalbardGrunnlag ,
                                                               ssg:svalbardSkjønnsfastsatt ;
-                                     dct:title "SpesifisertSummertSkattegrunnlag"@nb ;
-                                     modelldcatno:modelElementType "rootObjectType" .
+                                     dct:title "SpesifisertSummertSkattegrunnlag"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/SpesifisertSummertSkattegrunnlagsModell
 ssg:SpesifisertSummertSkattegrunnlagsModell rdf:type owl:NamedIndividual ,
                                                      modelldcatno:InformationModel ;
                                             dct:language <http://id.loc.gov/vocabulary/iso639-1/nb> ;
+                                            dct:license <https://creativecommons.org/licenses/by-nc-sa/4.0/> ;
+                                            dct:publisher <https://w2.brreg.no/enhet/sok/detalj.jsp?orgnr=974761076> ;
                                             modelldcatno:containsModelElement ssg:BankLånOgForsikring ,
                                                                               ssg:EiendelerOgFasteEiendommer ,
                                                                               ssg:Finans ,
@@ -1708,13 +1753,12 @@ ssg:SpesifisertSummertSkattegrunnlagsModell rdf:type owl:NamedIndividual ,
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/SummertSkattegrunnlagsobjekt
 ssg:SummertSkattegrunnlagsobjekt rdf:type owl:NamedIndividual ,
-                                          modelldcatno:ModelElement ;
+                                          modelldcatno:ObjectType ;
                                  modelldcatno:hasProperty ssg:beløp ,
                                                           ssg:kategori ,
                                                           ssg:spesifisering ,
                                                           ssg:tekniskNavn ;
-                                 dct:title "SummertSkattegrunnlagsobjekt"@nb ;
-                                 modelldcatno:modelElementType "objectType" .
+                                 dct:title "SummertSkattegrunnlagsobjekt"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/beløp
@@ -1936,6 +1980,41 @@ exbidir:dc rdf:type owl:NamedIndividual ,
 <https://creativecommons.org/licenses/by-nc-sa/4.0/> rdf:type owl:NamedIndividual ,
                                                               dct:LicenseDocument ;
                                                      skos:prefLabel "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"@en .
+
+
+###  https://data.skatteetaten.no/begrep/20b2e303-9fe1-11e5-a9f8-e4115b280940
+<https://data.skatteetaten.no/begrep/20b2e303-9fe1-11e5-a9f8-e4115b280940> rdf:type owl:NamedIndividual ,
+                                                                                    skos:Concept .
+
+
+###  https://data.skatteetaten.no/begreper/20b2e22a-9fe1-11e5-a9f8-e4115b280940
+<https://data.skatteetaten.no/begreper/20b2e22a-9fe1-11e5-a9f8-e4115b280940> rdf:type owl:NamedIndividual ,
+                                                                                      skos:Concept .
+
+
+###  https://data.skatteetaten.no/begreper/20b2e302-9fe1-11e5-a9f8-e4115b280940
+<https://data.skatteetaten.no/begreper/20b2e302-9fe1-11e5-a9f8-e4115b280940> rdf:type owl:NamedIndividual ,
+                                                                                      skos:Concept .
+
+
+###  https://data.skatteetaten.no/begreper/20b52ab9-9fe1-11e5-a9f8-e4115b280940
+<https://data.skatteetaten.no/begreper/20b52ab9-9fe1-11e5-a9f8-e4115b280940> rdf:type owl:NamedIndividual ,
+                                                                                      skos:Concept .
+
+
+###  https://data.skatteetaten.no/begreper/20b52aba-9fe1-11e5-a9f8-e4115b280940
+<https://data.skatteetaten.no/begreper/20b52aba-9fe1-11e5-a9f8-e4115b280940> rdf:type owl:NamedIndividual ,
+                                                                                      skos:Concept .
+
+
+###  https://data.skatteetaten.no/begreper/20b52abc-9fe1-11e5-a9f8-e4115b280940
+<https://data.skatteetaten.no/begreper/20b52abc-9fe1-11e5-a9f8-e4115b280940> rdf:type owl:NamedIndividual ,
+                                                                                      skos:Concept .
+
+
+###  https://data.skatteetaten.no/begreper/20b52ad9-9fe1-11e5-a9f8-e4115b280940
+<https://data.skatteetaten.no/begreper/20b52ad9-9fe1-11e5-a9f8-e4115b280940> rdf:type owl:NamedIndividual ,
+                                                                                      skos:Concept .
 
 
 ###  https://w2.brreg.no/enhet/sok/detalj.jsp?orgnr=974761076
