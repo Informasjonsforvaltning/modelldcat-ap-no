@@ -1290,12 +1290,11 @@ pass:Oppgaveeier rdf:type owl:NamedIndividual ,
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/Oppgavegiver
 pass:Oppgavegiver rdf:type owl:NamedIndividual ,
-                           modelldcatno:ModelElement ;
+                           modelldcatno:ObjectType ;
                   modelldcatno:hasProperty pass:kontaktinformasjon ,
                                            pass:organisasjonsnavn ,
                                            pass:organisasjonsnummer ;
-                  dct:title "Oppgavegiver"@nb ;
-                  modelldcatno:modelElementType "objekttype"^^xsd:string .
+                  dct:title "Oppgavegiver"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/Oppgaveoppsumering
@@ -1372,7 +1371,8 @@ pass:kildesystem rdf:type owl:NamedIndividual ,
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/kontaktinformasjon
 pass:kontaktinformasjon rdf:type owl:NamedIndividual ,
-                                 modelldcatno:Property ;
+                                 modelldcatno:Attribute ;
+                        modelldcatno:hasDataType pass:KontaktinformasjonType ;
                         dct:title "kontaktinformasjon"@nb ;
                         xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                         xsd:minOccurs "0"^^xsd:nonNegativeInteger .
@@ -1389,7 +1389,8 @@ pass:leveranseRolle rdf:type owl:NamedIndividual ,
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/leveransetype
 pass:leveransetype rdf:type owl:NamedIndividual ,
-                            modelldcatno:Property ;
+                            modelldcatno:Attribute ;
+                   modelldcatno:hasSimpletype skebase:LeveranseReferanseType ;
                    dct:title "Leveranse"@nb ;
                    xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                    xsd:minOccurs "1"^^xsd:nonNegativeInteger .
@@ -1428,7 +1429,8 @@ pass:oppgaveeiernavn rdf:type owl:NamedIndividual ,
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/oppgavegiverRolle
 pass:oppgavegiverRolle rdf:type owl:NamedIndividual ,
-                                modelldcatno:Property ;
+                                modelldcatno:Role ;
+                       modelldcatno:hasObjectType pass:Oppgavegiver ;
                        dct:title "oppgavegiverRolle"@nb ;
                        xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                        xsd:minOccurs "1"^^xsd:nonNegativeInteger .
@@ -1453,7 +1455,7 @@ pass:oppgavesummeringRolle rdf:type owl:NamedIndividual ,
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/organisasjonsnavn
 pass:organisasjonsnavn rdf:type owl:NamedIndividual ,
-                                modelldcatno:Property ;
+                                modelldcatno:Attribute ;
                        dct:title "organisasjonsnavn"@nb ;
                        xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                        xsd:minOccurs "1"^^xsd:nonNegativeInteger .
@@ -1461,7 +1463,7 @@ pass:organisasjonsnavn rdf:type owl:NamedIndividual ,
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/organisasjonsnummer
 pass:organisasjonsnummer rdf:type owl:NamedIndividual ,
-                                  modelldcatno:Property ;
+                                  modelldcatno:Attribute ;
                          dct:title "organisasjonsnummer"@nb ;
                          xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                          xsd:minOccurs "1"^^xsd:nonNegativeInteger .
@@ -1508,7 +1510,7 @@ pass:varselEpostadresse rdf:type owl:NamedIndividual ,
 pass:varselSmsMobilnummer rdf:type owl:NamedIndividual ,
                                    modelldcatno:Attribute ;
                           modelldcatno:hasSimpletype skebase:TelefonnummerType ;
-                          dct:title "Ingenoppgaver"@nb .
+                          dct:title "varselSmsMobilnummer"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/basetyper/AntallType
