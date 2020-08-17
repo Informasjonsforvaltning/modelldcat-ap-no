@@ -17,6 +17,7 @@
 @prefix exbidir: <http://example.com/test#> .
 @prefix skebase: <http://data.skatteetaten.no/ns/modell/basetyper/> .
 @prefix begreper: <https://data.skatteetaten.no/begreper/> .
+@prefix exabstrakt: <http://example.com/test_abstraksjon#> .
 @prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
 @base <https://data.norge.no/vocabulary/modelldcatno> .
 
@@ -933,8 +934,7 @@ modelldcatno:Attribute rdf:type owl:Class ;
                        rdfs:subClassOf modelldcatno:Property ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty modelldcatno:hasType ;
-                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                         owl:onClass modelldcatno:ModelElement
+                                         owl:someValuesFrom modelldcatno:ModelElement
                                        ] ;
                        rdfs:label "Attribute"@en ,
                                   "Attributt"@nb .
@@ -1793,11 +1793,6 @@ ssg:inntektsår rdf:type owl:NamedIndividual ,
                xsd:minOccurs "1"^^xsd:int .
 
 
-###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/katalogdelSSG
-ssg:katalogdelSSG rdf:type owl:NamedIndividual ;
-                  dct:title "Modell for beregning av skattegrunnlag"@nb .
-
-
 ###  http://data.skatteetaten.no/ns/modell/spesifisert_summert_skattegrunnlag/kategori
 ssg:kategori rdf:type owl:NamedIndividual ,
                       modelldcatno:Property ;
@@ -1958,6 +1953,27 @@ exbidir:dc rdf:type owl:NamedIndividual ,
            xsd:minOccurs "0"^^xsd:int .
 
 
+###  http://example.com/test_abstraksjon#etModellelement
+exabstrakt:etModellelement rdf:type owl:NamedIndividual ,
+                                    modelldcatno:ObjectType ;
+                           modelldcatno:hasProperty exabstrakt:sammendrag ;
+                           rdfs:label "Et modellelement med et attibutt som er et tekstsammendrag av en klasse \"Tidslinje\" med hendelser."@nb .
+
+
+###  http://example.com/test_abstraksjon#sammendrag
+exabstrakt:sammendrag rdf:type owl:NamedIndividual ,
+                               modelldcatno:Abstraction ,
+                               modelldcatno:Attribute ;
+                      modelldcatno:hasSimpletype skebase:TekstType ;
+                      modelldcatno:isAbstractionOf exabstrakt:timeline ;
+                      dct:title "sammendrag"@nb .
+
+
+###  http://example.com/test_abstraksjon#timeline
+exabstrakt:timeline rdf:type owl:NamedIndividual ,
+                             modelldcatno:ObjectType .
+
+
 ###  http://id.loc.gov/vocabulary/iso639-1/nb
 <http://id.loc.gov/vocabulary/iso639-1/nb> rdf:type owl:NamedIndividual ,
                                                     dct:LinguisticSystem ;
@@ -2028,14 +2044,12 @@ exbidir:dc rdf:type owl:NamedIndividual ,
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( modelldcatno:Abstraction
-                modelldcatno:Association
+  owl:members ( modelldcatno:Association
                 modelldcatno:Attribute
                 modelldcatno:Choice
                 modelldcatno:Collection
                 modelldcatno:Composition
                 modelldcatno:Note
-                modelldcatno:Realization
                 modelldcatno:Role
                 modelldcatno:Specialization
               )
