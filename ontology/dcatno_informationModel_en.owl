@@ -14,10 +14,10 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix begrep: <https://data.skatteetaten.no/begrep/> .
-@prefix exbidir: <http://example.com/test#> .
 @prefix skebase: <http://data.skatteetaten.no/ns/modell/basetyper/> .
 @prefix begreper: <https://data.skatteetaten.no/begreper/> .
-@prefix exabstrakt: <http://example.com/test_abstraksjon#> .
+@prefix ex-bidir: <http://example.com/test#> .
+@prefix ex-abstrakt: <http://example.com/test_abstraksjon#> .
 @prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
 @base <https://data.norge.no/vocabulary/modelldcatno> .
 
@@ -1888,90 +1888,91 @@ ssg:tekniskNavn rdf:type owl:NamedIndividual ,
 
 
 ###  http://example.com/test#A
-exbidir:A rdf:type owl:NamedIndividual ,
-                   modelldcatno:ObjectType ;
-          modelldcatno:hasProperty exbidir:ab ;
-          rdfs:comment "Denne grafen viser to enveis forenklede relasjoner, satt sammen, for å beskrive en tovegsrelasjon."@nb ;
-          rdfs:seeAlso <https://www.dropbox.com/s/4agk1n05f46mwnv/bidireksjonal.tiff?dl=0> .
+ex-bidir:A rdf:type owl:NamedIndividual ,
+                    modelldcatno:ObjectType ;
+           modelldcatno:hasProperty ex-bidir:ab ;
+           rdfs:comment "Denne grafen viser to enveis forenklede relasjoner, satt sammen, for å beskrive en tovegsrelasjon."@nb ;
+           rdfs:seeAlso <https://www.dropbox.com/s/4agk1n05f46mwnv/bidireksjonal.tiff?dl=0> .
 
 
 ###  http://example.com/test#B
-exbidir:B rdf:type owl:NamedIndividual ,
-                   modelldcatno:ObjectType ;
-          modelldcatno:hasProperty exbidir:ba .
+ex-bidir:B rdf:type owl:NamedIndividual ,
+                    modelldcatno:ObjectType ;
+           modelldcatno:hasProperty ex-bidir:ba .
 
 
 ###  http://example.com/test#C
-exbidir:C rdf:type owl:NamedIndividual ,
-                   modelldcatno:ObjectType ;
-          modelldcatno:hasProperty exbidir:cd .
+ex-bidir:C rdf:type owl:NamedIndividual ,
+                    modelldcatno:ObjectType ;
+           modelldcatno:hasProperty ex-bidir:cd .
 
 
 ###  http://example.com/test#D
-exbidir:D rdf:type owl:NamedIndividual ,
-                   modelldcatno:ObjectType ;
-          modelldcatno:hasProperty exbidir:dc .
+ex-bidir:D rdf:type owl:NamedIndividual ,
+                    modelldcatno:ObjectType ;
+           modelldcatno:hasProperty ex-bidir:dc .
 
 
 ###  http://example.com/test#ab
-exbidir:ab rdf:type owl:NamedIndividual ,
-                    modelldcatno:Role ;
-           modelldcatno:formsSymmetryWith exbidir:ba ;
-           modelldcatno:hasObjectType exbidir:B ;
-           dct:title "B sin rolle" ;
-           xsd:maxOccurs "*"^^xsd:string ;
-           xsd:minOccurs "1"^^xsd:int ;
-           modelldcatno:symmetryLabel "Navn på relasjonen (Kan settes på ab og/eller ba)"@nb .
+ex-bidir:ab rdf:type owl:NamedIndividual ,
+                     modelldcatno:Role ;
+            modelldcatno:formsSymmetryWith ex-bidir:ba ;
+            modelldcatno:hasObjectType ex-bidir:B ;
+            dct:title "B sin rolle" ;
+            xsd:maxOccurs "*"^^xsd:string ;
+            xsd:minOccurs "1"^^xsd:int ;
+            modelldcatno:symmetryLabel "Navn på relasjonen (Kan settes på ab og/eller ba)"@nb .
 
 
 ###  http://example.com/test#ba
-exbidir:ba rdf:type owl:NamedIndividual ,
-                    modelldcatno:Role ;
-           modelldcatno:hasObjectType exbidir:A ;
-           dct:title "A sin rolle" ;
-           xsd:maxOccurs "1"^^xsd:int ;
-           xsd:minOccurs "0"^^xsd:int .
+ex-bidir:ba rdf:type owl:NamedIndividual ,
+                     modelldcatno:Role ;
+            modelldcatno:hasObjectType ex-bidir:A ;
+            dct:title "A sin rolle" ;
+            xsd:maxOccurs "1"^^xsd:int ;
+            xsd:minOccurs "0"^^xsd:int .
 
 
 ###  http://example.com/test#cd
-exbidir:cd rdf:type owl:NamedIndividual ,
-                    modelldcatno:Composition ;
-           modelldcatno:contains exbidir:D ;
-           modelldcatno:formsSymmetryWith exbidir:dc ;
-           dct:title "D sin rolle" ;
-           xsd:maxOccurs "*"^^xsd:string ;
-           xsd:minOccurs "1"^^xsd:int ;
-           modelldcatno:symmetryLabel "Relasjonen C D"@nb .
+ex-bidir:cd rdf:type owl:NamedIndividual ,
+                     modelldcatno:Composition ;
+            modelldcatno:contains ex-bidir:D ;
+            modelldcatno:formsSymmetryWith ex-bidir:dc ;
+            dct:title "D sin rolle" ;
+            xsd:maxOccurs "*"^^xsd:string ;
+            xsd:minOccurs "1"^^xsd:int ;
+            modelldcatno:symmetryLabel "Relasjonen C D"@nb .
 
 
 ###  http://example.com/test#dc
-exbidir:dc rdf:type owl:NamedIndividual ,
-                    modelldcatno:Role ;
-           modelldcatno:hasObjectType exbidir:C ;
-           dct:title "C sin rolle" ;
-           xsd:maxOccurs "1"^^xsd:int ;
-           xsd:minOccurs "0"^^xsd:int .
+ex-bidir:dc rdf:type owl:NamedIndividual ,
+                     modelldcatno:Role ;
+            modelldcatno:hasObjectType ex-bidir:C ;
+            dct:title "C sin rolle" ;
+            xsd:maxOccurs "1"^^xsd:int ;
+            xsd:minOccurs "0"^^xsd:int .
 
 
 ###  http://example.com/test_abstraksjon#etModellelement
-exabstrakt:etModellelement rdf:type owl:NamedIndividual ,
-                                    modelldcatno:ObjectType ;
-                           modelldcatno:hasProperty exabstrakt:sammendrag ;
-                           rdfs:label "Et modellelement med et attibutt som er et tekstsammendrag av en klasse \"Tidslinje\" med hendelser."@nb .
+ex-abstrakt:etModellelement rdf:type owl:NamedIndividual ,
+                                     modelldcatno:ObjectType ;
+                            modelldcatno:hasProperty ex-abstrakt:sammendrag ;
+                            rdfs:label "Et modellelement med et attibutt som er et tekstsammendrag av en klasse \"Tidslinje\" med hendelser."@nb .
 
 
 ###  http://example.com/test_abstraksjon#sammendrag
-exabstrakt:sammendrag rdf:type owl:NamedIndividual ,
-                               modelldcatno:Abstraction ,
-                               modelldcatno:Attribute ;
-                      modelldcatno:hasSimpletype skebase:TekstType ;
-                      modelldcatno:isAbstractionOf exabstrakt:timeline ;
-                      dct:title "sammendrag"@nb .
+ex-abstrakt:sammendrag rdf:type owl:NamedIndividual ,
+                                modelldcatno:Abstraction ,
+                                modelldcatno:Attribute ;
+                       modelldcatno:hasSimpletype skebase:TekstType ;
+                       modelldcatno:isAbstractionOf ex-abstrakt:timeline ;
+                       dct:title "sammendrag"@nb .
 
 
 ###  http://example.com/test_abstraksjon#timeline
-exabstrakt:timeline rdf:type owl:NamedIndividual ,
-                             modelldcatno:ObjectType .
+ex-abstrakt:timeline rdf:type owl:NamedIndividual ,
+                              modelldcatno:ObjectType ;
+                     rdfs:comment "Klasse som samler ulike eventer som egene objekter"@nb .
 
 
 ###  http://id.loc.gov/vocabulary/iso639-1/nb
