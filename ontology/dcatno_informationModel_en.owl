@@ -14,11 +14,15 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix begrep: <https://data.skatteetaten.no/begrep/> .
+@prefix ex-mch: <http://example.com/test_mch#> .
+@prefix ex-sch: <http://example.com/test_sch#> .
 @prefix skebase: <http://data.skatteetaten.no/ns/modell/basetyper/> .
 @prefix begreper: <https://data.skatteetaten.no/begreper/> .
 @prefix ex-bidir: <http://example.com/test#> .
 @prefix ex-abstrakt: <http://example.com/test_abstraksjon#> .
 @prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
+@prefix ex-collection: <http://example.com/test_collection#> .
+@prefix ex-specialization: <http://example.com/test_specialization#> .
 @base <https://data.norge.no/vocabulary/modelldcatno> .
 
 <https://data.norge.no/vocabulary/modelldcatno> rdf:type owl:Ontology .
@@ -311,7 +315,7 @@ modelldcatno:hasSimpletype rdf:type owl:ObjectProperty ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#hasSome
 modelldcatno:hasSome rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf modelldcatno:hasOneOf ;
+                     rdfs:subPropertyOf modelldcatno:hasType ;
                      rdfs:comment "Brukes for å betegne at en valgmulighet ikke er ekskusiv, dvs. at man kan velge mer enn en."@nb ;
                      rdfs:label "has some"@nb ,
                                 "kan ha"@nb .
@@ -1972,7 +1976,123 @@ ex-abstrakt:sammendrag rdf:type owl:NamedIndividual ,
 ###  http://example.com/test_abstraksjon#timeline
 ex-abstrakt:timeline rdf:type owl:NamedIndividual ,
                               modelldcatno:ObjectType ;
-                     rdfs:comment "Klasse som samler ulike eventer som egene objekter"@nb .
+                     rdfs:comment "Objekt som samler ulike eventer som egene objekter"@nb .
+
+
+###  http://example.com/test_collection#Frukt
+ex-collection:Frukt rdf:type owl:NamedIndividual ,
+                             modelldcatno:ObjectType ;
+                    dct:title "Frukt"@nb .
+
+
+###  http://example.com/test_collection#Fruktkurv
+ex-collection:Fruktkurv rdf:type owl:NamedIndividual ,
+                                 modelldcatno:ObjectType ;
+                        modelldcatno:hasProperty ex-collection:collection ;
+                        dct:title "Fruktkurv"@nb ;
+                        rdfs:comment "Eksempel som viser et medlem av forhold" ;
+                        rdfs:seeAlso <https://www.dropbox.com/s/ptcdxm8lxnmp2f7/ex-collection.tiff?dl=0> .
+
+
+###  http://example.com/test_collection#collection
+ex-collection:collection rdf:type owl:NamedIndividual ,
+                                  modelldcatno:Collection ;
+                         modelldcatno:hasMember ex-collection:Frukt ;
+                         dct:title "ev. Rollebetegnelse"@nb ;
+                         rdfs:comment "Samme mønster for modelldcattno:Composition, men denne har modelldcatno:contains som objektproperty mot et modell element."@nb ,
+                                      "Som regel uten navn, men kan ha en rollebetegnelse"@nb .
+
+
+###  http://example.com/test_mch#drops
+ex-mch:drops rdf:type owl:NamedIndividual ,
+                      modelldcatno:ObjectType .
+
+
+###  http://example.com/test_mch#godtepose
+ex-mch:godtepose rdf:type owl:NamedIndividual ,
+                          modelldcatno:ObjectType ;
+                 modelldcatno:hasProperty ex-mch:kanInneholde ;
+                 rdfs:comment "Eksempel der en kan velge mer enn en ting, med en mulig max antall valg"@nb .
+
+
+###  http://example.com/test_mch#kanInneholde
+ex-mch:kanInneholde rdf:type owl:NamedIndividual ,
+                             modelldcatno:Choice ;
+                    modelldcatno:hasSome ex-mch:drops ,
+                                         ex-mch:karamell ,
+                                         ex-mch:sjokolade ,
+                                         ex-mch:tannkrem ;
+                    xsd:maxOccurs "3"^^xsd:int ;
+                    xsd:minOccurs "1"^^xsd:int ;
+                    rdfs:comment "Instans av samme valgklasse, men her med annen subproperty av hasType og kardinalitet, dvs, hvor mange valg kan man gjøre."@nb .
+
+
+###  http://example.com/test_mch#karamell
+ex-mch:karamell rdf:type owl:NamedIndividual ,
+                         modelldcatno:ObjectType .
+
+
+###  http://example.com/test_mch#sjokolade
+ex-mch:sjokolade rdf:type owl:NamedIndividual ,
+                          modelldcatno:ObjectType .
+
+
+###  http://example.com/test_mch#tannkrem
+ex-mch:tannkrem rdf:type owl:NamedIndividual ,
+                         modelldcatno:ObjectType .
+
+
+###  http://example.com/test_sch#Hund
+ex-sch:Hund rdf:type owl:NamedIndividual ,
+                     modelldcatno:ObjectType .
+
+
+###  http://example.com/test_sch#Kanin
+ex-sch:Kanin rdf:type owl:NamedIndividual ,
+                      modelldcatno:ObjectType .
+
+
+###  http://example.com/test_sch#Katt
+ex-sch:Katt rdf:type owl:NamedIndividual ,
+                     modelldcatno:ObjectType .
+
+
+###  http://example.com/test_sch#husStand
+ex-sch:husStand rdf:type owl:NamedIndividual ,
+                         modelldcatno:ObjectType ;
+                modelldcatno:hasProperty ex-sch:kjeledyr ;
+                rdfs:comment "En hustand kan velge en type kjeledyr. Dette er en konstruksjon lik xsd:choice i sin enkle form"@nb .
+
+
+###  http://example.com/test_sch#kjeledyr
+ex-sch:kjeledyr rdf:type owl:NamedIndividual ,
+                         modelldcatno:Choice ;
+                modelldcatno:hasOneOf ex-sch:Hund ,
+                                      ex-sch:Kanin ,
+                                      ex-sch:Katt ;
+                dct:title "husstandens kjeledyr"@nb ;
+                rdfs:comment "Tittel på denne vil kunne tolkes som en rolle"@nb .
+
+
+###  http://example.com/test_specialization#Katt
+ex-specialization:Katt rdf:type owl:NamedIndividual ,
+                                modelldcatno:ObjectType ;
+                       modelldcatno:hasProperty ex-specialization:katteorden ;
+                       dct:title "Katt"@nb ;
+                       rdfs:seeAlso <https://www.dropbox.com/s/a5caimiknu8swht/ex-spesialisation.jpg?dl=0> .
+
+
+###  http://example.com/test_specialization#Pattedyr
+ex-specialization:Pattedyr rdf:type owl:NamedIndividual ,
+                                    modelldcatno:ObjectType ;
+                           dct:title "Pattedyr"@nb .
+
+
+###  http://example.com/test_specialization#katteorden
+ex-specialization:katteorden rdf:type owl:NamedIndividual ,
+                                      modelldcatno:Specialization ;
+                             modelldcatno:hasGeneralConcept ex-specialization:Pattedyr ;
+                             rdfs:comment "Som regel anonym"@nb .
 
 
 ###  http://id.loc.gov/vocabulary/iso639-1/nb
