@@ -1225,13 +1225,13 @@ pass:Leveranse rdf:type owl:NamedIndividual ,
                dct:title "Leveranse"@nb .
 
 
-###  http://data.skatteetaten.no/ns/modell/PassStellBarn/LeveranseKategori
-pass:LeveranseKategori rdf:type owl:NamedIndividual ,
-                                modelldcatno:CodeList ;
-                       modelldcatno:containsCode pass:Ingenoppgaver ,
-                                                 pass:Ordinær ;
-                       dct:description "type av leveranse som angir om leveransen inneholder ordinære oppgaver eller om oppgavegiver angir at det ikke er noen oppgaver å innrapportere"@nb ;
-                       dct:title "Leveransetype"@nb .
+###  http://data.skatteetaten.no/ns/modell/PassStellBarn/Leveransetype
+pass:Leveransetype rdf:type owl:NamedIndividual ,
+                            modelldcatno:CodeList ;
+                   modelldcatno:containsCode pass:Ingenoppgaver ,
+                                             pass:Ordinær ;
+                   dct:description "type av leveranse som angir om leveransen inneholder ordinære oppgaver eller om oppgavegiver angir at det ikke er noen oppgaver å innrapportere"@nb ;
+                   dct:title "Leveransetype"@nb .
 
 
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/Melding
@@ -1416,10 +1416,10 @@ pass:leveranseRolle rdf:type owl:NamedIndividual ,
 ###  http://data.skatteetaten.no/ns/modell/PassStellBarn/leveransetype
 pass:leveransetype rdf:type owl:NamedIndividual ,
                             modelldcatno:Attribute ;
-                   modelldcatno:hasSimpletype skebase:LeveranseReferanseType ;
+                   modelldcatno:hasValueFrom pass:Leveransetype ;
                    dct:description """type av leveranse som angir om leveransen inneholder ordinære oppgaver eller om oppgavegiver angir at det ikke er noen oppgaver å innrapportere 
 leveransetype: type av leveranse som angir om leveransen inneholder ordinære oppgaver eller om oppgavegiver angir at det ikke er noen oppgaver å innrapportere"""@nb ;
-                   dct:title "Leveransetype"@nb ;
+                   dct:title "leveransetype"@nb ;
                    xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;
                    xsd:minOccurs "1"^^xsd:nonNegativeInteger .
 
