@@ -699,6 +699,10 @@ dct:PeriodOfTime rdf:type owl:Class ;
                             "Tidsintervall"@nb .
 
 
+###  http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#EditorialObject
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#EditorialObject> rdf:type owl:Class .
+
+
 ###  http://www.w3.org/2004/02/skos/core#Concept
 skos:Concept rdf:type owl:Class ;
              rdfs:label "Begrep"@nb ,
@@ -1960,11 +1964,39 @@ ex-bidir:dc rdf:type owl:NamedIndividual ,
             xsd:minOccurs "0"^^xsd:int .
 
 
-###  http://example.com/test_abstraksjon#etModellelement
-ex-abstrakt:etModellelement rdf:type owl:NamedIndividual ,
-                                     modelldcatno:ObjectType ;
-                            modelldcatno:hasProperty ex-abstrakt:sammendrag ;
-                            rdfs:label "Et modellelement med et attibutt som er et tekstsammendrag av en klasse \"Tidslinje\" med hendelser."@nb .
+###  http://example.com/test_abstraksjon#EBU_EditorialObject
+ex-abstrakt:EBU_EditorialObject rdf:type owl:NamedIndividual ,
+                                         <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#EditorialObject> ,
+                                         modelldcatno:ObjectType ;
+                                dct:title "Editorial Object"@en ;
+                                rdfs:comment "Klasse, som er et modellelement, men og viser at den er hentet fra en anne ontologi"@nb .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource ex-abstrakt:EBU_EditorialObject ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#EditorialObject> ;
+   rdfs:comment "Er det denne vi er ute etter egentlig? Vise at vi har tatt et konsept fra et annet sted."@nb
+ ] .
+
+
+###  http://example.com/test_abstraksjon#Program
+ex-abstrakt:Program rdf:type owl:NamedIndividual ,
+                             modelldcatno:ObjectType ;
+                    modelldcatno:hasProperty ex-abstrakt:basedOn ,
+                                             ex-abstrakt:sammendrag ;
+                    dct:title "Program" ;
+                    rdfs:comment """Et modellelement med et attibutt som er et tekstsammendrag av en klasse \"Tidslinje\" med hendelser.
+Denne demonstrerer hvordan et attributt også på samme tid er en abstraksjon.
+
+Et abstaksjonsforhold mellom to klasser er også demonstrert."""@nb .
+
+
+###  http://example.com/test_abstraksjon#basedOn
+ex-abstrakt:basedOn rdf:type owl:NamedIndividual ,
+                             modelldcatno:Abstraction ;
+                    modelldcatno:isAbstractionOf ex-abstrakt:EBU_EditorialObject ;
+                    dct:title "basert på"@nb ;
+                    rdfs:comment "Dette er kunn en abstraksjon, ergo, en abstraksjon mellom de to klassene"@nb .
 
 
 ###  http://example.com/test_abstraksjon#sammendrag
@@ -1973,7 +2005,8 @@ ex-abstrakt:sammendrag rdf:type owl:NamedIndividual ,
                                 modelldcatno:Attribute ;
                        modelldcatno:hasSimpletype skebase:TekstType ;
                        modelldcatno:isAbstractionOf ex-abstrakt:timeline ;
-                       dct:title "sammendrag"@nb .
+                       dct:title "sammendrag"@nb ;
+                       rdfs:comment "Dette er en individual som er et atributt og en abstraksjon på samme tid. Disse to påstandene vil sikre at attributtet blir oppfattet som en abstraksjon av klassen som er knyttet med isAbstractionOf, mens hasSimpletype beskriver knytter til klassen som beskriver formatet."@nb .
 
 
 ###  http://example.com/test_abstraksjon#timeline
