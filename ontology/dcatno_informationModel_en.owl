@@ -15,10 +15,13 @@
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix begrep: <https://data.skatteetaten.no/begrep/> .
 @prefix ex-mch: <http://example.com/test_mch#> .
+@prefix ex-rel: <http://example.com/test_realization#> .
 @prefix ex-sch: <http://example.com/test_sch#> .
+@prefix ex-note: <http://example.com/test_note#> .
 @prefix skebase: <http://data.skatteetaten.no/ns/modell/basetyper/> .
 @prefix begreper: <https://data.skatteetaten.no/begreper/> .
 @prefix ex-bidir: <http://example.com/test#> .
+@prefix ex-valgfri: <http://example.com/test_valgfri#> .
 @prefix ex-abstrakt: <http://example.com/test_abstraksjon#> .
 @prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
 @prefix ex-collection: <http://example.com/test_collection#> .
@@ -2042,6 +2045,37 @@ ex-mch:tannkrem rdf:type owl:NamedIndividual ,
                          modelldcatno:ObjectType .
 
 
+###  http://example.com/test_note#lapp
+ex-note:lapp rdf:type owl:NamedIndividual ,
+                      modelldcatno:Note ;
+             dct:title "Notens innhold settes i title"@nb .
+
+
+###  http://example.com/test_note#oppslagstavle
+ex-note:oppslagstavle rdf:type owl:NamedIndividual ,
+                               modelldcatno:ObjectType ;
+                      modelldcatno:hasProperty ex-note:lapp ;
+                      dct:title "Oppslagstavle"@nb ;
+                      rdfs:comment "En klasse med en note" .
+
+
+###  http://example.com/test_realization#abstrakt
+ex-rel:abstrakt rdf:type owl:NamedIndividual ,
+                         modelldcatno:ObjectType ;
+                modelldcatno:hasProperty ex-rel:realiserer .
+
+
+###  http://example.com/test_realization#konkret
+ex-rel:konkret rdf:type owl:NamedIndividual ,
+                        modelldcatno:ObjectType .
+
+
+###  http://example.com/test_realization#realiserer
+ex-rel:realiserer rdf:type owl:NamedIndividual ,
+                           modelldcatno:Realization ;
+                  modelldcatno:hasSupplier ex-rel:abstrakt .
+
+
 ###  http://example.com/test_sch#Hund
 ex-sch:Hund rdf:type owl:NamedIndividual ,
                      modelldcatno:ObjectType .
@@ -2093,6 +2127,33 @@ ex-specialization:katteorden rdf:type owl:NamedIndividual ,
                                       modelldcatno:Specialization ;
                              modelldcatno:hasGeneralConcept ex-specialization:Pattedyr ;
                              rdfs:comment "Som regel anonym"@nb .
+
+
+###  http://example.com/test_valgfri#Oppgavegiver
+ex-valgfri:Oppgavegiver rdf:type owl:NamedIndividual ,
+                                 modelldcatno:ObjectType .
+
+
+###  http://example.com/test_valgfri#altEn
+ex-valgfri:altEn rdf:type owl:NamedIndividual ,
+                          modelldcatno:Choice ;
+                 modelldcatno:hasType ex-valgfri:Oppgavegiver ;
+                 dct:title "egenfastsatt"@nb .
+
+
+###  http://example.com/test_valgfri#altTo
+ex-valgfri:altTo rdf:type owl:NamedIndividual ,
+                          modelldcatno:Choice ;
+                 modelldcatno:hasType ex-valgfri:Oppgavegiver ;
+                 dct:title "barnehagefastsatt"@nb .
+
+
+###  http://example.com/test_valgfri#oppgave
+ex-valgfri:oppgave rdf:type owl:NamedIndividual ,
+                            modelldcatno:ObjectType ;
+                   modelldcatno:hasProperty ex-valgfri:altEn ,
+                                            ex-valgfri:altTo ;
+                   rdfs:comment "En oppgave over utgifter til barnepass"@nb .
 
 
 ###  http://id.loc.gov/vocabulary/iso639-1/nb
