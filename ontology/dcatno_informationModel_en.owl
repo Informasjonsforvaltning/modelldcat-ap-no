@@ -960,6 +960,7 @@ modelldcatno:Choice rdf:type owl:Class ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#Code
 modelldcatno:Code rdf:type owl:Class ;
+                  rdfs:comment "*** Betrakt disse som skos:Consept ***"@nb ;
                   rdfs:label "Code"@en ,
                              "Kode"@nb .
 
@@ -1115,6 +1116,7 @@ modelldcatno:ModelElement rdf:type owl:Class ;
 ###  https://data.norge.no/vocabulary/modelldcatno#Note
 modelldcatno:Note rdf:type owl:Class ;
                   rdfs:subClassOf modelldcatno:Property ;
+                  rdfs:comment "*** Lage eksempel der denne er på både en klasse og en egenskap."@nb ;
                   rdfs:label "Note"@en ,
                              "Note"@nb .
 
