@@ -590,6 +590,14 @@ modelldcatno:modelElementBelongsToModule rdf:type owl:DatatypeProperty ,
                                                     "modelelementet tilhører modul"@nb .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#notification
+modelldcatno:notification rdf:type owl:DatatypeProperty ;
+                          rdfs:domain modelldcatno:Note ;
+                          rdfs:range rdfs:Literal ;
+                          rdfs:label "anmerkning"@nb ,
+                                     "notification"@en .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#sequenceNumber
 modelldcatno:sequenceNumber rdf:type owl:DatatypeProperty ;
                             rdfs:domain modelldcatno:Property ;
@@ -1127,7 +1135,6 @@ modelldcatno:Specialization rdf:type owl:Class ;
                 modelldcatno:Choice
                 modelldcatno:Collection
                 modelldcatno:Composition
-                modelldcatno:Note
                 modelldcatno:Realization
                 modelldcatno:Role
                 modelldcatno:Specialization
