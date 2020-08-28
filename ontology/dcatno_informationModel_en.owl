@@ -638,6 +638,14 @@ modelldcatno:informationModelIdentifier rdf:type owl:DatatypeProperty ;
                                                    "information model identifier"@en .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#notification
+modelldcatno:notification rdf:type owl:DatatypeProperty ;
+                          rdfs:domain modelldcatno:Note ;
+                          rdfs:range rdfs:Literal ;
+                          rdfs:label "anmerkning"@nb ,
+                                     "notification"@en .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#sequenceNumber
 modelldcatno:sequenceNumber rdf:type owl:DatatypeProperty ;
                             rdfs:domain [ rdf:type owl:Class ;
@@ -1116,7 +1124,6 @@ modelldcatno:ModelElement rdf:type owl:Class ;
 ###  https://data.norge.no/vocabulary/modelldcatno#Note
 modelldcatno:Note rdf:type owl:Class ;
                   rdfs:subClassOf modelldcatno:Property ;
-                  rdfs:comment "*** Lage eksempel der denne er på både en klasse og en egenskap."@nb ;
                   rdfs:label "Note"@en ,
                              "Note"@nb .
 
@@ -1904,6 +1911,7 @@ ssg:tekniskNavn rdf:type owl:NamedIndividual ,
 ex-bidir:A rdf:type owl:NamedIndividual ,
                     modelldcatno:ObjectType ;
            modelldcatno:hasProperty ex-bidir:ab ;
+           dct:title "Kreditor"@nb ;
            rdfs:comment "Denne grafen viser to enveis forenklede relasjoner, satt sammen, for å beskrive en tovegsrelasjon."@nb ;
            rdfs:seeAlso <https://www.dropbox.com/s/4agk1n05f46mwnv/bidireksjonal.tiff?dl=0> .
 
@@ -1911,7 +1919,8 @@ ex-bidir:A rdf:type owl:NamedIndividual ,
 ###  http://example.com/test#B
 ex-bidir:B rdf:type owl:NamedIndividual ,
                     modelldcatno:ObjectType ;
-           modelldcatno:hasProperty ex-bidir:ba .
+           modelldcatno:hasProperty ex-bidir:ba ;
+           dct:title "Debitor"@nb .
 
 
 ###  http://example.com/test#C
@@ -1931,17 +1940,18 @@ ex-bidir:ab rdf:type owl:NamedIndividual ,
                      modelldcatno:Role ;
             modelldcatno:formsSymmetryWith ex-bidir:ba ;
             modelldcatno:hasObjectType ex-bidir:B ;
-            dct:title "B sin rolle" ;
+            dct:title "har penger tilgode hos"@nb ;
             xsd:maxOccurs "*"^^xsd:string ;
             xsd:minOccurs "1"^^xsd:int ;
-            modelldcatno:symmetryLabel "Navn på relasjonen (Kan settes på ab og/eller ba)"@nb .
+            modelldcatno:symmetryLabel """skyldforhold
+(Kan settes på ab og/eller ba)"""@nb .
 
 
 ###  http://example.com/test#ba
 ex-bidir:ba rdf:type owl:NamedIndividual ,
                      modelldcatno:Role ;
             modelldcatno:hasObjectType ex-bidir:A ;
-            dct:title "A sin rolle" ;
+            dct:title "skylder penger til"@nb ;
             xsd:maxOccurs "1"^^xsd:int ;
             xsd:minOccurs "0"^^xsd:int .
 
@@ -2080,16 +2090,26 @@ ex-mch:tannkrem rdf:type owl:NamedIndividual ,
                          modelldcatno:ObjectType .
 
 
+###  http://example.com/test_note#farge
+ex-note:farge rdf:type owl:NamedIndividual ,
+                       modelldcatno:Attribute ,
+                       modelldcatno:Note ;
+              modelldcatno:hasSimpletype skebase:TekstType ;
+              modelldcatno:notification "Fargen gjelder rammen (en note tekst)"@nb .
+
+
 ###  http://example.com/test_note#lapp
 ex-note:lapp rdf:type owl:NamedIndividual ,
                       modelldcatno:Note ;
-             dct:title "Notens innhold settes i title"@nb .
+             dct:title "Bemerk!"@nb ;
+             modelldcatno:notification "Dette er teksten på lappen"@nb .
 
 
 ###  http://example.com/test_note#oppslagstavle
 ex-note:oppslagstavle rdf:type owl:NamedIndividual ,
                                modelldcatno:ObjectType ;
-                      modelldcatno:hasProperty ex-note:lapp ;
+                      modelldcatno:hasProperty ex-note:farge ,
+                                               ex-note:lapp ;
                       dct:title "Oppslagstavle"@nb ;
                       rdfs:comment "En klasse med en note" .
 
