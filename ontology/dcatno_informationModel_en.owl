@@ -2266,7 +2266,6 @@ ex-valgfri:oppgave rdf:type owl:NamedIndividual ,
                 modelldcatno:Choice
                 modelldcatno:Collection
                 modelldcatno:Composition
-                modelldcatno:Note
                 modelldcatno:Role
                 modelldcatno:Specialization
               )
