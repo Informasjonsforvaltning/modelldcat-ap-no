@@ -266,6 +266,7 @@ modelldcatno:hasOneOf rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf modelldcatno:hasType ;
                       rdfs:domain modelldcatno:Choice ;
                       rdfs:range modelldcatno:ModelElement ;
+                      owl:propertyDisjointWith modelldcatno:hasSome ;
                       rdfs:label "har en av"@nb ,
                                  "has one of"@en .
 
@@ -292,6 +293,8 @@ modelldcatno:hasSimpletype rdf:type owl:ObjectProperty ;
 ###  https://data.norge.no/vocabulary/modelldcatno#hasSome
 modelldcatno:hasSome rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf modelldcatno:hasType ;
+                     rdfs:domain modelldcatno:Choice ;
+                     rdfs:range modelldcatno:ModelElement ;
                      rdfs:comment "Brukes for å betegne at en valgmulighet ikke er ekskusiv, dvs. at man kan velge mer enn en."@nb ;
                      rdfs:label "has some"@nb ,
                                 "kan ha"@nb .
