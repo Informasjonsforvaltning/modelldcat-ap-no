@@ -10,6 +10,7 @@
 @prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xkos: <https://rdf-vocabulary.ddialliance.org/xkos/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
 @base <https://data.norge.no/vocabulary/modelldcatno> .
@@ -20,8 +21,28 @@
 #    Annotation properties
 #################################################################
 
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty ;
+          rdfs:domain modelldcatno:Code .
+
+
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
 skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty ;
+               rdfs:subPropertyOf skos:note .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/exclusionNote
+xkos:exclusionNote rdf:type owl:AnnotationProperty ;
+                   rdfs:subPropertyOf skos:scopeNote .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/inclusionNote
+xkos:inclusionNote rdf:type owl:AnnotationProperty ;
+                   rdfs:subPropertyOf skos:scopeNote .
 
 
 #################################################################
@@ -157,6 +178,11 @@ skos:narrowerTransitive rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf skos:semanticRelation .
 
 
+###  http://www.w3.org/2004/02/skos/core#related
+skos:related rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf skos:semanticRelation .
+
+
 ###  http://www.w3.org/2004/02/skos/core#semanticRelation
 skos:semanticRelation rdf:type owl:ObjectProperty ;
                       rdfs:domain modelldcatno:Code ;
@@ -251,7 +277,7 @@ modelldcatno:containsObjectType rdf:type owl:ObjectProperty ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#eksklusiv
 modelldcatno:eksklusiv rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf skos:semanticRelation ;
+                       rdfs:subPropertyOf skos:related ;
                        rdfs:comment ""@nb .
 
 
@@ -352,7 +378,7 @@ modelldcatno:hasValueFrom rdf:type owl:ObjectProperty ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#inklusiv
 modelldcatno:inklusiv rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf skos:semanticRelation ;
+                      rdfs:subPropertyOf skos:related ;
                       rdfs:comment "Finner ikke noe på nettet om dette."@nb .
 
 
@@ -372,6 +398,26 @@ modelldcatno:references rdf:type owl:ObjectProperty ;
                         rdfs:range modelldcatno:ModelElement ;
                         rdfs:label "references"@en ,
                                    "refererer"@nb .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/generalizes
+xkos:generalizes rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf skos:narrower .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/hasPart
+xkos:hasPart rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf skos:narrower .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/isPartOf
+xkos:isPartOf rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf skos:broader .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/specializes
+xkos:specializes rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf skos:broader .
 
 
 #################################################################
