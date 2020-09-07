@@ -137,6 +137,33 @@ dct:type rdf:type owl:ObjectProperty ;
                     "type eller genre"@nb .
 
 
+###  http://www.w3.org/2004/02/skos/core#broader
+skos:broader rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf skos:broaderTransitive .
+
+
+###  http://www.w3.org/2004/02/skos/core#broaderTransitive
+skos:broaderTransitive rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf skos:semanticRelation .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrower
+skos:narrower rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf skos:narrowerTransitive .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrowerTransitive
+skos:narrowerTransitive rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf skos:semanticRelation .
+
+
+###  http://www.w3.org/2004/02/skos/core#semanticRelation
+skos:semanticRelation rdf:type owl:ObjectProperty ;
+                      rdfs:domain modelldcatno:Code ;
+                      rdfs:range modelldcatno:Code ;
+                      rdfs:label "semantic relation"@en .
+
+
 ###  http://www.w3.org/ns/adms#status
 adms:status rdf:type owl:ObjectProperty ;
             rdfs:domain modelldcatno:InformationModel ;
@@ -220,6 +247,12 @@ modelldcatno:containsObjectType rdf:type owl:ObjectProperty ;
                                 rdfs:range modelldcatno:ObjectType ;
                                 rdfs:label "contains object type"@en ,
                                            "inneholder objekttype"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#eksklusiv
+modelldcatno:eksklusiv rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf skos:semanticRelation ;
+                       rdfs:comment ""@nb .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#hasDataType
@@ -315,6 +348,12 @@ modelldcatno:hasValueFrom rdf:type owl:ObjectProperty ;
                           rdfs:range modelldcatno:CodeList ;
                           rdfs:label "har verdier fra"@nb ,
                                      "has value from"@en .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#inklusiv
+modelldcatno:inklusiv rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf skos:semanticRelation ;
+                      rdfs:comment "Finner ikke noe på nettet om dette."@nb .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#model
