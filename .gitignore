@@ -1,5 +1,10 @@
 
+<<<<<<< Updated upstream
 **/*.DS_Store
 index.html
 *.pdf
 *.epub
+=======
+ontology/.DS_Store
+.DS_Store
+>>>>>>> Stashed changes
