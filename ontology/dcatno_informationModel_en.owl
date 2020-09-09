@@ -275,12 +275,6 @@ modelldcatno:containsObjectType rdf:type owl:ObjectProperty ;
                                            "inneholder objekttype"@nb .
 
 
-###  https://data.norge.no/vocabulary/modelldcatno#eksklusiv
-modelldcatno:eksklusiv rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf skos:related ;
-                       rdfs:comment ""@nb .
-
-
 ###  https://data.norge.no/vocabulary/modelldcatno#hasDataType
 modelldcatno:hasDataType rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf modelldcatno:hasType ;
@@ -374,12 +368,6 @@ modelldcatno:hasValueFrom rdf:type owl:ObjectProperty ;
                           rdfs:range modelldcatno:CodeList ;
                           rdfs:label "har verdier fra"@nb ,
                                      "has value from"@en .
-
-
-###  https://data.norge.no/vocabulary/modelldcatno#inklusiv
-modelldcatno:inklusiv rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf skos:related ;
-                      rdfs:comment "Finner ikke noe på nettet om dette."@nb .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#model
