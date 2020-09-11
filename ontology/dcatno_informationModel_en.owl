@@ -21,13 +21,28 @@
 #    Annotation properties
 #################################################################
 
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty ;
+              rdfs:subPropertyOf rdfs:label .
+
+
+###  http://www.w3.org/2004/02/skos/core#hiddenLabel
+skos:hiddenLabel rdf:type owl:AnnotationProperty ;
+                 rdfs:subPropertyOf rdfs:label .
+
+
 ###  http://www.w3.org/2004/02/skos/core#note
 skos:note rdf:type owl:AnnotationProperty ;
+          rdfs:range skos:Concept ,
+                     modelldcatno:Code ;
           rdfs:domain modelldcatno:Code .
 
 
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
-skos:prefLabel rdf:type owl:AnnotationProperty .
+skos:prefLabel rdf:type owl:AnnotationProperty ;
+               rdfs:subPropertyOf rdfs:label ;
+               rdfs:range skos:Concept ,
+                          modelldcatno:Code .
 
 
 ###  http://www.w3.org/2004/02/skos/core#scopeNote
@@ -168,6 +183,14 @@ skos:broaderTransitive rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf skos:semanticRelation .
 
 
+###  http://www.w3.org/2004/02/skos/core#hasTopConcept
+skos:hasTopConcept rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+skos:inScheme rdf:type owl:ObjectProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#narrower
 skos:narrower rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf skos:narrowerTransitive .
@@ -188,6 +211,10 @@ skos:semanticRelation rdf:type owl:ObjectProperty ;
                       rdfs:domain modelldcatno:Code ;
                       rdfs:range modelldcatno:Code ;
                       rdfs:label "semantic relation"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#topConceptOf
+skos:topConceptOf rdf:type owl:ObjectProperty .
 
 
 ###  http://www.w3.org/ns/adms#status
@@ -469,7 +496,6 @@ dct:modified rdf:type owl:DatatypeProperty ;
 dct:title rdf:type owl:DatatypeProperty ;
           rdfs:domain [ rdf:type owl:Class ;
                         owl:unionOf ( dcat:Resource
-                                      modelldcatno:Code
                                       modelldcatno:ModelElement
                                       modelldcatno:Property
                                     )
@@ -582,6 +608,10 @@ owl:versionInfo rdf:type owl:DatatypeProperty ;
                 rdfs:range rdfs:Literal ;
                 rdfs:label "version info"@en ,
                            "versjonsinfo"@nb .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+skos:notation rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.w3.org/ns/dcat#bbox
@@ -972,8 +1002,22 @@ modelldcatno:Choice rdf:type owl:Class ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#Code
 modelldcatno:Code rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty skos:notation ;
+                                    owl:someValuesFrom rdfs:Literal
+                                  ] ;
                   rdfs:label "Code"@en ,
                              "Kode"@nb .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource modelldcatno:Code ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty skos:notation ;
+                         owl:someValuesFrom rdfs:Literal
+                       ] ;
+   rdfs:comment "Kodens verdi/identifikator"@nb
+ ] .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#CodeList
