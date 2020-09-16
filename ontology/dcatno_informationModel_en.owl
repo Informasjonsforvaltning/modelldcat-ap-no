@@ -436,13 +436,15 @@ modelldcatno:references rdf:type owl:ObjectProperty ;
 ###  https://rdf-vocabulary.ddialliance.org/xkos/after
 xkos:after rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf xkos:temporal ;
-           rdf:type owl:TransitiveProperty .
+           rdf:type owl:TransitiveProperty ;
+           owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://rdf-vocabulary.ddialliance.org/xkos/before
 xkos:before rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf xkos:temporal ;
-            rdf:type owl:TransitiveProperty .
+            rdf:type owl:TransitiveProperty ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://rdf-vocabulary.ddialliance.org/xkos/causal
@@ -462,7 +464,8 @@ xkos:causes rdf:type owl:ObjectProperty ;
 
 ###  https://rdf-vocabulary.ddialliance.org/xkos/disjoint
 xkos:disjoint rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf skos:related .
+              rdfs:subPropertyOf skos:related ;
+              owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://rdf-vocabulary.ddialliance.org/xkos/generalizes
@@ -484,23 +487,27 @@ xkos:isPartOf rdf:type owl:ObjectProperty ;
 
 ###  https://rdf-vocabulary.ddialliance.org/xkos/next
 xkos:next rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf xkos:succeeds .
+          rdfs:subPropertyOf xkos:succeeds ;
+          owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://rdf-vocabulary.ddialliance.org/xkos/precedes
 xkos:precedes rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf xkos:sequential ;
-              rdf:type owl:TransitiveProperty .
+              rdf:type owl:TransitiveProperty ;
+              owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://rdf-vocabulary.ddialliance.org/xkos/previous
 xkos:previous rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf xkos:precedes .
+              rdfs:subPropertyOf xkos:precedes ;
+              owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://rdf-vocabulary.ddialliance.org/xkos/sequential
 xkos:sequential rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf skos:related .
+                rdfs:subPropertyOf skos:related ;
+                owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://rdf-vocabulary.ddialliance.org/xkos/specializes
@@ -511,12 +518,14 @@ xkos:specializes rdf:type owl:ObjectProperty ;
 ###  https://rdf-vocabulary.ddialliance.org/xkos/succeeds
 xkos:succeeds rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf xkos:sequential ;
-              rdf:type owl:TransitiveProperty .
+              rdf:type owl:TransitiveProperty ;
+              owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://rdf-vocabulary.ddialliance.org/xkos/temporal
 xkos:temporal rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf xkos:sequential .
+              rdfs:subPropertyOf xkos:sequential ;
+              owl:deprecated "true"^^xsd:boolean .
 
 
 #################################################################
