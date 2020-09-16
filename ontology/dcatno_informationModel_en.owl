@@ -12,6 +12,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xkos: <https://rdf-vocabulary.ddialliance.org/xkos/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix ex-code: <http://example.com/code/> .
 @prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
 @base <https://data.norge.no/vocabulary/modelldcatno> .
 
@@ -1315,6 +1316,25 @@ modelldcatno:Specialization rdf:type owl:Class ;
                             rdfs:subClassOf modelldcatno:Property ;
                             rdfs:label "Specialization"@en ,
                                        "Spesialisering"@nb .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.com/code/kode
+ex-code:kode rdf:type owl:NamedIndividual ,
+                      modelldcatno:Code ;
+             skos:inScheme ex-code:kodeliste ;
+             skos:notation "3405"^^xsd:string ;
+             skos:definition "Lillehammer er en by og kommune i Gudbrandsdalen i Innlandet, ved nordenden av Mjøsa."@nb ;
+             skos:prefLabel "Lillehammer"@nb .
+
+
+###  http://example.com/code/kodeliste
+ex-code:kodeliste rdf:type owl:NamedIndividual ,
+                           modelldcatno:CodeList ;
+                  dct:title "Kommunenummerlisten"@nb .
 
 
 #################################################################
