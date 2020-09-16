@@ -26,6 +26,16 @@ skos:altLabel rdf:type owl:AnnotationProperty ;
               rdfs:subPropertyOf rdfs:label .
 
 
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty ;
+                rdfs:subPropertyOf skos:note .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty ;
+             rdfs:subPropertyOf skos:note .
+
+
 ###  http://www.w3.org/2004/02/skos/core#hiddenLabel
 skos:hiddenLabel rdf:type owl:AnnotationProperty ;
                  rdfs:subPropertyOf rdfs:label .
@@ -175,12 +185,16 @@ dct:type rdf:type owl:ObjectProperty ;
 
 ###  http://www.w3.org/2004/02/skos/core#broader
 skos:broader rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf skos:broaderTransitive .
+             rdfs:subPropertyOf skos:broaderTransitive ;
+             owl:inverseOf skos:narrower .
 
 
 ###  http://www.w3.org/2004/02/skos/core#broaderTransitive
 skos:broaderTransitive rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf skos:semanticRelation .
+                       rdfs:subPropertyOf skos:semanticRelation ;
+                       owl:inverseOf skos:narrowerTransitive ;
+                       rdf:type owl:TransitiveProperty ;
+                       owl:propertyDisjointWith skos:related .
 
 
 ###  http://www.w3.org/2004/02/skos/core#hasTopConcept
@@ -188,7 +202,8 @@ skos:hasTopConcept rdf:type owl:ObjectProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#inScheme
-skos:inScheme rdf:type owl:ObjectProperty .
+skos:inScheme rdf:type owl:ObjectProperty ;
+              rdfs:range skos:ConceptScheme .
 
 
 ###  http://www.w3.org/2004/02/skos/core#narrower
@@ -198,18 +213,20 @@ skos:narrower rdf:type owl:ObjectProperty ;
 
 ###  http://www.w3.org/2004/02/skos/core#narrowerTransitive
 skos:narrowerTransitive rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf skos:semanticRelation .
+                        rdfs:subPropertyOf skos:semanticRelation ;
+                        rdf:type owl:TransitiveProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#related
 skos:related rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf skos:semanticRelation .
+             rdfs:subPropertyOf skos:semanticRelation ;
+             rdf:type owl:SymmetricProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#semanticRelation
 skos:semanticRelation rdf:type owl:ObjectProperty ;
-                      rdfs:domain modelldcatno:Code ;
-                      rdfs:range modelldcatno:Code ;
+                      rdfs:domain skos:Concept ;
+                      rdfs:range skos:Concept ;
                       rdfs:label "semantic relation"@en .
 
 
@@ -415,14 +432,48 @@ modelldcatno:references rdf:type owl:ObjectProperty ;
                                    "refererer"@nb .
 
 
+###  https://rdf-vocabulary.ddialliance.org/xkos/after
+xkos:after rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf xkos:temporal ;
+           rdf:type owl:TransitiveProperty .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/before
+xkos:before rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf xkos:temporal ;
+            rdf:type owl:TransitiveProperty .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/causal
+xkos:causal rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf skos:related .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/causedBy
+xkos:causedBy rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf xkos:causal .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/causes
+xkos:causes rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf xkos:causal .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/disjoint
+xkos:disjoint rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf skos:related .
+
+
 ###  https://rdf-vocabulary.ddialliance.org/xkos/generalizes
 xkos:generalizes rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf skos:narrower .
+                 rdfs:subPropertyOf skos:narrower ;
+                 owl:inverseOf xkos:specializes .
 
 
 ###  https://rdf-vocabulary.ddialliance.org/xkos/hasPart
 xkos:hasPart rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf skos:narrower .
+             rdfs:subPropertyOf skos:narrower ;
+             owl:inverseOf xkos:isPartOf .
 
 
 ###  https://rdf-vocabulary.ddialliance.org/xkos/isPartOf
@@ -430,9 +481,41 @@ xkos:isPartOf rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf skos:broader .
 
 
+###  https://rdf-vocabulary.ddialliance.org/xkos/next
+xkos:next rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf xkos:succeeds .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/precedes
+xkos:precedes rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf xkos:sequential ;
+              rdf:type owl:TransitiveProperty .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/previous
+xkos:previous rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf xkos:precedes .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/sequential
+xkos:sequential rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf skos:related .
+
+
 ###  https://rdf-vocabulary.ddialliance.org/xkos/specializes
 xkos:specializes rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf skos:broader .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/succeeds
+xkos:succeeds rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf xkos:sequential ;
+              rdf:type owl:TransitiveProperty .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/temporal
+xkos:temporal rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf xkos:sequential .
 
 
 #################################################################
@@ -443,7 +526,6 @@ xkos:specializes rdf:type owl:ObjectProperty ;
 dct:description rdf:type owl:DatatypeProperty ;
                 rdfs:domain [ rdf:type owl:Class ;
                               owl:unionOf ( dcat:Resource
-                                            modelldcatno:Code
                                             modelldcatno:ModelElement
                                             modelldcatno:Property
                                           )
@@ -1002,7 +1084,8 @@ modelldcatno:Choice rdf:type owl:Class ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#Code
 modelldcatno:Code rdf:type owl:Class ;
-                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                  rdfs:subClassOf skos:Concept ,
+                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty skos:notation ;
                                     owl:someValuesFrom rdfs:Literal
                                   ] ;
@@ -1022,7 +1105,8 @@ modelldcatno:Code rdf:type owl:Class ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#CodeList
 modelldcatno:CodeList rdf:type owl:Class ;
-                      rdfs:subClassOf modelldcatno:ModelElement ,
+                      rdfs:subClassOf skos:ConceptScheme ,
+                                      modelldcatno:ModelElement ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty modelldcatno:hasProperty ;
                                         owl:qualifiedCardinality "0"^^xsd:nonNegativeInteger ;
