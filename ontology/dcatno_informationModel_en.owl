@@ -404,6 +404,7 @@ dct:modified rdf:type owl:DatatypeProperty ;
 dct:title rdf:type owl:DatatypeProperty ;
           rdfs:domain [ rdf:type owl:Class ;
                         owl:unionOf ( dcat:Resource
+                                      foaf:Document
                                       modelldcatno:Code
                                       modelldcatno:ModelElement
                                       modelldcatno:Property
