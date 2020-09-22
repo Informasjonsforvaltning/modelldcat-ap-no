@@ -260,7 +260,8 @@ modelldcatno:containsCode rdf:type owl:ObjectProperty ;
                           rdfs:domain modelldcatno:CodeList ;
                           rdfs:range modelldcatno:Code ;
                           rdfs:label "contains code"@en ,
-                                     "inneholder kode"@nb .
+                                     "inneholder kode"@nb ;
+                          owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#containsModelElement
@@ -1212,8 +1213,9 @@ modelldcatno:Specialization rdf:type owl:Class ;
 ex-code:kode rdf:type owl:NamedIndividual ,
                       modelldcatno:Code ;
              skos:inScheme ex-code:kodeliste ;
+             skos:topConceptOf ex-code:kodeliste ;
              skos:notation "3405"^^xsd:string ;
-             skos:definition "Lillehammer er en by og kommune i Gudbrandsdalen i Innlandet, ved nordenden av Mjøsa."@nb ;
+             skos:note "Lillehammer er en by og kommune i Gudbrandsdalen i Innlandet, ved nordenden av Mjøsa."@nb ;
              skos:prefLabel "Lillehammer"@nb .
 
 
