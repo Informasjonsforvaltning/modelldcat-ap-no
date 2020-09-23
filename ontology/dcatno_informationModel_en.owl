@@ -611,6 +611,8 @@ modelldcatno:sequenceNumber rdf:type owl:DatatypeProperty ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#symmetryLabel
 modelldcatno:symmetryLabel rdf:type owl:DatatypeProperty ;
+                           rdfs:domain modelldcatno:Property ;
+                           rdfs:range rdfs:Literal ;
                            rdfs:label "Egenskapspar-navn"@nb ,
                                       "Symmetry Label"@en .
 
