@@ -43,17 +43,12 @@ skos:hiddenLabel rdf:type owl:AnnotationProperty ;
 
 
 ###  http://www.w3.org/2004/02/skos/core#note
-skos:note rdf:type owl:AnnotationProperty ;
-          rdfs:range skos:Concept ,
-                     modelldcatno:Code ;
-          rdfs:domain modelldcatno:Code .
+skos:note rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
 skos:prefLabel rdf:type owl:AnnotationProperty ;
-               rdfs:subPropertyOf rdfs:label ;
-               rdfs:range skos:Concept ,
-                          modelldcatno:Code .
+               rdfs:subPropertyOf rdfs:label .
 
 
 ###  http://www.w3.org/2004/02/skos/core#scopeNote
@@ -253,15 +248,6 @@ modelldcatno:contains rdf:type owl:ObjectProperty ;
                       rdfs:range modelldcatno:ModelElement ;
                       rdfs:label "contains"@en ,
                                  "inneholder"@nb .
-
-
-###  https://data.norge.no/vocabulary/modelldcatno#containsCode
-modelldcatno:containsCode rdf:type owl:ObjectProperty ;
-                          rdfs:domain modelldcatno:CodeList ;
-                          rdfs:range modelldcatno:Code ;
-                          rdfs:label "contains code"@en ,
-                                     "inneholder kode"@nb ;
-                          owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#containsModelElement
@@ -972,7 +958,22 @@ modelldcatno:Choice rdf:type owl:Class ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#Code
 modelldcatno:Code rdf:type owl:Class ;
-                  rdfs:subClassOf skos:Concept ,
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty skos:inScheme ;
+                                    owl:someValuesFrom modelldcatno:CodeList
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty skos:topConceptOf ;
+                                    owl:someValuesFrom modelldcatno:CodeList
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty xkos:next ;
+                                    owl:someValuesFrom modelldcatno:Code
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty xkos:previous ;
+                                    owl:someValuesFrom modelldcatno:Code
+                                  ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty skos:notation ;
                                     owl:someValuesFrom rdfs:Literal
@@ -993,8 +994,7 @@ modelldcatno:Code rdf:type owl:Class ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#CodeList
 modelldcatno:CodeList rdf:type owl:Class ;
-                      rdfs:subClassOf skos:ConceptScheme ,
-                                      modelldcatno:ModelElement ,
+                      rdfs:subClassOf modelldcatno:ModelElement ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty modelldcatno:hasProperty ;
                                         owl:qualifiedCardinality "0"^^xsd:nonNegativeInteger ;
