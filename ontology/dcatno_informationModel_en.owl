@@ -1,4 +1,5 @@
 @prefix : <https://data.norge.no/vocabulary/modelldcatno/> .
+@prefix ex: <http://example.com/test#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -220,6 +221,15 @@ modelldcatno:containsObjectType rdf:type owl:ObjectProperty ;
                                 rdfs:range modelldcatno:ObjectType ;
                                 rdfs:label "contains object type"@en ,
                                            "inneholder objekttype"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#formsSymmetryWith
+modelldcatno:formsSymmetryWith rdf:type owl:ObjectProperty ,
+                                        owl:SymmetricProperty ;
+                               rdfs:domain modelldcatno:Property ;
+                               rdfs:range modelldcatno:Property ;
+                               rdfs:label "Forms symmetry with"@en ,
+                                          "Utgjør symetrisk relasjon med"@nb .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#hasDataType
@@ -597,6 +607,14 @@ modelldcatno:sequenceNumber rdf:type owl:DatatypeProperty ;
                             rdfs:comment "Der man har en modell der elementenes orden er vesentlig, f. eks. slik det jo ofte er i XML"@nb ;
                             rdfs:label "Sekvensnummer"@nb ,
                                        "sequence number"@en .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#symmetryLabel
+modelldcatno:symmetryLabel rdf:type owl:DatatypeProperty ;
+                           rdfs:domain modelldcatno:Property ;
+                           rdfs:range rdfs:Literal ;
+                           rdfs:label "Egenskapspar-navn"@nb ,
+                                      "Symmetry Label"@en .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#typeDefinitionReference
@@ -1114,6 +1132,74 @@ modelldcatno:Specialization rdf:type owl:Class ;
                             rdfs:subClassOf modelldcatno:Property ;
                             rdfs:label "Specialization"@en ,
                                        "Spesialisering"@nb .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.com/test#A
+ex:A rdf:type owl:NamedIndividual ,
+              modelldcatno:ObjectType ;
+     modelldcatno:hasProperty ex:ab .
+
+
+###  http://example.com/test#B
+ex:B rdf:type owl:NamedIndividual ,
+              modelldcatno:ObjectType ;
+     modelldcatno:hasProperty ex:ba .
+
+
+###  http://example.com/test#C
+ex:C rdf:type owl:NamedIndividual ,
+              modelldcatno:ObjectType ;
+     modelldcatno:hasProperty ex:cd .
+
+
+###  http://example.com/test#D
+ex:D rdf:type owl:NamedIndividual ,
+              modelldcatno:ObjectType ;
+     modelldcatno:hasProperty ex:dc .
+
+
+###  http://example.com/test#ab
+ex:ab rdf:type owl:NamedIndividual ,
+               modelldcatno:Role ;
+      modelldcatno:formsSymmetryWith ex:ba ;
+      modelldcatno:hasObjectType ex:B ;
+      dct:title "B sin rolle" ;
+      xsd:maxOccurs "*"^^xsd:string ;
+      xsd:minOccurs "1"^^xsd:int ;
+      modelldcatno:symmetryLabel "Navn på relasjonen (Kan settes på ab og/eller ba)"@nb .
+
+
+###  http://example.com/test#ba
+ex:ba rdf:type owl:NamedIndividual ,
+               modelldcatno:Role ;
+      modelldcatno:hasObjectType ex:A ;
+      dct:title "A sin rolle" ;
+      xsd:maxOccurs "1"^^xsd:int ;
+      xsd:minOccurs "0"^^xsd:int .
+
+
+###  http://example.com/test#cd
+ex:cd rdf:type owl:NamedIndividual ,
+               modelldcatno:Composition ;
+      modelldcatno:contains ex:D ;
+      modelldcatno:formsSymmetryWith ex:dc ;
+      dct:title "D sin rolle" ;
+      xsd:maxOccurs "*"^^xsd:string ;
+      xsd:minOccurs "1"^^xsd:int ;
+      modelldcatno:symmetryLabel "Relasjonen C D"@nb .
+
+
+###  http://example.com/test#dc
+ex:dc rdf:type owl:NamedIndividual ,
+               modelldcatno:Role ;
+      modelldcatno:hasObjectType ex:C ;
+      dct:title "C sin rolle" ;
+      xsd:maxOccurs "1"^^xsd:int ;
+      xsd:minOccurs "0"^^xsd:int .
 
 
 #################################################################
