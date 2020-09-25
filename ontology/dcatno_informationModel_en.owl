@@ -771,6 +771,12 @@ dct:PeriodOfTime rdf:type owl:Class ;
                             "Tidsintervall"@nb .
 
 
+###  http://purl.org/dc/terms/Standard
+dct:Standard rdf:type owl:Class ;
+             rdfs:label "Standard"@en ,
+                        "Standard"@nb .
+
+
 ###  http://www.w3.org/2004/02/skos/core#Concept
 skos:Concept rdf:type owl:Class ;
              rdfs:label "Begrep"@nb ,
@@ -1079,7 +1085,8 @@ modelldcatno:DataType rdf:type owl:Class ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#InformationModel
 modelldcatno:InformationModel rdf:type owl:Class ;
-                              rdfs:subClassOf dcat:Resource ,
+                              rdfs:subClassOf dct:Standard ,
+                                              dcat:Resource ,
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty dct:creator ;
                                                 owl:someValuesFrom foaf:Agent
