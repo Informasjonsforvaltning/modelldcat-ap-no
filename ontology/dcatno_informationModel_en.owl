@@ -327,6 +327,15 @@ modelldcatno:hasValueFrom rdf:type owl:ObjectProperty ;
                                      "has value from"@en .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#isAbstractionOf
+modelldcatno:isAbstractionOf rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf modelldcatno:hasType ;
+                             rdfs:domain modelldcatno:Abstraction ;
+                             rdfs:range modelldcatno:ModelElement ;
+                             rdfs:label "er abstraksjon av"@nb ,
+                                        "is abstraction of"@en .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#model
 modelldcatno:model rdf:type owl:ObjectProperty ;
                    rdfs:domain dcat:Catalog ;
