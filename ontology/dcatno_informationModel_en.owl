@@ -930,8 +930,7 @@ modelldcatno:Attribute rdf:type owl:Class ;
                        rdfs:subClassOf modelldcatno:Property ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty modelldcatno:hasType ;
-                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                         owl:onClass modelldcatno:ModelElement
+                                         owl:someValuesFrom modelldcatno:ModelElement
                                        ] ;
                        rdfs:label "Attribute"@en ,
                                   "Attributt"@nb .
@@ -1236,14 +1235,12 @@ ex:dc rdf:type owl:NamedIndividual ,
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( modelldcatno:Abstraction
-                modelldcatno:Association
+  owl:members ( modelldcatno:Association
                 modelldcatno:Attribute
                 modelldcatno:Choice
                 modelldcatno:Collection
                 modelldcatno:Composition
                 modelldcatno:Note
-                modelldcatno:Realization
                 modelldcatno:Role
                 modelldcatno:Specialization
               )
