@@ -1157,11 +1157,7 @@ modelldcatno:Association rdf:type owl:Class ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#Attribute
 modelldcatno:Attribute rdf:type owl:Class ;
-                       rdfs:subClassOf modelldcatno:Property ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty modelldcatno:hasType ;
-                                         owl:someValuesFrom modelldcatno:ModelElement
-                                       ] ;
+                       rdfs:subClassOf modelldcatno:Property ;
                        rdfs:label "Attribute"@en ,
                                   "Attributt"@nb .
 
