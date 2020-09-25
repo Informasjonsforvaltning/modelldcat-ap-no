@@ -11,8 +11,8 @@
 @prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xkos: <https://rdf-vocabulary.ddialliance.org/xkos/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
-@prefix exbidir: <http://example.com/test#> .
 @prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
 @base <https://data.norge.no/vocabulary/modelldcatno> .
 
@@ -22,8 +22,53 @@
 #    Annotation properties
 #################################################################
 
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty ;
+              rdfs:subPropertyOf rdfs:label .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty ;
+                rdfs:subPropertyOf skos:note .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty ;
+             rdfs:subPropertyOf skos:note .
+
+
+###  http://www.w3.org/2004/02/skos/core#hiddenLabel
+skos:hiddenLabel rdf:type owl:AnnotationProperty ;
+                 rdfs:subPropertyOf rdfs:label .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty ;
+          rdfs:range skos:Concept ,
+                     modelldcatno:Code ;
+          rdfs:domain modelldcatno:Code .
+
+
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
-skos:prefLabel rdf:type owl:AnnotationProperty .
+skos:prefLabel rdf:type owl:AnnotationProperty ;
+               rdfs:subPropertyOf rdfs:label ;
+               rdfs:range skos:Concept ,
+                          modelldcatno:Code .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty ;
+               rdfs:subPropertyOf skos:note .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/exclusionNote
+xkos:exclusionNote rdf:type owl:AnnotationProperty ;
+                   rdfs:subPropertyOf skos:scopeNote .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/inclusionNote
+xkos:inclusionNote rdf:type owl:AnnotationProperty ;
+                   rdfs:subPropertyOf skos:scopeNote .
 
 
 #################################################################
@@ -145,6 +190,57 @@ dct:type rdf:type owl:ObjectProperty ;
          rdfs:range skos:Concept ;
          rdfs:label "type"@en ,
                     "type eller genre"@nb .
+
+
+###  http://www.w3.org/2004/02/skos/core#broader
+skos:broader rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf skos:broaderTransitive ;
+             owl:inverseOf skos:narrower .
+
+
+###  http://www.w3.org/2004/02/skos/core#broaderTransitive
+skos:broaderTransitive rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf skos:semanticRelation ;
+                       owl:inverseOf skos:narrowerTransitive ;
+                       rdf:type owl:TransitiveProperty ;
+                       owl:propertyDisjointWith skos:related .
+
+
+###  http://www.w3.org/2004/02/skos/core#hasTopConcept
+skos:hasTopConcept rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+skos:inScheme rdf:type owl:ObjectProperty ;
+              rdfs:range skos:ConceptScheme .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrower
+skos:narrower rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf skos:narrowerTransitive .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrowerTransitive
+skos:narrowerTransitive rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf skos:semanticRelation ;
+                        rdf:type owl:TransitiveProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#related
+skos:related rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf skos:semanticRelation ;
+             rdf:type owl:SymmetricProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#semanticRelation
+skos:semanticRelation rdf:type owl:ObjectProperty ;
+                      rdfs:domain skos:Concept ;
+                      rdfs:range skos:Concept ;
+                      rdfs:label "semantic relation"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#topConceptOf
+skos:topConceptOf rdf:type owl:ObjectProperty .
 
 
 ###  http://www.w3.org/ns/adms#status
@@ -374,6 +470,101 @@ modelldcatno:references rdf:type owl:ObjectProperty ;
                                    "refererer"@nb .
 
 
+###  https://rdf-vocabulary.ddialliance.org/xkos/after
+xkos:after rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf xkos:temporal ;
+           rdf:type owl:TransitiveProperty ;
+           owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/before
+xkos:before rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf xkos:temporal ;
+            rdf:type owl:TransitiveProperty ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/causal
+xkos:causal rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf skos:related .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/causedBy
+xkos:causedBy rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf xkos:causal .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/causes
+xkos:causes rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf xkos:causal .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/disjoint
+xkos:disjoint rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf skos:related ;
+              owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/generalizes
+xkos:generalizes rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf skos:narrower ;
+                 owl:inverseOf xkos:specializes .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/hasPart
+xkos:hasPart rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf skos:narrower ;
+             owl:inverseOf xkos:isPartOf .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/isPartOf
+xkos:isPartOf rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf skos:broader .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/next
+xkos:next rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf xkos:succeeds ;
+          owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/precedes
+xkos:precedes rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf xkos:sequential ;
+              rdf:type owl:TransitiveProperty ;
+              owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/previous
+xkos:previous rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf xkos:precedes ;
+              owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/sequential
+xkos:sequential rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf skos:related ;
+                owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/specializes
+xkos:specializes rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf skos:broader .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/succeeds
+xkos:succeeds rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf xkos:sequential ;
+              rdf:type owl:TransitiveProperty ;
+              owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/temporal
+xkos:temporal rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf xkos:sequential ;
+              owl:deprecated "true"^^xsd:boolean .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -382,7 +573,6 @@ modelldcatno:references rdf:type owl:ObjectProperty ;
 dct:description rdf:type owl:DatatypeProperty ;
                 rdfs:domain [ rdf:type owl:Class ;
                               owl:unionOf ( dcat:Resource
-                                            modelldcatno:Code
                                             modelldcatno:ModelElement
                                             modelldcatno:Property
                                           )
@@ -436,7 +626,7 @@ dct:title rdf:type owl:DatatypeProperty ;
           rdfs:domain [ rdf:type owl:Class ;
                         owl:unionOf ( dcat:Resource
                                       foaf:Document
-                                      modelldcatno:Code
+                                      modelldcatno:C
                                       modelldcatno:ModelElement
                                       modelldcatno:Property
                                     )
@@ -549,6 +739,10 @@ owl:versionInfo rdf:type owl:DatatypeProperty ;
                 rdfs:range rdfs:Literal ;
                 rdfs:label "version info"@en ,
                            "versjonsinfo"@nb .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+skos:notation rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.w3.org/ns/dcat#bbox
@@ -976,13 +1170,29 @@ modelldcatno:Choice rdf:type owl:Class ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#Code
 modelldcatno:Code rdf:type owl:Class ;
+                  rdfs:subClassOf skos:Concept ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty skos:notation ;
+                                    owl:someValuesFrom rdfs:Literal
+                                  ] ;
                   rdfs:label "Code"@en ,
                              "Kode"@nb .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource modelldcatno:Code ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty skos:notation ;
+                         owl:someValuesFrom rdfs:Literal
+                       ] ;
+   rdfs:comment "Kodens verdi/identifikator"@nb
+ ] .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#CodeList
 modelldcatno:CodeList rdf:type owl:Class ;
-                      rdfs:subClassOf modelldcatno:ModelElement ,
+                      rdfs:subClassOf skos:ConceptScheme ,
+                                      modelldcatno:ModelElement ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty modelldcatno:hasProperty ;
                                         owl:qualifiedCardinality "0"^^xsd:nonNegativeInteger ;
@@ -1195,74 +1405,6 @@ modelldcatno:Specialization rdf:type owl:Class ;
                             rdfs:subClassOf modelldcatno:Property ;
                             rdfs:label "Specialization"@en ,
                                        "Spesialisering"@nb .
-
-
-#################################################################
-#    Individuals
-#################################################################
-
-###  http://example.com/test#A
-ex:A rdf:type owl:NamedIndividual ,
-              modelldcatno:ObjectType ;
-     modelldcatno:hasProperty ex:ab .
-
-
-###  http://example.com/test#B
-ex:B rdf:type owl:NamedIndividual ,
-              modelldcatno:ObjectType ;
-     modelldcatno:hasProperty ex:ba .
-
-
-###  http://example.com/test#C
-ex:C rdf:type owl:NamedIndividual ,
-              modelldcatno:ObjectType ;
-     modelldcatno:hasProperty ex:cd .
-
-
-###  http://example.com/test#D
-ex:D rdf:type owl:NamedIndividual ,
-              modelldcatno:ObjectType ;
-     modelldcatno:hasProperty ex:dc .
-
-
-###  http://example.com/test#ab
-ex:ab rdf:type owl:NamedIndividual ,
-               modelldcatno:Role ;
-      modelldcatno:formsSymmetryWith ex:ba ;
-      modelldcatno:hasObjectType ex:B ;
-      dct:title "B sin rolle" ;
-      xsd:maxOccurs "*"^^xsd:string ;
-      xsd:minOccurs "1"^^xsd:int ;
-      modelldcatno:symmetryLabel "Navn på relasjonen (Kan settes på ab og/eller ba)"@nb .
-
-
-###  http://example.com/test#ba
-ex:ba rdf:type owl:NamedIndividual ,
-               modelldcatno:Role ;
-      modelldcatno:hasObjectType ex:A ;
-      dct:title "A sin rolle" ;
-      xsd:maxOccurs "1"^^xsd:int ;
-      xsd:minOccurs "0"^^xsd:int .
-
-
-###  http://example.com/test#cd
-ex:cd rdf:type owl:NamedIndividual ,
-               modelldcatno:Composition ;
-      modelldcatno:contains ex:D ;
-      modelldcatno:formsSymmetryWith ex:dc ;
-      dct:title "D sin rolle" ;
-      xsd:maxOccurs "*"^^xsd:string ;
-      xsd:minOccurs "1"^^xsd:int ;
-      modelldcatno:symmetryLabel "Relasjonen C D"@nb .
-
-
-###  http://example.com/test#dc
-ex:dc rdf:type owl:NamedIndividual ,
-               modelldcatno:Role ;
-      modelldcatno:hasObjectType ex:C ;
-      dct:title "C sin rolle" ;
-      xsd:maxOccurs "1"^^xsd:int ;
-      xsd:minOccurs "0"^^xsd:int .
 
 
 #################################################################
