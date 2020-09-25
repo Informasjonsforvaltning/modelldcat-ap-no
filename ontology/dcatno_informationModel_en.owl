@@ -625,6 +625,28 @@ modelldcatno:informationModelIdentifier rdf:type owl:DatatypeProperty ;
                                                    "information model identifier"@en .
 
 
+
+###  https://data.norge.no/vocabulary/modelldcatno#modelElementBelongsToModule
+modelldcatno:modelElementBelongsToModule rdf:type owl:DatatypeProperty ,
+                                                  owl:FunctionalProperty ;
+                                         rdfs:domain modelldcatno:ModelElement ;
+                                         rdfs:range [ rdf:type rdfs:Datatype ;
+                                                      owl:unionOf ( rdfs:Literal
+                                                                    xsd:anyURI
+                                                                  )
+                                                    ] ;
+                                         rdfs:label "model element belongs to module"@en ,
+                                                    "modelelementet tilhører modul"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#propertyNote
+modelldcatno:propertyNote rdf:type owl:DatatypeProperty ;
+                          rdfs:domain modelldcatno:Note ;
+                          rdfs:range rdfs:Literal ;
+                          rdfs:label "anmerkning"@nb ,
+                                     "property note"@en .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#sequenceNumber
 modelldcatno:sequenceNumber rdf:type owl:DatatypeProperty ;
                             rdfs:domain [ rdf:type owl:Class ;
@@ -1240,7 +1262,7 @@ ex:dc rdf:type owl:NamedIndividual ,
                 modelldcatno:Choice
                 modelldcatno:Collection
                 modelldcatno:Composition
-                modelldcatno:Note
+                modelldcatno:Realization
                 modelldcatno:Role
                 modelldcatno:Specialization
               )
