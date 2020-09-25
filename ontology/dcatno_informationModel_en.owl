@@ -38,6 +38,14 @@ dct:creator rdf:type owl:ObjectProperty ;
                        "skaper"@nb .
 
 
+###  http://purl.org/dc/terms/hasFormat
+dct:hasFormat rdf:type owl:ObjectProperty ;
+              rdfs:domain modelldcatno:InformationModel ;
+              rdfs:range foaf:Document ;
+              rdfs:label "finnes i format"@en ,
+                         "has format"@en .
+
+
 ###  http://purl.org/dc/terms/hasPart
 dct:hasPart rdf:type owl:ObjectProperty ;
             owl:inverseOf dct:isPartOf ;
@@ -427,6 +435,7 @@ dct:modified rdf:type owl:DatatypeProperty ;
 dct:title rdf:type owl:DatatypeProperty ;
           rdfs:domain [ rdf:type owl:Class ;
                         owl:unionOf ( dcat:Resource
+                                      foaf:Document
                                       modelldcatno:Code
                                       modelldcatno:ModelElement
                                       modelldcatno:Property
@@ -1010,6 +1019,10 @@ modelldcatno:InformationModel rdf:type owl:Class ;
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty dct:creator ;
                                                 owl:someValuesFrom foaf:Agent
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dct:hasFormat ;
+                                                owl:someValuesFrom foaf:Document
                                               ] ,
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty dct:hasPart ;
