@@ -43,17 +43,12 @@ skos:hiddenLabel rdf:type owl:AnnotationProperty ;
 
 
 ###  http://www.w3.org/2004/02/skos/core#note
-skos:note rdf:type owl:AnnotationProperty ;
-          rdfs:range skos:Concept ,
-                     modelldcatno:Code ;
-          rdfs:domain modelldcatno:Code .
+skos:note rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
 skos:prefLabel rdf:type owl:AnnotationProperty ;
-               rdfs:subPropertyOf rdfs:label ;
-               rdfs:range skos:Concept ,
-                          modelldcatno:Code .
+               rdfs:subPropertyOf rdfs:label .
 
 
 ###  http://www.w3.org/2004/02/skos/core#scopeNote
@@ -186,9 +181,16 @@ dct:type rdf:type owl:ObjectProperty ;
 skos:hasTopConcept rdf:type owl:ObjectProperty .
 
 
+
 ###  http://www.w3.org/2004/02/skos/core#inScheme
 skos:inScheme rdf:type owl:ObjectProperty ;
               rdfs:range skos:ConceptScheme .
+
+
+###  http://www.w3.org/2004/02/skos/core#topConceptOf
+skos:topConceptOf rdf:type owl:ObjectProperty ;
+                  rdfs:domain skos:Concept ;
+                  rdfs:range skos:ConceptScheme .
 
 
 ###  http://www.w3.org/ns/adms#status
@@ -249,14 +251,6 @@ modelldcatno:contains rdf:type owl:ObjectProperty ;
                       rdfs:range modelldcatno:ModelElement ;
                       rdfs:label "contains"@en ,
                                  "inneholder"@nb .
-
-
-###  https://data.norge.no/vocabulary/modelldcatno#containsCode
-modelldcatno:containsCode rdf:type owl:ObjectProperty ;
-                          rdfs:domain modelldcatno:CodeList ;
-                          rdfs:range modelldcatno:Code ;
-                          rdfs:label "contains code"@en ,
-                                     "inneholder kode"@nb .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#containsModelElement
@@ -421,6 +415,18 @@ modelldcatno:references rdf:type owl:ObjectProperty ;
                         rdfs:range modelldcatno:ModelElement ;
                         rdfs:label "references"@en ,
                                    "refererer"@nb .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/next
+xkos:next rdf:type owl:ObjectProperty ;
+          rdfs:domain skos:Concept ;
+          rdfs:range skos:Concept .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/previous
+xkos:previous rdf:type owl:ObjectProperty ;
+              rdfs:domain skos:Concept ;
+              rdfs:range skos:Concept .
 
 
 #################################################################
@@ -1030,7 +1036,22 @@ modelldcatno:Choice rdf:type owl:Class ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#Code
 modelldcatno:Code rdf:type owl:Class ;
-                  rdfs:subClassOf skos:Concept ,
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty skos:inScheme ;
+                                    owl:someValuesFrom modelldcatno:CodeList
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty skos:topConceptOf ;
+                                    owl:someValuesFrom modelldcatno:CodeList
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty xkos:next ;
+                                    owl:someValuesFrom modelldcatno:Code
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty xkos:previous ;
+                                    owl:someValuesFrom modelldcatno:Code
+                                  ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty skos:notation ;
                                     owl:someValuesFrom rdfs:Literal
@@ -1051,8 +1072,7 @@ modelldcatno:Code rdf:type owl:Class ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#CodeList
 modelldcatno:CodeList rdf:type owl:Class ;
-                      rdfs:subClassOf skos:ConceptScheme ,
-                                      modelldcatno:ModelElement ,
+                      rdfs:subClassOf modelldcatno:ModelElement ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty modelldcatno:hasProperty ;
                                         owl:qualifiedCardinality "0"^^xsd:nonNegativeInteger ;
@@ -1266,6 +1286,26 @@ modelldcatno:Specialization rdf:type owl:Class ;
                             rdfs:subClassOf modelldcatno:Property ;
                             rdfs:label "Specialization"@en ,
                                        "Spesialisering"@nb .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.com/code/kode
+ex-code:kode rdf:type owl:NamedIndividual ,
+                      modelldcatno:Code ;
+             skos:inScheme ex-code:kodeliste ;
+             skos:topConceptOf ex-code:kodeliste ;
+             skos:notation "3405"^^xsd:string ;
+             skos:note "Lillehammer er en by og kommune i Gudbrandsdalen i Innlandet, ved nordenden av Mjøsa."@nb ;
+             skos:prefLabel "Lillehammer"@nb .
+
+
+###  http://example.com/code/kodeliste
+ex-code:kodeliste rdf:type owl:NamedIndividual ,
+                           modelldcatno:CodeList ;
+                  dct:title "Kommunenummerlisten"@nb .
 
 
 #################################################################
