@@ -68,6 +68,14 @@ dct:creator rdf:type owl:ObjectProperty ;
                        "skaper"@nb .
 
 
+###  http://purl.org/dc/terms/format
+dct:format rdf:type owl:ObjectProperty ;
+           rdfs:domain foaf:Document ;
+           rdfs:range dct:MediaType ;
+           rdfs:label "format"@en ,
+                      "format"@nb .
+
+
 ###  http://purl.org/dc/terms/hasFormat
 dct:hasFormat rdf:type owl:ObjectProperty ;
               rdfs:domain modelldcatno:InformationModel ;
@@ -105,7 +113,11 @@ dct:isReplacedBy rdf:type owl:ObjectProperty ;
 
 ###  http://purl.org/dc/terms/language
 dct:language rdf:type owl:ObjectProperty ;
-             rdfs:domain dcat:Resource ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( dcat:Resource
+                                         foaf:Document
+                                       )
+                         ] ;
              rdfs:range dct:LinguisticSystem ;
              rdfs:label "language"@en ,
                         "språk"@nb .
@@ -766,6 +778,13 @@ dct:LinguisticSystem rdf:type owl:Class ;
 dct:Location rdf:type owl:Class ;
              rdfs:label "Location"@en ,
                         "Lokasjon"@nb .
+
+
+###  http://purl.org/dc/terms/MediaType
+dct:MediaType rdf:type owl:Class ;
+              rdfs:label "Media Type"@en ,
+                         "Mediatype"@nb ;
+              skos:definition "A file format or physical medium."@en .
 
 
 ###  http://purl.org/dc/terms/PeriodOfTime
