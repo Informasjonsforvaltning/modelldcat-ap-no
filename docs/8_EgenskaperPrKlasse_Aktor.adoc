@@ -3,13 +3,13 @@
 
 == Katalogdel
 
-=== Aktør [[aktor]]
+=== Aktør (foaf:Agent) [[aktor]]
 
 Klassen _Aktør_ er obligatorisk.
 
 ==== Obligatoriske egenskaper for klassen _Aktør_
 
-===== Aktør: navn [[aktor-navn]]
+===== Aktør: navn (foaf:name) [[aktor-navn]]
 
 [cols="30s,70d"]
 |===
@@ -23,7 +23,7 @@ Klassen _Aktør_ er obligatorisk.
 
 ==== Anbefalte egenskaper for klassen _Aktør_
 
-===== Aktør: organisasjonsidentifikator [[aktor-organisasjonsidentifikator]]
+===== Aktør: organisasjonsidentifikator (dct:identifier) [[aktor-organisasjonsidentifikator]]
 
 [cols="30s,70d"]
 |===
@@ -35,7 +35,7 @@ Klassen _Aktør_ er obligatorisk.
 |Status| Anbefalt
 |===
 
-===== Aktør: utgivertype [[aktor-utgivertype]]
+===== Aktør: utgivertype (skos:Concept) [[aktor-utgivertype]]
 
 [cols="30s,70d"]
 |===

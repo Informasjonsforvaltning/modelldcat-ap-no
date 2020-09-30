@@ -1,4 +1,4 @@
-=== Egenskap [[egenskap]]
+=== Egenskap (modelldcatno:Property) [[egenskap]]
 
 Klassen _Egenskap_ er anbefalt.
 
@@ -6,7 +6,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 
 ==== Obligatoriske egenskaper for klassen _Egenskap_
 
-===== Egenskap: identifikator [[egenskap-identifikator]]
+===== Egenskap: identifikator (dct:identifier) [[egenskap-identifikator]]
 
 [cols="30s,70d"]
 |===
@@ -18,7 +18,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Status| Obligatorisk
 |===
 
-===== Egenskap: tittel [[egenskap-tittel]]
+===== Egenskap: tittel (dct:title) [[egenskap-tittel]]
 
 [cols="30s,70d"]
 |===
@@ -32,7 +32,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 
 ==== Anbefalte egenskaper for klassen _Egenskap_
 
-===== Egenskap: begrep [[egenskap-begrep]]
+===== Egenskap: begrep (dct:subject) [[egenskap-begrep]]
 
 [cols="30s,70d"]
 |===
@@ -44,7 +44,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Status| Anbefalt
 |===
 
-===== Egenskap: har type [[egenskap-har-type]]
+===== Egenskap: har type (modelldcatno:hasType) [[egenskap-har-type]]
 
 [cols="30s,70d"]
 |===
@@ -56,7 +56,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Status| Anbefalt
 |===
 
-===== Egenskap: nedre multiplisitet [[egenskap-nedre-multiplisitet]]
+===== Egenskap: nedre multiplisitet (xsd:minOccurs) [[egenskap-nedre-multiplisitet]]
 
 [cols="30s,70d"]
 |===
@@ -68,7 +68,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Status| Anbefalt
 |===
 
-===== Egenskap: øvre multiplisitet [[egenskap-øvre-multiplisitet]]
+===== Egenskap: øvre multiplisitet (xsd:maxOccurs) [[egenskap-øvre-multiplisitet]]
 
 [cols="30s,70d"]
 |===
@@ -82,7 +82,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 
 ==== Valgfrie egenskaper for klassen _Egenskap_
 
-===== Egenskap: beskrivelse [[egenskap-beskrivelse]]
+===== Egenskap: beskrivelse (dct:description) [[egenskap-beskrivelse]]
 
 [cols="30s,70d"]
 |===
@@ -94,7 +94,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Status| Valgfri
 |===
 
-===== Egenskap: sekvensnummer [[egenskap-sekvensnummer]]
+===== Egenskap: sekvensnummer (modelldcatno:sequenceNumber) [[egenskap-sekvensnummer]]
 
 [cols="30s,70d"]
 |===
