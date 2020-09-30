@@ -1,5 +1,4 @@
 @prefix : <https://data.norge.no/vocabulary/modelldcatno/> .
-@prefix ex: <http://example.com/test#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -13,6 +12,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xkos: <https://rdf-vocabulary.ddialliance.org/xkos/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix ex-code: <http://example.com/code#> .
 @prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
 @base <https://data.norge.no/vocabulary/modelldcatno> .
 
@@ -179,7 +179,6 @@ dct:type rdf:type owl:ObjectProperty ;
 
 ###  http://www.w3.org/2004/02/skos/core#hasTopConcept
 skos:hasTopConcept rdf:type owl:ObjectProperty .
-
 
 
 ###  http://www.w3.org/2004/02/skos/core#inScheme
@@ -490,7 +489,6 @@ dct:title rdf:type owl:DatatypeProperty ;
           rdfs:domain [ rdf:type owl:Class ;
                         owl:unionOf ( dcat:Resource
                                       foaf:Document
-                                      modelldcatno:C
                                       modelldcatno:ModelElement
                                       modelldcatno:Property
                                     )
@@ -690,7 +688,6 @@ modelldcatno:informationModelIdentifier rdf:type owl:DatatypeProperty ;
                                         rdfs:isDefinedBy dct:identifier ;
                                         rdfs:label "informasjonsmodell-identifikator"@nb ,
                                                    "information model identifier"@en .
-
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#modelElementBelongsToModule
@@ -1190,16 +1187,6 @@ modelldcatno:InformationModel rdf:type owl:Class ;
    owl:annotatedSource modelldcatno:InformationModel ;
    owl:annotatedProperty rdfs:subClassOf ;
    owl:annotatedTarget [ rdf:type owl:Restriction ;
-                         owl:onProperty dct:identifier ;
-                         owl:someValuesFrom rdfs:Literal
-                       ] ;
-   rdfs:comment "This property contains an identifier for the Information Model"@en
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource modelldcatno:InformationModel ;
-   owl:annotatedProperty rdfs:subClassOf ;
-   owl:annotatedTarget [ rdf:type owl:Restriction ;
                          owl:onProperty dct:description ;
                          owl:minCardinality "1"^^xsd:nonNegativeInteger
                        ] ;
@@ -1214,6 +1201,16 @@ modelldcatno:InformationModel rdf:type owl:Class ;
                          owl:minCardinality "1"^^xsd:nonNegativeInteger
                        ] ;
    rdfs:comment "This property refers to the descriptive title or name of a Information Model. This property should be repeated in case there are various versions of the text in different languages."@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource modelldcatno:InformationModel ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dct:identifier ;
+                         owl:someValuesFrom rdfs:Literal
+                       ] ;
+   rdfs:comment "This property contains an identifier for the Information Model"@en
  ] .
 
 
@@ -1292,7 +1289,7 @@ modelldcatno:Specialization rdf:type owl:Class ;
 #    Individuals
 #################################################################
 
-###  http://example.com/code/kode
+###  http://example.com/code#kode
 ex-code:kode rdf:type owl:NamedIndividual ,
                       modelldcatno:Code ;
              skos:inScheme ex-code:kodeliste ;
@@ -1302,7 +1299,7 @@ ex-code:kode rdf:type owl:NamedIndividual ,
              skos:prefLabel "Lillehammer"@nb .
 
 
-###  http://example.com/code/kodeliste
+###  http://example.com/code#kodeliste
 ex-code:kodeliste rdf:type owl:NamedIndividual ,
                            modelldcatno:CodeList ;
                   dct:title "Kommunenummerlisten"@nb .
