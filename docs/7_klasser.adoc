@@ -56,7 +56,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Engelsk navn|Catalog
 |Beskrivelse|Brukes til å representere en katalog eller repository som inneholder beskrivelsene av modellene.
 |URI|dcat:Catalog
-|Referanse|http://http://xmlns.com/foaf/spec/#term_Agent[http://xmlns.com/foaf/spec/#term_Agent]
+|Referanse|http://www.w3.org/TR/2013/WD-vocab-dcat-20130312/#class-catalog[http://www.w3.org/TR/2013/WD-vocab-dcat-20130312/#class-catalog]
 |Status|Obligatorisk
 |===
 
@@ -174,9 +174,9 @@ Klasse som representerer modellen som skal utveksles.
 
 [cols="30s,70"]
 |===
-|Engelsk navn|Assosiation
+|Engelsk navn|Association
 |Beskrivelse|Brukes til å beskrive et forhold mellom to modellelementer.
-|URI|modelldcatno:Assosiation
+|URI|modelldcatno:Association
 |Subklasse av|modelldcatno:Property
 |Referanse|
 |Status|Anbefalt
