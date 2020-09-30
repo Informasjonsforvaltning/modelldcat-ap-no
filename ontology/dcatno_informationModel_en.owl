@@ -266,7 +266,7 @@ modelldcatno:containsObjectType rdf:type owl:ObjectProperty ;
                                 rdfs:domain modelldcatno:Attribute ;
                                 rdfs:range modelldcatno:ObjectType ;
                                 owl:propertyDisjointWith modelldcatno:hasDataType ,
-                                                         modelldcatno:hasSimpletype ,
+                                                         modelldcatno:hasSimpleType ,
                                                          modelldcatno:hasValueFrom ;
                                 rdfs:label "contains object type"@en ,
                                            "inneholder objekttype"@nb .
@@ -287,7 +287,7 @@ modelldcatno:hasDataType rdf:type owl:ObjectProperty ;
                          rdf:type owl:FunctionalProperty ;
                          rdfs:domain modelldcatno:Attribute ;
                          rdfs:range modelldcatno:DataType ;
-                         owl:propertyDisjointWith modelldcatno:hasSimpletype ,
+                         owl:propertyDisjointWith modelldcatno:hasSimpleType ,
                                                   modelldcatno:hasValueFrom ;
                          rdfs:label "har datatype"@nb ,
                                     "has data type"@en .
@@ -341,8 +341,8 @@ modelldcatno:hasProperty rdf:type owl:ObjectProperty ,
                                     "has property"@en .
 
 
-###  https://data.norge.no/vocabulary/modelldcatno#hasSimpletype
-modelldcatno:hasSimpletype rdf:type owl:ObjectProperty ;
+###  https://data.norge.no/vocabulary/modelldcatno#hasSimpleType
+modelldcatno:hasSimpleType rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf modelldcatno:hasType ;
                            rdf:type owl:FunctionalProperty ;
                            rdfs:domain modelldcatno:Attribute ;
