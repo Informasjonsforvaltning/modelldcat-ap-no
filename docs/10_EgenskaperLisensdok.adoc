@@ -1,10 +1,10 @@
-=== Lisensdokument
+=== Lisensdokument (dct:LicenseDocument) [[lisensdokument]]
 
 Klassen _Lisensdokument_ er anbefalt.
 
 ==== Anbefalte egenskaper for klassen _Lisensdokument_
 
-===== Lisensdokument: lisenstype [[lisensdokument-lisenstype]]
+===== Lisensdokument: lisenstype (dct:type) [[lisensdokument-lisenstype]]
 
 [cols="30s,70"]
 |===

@@ -1,14 +1,14 @@
 == Modelldel
 
-=== Attributt [[attributt]]
+=== Attributt (modelldcatno:Attribute) [[attributt]]
 
 Klassen _Attributt_ er anbefalt.
 
-Egenskapene i denne klassen er gjensidig utelukkende. 
+Egenskapene i denne klassen er gjensidig utelukkende.
 
 ==== Anbefalte egenskaper for klassen _Attributt_
 
-===== Attributt: har datatype
+===== Attributt: har datatype (modelldcatno:hasDataType) [[attributt-hardatatype]]
 
 [cols="30s,70d"]
 |===
@@ -20,7 +20,7 @@ Egenskapene i denne klassen er gjensidig utelukkende.
 |Status| Anbefalt
 |===
 
-===== Attributt: har enkeltype
+===== Attributt: har enkeltype (modelldcatno:hasSimpleType) [[attributt-harenkeltype]]
 
 [cols="30s,70d"]
 |===
@@ -32,7 +32,7 @@ Egenskapene i denne klassen er gjensidig utelukkende.
 |Status| Anbefalt
 |===
 
-===== Attributt: har objekttype
+===== Attributt: har objekttype (modelldcatno:hasObjectType) [[attributt-harobjekttype]]
 
 [cols="30s,70d"]
 |===
@@ -44,7 +44,7 @@ Egenskapene i denne klassen er gjensidig utelukkende.
 |Status| Anbefalt
 |===
 
-===== Attributt: har verdier fra
+===== Attributt: har verdier fra (modelldcatno:hasValueFrom) [[attributt-harverdierfra]]
 
 [cols="30s,70d"]
 |===
