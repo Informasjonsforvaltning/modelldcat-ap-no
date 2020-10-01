@@ -177,12 +177,6 @@ dct:type rdf:type owl:ObjectProperty ;
                     "type eller genre"@nb .
 
 
-###  http://www.w3.org/2004/02/skos/core#hasTopConcept
-skos:hasTopConcept rdf:type owl:ObjectProperty ;
-                   rdfs:domain modelldcatno:CodeElement ;
-                   rdfs:range modelldcatno:CodeList .
-
-
 ###  http://www.w3.org/2004/02/skos/core#inScheme
 skos:inScheme rdf:type owl:ObjectProperty ;
               rdfs:domain modelldcatno:CodeElement ;
@@ -191,8 +185,8 @@ skos:inScheme rdf:type owl:ObjectProperty ;
 
 ###  http://www.w3.org/2004/02/skos/core#topConceptOf
 skos:topConceptOf rdf:type owl:ObjectProperty ;
-                  rdfs:domain skos:Concept ;
-                  rdfs:range skos:ConceptScheme .
+                  rdfs:domain modelldcatno:CodeElement ;
+                  rdfs:range modelldcatno:CodeList .
 
 
 ###  http://www.w3.org/ns/adms#status
