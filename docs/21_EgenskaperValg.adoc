@@ -1,11 +1,11 @@
-=== Valg
+=== Valg (modelldcatno:Choice) [[valg]]
 
 Klassen _Valg_ er valgfri.
 
 ==== Anbefalte egenskaper for klassen _Valg_
 
 
-===== Valg: har en av
+===== Valg: har en av (modelldcatno:hasOneOf) [[valg-harenav]]
 
 [cols="30s,70d"]
 |===

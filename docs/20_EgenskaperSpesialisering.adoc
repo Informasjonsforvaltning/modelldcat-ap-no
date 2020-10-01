@@ -5,7 +5,7 @@ Klassen _Spesialisering_ er anbefalt
 ==== Obligatoriske egenskaper for klassen _Spesialisering_
 
 
-===== Spesialisering: har generelt konsept [[spesialisering-har-generelt-konsept]]
+===== Spesialisering: har generelt konsept (modelldcatno:hasGeneralConcept) [[spesialisering-har-generelt-konsept]]
 
 [cols="30s,70"]
 |===
@@ -16,7 +16,7 @@ Klassen _Spesialisering_ er anbefalt
 |Status|Obligatorisk
 |===
 
-===== Spesialisering: har leverandør [[spesialisering-har-leverandør]]
+===== Spesialisering: har leverandør (modelldcatno:hasSupplier) [[spesialisering-har-leverandør]]
 
 [cols="30s,70"]
 |===

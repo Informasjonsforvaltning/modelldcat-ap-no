@@ -1,4 +1,4 @@
-=== Modellelement
+=== Modellelement (modelldcatno:ModelElement) [[modellelement]]
 
 Klassen _Modellelement_ er anbefalt.
 
@@ -7,7 +7,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 ==== Obligatoriske egenskaper for klassen _Modellelement_
 
 
-=====  Modellelement: identifikator [[modellelement-identifikator]]
+=====  Modellelement: identifikator (dct:identifier) [[modellelement-identifikator]]
 
 [cols="30s,70d"]
 |===
@@ -19,7 +19,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |===
 
 
-===== Modellelement: tittel [[modellelement-tittel]]
+===== Modellelement: tittel (dct:title) [[modellelement-tittel]]
 
 [cols="30s,70d"]
 |===
@@ -32,7 +32,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 
 ====  Anbefalte egenskaper for klassen _Modellelement_
 
-===== Modellelement: begrep [[modellelement-begrep]]
+===== Modellelement: begrep (dct:subject) [[modellelement-begrep]]
 
 [cols="30s,70d"]
 |===
@@ -44,7 +44,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |===
 
 
-===== Modellelement: har egenskap [[modellelement-har-egenskap]]
+===== Modellelement: har egenskap (modelldcatno:hasProperty) [[modellelement-har-egenskap]]
 
 [cols="30s,70d"]
 |===
@@ -59,7 +59,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 ==== Valgfrie egenskaper for klassen _Modellelement_
 
 
-===== Modellelement: beskrivelse [[modellelement-beskrivelse]]
+===== Modellelement: beskrivelse (dct:description) [[modellelement-beskrivelse]]
 
 [cols="30s,70d"]
 |===
@@ -70,7 +70,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Status|Valgfri
 |===
 
-=====  Modellelement: tilhørerModul [[modellelement-tilhørerModul]]
+=====  Modellelement: tilhørerModul (modelldcatno:modelElementBelongsToModule) [[modellelement-tilhørerModul]]
 
 [cols="30s,70d"]
 |===

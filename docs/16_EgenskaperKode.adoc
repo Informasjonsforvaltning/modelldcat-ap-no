@@ -1,10 +1,10 @@
-=== Kode [[kode]]
+=== Kode (modelldcatno:Code) [[kode]]
 
 Klassen _Kode_ er anbefalt.
 
 ==== Obligatoriske egenskaper for klassen _Kode_
 
-===== Kode: identifikator [[kode-identifikator]]
+===== Kode: identifikator (dct:identifier) [[kode-identifikator]]
 
 [cols="30s,70d"]
 |===
@@ -16,7 +16,7 @@ Klassen _Kode_ er anbefalt.
 |===
 
 
-===== Kode: tittel [[kode-tittel]]
+===== Kode: tittel (dct:title) [[kode-tittel]]
 
 [cols="30s,70d"]
 |===
@@ -29,7 +29,7 @@ Klassen _Kode_ er anbefalt.
 
 ==== Anbefalte egenskaper for klassen _Kode_
 
-===== Kode: begrep [[kode-begrep]]
+===== Kode: begrep (dct:subject) [[kode-begrep]]
 
 [cols="30s,70d"]
 |===
@@ -42,7 +42,7 @@ Klassen _Kode_ er anbefalt.
 
 ====  Valgfrie egenskaper for klassen _Kode_
 
-===== Kode: beskrivelse [[kode-beskrivelse]]
+===== Kode: beskrivelse (dct:description) [[kode-beskrivelse]]
 
 [cols="30s,70d"]
 |===

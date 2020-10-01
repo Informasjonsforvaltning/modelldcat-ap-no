@@ -1,11 +1,11 @@
-=== Rolle [[rolle]]
+=== Rolle (modelldcatno:Role) [[rolle]]
 
 Klassen _Rolle_ er anbefalt.
 
 ==== Obligatoriske  egenskaper for klassen _Rolle_
 
 
-===== Rolle: har objekttype [[Rolle-har-objekttype]]
+===== Rolle: har objekttype (modelldcatno:hasObjectType) [[Rolle-har-objekttype]]
 
 [cols="30s,70d"]
 |===
