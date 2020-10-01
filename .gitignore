@@ -3,3 +3,8 @@
 index.html
 *.pdf
 *.epub
+
+# build folders are used temporarily for testing build of artefacts.
+# Shall not be committed:
+build
+!ontology/index.html
