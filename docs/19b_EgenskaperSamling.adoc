@@ -1,10 +1,10 @@
-=== Samling [[samling]]
+=== Samling (modelldcatno:Collection) [[samling]]
 
 Klassen _Samling_ er valgfri
 
 ==== Obligatoriske egenskaper for klassen _Samling_
 
-===== Samling: har medlem [[samling-har-medlem]]
+===== Samling: har medlem (modelldcatno:hasMember) [[samling-har-medlem]]
 
 [cols="30s,70d"]
 |===

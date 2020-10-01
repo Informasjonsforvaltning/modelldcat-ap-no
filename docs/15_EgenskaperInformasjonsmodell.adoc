@@ -1,10 +1,10 @@
-=== Informasjonsmodell [[informasjonsmodell]]
+=== Informasjonsmodell (modelldcatno:InformationModel) [[informasjonsmodell]]
 
 Klassen _Informasjonsmodell_ er obligatorisk
 
 ==== Obligatoriske egenskaper for klassen _Informasjonsmodell_
 
-===== Informasjonsmodell: beskrivelse [[informasjonsmodell-beskrivelse]]
+===== Informasjonsmodell: beskrivelse (dct:description) [[informasjonsmodell-beskrivelse]]
 
 [cols="30s,70d"]
 |===
@@ -15,7 +15,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Status|Obligatorisk
 |===
 
-=====  Informasjonsmodell: identifikator [[informasjonsmodell-identifikator]]
+=====  Informasjonsmodell: (dct:identifier) identifikator [[informasjonsmodell-identifikator]]
 
 [cols="30s,70d"]
 |===
@@ -27,7 +27,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Kommentar|F.eks. URI eller annen identifikator som er stabil og globalt unik.
 |===
 
-=====  Informasjonsmodell: tema [[informasjonsmodell-tema]]
+=====  Informasjonsmodell: tema (dcat:theme) [[informasjonsmodell-tema]]
 
 [cols="30s,70d"]
 |===
@@ -39,7 +39,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |===
 
 
-===== Informasjonsmodell: tittel [[informasjonsmodell-tittel]]
+===== Informasjonsmodell: tittel (dct:title) [[informasjonsmodell-tittel]]
 
 [cols="30s,70d"]
 |===
@@ -50,7 +50,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Status|Obligatorisk
 |===
 
-===== Informasjonsmodell: utgiver [[informasjonsmodell-utgiver]]
+===== Informasjonsmodell: utgiver (dct:publisher) [[informasjonsmodell-utgiver]]
 
 [cols="30s,70d"]
 |===
@@ -64,7 +64,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 
 ==== Anbefalte egenskaper i klassen _Informasjonsmodell_
 
-=====  Informasjonsmodell: begrep [[informasjonsmodell-begrep]]
+=====  Informasjonsmodell: begrep (dct:subject) [[informasjonsmodell-begrep]]
 
 [cols="30s,70d"]
 |===
@@ -75,7 +75,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Status|Anbefalt
 |===
 
-===== Informasjonsmodell: dekningsområde [[informasjonsmodell-dekningsområde]]
+===== Informasjonsmodell: dekningsområde (dct:spatial) [[informasjonsmodell-dekningsområde]]
 
 [cols="30s,70d"]
 |===
@@ -86,7 +86,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Status|Anbefalt
 |===
 
-===== Informasjonsmodell: informasjonsmodellidentifikator [[informasjonsmodell-informasjonsmodellidentifikator]]
+===== Informasjonsmodell: informasjonsmodellidentifikator (modelldcatno:informationModelIdentifier) [[informasjonsmodell-informasjonsmodellidentifikator]]
 
 [cols="30s,70d"]
 |===
@@ -99,7 +99,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |===
 
 
-=====  Informasjonsmodell: inneholder modellelement [[informasjonsmodell-inneholder-modellelement]]
+=====  Informasjonsmodell: inneholder modellelement (modelldcatno:containsModelElement) [[informasjonsmodell-inneholder-modellelement]]
 
 [cols="30s,70d"]
 |===
@@ -111,7 +111,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |===
 
 
-=====  Informasjonsmodell: kontaktpunkt [[informasjonsmodell-kontaktpunkt]]
+=====  Informasjonsmodell: kontaktpunkt (dcat:contactPoint) [[informasjonsmodell-kontaktpunkt]]
 
 [cols="30s,70d"]
 |===
@@ -122,7 +122,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Status|Anbefalt
 |===
 
-=====  Informasjonsmodell: lisens [[informasjonsmodell-lisens]]
+=====  Informasjonsmodell: lisens (dct:license) [[informasjonsmodell-lisens]]
 
 [cols="30s,70d"]
 |===
@@ -139,7 +139,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 ====  Valgfrie egenskaper til klassen _Informasjonsmodell_
 
 
-=====  Informasjonsmodell: emneord [[informasjonsmodell-emneord]]
+=====  Informasjonsmodell: emneord (dcat:keyword) [[informasjonsmodell-emneord]]
 
 [cols="30s,70d"]
 |===
@@ -150,7 +150,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Status|Valgfri
 |===
 
-=====  Informasjonsmodell: endringsdato [[informasjonsmodell-endringsdato]]
+=====  Informasjonsmodell: endringsdato (dct:modified) [[informasjonsmodell-endringsdato]]
 
 [cols="30s,70d"]
 |===
@@ -161,7 +161,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Status|Valgfri
 |===
 
-=====  Informasjonsmodell: er del av [[informasjonsmodell-er-del-av]]
+=====  Informasjonsmodell: er del av (dct:isPartOf) [[informasjonsmodell-er-del-av]]
 
 [cols="30s,70d"]
 |===
@@ -172,7 +172,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Status|Valgfri
 |===
 
-=====  Informasjonsmodell: er erstattet av [[informasjonsmodell-er-erstattet-av]]
+=====  Informasjonsmodell: er erstattet av (dct:isReplacedBy) [[informasjonsmodell-er-erstattet-av]]
 
 [cols="30s,70d"]
 |===
@@ -184,7 +184,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |===
 
 
-=====  Informasjonsmodell: erstatter [[informasjonsmodell-erstatter]]
+=====  Informasjonsmodell: erstatter (dct:replaces) [[informasjonsmodell-erstatter]]
 
 [cols="30s,70d"]
 |===
@@ -196,7 +196,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |===
 
 
-===== Informasjonsmodell: gyldighetsperiode [[informasjonsmodell-gyldighetsperiode]]
+===== Informasjonsmodell: gyldighetsperiode (dct:temporal) [[informasjonsmodell-gyldighetsperiode]]
 
 [cols="30s,70d"]
 |===
@@ -207,7 +207,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Status|Valgfri
 |===
 
-===== Informasjonsmodell: har del [[informasjonsmodell-har-del]]
+===== Informasjonsmodell: har del (dct:hasPart) [[informasjonsmodell-har-del]]
 
 [cols="30s,70d"]
 |===
@@ -219,7 +219,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |===
 
 
-===== Informasjonsmodell: hjemmeside [[informasjonsmodell-hjemmeside]]
+===== Informasjonsmodell: hjemmeside (foaf:homepage) [[informasjonsmodell-hjemmeside]]
 
 [cols="30s,70d"]
 |===
@@ -231,7 +231,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |===
 
 
-===== Informasjonsmodell: modellstatus [[informasjonsmodell-modellstatus]]
+===== Informasjonsmodell: modellstatus (adms:status) [[informasjonsmodell-modellstatus]]
 
 [cols="30s,70d"]
 |===
@@ -242,7 +242,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Status|Valgfri
 |===
 
-===== Informasjonsmodell: produsent [[informasjonsmodell-produsent]]
+===== Informasjonsmodell: produsent (dct:creator) [[informasjonsmodell-produsent]]
 
 [cols="30s,70d"]
 |===
@@ -254,7 +254,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |===
 
 
-===== Informasjonsmodell: språk [[informasjonsmodell-språk]]
+===== Informasjonsmodell: språk (dct:language) [[informasjonsmodell-språk]]
 
 [cols="30s,70d"]
 |===
@@ -265,7 +265,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Status|Valgfri
 |===
 
-===== Informasjonsmodell: type [[informasjonsmodell-type]]
+===== Informasjonsmodell: type (dct:type) [[informasjonsmodell-type]]
 
 [cols="30s,70d"]
 |===
@@ -276,7 +276,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Status|Valgfri
 |===
 
-===== Informasjonsmodell: utgivelsesdato [[informasjonsmodell-utgivelsesdato]]
+===== Informasjonsmodell: utgivelsesdato (dct:issued) [[informasjonsmodell-utgivelsesdato]]
 
 [cols="30s,70d"]
 |===
@@ -288,7 +288,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |===
 
 
-===== Informasjonsmodell: versjon [[informasjonsmodell-versjon]]
+===== Informasjonsmodell: versjon (owl:versionInfo) [[informasjonsmodell-versjon]]
 
 [cols="30s,70d"]
 |===
@@ -300,7 +300,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |===
 
 
-===== Informasjonsmodell: versjonsnote [[informasjonsmodell-versjonsnote]]
+===== Informasjonsmodell: versjonsnote (adms:versionNotes) [[informasjonsmodell-versjonsnote]]
 
 [cols="30s,70d"]
 |===
