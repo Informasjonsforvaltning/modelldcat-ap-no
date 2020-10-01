@@ -496,7 +496,8 @@ dct:modified rdf:type owl:DatatypeProperty ;
 ###  http://purl.org/dc/terms/title
 dct:title rdf:type owl:DatatypeProperty ;
           rdfs:domain [ rdf:type owl:Class ;
-                        owl:unionOf ( dcat:Resource
+                        owl:unionOf ( skos:ConceptScheme
+                                      dcat:Resource
                                       foaf:Document
                                       modelldcatno:ModelElement
                                       modelldcatno:Property
