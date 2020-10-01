@@ -25,11 +25,11 @@ jobs:
         source: "ontology/index.html"
         target: "ontology/build/index.html"
 
-    - name: copy modelldcatno.ttl
+    - name: copy modelldcatno.owl
       uses: canastro/copy-file-action@master
       with:
         source: "ontology/modelldcatno.owl"
-        target: "ontology/build/modelldcatno.ttl"
+        target: "ontology/build/modelldcatno.owl"
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
