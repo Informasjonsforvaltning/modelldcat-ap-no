@@ -721,6 +721,14 @@ modelldcatno:propertyNote rdf:type owl:DatatypeProperty ;
                                      "property note"@en .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#relationPropertyLabel
+modelldcatno:relationPropertyLabel rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain modelldcatno:Property ;
+                                   rdfs:range rdfs:Literal ;
+                                   rdfs:label "relasjonsegenskapsnavn"@nb ,
+                                              "relation property label"@en .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#sequenceNumber
 modelldcatno:sequenceNumber rdf:type owl:DatatypeProperty ;
                             rdfs:domain [ rdf:type owl:Class ;
@@ -732,14 +740,6 @@ modelldcatno:sequenceNumber rdf:type owl:DatatypeProperty ;
                             rdfs:comment "Der man har en modell der elementenes orden er vesentlig, f. eks. slik det kan være i XML eller en kodeliste."@nb ;
                             rdfs:label "Sekvensnummer"@nb ,
                                        "sequence number"@en .
-
-
-###  https://data.norge.no/vocabulary/modelldcatno#symmetryLabel
-modelldcatno:symmetryLabel rdf:type owl:DatatypeProperty ;
-                           rdfs:domain modelldcatno:Property ;
-                           rdfs:range rdfs:Literal ;
-                           rdfs:label "Egenskapspar-navn"@nb ,
-                                      "Symmetry Label"@en .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#typeDefinitionReference
