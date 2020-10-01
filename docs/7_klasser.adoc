@@ -141,13 +141,13 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Status|Valgfri
 |===
 
-=== Tidsrom (dct:PeriodeOfTime) [[klasse-tidsrom]]
+=== Tidsrom (dct:PeriodOfTime) [[klasse-tidsrom]]
 
 [cols="30s,70"]
 |===
-|Engelsk navn|Periode of time
+|Engelsk navn|Period of time
 |Beskrivelse|Brukes til å beskrive et tidsintervall som er navngitt eller definert av en start- og sluttdato.
-|URI|dct:PeriodeOfTime
+|URI|dct:PeriodOfTime
 |Referanse|http://dublincore.org/documents/dcmi-terms/#terms-PeriodOfTime[http://dublincore.org/documents/dcmi-terms/#terms-PeriodOfTime]
 |Status|Valgfri
 |===
@@ -362,7 +362,7 @@ Klasse som representerer modellen som skal utveksles.
 |Status|Valgfri
 |===
 
-=== Samling (modelldcatno:Property) [[klasse-samling]]
+=== Samling (modelldcatno:Collection) [[klasse-samling]]
 
 [cols="30s,70"]
 |===
@@ -387,7 +387,7 @@ Klasse som representerer modellen som skal utveksles.
 |Status|Valgfri
 |===
 
-=== Valg (modelldcatno:Property) [[klasse-valg]]
+=== Valg (modelldcatno:Choice) [[klasse-valg]]
 
 [cols="30s,70"]
 |===

@@ -35,7 +35,7 @@ Klassen _Aktør_ er obligatorisk.
 |Status| Anbefalt
 |===
 
-===== Aktør: utgivertype (skos:Concept) [[aktor-utgivertype]]
+===== Aktør: utgivertype (dct:type) [[aktor-utgivertype]]
 
 [cols="30s,70d"]
 |===

@@ -29,7 +29,7 @@ Klassen _Lokasjon_ er valgfri.
 
 ==== Valgfrie egenskaper for klassen _Lokasjon_
 
-===== Lokasjon: geometri (rdfs:Literal) [[lokasjon-geometri]]
+===== Lokasjon: geometri (locn:geometry) [[lokasjon-geometri]]
 
 [cols="30s,70d"]
 |===

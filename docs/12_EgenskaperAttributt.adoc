@@ -20,7 +20,7 @@ Egenskapene i denne klassen er gjensidig utelukkende.
 |Status| Anbefalt
 |===
 
-===== Attributt: har enkeltype (modelldcatno:SimpleType) [[attributt-harenkeltype]]
+===== Attributt: har enkeltype (modelldcatno:hasSimpleType) [[attributt-harenkeltype]]
 
 [cols="30s,70d"]
 |===
