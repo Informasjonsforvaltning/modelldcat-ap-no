@@ -4,30 +4,130 @@
 
 Se https://informasjonsforvaltning.github.io/dcat-ap-no/#Krav-til-kontrollerte-vokabularer[Krav til kontrollerte vokabularer i DCAT-AP-NO].
 
-== Kontrollerte vobakularer som skal brukes i denne spesifikasjonen [[Kontrollerte-vobakularer-som-skal-brukes]]
+== Kontrollerte vobakularer som skal brukes [[Kontrollerte-vobakularer-som-skal-brukes]]
 
 Under følger en oversikt over kontrollerte vokabular som skal brukes (= obligatorisk) for egenskapene i listen, dette for å sikre et minimum av samhandlingsevne.
 
-=== For egenskapen dct:creator
+=== For egenskapen dct:creator [[Skal-brukes-for-creator]]
 
 [cols="30s,70d"]
 |===
-|*URI til egenskapen*|dct:creator
-|*Brukt i klasse*|Informasjonsmodell (modelldcatno:InformationModel)
-|*Navn på vokabularet*|Corporate Bodies Named Authority List
-|*URI til vokabularet*|https://data.europa.eu/euodp/en/data/dataset/corporate-body[https://data.europa.eu/euodp/en/data/dataset/corporate-body]
-|*Status*|Obligatorisk
-|*Kommentar*|EUs Corporate bodies Named Authority List inneholder alle europeiske institusjoner og et begrenset antall internasjonale organisasjoner.
+|URI til egenskapen|dct:creator
+|Brukt i klasse|Informasjonsmodell (modelldcatno:InformationModel)
+|Navn på vokabularet|Corporate Bodies Named Authority List
+|URI til vokabularet|https://data.europa.eu/euodp/en/data/dataset/corporate-body[https://data.europa.eu/euodp/en/data/dataset/corporate-body]
+|Status|Obligatorisk
+|Kommentar|EUs Corporate bodies Named Authority List inneholder alle europeiske institusjoner og et begrenset antall internasjonale organisasjoner.
 |===
 
-=== For egenskapen dct:format
+=== For egenskapen dct:format [[Skal-brukes-for-format]]
 
 [cols="30s,70d"]
 |===
-|*URI til egenskapen*|dct:format
-|*Brukt i klasse*|Dokument (foaf:Document)
-|*Navn på vokabularet*|File Type Named Authority List
-|*URI til vokabularet*|https://data.europa.eu/euodp/en/data/dataset/file-type[https://data.europa.eu/euodp/en/data/dataset/file-type]
-|*Status*|Obligatorisk
-|*Kommentar*|Norsk utvidelse - gjelder også Datatjeneste (dcat:DataService)
+|URI til egenskapen|dct:format
+|Brukt i klasse|Dokument (foaf:Document)
+|Navn på vokabularet|File Type Named Authority List
+|URI til vokabularet|https://data.europa.eu/euodp/en/data/dataset/file-type[https://data.europa.eu/euodp/en/data/dataset/file-type]
+|Status|Obligatorisk
+|===
+
+==== For egenskapen dct:language [[Skal-brukes-for-language]]
+
+[cols="30s,70d"]
+|===
+|URI til egenskapen|dct:language
+|Brukt i klasse|Modellkatalog (dcat:Catalog); Informasjonsmodell (modelldcatno:InformationModel); Dokument (foaf:Document)
+|Navn på vokabularet|Languages Named Authority List
+|URI til vokabularet|https://data.europa.eu/euodp/en/data/dataset/language[https://data.europa.eu/euodp/en/data/dataset/language]
+|Status|Obligatorisk
+|===
+
+==== For egenskapen dct:license [[Skal-brukes-for-license]]
+
+[cols="30s,70d"]
+|===
+|URI til egenskapen|dct:license
+|Brukt i klasse|Informasjonsmodell (modelldcatno:InformationModel); Modellkatalog (dcat:Catalog)
+|Navn på vokabularet|Licences Named Authority List
+|URI til vokabularet|https://data.europa.eu/euodp/en/data/dataset/licence[https://data.europa.eu/euodp/en/data/dataset/licence]
+|Kommentar|Kravet fra EU er forklart slik: "This vocabulary must be used in case the licence […​] is internationally recognised and included in the EU Publications Office NAL."
+|===
+
+==== For egenskapen dct:publisher [[Skal-brukes-for-publisher]]
+
+[cols="30s,70d"]
+|===
+|URI til egenskapen|dct:publisher
+|Brukt i klasse|Informasjonsmodell (modelldcatno:InformationModel); Modellkatalog (dcat:Catalog)
+|Navn på vokabularet|Corporate Bodies Named Authority List
+|URI til vokabularet|https://data.europa.eu/euodp/en/data/dataset/corporate-body[https://data.europa.eu/euodp/en/data/dataset/corporate-body]
+|Status|Obligatorisk
+|Kommentar|EUs Corporate bodies Named Authority List inneholder alle europeiske institusjoner og et begrenset antall internasjonale organisasjoner.
+|===
+
+
+==== For egenskapen dct:spatial [[Skal-brukes-for-spatial]]
+
+[cols="30s,70d"]
+|===
+|URI til egenskapen|dct:spatial
+|Brukt i klasse|Informasjonsmodell (modelldcatno:InformationModel); Modellkatalog (dcat:Catalog)
+|Navn på vokabularet|Continents Named Authority List;
+|URI til vokabularet|https://data.europa.eu/euodp/en/data/dataset/continent[https://data.europa.eu/euodp/en/data/dataset/continent];
+|Status|Obligatorisk
+|===
+
+=== For egenskapen adms:status [[Skal-brukes-for-status]]
+
+[cols="30s,70d"]
+|===
+|URI til egenskapen|adms:status
+|Brukt i klasse|Informasjonsmodell (modelldcatno:InformationModel)
+|Navn på vokabularet|ADMS Status vocabulary
+|URI til vokabularet|http://purl.org/adms/status/[http://purl.org/adms/status/] (i RDF)
+|Status|Obligatorisk
+|===
+
+==== For egenskapen dct:type [[Skal-brukes-for-type]]
+
+[cols="30s,70d"]
+|===
+|URI til egenskapen|dct:type
+|Brukt i klasse|Aktør (foaf:Agent)
+|Navn på vokabularet|ADMS publisher type vocabulary. Listen over termer i ADMS publisher type er inkludert i ADMS-spesifikasjonen. https://joinup.ec.europa.eu/solution/asset-description-metadata-schema-adms[Asset Description Metadata Schema (ADMS)]
+|URI til vokabularet|http://purl.org/adms/publishertype/[http://purl.org/adms/publishertype/] (i RDF)
+|Status|Obligatorisk
+|===
+
+[cols="30s,70d"]
+|===
+|URI til egenskapen|dct:type
+|Brukt i klasse|Lisensdokument (dct:LicenseDocument)
+|Navn på vokabularet|ADMS licence type vocabulary
+|URI til vokabularet|http://purl.org/adms/licencetype/[http://purl.org/adms/licencetype/] (i RDF)
+|Status|Obligatorisk
+|===
+
+=== Kontrollerte vokabularer som bør og kan brukes [[Kontrollerte-vobakularer-som-bør-brukes]]
+
+==== For egenskapen dcat:theme [[Bør-brukes-for-theme]]
+
+[cols="30s,70d"]
+|===
+|URI til egenskapen|dcat:theme
+|Brukt i klasse|Informasjonsmodell (modelldcatno:InformationModel)
+|Navn på vokabularet|Los - felles vokabular for å kategorisere og beskrive offentlige tjenester og ressurser
+|URI til vokabularet|https://psi.norge.no/los/struktur.html[https://psi.norge.no/los/struktur.html]
+|Status|Anbefalt
+|===
+
+==== For egenskapen dcat:themeTaxonomy [[Bør-brukes-for-themeTaxonomy]]
+
+[cols="30s,70d"]
+|===
+|URI til egenskapen|dcat:themeTaxonomy
+|Brukt i klasse|Modellkatalog (dcat:Catalog)
+|Navn på vokabularet|Los - felles vokabular for å kategorisere og beskrive offentlige tjenester og ressurser
+|URI til vokabularet|https://psi.norge.no/los/struktur.html[https://psi.norge.no/los/struktur.html]
+|Status|Anbefalt
 |===
