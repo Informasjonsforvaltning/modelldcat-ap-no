@@ -229,7 +229,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |===
 |Engelsk navn | temopral
 |URI|dct:temporal
-|Range|dct:PeriodeOfTime
+|Range|dct:PeriodOfTime
 |Beskrivelse|Modellens gyldighetsintervall.
 |Multiplisitet|0..n
 |Status|Valgfri
