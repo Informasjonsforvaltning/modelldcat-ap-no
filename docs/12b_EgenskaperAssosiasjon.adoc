@@ -1,5 +1,3 @@
-== Modelldel
-
 === Assosiasjon (modelldcatno:Association) [[Assosiasjon-egenskaper]]
 
 Klassen _Assosiasjon_ er anbefalt.
