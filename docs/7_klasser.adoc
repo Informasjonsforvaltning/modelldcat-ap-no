@@ -86,17 +86,6 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 
 == Valgfrie klasser i katalogdelen [[Valgfri-klasser-i-katalogdelen]]
 
-=== Identifikator (adms:Identifier) [[klasse-identifikator]]
-
-[cols="30s,70d"]
-|===
-| Engelsk navn | Identifier
-| Beskrivelse | Brukes til å representere en identifikator i en bestemt kontekst, bestående av strengen som er identifikatoren; en valgfri identifikator for identifikatorsystemet; en valgfri identifikator for versjonen av identifikatorsystemet; en valgfri identifikator for etaten som administrerer identifikatorsystemet.
-| URI | adms:Identifier
-| Referanse | http://www.w3.org/TR/vocab-adms/#identifier
-| Status | Valgfri
-|===
-
 === Kontaktopplysning (vcard:Kind) [[klasse-kontaktopplysning]]
 
 [cols="30s,70"]
@@ -161,7 +150,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Engelsk navn|Information model
 |Beskrivelse|Brukes til å beskrive en informasjonsmodell for en spesifikk informasjonsutveksling eller applikasjon.
 |URI|modelldcatno:InformationModel
-|Subklasse av|dcat:Resource
+|Subklasse av| dct:Standard
 |Referanse|
 |Kommentar|Synonym: løsningsmodell, meldingsmodell, tjenestemodell, datamodell, implementasjonsmodell, konstruksjonsmodell.
 Klasse som representerer modellen som skal utveksles.
@@ -230,13 +219,13 @@ Klasse som representerer modellen som skal utveksles.
 |Status|Anbefalt
 |===
 
-=== Kode (modelldcatno:Code) [[klasse-kode]]
+=== Kodeelement (modelldcatno:CodeElement) [[klasse-kodeelement]]
 
 [cols="30s,70"]
 |===
-|Engelsk navn|Code
-|Beskrivelse|Brukes til å beskrive et navngitt og verdisatt element i et verdidomene for en kodeliste.
-|URI|modelldcatno:Code
+|Engelsk navn|Code element
+|Beskrivelse|Brukes til å representere et navngitt og unikt element i en kodeliste.
+|URI|modelldcatno:CodeElement
 |Referanse|
 |Status|Anbefalt
 |===
@@ -362,6 +351,17 @@ Klasse som representerer modellen som skal utveksles.
 |Status|Valgfri
 |===
 
+=== Medietype (dct:MediaType) [[klasse-medietype]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Media type
+|Beskrivelse|Brukes til å representere en medietype, for eksempel formatet til en datafil.
+|URI|https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/MediaType[dct:MediaType]
+|Status|Valgfri
+|===
+
+
 === Note (modelldcatno:Note) [[klasse-note]]
 
 [cols="30s,70"]
@@ -382,7 +382,6 @@ Klasse som representerer modellen som skal utveksles.
 |Beskrivelse|Brukes til å beskrive at et modellelement eller egenskap er en realisering av et annet modellelement eller egenskap.
 |URI|modelldcatno:Realization
 |Subklasse av|modelldcatno:Property
-|Referanse|
 |Status|Valgfri
 |===
 
@@ -394,8 +393,7 @@ Klasse som representerer modellen som skal utveksles.
 |Beskrivelse|Brukes til å beskrive en relasjon mellom to modellelementer, hvor det ene modellelement inngår som en del av et annet som representerer helheten.
 |URI|modelldcatno:Collection
 |Subklasse av|modelldcatno:Property
-|Referanse|
-|Kommentar||I UML omtales dette som aggregering.
+|Kommentar|I UML omtales dette som aggregering.
 |Status|Valgfri
 |===
 
@@ -404,7 +402,7 @@ Klasse som representerer modellen som skal utveksles.
 [cols="30s,70"]
 |===
 |Engelsk navn|Choice
-|Beskrivelse|Brukes til å beskrive en egenskap som beskriver at kun ett element av et sett av valgbare elementer kan inngå i det bærende modellelement.
+|Beskrivelse|Brukes til å beskrive en egenskap som beskriver at ett eller flere elementer av et sett av valgbare elementer kan inngå i det bærende modellelement.
 |URI|modelldcatno:Choice
 |Subklasse av|modelldcatno:Property
 |Referanse|

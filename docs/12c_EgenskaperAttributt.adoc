@@ -2,11 +2,11 @@
 
 Klassen _Attributt_ er anbefalt.
 
-Egenskapene i denne klassen er gjensidig utelukkende.
+NOTE: Egenskapene til `modelldcatno:Attribute` er med unntak av `modelldcatno:hasValueFrom` gjensidig utelukkende, dvs. at de ikke kan forekomme samtidig. Egenskapen `modelldcatno:hasValueFrom` kan brukes i kombinasjon med `modelldcatno:hasSimpleType` til å utdype et dataformat.
 
-==== Anbefalte egenskaper for klassen _Attributt_
+==== Anbefalte egenskaper for klassen _Attributt_ [[Anbefalte-egenskaper-attributt]]
 
-===== Attributt: har datatype (modelldcatno:hasDataType) [[attributt-hardatatype]]
+===== Attributt: har datatype (modelldcatno:hasDataType) [[attributt-harDataType]]
 
 [cols="30s,70d"]
 |===
@@ -14,30 +14,33 @@ Egenskapene i denne klassen er gjensidig utelukkende.
 |URI| modelldcatno:hasDataType
 |Range| modelldcatno:DataType
 |Beskrivelse| Angir at attributtet har en datatype som type.
+|Subegenskap av |modelldcatno:hasType
 |Multiplisitet| 0..1
 |Status| Anbefalt
 |===
 
-===== Attributt: har enkeltype (modelldcatno:hasSimpleType) [[attributt-harenkeltype]]
+===== Attributt: har enkeltype (modelldcatno:hasSimpleType) [[attributt-harEnkelType]]
 
 [cols="30s,70d"]
 |===
 |Engelsk navn| has simple type
-|URI| modelldcatno:hasSimpletype
+|URI| modelldcatno:hasSimpleType
 |Range| modelldcatno:SimpleType
 |Beskrivelse| Angir at attributtet har en enkeltype som type.
+|Subegenskap av|modelldcatno:hasType
 |Multiplisitet| 0..1
 |Status| Anbefalt
 |===
 
-===== Attributt: har objekttype (modelldcatno:hasObjectType) [[attributt-harobjekttype]]
+===== Attributt: inneholder  objekttype (modelldcatno:hasObjectType) [[attributt-inneholderObjekttype]]
 
 [cols="30s,70d"]
 |===
-|Engelsk navn| has object type
-|URI| modelldcatno:hasObjectType
+|Engelsk navn| contains object type
+|URI| modelldcatno:containsObjectType
 |Range| modelldcatno:ObjectType
 |Beskrivelse| Angir at attributtet har en objekttype som type.
+|Subegenskap av	| modelldcatno:hasType
 |Multiplisitet| 0..1
 |Status| Anbefalt
 |===
@@ -48,8 +51,9 @@ Egenskapene i denne klassen er gjensidig utelukkende.
 |===
 |Engelsk navn| has value from
 |URI|modelldcatno:hasValueFrom
-|Range| Code list
+|Range| modelldcatno:CodeList
 |Beskrivelse| Angir at attributtet har en kodeliste som type.
+|Subegenskap av	| modelldcatno:hasType
 |Multiplisitet| 0..1
 |Status| Anbefalt
 |===

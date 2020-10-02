@@ -2,9 +2,9 @@
 
 Klassen _Samling_ er valgfri
 
-==== Obligatoriske egenskaper for klassen _Samling_
+==== Anbefalte egenskaper for klassen _Samling_ [[Anbefalte-egenskaper-samling]]
 
-===== Samling: har medlem (modelldcatno:hasMember) [[samling-har-medlem]]
+===== Samling: har medlem (modelldcatno:hasMember) [[samling-harMedlem]]
 
 [cols="30s,70d"]
 |===
