@@ -1,0 +1,33 @@
+= Kontrollerte vokabularer [[Kontrollerte-vokabularer]]
+
+== Krav til kontrollerte vokabularer [[Krav-til-kontrollerte-vokabularer]]
+
+Se https://informasjonsforvaltning.github.io/dcat-ap-no/#Krav-til-kontrollerte-vokabularer[Krav til kontrollerte vokabularer i DCAT-AP-NO].
+
+== Kontrollerte vobakularer som skal brukes i denne spesifikasjonen [[Kontrollerte-vobakularer-som-skal-brukes]]
+
+Under følger en oversikt over kontrollerte vokabular som skal brukes (= obligatorisk) for egenskapene i listen, dette for å sikre et minimum av samhandlingsevne.
+
+=== For egenskapen dct:creator
+
+[cols="30s,70d"]
+|===
+|*URI til egenskapen*|dct:creator
+|*Brukt i klasse*|Informasjonsmodell (modelldcatno:InformationModel)
+|*Navn på vokabularet*|Corporate Bodies Named Authority List
+|*URI til vokabularet*|https://data.europa.eu/euodp/en/data/dataset/corporate-body[https://data.europa.eu/euodp/en/data/dataset/corporate-body]
+|*Status*|Obligatorisk
+|*Kommentar*|EUs Corporate bodies Named Authority List inneholder alle europeiske institusjoner og et begrenset antall internasjonale organisasjoner.
+|===
+
+=== For egenskapen dct:format
+
+[cols="30s,70d"]
+|===
+|*URI til egenskapen*|dct:format
+|*Brukt i klasse*|Dokument (foaf:Document)
+|*Navn på vokabularet*|File Type Named Authority List
+|*URI til vokabularet*|https://data.europa.eu/euodp/en/data/dataset/file-type[https://data.europa.eu/euodp/en/data/dataset/file-type]
+|*Status*|Obligatorisk
+|*Kommentar*|Norsk utvidelse - gjelder også Datatjeneste (dcat:DataService)
+|===
