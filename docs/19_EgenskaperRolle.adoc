@@ -9,7 +9,7 @@ Klassen _Rolle_ er anbefalt.
 
 [cols="30s,70d"]
 |===
-|Engelsk navn  has object type
+|Engelsk navn | has object type
 |URI|modelldcatno:hasObjectType
 |Range|modelldcatno:ObjectType
 |Beskrivelse|Referanse til objekttypen som er knyttet til en rolle.
