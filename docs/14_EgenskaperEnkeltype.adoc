@@ -1,6 +1,6 @@
 === Enkeltype (modelldcatno:SimpleType) [[enkeltype]]
 
-Klassen _Enkeltype_ er valgfri
+Klassen _Enkeltype_ er anbefalt
 
 ==== Anbefalte egenskaper for klassen _Enkeltype_
 

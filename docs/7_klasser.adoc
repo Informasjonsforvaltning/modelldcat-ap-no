@@ -230,6 +230,17 @@ Klasse som representerer modellen som skal utveksles.
 |Status|Anbefalt
 |===
 
+=== Kode (modelldcatno:Code) [[klasse-kode]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Code
+|Beskrivelse|Brukes til å beskrive et navngitt og verdisatt element i et verdidomene for en kodeliste.
+|URI|modelldcatno:Code
+|Referanse|
+|Status|Anbefalt
+|===
+
 === Kodeliste (modelldcatno:CodeList) [[klasse-kodeliste]]
 
 [cols="30s,70"]
@@ -291,6 +302,18 @@ Klasse som representerer modellen som skal utveksles.
 |Status|Anbefalt
 |===
 
+=== Spesialisering (modelldcatno:Specialization) [[klasse-spesialisering]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Specialization
+|Beskrivelse|Brukes til å beskrive et arveforhold mellom modellelementer, hvor en subtype er en spesialisering av en mer generell type (supertype).
+|URI|modelldcatno:Specialization
+|Subklasse av|modelldcatno:Property
+|Referanse|
+|Status|Anbefalt
+|===
+
 == Valgfrie klasser i modelldelen [[Valgfrie-klasser-i-modelldelen]]
 
 === Abstraksjon (modelldcatno:Abstraction) [[klasse-Abstraksjon]]
@@ -324,17 +347,6 @@ Klasse som representerer modellen som skal utveksles.
 |Beskrivelse|Brukes til å representere en tekstlig ressurs som inneholder informasjon beregnet på mennesker. For eksempel en nettside om en modell.
 |URI|foaf:Document
 |Referanse|http://xmlns.com/foaf/spec/#term_Document[http://xmlns.com/foaf/spec/#term_Document]
-|Status|Valgfri
-|===
-
-=== Kode (modelldcatno:Code) [[klasse-kode]]
-
-[cols="30s,70"]
-|===
-|Engelsk navn|Code
-|Beskrivelse|Brukes til å beskrive et navngitt og verdisatt element i et verdidomene for en kodeliste.
-|URI|modelldcatno:Code
-|Referanse|
 |Status|Valgfri
 |===
 
@@ -384,18 +396,6 @@ Klasse som representerer modellen som skal utveksles.
 |Subklasse av|modelldcatno:Property
 |Referanse|
 |Kommentar||I UML omtales dette som aggregering.
-|Status|Valgfri
-|===
-
-=== Spesialisering (modelldcatno:Specialization) [[klasse-spesialisering]]
-
-[cols="30s,70"]
-|===
-|Engelsk navn|Specialization
-|Beskrivelse|Brukes til å beskrive et arveforhold mellom modellelementer, hvor en subtype er en spesialisering av en mer generell type (supertype).
-|URI|modelldcatno:Specialization
-|Subklasse av|modelldcatno:Property
-|Referanse|
 |Status|Valgfri
 |===
 

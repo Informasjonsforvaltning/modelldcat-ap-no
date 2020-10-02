@@ -2,7 +2,7 @@
 
 Klassen _Modellkatalog_ er obligatorisk.
 
-==== Obligatoriske egenskaper for klassen _Modellatalog_
+==== Obligatoriske egenskaper for klassen _Modellkatalog_
 
 ===== Modellkatalog: beskrivelse (dct:description) [[modellkatalog-beskrivelse]]
 
