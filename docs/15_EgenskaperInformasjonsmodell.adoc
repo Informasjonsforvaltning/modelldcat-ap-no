@@ -33,7 +33,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |===
 |URI|dcat:theme
 |Range|skos:Concept
-|Beskrivelse|Referanse til et hovedtema for modellen. Et datasett kan assosieres med flere tema. Bruk av vokabularet Data theme som er publisert av EUs Publications Office er påkrevd. Bruk av Digitaliseringsdirektoratets Los-vokabular er anbefalt. Også andre nasjonale og internasjonale vokabular kan brukes om de oppfyller denne standardens krav til kontrollerte vokabularer.
+|Beskrivelse|Brukes til å referere til et hovedtema for modellen. En modell kan assosieres med flere tema. Denne egenskapen skal bruke et https://informasjonsforvaltning.github.io/dcat-ap-no/#Krav-til-kontrollerte-vokabularer[kontrollert vokabular].
 |Multiplisitet|1..n
 |Status|Obligatorisk
 |===
