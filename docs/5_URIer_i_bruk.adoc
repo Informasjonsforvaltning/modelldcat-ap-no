@@ -1,5 +1,7 @@
 = URIer som er i bruk
 
+Navnerom for dette vokabualret skal vere https://data.norge.no/vocabulary/modelldcatno#
+
 [cols="10s,45d,45d"]
 |===
 |adms|http://www.w3.org/ns/adms#|Asset Description Metadata Schema
