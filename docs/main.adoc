@@ -76,3 +76,5 @@ include::19b_EgenskaperSamling.adoc[]
 include::20_EgenskaperSpesialisering.adoc[]
 
 include::21_EgenskaperValg.adoc[]
+
+include::xx_Kontrollerte_vokabularer.adoc[]
