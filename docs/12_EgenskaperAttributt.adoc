@@ -1,5 +1,3 @@
-== Modelldel
-
 === Attributt (modelldcatno:Attribute) [[attributt]]
 
 Klassen _Attributt_ er anbefalt.
@@ -13,7 +11,7 @@ Egenskapene i denne klassen er gjensidig utelukkende.
 [cols="30s,70d"]
 |===
 |Engelsk navn| has data type
-|URI| modelldcatno: hasDataType
+|URI| modelldcatno:hasDataType
 |Range| modelldcatno:DataType
 |Beskrivelse| Angir at attributtet har en datatype som type.
 |Multiplisitet| 0..1
@@ -25,8 +23,8 @@ Egenskapene i denne klassen er gjensidig utelukkende.
 [cols="30s,70d"]
 |===
 |Engelsk navn| has simple type
-|URI| modelldcatno: hasSimpletype
-|Range| modelldcatno: SimpleType
+|URI| modelldcatno:hasSimpletype
+|Range| modelldcatno:SimpleType
 |Beskrivelse| Angir at attributtet har en enkeltype som type.
 |Multiplisitet| 0..1
 |Status| Anbefalt
@@ -49,7 +47,7 @@ Egenskapene i denne klassen er gjensidig utelukkende.
 [cols="30s,70d"]
 |===
 |Engelsk navn| has value from
-|URI|modelldcatno: hasValueFrom
+|URI|modelldcatno:hasValueFrom
 |Range| Code list
 |Beskrivelse| Angir at attributtet har en kodeliste som type.
 |Multiplisitet| 0..1

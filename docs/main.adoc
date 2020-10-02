@@ -55,6 +55,8 @@ include::11_EgenskaperLokasjon.adoc[]
 
 include::9_EgenskaperModellkatalog.adoc[]
 
+include::12a_EgenskaperAssosiasjon.adoc[]
+
 include::12_EgenskaperAttributt.adoc[]
 
 include::13_EgenskaperEgenskap.adoc[]
