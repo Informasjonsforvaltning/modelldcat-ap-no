@@ -393,8 +393,7 @@ Klasse som representerer modellen som skal utveksles.
 |Beskrivelse|Brukes til å beskrive en relasjon mellom to modellelementer, hvor det ene modellelement inngår som en del av et annet som representerer helheten.
 |URI|modelldcatno:Collection
 |Subklasse av|modelldcatno:Property
-|Referanse|
-|Kommentar||I UML omtales dette som aggregering.
+|Kommentar|I UML omtales dette som aggregering.
 |Status|Valgfri
 |===
 
