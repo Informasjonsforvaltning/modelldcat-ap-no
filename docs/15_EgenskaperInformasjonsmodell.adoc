@@ -213,6 +213,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 
 ===== Informasjonsmodell:finnes i format (dct:hasFormat) [[informasjonsmodell-finnesIFormat]]
 
+[cols="30s,70d"]
 |===
 |Engelsk navn|has format
 |URI|dct:hasFormat
