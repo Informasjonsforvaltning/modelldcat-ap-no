@@ -2,16 +2,17 @@
 
 Klassen _Valg_ er valgfri.
 
-==== Anbefalte egenskaper for klassen _Valg_
+==== Anbefalte egenskaper for klassen _Valg_ [[Anbefalte-egenskaper-valg]]
 
 
-===== Valg: har en av (modelldcatno:hasOneOf) [[valg-harenav]]
+===== Valg: kan ha (modelldcatno:hasSome) [[Valg-kanHa]]
 
 [cols="30s,70d"]
 |===
-|URI|modelldcatno:hasOneOf
+|URI|modelldcatno:hasSome
 |Range|modelldcatno:ModelElement
-|Beskrivelse|Beskriver hvilke modellelementer som det kan velges blant i en gruppe av valgbare modellelementer. Kun ett og bare ett modellelement kan velges i gruppen.
-|Multiplisitet|1..n
-|Status|Obligatorisk
+|Beskrivelse|Brukes til å beskrive hvilke modellelementer som det kan velges blant i en gruppe av valgbare modellelementer.
+|Subegenskap av |	modelldcatno:hasType
+|Multiplisitet|0..n
+|Status|Anbefalt
 |===

@@ -2,16 +2,18 @@
 
 Klassen _Rolle_ er anbefalt.
 
-==== Obligatoriske  egenskaper for klassen _Rolle_
+==== Anbefalte  egenskaper for klassen _Rolle_ [[Anbefalte-egenskaper-rolle]]
 
 
-===== Rolle: har objekttype (modelldcatno:hasObjectType) [[Rolle-har-objekttype]]
+===== Rolle: har objekttype (modelldcatno:hasObjectType) [[Rolle-harObjekttype]]
 
 [cols="30s,70d"]
 |===
+|Engelsk navn  has object type
 |URI|modelldcatno:hasObjectType
 |Range|modelldcatno:ObjectType
 |Beskrivelse|Referanse til objekttypen som er knyttet til en rolle.
-|Multiplisitet|1..1
-|Status|Obligatorisk
+|Subegenskap av |	modelldcatno:hasType
+|Multiplisitet|0..1
+|Status|Anbefalt
 |===

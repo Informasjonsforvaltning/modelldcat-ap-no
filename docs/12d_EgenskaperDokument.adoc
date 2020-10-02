@@ -1,0 +1,44 @@
+=== Dokument (foaf:Document) [[Dokument]]
+
+Klassen _Dokument_ er valgfri.
+
+==== Anbefalte egenskaper for klassen _Dokument_ [[Anbefalte-egenskaper-dokument]]
+
+===== Dokument: språk (dct:language) [[Dokument-språk]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|language
+|URI|dct:language
+|Range|dct:LinguisticSystem
+|Beskrivelse|Brukes til å referere til språket som dokumentet er i.
+|Multiplisitet|0..1
+|Status|Anbefalt
+|===
+
+===== Dokument: tittel (dct:title) [[Dokument-tittel]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|title
+|URI|dct:title
+|Range|rdfs:Literal
+|Beskrivelse|Brukes til å referere til tittel for dokumentet. Bør gjentas når tittelen finnes i flere ulike språk/målformer.
+|Multiplisitet|0..n
+|Status|Anbefalt
+|===
+
+==== Valgfrie egenskaper for klassen _Dokument_ [[Valgfrie-egenskaper-dokument]]
+
+
+===== Dokument:format (dct:format) [[Dokument-format]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|format
+|URI|dct:format
+|Range|dct:MediaType
+|Beskrivelse|Opplysing om dokumentets filformat. Brukes til å angi hvilket format en alternativ representasjon av modellen er på.
+|Multiplisitet|0..1
+|Status|Valgfri
+|===

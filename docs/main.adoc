@@ -55,9 +55,15 @@ include::11_EgenskaperLokasjon.adoc[]
 
 include::9_EgenskaperModellkatalog.adoc[]
 
-include::12a_EgenskaperAssosiasjon.adoc[]
+include::9b_EgenskaperTematiskskjema.adoc[]
 
-include::12_EgenskaperAttributt.adoc[]
+include::12a_EgenskaperAbstraksjon.adoc[]
+
+include::12b_EgenskaperAssosiasjon.adoc[]
+
+include::12c_EgenskaperAttributt.adoc[]
+
+include::12d_EgenskaperDokument.adoc[]
 
 include::13_EgenskaperEgenskap.adoc[]
 
@@ -65,7 +71,7 @@ include::14_EgenskaperEnkeltype.adoc[]
 
 include::15_EgenskaperInformasjonsmodell.adoc[]
 
-include::16_EgenskaperKode.adoc[]
+include::16_EgenskaperKodeelement.adoc[]
 
 include::17_EgenskaperKodeliste.adoc[]
 
@@ -73,11 +79,15 @@ include::17b_EgenskaperKomposisjon.adoc[]
 
 include::18_EgenskaperModellelement.adoc[]
 
+include::18b_EgenskaperRealisering.adoc[]
+
 include::19_EgenskaperRolle.adoc[]
 
 include::19b_EgenskaperSamling.adoc[]
 
 include::20_EgenskaperSpesialisering.adoc[]
+
+include::20b_EgenskaperTidsrom.adoc[]
 
 include::21_EgenskaperValg.adoc[]
 

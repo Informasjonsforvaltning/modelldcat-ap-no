@@ -4,13 +4,14 @@ Klassen _Modellelement_ er anbefalt.
 
 Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av spesialiseringene.
 
-==== Obligatoriske egenskaper for klassen _Modellelement_
+==== Obligatoriske egenskaper for klassen _Modellelement_ [[Obligatoriske-egenskaper-Modellelement]]
 
 
 =====  Modellelement: identifikator (dct:identifier) [[modellelement-identifikator]]
 
 [cols="30s,70d"]
 |===
+|Engelsk navn| identifier
 |URI|dct:identifier
 |Range|rdfs:Literal
 |Beskrivelse|Unik og persistent identifisering av et modellelement.
@@ -23,19 +24,21 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 
 [cols="30s,70d"]
 |===
+|Engelsk navn| title
 |URI|dct:title
 |Range|rdfs:Literal
-|Beskrivelse|Navn på modellelement. Bør gjentas for parallelle språkversjoner.
+|Beskrivelse|Navn på modellelement. Bør gjentas når navnet finnes i flere ulike språk/målformer.
 |Multiplisitet|1..n
 |Status|Obligatorisk
 |===
 
-====  Anbefalte egenskaper for klassen _Modellelement_
+====  Anbefalte egenskaper for klassen _Modellelement_ [[Anbefalte-egenskaper-modellelement]]
 
 ===== Modellelement: begrep (dct:subject) [[modellelement-begrep]]
 
 [cols="30s,70d"]
 |===
+|Engelsk navn| subject
 |URI|dct:subject
 |Range|skos:Concept
 |Beskrivelse|Referanse til sentralt begrep som er viktig for å forstå og tolke modellelementet. Representeres som URI-er.
@@ -48,6 +51,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 
 [cols="30s,70d"]
 |===
+|Engelsk navn| has property
 |URI|modelldcatno:hasProperty
 |Range|modelldcatno:Property
 |Beskrivelse|Egenskapen til et modellelement.
@@ -56,27 +60,29 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |===
 
 
-==== Valgfrie egenskaper for klassen _Modellelement_
+==== Valgfrie egenskaper for klassen _Modellelement_ [[Valgfrie-egenskaper-modellelement]]
 
 
 ===== Modellelement: beskrivelse (dct:description) [[modellelement-beskrivelse]]
 
 [cols="30s,70d"]
 |===
+|Engelsk navn| description
 |URI|dct:description
 |Range|rdfs:Literal
-|Beskrivelse|Fritekstbeskrivelse av modellelementet. Bør gjentas for parallelle språkversjoner.
+|Beskrivelse|Fritekstbeskrivelse av modellelementet. Bør gjentas når beskrivelsen finnes i flere ulike språk/målformer.
 |Multiplisitet|0..n
 |Status|Valgfri
 |===
 
-=====  Modellelement: tilhørerModul (modelldcatno:modelElementBelongsToModule) [[modellelement-tilhørerModul]]
+=====  Modellelement: tilhører modul (modelldcatno:belongsToModule) [[modellelement-tilhørerModul]]
 
 [cols="30s,70d"]
 |===
-|URI|modelldcatno:modelElementBelongsToModule
+|Engelsk navn| belongs to module
+|URI|modelldcatno:belongsToModule
 |Range|rdfs:Literal or xsd:anyURI
-|Beskrivelse|Beskriver hvilken modellmodul et modellelement inngår i.
+|Beskrivelse|Beskriver hvilken modellmodul/delmodell et modellelement inngår i.
 |Multiplisitet|0..1
 |Status|Valgfri
 |Kommentar|Modeller kan bestå av moduler, som beslektede modellelementer er gruppert under.

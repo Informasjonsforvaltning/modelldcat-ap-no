@@ -11,7 +11,7 @@ Klassen _Enkeltype_ er anbefalt
 |Engelsk navn| type definition reference
 |URI| modelldcatno:typeDefinitionReference
 |Range| xsd:anyURI
-|Beskrivelse|Peker til en standard ontologi for typer, f.eks. typer definert av W3C og UML.
+|Beskrivelse|Brukes til å referere til en standard ontologi eller bibliotek for typer, f.eks. typer definert av W3C og UML.
 |Multiplisitet| 0..1
 |Status| Anbefalt
 |===

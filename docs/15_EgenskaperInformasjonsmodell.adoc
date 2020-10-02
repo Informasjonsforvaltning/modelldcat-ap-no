@@ -2,15 +2,16 @@
 
 Klassen _Informasjonsmodell_ er obligatorisk
 
-==== Obligatoriske egenskaper for klassen _Informasjonsmodell_
+==== Obligatoriske egenskaper for klassen _Informasjonsmodell_ [[Obligatoriske-egenskaper-informasjonsmodell]]
 
 ===== Informasjonsmodell: beskrivelse (dct:description) [[informasjonsmodell-beskrivelse]]
 
 [cols="30s,70d"]
 |===
+|Engelsk navn | description
 |URI|dct:description
 |Range|rdfs:Literal
-|Beskrivelse|Inneholder fritekstbeskrivelse av modellen. Bør gjentas for parallelle språkversjoner.
+|Beskrivelse|Inneholder fritekstbeskrivelse av modellen. Bør gjentas når beskrivelsen finnes i flere ulike språk/målformer.
 |Multiplisitet|1..n
 |Status|Obligatorisk
 |===
@@ -19,6 +20,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 
 [cols="30s,70d"]
 |===
+|Engelsk navn | identifier
 |URI|dct:identifier
 |Range|rdfs:Literal
 |Beskrivelse|Hovedidentifikator for modellen.
@@ -31,9 +33,10 @@ Klassen _Informasjonsmodell_ er obligatorisk
 
 [cols="30s,70d"]
 |===
+|Engelsk navn | theme
 |URI|dcat:theme
 |Range|skos:Concept
-|Beskrivelse|Brukes til å referere til et hovedtema for modellen. En modell kan assosieres med flere tema. Denne egenskapen skal bruke et https://informasjonsforvaltning.github.io/dcat-ap-no/#Krav-til-kontrollerte-vokabularer[kontrollert vokabular].
+|Beskrivelse|Brukes til å referere til et hovedtema for modellen. En modell kan assosieres med flere tema.
 |Multiplisitet|1..n
 |Status|Obligatorisk
 |===
@@ -43,9 +46,10 @@ Klassen _Informasjonsmodell_ er obligatorisk
 
 [cols="30s,70d"]
 |===
+|Engelsk navn | title
 |URI|dct:title
 |Range|rdfs:Literal
-|Beskrivelse|Navn på modell. Bør gjentas for parallelle språkversjoner.
+|Beskrivelse|Navn på modell. Bør gjentas når navnet finnes i flere ulike språk/målformer.
 |Multiplisitet|1..n
 |Status|Obligatorisk
 |===
@@ -54,6 +58,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 
 [cols="30s,70d"]
 |===
+|Engelsk navn | publisher
 |URI|dct:publisher
 |Range|foaf:Agent
 |Beskrivelse|Referanse til en aktør (organisasjon) som er ansvarlig for å gjøre modellen tilgjengelig. Bør være autoritativ URI for aktøren, sekundært organisasjonsnummer.
@@ -62,26 +67,16 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |===
 
 
-==== Anbefalte egenskaper i klassen _Informasjonsmodell_
+==== Anbefalte egenskaper i klassen _Informasjonsmodell_ [[Anbefalte-egenskaper-informasjonsmodell]]
 
 =====  Informasjonsmodell: begrep (dct:subject) [[informasjonsmodell-begrep]]
 
 [cols="30s,70d"]
 |===
+|Engelsk navn | subject
 |URI|dct:subject
 |Range|skos:Concept
 |Beskrivelse|Referanse til sentrale begrep som er viktige for å forstå og tolke modellen. Representeres som URI-er.
-|Multiplisitet|0..n
-|Status|Anbefalt
-|===
-
-===== Informasjonsmodell: dekningsområde (dct:spatial) [[informasjonsmodell-dekningsområde]]
-
-[cols="30s,70d"]
-|===
-|URI|dct:spatial
-|Range|dct:Location
-|Beskrivelse|Brukes til å referere til et geografisk eller administrativt område dekket av modellen.
 |Multiplisitet|0..n
 |Status|Anbefalt
 |===
@@ -90,6 +85,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 
 [cols="30s,70d"]
 |===
+|Engelsk navn | information model identifier
 |URI|modelldcatno:informationModelIdentifier
 |Range|rdfs:Literal
 |Beskrivelse|Modellens identifikator slik det fremkommer av den som har laget modellen
@@ -103,6 +99,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 
 [cols="30s,70d"]
 |===
+|Engelsk navn | contains model element
 |URI|modelldcatno:containsModelElement
 |Range|modelldcatno:ModelElement
 |Beskrivelse|Kobler modellen til modellelementene som er en del av modellen.
@@ -115,6 +112,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 
 [cols="30s,70d"]
 |===
+|Engelsk navn | contact point
 |URI|dcat:contactPoint
 |Range|vcard:Kind
 |Beskrivelse|Referanse til kontaktpunktsobjekt med kontaktopplysninger. Disse kan brukes til å sende kommentarer om modellen.
@@ -126,6 +124,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 
 [cols="30s,70d"]
 |===
+|Engelsk navn | license
 |URI|dct:license
 |Range|dct:LicenseDocument
 |Beskrivelse|Viser til lisens for informasjonsmodellen som beskriver hvordan den kan viderebrukes.
@@ -136,13 +135,26 @@ Klassen _Informasjonsmodell_ er obligatorisk
 
 
 
-====  Valgfrie egenskaper til klassen _Informasjonsmodell_
+====  Valgfrie egenskaper til klassen _Informasjonsmodell_ [[Valgfrie-egenskaper-informasjonsmodell]]
 
+
+===== Informasjonsmodell: dekningsområde (dct:spatial) [[informasjonsmodell-dekningsområde]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn | spatial
+|URI|dct:spatial
+|Range|dct:Location
+|Beskrivelse|Brukes til å referere til et geografisk eller administrativt område som dekkes av modellen.
+|Multiplisitet|0..n
+|Status|Valgfri
+|===
 
 =====  Informasjonsmodell: emneord (dcat:keyword) [[informasjonsmodell-emneord]]
 
 [cols="30s,70d"]
 |===
+|Engelsk navn | keyword
 |URI|dcat:keyword
 |Range|rdfs:Literal
 |Beskrivelse|Inneholder emneord (eller tag) som beskriver modellen.
@@ -154,6 +166,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 
 [cols="30s,70d"]
 |===
+|Engelsk navn | modified
 |URI|dct:modified
 |Range|rdfs:Literal typed as xsd:dateTime
 |Beskrivelse|Dato for siste oppdatering av modellen.
@@ -165,6 +178,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 
 [cols="30s,70d"]
 |===
+|Engelsk navn | is part of
 |URI|dct:isPartOf
 |Range|modelldcatno:InformationModel
 |Beskrivelse|Referanse til en annen modell som denne modellen er en del av.
@@ -176,6 +190,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 
 [cols="30s,70d"]
 |===
+|Engelsk navn | is replaced by
 |URI|dct:isReplacedBy
 |Range|modelldcatno:InformationModel
 |Beskrivelse|Referanse til oppdatert og nyere modell som erstatter modellen.
@@ -188,6 +203,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 
 [cols="30s,70d"]
 |===
+|Engelsk navn | replaces
 |URI|dct:replaces
 |Range|modelldcatno:InformationModel
 |Beskrivelse|Referanse til eldre utgått modell denne modellen er ment å erstatte.
@@ -195,11 +211,22 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Status|Valgfri
 |===
 
+===== Informasjonsmodell:finnes i format (dct:hasFormat) [[informasjonsmodell-finnesIFormat]]
+
+|===
+|Engelsk navn|has format
+|URI|dct:hasFormat
+|Range|foaf:Document
+|Beskrivelse|Brukes til å referere til et dokument som representerer modellen i et annet format.
+|Multiplisitet|0..n
+|Status|Valgfri
+|===
 
 ===== Informasjonsmodell: gyldighetsperiode (dct:temporal) [[informasjonsmodell-gyldighetsperiode]]
 
 [cols="30s,70d"]
 |===
+|Engelsk navn | temopral
 |URI|dct:temporal
 |Range|dct:PeriodeOfTime
 |Beskrivelse|Modellens gyldighetsintervall.
@@ -211,6 +238,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 
 [cols="30s,70d"]
 |===
+|Engelsk navn | has part
 |URI|dct:hasPart
 |Range|modelldcatno:InformationModel
 |Beskrivelse|Referanse til en annen modell som er en del av denne modellen.
@@ -223,6 +251,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 
 [cols="30s,70d"]
 |===
+|Engelsk navn | homepage
 |URI|foaf:homepage
 |Range|foaf:Document
 |Beskrivelse|Brukes til å referere til hjemmesiden til modellen.
@@ -235,6 +264,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 
 [cols="30s,70d"]
 |===
+|Engelsk navn | status
 |URI|adms:status
 |Range|skos:Concept
 |Beskrivelse|Modellens modenhet. Må ha en av verdiene Completed, Deprecated, Under Development, Withdrawn.
@@ -246,6 +276,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 
 [cols="30s,70d"]
 |===
+|Engelsk navn | creator
 |URI|dct:creator
 |Range|foaf:Agent
 |Beskrivelse|Referanse til aktøren som er produsent av modellen.
@@ -258,9 +289,10 @@ Klassen _Informasjonsmodell_ er obligatorisk
 
 [cols="30s,70d"]
 |===
+|Engelsk navn | language
 |URI|dct:language
 |Range| dct:LinguisticSystem
-|Beskrivelse|Referanse til språket som er brukt i modellen.
+|Beskrivelse|Brukes til å referere til språket som er brukt i modellen. Kan repeteres dersom det er flere språk benyttet i modellen.
 |Multiplisitet|0..n
 |Status|Valgfri
 |===
@@ -269,6 +301,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 
 [cols="30s,70d"]
 |===
+|Engelsk navn | type
 |URI|dct:type
 |Range|skos:Concept
 |Beskrivelse|Referanse til typedefinisjoner som kategoriserer modellen og abstraksjonsnivået.
@@ -280,6 +313,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 
 [cols="30s,70d"]
 |===
+|Engelsk navn | issued
 |URI|dct:issued
 |Range|rdfs:Literal typed as xsd:dateTime
 |Beskrivelse|Dato for den formelle utgivelsen av modellen.
@@ -292,6 +326,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 
 [cols="30s,70d"]
 |===
+|Engelsk navn | version
 |URI|owl:versionInfo
 |Range|rdfs:Literal
 |Beskrivelse|Et versjonsnummer eller annen versjonsbetegnelse for modellen.
@@ -304,9 +339,10 @@ Klassen _Informasjonsmodell_ er obligatorisk
 
 [cols="30s,70d"]
 |===
+|Engelsk navn | version notes
 |URI|adms:versionNotes
 |Range|rdfs:Literal
-|Beskrivelse|Egenskap som beskriver forskjellene mellom denne og en tidligere versjon av modellen. Kan gjentas for parallelle språkversjoner av versjonsnotater.
+|Beskrivelse|Egenskap som beskriver forskjellene mellom denne og en tidligere versjon av modellen. Bør gjentas når versjonsnoten finnes i flere ulike språk/målformer.
 |Multiplisitet|0..n
 |Status|Valgfri
 |===
