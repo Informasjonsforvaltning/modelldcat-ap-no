@@ -1,6 +1,6 @@
-= Klasser
+= Klasser [[Klasser]]
 
-== Obligatoriske klasser i katalogdelen
+== Obligatoriske klasser i katalogdelen [[Obligatoriske-klasser-i-katalogdelen]]
 
 === Aktør (foaf:Agent) [[klasse-aktor]]
 
@@ -71,7 +71,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Status|Obligatorisk
 |===
 
-== Anbefalte klasser i katalogdelen
+== Anbefalte klasser i katalogdelen [[Anbefalte-klasser-i-katalogdelen]]
 
 === Lisensdokument (dct:LicenseDocument) [[klasse-lisensdokument]]
 
@@ -84,7 +84,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Status|Anbefalt
 |===
 
-== Valgfrie klasser i katalogdelen
+== Valgfrie klasser i katalogdelen [[Valgfri-klasser-i-katalogdelen]]
 
 === Identifikator (adms:Identifier) [[klasse-identifikator]]
 
@@ -291,7 +291,7 @@ Klasse som representerer modellen som skal utveksles.
 |Status|Anbefalt
 |===
 
-== Valgfrie klasser i modelldelen
+== Valgfrie klasser i modelldelen [[Valgfrie-klasser-i-modelldelen]]
 
 === Abstraksjon (modelldcatno:Abstraction) [[klasse-Abstraksjon]]
 
@@ -357,6 +357,18 @@ Klasse som representerer modellen som skal utveksles.
 |Engelsk navn|Note
 |Beskrivelse|Brukes til å beskrive en merknad, forklaring eller tilleggsopplysning til ett eller flere modellelementer.
 |URI|modelldcatno:Note
+|Subklasse av|modelldcatno:Property
+|Referanse|
+|Status|Valgfri
+|===
+
+=== Realisering (modelldcatno:Realization) [[klasse-realisering]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Realization
+|Beskrivelse|Brukes til å beskrive at et modellelement eller egenskap er en realisering av et annet modellelement eller egenskap.
+|URI|modelldcatno:Realization
 |Subklasse av|modelldcatno:Property
 |Referanse|
 |Status|Valgfri
