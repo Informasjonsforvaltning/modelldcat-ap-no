@@ -211,11 +211,11 @@ Klasse som representerer modellen som skal utveksles.
 [cols="30s,70"]
 |===
 |Engelsk navn|Property
-|Beskrivelse|Brukes til å beskrive en egenskap ved et modellelement.
+|Beskrivelse|Brukes til å representere et trekk eller karakteristikk ved et modellelement, f.eks. at det har et attributt, rolle eller en assosiasjon knyttet til seg eller er en realisering av et annet modellelement.
 |URI|modelldcatno:Property
 |Referanse|
 |Status|Anbefalt
-|Kommentar|Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av spesialiseringene.
+|Kommentar|Merk at egenskap her ikke er ekvivalent med hvordan egenskap defineres innenfor objektorientert modellering, f.eks. UML, men representeres noe som kan “hektes på” et modellelement.
 |===
 
 === Enkeltype (modelldcatno:SimpleType) [[klasse-enkeltype]]

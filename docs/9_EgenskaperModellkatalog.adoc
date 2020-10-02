@@ -11,7 +11,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Engelsk navn| description
 |URI| dct:description
 |Range| rdfs:Literal
-|Beskrivelse| Fritekst-beskrivelse av innholdet i katalogen. Egenskapen bør gjentas for parallelle språkversjoner av beskrivelsen.
+|Beskrivelse| Fritekst-beskrivelse av innholdet i katalogen. Bør gjentas når beskrivelsen finnes i flere ulike språk/målformer.
 |Multiplisitet| 1..n
 |Status| Obligatorisk
 |===
@@ -23,7 +23,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Engelsk navn| identifier
 |URI| dct:identifier
 |Range| rdfs:Literal
-|Beskrivelse| Hovedidentifikator for katalogen, for eksempel en URI eller annen identifikator som er stabil og globalt unik.
+|Beskrivelse| Refererer til identifikatoren av katalogen.
 |Multiplisitet| 1..1
 |Status| Obligatorisk
 |===
@@ -47,7 +47,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Engelsk navn| title
 |URI| dct:title
 |Range| rdfs:Literal
-|Beskrivelse| Inneholder navnet på katalogen. Egenskapen kan bli gjentatt for parallelle språkversjoner av navnet.
+|Beskrivelse| Inneholder navnet på katalogen. Bør gjentas når navnet finnes i flere ulike språk/målformer.
 |Multiplisitet| 1..n
 |Status| Obligatorisk
 |===
@@ -65,18 +65,6 @@ Klassen _Modellkatalog_ er obligatorisk.
 |===
 
 ==== Anbefalte egenskaper for klassen _Modellkatalog_
-
-===== Modellkatalog: dekningsområde (dct:spatial) [[modellkatalog-dekningsomrade]]
-
-[cols="30s,70d"]
-|===
-|Engelsk navn| spatial/geographic
-|URI| dct:spatial
-|Range| dct:Location
-|Beskrivelse| Referanse, primært i form av en URI for et administrativt område, eller navn på sted eller område hentet fra et kontrollert vokabular (for eksempel Sentralt stedsnavnregister), eller geografiske koordinater (EU89) for området katalogen gjelder for (punkt eller geografisk grenseramme jf. ISO 19115).
-|Multiplisitet| 0..n
-|Status| Anbefalt
-|===
 
 ===== Modellkatalog: endringsdato (dct:modified) [[modellkatalog-endringsdato]]
 
@@ -126,18 +114,6 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Status| Anbefalt
 |===
 
-===== Modellkatalog: temaer (dcat:themeTaxonomy) [[modellkatalog-temaer]]
-
-[cols="30s,70d"]
-|===
-|Engelsk navn| themes
-|URI| dcat:themeTaxonomy
-|Range| skos:ConceptScheme
-|Beskrivelse| Refererer til et kunnskapsorganiseringssystem (KOS) som er brukt for å klassifisere katalogens informasjonsmodeller.
-|Multiplisitet| 0..n
-|Status| Anbefalt
-|===
-
 ===== Modellkatalog: utgivelsesdato (dct:issued) [[modellkatalog-utgivelsesdato]]
 
 [cols="30s,70d"]
@@ -151,6 +127,18 @@ Klassen _Modellkatalog_ er obligatorisk.
 |===
 
 ==== Valgfrie egenskaper for klassen _Modellkatalog_
+
+===== Modellkatalog: dekningsområde (dct:spatial) [[modellkatalog-dekningsomrade]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| spatial/geographic
+|URI| dct:spatial
+|Range| dct:Location
+|Beskrivelse| Referanse til et geografisk område som er dekket av katalogen.
+|Multiplisitet| 0..n
+|Status| Valgfri
+|===
 
 ===== Modellatalog: er del av (dct:isPartOf) [[modellkatalog-er-del-av]]
 
@@ -172,6 +160,18 @@ Klassen _Modellkatalog_ er obligatorisk.
 |URI| dct:hasPart
 |Range| dcat:Catalog
 |Beskrivelse| Referanse til en beslektet katalog som er en del av den beskrevne katalogen.
+|Multiplisitet| 0..n
+|Status| Valgfri
+|===
+
+===== Modellkatalog: temaer (dcat:themeTaxonomy) [[modellkatalog-temaer]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| themes
+|URI| dcat:themeTaxonomy
+|Range| skos:ConceptScheme
+|Beskrivelse| Refererer til et kunnskapsorganiseringssystem (KOS) som er brukt for å klassifisere katalogens informasjonsmodeller.
 |Multiplisitet| 0..n
 |Status| Valgfri
 |===
