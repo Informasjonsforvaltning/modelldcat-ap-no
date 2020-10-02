@@ -12,6 +12,7 @@ Klassen _Samling_ er valgfri
 |URI| modelldcatno:hasMember
 |Range| modelldcatno:ModelElement
 |Beskrivelse| Refererer til modellelementet som inngår som et medlem i en samling.
-|Multiplisitet| 1..n
-|Status| Obligatorisk
+|Subegenskap av| modelldcatno:hasType
+|Multiplisitet| 0..1
+|Status| Anbefalt
 |===
