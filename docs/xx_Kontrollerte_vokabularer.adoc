@@ -31,7 +31,7 @@ Under følger en oversikt over kontrollerte vokabular som skal brukes (= obligat
 |Status|Obligatorisk
 |===
 
-==== For egenskapen dct:language [[Skal-brukes-for-language]]
+=== For egenskapen dct:language [[Skal-brukes-for-language]]
 
 [cols="30s,70d"]
 |===
@@ -42,7 +42,7 @@ Under følger en oversikt over kontrollerte vokabular som skal brukes (= obligat
 |Status|Obligatorisk
 |===
 
-==== For egenskapen dct:license [[Skal-brukes-for-license]]
+=== For egenskapen dct:license [[Skal-brukes-for-license]]
 
 [cols="30s,70d"]
 |===
@@ -53,7 +53,7 @@ Under følger en oversikt over kontrollerte vokabular som skal brukes (= obligat
 |Kommentar|Kravet fra EU er forklart slik: "This vocabulary must be used in case the licence […​] is internationally recognised and included in the EU Publications Office NAL."
 |===
 
-==== For egenskapen dct:publisher [[Skal-brukes-for-publisher]]
+=== For egenskapen dct:publisher [[Skal-brukes-for-publisher]]
 
 [cols="30s,70d"]
 |===
@@ -66,7 +66,7 @@ Under følger en oversikt over kontrollerte vokabular som skal brukes (= obligat
 |===
 
 
-==== For egenskapen dct:spatial [[Skal-brukes-for-spatial]]
+=== For egenskapen dct:spatial [[Skal-brukes-for-spatial]]
 
 [cols="30s,70d"]
 |===
@@ -88,7 +88,7 @@ Under følger en oversikt over kontrollerte vokabular som skal brukes (= obligat
 |Status|Obligatorisk
 |===
 
-==== For egenskapen dct:type [[Skal-brukes-for-type]]
+=== For egenskapen dct:type [[Skal-brukes-for-type]]
 
 [cols="30s,70d"]
 |===
@@ -108,9 +108,9 @@ Under følger en oversikt over kontrollerte vokabular som skal brukes (= obligat
 |Status|Obligatorisk
 |===
 
-=== Kontrollerte vokabularer som bør og kan brukes [[Kontrollerte-vobakularer-som-bør-brukes]]
+== Kontrollerte vokabularer som bør og kan brukes [[Kontrollerte-vobakularer-som-bør-brukes]]
 
-==== For egenskapen dcat:theme [[Bør-brukes-for-theme]]
+=== For egenskapen dcat:theme [[Bør-brukes-for-theme]]
 
 [cols="30s,70d"]
 |===
@@ -121,7 +121,7 @@ Under følger en oversikt over kontrollerte vokabular som skal brukes (= obligat
 |Status|Anbefalt
 |===
 
-==== For egenskapen dcat:themeTaxonomy [[Bør-brukes-for-themeTaxonomy]]
+=== For egenskapen dcat:themeTaxonomy [[Bør-brukes-for-themeTaxonomy]]
 
 [cols="30s,70d"]
 |===
