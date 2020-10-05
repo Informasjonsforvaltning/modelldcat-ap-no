@@ -178,7 +178,7 @@ Klassen _Kodeelement_ er anbefalt.
 |Status|Valgfri
 |===
 
-===== Kodeelement:neste kodeelement (xkos:next) [[Kodeelement-nesteKodeelement
+===== Kodeelement:neste kodeelement (xkos:next) [[Kodeelement-nesteKodeelement]]
 
 [cols="30s,70d"]
 |===
@@ -189,7 +189,7 @@ Klassen _Kodeelement_ er anbefalt.
 |Multiplisitet|0..n
 |Status|Valgfri
 |===
- 
+
 ===== Kodeelement:omfangsmerknad (skos:scopeNote) [[Kodeelement-omfangsmerknad]]
 
 [cols="30s,70d"]
