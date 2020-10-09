@@ -29,7 +29,7 @@ jobs:
       uses: canastro/copy-file-action@master
       with:
         source: "ontology/modelldcatno.owl"
-        target: "ontology/build/modelldcatno.owl"
+        target: "ontology/build/modelldcatno.ttl"
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
