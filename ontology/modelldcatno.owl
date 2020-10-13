@@ -1288,8 +1288,7 @@ modelldcatno:SimpleType rdf:type owl:Class ;
                         rdfs:subClassOf modelldcatno:ModelElement ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty modelldcatno:hasProperty ;
-                                          owl:qualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                          owl:onClass modelldcatno:Property
+                                          owl:someValuesFrom modelldcatno:Note
                                         ] ;
                         rdfs:label "Enkeltype"@nb ,
                                    "Simple type"@en .
