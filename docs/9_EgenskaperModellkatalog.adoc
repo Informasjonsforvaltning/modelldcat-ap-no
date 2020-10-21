@@ -140,7 +140,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Status| Valgfri
 |===
 
-===== Modellatalog: er del av (dct:isPartOf) [[modellkatalog-er-del-av]]
+===== Modellkatalog: er del av (dct:isPartOf) [[modellkatalog-er-del-av]]
 
 [cols="30s,70d"]
 |===
