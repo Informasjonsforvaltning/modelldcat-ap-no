@@ -1,5 +1,4 @@
 = Spesifikasjon for beskrivelse av informasjonsmodeller (ModellDCAT-AP-NO)
-Utkast til Versjon 1.0
 :doctype: book
 :docinfo:
 :icons: font
@@ -21,14 +20,11 @@ include::locale/attributes.adoc[]
 NOTE: *Innmelding av feil og mangler:* +
 Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på https://github.com/Informasjonsforvaltning/modelldcat-ap-no/issues[Github Issues]. Dersom du ikke allerede har bruker på Github kan du opprette bruker gratis.
 
-*Status*: [yellow-background]#Til møtet i Arkitektur- og standardiseringsrådet# +
-*Publisert*: [yellow-background]#2020-10-02# +
+*Status*: [yellow-background]#Forberedende, rett før endelig publiseing av v.1.0# +
+*Publisert*: [yellow-background]#Løpende oppdatert inntil endelig publisering# +
 *Gjeldende versjon*: Gjeldende versjon vil bli publisert til https://data.norge.no/specification/modelldcat-ap-no/ ([yellow-background]#<kommer>#)
 
-*Ontologi*: Det er utarbeidet et https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/review/ontology/dcatno_informationModel_en.owl[utkast til ontologien for ModellDCAT-AP-NO]. Gjeldende versjon av ontologien vil bli publisert til https://data.norge.no/vocabulary/modelldcatno# ([yellow-background]#<kommer>#).
-
-WARNING: *Det pågår løpende justeringer*: +
-Inntil spesifikasjonen blir endelig pbulisert som gjeldende versjon (se over), blir utkastet (denne publiseringen) løpende justert for bl.a. å hensynta kommentarer og innspill fra høringsrunden.
+*Ontologi*: Gjeldende versjon av ontologien blir publisert til https://data.norge.no/vocabulary/modelldcatno#. Redaktørens utkast til ontologien er tilgjengelig på https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/review/ontology/[Github].
 
 Dette er [yellow-background]#et utkast til# versjon 1.0 av "Spesifikasjon for beskrivelse av informasjonsmodeller (ModellDCAT-AP-NO)". Spesifikasjonen skal sikre at beskrivelser av informasjonsmodeller utføres på en felles, strukturert måte og i en maskinlesbar form. Spesifikasjonen stiller krav til hva som _skal_, _bør_ og _kan_ være med i beskrivelsene, med spesifikasjon av dataformat.
 
