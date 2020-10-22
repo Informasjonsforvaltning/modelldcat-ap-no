@@ -8,18 +8,6 @@ Se https://informasjonsforvaltning.github.io/dcat-ap-no/#Krav-til-kontrollerte-v
 
 Under følger en oversikt over kontrollerte vokabular som skal brukes (= obligatorisk) for egenskapene i listen, dette for å sikre et minimum av samhandlingsevne.
 
-=== For egenskapen dct:creator [[Skal-brukes-for-creator]]
-
-[cols="30s,70d"]
-|===
-|URI til egenskapen|dct:creator
-|Brukt i klasse|Informasjonsmodell (modelldcatno:InformationModel)
-|Navn på vokabularet|Corporate Bodies Named Authority List
-|URI til vokabularet|https://data.europa.eu/euodp/en/data/dataset/corporate-body[https://data.europa.eu/euodp/en/data/dataset/corporate-body]
-|Status|Obligatorisk
-|Kommentar|EUs Corporate bodies Named Authority List inneholder alle europeiske institusjoner og et begrenset antall internasjonale organisasjoner.
-|===
-
 === For egenskapen dct:format [[Skal-brukes-for-format]]
 
 [cols="30s,70d"]
@@ -52,19 +40,6 @@ Under følger en oversikt over kontrollerte vokabular som skal brukes (= obligat
 |URI til vokabularet|https://data.europa.eu/euodp/en/data/dataset/licence[https://data.europa.eu/euodp/en/data/dataset/licence]
 |Kommentar|Kravet fra EU er forklart slik: "This vocabulary must be used in case the licence […​] is internationally recognised and included in the EU Publications Office NAL."
 |===
-
-=== For egenskapen dct:publisher [[Skal-brukes-for-publisher]]
-
-[cols="30s,70d"]
-|===
-|URI til egenskapen|dct:publisher
-|Brukt i klasse|Informasjonsmodell (modelldcatno:InformationModel); Modellkatalog (dcat:Catalog)
-|Navn på vokabularet|Corporate Bodies Named Authority List
-|URI til vokabularet|https://data.europa.eu/euodp/en/data/dataset/corporate-body[https://data.europa.eu/euodp/en/data/dataset/corporate-body]
-|Status|Obligatorisk
-|Kommentar|EUs Corporate bodies Named Authority List inneholder alle europeiske institusjoner og et begrenset antall internasjonale organisasjoner.
-|===
-
 
 === For egenskapen dct:spatial [[Skal-brukes-for-spatial]]
 
