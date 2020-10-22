@@ -22,7 +22,9 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 
 *Status*: [yellow-background]#Forberedende, rett før endelig publiseing av v.1.0# +
 *Publisert*: [yellow-background]#Løpende oppdatert inntil endelig publisering# +
-*Gjeldende versjon*: Gjeldende versjon vil bli publisert til https://data.norge.no/specification/modelldcat-ap-no/ ([yellow-background]#<kommer>#)
+*Gjeldende versjon*: Gjeldende versjon vil bli publisert til https://data.norge.no/specification/modelldcat-ap-no/ ([yellow-background]#<kommer>#) +
+*Forrige versjon*: ingen +
+*Redaktørens utkast*: https://informasjonsforvaltning.github.io/modelldcat-ap-no/
 
 *Ontologi*: Gjeldende versjon av ontologien blir publisert til https://data.norge.no/vocabulary/modelldcatno#. Redaktørens utkast til ontologien er tilgjengelig på https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/review/ontology/[Github].
 
