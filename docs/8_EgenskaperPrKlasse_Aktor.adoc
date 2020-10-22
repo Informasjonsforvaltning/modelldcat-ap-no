@@ -1,17 +1,16 @@
+= Egenskaper per klasse [[Egenskaper-per-klasse]]
 
-= Egenskaper per klasse
+== Katalogdel [[Egenskaper-katalogdel]]
 
-== Katalogdel
-
-=== Aktør (foaf:Agent) [[aktor]]
+=== Aktør (foaf:Agent) [[Aktør-egenskaper]]
 
 Klassen _Aktør_ er obligatorisk.
 
-Det anbefales at URI til Aktør (`foaf:Agent`) er identisk med den URI som Enhetsregisteret (Brønnøysundregistrene) har på enheten/virksomheten dersom den finnes i registeret, f.eks. `dct:publisher <<https://data.brreg.no/enhetsregisteret/api/enheter/974760673>>`.
+Det anbefales at URI til Aktør (`foaf:Agent`) er identisk med den URI som Enhetsregisteret (Brønnøysundregistrene) har på enheten/virksomheten dersom den finnes i registeret, f.eks. `dct:publisher <<https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/974760673>>`.
 
-==== Obligatoriske egenskaper for klassen _Aktør_
+==== Obligatoriske egenskaper for klassen _Aktør_ [[Obligatoriske-egenskaper-for-Aktør]]
 
-===== Aktør: navn (foaf:name) [[aktor-navn]]
+===== Aktør: navn (foaf:name) [[Aktør-navn]]
 
 [cols="30s,70d"]
 |===
@@ -23,9 +22,9 @@ Det anbefales at URI til Aktør (`foaf:Agent`) er identisk med den URI som Enhet
 |Status| Obligatorisk
 |===
 
-==== Anbefalte egenskaper for klassen _Aktør_
+==== Anbefalte egenskaper for klassen _Aktør_ [[Anbefalte-egenskaper-for-Aktør]]
 
-===== Aktør: organisasjonsidentifikator (dct:identifier) [[aktor-organisasjonsidentifikator]]
+===== Aktør: organisasjonsidentifikator (dct:identifier) [[Aktør-organisasjonsidentifikator]]
 
 [cols="30s,70d"]
 |===
@@ -37,7 +36,7 @@ Det anbefales at URI til Aktør (`foaf:Agent`) er identisk med den URI som Enhet
 |Status| Anbefalt
 |===
 
-===== Aktør: utgivertype (dct:type) [[aktor-utgivertype]]
+===== Aktør: utgivertype (dct:type) [[Aktør-utgivertype]]
 
 [cols="30s,70d"]
 |===

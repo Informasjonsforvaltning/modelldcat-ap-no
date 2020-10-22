@@ -1,4 +1,4 @@
-= Klasser [[Klasser]]
+= Klasser [[Oversikt-over-klasser]]
 
 == Obligatoriske klasser i katalogdelen [[Obligatoriske-klasser-i-katalogdelen]]
 
@@ -129,7 +129,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Status|Valgfri
 |===
 
-== Obligatoriske klasser i modelldelen
+== Obligatoriske klasser i modelldelen [[Obligatoriske-klasser-i-modelldelen]]
 
 === Informasjonsmodell (modelldcatno:InformationModel) [[klasse-informasjonsmodell]]
 
@@ -144,7 +144,7 @@ Klasse som representerer modellen som skal utveksles.
 |Status|Obligatorisk
 |===
 
-== Anbefalte klasser i modelldelen
+== Anbefalte klasser i modelldelen [[Anbefalte-klasser-i-modelldelen]]
 
 === Assosiasjon (modelldcatno:Association) [[klasse-assosiasjon]]
 

@@ -1,12 +1,12 @@
-=== Egenskap (modelldcatno:Property) [[egenskap]]
+=== Egenskap (modelldcatno:Property) [[Egenskap-egenskaper]]
 
 Klassen _Egenskap_ er anbefalt.
 
 Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av spesialiseringene.
 
-==== Obligatoriske egenskaper for klassen _Egenskap_
+==== Obligatoriske egenskaper for klassen _Egenskap_ [[Obligatoriske-egenskaper-Egenskap]]
 
-===== Egenskap: identifikator (dct:identifier) [[egenskap-identifikator]]
+===== Egenskap: identifikator (dct:identifier) [[Egenskap-identifikator]]
 
 [cols="30s,70d"]
 |===
@@ -18,9 +18,9 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Status| Obligatorisk
 |===
 
-==== Anbefalte egenskaper for klassen _Egenskap_
+==== Anbefalte egenskaper for klassen _Egenskap_ [[Anbefalte-egenskaper-Egenskap]]
 
-===== Egenskap: begrep (dct:subject) [[egenskap-begrep]]
+===== Egenskap: begrep (dct:subject) [[Egenskap-begrep]]
 
 [cols="30s,70d"]
 |===
@@ -32,7 +32,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Status| Anbefalt
 |===
 
-===== Egenskap: nedre multiplisitet (xsd:minOccurs) [[egenskap-nedre-multiplisitet]]
+===== Egenskap: nedre multiplisitet (xsd:minOccurs) [[Egenskap-nedreMultiplisitet]]
 
 [cols="30s,70d"]
 |===
@@ -44,7 +44,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Status| Anbefalt
 |===
 
-===== Egenskap: tittel (dct:title) [[egenskap-tittel]]
+===== Egenskap: tittel (dct:title) [[Egenskap-tittel]]
 
 [cols="30s,70d"]
 |===
@@ -56,7 +56,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Status| Anbefalt
 |===
 
-===== Egenskap: øvre multiplisitet (xsd:maxOccurs) [[egenskap-øvre-multiplisitet]]
+===== Egenskap: øvre multiplisitet (xsd:maxOccurs) [[Egenskap-øvreMultiplisitet]]
 
 [cols="30s,70d"]
 |===
@@ -68,9 +68,9 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Status| Anbefalt
 |===
 
-==== Valgfrie egenskaper for klassen _Egenskap_
+==== Valgfrie egenskaper for klassen _Egenskap_ [[Valgfrie-egenskaper-Egenskap]]
 
-===== Egenskap: beskrivelse (dct:description) [[egenskap-beskrivelse]]
+===== Egenskap: beskrivelse (dct:description) [[Egenskap-beskrivelse]]
 
 [cols="30s,70d"]
 |===
@@ -82,7 +82,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Status| Valgfri
 |===
 
-===== Egenskap: har type (modelldcatno:hasType) [[egenskap-har-type]]
+===== Egenskap: har type (modelldcatno:hasType) [[Egenskap-harType]]
 
 [cols="30s,70d"]
 |===
@@ -94,7 +94,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Status| Valgfri
 |===
 
-===== Egenskap: relasjonsegenskapsnavn (modelldcatno:relationPropertyLabel) [[egenskap-relasjonsegenskapsnavn]]
+===== Egenskap: relasjonsegenskapsnavn (modelldcatno:relationPropertyLabel) [[Egenskap-relasjonsegenskapsnavn]]
 
 [cols="30s,70d"]
 |===
@@ -106,7 +106,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Status|Valgfri
 |===
 
-===== Egenskap: sekvensnummer (modelldcatno:sequenceNumber) [[egenskap-sekvensnummer]]
+===== Egenskap: sekvensnummer (modelldcatno:sequenceNumber) [[Egenskap-sekvensnummer]]
 
 [cols="30s,70d"]
 |===
@@ -118,7 +118,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Status| Valgfri
 |===
 
-===== Egenskap: tilhører modul (modelldcatno:belongsToModule) [[egenskap-tilhører-modul]]
+===== Egenskap: tilhører modul (modelldcatno:belongsToModule) [[Egenskap-tilhørerModul]]
 
 [cols="30s,70d"]
 |===
@@ -130,7 +130,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Status|Valgfri
 |===
 
-===== Egenskap: utgjør symmetrisk relasjon med (modelldcatno:formsSymmetryWith) [[egenskap-utgjør-symmetrisk-relasjon-med]]
+===== Egenskap: utgjør symmetrisk relasjon med (modelldcatno:formsSymmetryWith) [[Egenskap-utgjørSymmetriskRelasjonMed]]
 
 [cols="30s,70d"]
 |===

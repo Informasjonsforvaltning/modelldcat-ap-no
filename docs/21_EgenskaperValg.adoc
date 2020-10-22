@@ -1,8 +1,8 @@
-=== Valg (modelldcatno:Choice) [[valg]]
+=== Valg (modelldcatno:Choice) [[valg-egenskaper]]
 
 Klassen _Valg_ er valgfri.
 
-==== Anbefalte egenskaper for klassen _Valg_ [[Anbefalte-egenskaper-valg]]
+==== Anbefalte egenskaper for klassen _Valg_ [[Anbefalte-egenskaper-Valg]]
 
 
 ===== Valg: kan ha (modelldcatno:hasSome) [[Valg-kanHa]]

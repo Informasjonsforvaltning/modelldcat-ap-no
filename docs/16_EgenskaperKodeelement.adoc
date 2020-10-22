@@ -1,4 +1,4 @@
-=== Kodeelement (modelldcatno:CodeElement) [[Kodeelement]]
+=== Kodeelement (modelldcatno:CodeElement) [[Kodeelement-egenskaper]]
 
 Klassen _Kodeelement_ er anbefalt.
 
@@ -45,7 +45,7 @@ Klassen _Kodeelement_ er anbefalt.
 
 ==== Anbefalte egenskaper for klassen _Kodeelement_ [[Anbefalte-egenskaper-Kodeelement]]
 
-===== Kodeelement: begrep (dct:subject) [[kodeelement-begrep]]
+===== Kodeelement: begrep (dct:subject) [[Kodeelement-begrep]]
 
 [cols="30s,70d"]
 |===

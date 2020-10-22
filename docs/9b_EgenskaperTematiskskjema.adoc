@@ -1,8 +1,8 @@
-=== Tematisk skjema (skos:ConceptScheme) [[TematiskSkjema]]
+=== Tematisk skjema (skos:ConceptScheme) [[TematiskSkjema-egenskaper]]
 
 Klassen _Tematisk skjema_ er obligatorisk.
 
-===== Obligatoriske egenskaper for klassen _Tematisk skjema_ [[Obligatoriske-egenskaper-TematiskSkjema]]
+==== Obligatoriske egenskaper for klassen _Tematisk skjema_ [[Obligatoriske-egenskaper-TematiskSkjema]]
 
 
 ===== Tematisk skjema: tittel (dct:title) [[TematiskSkjema-tittel]]

@@ -2,9 +2,9 @@
 
 === Abstraksjon (modelldcatno:Abstraction) [[Abstraksjon-egenskaper]]
 
-Klassen _Abstraksjon_ er valgfri. 
+Klassen _Abstraksjon_ er valgfri.
 
-===== Anbefalte egenskaper for klassen _Abstraksjon_ [[Anbefalte-egenskaper-abstraksjon]]
+==== Anbefalte egenskaper for klassen _Abstraksjon_ [[Anbefalte-egenskaper-abstraksjon]]
 
 ===== Abstraksjon:er abstraksjon av (modelldcatno:isAbstractionOf) [[Abstraksjon-erAbstraksjonAv]]
 

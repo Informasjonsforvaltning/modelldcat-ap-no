@@ -1,10 +1,10 @@
-=== Enkeltype (modelldcatno:SimpleType) [[enkeltype]]
+=== Enkeltype (modelldcatno:SimpleType) [[Enkeltype-egenskaper]]
 
 Klassen _Enkeltype_ er anbefalt
 
-==== Anbefalte egenskaper for klassen _Enkeltype_
+==== Anbefalte egenskaper for klassen _Enkeltype_ [[Anbefalte-egenskaper-Enkelttype]]
 
-===== Enkeltype: typedefinisjon (modelldcatno:typeDefinitionReference) [[enkeltype-typedefinisjon]]
+===== Enkeltype: typedefinisjon (modelldcatno:typeDefinitionReference) [[Enkeltype-typedefinisjon]]
 
 [cols="30s,70d"]
 |===
@@ -18,7 +18,7 @@ Klassen _Enkeltype_ er anbefalt
 
 ==== Valgfrie egenskaper for klassen _Enkeltype_
 
-===== Enkeltype: antall desimaler (xsd:fractionDigits) [[enkeltype-antall-desimaler]]
+===== Enkeltype: antall desimaler (xsd:fractionDigits) [[Enkeltype-antallDesimaler]]
 
 [cols="30s,70d"]
 |===
@@ -30,7 +30,7 @@ Klassen _Enkeltype_ er anbefalt
 |Status| Valgfri
 |===
 
-===== Enkeltype: lengde (xsd:length) [[enkeltype-lengde]]
+===== Enkeltype: lengde (xsd:length) [[Enkeltype-lengde]]
 
 [cols="30s,70d"]
 |===
@@ -42,7 +42,7 @@ Klassen _Enkeltype_ er anbefalt
 |Status| Valgfri
 |===
 
-===== Enkeltype: maks inklusiv (xsd:maxInclusive) [[enkeltype-maks-inklusiv]]
+===== Enkeltype: maks inklusiv (xsd:maxInclusive) [[Enkeltype-maksInklusiv]]
 
 [cols="30s,70d"]
 |===
@@ -54,7 +54,7 @@ Klassen _Enkeltype_ er anbefalt
 |Status| Valgfri
 |===
 
-===== Enkeltype: maks lengde (xsd:maxLength) [[enkeltype-maks-lengde]]
+===== Enkeltype: maks lengde (xsd:maxLength) [[Enkeltype-maksLengde]]
 
 [cols="30s,70d"]
 |===
@@ -66,7 +66,7 @@ Klassen _Enkeltype_ er anbefalt
 |Status| Valgfri
 |===
 
-===== Enkeltype: minimum inklusiv (xsd:minInclusive) [[enkeltype-minimum-inklusiv]]
+===== Enkeltype: minimum inklusiv (xsd:minInclusive) [[Enkeltype-minimumInklusiv]]
 
 [cols="30s,70d"]
 |===
@@ -78,7 +78,7 @@ Klassen _Enkeltype_ er anbefalt
 |Status| Valgfri
 |===
 
-===== Enkeltype: minimum lengde (xsd:minLength) [[enkeltype-minimum-lengde]]
+===== Enkeltype: minimum lengde (xsd:minLength) [[Enkeltype-minimumLengde]]
 
 [cols="30s,70d"]
 |===
@@ -90,7 +90,7 @@ Klassen _Enkeltype_ er anbefalt
 |Status| Valgfri
 |===
 
-===== Enkeltype: mønster (xsd:pattern) [[enkeltype-mønster]]
+===== Enkeltype: mønster (xsd:pattern) [[Enkeltype-mønster]]
 
 [cols="30s,70d"]
 |===
@@ -102,7 +102,7 @@ Klassen _Enkeltype_ er anbefalt
 |Status| Valgfri
 |===
 
-===== Enkeltype: totalt antall siffer (xsd:totalDigits) [[enkeltype-totalt-antall-siffer]]
+===== Enkeltype: totalt antall siffer (xsd:totalDigits) [[Enkeltype-totaltAntallSiffer]]
 
 [cols="30s,70d"]
 |===

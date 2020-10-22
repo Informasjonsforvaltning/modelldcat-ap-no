@@ -1,0 +1,1351 @@
+@prefix : <https://data.norge.no/vocabulary/modelldcatno/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xkos: <https://rdf-vocabulary.ddialliance.org/xkos/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix ex-code: <http://example.com/code#> .
+@prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
+@base <https://data.norge.no/vocabulary/modelldcatno> .
+
+<https://data.norge.no/vocabulary/modelldcatno> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty ;
+              rdfs:subPropertyOf rdfs:label .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty ;
+                rdfs:subPropertyOf skos:note .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty ;
+             rdfs:subPropertyOf skos:note .
+
+
+###  http://www.w3.org/2004/02/skos/core#hiddenLabel
+skos:hiddenLabel rdf:type owl:AnnotationProperty ;
+                 rdfs:subPropertyOf rdfs:label .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty ;
+               rdfs:subPropertyOf rdfs:label .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty ;
+               rdfs:subPropertyOf skos:note .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/dc/terms/creator
+dct:creator rdf:type owl:ObjectProperty ;
+            rdfs:domain modelldcatno:InformationModel ;
+            rdfs:range foaf:Agent ;
+            rdfs:label "creator"@en ,
+                       "skaper"@nb .
+
+
+###  http://purl.org/dc/terms/format
+dct:format rdf:type owl:ObjectProperty ;
+           rdfs:domain foaf:Document ;
+           rdfs:range dct:MediaType ;
+           rdfs:label "format"@en ,
+                      "format"@nb .
+
+
+###  http://purl.org/dc/terms/hasFormat
+dct:hasFormat rdf:type owl:ObjectProperty ;
+              rdfs:domain modelldcatno:InformationModel ;
+              rdfs:range foaf:Document ;
+              rdfs:label "finnes i format"@en ,
+                         "has format"@en .
+
+
+###  http://purl.org/dc/terms/hasPart
+dct:hasPart rdf:type owl:ObjectProperty ;
+            owl:inverseOf dct:isPartOf ;
+            rdf:type owl:IrreflexiveProperty ;
+            rdfs:domain dcat:Resource ;
+            rdfs:range dcat:Resource ;
+            rdfs:label "har del"@nb ,
+                       "has part"@en .
+
+
+###  http://purl.org/dc/terms/isPartOf
+dct:isPartOf rdf:type owl:ObjectProperty ,
+                      owl:IrreflexiveProperty ;
+             rdfs:domain dcat:Resource ;
+             rdfs:range dcat:Resource ;
+             rdfs:label "er del av"@nb ,
+                        "is part of"@en .
+
+
+###  http://purl.org/dc/terms/isReplacedBy
+dct:isReplacedBy rdf:type owl:ObjectProperty ;
+                 rdfs:domain modelldcatno:InformationModel ;
+                 rdfs:range modelldcatno:InformationModel ;
+                 rdfs:label "erstattet av"@nb ,
+                            "is replaced by"@en .
+
+
+###  http://purl.org/dc/terms/language
+dct:language rdf:type owl:ObjectProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( dcat:Resource
+                                         foaf:Document
+                                       )
+                         ] ;
+             rdfs:range dct:LinguisticSystem ;
+             rdfs:label "language"@en ,
+                        "språk"@nb .
+
+
+###  http://purl.org/dc/terms/license
+dct:license rdf:type owl:ObjectProperty ;
+            rdfs:domain dcat:Resource ;
+            rdfs:range dct:LicenseDocument ;
+            rdfs:label "license"@en ,
+                       "lisens"@nb .
+
+
+###  http://purl.org/dc/terms/publisher
+dct:publisher rdf:type owl:ObjectProperty ;
+              rdfs:domain dcat:Resource ;
+              rdfs:range foaf:Agent ;
+              rdfs:label "publisher"@en ,
+                         "utgiver"@nb .
+
+
+###  http://purl.org/dc/terms/replaces
+dct:replaces rdf:type owl:ObjectProperty ;
+             rdfs:domain modelldcatno:InformationModel ;
+             rdfs:range modelldcatno:InformationModel ;
+             rdfs:label "erstatter"@nb ,
+                        "replaces"@en .
+
+
+###  http://purl.org/dc/terms/spatial
+dct:spatial rdf:type owl:ObjectProperty ;
+            rdfs:domain dcat:Resource ;
+            rdfs:range dct:Location ;
+            rdfs:label "Dekningsområde"@nb ,
+                       "spatial coverage"@en .
+
+
+###  http://purl.org/dc/terms/subject
+dct:subject rdf:type owl:ObjectProperty ;
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( modelldcatno:CodeElement
+                                        modelldcatno:ModelElement
+                                        modelldcatno:Property
+                                      )
+                        ] ;
+            rdfs:range skos:Concept ;
+            rdfs:label "begrep"@nb ,
+                       "subject"@en .
+
+
+###  http://purl.org/dc/terms/temporal
+dct:temporal rdf:type owl:ObjectProperty ;
+             rdfs:domain modelldcatno:InformationModel ;
+             rdfs:range dct:PeriodOfTime ;
+             rdfs:label "gyldighetsperiode"@nb ,
+                        "temporal coverage"@en .
+
+
+###  http://purl.org/dc/terms/type
+dct:type rdf:type owl:ObjectProperty ;
+         rdfs:domain [ rdf:type owl:Class ;
+                       owl:unionOf ( dct:LicenseDocument
+                                     foaf:Agent
+                                     modelldcatno:InformationModel
+                                   )
+                     ] ;
+         rdfs:range skos:Concept ;
+         rdfs:label "type"@en ,
+                    "type eller genre"@nb .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+skos:inScheme rdf:type owl:ObjectProperty ;
+              rdfs:domain modelldcatno:CodeElement ;
+              rdfs:range modelldcatno:CodeList .
+
+
+###  http://www.w3.org/2004/02/skos/core#topConceptOf
+skos:topConceptOf rdf:type owl:ObjectProperty ;
+                  rdfs:domain modelldcatno:CodeElement ;
+                  rdfs:range modelldcatno:CodeList .
+
+
+###  http://www.w3.org/ns/adms#status
+adms:status rdf:type owl:ObjectProperty ;
+            rdfs:domain modelldcatno:InformationModel ;
+            rdfs:range skos:Concept ;
+            rdfs:label "modellstatus"@nb ,
+                       "status"@en .
+
+
+###  http://www.w3.org/ns/dcat#contactPoint
+dcat:contactPoint rdf:type owl:ObjectProperty ;
+                  rdfs:domain dcat:Resource ;
+                  rdfs:range vcard:Kind ;
+                  rdfs:label "Kontaktpunkt"@nb ,
+                             "contact point"@en .
+
+
+###  http://www.w3.org/ns/dcat#theme
+dcat:theme rdf:type owl:ObjectProperty ;
+           rdfs:domain dcat:Resource ;
+           rdfs:range skos:Concept ;
+           rdfs:label "tema"@nb ,
+                      "theme"@en .
+
+
+###  http://www.w3.org/ns/dcat#themeTaxonomy
+dcat:themeTaxonomy rdf:type owl:ObjectProperty ;
+                   rdfs:domain dcat:Resource ;
+                   rdfs:range skos:ConceptScheme ;
+                   rdfs:label "Tematisk skjema"@nb ,
+                              "theme taxonomy"@en .
+
+
+###  http://xmlns.com/foaf/0.1/homepage
+foaf:homepage rdf:type owl:ObjectProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain dcat:Resource ;
+              rdfs:range foaf:Document ;
+              rdfs:label "hjemmeside"@nb ,
+                         "homepage"@en .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#codeListReference
+modelldcatno:codeListReference rdf:type owl:ObjectProperty ,
+                                        owl:FunctionalProperty ,
+                                        owl:IrreflexiveProperty ;
+                               rdfs:domain modelldcatno:CodeList ;
+                               rdfs:range modelldcatno:CodeList ;
+                               rdfs:label "Ekstern kodeliste"@nb ,
+                                          "code list reference"@en .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#contains
+modelldcatno:contains rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf modelldcatno:hasType ;
+                      rdfs:domain modelldcatno:Composition ;
+                      rdfs:range modelldcatno:ModelElement ;
+                      rdfs:label "contains"@en ,
+                                 "inneholder"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#containsModelElement
+modelldcatno:containsModelElement rdf:type owl:ObjectProperty ;
+                                  rdfs:domain modelldcatno:InformationModel ;
+                                  rdfs:range modelldcatno:ModelElement ;
+                                  rdfs:label "contains model element"@en ,
+                                             "inneholder model element"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#containsObjectType
+modelldcatno:containsObjectType rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf modelldcatno:hasType ;
+                                rdfs:domain modelldcatno:Attribute ;
+                                rdfs:range modelldcatno:ObjectType ;
+                                owl:propertyDisjointWith modelldcatno:hasDataType ,
+                                                         modelldcatno:hasSimpleType ,
+                                                         modelldcatno:hasValueFrom ;
+                                rdfs:label "contains object type"@en ,
+                                           "inneholder objekttype"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#formsSymmetryWith
+modelldcatno:formsSymmetryWith rdf:type owl:ObjectProperty ,
+                                        owl:SymmetricProperty ;
+                               rdfs:domain modelldcatno:Property ;
+                               rdfs:range modelldcatno:Property ;
+                               rdfs:label "Forms symmetry with"@en ,
+                                          "Utgjør symetrisk relasjon med"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#hasDataType
+modelldcatno:hasDataType rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf modelldcatno:hasType ;
+                         rdf:type owl:FunctionalProperty ;
+                         rdfs:domain modelldcatno:Attribute ;
+                         rdfs:range modelldcatno:DataType ;
+                         owl:propertyDisjointWith modelldcatno:hasSimpleType ,
+                                                  modelldcatno:hasValueFrom ;
+                         rdfs:label "har datatype"@nb ,
+                                    "has data type"@en .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#hasGeneralConcept
+modelldcatno:hasGeneralConcept rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf modelldcatno:hasType ;
+                               rdf:type owl:FunctionalProperty ;
+                               rdfs:domain modelldcatno:Specialization ;
+                               rdfs:range modelldcatno:ModelElement ;
+                               rdfs:label "har generelt konsept"@nb ,
+                                          "has general concept"@en .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#hasMember
+modelldcatno:hasMember rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf modelldcatno:hasType ;
+                       rdfs:domain modelldcatno:Collection ;
+                       rdfs:range modelldcatno:ModelElement ;
+                       rdfs:label "har medlem"@nb ,
+                                  "has member"@en .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#hasObjectType
+modelldcatno:hasObjectType rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf modelldcatno:hasType ;
+                           rdf:type owl:FunctionalProperty ;
+                           rdfs:domain modelldcatno:Role ;
+                           rdfs:range modelldcatno:ObjectType ;
+                           rdfs:label "har objekttype"@nb ,
+                                      "has object type"@en .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#hasOneOf
+modelldcatno:hasOneOf rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf modelldcatno:hasType ;
+                      rdfs:domain modelldcatno:Choice ;
+                      rdfs:range modelldcatno:ModelElement ;
+                      owl:propertyDisjointWith modelldcatno:hasSome ;
+                      rdfs:label "har en av"@nb ,
+                                 "has one of"@en .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#hasProperty
+modelldcatno:hasProperty rdf:type owl:ObjectProperty ,
+                                  owl:AsymmetricProperty ;
+                         rdfs:domain modelldcatno:ModelElement ;
+                         rdfs:range modelldcatno:Property ;
+                         rdfs:label "har egenskap"@nb ,
+                                    "has property"@en .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#hasSimpleType
+modelldcatno:hasSimpleType rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf modelldcatno:hasType ;
+                           rdf:type owl:FunctionalProperty ;
+                           rdfs:domain modelldcatno:Attribute ;
+                           rdfs:range modelldcatno:SimpleType ;
+                           rdfs:label "har enkeltype"@nb ,
+                                      "has simple type"@en .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#hasSome
+modelldcatno:hasSome rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf modelldcatno:hasType ;
+                     rdfs:domain modelldcatno:Choice ;
+                     rdfs:range modelldcatno:ModelElement ;
+                     rdfs:comment "Brukes for å betegne at en valgmulighet ikke er ekskusiv, dvs. at man kan velge mer enn en."@nb ;
+                     rdfs:label "has some"@nb ,
+                                "kan ha"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#hasSupplier
+modelldcatno:hasSupplier rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf modelldcatno:hasType ;
+                         rdf:type owl:FunctionalProperty ;
+                         rdfs:domain modelldcatno:Realization ;
+                         rdfs:range modelldcatno:ModelElement ;
+                         rdfs:label "har leverandør"@nb ,
+                                    "has supplier"@en .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#hasType
+modelldcatno:hasType rdf:type owl:ObjectProperty ;
+                     rdfs:domain modelldcatno:Property ;
+                     rdfs:range modelldcatno:ModelElement ;
+                     rdfs:label "har type"@nb ,
+                                "has type"@en .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#hasValueFrom
+modelldcatno:hasValueFrom rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf modelldcatno:hasType ;
+                          rdf:type owl:FunctionalProperty ;
+                          rdfs:domain modelldcatno:Attribute ;
+                          rdfs:range modelldcatno:CodeList ;
+                          rdfs:label "har verdier fra"@nb ,
+                                     "has value from"@en .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#isAbstractionOf
+modelldcatno:isAbstractionOf rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf modelldcatno:hasType ;
+                             rdfs:domain modelldcatno:Abstraction ;
+                             rdfs:range modelldcatno:ModelElement ;
+                             rdfs:label "er abstraksjon av"@nb ,
+                                        "is abstraction of"@en .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#model
+modelldcatno:model rdf:type owl:ObjectProperty ;
+                   rdfs:domain dcat:Catalog ;
+                   rdfs:range modelldcatno:InformationModel ;
+                   rdfs:label "model"@en ,
+                              "modell"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#references
+modelldcatno:references rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf modelldcatno:hasType ;
+                        rdf:type owl:FunctionalProperty ;
+                        rdfs:domain modelldcatno:Association ;
+                        rdfs:range modelldcatno:ModelElement ;
+                        rdfs:label "references"@en ,
+                                   "refererer"@nb .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/next
+xkos:next rdf:type owl:ObjectProperty ;
+          rdfs:domain modelldcatno:CodeElement ;
+          rdfs:range modelldcatno:CodeElement .
+
+
+###  https://rdf-vocabulary.ddialliance.org/xkos/previous
+xkos:previous rdf:type owl:ObjectProperty ;
+              rdfs:domain modelldcatno:CodeElement ;
+              rdfs:range modelldcatno:CodeElement .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/dc/terms/description
+dct:description rdf:type owl:DatatypeProperty ;
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( dcat:Resource
+                                            modelldcatno:ModelElement
+                                            modelldcatno:Property
+                                          )
+                            ] ;
+                rdfs:range rdfs:Literal ;
+                rdfs:label "beskrivelse"@nb ,
+                           "description"@en .
+
+
+###  http://purl.org/dc/terms/identifier
+dct:identifier rdf:type owl:DatatypeProperty ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( dcat:Resource
+                                           foaf:Agent
+                                           modelldcatno:CodeElement
+                                           modelldcatno:ModelElement
+                                           modelldcatno:Property
+                                         )
+                           ] ;
+               rdfs:range rdfs:Literal ;
+               rdfs:label "identifier"@en ,
+                          "identifikator"@nb .
+
+
+###  http://purl.org/dc/terms/issued
+dct:issued rdf:type owl:DatatypeProperty ;
+           rdfs:domain dcat:Resource ;
+           rdfs:range [ rdf:type rdfs:Datatype ;
+                        owl:unionOf ( rdfs:Literal
+                                      xsd:dateTime
+                                    )
+                      ] ;
+           rdfs:label "issued"@en ,
+                      "utgivelsesdato"@nb .
+
+
+###  http://purl.org/dc/terms/modified
+dct:modified rdf:type owl:DatatypeProperty ;
+             rdfs:domain dcat:Resource ;
+             rdfs:range [ rdf:type rdfs:Datatype ;
+                          owl:unionOf ( rdfs:Literal
+                                        xsd:dateTime
+                                      )
+                        ] ;
+             rdfs:label "endringsdato"@nb ,
+                        "modified date"@en .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:DatatypeProperty ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( skos:ConceptScheme
+                                      dcat:Resource
+                                      foaf:Document
+                                      modelldcatno:ModelElement
+                                      modelldcatno:Property
+                                    )
+                      ] ;
+          rdfs:range rdfs:Literal ;
+          rdfs:label "title"@en ,
+                     "tittel"@nb .
+
+
+###  http://www.w3.org/2001/XMLSchema#fractionDigits
+xsd:fractionDigits rdf:type owl:DatatypeProperty ,
+                            owl:FunctionalProperty ;
+                   rdfs:domain modelldcatno:SimpleType ;
+                   rdfs:range xsd:nonNegativeInteger ;
+                   rdfs:label "antall desimaler"@nb ,
+                              "fraction digits"@en .
+
+
+###  http://www.w3.org/2001/XMLSchema#length
+xsd:length rdf:type owl:DatatypeProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain modelldcatno:SimpleType ;
+           rdfs:range xsd:nonNegativeInteger ;
+           rdfs:label "lengde"@nb ,
+                      "length"@en .
+
+
+###  http://www.w3.org/2001/XMLSchema#maxInclusive
+xsd:maxInclusive rdf:type owl:DatatypeProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:domain modelldcatno:SimpleType ;
+                 rdfs:range xsd:decimal ;
+                 rdfs:label "maks inklusiv"@nb ,
+                            "max inclusive"@en .
+
+
+###  http://www.w3.org/2001/XMLSchema#maxLength
+xsd:maxLength rdf:type owl:DatatypeProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain modelldcatno:SimpleType ;
+              rdfs:range xsd:nonNegativeInteger ;
+              rdfs:label "maks lengde"@nb ,
+                         "max length"@en .
+
+
+###  http://www.w3.org/2001/XMLSchema#maxOccurs
+xsd:maxOccurs rdf:type owl:DatatypeProperty ;
+              rdfs:domain modelldcatno:Property ;
+              rdfs:range [ rdf:type rdfs:Datatype ;
+                           owl:unionOf ( xsd:nonNegativeInteger
+                                         [ rdf:type rdfs:Datatype ;
+                                           owl:oneOf [ rdf:type rdf:List ;
+                                                       rdf:first "*" ;
+                                                       rdf:rest rdf:nil
+                                                     ]
+                                         ]
+                                       )
+                         ] ;
+              rdfs:label "maks multiplisitet"@nb ,
+                         "max occurs"@en .
+
+
+###  http://www.w3.org/2001/XMLSchema#minInclusive
+xsd:minInclusive rdf:type owl:DatatypeProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:domain modelldcatno:SimpleType ;
+                 rdfs:range xsd:decimal ;
+                 rdfs:label "min inclusive"@en ,
+                            "minimum inklusive"@nb .
+
+
+###  http://www.w3.org/2001/XMLSchema#minLength
+xsd:minLength rdf:type owl:DatatypeProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain modelldcatno:SimpleType ;
+              rdfs:range xsd:nonNegativeInteger ;
+              rdfs:label "min length"@en ,
+                         "minimum lengde"@nb .
+
+
+###  http://www.w3.org/2001/XMLSchema#minOccurs
+xsd:minOccurs rdf:type owl:DatatypeProperty ;
+              rdfs:domain modelldcatno:Property ;
+              rdfs:range xsd:nonNegativeInteger ;
+              rdfs:label "min occurs"@en ,
+                         "minimum multiplisitet"@nb .
+
+
+###  http://www.w3.org/2001/XMLSchema#pattern
+xsd:pattern rdf:type owl:DatatypeProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain modelldcatno:SimpleType ;
+            rdfs:range xsd:string ;
+            rdfs:label "mønster"@nb ,
+                       "pattern"@en .
+
+
+###  http://www.w3.org/2001/XMLSchema#totalDigits
+xsd:totalDigits rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain modelldcatno:SimpleType ;
+                rdfs:range xsd:nonNegativeInteger ;
+                rdfs:label "total digits"@en ,
+                           "totalt antall siffer"@nb .
+
+
+###  http://www.w3.org/2002/07/owl#versionInfo
+owl:versionInfo rdf:type owl:DatatypeProperty ;
+                rdfs:domain dcat:Resource ;
+                rdfs:range rdfs:Literal ;
+                rdfs:label "version info"@en ,
+                           "versjonsinfo"@nb .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+skos:notation rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/ns/dcat#bbox
+dcat:bbox rdf:type owl:DatatypeProperty ;
+          rdfs:domain dct:Location ;
+          rdfs:range rdfs:Literal ;
+          rdfs:label "bounding box"@en ,
+                     "geografisk område"@nb .
+
+
+###  http://www.w3.org/ns/dcat#centroid
+dcat:centroid rdf:type owl:DatatypeProperty ;
+              rdfs:domain dct:Location ;
+              rdfs:range rdfs:Literal ;
+              rdfs:label "centroid"@nb ,
+                         "geografisk midtpunkt"@nb .
+
+
+###  http://www.w3.org/ns/dcat#endDate
+dcat:endDate rdf:type owl:DatatypeProperty ;
+             rdfs:domain dct:PeriodOfTime ;
+             rdfs:range xsd:dateTime ;
+             rdfs:comment "end date"@en ;
+             rdfs:label "sluttdato"@nb .
+
+
+###  http://www.w3.org/ns/dcat#keyword
+dcat:keyword rdf:type owl:DatatypeProperty ;
+             rdfs:domain dcat:Resource ;
+             rdfs:range rdfs:Literal ;
+             rdfs:label "emneord"@nb ,
+                        "keyword"@en .
+
+
+###  http://www.w3.org/ns/dcat#startDate
+dcat:startDate rdf:type owl:DatatypeProperty ;
+               rdfs:domain dct:PeriodOfTime ;
+               rdfs:range xsd:dateTime ;
+               rdfs:label "start date"@en ,
+                          "startdato"@nb .
+
+
+###  http://www.w3.org/ns/locn#geometry
+locn:geometry rdf:type owl:DatatypeProperty ;
+              rdfs:domain dct:Location ;
+              rdfs:range rdfs:Literal ;
+              rdfs:comment "Associates any resource with the corresponding geometry."@en ;
+              rdfs:label "geometri"@nb ,
+                         "geometry"@en .
+
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:DatatypeProperty ;
+          rdfs:domain foaf:Agent ;
+          rdfs:range rdfs:Literal ;
+          rdfs:label "name"@en ,
+                     "navn"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#belongsToModule
+modelldcatno:belongsToModule rdf:type owl:DatatypeProperty ,
+                                      owl:FunctionalProperty ;
+                             rdfs:domain [ rdf:type owl:Class ;
+                                           owl:unionOf ( modelldcatno:ModelElement
+                                                         modelldcatno:Property
+                                                       )
+                                         ] ;
+                             rdfs:range [ rdf:type rdfs:Datatype ;
+                                          owl:unionOf ( rdfs:Literal
+                                                        xsd:anyURI
+                                                      )
+                                        ] ;
+                             rdfs:label "belongs to module"@en ,
+                                        "konseptet tilhører modul"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#informationModelIdentifier
+modelldcatno:informationModelIdentifier rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain modelldcatno:InformationModel ;
+                                        rdfs:range xsd:anyURI ;
+                                        rdfs:isDefinedBy dct:identifier ;
+                                        rdfs:label "informasjonsmodell-identifikator"@nb ,
+                                                   "information model identifier"@en .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#modelElementBelongsToModule
+modelldcatno:modelElementBelongsToModule rdf:type owl:DatatypeProperty ,
+                                                  owl:FunctionalProperty ;
+                                         rdfs:domain modelldcatno:ModelElement ;
+                                         rdfs:range [ rdf:type rdfs:Datatype ;
+                                                      owl:unionOf ( rdfs:Literal
+                                                                    xsd:anyURI
+                                                                  )
+                                                    ] ;
+                                         rdfs:label "model element belongs to module"@en ,
+                                                    "modelelementet tilhører modul"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#propertyNote
+modelldcatno:propertyNote rdf:type owl:DatatypeProperty ;
+                          rdfs:domain modelldcatno:Note ;
+                          rdfs:range rdfs:Literal ;
+                          rdfs:label "anmerkning"@nb ,
+                                     "property note"@en .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#relationPropertyLabel
+modelldcatno:relationPropertyLabel rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain modelldcatno:Property ;
+                                   rdfs:range rdfs:Literal ;
+                                   rdfs:label "relasjonsegenskapsnavn"@nb ,
+                                              "relation property label"@en .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#sequenceNumber
+modelldcatno:sequenceNumber rdf:type owl:DatatypeProperty ;
+                            rdfs:domain [ rdf:type owl:Class ;
+                                          owl:unionOf ( modelldcatno:CodeElement
+                                                        modelldcatno:Property
+                                                      )
+                                        ] ;
+                            rdfs:range xsd:nonNegativeInteger ;
+                            rdfs:comment "Der man har en modell der elementenes orden er vesentlig, f. eks. slik det kan være i XML eller en kodeliste."@nb ;
+                            rdfs:label "Sekvensnummer"@nb ,
+                                       "sequence number"@en .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#typeDefinitionReference
+modelldcatno:typeDefinitionReference rdf:type owl:DatatypeProperty ,
+                                              owl:FunctionalProperty ;
+                                     rdfs:domain modelldcatno:SimpleType ;
+                                     rdfs:range xsd:anyURI ;
+                                     rdfs:comment "External definition of the type in question, before adding any restrictions." ;
+                                     rdfs:label "type definition"@en ,
+                                                "typedefinisjon"@nb .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/dc/terms/LicenseDocument
+dct:LicenseDocument rdf:type owl:Class ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                      owl:onProperty dct:type ;
+                                      owl:someValuesFrom skos:Concept
+                                    ] ;
+                    rdfs:label "Licence Document"@en ,
+                               "Lisensdokument"@nb .
+
+
+###  http://purl.org/dc/terms/LinguisticSystem
+dct:LinguisticSystem rdf:type owl:Class ;
+                     rdfs:label "Linguistic System"@en ,
+                                "Språksystem"@nb .
+
+
+###  http://purl.org/dc/terms/Location
+dct:Location rdf:type owl:Class ;
+             rdfs:label "Location"@en ,
+                        "Lokasjon"@nb .
+
+
+###  http://purl.org/dc/terms/MediaType
+dct:MediaType rdf:type owl:Class ;
+              rdfs:label "Media Type"@en ,
+                         "Mediatype"@nb ;
+              skos:definition "A file format or physical medium."@en .
+
+
+###  http://purl.org/dc/terms/PeriodOfTime
+dct:PeriodOfTime rdf:type owl:Class ;
+                 rdfs:label "Period of Time"@en ,
+                            "Tidsintervall"@nb .
+
+
+###  http://purl.org/dc/terms/Standard
+dct:Standard rdf:type owl:Class ;
+             rdfs:label "Standard"@en ,
+                        "Standard"@nb .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class ;
+             rdfs:label "Begrep"@nb ,
+                        "Concept"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+skos:ConceptScheme rdf:type owl:Class ;
+                   rdfs:label "Concept Scheme"@en ,
+                              "Tematisk skjema"@nb .
+
+
+###  http://www.w3.org/2006/vcard/ns#Kind
+vcard:Kind rdf:type owl:Class ;
+           rdfs:label "Kind"@en .
+
+
+###  http://www.w3.org/ns/dcat#Catalog
+dcat:Catalog rdf:type owl:Class ;
+             rdfs:subClassOf dcat:Resource ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dct:hasPart ;
+                               owl:someValuesFrom dcat:Catalog
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dct:isPartOf ;
+                               owl:someValuesFrom dcat:Catalog
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dct:language ;
+                               owl:someValuesFrom dct:LinguisticSystem
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dct:license ;
+                               owl:someValuesFrom dct:LicenseDocument
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dct:spatial ;
+                               owl:someValuesFrom dct:Location
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dcat:themeTaxonomy ;
+                               owl:someValuesFrom skos:ConceptScheme
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty foaf:homepage ;
+                               owl:someValuesFrom foaf:Document
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty modelldcatno:model ;
+                               owl:someValuesFrom modelldcatno:InformationModel
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dct:publisher ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass foaf:Agent
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dct:issued ;
+                               owl:someValuesFrom xsd:dateTime
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dct:modified ;
+                               owl:someValuesFrom xsd:dateTime
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dct:description ;
+                               owl:minCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dct:identifier ;
+                               owl:minCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dct:title ;
+                               owl:minCardinality "1"^^xsd:nonNegativeInteger
+                             ] ;
+             owl:disjointWith modelldcatno:InformationModel ;
+             rdfs:label "Catalog"@en ,
+                        "Modellkatalog"@nb .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource dcat:Catalog ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dct:language ;
+                         owl:someValuesFrom dct:LinguisticSystem
+                       ] ;
+   rdfs:comment """This property specifies the language used in a catalogue to describe
+textual metadata of the Datasets in a Registry Catalogue. This property should be repeated in case there are various versions of the text in different languages."""@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource dcat:Catalog ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dct:license ;
+                         owl:someValuesFrom dct:LicenseDocument
+                       ] ;
+   rdfs:comment "This property refers to the licence under which the catalogue can be used or reused."@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource dcat:Catalog ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dct:spatial ;
+                         owl:someValuesFrom dct:Location
+                       ] ;
+   rdfs:comment "This property indicates a geographical/administrative area that is covered by a Registry Catalogue. This property may be repeated in case there are several resources involved."@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource dcat:Catalog ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dcat:themeTaxonomy ;
+                         owl:someValuesFrom skos:ConceptScheme
+                       ] ;
+   rdfs:comment """This property refers to a knowledge organisation system (i.e.,
+thesaurus, taxonomy) used to classify Datasets in a Registry Catalogue."""@nb
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource dcat:Catalog ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty foaf:homepage ;
+                         owl:someValuesFrom foaf:Document
+                       ] ;
+   rdfs:comment "This property refers to a main page as entry point for a Registry Catalogue."@nb
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource dcat:Catalog ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty modelldcatno:model ;
+                         owl:someValuesFrom modelldcatno:InformationModel
+                       ] ;
+   rdfs:comment "Binder de forskjellige delene til katalogen"@nb
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource dcat:Catalog ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dct:publisher ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass foaf:Agent
+                       ] ;
+   rdfs:comment "This property refers to an agent (organisation or person) that makes the Catalogue available and accessible."@nb
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource dcat:Catalog ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dct:issued ;
+                         owl:someValuesFrom xsd:dateTime
+                       ] ;
+   rdfs:comment "This property contains the date of first publication of a Registry Catalogue. This property should be typed as xsd:date or xsd:dateTime."@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource dcat:Catalog ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dct:modified ;
+                         owl:someValuesFrom xsd:dateTime
+                       ] ;
+   rdfs:comment "This property contains the most recent date on which the Registry Catalogue was modified. This property should be typed as xsd:date or xsd:dateTime."@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource dcat:Catalog ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dct:description ;
+                         owl:minCardinality "1"^^xsd:nonNegativeInteger
+                       ] ;
+   rdfs:comment "This property contains a textual description of a Registry Catalogue. This property should be repeated in case there are various versions of the text in different languages."@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource dcat:Catalog ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dct:identifier ;
+                         owl:minCardinality "1"^^xsd:nonNegativeInteger
+                       ] ;
+   rdfs:comment "This property contains an identifier for the catalogue."@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource dcat:Catalog ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dct:title ;
+                         owl:minCardinality "1"^^xsd:nonNegativeInteger
+                       ] ;
+   rdfs:comment "This property contains a descriptive name of the Registry Catalogue. This property should be repeated in case there are various versions of the text in different languages."@nb
+ ] .
+
+
+###  http://www.w3.org/ns/dcat#Resource
+dcat:Resource rdf:type owl:Class ;
+              rdfs:comment "Fungerer som superklasse for katalogen (dcat:Catalog) og selve modellen (modelldcatno:InformationModel)"@nb ;
+              rdfs:label "Katalogisert ressurs"@nb ,
+                         "Resource"@en .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+foaf:Agent rdf:type owl:Class ;
+           rdfs:label "Agent"@en ,
+                      "Aktør"@nb .
+
+
+###  http://xmlns.com/foaf/0.1/Document
+foaf:Document rdf:type owl:Class ;
+              rdfs:label "Document"@en .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#Abstraction
+modelldcatno:Abstraction rdf:type owl:Class ;
+                         rdfs:subClassOf modelldcatno:Property ;
+                         rdfs:label "Abstraction"@en ,
+                                    "Abstraksjon"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#Association
+modelldcatno:Association rdf:type owl:Class ;
+                         rdfs:subClassOf modelldcatno:Property ;
+                         rdfs:label "Association"@en ,
+                                    "Assosiasjon"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#Attribute
+modelldcatno:Attribute rdf:type owl:Class ;
+                       rdfs:subClassOf modelldcatno:Property ;
+                       rdfs:label "Attribute"@en ,
+                                  "Attributt"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#Choice
+modelldcatno:Choice rdf:type owl:Class ;
+                    rdfs:subClassOf modelldcatno:Property ;
+                    rdfs:label "Choice"@en ,
+                               "Valg"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#CodeElement
+modelldcatno:CodeElement rdf:type owl:Class ;
+                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                           owl:onProperty skos:inScheme ;
+                                           owl:someValuesFrom modelldcatno:CodeList
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty skos:topConceptOf ;
+                                           owl:someValuesFrom modelldcatno:CodeList
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty xkos:next ;
+                                           owl:someValuesFrom modelldcatno:CodeElement
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty xkos:previous ;
+                                           owl:someValuesFrom modelldcatno:CodeElement
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty skos:notation ;
+                                           owl:someValuesFrom rdfs:Literal
+                                         ] ;
+                         rdfs:label "Code Element"@en ,
+                                    "Kodeelement"@nb .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource modelldcatno:CodeElement ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty skos:notation ;
+                         owl:someValuesFrom rdfs:Literal
+                       ] ;
+   rdfs:comment "Kodens verdi/identifikator"@nb
+ ] .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#CodeList
+modelldcatno:CodeList rdf:type owl:Class ;
+                      rdfs:subClassOf modelldcatno:ModelElement ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty modelldcatno:hasProperty ;
+                                        owl:qualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                        owl:onClass modelldcatno:Property
+                                      ] ;
+                      rdfs:label "Code list"@en ,
+                                 "Kodeliste"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#Collection
+modelldcatno:Collection rdf:type owl:Class ;
+                        rdfs:subClassOf modelldcatno:Property ;
+                        rdfs:label "Collection"@en ,
+                                   "Samling"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#Composition
+modelldcatno:Composition rdf:type owl:Class ;
+                         rdfs:subClassOf modelldcatno:Property ;
+                         rdfs:label "Composition"@en ,
+                                    "Komposisjon"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#DataType
+modelldcatno:DataType rdf:type owl:Class ;
+                      rdfs:subClassOf modelldcatno:ModelElement ;
+                      rdfs:label "Data type"@en ,
+                                 "Datatype"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#InformationModel
+modelldcatno:InformationModel rdf:type owl:Class ;
+                              rdfs:subClassOf dct:Standard ,
+                                              dcat:Resource ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dct:creator ;
+                                                owl:someValuesFrom foaf:Agent
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dct:hasFormat ;
+                                                owl:someValuesFrom foaf:Document
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dct:hasPart ;
+                                                owl:someValuesFrom modelldcatno:InformationModel
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dct:isPartOf ;
+                                                owl:someValuesFrom modelldcatno:InformationModel
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dct:language ;
+                                                owl:someValuesFrom dct:LinguisticSystem
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dct:publisher ;
+                                                owl:someValuesFrom foaf:Agent
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dct:spatial ;
+                                                owl:someValuesFrom dct:Location
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dct:temporal ;
+                                                owl:someValuesFrom dct:PeriodOfTime
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dct:type ;
+                                                owl:someValuesFrom skos:Concept
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dcat:contactPoint ;
+                                                owl:someValuesFrom vcard:Kind
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dcat:theme ;
+                                                owl:someValuesFrom skos:Concept
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dct:identifier ;
+                                                owl:someValuesFrom rdfs:Literal
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dct:issued ;
+                                                owl:someValuesFrom xsd:dateTime
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dct:modified ;
+                                                owl:someValuesFrom xsd:dateTime
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty owl:versionInfo ;
+                                                owl:someValuesFrom rdfs:Literal
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dcat:keyword ;
+                                                owl:someValuesFrom rdfs:Literal
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty modelldcatno:informationModelIdentifier ;
+                                                owl:someValuesFrom rdfs:Literal
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dct:description ;
+                                                owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty dct:title ;
+                                                owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                              ] ;
+                              rdfs:label "Informasjonsmodell"@nb ,
+                                         "Information Model"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource modelldcatno:InformationModel ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dct:description ;
+                         owl:minCardinality "1"^^xsd:nonNegativeInteger
+                       ] ;
+   rdfs:comment "This property contains descriptive textual information about the Information Model. This property should be repeated in case there are various versions of the text in different languages."@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource modelldcatno:InformationModel ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dct:title ;
+                         owl:minCardinality "1"^^xsd:nonNegativeInteger
+                       ] ;
+   rdfs:comment "This property refers to the descriptive title or name of a Information Model. This property should be repeated in case there are various versions of the text in different languages."@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource modelldcatno:InformationModel ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dct:identifier ;
+                         owl:someValuesFrom rdfs:Literal
+                       ] ;
+   rdfs:comment "This property contains an identifier for the Information Model"@en
+ ] .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#ModelElement
+modelldcatno:ModelElement rdf:type owl:Class ;
+                          rdfs:label "Model Element"@en ,
+                                     "Modell element"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#Note
+modelldcatno:Note rdf:type owl:Class ;
+                  rdfs:subClassOf modelldcatno:Property ;
+                  rdfs:label "Note"@en ,
+                             "Note"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#ObjectType
+modelldcatno:ObjectType rdf:type owl:Class ;
+                        rdfs:subClassOf modelldcatno:ModelElement ;
+                        rdfs:label "Object type"@en ,
+                                   "Objekttype"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#Property
+modelldcatno:Property rdf:type owl:Class ;
+                      rdfs:label "Egenskap"@nb ,
+                                 "Property"@en .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#Realization
+modelldcatno:Realization rdf:type owl:Class ;
+                         rdfs:subClassOf modelldcatno:Property ;
+                         rdfs:label "Realisering"@nb ,
+                                    "Realization"@en .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#Role
+modelldcatno:Role rdf:type owl:Class ;
+                  rdfs:subClassOf modelldcatno:Property ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty modelldcatno:hasObjectType ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass modelldcatno:ObjectType
+                                  ] ;
+                  rdfs:label "Role"@en ,
+                             "Rolle"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#RootObjectType
+modelldcatno:RootObjectType rdf:type owl:Class ;
+                            rdfs:subClassOf modelldcatno:ModelElement ;
+                            rdfs:label "Root object type"@en ,
+                                       "Rot-objekttype"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#SimpleType
+modelldcatno:SimpleType rdf:type owl:Class ;
+                        rdfs:subClassOf modelldcatno:ModelElement ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty modelldcatno:hasProperty ;
+                                          owl:someValuesFrom modelldcatno:Note
+                                        ] ;
+                        rdfs:label "Enkeltype"@nb ,
+                                   "Simple type"@en .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#Specialization
+modelldcatno:Specialization rdf:type owl:Class ;
+                            rdfs:subClassOf modelldcatno:Property ;
+                            rdfs:label "Specialization"@en ,
+                                       "Spesialisering"@nb .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.com/code#kode
+ex-code:kode rdf:type owl:NamedIndividual ,
+                      modelldcatno:CodeElement ;
+             skos:inScheme ex-code:kodeliste ;
+             skos:topConceptOf ex-code:kodeliste ;
+             skos:notation "3405"^^xsd:string ;
+             skos:note "Lillehammer er en by og kommune i Gudbrandsdalen i Innlandet, ved nordenden av Mjøsa."@nb ;
+             skos:prefLabel "Lillehammer"@nb .
+
+
+###  http://example.com/code#kodeliste
+ex-code:kodeliste rdf:type owl:NamedIndividual ,
+                           modelldcatno:CodeList ;
+                  dct:title "Kommunenummerlisten"@nb .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( modelldcatno:Association
+                modelldcatno:Attribute
+                modelldcatno:Choice
+                modelldcatno:Collection
+                modelldcatno:Composition
+                modelldcatno:Realization
+                modelldcatno:Role
+                modelldcatno:Specialization
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( modelldcatno:CodeList
+                modelldcatno:DataType
+                modelldcatno:ObjectType
+                modelldcatno:RootObjectType
+                modelldcatno:SimpleType
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

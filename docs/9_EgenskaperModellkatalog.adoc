@@ -1,10 +1,10 @@
-=== Modellkatalog (dcat:Catalog) [[modellkatalog]]
+=== Modellkatalog (dcat:Catalog) [[Modellkatalog-egenskaper]]
 
 Klassen _Modellkatalog_ er obligatorisk.
 
-==== Obligatoriske egenskaper for klassen _Modellkatalog_
+==== Obligatoriske egenskaper for klassen _Modellkatalog_ [[Obligatoriske-egenskaper-Modellkatalog]]
 
-===== Modellkatalog: beskrivelse (dct:description) [[modellkatalog-beskrivelse]]
+===== Modellkatalog: beskrivelse (dct:description) [[Modellkatalog-beskrivelse]]
 
 [cols="30s,70d"]
 |===
@@ -16,7 +16,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Status| Obligatorisk
 |===
 
-===== Modellkatalog: identifikator (dct:identifier) [[modellkatalog-identifikator]]
+===== Modellkatalog: identifikator (dct:identifier) [[Modellkatalog-identifikator]]
 
 [cols="30s,70d"]
 |===
@@ -28,7 +28,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Status| Obligatorisk
 |===
 
-===== Modellkatalog: modell (modelldcatno:model) [[modellkatalog-modell]]
+===== Modellkatalog: modell (modelldcatno:model) [[Modellkatalog-modell]]
 
 [cols="30s,70d"]
 |===
@@ -40,7 +40,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Status| Obligatorisk
 |===
 
-===== Modellkatalog: tittel (dct:title) [[modellkatalog-tittel]]
+===== Modellkatalog: tittel (dct:title) [[Modellkatalog-tittel]]
 
 [cols="30s,70d"]
 |===
@@ -52,7 +52,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Status| Obligatorisk
 |===
 
-===== Modellkatalog: utgiver (dct:publisher) [[modellkatalog-utgiver]]
+===== Modellkatalog: utgiver (dct:publisher) [[Modellkatalog-utgiver]]
 
 [cols="30s,70d"]
 |===
@@ -64,9 +64,9 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Status| Obligatorisk
 |===
 
-==== Anbefalte egenskaper for klassen _Modellkatalog_
+==== Anbefalte egenskaper for klassen _Modellkatalog_ [[Anbefalte-egenskaper-Modellkatalog]]
 
-===== Modellkatalog: endringsdato (dct:modified) [[modellkatalog-endringsdato]]
+===== Modellkatalog: endringsdato (dct:modified) [[Modellkatalog-endringsdato]]
 
 [cols="30s,70d"]
 |===
@@ -78,7 +78,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Status| Anbefalt
 |===
 
-===== Modellkatalog: hjemmeside (foaf:homepage) [[modellkatalog-hjemmeside]]
+===== Modellkatalog: hjemmeside (foaf:homepage) [[Modellkatalog-hjemmeside]]
 
 [cols="30s,70d"]
 |===
@@ -90,7 +90,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Status| Anbefalt
 |===
 
-===== Modellkatalog: lisens (dct:license) [[modellkatalog-lisens]]
+===== Modellkatalog: lisens (dct:license) [[Modellkatalog-lisens]]
 
 [cols="30s,70d"]
 |===
@@ -102,7 +102,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Status| Anbefalt
 |===
 
-===== Modellkatalog: språk (dct:language) [[modellkatalog-sprak]]
+===== Modellkatalog: språk (dct:language) [[Modellkatalog-språk]]
 
 [cols="30s,70d"]
 |===
@@ -114,7 +114,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Status| Anbefalt
 |===
 
-===== Modellkatalog: utgivelsesdato (dct:issued) [[modellkatalog-utgivelsesdato]]
+===== Modellkatalog: utgivelsesdato (dct:issued) [[Modellkatalog-utgivelsesdato]]
 
 [cols="30s,70d"]
 |===
@@ -126,9 +126,9 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Status| Anbefalt
 |===
 
-==== Valgfrie egenskaper for klassen _Modellkatalog_
+==== Valgfrie egenskaper for klassen _Modellkatalog_ [[Valgfrie-egenskaper-Modellkatalog]]
 
-===== Modellkatalog: dekningsområde (dct:spatial) [[modellkatalog-dekningsomrade]]
+===== Modellkatalog: dekningsområde (dct:spatial) [[Modellkatalog-dekningsområde]]
 
 [cols="30s,70d"]
 |===
@@ -140,7 +140,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Status| Valgfri
 |===
 
-===== Modellkatalog: er del av (dct:isPartOf) [[modellkatalog-er-del-av]]
+===== Modellkatalog: er del av (dct:isPartOf) [[Modellkatalog-erDelAv]]
 
 [cols="30s,70d"]
 |===
@@ -152,7 +152,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Status| Valgfri
 |===
 
-===== Modellkatalog: har del (dct:hasPart) [[modellkatalog-har-del]]
+===== Modellkatalog: har del (dct:hasPart) [[Modellkatalog-harDel]]
 
 [cols="30s,70d"]
 |===
@@ -164,7 +164,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Status| Valgfri
 |===
 
-===== Modellkatalog: temaer (dcat:themeTaxonomy) [[modellkatalog-temaer]]
+===== Modellkatalog: temaer (dcat:themeTaxonomy) [[Modellkatalog-temaer]]
 
 [cols="30s,70d"]
 |===

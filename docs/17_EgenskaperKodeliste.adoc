@@ -1,12 +1,10 @@
-=== Kodeliste (modelldcatno:CodeList) [[kodeliste]]
+=== Kodeliste (modelldcatno:CodeList) [[Kodeliste-egenskaper]]
 
 Klassen _Kodeliste_ er anbefalt.
 
-====  Anbefalte egenskaper for klassen _Kodeliste_ [[Obligatoriske-egenskaper-kodeliste]]
+==== Valgfrie egenskaper for klassen _Kodeliste_ [[Valgfrie-egenskaper-Kodeliste]]
 
-==== Valgfrie egenskaper for klassen _Kodeliste_ [[Valgfrie-egenskaper-kodeliste]]
-
-===== Kodeliste: ekstern kodeliste (modelldcatno:codeListReference) [[kodeliste-ekstern-kodeliste]]
+===== Kodeliste: ekstern kodeliste (modelldcatno:codeListReference) [[Kodeliste-eksternKodeliste]]
 
 [cols="30s,70d"]
 |===

@@ -1,11 +1,11 @@
-=== Spesialisering [[spesialisering]]
+=== Spesialisering [[Spesialisering-egenskaper]]
 
 Klassen _Spesialisering_ er anbefalt
 
 
-==== Anbefalte egenskaper for klassen _Spesialisering_ [[Anbefalte-egenskaper-spesialisering]]
+==== Anbefalte egenskaper for klassen _Spesialisering_ [[Anbefalte-egenskaper-Spesialisering]]
 
-===== Spesialisering: har generelt konsept (modelldcatno:hasGeneralConcept) [[spesialisering-har-generelt-konsept]]
+===== Spesialisering: har generelt konsept (modelldcatno:hasGeneralConcept) [[Spesialisering-harGenereltKonsept]]
 
 [cols="30s,70"]
 |===
