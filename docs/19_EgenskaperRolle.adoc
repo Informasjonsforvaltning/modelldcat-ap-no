@@ -1,8 +1,8 @@
-=== Rolle (modelldcatno:Role) [[rolle]]
+=== Rolle (modelldcatno:Role) [[Rolle-egenskaper]]
 
 Klassen _Rolle_ er anbefalt.
 
-==== Anbefalte  egenskaper for klassen _Rolle_ [[Anbefalte-egenskaper-rolle]]
+==== Anbefalte  egenskaper for klassen _Rolle_ [[Anbefalte-egenskaper-Rolle]]
 
 
 ===== Rolle: har objekttype (modelldcatno:hasObjectType) [[Rolle-harObjekttype]]

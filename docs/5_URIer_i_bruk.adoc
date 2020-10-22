@@ -1,4 +1,4 @@
-= URIer som er i bruk
+= URIer som er i bruk [[URIer-som-er-i-bruk]]
 
 Navnerom for dette vokabualret skal vere https://data.norge.no/vocabulary/modelldcatno#
 

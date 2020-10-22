@@ -1,8 +1,8 @@
-=== Tidsrom (dct:PeriodOfTime) [[Tidsrom]]
+=== Tidsrom (dct:PeriodOfTime) [[Tidsrom-egenskaper]]
 
 Klassen _Tidsrom_ er valgfri.
 
-==== Anbefalte egenskaper for klassen _Tidsrom_ [[Anbefalte-egenskaper-tidsrom]]
+==== Anbefalte egenskaper for klassen _Tidsrom_ [[Anbefalte-egenskaper-Tidsrom]]
 
 ===== Tidsrom: sluttdato/tid (dcat:endDate) [[Tidsrom-sluttdato]]
 

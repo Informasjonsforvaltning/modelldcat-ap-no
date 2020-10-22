@@ -1,4 +1,4 @@
-=== Modellelement (modelldcatno:ModelElement) [[modellelement]]
+=== Modellelement (modelldcatno:ModelElement) [[Modellelement-egenskaper]]
 
 Klassen _Modellelement_ er anbefalt.
 
@@ -20,7 +20,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |===
 
 
-===== Modellelement: tittel (dct:title) [[modellelement-tittel]]
+===== Modellelement: tittel (dct:title) [[Modellelement-tittel]]
 
 [cols="30s,70d"]
 |===
@@ -32,9 +32,9 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Status|Obligatorisk
 |===
 
-====  Anbefalte egenskaper for klassen _Modellelement_ [[Anbefalte-egenskaper-modellelement]]
+====  Anbefalte egenskaper for klassen _Modellelement_ [[Anbefalte-egenskaper-Modellelement]]
 
-===== Modellelement: begrep (dct:subject) [[modellelement-begrep]]
+===== Modellelement: begrep (dct:subject) [[Modellelement-begrep]]
 
 [cols="30s,70d"]
 |===
@@ -47,7 +47,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |===
 
 
-===== Modellelement: har egenskap (modelldcatno:hasProperty) [[modellelement-har-egenskap]]
+===== Modellelement: har egenskap (modelldcatno:hasProperty) [[Modellelement-harEgenskap]]
 
 [cols="30s,70d"]
 |===
@@ -60,10 +60,10 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |===
 
 
-==== Valgfrie egenskaper for klassen _Modellelement_ [[Valgfrie-egenskaper-modellelement]]
+==== Valgfrie egenskaper for klassen _Modellelement_ [[Valgfrie-egenskaper-Modellelement]]
 
 
-===== Modellelement: beskrivelse (dct:description) [[modellelement-beskrivelse]]
+===== Modellelement: beskrivelse (dct:description) [[Modellelement-beskrivelse]]
 
 [cols="30s,70d"]
 |===
@@ -75,7 +75,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Status|Valgfri
 |===
 
-=====  Modellelement: tilhører modul (modelldcatno:belongsToModule) [[modellelement-tilhørerModul]]
+=====  Modellelement: tilhører modul (modelldcatno:belongsToModule) [[Modellelement-tilhørerModul]]
 
 [cols="30s,70d"]
 |===

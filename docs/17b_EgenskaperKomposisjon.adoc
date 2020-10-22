@@ -1,10 +1,10 @@
-=== Komposisjon (modelldcatno:Composition) [[komposisjon]]
+=== Komposisjon (modelldcatno:Composition) [[Komposisjon-egenskaper]]
 
 Klassen _Komposisjon_ er valgfri
 
-==== Obligatoriske egenskaper for klassen _Komposisjon_ [[Obligatoriske-egenskaper-komposisjon]]
+==== Obligatoriske egenskaper for klassen _Komposisjon_ [[Obligatoriske-egenskaper-Komposisjon]]
 
-===== Komposisjon: inneholder (modelldcatno:contains) [[komposisjon-inneholder]]
+===== Komposisjon: inneholder (modelldcatno:contains) [[Komposisjon-inneholder]]
 
 [cols="30s,70d"]
 |===

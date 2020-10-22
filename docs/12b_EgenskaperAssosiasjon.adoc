@@ -4,7 +4,7 @@ Klassen _Assosiasjon_ er anbefalt.
 
 ==== Anbefalte egenskaper for klassen _Assosiasjon_ [[Anbefalte-egenskaper-for-assosiasjon]]
 
-===== Assosiasjon: refererer til (modelldcatno:refersTo)
+===== Assosiasjon: refererer til (modelldcatno:refersTo) [[Assosiasjon_referererTil]]
 
 [cols="30s,70d"]
 |===
