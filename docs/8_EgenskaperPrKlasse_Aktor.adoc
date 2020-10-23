@@ -1,13 +1,16 @@
+= Egenskaper per klasse [[Egenskaper-per-klasse]]
 
-= Egenskaper per klasse
+== Katalogdel [[Egenskaper-katalogdel]]
 
-== Katalogdel
+=== Aktør (foaf:Agent) [[Aktør-egenskaper]]
 
-=== Aktør [[aktor]]
+Klassen _Aktør_ er obligatorisk.
 
-==== Obligatoriske egenskaper for klassen Aktør
+Det anbefales at URI til Aktør (`foaf:Agent`) er identisk med den URI som Enhetsregisteret (Brønnøysundregistrene) har på enheten/virksomheten dersom den finnes i registeret, f.eks. `dct:publisher <<https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/974760673>>`.
 
-===== Aktør: navn [[aktor-navn]]
+==== Obligatoriske egenskaper for klassen _Aktør_ [[Obligatoriske-egenskaper-for-Aktør]]
+
+===== Aktør: navn (foaf:name) [[Aktør-navn]]
 
 [cols="30s,70d"]
 |===
@@ -17,12 +20,11 @@
 |Beskrivelse| Navn på aktøren. Denne egenskapen kan gjentas for ulike versjoner av navnet (som navnet på forskjellige språk).
 |Multiplisitet| 1..n
 |Status| Obligatorisk
-|Kommentar| Norsk utvidelse. For parallelle språkversjoner av navnet, benyttes språk-tags.
 |===
 
-== Anbefalte egenskaper for klassen _Aktør_
+==== Anbefalte egenskaper for klassen _Aktør_ [[Anbefalte-egenskaper-for-Aktør]]
 
-=== Aktør: organisasjonsidentifikator [[aktor-organisasjonsidentifikator]]
+===== Aktør: organisasjonsidentifikator (dct:identifier) [[Aktør-organisasjonsidentifikator]]
 
 [cols="30s,70d"]
 |===
@@ -32,10 +34,9 @@
 |Beskrivelse| Egenskap som angir organisasjonens identifikasjonsnummer, for eksempel i henhold til Enhetsregisterets organisasjonsnummer.
 |Multiplisitet| 0..1
 |Status| Anbefalt
-|Kommentar| Norsk utvidelse. Denne er ikke eksplisitt tatt med i BRegDCAT-AP, men var med i DCAT-AP-NO v.1.1 og allerede da som en norsk utvidelse.
 |===
 
-=== Aktør: utgivertype [[aktor-utgivertype]]
+===== Aktør: utgivertype (dct:type) [[Aktør-utgivertype]]
 
 [cols="30s,70d"]
 |===
@@ -45,5 +46,4 @@
 |Beskrivelse| Refererer til type aktør som gjør katalogen eller ressursen tilgjengelig.
 |Multiplisitet| 0..1
 |Status| Anbefalt
-|Kommentar| Norsk utvidelse. Denne er ikke eksplisitt tatt med i BRegDCAT-AP, men var med i DCAT-AP-NO v.1.1.
 |===

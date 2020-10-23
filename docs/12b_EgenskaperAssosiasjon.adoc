@@ -1,0 +1,18 @@
+=== Assosiasjon (modelldcatno:Association) [[Assosiasjon-egenskaper]]
+
+Klassen _Assosiasjon_ er anbefalt.
+
+==== Anbefalte egenskaper for klassen _Assosiasjon_ [[Anbefalte-egenskaper-for-assosiasjon]]
+
+===== Assosiasjon: refererer til (modelldcatno:refersTo) [[Assosiasjon_referererTil]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|Refers to
+|URI|modelldcatno:refersTo
+|Range|modelldcatno:ModelElement
+|Beskrivelse|Brukes til å referere til et modellelement som assosiasjonen peker til.
+|Subegenskap av|modelldcatno:hasType
+|Multiplisitet|0..1
+|Status|Anbefalt
+|===

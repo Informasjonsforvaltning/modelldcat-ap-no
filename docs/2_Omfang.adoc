@@ -2,4 +2,6 @@
 
 Spesifikasjonen er anbefalt brukt for å beskrive informasjonsmodeller. Den vil gjelde alle typer informasjonsmodeller _som beskrives med tanke på oppføring i en katalog eller «inventarliste» (intern eller ekstern)_. +
 
-Denne spesifikasjonen, ModellDCAT-AP-NO, kan sees som en utvidelse av DCAT-AP-NO for å kunne beskrive informasjonsmodeller som ett av flere aspekter ved datasett/datatjenester.  Men informasjonsmodeller kan beskrives uavhengig av om man har tilknyttet datasett og/eller datatjenester.
+Denne spesifikasjonen, ModellDCAT-AP-NO, er en norsk applikasjonsprofil av DCAT for beskrivelse og utveksling av informasjonsmodeller, som ett av flere aspekter ved datasett/datatjenester. Men informasjonsmodeller kan beskrives uavhengig av om man har tilknyttet datasett og/eller datatjenester. I ModellDCAT-AP-NO er informasjonsmodell subklasse av dct:Standard. Ved å bruke egenskapen dct:conformsTo for datasett og datatjeneste i DCAT-AP-NO, kan et datasett eller en datatjeneste referere til en informasjonsmodell.
+
+Vi har i spesifikasjonen valgt å skille mellom det vi kaller «katalogdel» og «modelldel». Hensikten er å gjøre det enklere å forstå hvilke klasser og egenskaper som brukes for å beskrive metadata knyttet til katalogoppføringen av informasjonsmodellen, og hvilke klasser og egenskaper som brukes for å beskrive/vise selve informasjonsmodellen.

@@ -1,0 +1,218 @@
+=== Kodeelement (modelldcatno:CodeElement) [[Kodeelement-egenskaper]]
+
+Klassen _Kodeelement_ er anbefalt.
+
+==== Obligatoriske egenskaper for klassen _Kodeelement_ [[Obligatoriske-egenskaper-Kodeelement]]
+
+===== Kodeelement:anbefalt kodetekst (skos:prefLabel) [[Kodeelement-anbefaltKodetekst]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|preferred label
+|URI|skos:prefLabel
+|Range|rdfs:Literal
+|Beskrivelse|Brukes til å referere til den anbefalte kodeteksten for kodeelementet, dvs. teksten som anses best egnet for kodeelementet. Bør gjentas når teksten finnes i flere ulike språk/målformer.
+|Subegenskap av|rdfs:label
+|Multiplisitet|1..n
+|Status|Obligatorisk
+|Kommentar|Det bør være maksimalt én anbefalt kodetekst per språk/målform.
+|===
+
+===== Kodeelement:i kodeliste (skos:inScheme) [[Kodeelement-iKodeliste]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|in scheme
+|URI|skos:inScheme
+|Range|modelldcatno:CodeList
+|Beskrivelse|Brukes til å referere til kodeliste som kodeelementet inngår i.
+|Multiplisitet|0..n
+|Status|Obligatorisk
+|===
+
+===== Kodeelement: identifikator (dct:identifier) [[kodeelement-identifikator]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn | identifier
+|URI|dct:identifier
+|Range|rdfs:Literal
+|Beskrivelse|Unik og persistent identifisering av en kode.
+|Multiplisitet|1..1
+|Status|Obligatorisk
+|===
+
+
+==== Anbefalte egenskaper for klassen _Kodeelement_ [[Anbefalte-egenskaper-Kodeelement]]
+
+===== Kodeelement: begrep (dct:subject) [[Kodeelement-begrep]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn | subject
+|URI|dct:subject
+|Range|skos:Concept
+|Beskrivelse|Referanse til sentralt begrep som er viktig for å forstå og tolke koden. Representeres som URI-er.
+|Multiplisitet|0..1
+|Status|Anbefalt
+|===
+
+===== Kodeelement:kode (skos:notation) [[Kodeelement-kode]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|code
+|URI|skos:notation
+|Range|rdfs:Literal
+|Beskrivelse|Brukes til å referere til representasjonen av kodeelementet, vanligvis kalt «koden».
+|Multiplisitet|0..1
+|Status|Anbefalt
+|===
+
+===== Kodeelement:toppkonsept til (skos:topConceptOf) [[Kodeelement-toppkonseptTil]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|is top concept of
+|URI|skos:topConceptOf
+|Range|modelldcatno:CodeList
+|Beskrivelse|Brukes til å referere til kodeliste som kodeelementet er det første kodeelementet i.
+|Multiplisitet|0..n
+|Status|Anbefalt
+|===
+
+====  Valgfrie egenskaper for klassen _Kodeelement_ [[Valgfrie-egenskaper-Kodeelement]]
+
+
+===== Kodeelement:definisjon (skos:definition) [[Kodeelement-definisjon]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|definition
+|URI|skos:definition
+|Range|rdfs:Literal
+|Beskrivelse|Brukes til å referere til definisjonen av begrepet som kodeelementet representerer. Bør gjentas når definisjonen finnes i flere ulike språk/målformer.
+|Subegenskap av|skos:note
+|Multiplisitet|0..n
+|Status|Valgfri
+|===
+
+===== Kodeelement:eksempel (skos:example) [[Kodeelement-eksempel]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|example
+|URI|skos:example
+|Range|rdfs:Literal
+|Beskrivelse|Brukes til å referere til eksempler på begrepet som kodeelementet representerer.
+|Subegenskap av|skos:note
+|Multiplisitet|0..n
+|Status|Valgfri
+|===
+
+
+
+===== Kodeelement:eksklusjonsmerknad (xkos:exclusionNote) [[Kodeelement-eksklusjonsmerknad]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|exclusion note
+|URI|xkos:exclusionNote
+|Range|rdfs:literal
+|Beskrivelse|Brukes til å referere til merknad om hva som er ekskludert i kodeelementet. Bør gjentas når merknaden finnes i flere ulike språk/målformer.
+|Subegenskap av|skos:scopeNote
+|Multiplisitet|0..*
+|Status|Valgfri
+|===
+
+===== Kodeelement:forrige kodeelement (xkos:previous) [[Kodeelement-forrigeKodeelement]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|previous
+|URI|xkos:previous
+|Range|modelldcatno:CodeElement
+|Beskrivelse|Brukes til å referere til kodeelementet som kommer foran det aktuelle kodeelementet.
+|Multiplisitet|0..n
+|Status|Valgfri
+|===
+
+
+===== Kodeelement: frarådet kodetekst (skos:hiddenLabel) [[Kodeelement-frarådetKodetekst]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|hidden label
+|URI|skos:hiddenLabel
+|Range|rdfs:Literal
+|Beskrivelse|Brukes til å referere til kodetekst som anses som uegnet for kodeelementet. Bør gjentas når kodeteksten finnes i flere ulike språk/målformer.
+|Subegenskap av|Rdfs:label
+|Multiplisitet|0..n
+|Status|Valgfri
+|===
+
+
+===== Kodeelement:inklusjonsmerknad (xkos:inclusionNote) [[Kodeelement-inklusjonsmerknad]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|inclusion note
+|URI|xkos:inclusionNote
+|Range|rdfs:Literal
+|Beskrivelse|Brukes til å referere til merknad om hva som er inkludert i kodeelementet. Bør gjentas når merknaden finnes i flere ulike språk/målformer.
+|Subegenskap av|skos:scopeNote
+|Multiplisitet|0..n
+|Status|Valgfri
+|===
+
+
+===== Kodeelement:merknad (skos:note) [[Kodeelement-merknad]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|note
+|URI|skos:note
+|Range|rdfs:Literal
+|Beskrivelse|Brukes til å referere til merknad om kodeelementet. Bør gjentas når merknaden finnes i flere ulike språk/målformer.
+|Multiplisitet|0..n
+|Status|Valgfri
+|===
+
+===== Kodeelement:neste kodeelement (xkos:next) [[Kodeelement-nesteKodeelement]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|next
+|URI|xkos:next
+|Range|modelldcatno:CodeElement
+|Beskrivelse|Brukes til å referere til kodeelementet som kommer etter det aktuelle kodeelementet.
+|Multiplisitet|0..n
+|Status|Valgfri
+|===
+
+===== Kodeelement:omfangsmerknad (skos:scopeNote) [[Kodeelement-omfangsmerknad]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|scope note
+|URI|skos:scopeNote
+|Range|rdfs:Literal
+|Beskrivelse|Brukes til å referere til merknad ang. bruken av kodeelementet. Bør gjentas når merknaden finnes i flere ulike språk/målformer.
+|Subegenskap av|skos:note
+|Multiplisitet|0..n
+|Status|Valgfri
+|===
+
+
+===== Kodeelement:tillatt kodetekst (skos:altLabel) [[Kodeelement-tillattKodetekst]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn |  alternative label
+|URI|skos:altLabel
+|Range|rdfs:Literal
+|Beskrivelse|Brukes til å referere til alternativ kodetekst (som kan brukes ved siden av den anbefalte kodeteksten). Bør gjentas når kodeteksten finnes i flere ulike språk/målformer.
+|Subegenskap av|rdfs:label
+|Multiplisitet|0..n
+|Status|Valgfri
+|===

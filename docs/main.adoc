@@ -1,30 +1,35 @@
 = Spesifikasjon for beskrivelse av informasjonsmodeller (ModellDCAT-AP-NO)
-Høringsutkast til Versjon 1.0
 :doctype: book
 :docinfo:
 :icons: font
 :toc: left
 :toc-title: Innholdsfortegnelse
-:toclevels: 4
+:toclevels: 5
 :sectlinks:
 :table-stripes: even
 :leveloffset: +1
-
 :title-logo-image: image:images/digitaliseringsdirektoratet.png[pdfwidth=30vw]
 
 image::images/digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
 
-Status: Høringsutkast +
-Publisert: 2020-06-02 +
-
-Dette er et høringsutkast til versjon 1.0 av "Spesifikasjon for beskrivelse av informasjonsmodeller (ModellDCAT-AP-NO)". Spesifikasjonen skal sikre at beskrivelser av informasjonsmodeller utføres på en felles, strukturert måte og i en maskinlesbar form. Spesifikasjonen stiller krav til hva som _skal_, _bør_ og _kan_ være med i beskrivelsene, med spesifikasjon av dataformat.
-
-NOTE: *Innmelding av feil og mangler:* +
-Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på https://github.com/Informasjonsforvaltning/modelldcat-ap-no/issues[Github Issues]. Dersom man ikke allerede har bruker på Github kan man opprette bruker gratis.
-
 include::shared/download.adoc[]
 
 include::locale/attributes.adoc[]
+
+
+NOTE: *Innmelding av feil og mangler:* +
+Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på https://github.com/Informasjonsforvaltning/modelldcat-ap-no/issues[Github Issues]. Dersom du ikke allerede har bruker på Github kan du opprette bruker gratis.
+
+*Status*: Gjeldende +
+*Publisert*: 2020-10-23 (v.1.0) +
+*Gjeldende versjon*: https://data.norge.no/specification/modelldcat-ap-no/ +
+*Forrige versjon*: ingen +
+*Redaktørens utkast*: https://informasjonsforvaltning.github.io/modelldcat-ap-no/
+
+*Ontologi*: Gjeldende versjon av ontologien blir publisert til https://data.norge.no/vocabulary/modelldcatno#. Redaktørens utkast til ontologien er tilgjengelig på https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/review/ontology/[Github].
+
+Denne spesifikasjonen skal sikre at beskrivelser av informasjonsmodeller utføres på en felles, strukturert måte og i en maskinlesbar form. Spesifikasjonen stiller krav til hva som _skal_, _bør_ og _kan_ være med i beskrivelsene, med spesifikasjon av dataformat.
+
 
 include::1_Formaal.adoc[]
 
@@ -41,3 +46,47 @@ include::6_Modell.adoc[]
 include::7_klasser.adoc[]
 
 include::8_EgenskaperPrKlasse_Aktor.adoc[]
+
+include::10_EgenskaperLisensdok.adoc[]
+
+include::11_EgenskaperLokasjon.adoc[]
+
+include::9_EgenskaperModellkatalog.adoc[]
+
+include::9b_EgenskaperTematiskskjema.adoc[]
+
+include::12a_EgenskaperAbstraksjon.adoc[]
+
+include::12b_EgenskaperAssosiasjon.adoc[]
+
+include::12c_EgenskaperAttributt.adoc[]
+
+include::12d_EgenskaperDokument.adoc[]
+
+include::13_EgenskaperEgenskap.adoc[]
+
+include::14_EgenskaperEnkeltype.adoc[]
+
+include::15_EgenskaperInformasjonsmodell.adoc[]
+
+include::16_EgenskaperKodeelement.adoc[]
+
+include::17_EgenskaperKodeliste.adoc[]
+
+include::17b_EgenskaperKomposisjon.adoc[]
+
+include::18_EgenskaperModellelement.adoc[]
+
+include::18b_EgenskaperRealisering.adoc[]
+
+include::19_EgenskaperRolle.adoc[]
+
+include::19b_EgenskaperSamling.adoc[]
+
+include::20_EgenskaperSpesialisering.adoc[]
+
+include::20b_EgenskaperTidsrom.adoc[]
+
+include::21_EgenskaperValg.adoc[]
+
+include::xx_Kontrollerte_vokabularer.adoc[]
