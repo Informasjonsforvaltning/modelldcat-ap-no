@@ -26,7 +26,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Beskrivelse| Brukes til å referere til en katalogisert ressurs eller en annen katalog.
 |Multiplisitet| 1..n
 |Status| Obligatorisk
-|Kommentar | dcat:Resource er en abstrakt klasse og skal i en konkret anvendelse erstattes med en en instans av dcat:Catalog (en Modellkatalog eller en instans av modelldcatno:InformatoinModel (en Informasjonsmodell).
+|Kommentar | dcat:Resource er en abstrakt klasse og skal i en konkret anvendelse erstattes med en en instans av dcat:Catalog (en Modellkatalog) eller en instans av modelldcatno:InformatoinModel (en Informasjonsmodell).
 |===
 
 ===== Modellkatalog: identifikator (dct:identifier) [[Modellkatalog-identifikator]]
