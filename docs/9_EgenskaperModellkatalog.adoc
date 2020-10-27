@@ -16,6 +16,19 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Status| Obligatorisk
 |===
 
+===== Modellkatalog: har del (dct:hasPart) [[Modellkatalog-harDel]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| has part
+|URI| dct:hasPart
+|Range| dcat:Resource
+|Beskrivelse| Brukes til å referere til en katalogisert ressurs eller en annen katalog.
+|Multiplisitet| 1..n
+|Status| Obligatorisk
+|Kommentar | dcat:Resource er en abstrakt klasse og skal i en konkret anvendelse erstattes med en en instans av dcat:Catalog (en Modellkatalog) eller en instans av modelldcatno:InformatoinModel (en Informasjonsmodell).
+|===
+
 ===== Modellkatalog: identifikator (dct:identifier) [[Modellkatalog-identifikator]]
 
 [cols="30s,70d"]
@@ -25,18 +38,6 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Range| rdfs:Literal
 |Beskrivelse| Refererer til identifikatoren av katalogen.
 |Multiplisitet| 1..1
-|Status| Obligatorisk
-|===
-
-===== Modellkatalog: modell (modelldcatno:model) [[Modellkatalog-modell]]
-
-[cols="30s,70d"]
-|===
-|Engelsk navn| model
-|URI| modelldcatno:model
-|Range| modelldcatno:InformationModel
-|Beskrivelse| Kobler katalogen til informasjonsmodeller som er en del av katalogen.
-|Multiplisitet| 1..n
 |Status| Obligatorisk
 |===
 
@@ -102,6 +103,20 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Status| Anbefalt
 |===
 
+===== Modellkatalog: modell (modelldcatno:model) [[Modellkatalog-modell]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| model
+|URI| modelldcatno:model
+|Range| modelldcatno:InformationModel
+|Beskrivelse| Kobler katalogen til informasjonsmodeller som er en del av katalogen.
+|Subegenskap av | dct:hasPart
+|Multiplisitet| 0..n
+|Status| Anbefalt
+|Kommentar | Når en Modellkatalog må ha minst én instans av dcat:Resource (jf. <<Modellkatalog-harDel, Modellkatalog: har del>>), og modelldcatno:InformationModel i denne spesifikasjonen er den eneste subklasse av dcat:Resource (jf. <<Forenklet-modell, UML-modellen>>), vil det i realiteten bety at en Modellkatalog skal inneholde minst én instans av modelldcatno:InformationModel, selv om denne egenskap er anbefalt og har multiplisitet 0..n.
+|===
+
 ===== Modellkatalog: språk (dct:language) [[Modellkatalog-språk]]
 
 [cols="30s,70d"]
@@ -149,18 +164,6 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Range| dcat:Catalog
 |Beskrivelse| Referanse til en beslektet katalog som denne katalogen fysisk eller logisk er inkludert i.
 |Multiplisitet| 0..1
-|Status| Valgfri
-|===
-
-===== Modellkatalog: har del (dct:hasPart) [[Modellkatalog-harDel]]
-
-[cols="30s,70d"]
-|===
-|Engelsk navn| has part
-|URI| dct:hasPart
-|Range| dcat:Catalog
-|Beskrivelse| Referanse til en beslektet katalog som er en del av den beskrevne katalogen.
-|Multiplisitet| 0..n
 |Status| Valgfri
 |===
 
