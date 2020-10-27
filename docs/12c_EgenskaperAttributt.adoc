@@ -32,7 +32,7 @@ NOTE: Egenskapene til `modelldcatno:Attribute` er med unntak av `modelldcatno:ha
 |Status| Anbefalt
 |===
 
-===== Attributt: inneholder  objekttype (modelldcatno:hasObjectType) [[Attributt-inneholderObjekttype]]
+===== Attributt: inneholder  objekttype (modelldcatno:containsObjectType) [[Attributt-inneholderObjekttype]]
 
 [cols="30s,70d"]
 |===
