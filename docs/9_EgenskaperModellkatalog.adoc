@@ -87,7 +87,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |URI| foaf:homepage
 |Range| foaf:Document
 |Beskrivelse| Nettside som fungerer som hovedside for modellkatalogen.
-|Multiplisitet| 0..1
+|Multiplisitet| 0..n
 |Status| Anbefalt
 |===
 
