@@ -253,7 +253,8 @@ modelldcatno:codeListReference rdf:type owl:ObjectProperty ,
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#constraint
-modelldcatno:constraint rdf:type owl:ObjectProperty ;
+modelldcatno:constraint rdf:type owl:ObjectProperty ,
+                                 owl:SymmetricProperty ;
                         rdfs:domain modelldcatno:Property ;
                         rdfs:range modelldcatno:Property ;
                         rdfs:label "begrensning"@nb ,
