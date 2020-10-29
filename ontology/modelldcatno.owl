@@ -252,6 +252,14 @@ modelldcatno:codeListReference rdf:type owl:ObjectProperty ,
                                           "code list reference"@en .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#constraint
+modelldcatno:constraint rdf:type owl:ObjectProperty ;
+                        rdfs:domain modelldcatno:Property ;
+                        rdfs:range modelldcatno:Property ;
+                        rdfs:label "begrensning"@nb ,
+                                   "constraint"@en .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#contains
 modelldcatno:contains rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf modelldcatno:hasType ;
@@ -423,6 +431,13 @@ modelldcatno:references rdf:type owl:ObjectProperty ;
                         rdfs:range modelldcatno:ModelElement ;
                         rdfs:label "references"@en ,
                                    "refererer"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#xor
+modelldcatno:xor rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf modelldcatno:constraint ;
+                 rdfs:label "enten eller"@nb ,
+                            "xor"@en .
 
 
 ###  https://rdf-vocabulary.ddialliance.org/xkos/next
