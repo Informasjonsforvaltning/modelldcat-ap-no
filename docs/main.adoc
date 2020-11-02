@@ -21,7 +21,8 @@ NOTE: *Innmelding av feil og mangler:* +
 Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på https://github.com/Informasjonsforvaltning/modelldcat-ap-no/issues[Github Issues]. Dersom du ikke allerede har bruker på Github kan du opprette bruker gratis.
 
 *Status*: Gjeldende +
-*Publisert*: 2020-10-23 (v.1.0) +
+*Versjon*: 1.0 +
+*Publisert*: 2020-10-23  +
 *Gjeldende versjon*: https://data.norge.no/specification/modelldcat-ap-no/ +
 *Forrige versjon*: ingen +
 *Redaktørens utkast*: https://informasjonsforvaltning.github.io/modelldcat-ap-no/
