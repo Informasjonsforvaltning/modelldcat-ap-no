@@ -290,6 +290,18 @@ modelldcatno:formsSymmetryWith rdf:type owl:ObjectProperty ,
                                           "Utgjør symetrisk relasjon med"@nb .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#hasConstraint
+modelldcatno:hasConstraint rdf:type owl:ObjectProperty ;
+                           rdfs:domain [ rdf:type owl:Class ;
+                                         owl:unionOf ( modelldcatno:ModelElement
+                                                       modelldcatno:Property
+                                                     )
+                                       ] ;
+                           rdfs:range modelldcatno:Constraint ;
+                           rdfs:label "har begrensning"@nb ,
+                                      "has constraint"@en .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#hasDataType
 modelldcatno:hasDataType rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf modelldcatno:hasType ;
@@ -689,6 +701,14 @@ modelldcatno:belongsToModule rdf:type owl:DatatypeProperty ,
                                         ] ;
                              rdfs:label "belongs to module"@en ,
                                         "konseptet tilhører modul"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#constraintExpression
+modelldcatno:constraintExpression rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain modelldcatno:Constraint ;
+                                  rdfs:range rdfs:Literal ;
+                                  rdfs:label "begrensningsbeskrivelse"@nb ,
+                                             "constraint expression"@en .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#informationModelIdentifier
@@ -1110,6 +1130,12 @@ modelldcatno:Composition rdf:type owl:Class ;
                                     "Komposisjon"@nb .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#Constraint
+modelldcatno:Constraint rdf:type owl:Class ;
+                        rdfs:label "Begrensning"@nb ,
+                                   "Constraint"@en .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#DataType
 modelldcatno:DataType rdf:type owl:Class ;
                       rdfs:subClassOf modelldcatno:ModelElement ;
@@ -1204,6 +1230,16 @@ modelldcatno:InformationModel rdf:type owl:Class ;
    owl:annotatedSource modelldcatno:InformationModel ;
    owl:annotatedProperty rdfs:subClassOf ;
    owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dct:identifier ;
+                         owl:someValuesFrom rdfs:Literal
+                       ] ;
+   rdfs:comment "This property contains an identifier for the Information Model"@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource modelldcatno:InformationModel ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
                          owl:onProperty dct:description ;
                          owl:minCardinality "1"^^xsd:nonNegativeInteger
                        ] ;
@@ -1218,16 +1254,6 @@ modelldcatno:InformationModel rdf:type owl:Class ;
                          owl:minCardinality "1"^^xsd:nonNegativeInteger
                        ] ;
    rdfs:comment "This property refers to the descriptive title or name of a Information Model. This property should be repeated in case there are various versions of the text in different languages."@en
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource modelldcatno:InformationModel ;
-   owl:annotatedProperty rdfs:subClassOf ;
-   owl:annotatedTarget [ rdf:type owl:Restriction ;
-                         owl:onProperty dct:identifier ;
-                         owl:someValuesFrom rdfs:Literal
-                       ] ;
-   rdfs:comment "This property contains an identifier for the Information Model"@en
  ] .
 
 
@@ -1333,7 +1359,6 @@ ex-code:kodeliste rdf:type owl:NamedIndividual ,
                 modelldcatno:Composition
                 modelldcatno:Realization
                 modelldcatno:Role
-                modelldcatno:Specialization
               )
 ] .
 
