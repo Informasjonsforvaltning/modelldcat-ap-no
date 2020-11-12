@@ -12,7 +12,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xkos: <https://rdf-vocabulary.ddialliance.org/xkos/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
-@prefix ex-code: <http://example.com/code#> .
+@prefix ex-con: <http://example.com/const#> .
 @prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
 @base <https://data.norge.no/vocabulary/modelldcatno> .
 
@@ -511,6 +511,7 @@ dct:title rdf:type owl:DatatypeProperty ;
                         owl:unionOf ( skos:ConceptScheme
                                       dcat:Resource
                                       foaf:Document
+                                      modelldcatno:Constraint
                                       modelldcatno:ModelElement
                                       modelldcatno:Property
                                     )
@@ -1327,24 +1328,47 @@ modelldcatno:Specialization rdf:type owl:Class ;
                                        "Spesialisering"@nb .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#or
+modelldcatno:or rdf:type owl:Class ;
+                rdfs:subClassOf modelldcatno:Constraint ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty modelldcatno:constraintExpression ;
+                                  owl:hasValue "{or}"
+                                ] ;
+                owl:disjointWith modelldcatno:xor ;
+                rdfs:label "Logisk eller"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#xor
+modelldcatno:xor rdf:type owl:Class ;
+                 rdfs:subClassOf modelldcatno:Constraint ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty modelldcatno:constraintExpression ;
+                                   owl:hasValue "{xor}"
+                                 ] ;
+                 rdfs:label "Logisk enten eller"@nb .
+
+
 #################################################################
 #    Individuals
 #################################################################
 
-###  http://example.com/code#kode
-ex-code:kode rdf:type owl:NamedIndividual ,
-                      modelldcatno:CodeElement ;
-             skos:inScheme ex-code:kodeliste ;
-             skos:topConceptOf ex-code:kodeliste ;
-             skos:notation "3405"^^xsd:string ;
-             skos:note "Lillehammer er en by og kommune i Gudbrandsdalen i Innlandet, ved nordenden av Mjøsa."@nb ;
-             skos:prefLabel "Lillehammer"@nb .
+###  http://example.com/const#ektefelle
+ex-con:ektefelle rdf:type owl:NamedIndividual ,
+                          modelldcatno:Role ;
+                 modelldcatno:hasConstraint ex-con:partnerfelle .
 
 
-###  http://example.com/code#kodeliste
-ex-code:kodeliste rdf:type owl:NamedIndividual ,
-                           modelldcatno:CodeList ;
-                  dct:title "Kommunenummerlisten"@nb .
+###  http://example.com/const#partner
+ex-con:partner rdf:type owl:NamedIndividual ,
+                        modelldcatno:Role ;
+               modelldcatno:hasConstraint ex-con:partnerfelle .
+
+
+###  http://example.com/const#partnerfelle
+ex-con:partnerfelle rdf:type owl:NamedIndividual ,
+                             modelldcatno:xor ;
+                    modelldcatno:constraintExpression "{xor}"^^xsd:string .
 
 
 #################################################################
