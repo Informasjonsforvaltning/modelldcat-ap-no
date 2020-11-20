@@ -307,7 +307,11 @@ modelldcatno:hasGeneralConcept rdf:type owl:ObjectProperty ;
                                rdfs:subPropertyOf modelldcatno:hasType ;
                                rdf:type owl:FunctionalProperty ;
                                rdfs:domain modelldcatno:Specialization ;
-                               rdfs:range modelldcatno:ModelElement ;
+                               rdfs:range [ rdf:type owl:Class ;
+                                            owl:unionOf ( modelldcatno:ModelElement
+                                                          modelldcatno:Property
+                                                        )
+                                          ] ;
                                rdfs:label "har generelt konsept"@nb ,
                                           "has general concept"@en .
 
@@ -375,7 +379,11 @@ modelldcatno:hasSupplier rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf modelldcatno:hasType ;
                          rdf:type owl:FunctionalProperty ;
                          rdfs:domain modelldcatno:Realization ;
-                         rdfs:range modelldcatno:ModelElement ;
+                         rdfs:range [ rdf:type owl:Class ;
+                                      owl:unionOf ( modelldcatno:ModelElement
+                                                    modelldcatno:Property
+                                                  )
+                                    ] ;
                          rdfs:label "har leverandør"@nb ,
                                     "has supplier"@en .
 
@@ -402,7 +410,11 @@ modelldcatno:hasValueFrom rdf:type owl:ObjectProperty ;
 modelldcatno:isAbstractionOf rdf:type owl:ObjectProperty ;
                              rdfs:subPropertyOf modelldcatno:hasType ;
                              rdfs:domain modelldcatno:Abstraction ;
-                             rdfs:range modelldcatno:ModelElement ;
+                             rdfs:range [ rdf:type owl:Class ;
+                                          owl:unionOf ( modelldcatno:ModelElement
+                                                        modelldcatno:Property
+                                                      )
+                                        ] ;
                              rdfs:label "er abstraksjon av"@nb ,
                                         "is abstraction of"@en .
 
@@ -1204,6 +1216,16 @@ modelldcatno:InformationModel rdf:type owl:Class ;
    owl:annotatedSource modelldcatno:InformationModel ;
    owl:annotatedProperty rdfs:subClassOf ;
    owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dct:identifier ;
+                         owl:someValuesFrom rdfs:Literal
+                       ] ;
+   rdfs:comment "This property contains an identifier for the Information Model"@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource modelldcatno:InformationModel ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
                          owl:onProperty dct:description ;
                          owl:minCardinality "1"^^xsd:nonNegativeInteger
                        ] ;
@@ -1218,16 +1240,6 @@ modelldcatno:InformationModel rdf:type owl:Class ;
                          owl:minCardinality "1"^^xsd:nonNegativeInteger
                        ] ;
    rdfs:comment "This property refers to the descriptive title or name of a Information Model. This property should be repeated in case there are various versions of the text in different languages."@en
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource modelldcatno:InformationModel ;
-   owl:annotatedProperty rdfs:subClassOf ;
-   owl:annotatedTarget [ rdf:type owl:Restriction ;
-                         owl:onProperty dct:identifier ;
-                         owl:someValuesFrom rdfs:Literal
-                       ] ;
-   rdfs:comment "This property contains an identifier for the Information Model"@en
  ] .
 
 
@@ -1331,9 +1343,7 @@ ex-code:kodeliste rdf:type owl:NamedIndividual ,
                 modelldcatno:Choice
                 modelldcatno:Collection
                 modelldcatno:Composition
-                modelldcatno:Realization
                 modelldcatno:Role
-                modelldcatno:Specialization
               )
 ] .
 
