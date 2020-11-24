@@ -252,6 +252,18 @@ modelldcatno:codeListReference rdf:type owl:ObjectProperty ,
                                           "code list reference"@en .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#constraint
+modelldcatno:constraint rdf:type owl:ObjectProperty ;
+                        rdfs:domain [ rdf:type owl:Class ;
+                                      owl:unionOf ( modelldcatno:ModelElement
+                                                    modelldcatno:Property
+                                                  )
+                                    ] ;
+                        rdfs:range modelldcatno:Property ;
+                        rdfs:label "begrensning"@nb ,
+                                   "constraint"@en .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#contains
 modelldcatno:contains rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf modelldcatno:hasType ;
@@ -415,6 +427,13 @@ modelldcatno:model rdf:type owl:ObjectProperty ;
                               "modell"@nb .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#or
+modelldcatno:or rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf modelldcatno:constraint ;
+                rdfs:label "eller"@nb ,
+                           "or"@en .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#references
 modelldcatno:references rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf modelldcatno:hasType ;
@@ -423,6 +442,14 @@ modelldcatno:references rdf:type owl:ObjectProperty ;
                         rdfs:range modelldcatno:ModelElement ;
                         rdfs:label "references"@en ,
                                    "refererer"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#xor
+modelldcatno:xor rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf modelldcatno:constraint ;
+                 rdf:type owl:SymmetricProperty ;
+                 rdfs:label "enten eller"@nb ,
+                            "xor"@en .
 
 
 ###  https://rdf-vocabulary.ddialliance.org/xkos/next
@@ -1204,6 +1231,16 @@ modelldcatno:InformationModel rdf:type owl:Class ;
    owl:annotatedSource modelldcatno:InformationModel ;
    owl:annotatedProperty rdfs:subClassOf ;
    owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dct:identifier ;
+                         owl:someValuesFrom rdfs:Literal
+                       ] ;
+   rdfs:comment "This property contains an identifier for the Information Model"@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource modelldcatno:InformationModel ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
                          owl:onProperty dct:description ;
                          owl:minCardinality "1"^^xsd:nonNegativeInteger
                        ] ;
@@ -1218,16 +1255,6 @@ modelldcatno:InformationModel rdf:type owl:Class ;
                          owl:minCardinality "1"^^xsd:nonNegativeInteger
                        ] ;
    rdfs:comment "This property refers to the descriptive title or name of a Information Model. This property should be repeated in case there are various versions of the text in different languages."@en
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource modelldcatno:InformationModel ;
-   owl:annotatedProperty rdfs:subClassOf ;
-   owl:annotatedTarget [ rdf:type owl:Restriction ;
-                         owl:onProperty dct:identifier ;
-                         owl:someValuesFrom rdfs:Literal
-                       ] ;
-   rdfs:comment "This property contains an identifier for the Information Model"@en
  ] .
 
 
@@ -1305,20 +1332,7 @@ modelldcatno:Specialization rdf:type owl:Class ;
 #    Individuals
 #################################################################
 
-###  http://example.com/code#kode
-ex-code:kode rdf:type owl:NamedIndividual ,
-                      modelldcatno:CodeElement ;
-             skos:inScheme ex-code:kodeliste ;
-             skos:topConceptOf ex-code:kodeliste ;
-             skos:notation "3405"^^xsd:string ;
-             skos:note "Lillehammer er en by og kommune i Gudbrandsdalen i Innlandet, ved nordenden av Mjøsa."@nb ;
-             skos:prefLabel "Lillehammer"@nb .
 
-
-###  http://example.com/code#kodeliste
-ex-code:kodeliste rdf:type owl:NamedIndividual ,
-                           modelldcatno:CodeList ;
-                  dct:title "Kommunenummerlisten"@nb .
 
 
 #################################################################
