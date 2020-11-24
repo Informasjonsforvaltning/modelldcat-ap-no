@@ -3,7 +3,7 @@ name: build html modelldcatno
 on:
   push:
     branches:
-    - master
+    - v1
     paths:
     - ontology/**
 
