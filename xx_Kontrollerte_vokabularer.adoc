@@ -1,0 +1,114 @@
+= Kontrollerte vokabularer [[Kontrollerte-vokabularer]]
+
+== Krav til kontrollerte vokabularer [[Krav-til-kontrollerte-vokabularer]]
+
+Se https://informasjonsforvaltning.github.io/dcat-ap-no/#Krav-til-kontrollerte-vokabularer[Krav til kontrollerte vokabularer i DCAT-AP-NO].
+
+== Kontrollerte vobakularer som skal brukes [[Kontrollerte-vobakularer-som-skal-brukes]]
+
+Under følger en oversikt over kontrollerte vokabular som skal brukes (= obligatorisk) for egenskapene i listen, dette for å sikre et minimum av samhandlingsevne.
+
+=== For egenskapen dct:format [[Skal-brukes-for-format]]
+
+[cols="30s,70d"]
+|===
+|URI til egenskapen|dct:format
+|Brukt i klasse|Dokument (foaf:Document)
+|Navn på vokabularet|https://data.europa.eu/euodp/en/data/dataset/file-type[File Type Named Authority List]
+|URI til vokabularet|http://publications.europa.eu/resource/authority/file-type
+|Status|Obligatorisk
+|===
+
+=== For egenskapen dct:language [[Skal-brukes-for-language]]
+
+[cols="30s,70d"]
+|===
+|URI til egenskapen|dct:language
+|Brukt i klasse|Modellkatalog (dcat:Catalog); Informasjonsmodell (modelldcatno:InformationModel); Dokument (foaf:Document)
+|Navn på vokabularet|https://data.europa.eu/euodp/en/data/dataset/language[Languages Named Authority List]
+|URI til vokabularet|http://publications.europa.eu/resource/authority/language
+|Status|Obligatorisk
+|===
+
+=== For egenskapen dct:license [[Skal-brukes-for-license]]
+
+[cols="30s,70d"]
+|===
+|URI til egenskapen|dct:license
+|Brukt i klasse|Informasjonsmodell (modelldcatno:InformationModel); Modellkatalog (dcat:Catalog)
+|Navn på vokabularet|https://data.europa.eu/euodp/en/data/dataset/licence[Licences Named Authority List]
+|URI til vokabularet|http://publications.europa.eu/resource/dataset/licence
+|Kommentar|Kravet fra EU er forklart slik: "This vocabulary must be used in case the licence […​] is internationally recognised and included in the EU Publications Office NAL."
+|===
+
+=== For egenskapen dct:spatial [[Skal-brukes-for-spatial]]
+
+[cols="30s,70d"]
+|===
+|URI til egenskapen|dct:spatial
+|Brukt i klasse|Informasjonsmodell (modelldcatno:InformationModel); Modellkatalog (dcat:Catalog)
+|Navn på vokabularet| https://data.europa.eu/euodp/en/data/dataset/continent[Continents Named Authority List]; +
+https://data.europa.eu/euodp/en/data/dataset/country[Countries Named Authority List]; +
+https://data.europa.eu/euodp/en/data/dataset/place[Places Named Authority List]; +
+http://sws.geonames.org/[GeoNames]
+|URI til vokabularet| http://publications.europa.eu/resource/dataset/continent; +
+http://publications.europa.eu/resource/dataset/country; +
+http://publications.europa.eu/resource/dataset/place; +
+http://sws.geonames.org/
+|Status|Obligatorisk
+|===
+
+=== For egenskapen adms:status [[Skal-brukes-for-status]]
+
+[cols="30s,70d"]
+|===
+|URI til egenskapen|adms:status
+|Brukt i klasse|Informasjonsmodell (modelldcatno:InformationModel)
+|Navn på vokabularet|http://purl.org/adms/status/[ADMS Status vocabulary (i RDF)]
+|URI til vokabularet|http://purl.org/adms/status/[http://purl.org/adms/status/]
+|Status|Obligatorisk
+|===
+
+=== For egenskapen dct:type [[Skal-brukes-for-type]]
+
+[cols="30s,70d"]
+|===
+|URI til egenskapen|dct:type
+|Brukt i klasse|Aktør (foaf:Agent)
+|Navn på vokabularet|http://purl.org/adms/publishertype/[ADMS publisher type vocabulary (i RDF)]. Listen over termer i ADMS publisher type er inkludert i ADMS-spesifikasjonen, https://joinup.ec.europa.eu/solution/asset-description-metadata-schema-adms[Asset Description Metadata Schema (ADMS)]
+|URI til vokabularet|http://purl.org/adms/publishertype/[http://purl.org/adms/publishertype/]
+|Status|Obligatorisk
+|===
+
+[cols="30s,70d"]
+|===
+|URI til egenskapen|dct:type
+|Brukt i klasse|Lisensdokument (dct:LicenseDocument)
+|Navn på vokabularet|http://purl.org/adms/licencetype/[ADMS licence type vocabulary (i RDF)]
+|URI til vokabularet|http://purl.org/adms/licencetype/[http://purl.org/adms/licencetype/]
+|Status|Obligatorisk
+|===
+
+== Kontrollerte vokabularer som bør og kan brukes [[Kontrollerte-vobakularer-som-bør-brukes]]
+
+=== For egenskapen dcat:theme [[Bør-brukes-for-theme]]
+
+[cols="30s,70d"]
+|===
+|URI til egenskapen|dcat:theme
+|Brukt i klasse|Informasjonsmodell (modelldcatno:InformationModel)
+|Navn på vokabularet|https://psi.norge.no/los/[Los - felles vokabular for å kategorisere og beskrive offentlige tjenester og ressurser]
+|URI til vokabularet|https://psi.norge.no/los/all.rdf
+|Status|Anbefalt
+|===
+
+=== For egenskapen dcat:themeTaxonomy [[Bør-brukes-for-themeTaxonomy]]
+
+[cols="30s,70d"]
+|===
+|URI til egenskapen|dcat:themeTaxonomy
+|Brukt i klasse|Modellkatalog (dcat:Catalog)
+|Navn på vokabularet|https://psi.norge.no/los/[Los - felles vokabular for å kategorisere og beskrive offentlige tjenester og ressurser]
+|URI til vokabularet|https://psi.norge.no/los/all.rdf
+|Status|Anbefalt
+|===

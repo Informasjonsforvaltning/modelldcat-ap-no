@@ -1,0 +1,42 @@
+=== Lokasjon (dct:Location) [[Lokasjon-egenskaper]]
+
+Klassen _Lokasjon_ er valgfri.
+
+==== Anbefalte egenskaper for klassen _Lokasjon_ [[Anbefalte-egenskaper-Lokasjon]]
+
+===== Lokasjon: geografisk midtpunkt (dcat:centroid) [[Lokasjon-geografiskMidtpunkt]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| centroid
+|URI| dcat:centroid
+|Range| rdfs:Literal
+|Beskrivelse| Refererer til et geografisk midtpunkt (centroid) for en ressurs.
+|Multiplisitet| 0..1
+|Status| Anbefalt
+|===
+
+===== Lokasjon: område (dcat:bbox) [[Lokasjon-område]]
+[cols="30s,70d"]
+|===
+|Engelsk navn| bounding box
+|URI| dcat:bbox
+|Range| rdfs:Literal
+|Beskrivelse| Refererer til et avgrenset område (bounding box) for en ressurs.
+|Multiplisitet| 0..1
+|Status| Anbefalt
+|===
+
+==== Valgfrie egenskaper for klassen _Lokasjon_ [[Valgfrie-egenskaper-Lokasjon]]
+
+===== Lokasjon: geometri (locn:geometry) [[Lokasjon-geometri]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| geometry
+|URI| locn:geometry
+|Range| rdfs:Literal
+|Beskrivelse| Denne egenskapen refererer alle typer ressurser til tilhørende dekningsområde.
+|Multiplisitet| 0..1
+|Status| Valgfri
+|===

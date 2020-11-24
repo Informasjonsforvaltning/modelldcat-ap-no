@@ -1,0 +1,143 @@
+=== Egenskap (modelldcatno:Property) [[Egenskap-egenskaper]]
+
+Klassen _Egenskap_ er anbefalt.
+
+Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av spesialiseringene.
+
+==== Obligatoriske egenskaper for klassen _Egenskap_ [[Obligatoriske-egenskaper-Egenskap]]
+
+===== Egenskap: identifikator (dct:identifier) [[Egenskap-identifikator]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| identifier
+|URI| dct:identifier
+|Range| rdfs:Literal
+|Beskrivelse| Unik og persistent identifisering av en egenskap.
+|Multiplisitet| 1..1
+|Status| Obligatorisk
+|===
+
+==== Anbefalte egenskaper for klassen _Egenskap_ [[Anbefalte-egenskaper-Egenskap]]
+
+===== Egenskap: begrep (dct:subject) [[Egenskap-begrep]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| subject
+|URI| dct:subject
+|Range| skos:Concept
+|Beskrivelse| Referanse til sentralt begrep som er viktig for å forstå og tolke egenskapen. Representeres som URI-er.
+|Multiplisitet| 0..1
+|Status| Anbefalt
+|===
+
+===== Egenskap: nedre multiplisitet (xsd:minOccurs) [[Egenskap-nedreMultiplisitet]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| min occurs
+|URI| xsd:minOccurs
+|Range| xsd:nonNegativeInteger
+|Beskrivelse| Angir det minste antallet lovlige forekomster en egenskap kan ha.
+|Multiplisitet| 0..1
+|Status| Anbefalt
+|===
+
+===== Egenskap: tittel (dct:title) [[Egenskap-tittel]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| title
+|URI| dct:title
+|Range| rdfs:Literal
+|Beskrivelse| Navn på en egenskap. Bør gjentas når navnet finnes i flere ulike språk/målformer.
+|Multiplisitet| 0..*
+|Status| Anbefalt
+|===
+
+===== Egenskap: øvre multiplisitet (xsd:maxOccurs) [[Egenskap-øvreMultiplisitet]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| max occurs
+|URI| xsd:maxOccurs
+|Range| xsd:nonNegativeInteger
+|Beskrivelse| Angir det største antallet lovlige forekomster en egenskap kan ha.
+|Multiplisitet| 0..1
+|Status| Anbefalt
+|===
+
+==== Valgfrie egenskaper for klassen _Egenskap_ [[Valgfrie-egenskaper-Egenskap]]
+
+===== Egenskap: beskrivelse (dct:description) [[Egenskap-beskrivelse]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| description
+|URI|dct:description
+|Range| rdfs:Literal
+|Beskrivelse| Tekstlig beskrivelse av egenskapen. Bør gjentas når beskrivelsen finnes i flere ulike språk/målformer.
+|Multiplisitet| 0..n
+|Status| Valgfri
+|===
+
+===== Egenskap: har type (modelldcatno:hasType) [[Egenskap-harType]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| has type
+|URI| modelldcatno:hasType
+|Range| modelldcatno:ModelElement
+|Beskrivelse| En generell beskrivelse av verdidomenet til en egenskap.
+|Multiplisitet| 0..*
+|Status| Valgfri
+|===
+
+===== Egenskap: relasjonsegenskapsnavn (modelldcatno:relationPropertyLabel) [[Egenskap-relasjonsegenskapsnavn]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|relation property label
+|URI|modelldcatno:relationPropertyLabel
+|Range|modelldcatno:Property
+|Beskrivelse|Navn på relasjon mellom to egenskaper. Brukes i kombinasjon med egenskapen «utgjør symmetrisk relasjon med» (modelldcatno:formsSymmetryWith). Bør gjentas når navnet finnes i flere ulike språk/målformer.
+|Multiplisitet|0..*
+|Status|Valgfri
+|===
+
+===== Egenskap: sekvensnummer (modelldcatno:sequenceNumber) [[Egenskap-sekvensnummer]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| sequence number
+|URI|modelldcatno:sequenceNumber
+|Range|xsd:positiveInteger
+|Beskrivelse| En numerisk, sekvensielt stigende verdi som kan brukes til å identifisere og holde orden på rekkefølgen på egenskapene til et modellelement. For enkelte modeller er egenskapenes orden vesentlig, f.eks. slik det ofte er i XML.
+|Multiplisitet| 0..1
+|Status| Valgfri
+|===
+
+===== Egenskap: tilhører modul (modelldcatno:belongsToModule) [[Egenskap-tilhørerModul]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|belongs to module
+|URI|modelldcatno:belongsToModule
+|Range|rdfs:Literal or xsd:anyURI
+|Beskrivelse|Brukes til å referere til en modellmodul/delmodell som modellen inngår i.
+|Multiplisitet|0..1
+|Status|Valgfri
+|===
+
+===== Egenskap: utgjør symmetrisk relasjon med (modelldcatno:formsSymmetryWith) [[Egenskap-utgjørSymmetriskRelasjonMed]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|forms symmetry with
+|URI|modelldcatno:formsSymmetryWith
+|Range|modelldcatno:Property
+|Beskrivelse|Brukes til å uttrykke at +egenskapen har en symmetrisk relasjon til en annen egenskap.+
+|Multiplisitet|0..1
+|Status|Valgfri
+|===
