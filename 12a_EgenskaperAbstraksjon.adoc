@@ -1,0 +1,21 @@
+== Modelldel [[Modeldel]]
+
+=== Abstraksjon (modelldcatno:Abstraction) [[Abstraksjon-egenskaper]]
+
+Klassen _Abstraksjon_ er valgfri.
+
+==== Anbefalte egenskaper for klassen _Abstraksjon_ [[Anbefalte-egenskaper-abstraksjon]]
+
+===== Abstraksjon:er abstraksjon av (modelldcatno:isAbstractionOf) [[Abstraksjon-erAbstraksjonAv]]
+
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|is abstraction of
+|URI|modelldcatno:isAbstractionOf
+|Range|modelldcatno:ModelElement
+|Beskrivelse|Brukes til å referere til elementet det aktuelle elementet er en abstraksjon av.
+|Subegenskap av|modelldcatno:hasType
+|Multiplisitet|0..1
+|Status|Anbefalt
+|===
