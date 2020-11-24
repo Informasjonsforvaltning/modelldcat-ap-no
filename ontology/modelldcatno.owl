@@ -740,6 +740,14 @@ modelldcatno:modelElementBelongsToModule rdf:type owl:DatatypeProperty ,
                                                     "modelelementet tilhører modul"@nb .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#navigable
+modelldcatno:navigable rdf:type owl:DatatypeProperty ;
+                       rdfs:domain modelldcatno:Property ;
+                       rdfs:range xsd:boolean ;
+                       rdfs:label "navigable"@en ,
+                                  "navigerbar"@nb .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#propertyNote
 modelldcatno:propertyNote rdf:type owl:DatatypeProperty ;
                           rdfs:domain modelldcatno:Note ;
