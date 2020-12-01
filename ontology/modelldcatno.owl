@@ -319,7 +319,11 @@ modelldcatno:hasGeneralConcept rdf:type owl:ObjectProperty ;
                                rdfs:subPropertyOf modelldcatno:hasType ;
                                rdf:type owl:FunctionalProperty ;
                                rdfs:domain modelldcatno:Specialization ;
-                               rdfs:range modelldcatno:ModelElement ;
+                               rdfs:range [ rdf:type owl:Class ;
+                                            owl:unionOf ( modelldcatno:ModelElement
+                                                          modelldcatno:Property
+                                                        )
+                                          ] ;
                                rdfs:label "har generelt konsept"@nb ,
                                           "has general concept"@en .
 
@@ -387,7 +391,11 @@ modelldcatno:hasSupplier rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf modelldcatno:hasType ;
                          rdf:type owl:FunctionalProperty ;
                          rdfs:domain modelldcatno:Realization ;
-                         rdfs:range modelldcatno:ModelElement ;
+                         rdfs:range [ rdf:type owl:Class ;
+                                      owl:unionOf ( modelldcatno:ModelElement
+                                                    modelldcatno:Property
+                                                  )
+                                    ] ;
                          rdfs:label "har leverandør"@nb ,
                                     "has supplier"@en .
 
@@ -414,7 +422,11 @@ modelldcatno:hasValueFrom rdf:type owl:ObjectProperty ;
 modelldcatno:isAbstractionOf rdf:type owl:ObjectProperty ;
                              rdfs:subPropertyOf modelldcatno:hasType ;
                              rdfs:domain modelldcatno:Abstraction ;
-                             rdfs:range modelldcatno:ModelElement ;
+                             rdfs:range [ rdf:type owl:Class ;
+                                          owl:unionOf ( modelldcatno:ModelElement
+                                                        modelldcatno:Property
+                                                      )
+                                        ] ;
                              rdfs:label "er abstraksjon av"@nb ,
                                         "is abstraction of"@en .
 
@@ -1353,9 +1365,7 @@ modelldcatno:Specialization rdf:type owl:Class ;
                 modelldcatno:Choice
                 modelldcatno:Collection
                 modelldcatno:Composition
-                modelldcatno:Realization
                 modelldcatno:Role
-                modelldcatno:Specialization
               )
 ] .
 
