@@ -1,0 +1,59 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <https://data.norge.no/specification/dcat-ap-no/#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcatap: <http://data.europa.eu/r5r> .
+@prefix breg: <http://data.europa.eu/breg> .
+@prefix cpsv: <http://purl.org/vocab/cpsv#> .
+@prefix eli: <http://data.europa.eu/eli/ontology#> .
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+
+<https://data.norge.no/specification/modelldcat-ap-no/#shacl>
+    dcat:accessURL <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/tree/develop/shacl>;
+    dcat:downloadURL <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/tree/develop/shacl/modelldcat-ap-no_v1_SHACL-shapes.ttl> ;
+    dcatap:availability <http://data.europa.eu/r5r/draft> ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:conformsTo <https://www.w3.org/TR/shacl> ;
+    dct:creator [
+        foaf:homepage <https://www.digdir.no/> ;
+        foaf:name "Digitaliseringsdirektoratet"@nb ,
+           "Norwegian Digitalisation Agency"@en ;
+    ];
+    dct:license <https://creativecommons.org/licenses/by/4.0> ;
+    cc:attributionURL <http://ec.europa.eu/> ;
+    dct:modified "2020-11-20"^^xsd:date ;
+    dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ;
+    dct:relation <http://joinup.ec.europa.eu/collection/access-base-registries/solution/abr-specification-registry-registries/release/200> ;
+    dct:description "This document specifies the constraints on properties and classes expressed by MODELLDCAT-AP-NO in SHACL."@en ;
+    dct:title "The constraints of MODELLDCAT-AP-NO"@en ;
+    owl:versionInfo "0.1" ;
+    foaf:homepage <https://data.norge.no/specification/modelldcat-ap-no/> ;
+    foaf:maker [
+        foaf:mbox <mailto:informasjonsforvaltning@digdir.no> ;
+        foaf:name "Informasjonsforvaltning, Digitaliseringsdirektoratet" ;
+        foaf:page <https://www.digdir.no>
+    ] .
+
+
+
+#-------------------------------------------------------------------------
+# The shapes in this file cover all classes in MODELLDCAT-AP-NO v1
+#-------------------------------------------------------------------------
