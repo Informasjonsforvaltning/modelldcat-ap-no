@@ -131,19 +131,30 @@
 :PeriodOfTime_Shape
     a sh:NodeShape ;
     sh:name "Period of Time"@en , "Tidsrom"@nb ;
-    sh:property [
-        sh:name "sluttdato/tid"@nb , "end date"@en ;
-        sh:maxCount 1 ;
-        sh:path dcat:endDate ;
-        sh:severity sh:Violation ;
-        sh:shape :DateOrDateTimeDataType_Shape ;
-    ], [
-        sh:name "startdato/tid"@nb , "start date"@en ;
-        sh:maxCount 1 ;
-        sh:path dcat:startDate ;
-        sh:severity sh:Violation ;
-        sh:shape :DateOrDateTimeDataType_Shape ;
-    ] ;
+    sh:or (
+      [
+        sh:property [
+          sh:name "sluttdato/tid"@nb , "end date"@en ;
+          sh:minCount 1;
+          sh:maxCount 1 ;
+          sh:path dcat:endDate ;
+          sh:severity sh:Violation ;
+          sh:shape :DateOrDateTimeDataType_Shape ;
+        ]
+      ]
+      [
+        sh:property [
+          sh:name "startdato/tid"@nb , "start date"@en ;
+          sh:minCount 1;
+          sh:maxCount 1 ;
+          sh:path dcat:startDate ;
+          sh:severity sh:Violation ;
+          sh:shape :DateOrDateTimeDataType_Shape ;
+        ]
+      ]
+    ) ;
+    sh:message "Enten startdato eller sluttdato må ha verdi"@nb ,
+      "Either start date or end date must have value"@en ;
     sh:targetClass dct:PeriodOfTime .
 
 # -+-+- Some union-shapes -+-+-
