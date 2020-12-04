@@ -1,0 +1,54 @@
+# ------
+# Eksempel på en informasjonsmodell (modelldcatno:InformationModel), med alle egenskaper
+# status: komplett, men med (for) mange blanke noder
+# ------
+
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exMod1>
+  a modelldcatno:InformationModel ;
+  ###### mandatory:
+    dct:description "En eksempelmodell"@nb , "An example model"@en ; # beskrivelse
+    dcat:theme <https://psi.norge.no/los/tema/naringsliv>, <> ; # tema
+    dct:title "Eksempel modell 1"@nb , "Example model 1"@en ; # tittel
+    dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ; # utgiver
+  ###### recommended:
+    dct:identifier "https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exMod1"^^xsd:anyURI ; # identifikator
+    dct:subject <>, <> ; # begrep
+    modelldcatno:informationModelIdentifier "Mod1001" ; # informasjonsmodellidentifikator
+    modelldcatno:containsModelElement <>, <> ; # inneholder modellelement
+    dcat:contactPoint <>, <> ; # kontaktpunkt
+    dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ; # lisens
+  ###### optional:
+    dct:spatial <http://publications.europa.eu/resource/dataset/country/NOR/>, <> ; # dekningsområde
+    dcat:keyword ""@nb , ""@en ; # emneord
+    dct:modified "2020-11-11"^^xsd:date ; # endringsdato
+    dct:isPartOf <>, <> ; # er del av
+    dct:isReplacedBy <>, <> ; # er erstattet av
+    dct:replaces <>, <> ; # erstatter
+    dct:hasFormat <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exMod1.png>, <> ; # finnes i format
+    dct:PeriodOfTime <>, <> ; # gyldighetsperiode
+    dct:hasPart <>, <> ; # har del
+    foaf:homepage <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/> ; # hjemmeside
+    adms:status <http://purl.org/adms/status/Completed> ; # modellstatus
+    dct:creator <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ; # produsent
+    dct:language <http://publications.europa.eu/resource/authority/language/NOB> ,
+        <http://publications.europa.eu/resource/authority/language/ENG> ; # språk
+    dct:type <> ; # type
+    dct:issued "2020-01-01"^^xsd:date ; # utgivelsesdato
+    owl:versionInfo "1.0" ; # versjon
+    adms:versionNotes "Kun redaksjonelle endringer fra v.0.99"@nb, "Only editoral changes from v.0.99"@en ; #versjonsnote
+.
+
+# Eksempel på et foaf:Document i png
+<https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exMod1.png>
+    a foaf:Document ;
+    dct:title "Eksempel modell 1"@nb , "Example model 1"@en ; # tittel
+    dct:format <http://publications.europa.eu/resource/authority/file-type/PNG> ; # format
+.

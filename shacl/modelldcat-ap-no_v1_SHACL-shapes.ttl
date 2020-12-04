@@ -40,7 +40,7 @@
     ];
     dct:license <https://creativecommons.org/licenses/by/4.0> ;
     cc:attributionURL <http://ec.europa.eu/> ;
-    dct:modified "2020-xx-xx"^^xsd:date ;
+    dct:modified "2020-12-04"^^xsd:date ;
     rdfs:commet "Validated SUCCESS at https://www.itb.ec.europa.eu/shacl/shacl/upload"@en ;
     dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ;
     dct:relation <http://joinup.ec.europa.eu/collection/access-base-registries/solution/abr-specification-registry-registries/release/200> ;
@@ -311,13 +311,19 @@
     a sh:NodeShape ;
     sh:name "Code element"@en , "Kodeelement"@nb ;
     sh:property [
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class skos:Concept ;
+        sh:path dct:subject ;
+        sh:severity sh:Violation
+    ], [
         sh:nodeKind sh:Literal ;
         sh:maxCount 1 ;
         # sh:minCount 1 ;
         sh:path dct:identifier ;
         sh:severity sh:Violation
     ], [
-        sh:minCount 1 ;
+        # sh:minCount 1 ;
         sh:nodeKind sh:Literal ;
         sh:path skos:prefLabel ;
         sh:severity sh:Violation
