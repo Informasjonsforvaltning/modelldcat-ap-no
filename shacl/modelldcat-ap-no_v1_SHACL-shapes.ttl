@@ -200,6 +200,7 @@
     sh:property [
         sh:name "abstraksjon av"@nb , "is abstraction of"@en ;
         sh:maxCount 1 ;
+        sh:subClassOf modelldcatno:hasType ;
         sh:path modelldcatno:isAbstractionOf ;
         sh:class modelldcatno:ModelElement ;
         sh:severity sh:Violation ;
@@ -213,6 +214,7 @@
     sh:property [
         sh:name "refererer til"@nb, "refers to"@en ;
         sh:maxCount 1;
+        sh:subClassOf modelldcatno:hasType ;
         sh:path modelldcatno:refersTo ;
         sh:class modelldcatno:ModelElement ;
         sh:severity sh:Violation ;
@@ -227,6 +229,7 @@
       [ sh:property [
           sh:name "har datatype"@nb , "has data type"@en ;
           sh:maxCount 1;
+          sh:subClassOf modelldcatno:hasType ;
           sh:path modelldcatno:hasDataType ;
           sh:class modelldcatno:DataType ;
           sh:severity sh:Violation ;
@@ -235,6 +238,7 @@
       [ sh:property [
           sh:name "har enkeltype"@nb , "has simple type"@en ;
           sh:maxCount 1;
+          sh:subClassOf modelldcatno:hasType ;
           sh:path modelldcatno:hasSimpleType ;
           sh:class modelldcatno:SimpleType ;
           sh:severity sh:Violation ;
@@ -243,6 +247,7 @@
       [ sh:property [
           sh:name "inneholder objekttype"@nb , "contains object type"@en ;
           sh:maxCount 1;
+          sh:subClassOf modelldcatno:hasType ;
           sh:path modelldcatno:containsObjectType ;
           sh:class modelldcatno:ObjectType ;
           sh:severity sh:Violation ;
@@ -252,6 +257,7 @@
     sh:property [
         sh:name "har verdier fra"@nb , "has value from"@en ;
         sh:maxCount 1;
+        sh:subClassOf modelldcatno:hasType ;
         sh:path modelldcatno:hasValueFrom ;
         sh:class modelldcatno:CodeList ;
         sh:severity sh:Violation ;
@@ -262,74 +268,89 @@
     a sh:NodeShape ;
     sh:name "Registry Catalogue"@en , "Katalog"@nb ;
     sh:property [
+        sh:name "beskrivelse"@nb , "description"@en ;
         sh:minCount 1 ;
         sh:nodeKind sh:Literal ;
         sh:path dct:description ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
     ], [
+        sh:name "identifikator"@nb , "identifier"@en ;
         sh:nodeKind sh:Literal ;
         sh:maxCount 1 ;
         sh:minCount 1 ;
         sh:path dct:identifier ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
     ], [
+        sh:name "tittel"@nb , "title"@en ;
         sh:minCount 1 ;
         sh:nodeKind sh:Literal ;
         sh:path dct:title ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
     ], [
+        sh:name "utgiver"@nb , "publisher"@en ;
         sh:class foaf:Agent ;
         sh:maxCount 1 ;
         sh:minCount 1 ;
         sh:path dct:publisher ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
     ], [
+### @@@ svakhet her, burde vært sh:or mellom denne og dct:hasPart dcat:Catalog
+        sh:name "modell"@nb , "model"@en ;
         sh:class modelldcatno:InformationModel ;
         sh:minCount 1 ;
         sh:path modelldcatno:model ;
         sh:severity sh:Violation ;
         sh:message "En modellkatalog skal inneholde minst en modell"@nb ,
-           "A model catalog shall contain at least one model"@en
+           "A model catalog shall contain at least one model"@en ;
     ], [
+        sh:name "hjemmeside"@nb , "homepage"@en ;
         sh:class foaf:Document ;
         sh:path foaf:homepage ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
     ], [
+        sh:name "utgivelsesdato"@nb , "issued (release date)"@en ;
         sh:maxCount 1 ;
         sh:node :DateOrDateTimeDataType_Shape ;
         sh:path dct:issued ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
     ], [
+        sh:name "lisens"@nb , "licence"@en ;
         sh:class dct:LicenseDocument ;
         sh:maxCount 1 ;
         sh:path dct:license ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
     ], [
+        sh:name "språk"@nb , "language"@en ;
         sh:class dct:LinguisticSystem ;
         sh:path dct:language ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
     ], [
+        sh:name "dekningsområde"@nb , "spatial/geographic"@en ;
         sh:class dct:Location ;
         sh:path dct:spatial ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
     ], [
+        sh:name "endringsdato"@nb , "modified (last update)"@en ;
         sh:maxCount 1 ;
         sh:node :DateOrDateTimeDataType_Shape ;
         sh:path dct:modified ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
     ], [
+        sh:name "temaer"@nb , "themes"@en ;
         sh:class skos:ConceptScheme ;
         sh:path dcat:themeTaxonomy ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
     ], [
+        sh:name "har del"@nb , "has part"@en ;
         sh:class dcat:Catalog ;
         sh:path dct:hasPart ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
     ], [
+        sh:name "er del av"@nb , "is part of"@en ;
         sh:class dcat:Catalog ;
         sh:maxCount 1 ;
         sh:path dct:isPartOf ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
     ] ;
     sh:targetClass dcat:Catalog .
 
