@@ -11,7 +11,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://raw.githubusercontent.com/Informasjonsforvaltning/modelldcat-ap-no/feature/shacl/examples/exMod1.ttl>
+<https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exMod1.ttl>
   a modelldcatno:InformationModel ;
   ###### mandatory:
     dct:description "En eksempelmodell"@nb , "An example model"@en ; # beskrivelse
@@ -19,7 +19,7 @@
     dct:title "Eksempel modell 1"@nb , "Example model 1"@en ; # tittel
     dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ; # utgiver
   ###### recommended:
-    dct:identifier "https://raw.githubusercontent.com/Informasjonsforvaltning/modelldcat-ap-no/feature/shacl/examples/exMod1.ttl"^^xsd:anyURI ; # identifikator
+    dct:identifier "https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exMod1.ttl"^^xsd:anyURI ; # identifikator
     dct:subject <>, <> ; # begrep
     modelldcatno:informationModelIdentifier "Mod1001" ; # informasjonsmodellidentifikator
     modelldcatno:containsModelElement <>, <> ; # inneholder modellelement
@@ -32,10 +32,10 @@
     dct:isPartOf <>, <> ; # er del av
     dct:isReplacedBy <>, <> ; # er erstattet av
     dct:replaces <>, <> ; # erstatter
-    dct:hasFormat <https://raw.githubusercontent.com/Informasjonsforvaltning/modelldcat-ap-no/feature/shacl/examples/exMod1.png>, <> ; # finnes i format
+    dct:hasFormat <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exMod1.png>, <> ; # finnes i format
     dct:PeriodOfTime <>, <> ; # gyldighetsperiode
     dct:hasPart <>, <> ; # har del
-    foaf:homepage <https://raw.githubusercontent.com/Informasjonsforvaltning/modelldcat-ap-no/feature/shacl/examples/> ; # hjemmeside
+    foaf:homepage <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/> ; # hjemmeside
     adms:status <http://purl.org/adms/status/Completed> ; # modellstatus
     dct:creator <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ; # produsent
     dct:language <http://publications.europa.eu/resource/authority/language/NOB> ,
@@ -47,7 +47,7 @@
 .
 
 # Eksempel på et foaf:Document i png
-<https://raw.githubusercontent.com/Informasjonsforvaltning/modelldcat-ap-no/feature/shacl/examples/exMod1.png>
+<https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exMod1.png>
     a foaf:Document ;
     dct:title "Eksempel modell 1"@nb , "Example model 1"@en ; # tittel
     dct:format <http://publications.europa.eu/resource/authority/file-type/PNG> ; # format

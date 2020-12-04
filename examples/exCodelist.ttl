@@ -12,13 +12,13 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # An example Codelist for gender
-<https://raw.githubusercontent.com/Informasjonsforvaltning/modelldcat-ap-no/feature/shacl/examples/exCodeList.ttl>
+<https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exCodeList.ttl>
   a modelldcatno:CodeList ;
   ###### mandatory:
     dct:title "Kodeliste kjønn"@nb , # tittel - norsk bokmål
       "Codelist gender" ; # tittel - engelsk
   ###### recommended:
-    dct:identifier "https://raw.githubusercontent.com/Informasjonsforvaltning/modelldcat-ap-no/feature/shacl/examples/exCodeList.ttl"^^xsd:anyURI ; # identifikator
+    dct:identifier "https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exCodeList.ttl"^^xsd:anyURI ; # identifikator
     dct:subject <https://examples.com/concepts/gender/> ; # begrep
   ###### optional:
     modelldcatno:belongsToModule <> ;
@@ -26,13 +26,13 @@
        "An example codelist for gender"@en ; # beskrivelse, engelsk
 .
 
-<https://raw.githubusercontent.com/Informasjonsforvaltning/modelldcat-ap-no/feature/shacl/examples/exCodeList.ttl#1>
+<https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exCodeList.ttl#1>
   a modelldcatno:CodeElement ;
   ###### mandatory:
     skos:prefLabel "kvinne"@nb, "female"@en ; # anbefalt kodetekst
-    skos:inScheme <https://raw.githubusercontent.com/Informasjonsforvaltning/modelldcat-ap-no/feature/shacl/examples/exCodeList.ttl> ; # kodeliste
+    skos:inScheme <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exCodeList.ttl> ; # kodeliste
   ###### recommended:
-    dct:identifier "https://raw.githubusercontent.com/Informasjonsforvaltning/modelldcat-ap-no/feature/shacl/examples/exCodeList.ttl#1"^^xsd:anyURI ; # identifikator
+    dct:identifier "https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exCodeList.ttl#1"^^xsd:anyURI ; # identifikator
     dct:subject <https://examples.com/concepts/gender/female> ; # begrep
     skos:notation "1"@nb ; # kode
   ###### optional:
@@ -44,30 +44,30 @@
     skos:scopeNote "" ; # omfangsmerknad
     xkos:exclusionNote "" ; # eksklusjonsmerknad
     xkos:inclusionNote "" ; # inklusjonsmerknad
-    skos:isTopConceptOf <https://raw.githubusercontent.com/Informasjonsforvaltning/modelldcat-ap-no/feature/shacl/examples/exCodeList.ttl> ; # toppkonsept til
-    xkos:next <https://raw.githubusercontent.com/Informasjonsforvaltning/modelldcat-ap-no/feature/shacl/examples/exCodeList.ttl#2> ; # neste kodeelement
+    skos:isTopConceptOf <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exCodeList.ttl> ; # toppkonsept til
+    xkos:next <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exCodeList.ttl#2> ; # neste kodeelement
 .
 
-<https://raw.githubusercontent.com/Informasjonsforvaltning/modelldcat-ap-no/feature/shacl/examples/exCodeList.ttl#2>
+<https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exCodeList.ttl#2>
   a modelldcatno:CodeElement ;
   ###### mandatory:
-    dct:identifier "https://raw.githubusercontent.com/Informasjonsforvaltning/modelldcat-ap-no/feature/shacl/examples/exCodeList.ttl#2"^^xsd:anyURI ; # identifikator
+    dct:identifier "https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exCodeList.ttl#2"^^xsd:anyURI ; # identifikator
     skos:prefLabel "mann"@nb , "male"@en ; # anbefalt kodetekst, norsk bokmål og engelsk
-    skos:inScheme <https://raw.githubusercontent.com/Informasjonsforvaltning/modelldcat-ap-no/feature/shacl/examples/exCodeList.ttl> ; # kodeliste
+    skos:inScheme <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exCodeList.ttl> ; # kodeliste
   ###### recommended:
     dct:subject <https://examples.com/concepts/gender/male> ; # begrep
     skos:notation "2" ; # kode
   ###### optional:
-    xkos:next <https://raw.githubusercontent.com/Informasjonsforvaltning/modelldcat-ap-no/feature/shacl/examples/exCodeList.ttl#9> ; # neste kodeelement
-    xkos:previous <https://raw.githubusercontent.com/Informasjonsforvaltning/modelldcat-ap-no/feature/shacl/examples/exCodeList.ttl#1> ; # forrige kodeelement
+    xkos:next <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exCodeList.ttl#9> ; # neste kodeelement
+    xkos:previous <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exCodeList.ttl#1> ; # forrige kodeelement
 .
 
-<https://raw.githubusercontent.com/Informasjonsforvaltning/modelldcat-ap-no/feature/shacl/examples/exCodeList.ttl#9>
+<https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exCodeList.ttl#9>
   a modelldcatno:CodeElement ;
   ###### mandatory:
-    dct:identifier "https://raw.githubusercontent.com/Informasjonsforvaltning/modelldcat-ap-no/feature/shacl/examples/exCodeList.ttl#9"^^xsd:anyURI ; # identifikator
+    dct:identifier "https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exCodeList.ttl#9"^^xsd:anyURI ; # identifikator
     skos:prefLabel "ukjent"@nb , "unknown"@en ; # anbefalt kodetekst
-    skos:inScheme <https://raw.githubusercontent.com/Informasjonsforvaltning/modelldcat-ap-no/feature/shacl/examples/exCodelist.ttl> ; # kodeliste
+    skos:inScheme <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exCodelist.ttl> ; # kodeliste
   ###### recommended:
     dct:subject <https://examples.com/concepts/gender/unknown> ; # begrep
     skos:notation "9" ; # kode
