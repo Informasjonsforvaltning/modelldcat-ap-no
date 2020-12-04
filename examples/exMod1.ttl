@@ -11,7 +11,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exMod1>
+<https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exMod1.ttl>
   a modelldcatno:InformationModel ;
   ###### mandatory:
     dct:description "En eksempelmodell"@nb , "An example model"@en ; # beskrivelse
@@ -19,7 +19,7 @@
     dct:title "Eksempel modell 1"@nb , "Example model 1"@en ; # tittel
     dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ; # utgiver
   ###### recommended:
-    dct:identifier "https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exMod1"^^xsd:anyURI ; # identifikator
+    dct:identifier "https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exMod1.ttl"^^xsd:anyURI ; # identifikator
     dct:subject <>, <> ; # begrep
     modelldcatno:informationModelIdentifier "Mod1001" ; # informasjonsmodellidentifikator
     modelldcatno:containsModelElement <>, <> ; # inneholder modellelement

@@ -1,6 +1,6 @@
 # ------
-# Eksempel på en informasjonsmodell (modelldcatno:InformationModel), kun nødvendige egenskaper
-# status: komplett for å illustrere en kodelist som en egen informasjonsmodell
+# Eksempel på en informasjonsmodell (modelldcatno:InformationModel), kun med nødvendige egenskaper
+# status: komplett for å illustrere en kodeliste som en informasjonsmodell
 # ------
 
 @prefix adms: <http://www.w3.org/ns/adms#> .
@@ -11,13 +11,13 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exMod2>
+<https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exMod2.ttl>
   a modelldcatno:InformationModel ;
   ###### mandatory:
     dct:description "En eksempelmodell"@nb , "An example model"@en ; # beskrivelse
-    dcat:theme <https://psi.norge.no/los/tema/personopplysninger>, <> ; # tema
+    dcat:theme <https://psi.norge.no/los/tema/personopplysninger> ; # tema
     dct:title "Eksempel modell 2"@nb , "Example model 2"@en ; # tittel
     dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ; # utgiver
   ###### recommended:
-    modelldcatno:containsModelElement <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exCodeList> ; # inneholder modellelement
+    modelldcatno:containsModelElement <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exCodeList.ttl> ; # inneholder modellelement
 .

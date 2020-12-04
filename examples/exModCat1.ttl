@@ -9,16 +9,16 @@
 @prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exModCat1>
+<https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exModCat1.ttl>
   a dcat:Catalog ;
   ###### mandatory:
     dct:description "Et eksempel på en modellkatalog"@nb ,
           "An example of a catalog of information models"@en ; # beskrivelse
-    modelldcatno:model <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exMod1> ; # modell
+    modelldcatno:model <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exMod1.ttl> ; # modell
     dct:title "Modellkatalogeksempel"@nb , "Model Catalog Example"@en ; # tittel
     dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ; # utgiver
   ###### recommended:
-    dct:identifier "https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exModCat1"^^xsd:anyURI ; # identifikator
+    dct:identifier "https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exModCat1.ttl"^^xsd:anyURI ; # identifikator
     dct:modified "2020-12-04"^^xsd:date ; # endringsdato
     foaf:homepage <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/> ; # hjemmeside
     dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ; # lisens
@@ -27,7 +27,7 @@
     dct:issued "2020-11-11"^^xsd:date ; # utgivelsesdato
   ###### optional:
     dct:spatial <http://publications.europa.eu/resource/dataset/country/NOR/> ; # dekningsområde
-    dct:isParOf <https://https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exModCat0/> ; # er del av
+    dct:isParOf <https://https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exModCat0.ttl/> ; # er del av
     dcat:themeTaxonomy <https://psi.norge.no/los/all.rdf>,
        <http://publications.europa.eu/resource/dataset/eurovoc> ; # temaer
 .
