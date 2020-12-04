@@ -223,12 +223,39 @@
     a sh:NodeShape ;
     sh:name "Attribute"@en , "Attributt"@nb ;
     sh:subClassOf modelldcatno:Property ;
+    sh:or (
+      [ sh:property [
+          sh:name "har datatype"@nb , "has data type"@en ;
+          sh:maxCount 1;
+          sh:path modelldcatno:hasDataType ;
+          sh:class modelldcatno:DataType ;
+          sh:severity sh:Violation ;
+          ];
+      ]
+      [ sh:property [
+          sh:name "har enkeltype"@nb , "has simple type"@en ;
+          sh:maxCount 1;
+          sh:path modelldcatno:hasSimpleType ;
+          sh:class modelldcatno:SimpleType ;
+          sh:severity sh:Violation ;
+          ];
+      ]
+      [ sh:property [
+          sh:name "inneholder objekttype"@nb , "contains object type"@en ;
+          sh:maxCount 1;
+          sh:path modelldcatno:containsObjectType ;
+          sh:class modelldcatno:ObjectType ;
+          sh:severity sh:Violation ;
+          ];
+      ]
+    ) ;
     sh:property [
-        sh:name "har datatype"@nb , "has data type"@en ;
+        sh:name "har verdier fra"@nb , "has value from"@en ;
         sh:maxCount 1;
-        sh:path modelldcatno:hasDataType ;
-        sh:class modelldcatno:DataType ;
-    ];
+        sh:path modelldcatno:hasValueFrom ;
+        sh:class modelldcatno:CodeList ;
+        sh:severity sh:Violation ;
+      ] ;
     sh:targetClass modelldcatno:Attribute .
 
 :Catalog_Shape
