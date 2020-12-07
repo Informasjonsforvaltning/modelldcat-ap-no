@@ -266,7 +266,7 @@
 
 :Catalog_Shape
     a sh:NodeShape ;
-    sh:name "Registry Catalogue"@en , "Katalog"@nb ;
+    sh:name "Catalog"@en , "Modellkatalog"@nb ;
     sh:property [
         sh:name "beskrivelse"@nb , "description"@en ;
         sh:minCount 1 ;
@@ -330,11 +330,6 @@
         sh:name "temaer"@nb , "themes"@en ;
         sh:class skos:ConceptScheme ;
         sh:path dcat:themeTaxonomy ;
-        sh:severity sh:Violation ;
-    ], [
-        sh:name "har del"@nb , "has part"@en ;
-        sh:class dcat:Catalog ;
-        sh:path dct:hasPart ;
         sh:severity sh:Violation ;
     ], [
         sh:name "er del av"@nb , "is part of"@en ;
@@ -436,6 +431,7 @@
         sh:severity sh:Violation
     ], [
         sh:name "forrige kodeelement"@nb , "previous"@en ;
+        sh:maxCount 1;
         sh:class modelldcatno:CodeElement ;
         sh:path xkos:previous ;
         sh:severity sh:Violation
@@ -456,6 +452,7 @@
         sh:severity sh:Violation
     ], [
         sh:name "neste kodeelement"@nb , "next"@en ;
+        sh:maxCount 1;
         sh:class modelldcatno:CodeElement ;
         sh:path xkos:next ;
         sh:severity sh:Violation
@@ -744,8 +741,8 @@
     sh:subClassOf modelldcatno:Property ;
     sh:property [
         sh:name "egenskapsnote"@nb , "property note"@en ;
+        sh:nodeKind sh:Literal ;
         sh:path modelldcatno:propertyNote ;
-        sh:class modelldcatno:Property ;
         sh:severity sh:Violation ;
     ] ;
     sh:targetClass modelldcatno:Note .
