@@ -343,7 +343,7 @@
         sh:path dct:isPartOf ;
         sh:severity sh:Violation ;
     ] ;
-    sh:or ( # En Modellkatalog skal ha enten en katalog eller en informasjonsmodell
+    sh:or ( # En Modellkatalog skal ha minst en katalog eller en informasjonsmodell
       [ sh:property [
           sh:name "har del"@nb , "has part"@en ;
           sh:minCount 1;
@@ -365,15 +365,13 @@
           ]
       ]
     );
-
-
     sh:targetClass dcat:Catalog .
 
 :Choice_Shape
     sh:name "Valg"@nb , "Choice"@en ;
     sh:subClassOf modelldcatno:Property ;
     sh:property [
-        sh:name "kan ha"@nb , "has member"@en ;
+        sh:name "kan ha"@nb , "has some"@en ;
         sh:path modelldcatno:hasSome ;
         sh:class modelldcatno:ModelElement ;
         sh:subClassOf modelldcatno:hasType ;
@@ -389,38 +387,38 @@
         sh:minCount 1 ;
         sh:class modelldcatno:CodeList ;
         sh:path skos:inScheme ;
-        sh:severity sh:Violation
-    ], [
-        sh:name "kode"@nb , "code"@en ;
-        sh:minCount 1;
-        sh:maxCount 1 ;
-        sh:nodeKind sh:Literal ;
-        sh:path skos:notation ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
     ], [
         sh:name "identifikator"@nb , "identifier"@en ;
         sh:nodeKind sh:Literal ;
         # sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:path dct:identifier ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "kode"@nb , "code"@en ;
+        sh:minCount 1;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path skos:notation ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "toppkonsept til"@nb , "is top concept of"@en ;
+        sh:class modelldcatno:CodeList ;
+        sh:path skos:topConceptOf ;
         sh:severity sh:Violation
     ], [
         sh:name "anbefalt kodetekst"@nb , "preferred label"@en ;
         # sh:minCount 1 ;
         sh:nodeKind sh:Literal ;
         sh:path skos:prefLabel ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
     ], [
         sh:name "begrep"@nb , "subject"@en ;
         sh:maxCount 1 ;
         sh:class skos:Concept ;
         sh:path dct:subject ;
-        sh:severity sh:Violation
-    ], [
-        sh:name "tillatt kodetekst"@nb , "alternative label"@en ;
-        sh:nodeKind sh:Literal ;
-        sh:path skos:altLabel ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
     ], [
         sh:name "definisjon"@nb , "definition"@en ;
         sh:nodeKind sh:Literal ;
@@ -432,34 +430,9 @@
         sh:path skos:example ;
         sh:severity sh:Violation
     ], [
-        sh:name "frarådet kodetekst"@nb , "hidden label"@en ;
-        sh:nodeKind sh:Literal ;
-        sh:path skos:hiddenLabel ;
-        sh:severity sh:Violation
-    ], [
-        sh:name "merknad"@nb , "note"@en ;
-        sh:nodeKind sh:Literal ;
-        sh:path skos:note ;
-        sh:severity sh:Violation
-    ], [
-        sh:name "omfangsmerknad"@nb , "scope note"@en ;
-        sh:nodeKind sh:Literal ;
-        sh:path skos:scopeNote ;
-        sh:severity sh:Violation
-    ], [
         sh:name "eksklusjonsmerknad"@nb , "exclusion note"@en ;
         sh:nodeKind sh:Literal ;
         sh:path xkos:exclusionNote ;
-        sh:severity sh:Violation
-    ], [
-        sh:name "inklusjonsmerknad"@nb , "inclusion note"@en ;
-        sh:nodeKind sh:Literal ;
-        sh:path xkos:inclusionNote ;
-        sh:severity sh:Violation
-    ], [
-        sh:name "neste kodeelement"@nb , "next"@en ;
-        sh:class modelldcatno:CodeElement ;
-        sh:path xkos:next ;
         sh:severity sh:Violation
     ], [
         sh:name "forrige kodeelement"@nb , "previous"@en ;
@@ -467,10 +440,35 @@
         sh:path xkos:previous ;
         sh:severity sh:Violation
     ], [
-        sh:name "toppkonsept til"@nb , "is top concept of"@en ;
-        sh:class modelldcatno:CodeList ;
-        sh:path skos:topConceptOf ;
+        sh:name "frarådet kodetekst"@nb , "hidden label"@en ;
+        sh:nodeKind sh:Literal ;
+        sh:path skos:hiddenLabel ;
         sh:severity sh:Violation
+    ], [
+        sh:name "inklusjonsmerknad"@nb , "inclusion note"@en ;
+        sh:nodeKind sh:Literal ;
+        sh:path xkos:inclusionNote ;
+        sh:severity sh:Violation
+    ], [
+        sh:name "merknad"@nb , "note"@en ;
+        sh:nodeKind sh:Literal ;
+        sh:path skos:note ;
+        sh:severity sh:Violation
+    ], [
+        sh:name "neste kodeelement"@nb , "next"@en ;
+        sh:class modelldcatno:CodeElement ;
+        sh:path xkos:next ;
+        sh:severity sh:Violation
+    ], [
+        sh:name "omfangsmerknad"@nb , "scope note"@en ;
+        sh:nodeKind sh:Literal ;
+        sh:path skos:scopeNote ;
+        sh:severity sh:Violation
+    ], [
+        sh:name "tillatt kodetekst"@nb , "alternative label"@en ;
+        sh:nodeKind sh:Literal ;
+        sh:path skos:altLabel ;
+        sh:severity sh:Violation ;
     ] ;
     sh:targetClass modelldcatno:CodeElement .
 
@@ -483,7 +481,7 @@
         sh:maxCount 1 ;
         sh:class modelldcatno:CodeList ;
         sh:path modelldcatno:codeListReference ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
     ] ;
     sh:targetClass modelldcatno:CodeList .
 
