@@ -40,7 +40,7 @@
     ];
     dct:license <https://creativecommons.org/licenses/by/4.0> ;
     cc:attributionURL <http://ec.europa.eu/> ;
-    dct:modified "2020-12-04"^^xsd:date ;
+    dct:modified "2020-12-07"^^xsd:date ;
     rdfs:commet "Validated SUCCESS at https://www.itb.ec.europa.eu/shacl/shacl/upload"@en ;
     dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ;
     dct:relation <http://joinup.ec.europa.eu/collection/access-base-registries/solution/abr-specification-registry-registries/release/200> ;
@@ -370,78 +370,89 @@
     a sh:NodeShape ;
     sh:name "Code element"@en , "Kodeelement"@nb ;
     sh:property [
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-        sh:class skos:Concept ;
-        sh:path dct:subject ;
-        sh:severity sh:Violation
-    ], [
-        sh:nodeKind sh:Literal ;
-        sh:maxCount 1 ;
-        # sh:minCount 1 ;
-        sh:path dct:identifier ;
-        sh:severity sh:Violation
-    ], [
-        # sh:minCount 1 ;
-        sh:nodeKind sh:Literal ;
-        sh:path skos:prefLabel ;
-        sh:severity sh:Violation
-    ], [
+        sh:name "i kodeliste"@nb, "in scheme"@en ;
         sh:minCount 1 ;
         sh:class modelldcatno:CodeList ;
         sh:path skos:inScheme ;
         sh:severity sh:Violation
     ], [
-        sh:maxCount 1 ;
-        sh:class skos:Concept ;
-        sh:path dct:subject ;
-        sh:severity sh:Violation
-    ], [
+        sh:name "kode"@nb , "code"@en ;
+        sh:minCount 1;
         sh:maxCount 1 ;
         sh:nodeKind sh:Literal ;
         sh:path skos:notation ;
         sh:severity sh:Violation
     ], [
+        sh:name "identifikator"@nb , "identifier"@en ;
+        sh:nodeKind sh:Literal ;
+        # sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:path dct:identifier ;
+        sh:severity sh:Violation
+    ], [
+        sh:name "anbefalt kodetekst"@nb , "preferred label"@en ;
+        # sh:minCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path skos:prefLabel ;
+        sh:severity sh:Violation
+    ], [
+        sh:name "begrep"@nb , "subject"@en ;
+        sh:maxCount 1 ;
+        sh:class skos:Concept ;
+        sh:path dct:subject ;
+        sh:severity sh:Violation
+    ], [
+        sh:name "tillatt kodetekst"@nb , "alternative label"@en ;
         sh:nodeKind sh:Literal ;
         sh:path skos:altLabel ;
         sh:severity sh:Violation
     ], [
+        sh:name "definisjon"@nb , "definition"@en ;
         sh:nodeKind sh:Literal ;
         sh:path skos:definition ;
         sh:severity sh:Violation
     ], [
+        sh:name "eksempel"@nb , "example"@en ;
         sh:nodeKind sh:Literal ;
         sh:path skos:example ;
         sh:severity sh:Violation
     ], [
+        sh:name "frarådet kodetekst"@nb , "hidden label"@en ;
         sh:nodeKind sh:Literal ;
         sh:path skos:hiddenLabel ;
         sh:severity sh:Violation
     ], [
+        sh:name "merknad"@nb , "note"@en ;
         sh:nodeKind sh:Literal ;
         sh:path skos:note ;
         sh:severity sh:Violation
     ], [
+        sh:name "omfangsmerknad"@nb , "scope note"@en ;
         sh:nodeKind sh:Literal ;
         sh:path skos:scopeNote ;
         sh:severity sh:Violation
     ], [
+        sh:name "eksklusjonsmerknad"@nb , "exclusion note"@en ;
         sh:nodeKind sh:Literal ;
         sh:path xkos:exclusionNote ;
         sh:severity sh:Violation
     ], [
+        sh:name "inklusjonsmerknad"@nb , "inclusion note"@en ;
         sh:nodeKind sh:Literal ;
         sh:path xkos:inclusionNote ;
         sh:severity sh:Violation
     ], [
+        sh:name "neste kodeelement"@nb , "next"@en ;
         sh:class modelldcatno:CodeElement ;
         sh:path xkos:next ;
         sh:severity sh:Violation
     ], [
+        sh:name "forrige kodeelement"@nb , "previous"@en ;
         sh:class modelldcatno:CodeElement ;
         sh:path xkos:previous ;
         sh:severity sh:Violation
     ], [
+        sh:name "toppkonsept til"@nb , "is top concept of"@en ;
         sh:class modelldcatno:CodeList ;
         sh:path skos:topConceptOf ;
         sh:severity sh:Violation
@@ -453,6 +464,7 @@
     sh:name "Codelist"@en , "Kodeliste"@nb ;
     sh:subClassOf modelldcatno:ModelElement ;
     sh:property [
+        sh:name "ekstern kodeliste"@nb , "code list reference"@en ;
         sh:maxCount 1 ;
         sh:class modelldcatno:CodeList ;
         sh:path modelldcatno:codeListReference ;
@@ -495,18 +507,18 @@
         sh:class dct:LinguisticSystem ;
         sh:maxCount 1 ;
         sh:path dct:language ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
     ], [
         sh:name "tittel"@nb, "title"@en ;
         sh:nodeKind sh:Literal ;
         sh:path dct:title ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
     ], [
         sh:name "format"@nb, "format"@en ;
         sh:class dct:MediaType ;
         sh:maxCount 1 ;
         sh:path dct:format ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
     ] ;
     sh:targetClass foaf:Document .
 
@@ -514,39 +526,158 @@
     a sh:NodeShape ;
     sh:name "Information model"@en , "Informasjonsmodell"@nb ;
     sh:property [
+        sh:name "tittel"@nb , "title"@en ;
         sh:minCount 1 ;
         sh:nodeKind sh:Literal ;
         sh:path dct:title ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
     ], [
-        sh:nodeKind sh:Literal ;
-        sh:maxCount 1 ;
-        # sh:minCount 1 ;
-        sh:path dct:identifier ;
-        sh:severity sh:Violation
-    ], [
+        sh:name "beskrivelse"@nb , "description"@en ;
         sh:minCount 1 ;
         sh:nodeKind sh:Literal ;
         sh:path dct:description ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
     ], [
+        sh:name "utgiver"@nb , "publisher"@en ;
         sh:class foaf:Agent ;
-        sh:maxCount 1 ;
         sh:minCount 1 ;
+        sh:maxCount 1 ;
         sh:path dct:publisher ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
     ], [
+        sh:name "tema"@nb , "theme"@en ;
         sh:class skos:Concept ;
         sh:minCount 1 ;
         sh:path dcat:theme ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
     ], [
+        sh:name "identifikator"@nb , "identifier"@en ;
+        sh:nodeKind sh:Literal ;
+        # sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:path dct:identifier ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "informasjonsmodellidentifikator"@nb , "information model identifier"@en ;
         sh:nodeKind sh:Literal ;
         sh:maxCount 1;
         sh:path modelldcatno:informationModelIdentifier ;
         sh:severity sh:Violation ;
         sh:message "Informasjonsmodellidentifikatoren skal være Literal"@nb ,
             "The information model identifier shall be Literal"@en ;
+    ], [
+        sh:name "begrep"@nb , "subject"@en ;
+        sh:class skos:Concept ;
+        sh:path dct:subject ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "inneholder modellelement"@nb , "contains model element"@en ;
+        sh:class modelldcatno:ModelElement ;
+        sh:path modelldcatno:containsModelElement ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "kontaktpunkt"@nb , "contact point"@en ;
+        sh:class vcard:Kind ;
+        sh:path dcat:contactPoint ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "lisens"@nb , "license"@en ;
+        sh:class dct:LicenseDocument ;
+        sh:maxCount 1 ;
+        sh:path dct:license ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "dekningsområde"@nb , "spatial"@en ;
+        sh:class dct:Location ;
+        sh:path dct:spatial ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "emneord"@nb , "keyword"@en ;
+        sh:nodeKind sh:Literal ;
+        sh:path dcat:keyword ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "endringsdato"@nb , "modified"@en ;
+        sh:node :DateOrDateTimeDataType_Shape ;
+        sh:maxCount 1 ;
+        sh:path dct:modified ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "er del av"@nb , "is part of"@en ;
+        sh:class modelldcatno:InformationModel ;
+        sh:path dct:isPartOf ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "er erstattet av"@nb , "is replaced by"@en ;
+        sh:class modelldcatno:InformationModel ;
+        sh:path dct:isReplacedBy ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "erstatter"@nb , "replaces"@en ;
+        sh:class modelldcatno:InformationModel ;
+        sh:path dct:replaces ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "finnes i format"@nb , "has format"@en ;
+        sh:class foaf:Document ;
+        sh:path dct:hasFormat ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "gyldighetsperiode"@nb , "temopral"@en ;
+        sh:class dct:PeriodOfTime ;
+        sh:path dct:temporal ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "har del"@nb , "has part"@en ;
+        sh:class modelldcatno:InformationModel ;
+        sh:path dct:hasPart ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "hjemmeside"@nb , "homepage"@en ;
+        sh:class foaf:Document ;
+        sh:maxCount 1 ;
+        sh:path foaf:homepage ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "mdoellstatus"@nb , "status"@en ;
+        sh:class skos:Concept ;
+        sh:maxCount 1 ;
+        sh:path adms:status ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "produsent"@nb , "creator"@en ;
+        sh:class foaf:Agent ;
+        sh:maxCount 1 ;
+        sh:path dct:creator ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "språk"@nb , "language"@en ;
+        sh:class dct:LinguisticSystem ;
+        sh:path dct:language ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "type"@nb , "type"@en ;
+        sh:class skos:Concept ;
+        sh:maxCount 1 ;
+        sh:path dct:type ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "utgivelsesdato"@nb , "issued"@en ;
+        sh:node :DateOrDateTimeDataType_Shape ;
+        sh:maxCount 1 ;
+        sh:path dct:issued ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "versjon"@nb , "version"@en ;
+        sh:nodeKind sh:Literal ;
+        sh:maxCount 1 ;
+        sh:path owl:versionInfo ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "versjonsnote"@nb , "version notes"@en ;
+        sh:nodeKind sh:Literal ;
+        sh:path adms:versionNotes ;
+        sh:severity sh:Violation ;
     ] ;
     sh:targetClass modelldcatno:InformationModel .
 
@@ -554,30 +685,40 @@
     a sh:NodeShape ;
     sh:name "Model element"@en , "Modellelement"@nb ;
     sh:property [
+        sh:name "tittel"@nb , "title"@en ;
         sh:minCount 1 ;
         sh:nodeKind sh:Literal ;
         sh:path dct:title ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
     ], [
+        sh:name "identifikator"@nb , "identifier"@en ;
         sh:nodeKind sh:Literal ;
-        sh:maxCount 1 ;
         # sh:minCount 1 ;
+        sh:maxCount 1 ;
         sh:path dct:identifier ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
     ], [
+        sh:name "begrep"@nb , "subject"@en ;
         sh:maxCount 1 ;
         sh:class skos:Concept ;
         sh:path dct:subject ;
-        sh:severity sh:Violation
-    ], [
-        sh:maxCount 1 ;
-        sh:path modelldcatno:belongsToModule ;
         sh:severity sh:Violation ;
-        sh:shape sh:IRIOrLiteral ;
     ], [
+        sh:name "har egenskap"@nb , "has property"@en ;
+        sh:class modelldcatno:Property ;
+        sh:path modelldcatno:hasProperty ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "beskrivelse"@nb , "description"@en ;
         sh:nodeKind sh:Literal ;
         sh:path dct:description ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "tilhører modul"@nb , "belongs to module"@en ;
+        sh:maxCount 1 ;
+        sh:shape sh:IRIOrLiteral ;
+        sh:path modelldcatno:belongsToModule ;
+        sh:severity sh:Violation ;
     ] ;
     sh:targetClass modelldcatno:ModelElement ,
         modelldcatno:CodeList ,
