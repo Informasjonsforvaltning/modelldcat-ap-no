@@ -225,7 +225,7 @@
     a sh:NodeShape ;
     sh:name "Attribute"@en , "Attributt"@nb ;
     sh:subClassOf modelldcatno:Property ;
-    sh:or (
+    sh:xone (
       [ sh:property [
           sh:name "har datatype"@nb , "has data type"@en ;
           sh:maxCount 1;
@@ -343,7 +343,7 @@
         sh:path dct:isPartOf ;
         sh:severity sh:Violation ;
     ] ;
-    sh:or (
+    sh:or ( # En Modellkatalog skal ha enten en katalog eller en informasjonsmodell
       [ sh:property [
           sh:name "har del"@nb , "has part"@en ;
           sh:minCount 1;
