@@ -294,15 +294,6 @@
         sh:path dct:publisher ;
         sh:severity sh:Violation ;
     ], [
-### @@@ svakhet her, burde vært sh:or mellom denne og dct:hasPart dcat:Catalog
-        sh:name "modell"@nb , "model"@en ;
-        sh:class modelldcatno:InformationModel ;
-        sh:minCount 1 ;
-        sh:path modelldcatno:model ;
-        sh:severity sh:Violation ;
-        sh:message "En modellkatalog skal inneholde minst en modell"@nb ,
-           "A model catalog shall contain at least one model"@en ;
-    ], [
         sh:name "hjemmeside"@nb , "homepage"@en ;
         sh:class foaf:Document ;
         sh:path foaf:homepage ;
@@ -352,6 +343,30 @@
         sh:path dct:isPartOf ;
         sh:severity sh:Violation ;
     ] ;
+    sh:or (
+      [ sh:property [
+          sh:name "har del"@nb , "has part"@en ;
+          sh:minCount 1;
+          sh:class dcat:Catalog ;
+          sh:path dct:hasPart ;
+          sh:severity sh:Violation ;
+          sh:message "En modellkatalog skal inneholde minst enten en katalog eller en informasjonsmodell"@nb ,
+            "A model catalog must contain at least one catalog or one information model"@en ;
+          ]
+      ]
+      [ sh:property [
+          sh:name "modell"@nb, "model"@en ;
+          sh:minCount 1;
+          sh:class modelldcatno:InformationModel ;
+          sh:path modelldcatno:model ;
+          sh:severity sh:Violation ;
+          sh:message "En modellkatalog skal inneholde minst enten en katalog eller en informasjonsmodell"@nb ,
+            "A model catalog must contain at least one catalog or one information model"@en ;
+          ]
+      ]
+    );
+
+
     sh:targetClass dcat:Catalog .
 
 :Choice_Shape
