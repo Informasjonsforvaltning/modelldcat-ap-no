@@ -799,7 +799,7 @@
         sh:name "sekvensnummer"@nb , "sequence number"@en ;
         sh:maxCount 1 ;
         sh:datatype xsd:positiveInteger ;
-        sh:path modelldcatno:relationPropertyLabel ;
+        sh:path modelldcatno:sequenceNumber ;
         sh:severity sh:Violation
     ], [
         sh:name "tilhører modul"@nb , "belongs to module"@en ;
