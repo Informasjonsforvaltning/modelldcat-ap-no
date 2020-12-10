@@ -8,6 +8,7 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xkos: <https://rdf-vocabulary.ddialliance.org/xkos/> .
@@ -59,6 +60,14 @@ skos:scopeNote rdf:type owl:AnnotationProperty ;
 #################################################################
 #    Object Properties
 #################################################################
+
+###  http://purl.org/dc/terms/conformsTo
+dct:conformsTo rdf:type owl:ObjectProperty ;
+               rdfs:domain modelldcatno:InformationModel ;
+               rdfs:range dct:Standard ;
+               rdfs:label "conforms to"@en ,
+                          "i henhold til"@nb .
+
 
 ###  http://purl.org/dc/terms/creator
 dct:creator rdf:type owl:ObjectProperty ;
@@ -231,6 +240,14 @@ dcat:themeTaxonomy rdf:type owl:ObjectProperty ;
                    rdfs:range skos:ConceptScheme ;
                    rdfs:label "Tematisk skjema"@nb ,
                               "theme taxonomy"@en .
+
+
+###  http://www.w3.org/ns/dx/prof/isProfileOf
+prof:isProfileOf rdf:type owl:ObjectProperty ;
+                 rdfs:domain modelldcatno:InformationModel ;
+                 rdfs:range dct:Standard ;
+                 rdfs:label "er en profil av"@nb ,
+                            "is profile of"@en .
 
 
 ###  http://xmlns.com/foaf/0.1/homepage
@@ -1169,6 +1186,10 @@ modelldcatno:InformationModel rdf:type owl:Class ;
                               rdfs:subClassOf dct:Standard ,
                                               dcat:Resource ,
                                               [ rdf:type owl:Restriction ;
+                                                owl:onProperty dct:conformsTo ;
+                                                owl:someValuesFrom dct:Standard
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
                                                 owl:onProperty dct:creator ;
                                                 owl:someValuesFrom foaf:Agent
                                               ] ,
@@ -1211,6 +1232,10 @@ modelldcatno:InformationModel rdf:type owl:Class ;
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty dcat:theme ;
                                                 owl:someValuesFrom skos:Concept
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty prof:isProfileOf ;
+                                                owl:someValuesFrom dct:Standard
                                               ] ,
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty dct:identifier ;
@@ -1346,13 +1371,6 @@ modelldcatno:Specialization rdf:type owl:Class ;
                             rdfs:subClassOf modelldcatno:Property ;
                             rdfs:label "Specialization"@en ,
                                        "Spesialisering"@nb .
-
-
-#################################################################
-#    Individuals
-#################################################################
-
-
 
 
 #################################################################
