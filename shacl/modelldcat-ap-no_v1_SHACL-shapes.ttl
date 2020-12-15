@@ -454,20 +454,20 @@
     sh:name "Code element"@en , "Kodeelement"@nb ;
     sh:property [
         sh:name "i kodeliste"@nb, "in scheme"@en ;
-        # @v1.1 # sh:minCount 1 ;
+        # @v.1.1 # sh:minCount 1 ;
         sh:class modelldcatno:CodeList ;
         sh:path skos:inScheme ;
         sh:severity sh:Violation ;
     ], [
         sh:name "identifikator"@nb , "identifier"@en ;
         sh:nodeKind sh:Literal ;
-        # sh:minCount 1 ;
+        # @v.1.1 # sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:path dct:identifier ;
         sh:severity sh:Violation ;
     ], [
         sh:name "kode"@nb , "code"@en ;
-        sh:minCount 1; # @v1.1 #
+        sh:minCount 1; # @v.1.1 #
         sh:maxCount 1 ;
         sh:nodeKind sh:Literal ;
         sh:path skos:notation ;
@@ -479,7 +479,7 @@
         sh:severity sh:Violation
     ], [
         sh:name "anbefalt kodetekst"@nb , "preferred label"@en ;
-        # @v1.1 # sh:minCount 1 ;
+        # @v.1.1 # sh:minCount 1 ;
         sh:nodeKind sh:Literal ;
         sh:path skos:prefLabel ;
         sh:severity sh:Violation ;
@@ -620,7 +620,7 @@
         sh:severity sh:Violation ;
     ], [
         sh:name "beskrivelse"@nb , "description"@en ;
-        sh:minCount 1 ;
+        # @v.1.1 # sh:minCount 1 ;
         sh:nodeKind sh:Literal ;
         sh:path dct:description ;
         sh:severity sh:Violation ;
@@ -636,13 +636,13 @@
     [ # sjekker multiplisitet
         sh:name "tema"@nb , "theme"@en ;
         # sh:class skos:Concept ;
-        # @v1.1 # sh:minCount 1 ;
+        # @v.1.1 # sh:minCount 1 ;
         sh:path dcat:theme ;
         sh:severity sh:Violation ;
     ], [
         sh:name "identifikator"@nb , "identifier"@en ;
         sh:nodeKind sh:Literal ;
-        # sh:minCount 1 ;
+        # @v.1.1 # sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:path dct:identifier ;
         sh:severity sh:Violation ;
@@ -781,7 +781,7 @@
     ], [
         sh:name "identifikator"@nb , "identifier"@en ;
         sh:nodeKind sh:Literal ;
-        # sh:minCount 1 ;
+        # @v.1.1 #  sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:path dct:identifier ;
         sh:severity sh:Violation ;
@@ -803,7 +803,7 @@
         sh:severity sh:Violation ;
     ], [
         sh:name "tilhører modul"@nb , "belongs to module"@en ;
-        # @v1.1 # sh:maxCount 1 ;
+        # @v.1.1 # sh:maxCount 1 ;
         sh:shape sh:IRIOrLiteral ;
         sh:path modelldcatno:belongsToModule ;
         sh:severity sh:Violation ;
@@ -830,7 +830,7 @@
     sh:name "Property"@en , "Egenskap"@nb ;
     sh:property [
         sh:name "identifikator"@nb , "identifier"@en ;
-        # sh:minCount 1 ;
+        # @v.1.1 # sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:nodeKind sh:Literal ;
         sh:path dct:identifier ;

@@ -14,13 +14,13 @@
 <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exMod1.ttl>
   a modelldcatno:InformationModel ;
   ###### mandatory:
-    dct:description "En eksempelmodell"@nb , "An example model"@en ; # beskrivelse
-    dcat:theme <https://psi.norge.no/los/tema/naringsliv> ; # tema
     dct:title "Eksempel modell 1"@nb , "Example model 1"@en ; # tittel
     dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ; # utgiver
   ###### recommended:
     dct:identifier "https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exMod1.ttl"^^xsd:anyURI ; # identifikator
     dct:subject <https://example.com/concepts/exConcept1> ; # begrep
+    dct:description "En eksempelmodell"@nb , "An example model"@en ; # beskrivelse
+    dcat:theme <https://psi.norge.no/los/tema/naringsliv> ; # tema
     modelldcatno:informationModelIdentifier "Mod1001" ; # informasjonsmodellidentifikator
     modelldcatno:containsModelElement <https://example.com/models/exModElement1> ; # inneholder modellelement
     dcat:contactPoint <https://example.com/contactPoints/exCP1> ; # kontaktpunkt
