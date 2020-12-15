@@ -27,6 +27,16 @@
 @prefix xkos: <https://ddialliance.org/Specification/XKOS/1.2/OWL/xkos.html> .
 @prefix : <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/shacl/modelldcatno-shacl.ttl#> .
 
+# -+-+-+-+-+-
+# Merknader:
+#
+#  * Krav til bruk av kontrollerte vokabularer er nå implementert som egne xxxProperty_Shape.
+#    Dette muliggjør både gjenbruk av kravene, og egen sh:message (vs. sh:message på multilisitetssjekk).
+#
+#  * Anbefalte bruk av kontrollerte vokabularer er nå implementert med sh:severity sh:Warning.
+# -+-+-+-+-+-
+
+
 # about this SHACL:
 <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/shacl/modelldcatno-shacl.ttl>
     dcat:accessURL <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/shacl/>;
@@ -247,6 +257,16 @@
     sh:severity sh:Violation ;
   .
 
+:ThemePropertyLOS_Shape
+    a sh:PropertyShape ;
+    sh:name "tema (LOS)"@nb , "theme (Norwegian LOS)"@en ;
+    sh:path dcat:theme ;
+    sh:pattern "^https://psi.norge.no/los/tema/" ;
+    sh:flags "i" ;
+    sh:message "LOS bør brukes for dcat:theme"@nb ;
+    sh:severity sh:Warning ;
+  .
+
 
 #
 # -+-+-+-+- From here, shapes specific for ModellDCAT-AP-NO -+-+-+-
@@ -434,7 +454,7 @@
     sh:name "Code element"@en , "Kodeelement"@nb ;
     sh:property [
         sh:name "i kodeliste"@nb, "in scheme"@en ;
-        sh:minCount 1 ;
+        # @v1.1 # sh:minCount 1 ;
         sh:class modelldcatno:CodeList ;
         sh:path skos:inScheme ;
         sh:severity sh:Violation ;
@@ -447,7 +467,7 @@
         sh:severity sh:Violation ;
     ], [
         sh:name "kode"@nb , "code"@en ;
-        sh:minCount 1;
+        sh:minCount 1; # @v1.1 #
         sh:maxCount 1 ;
         sh:nodeKind sh:Literal ;
         sh:path skos:notation ;
@@ -459,7 +479,7 @@
         sh:severity sh:Violation
     ], [
         sh:name "anbefalt kodetekst"@nb , "preferred label"@en ;
-        # sh:minCount 1 ;
+        # @v1.1 # sh:minCount 1 ;
         sh:nodeKind sh:Literal ;
         sh:path skos:prefLabel ;
         sh:severity sh:Violation ;
@@ -611,10 +631,12 @@
         sh:maxCount 1 ;
         sh:path dct:publisher ;
         sh:severity sh:Violation ;
-    ], [
+    ],
+        :ThemePropertyLOS_Shape ,  # sjekker bruk av kontrollert vokabular
+    [ # sjekker multiplisitet
         sh:name "tema"@nb , "theme"@en ;
-        sh:class skos:Concept ;
-        sh:minCount 1 ;
+        # sh:class skos:Concept ;
+        # @v1.1 # sh:minCount 1 ;
         sh:path dcat:theme ;
         sh:severity sh:Violation ;
     ], [
@@ -781,7 +803,7 @@
         sh:severity sh:Violation ;
     ], [
         sh:name "tilhører modul"@nb , "belongs to module"@en ;
-        sh:maxCount 1 ;
+        # @v1.1 # sh:maxCount 1 ;
         sh:shape sh:IRIOrLiteral ;
         sh:path modelldcatno:belongsToModule ;
         sh:severity sh:Violation ;
