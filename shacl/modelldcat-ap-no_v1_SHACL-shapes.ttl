@@ -40,7 +40,7 @@
     ];
     dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
     cc:attributionURL <http://ec.europa.eu/> ;
-    dct:modified "2020-12-07"^^xsd:date ;
+    dct:modified "2020-12-15"^^xsd:date ;
     rdfs:commet "Validated SUCCESS at https://www.itb.ec.europa.eu/shacl/shacl/upload"@en ;
     dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ;
     dct:relation <http://joinup.ec.europa.eu/collection/access-base-registries/solution/abr-specification-registry-registries/release/200> ;
@@ -72,14 +72,13 @@
         sh:nodeKind sh:Literal ;
         sh:path dct:identifier ;
         sh:severity sh:Violation ;
-    ], [
-        sh:name "type"@nb , "type"@en ;
-        # sh:class skos:Concept ;
-        sh:maxCount 1 ;
+    ],
+        :TypeAgentProperty_Shape , # sjekker Kontrollert vokabular
+    [ # sjekker multiplisitet
+        sh:name "type (AKtør)"@nb , "type (Agent)"@en ;
         sh:path dct:type ;
-        sh:pattern "^http://purl.org/adms/publishertype/" ;
-        sh:flags "i" ;
-        sh:message "Det kan være maks. én aktørtype som skal være i samsvar med http://purl.org/adms/publishertype/"@nb ;
+        sh:maxCount 1 ;
+        sh:message "Det kan være maks. én aktørtype."@nb ;
         sh:severity sh:Violation ;
     ] ;
     sh:targetClass foaf:Agent .
@@ -99,15 +98,8 @@
 :LicenceDocument_Shape
     a sh:NodeShape ;
     sh:name "Licence Document"@en , "Lisensdokument"@nb ;
-    sh:property [
-        sh:name "lisenstype"@nb , "licence type"@en ;
-        # sh:class skos:Concept ;
-        sh:path dct:type ;
-        sh:pattern "^http://purl.org/adms/licencetype/" ;
-        sh:flags "i" ;
-        sh:message "Lisenstype skal være i samsvar med http://purl.org/adms/licencetype/"@nb ;
-        sh:severity sh:Violation ;
-    ] ;
+    sh:property
+        :TypeLicenseDocumentProperty_Shape ; # sjekker kontrollert vokabular
     sh:targetClass dct:LicenseDocument .
 
 :Location_Shape
@@ -163,7 +155,7 @@
       "Either start date or end date must have value"@en ;
     sh:targetClass dct:PeriodOfTime .
 
-# -+-+- Some commonly used property-shapes: -+-+-
+# -+-+- Some commonly used property-shapes, especially for use of Controlled Vocabularies: -+-+-
 
 :DateOrDateTimeDataType_Shape
     a sh:NodeShape ;
@@ -201,6 +193,16 @@
       sh:severity sh:Violation ;
     .
 
+:LicenseProperty_Shape
+      a sh:PropertyShape ;
+      sh:name "lisens"@nb , "license"@en ;
+      sh:path dct:license ;
+      sh:pattern "^http://publications.europa.eu/resource/dataset/licence" ;
+      sh:flags "i";
+      sh:message "Lisenstype skal være i samsvar med http://publications.europa.eu/resource/dataset/licence/"@nb ;
+      sh:severity sh:Violation ;
+    .
+
 :SpatialProperty_Shape
       a sh:PropertyShape ;
       sh:name "dekningsområde"@nb , "spatial"@en ;
@@ -214,6 +216,37 @@
       sh:message "Dekningsområde skal ha minst en verdi som skal være i henhold til http://publications.europa.eu/resource/dataset/continent, http://publications.europa.eu/resource/dataset/country, http://publications.europa.eu/resource/dataset/place eller http://sws.geonames.org/."@nb ;
       sh:severity sh:Violation ;
     .
+
+:StatusProperty_Shape
+    a sh:PropertyShape ;
+    sh:name "status"@nb , "status"@en ;
+    sh:path adms:status ;
+    sh:pattern "^http://purl.org/adms/status/" ;
+    sh:flags "i" ;
+    sh:message "Status skal være i samsvar med http://purl.org/adms/status/"@nb ;
+    sh:severity sh:Violation ;
+  .
+
+:TypeAgentProperty_Shape
+    a sh:PropertyShape ;
+    sh:name "type (Aktør)"@nb , "type (Agent)"@en ;
+    sh:path dct:type ;
+    sh:pattern "^http://purl.org/adms/publishertype/" ;
+    sh:flags "i" ;
+    sh:message "AKtørtype skal være i samsvar med http://purl.org/adms/publishertype/"@nb ;
+    sh:severity sh:Violation ;
+  .
+
+:TypeLicenseDocumentProperty_Shape
+    a sh:PropertyShape ;
+    sh:name "type (Lisensdokument)"@nb , "type (License document)"@en ;
+    sh:path dct:type ;
+    sh:pattern "^http://purl.org/adms/licencetype/" ;
+    sh:flags "i" ;
+    sh:message "Lisensdokumenttype skal være i samsvar med http://purl.org/adms/licencetype/"@nb ;
+    sh:severity sh:Violation ;
+  .
+
 
 #
 # -+-+-+-+- From here, shapes specific for ModellDCAT-AP-NO -+-+-+-
@@ -330,14 +363,14 @@
         sh:node :DateOrDateTimeDataType_Shape ;
         sh:path dct:issued ;
         sh:severity sh:Violation ;
-    ], [
+    ],
+        :LicenseProperty_Shape , # sjekker kontrollert vokab.
+    [ # sjekker multiplisitet
         sh:name "lisens"@nb , "licence"@en ;
         # sh:class dct:LicenseDocument ;
         sh:maxCount 1 ;
         sh:path dct:license ;
-        sh:pattern "^http://publications.europa.eu/resource/dataset/licence/" ;
-        sh:flags "i" ;
-        sh:message "Det kan være maks. én lisens som skal være i samsvar med http://publications.europa.eu/resource/dataset/licence/"@nb ;
+        sh:message "Det kan være maks. én lisens."@nb ;
         sh:severity sh:Violation ;
     ],
         :LanguageProperty_Shape ,
@@ -672,14 +705,13 @@
         sh:maxCount 1 ;
         sh:path foaf:homepage ;
         sh:severity sh:Violation ;
-    ], [
+    ],
+        :StatusProperty_Shape , # sjekker Kontrollert vokabular
+    [ # sjekker multiplisitet
         sh:name "mdoellstatus"@nb , "status"@en ;
-        # sh:class skos:Concept ;
-        sh:maxCount 1 ;
         sh:path adms:status ;
-        sh:pattern "^http://purl.org/adms/status/" ;
-        sh:flags "i" ;
-        sh:message "Det kan være maks. én status som skal være i samsvar med http://purl.org/adms/status/"@nb ;
+        sh:maxCount 1 ;
+        sh:message "Det kan være maks. én status."@nb ;
         sh:severity sh:Violation ;
     ], [
         sh:name "produsent"@nb , "creator"@en ;

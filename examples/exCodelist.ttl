@@ -21,7 +21,7 @@
     dct:identifier "https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exCodeList.ttl"^^xsd:anyURI ; # identifikator
     dct:subject <https://examples.com/concepts/gender/> ; # begrep
   ###### optional:
-    modelldcatno:belongsToModule <> ;
+    modelldcatno:belongsToModule <https://example.com/modules/mod1> ;
     dct:description "En eksempelkodeliste for kjønn"@nb , # beskrivelse, norsk bokmål
        "An example codelist for gender"@en ; # beskrivelse, engelsk
 .
