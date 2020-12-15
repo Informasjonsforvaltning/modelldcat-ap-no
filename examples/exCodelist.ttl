@@ -1,5 +1,5 @@
 # ------
-# Eksempel på en modelldcatno:CodeList og modelldcatno:CodeElement, med alle egenskaper
+# Eksempel på en modelldcatno:CodeList og flere modelldcatno:CodeElement, med alle egenskaper
 # status: komplett og ferdig
 # ------
 

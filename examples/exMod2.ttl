@@ -17,5 +17,5 @@
     dct:title "Eksempel modell 2"@nb , "Example model 2"@en ; # tittel
     dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ; # utgiver
   ###### recommended:
-    modelldcatno:containsModelElement <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exCodeList.ttl> ; # inneholder modellelement
+    modelldcatno:containsModelElement <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exCodeList.ttl> ; # inneholder modellelement som peker til en kodeliste
 .

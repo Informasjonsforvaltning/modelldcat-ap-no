@@ -1,6 +1,6 @@
 # ------
 # Eksempel på en informasjonsmodell (modelldcatno:InformationModel), med alle egenskaper
-# status: komplett, men med (for) mange blanke noder
+# status: komplett og ferdig
 # ------
 
 @prefix adms: <http://www.w3.org/ns/adms#> .
