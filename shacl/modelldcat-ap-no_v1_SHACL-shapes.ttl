@@ -25,7 +25,7 @@
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix xkos: <https://ddialliance.org/Specification/XKOS/1.2/OWL/xkos.html> .
-@prefix : <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/shacl/modelldcatno-shacl.ttl> .
+@prefix : <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/shacl/modelldcatno-shacl.ttl#> .
 
 # about this SHACL:
 <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/shacl/modelldcatno-shacl.ttl>
@@ -38,7 +38,7 @@
         foaf:homepage <https://www.digdir.no/> ;
         foaf:name "Digitaliseringsdirektoratet"@nb , "Norwegian Digitalisation Agency"@en ;
     ];
-    dct:license <https://creativecommons.org/licenses/by/4.0> ;
+    dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
     cc:attributionURL <http://ec.europa.eu/> ;
     dct:modified "2020-12-07"^^xsd:date ;
     rdfs:commet "Validated SUCCESS at https://www.itb.ec.europa.eu/shacl/shacl/upload"@en ;
@@ -74,9 +74,12 @@
         sh:severity sh:Violation ;
     ], [
         sh:name "type"@nb , "type"@en ;
-        sh:class skos:Concept ;
+        # sh:class skos:Concept ;
         sh:maxCount 1 ;
         sh:path dct:type ;
+        sh:pattern "^http://purl.org/adms/publishertype/" ;
+        sh:flags "i" ;
+        sh:message "Det kan være maks. én aktørtype som skal være i samsvar med http://purl.org/adms/publishertype/"@nb ;
         sh:severity sh:Violation ;
     ] ;
     sh:targetClass foaf:Agent .
@@ -98,8 +101,11 @@
     sh:name "Licence Document"@en , "Lisensdokument"@nb ;
     sh:property [
         sh:name "lisenstype"@nb , "licence type"@en ;
-        sh:class skos:Concept ;
+        # sh:class skos:Concept ;
         sh:path dct:type ;
+        sh:pattern "^http://purl.org/adms/licencetype/" ;
+        sh:flags "i" ;
+        sh:message "Lisenstype skal være i samsvar med http://purl.org/adms/licencetype/"@nb ;
         sh:severity sh:Violation ;
     ] ;
     sh:targetClass dct:LicenseDocument .
@@ -157,7 +163,7 @@
       "Either start date or end date must have value"@en ;
     sh:targetClass dct:PeriodOfTime .
 
-# -+-+- Some union-shapes -+-+-
+# -+-+- Some commonly used property-shapes: -+-+-
 
 :DateOrDateTimeDataType_Shape
     a sh:NodeShape ;
@@ -173,21 +179,41 @@
         ]
     ) .
 
-:DcatResource_Shape
-    a sh:NodeShape ;
-    rdfs:comment "the union of dcat:Catalog and modelldcatno:InformationModel"@en ,
-       "union av dcat:Catalog and modelldcatno:InformationModel"@nb ;
-    sh:name "dcat:Resource"@nb , "dcat:Resource"@en ;
-    sh:message "The node is either a Catalog or an InformationModel"@en ,
-       "Noden skal være enten dcat:Catalog eller mdoelldcatno:InformationModel"@nb ;
-    sh:or ([
-            sh:class dcat:Catalog
-        ]
-        [
-            sh:class modelldcatno:InformationModel
-        ]
-    ) .
+:FormatProperty_Shape
+      a sh:PropertyShape ;
+      sh:name "format"@nb, "format"@en ;
+      sh:path dct:format ;
+      # sh:class dct:MediaType ;
+      sh:pattern "^http://publications.europa.eu/resource/authority/file-type/" ;
+      sh:flags "i" ;
+      sh:message "Medietype skal være i samsvar med http://publications.europa.eu/resource/authority/file-type/"@nb ;
+      sh:severity sh:Violation ;
+    .
 
+:LanguageProperty_Shape
+      a sh:PropertyShape ;
+      sh:name "språk"@nb , "language"@en ;
+      sh:path dct:language ;
+      # sh:class dct:LinguisticSystem ;
+      sh:pattern "^http://publications.europa.eu/resource/authority/language/" ;
+      sh:flags "i" ;
+      sh:message "Språkkoden skal være i samsvar med http://publications.europa.eu/resource/authority/language/"@nb ;
+      sh:severity sh:Violation ;
+    .
+
+:SpatialProperty_Shape
+      a sh:PropertyShape ;
+      sh:name "dekningsområde"@nb , "spatial"@en ;
+      sh:path dct:spatial ;
+      sh:or (
+        [ sh:pattern "^http://publications.europa.eu/resource/dataset/continent" ; sh:flags "i" ; ]
+        [ sh:pattern "^http://publications.europa.eu/resource/dataset/country" ; sh:flags "i" ; ]
+        [ sh:pattern "^http://publications.europa.eu/resource/dataset/place" ; sh:flags "i" ;]
+        [ sh:pattern "^http://sws.geonames.org/" ; sh:flags "i" ; ]
+      ) ;
+      sh:message "Dekningsområde skal ha minst en verdi som skal være i henhold til http://publications.europa.eu/resource/dataset/continent, http://publications.europa.eu/resource/dataset/country, http://publications.europa.eu/resource/dataset/place eller http://sws.geonames.org/."@nb ;
+      sh:severity sh:Violation ;
+    .
 
 #
 # -+-+-+-+- From here, shapes specific for ModellDCAT-AP-NO -+-+-+-
@@ -306,21 +332,17 @@
         sh:severity sh:Violation ;
     ], [
         sh:name "lisens"@nb , "licence"@en ;
-        sh:class dct:LicenseDocument ;
+        # sh:class dct:LicenseDocument ;
         sh:maxCount 1 ;
         sh:path dct:license ;
+        sh:pattern "^http://publications.europa.eu/resource/dataset/licence/" ;
+        sh:flags "i" ;
+        sh:message "Det kan være maks. én lisens som skal være i samsvar med http://publications.europa.eu/resource/dataset/licence/"@nb ;
         sh:severity sh:Violation ;
-    ], [
-        sh:name "språk"@nb , "language"@en ;
-        sh:class dct:LinguisticSystem ;
-        sh:path dct:language ;
-        sh:severity sh:Violation ;
-    ], [
-        sh:name "dekningsområde"@nb , "spatial/geographic"@en ;
-        sh:class dct:Location ;
-        sh:path dct:spatial ;
-        sh:severity sh:Violation ;
-    ], [
+    ],
+        :LanguageProperty_Shape ,
+        :SpatialProperty_Shape ,
+    [
         sh:name "endringsdato"@nb , "modified (last update)"@en ;
         sh:maxCount 1 ;
         sh:node :DateOrDateTimeDataType_Shape ;
@@ -512,22 +534,24 @@
 :Document_Shape
     a sh:NodeShape ;
     sh:name "Document"@en , "Dokument"@nb ;
-    sh:property [
-        sh:name "språk"@nb, "language"@en ;
-        sh:class dct:LinguisticSystem ;
+    sh:property
+    :LanguageProperty_Shape ,
+    [
         sh:maxCount 1 ;
         sh:path dct:language ;
+        sh:message "Det kan være maks. et språk per dokument."@nb ;
         sh:severity sh:Violation ;
     ], [
         sh:name "tittel"@nb, "title"@en ;
         sh:nodeKind sh:Literal ;
         sh:path dct:title ;
         sh:severity sh:Violation ;
-    ], [
-        sh:name "format"@nb, "format"@en ;
-        sh:class dct:MediaType ;
-        sh:maxCount 1 ;
+    ],
+        :FormatProperty_Shape ,
+    [
         sh:path dct:format ;
+        sh:maxCount 1 ;
+        sh:message "Det skal være maks. én medietype."@nb ;
         sh:severity sh:Violation ;
     ] ;
     sh:targetClass foaf:Document .
@@ -592,16 +616,16 @@
         sh:severity sh:Violation ;
     ], [
         sh:name "lisens"@nb , "license"@en ;
-        sh:class dct:LicenseDocument ;
+        # sh:class dct:LicenseDocument ;
         sh:maxCount 1 ;
         sh:path dct:license ;
+        sh:pattern "^http://publications.europa.eu/resource/dataset/licence/" ;
+        sh:flags "i" ;
+        sh:message "Det kan være maks. én lisens som skal være i samsvar med http://publications.europa.eu/resource/dataset/licence/"@nb ;
         sh:severity sh:Violation ;
-    ], [
-        sh:name "dekningsområde"@nb , "spatial"@en ;
-        sh:class dct:Location ;
-        sh:path dct:spatial ;
-        sh:severity sh:Violation ;
-    ], [
+    ],
+        :SpatialProperty_Shape ,
+    [
         sh:name "emneord"@nb , "keyword"@en ;
         sh:nodeKind sh:Literal ;
         sh:path dcat:keyword ;
@@ -650,9 +674,12 @@
         sh:severity sh:Violation ;
     ], [
         sh:name "mdoellstatus"@nb , "status"@en ;
-        sh:class skos:Concept ;
+        # sh:class skos:Concept ;
         sh:maxCount 1 ;
         sh:path adms:status ;
+        sh:pattern "^http://purl.org/adms/status/" ;
+        sh:flags "i" ;
+        sh:message "Det kan være maks. én status som skal være i samsvar med http://purl.org/adms/status/"@nb ;
         sh:severity sh:Violation ;
     ], [
         sh:name "produsent"@nb , "creator"@en ;
@@ -660,12 +687,9 @@
         sh:maxCount 1 ;
         sh:path dct:creator ;
         sh:severity sh:Violation ;
-    ], [
-        sh:name "språk"@nb , "language"@en ;
-        sh:class dct:LinguisticSystem ;
-        sh:path dct:language ;
-        sh:severity sh:Violation ;
-    ], [
+    ],
+    :LanguageProperty_Shape ,
+    [
         sh:name "type"@nb , "type"@en ;
         sh:class skos:Concept ;
         sh:maxCount 1 ;

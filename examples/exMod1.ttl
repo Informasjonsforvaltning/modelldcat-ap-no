@@ -24,7 +24,7 @@
     modelldcatno:informationModelIdentifier "Mod1001" ; # informasjonsmodellidentifikator
     modelldcatno:containsModelElement <>, <> ; # inneholder modellelement
     dcat:contactPoint <>, <> ; # kontaktpunkt
-    dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ; # lisens
+    dct:license <http://publications.europa.eu/resource/dataset/licence/CC_BY_4_0> ; # lisens
   ###### optional:
     dct:spatial <http://publications.europa.eu/resource/dataset/country/NOR/>, <> ; # dekningsområde
     dcat:keyword ""@nb , ""@en ; # emneord
