@@ -4,7 +4,7 @@ Klassen _Kodeelement_ er anbefalt.
 
 ==== Obligatoriske egenskaper for klassen _Kodeelement_ [[Obligatoriske-egenskaper-Kodeelement]]
 
-===== Kodeelement:i kodeliste (skos:inScheme) [[Kodeelement-iKodeliste]]
+===== Kodeelement: i kodeliste (skos:inScheme) [[Kodeelement-iKodeliste]]
 
 [cols="30s,70d"]
 |===
@@ -16,19 +16,18 @@ Klassen _Kodeelement_ er anbefalt.
 |Kravsnivå|Obligatorisk
 |===
 
-===== Kodeelement:anbefalt kodetekst (skos:prefLabel) [[Kodeelement-anbefaltKodetekst]]
+===== Kodeelement: kode (skos:notation) [[Kodeelement-kode]]
 
 [cols="30s,70d"]
 |===
-|Engelsk navn|preferred label
-|URI|skos:prefLabel
+|Engelsk navn|code
+|URI|skos:notation
 |Range|rdfs:Literal
-|Beskrivelse|Brukes til å referere til den anbefalte kodeteksten for kodeelementet, dvs. teksten som anses best egnet for kodeelementet. Bør gjentas når teksten finnes i flere ulike språk/målformer.
-|Subegenskap av|rdfs:label
-|Multiplisitet|1..n
+|Beskrivelse|Brukes til å referere til representasjonen av kodeelementet, vanligvis kalt «koden».
+|Multiplisitet|1..1
 |Kravsnivå|Obligatorisk
-|Kommentar|Det bør være maksimalt én anbefalt kodetekst per språk/målform.
 |===
+
 
 ===== Kodeelement: identifikator (dct:identifier) [[kodeelement-identifikator]]
 
@@ -45,6 +44,20 @@ Klassen _Kodeelement_ er anbefalt.
 
 ==== Anbefalte egenskaper for klassen _Kodeelement_ [[Anbefalte-egenskaper-Kodeelement]]
 
+===== Kodeelement: anbefalt kodetekst (skos:prefLabel) [[Kodeelement-anbefaltKodetekst]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|preferred label
+|URI|skos:prefLabel
+|Range|rdfs:Literal
+|Beskrivelse|Brukes til å referere til den anbefalte kodeteksten for kodeelementet, dvs. teksten som anses best egnet for kodeelementet. Bør gjentas når teksten finnes i flere ulike språk/målformer.
+|Subegenskap av|rdfs:label
+|Multiplisitet|0..n
+|Kravsnivå|Anbefalt
+|Kommentar|Det bør være maksimalt én anbefalt kodetekst per språk/målform.
+|===
+
 ===== Kodeelement: begrep (dct:subject) [[Kodeelement-begrep]]
 
 [cols="30s,70d"]
@@ -57,19 +70,7 @@ Klassen _Kodeelement_ er anbefalt.
 |Kravsnivå|Anbefalt
 |===
 
-===== Kodeelement:kode (skos:notation) [[Kodeelement-kode]]
-
-[cols="30s,70d"]
-|===
-|Engelsk navn|code
-|URI|skos:notation
-|Range|rdfs:Literal
-|Beskrivelse|Brukes til å referere til representasjonen av kodeelementet, vanligvis kalt «koden».
-|Multiplisitet|0..1
-|Kravsnivå|Anbefalt
-|===
-
-===== Kodeelement:toppelement til (skos:topConceptOf) [[Kodeelement-toppelementTil]]
+===== Kodeelement: toppelement til (skos:topConceptOf) [[Kodeelement-toppelementTil]]
 
 [cols="30s,70d"]
 |===
@@ -84,7 +85,7 @@ Klassen _Kodeelement_ er anbefalt.
 ====  Valgfrie egenskaper for klassen _Kodeelement_ [[Valgfrie-egenskaper-Kodeelement]]
 
 
-===== Kodeelement:definisjon (skos:definition) [[Kodeelement-definisjon]]
+===== Kodeelement: definisjon (skos:definition) [[Kodeelement-definisjon]]
 
 [cols="30s,70d"]
 |===
@@ -97,7 +98,7 @@ Klassen _Kodeelement_ er anbefalt.
 |Kravsnivå|Valgfri
 |===
 
-===== Kodeelement:eksempel (skos:example) [[Kodeelement-eksempel]]
+===== Kodeelement: eksempel (skos:example) [[Kodeelement-eksempel]]
 
 [cols="30s,70d"]
 |===
@@ -112,7 +113,7 @@ Klassen _Kodeelement_ er anbefalt.
 
 
 
-===== Kodeelement:eksklusjonsmerknad (xkos:exclusionNote) [[Kodeelement-eksklusjonsmerknad]]
+===== Kodeelement: eksklusjonsmerknad (xkos:exclusionNote) [[Kodeelement-eksklusjonsmerknad]]
 
 [cols="30s,70d"]
 |===
@@ -125,7 +126,7 @@ Klassen _Kodeelement_ er anbefalt.
 |Kravsnivå|Valgfri
 |===
 
-===== Kodeelement:forrige kodeelement (xkos:previous) [[Kodeelement-forrigeKodeelement]]
+===== Kodeelement: forrige kodeelement (xkos:previous) [[Kodeelement-forrigeKodeelement]]
 
 [cols="30s,70d"]
 |===
@@ -152,7 +153,7 @@ Klassen _Kodeelement_ er anbefalt.
 |===
 
 
-===== Kodeelement:inklusjonsmerknad (xkos:inclusionNote) [[Kodeelement-inklusjonsmerknad]]
+===== Kodeelement: inklusjonsmerknad (xkos:inclusionNote) [[Kodeelement-inklusjonsmerknad]]
 
 [cols="30s,70d"]
 |===
@@ -166,7 +167,7 @@ Klassen _Kodeelement_ er anbefalt.
 |===
 
 
-===== Kodeelement:merknad (skos:note) [[Kodeelement-merknad]]
+===== Kodeelement: merknad (skos:note) [[Kodeelement-merknad]]
 
 [cols="30s,70d"]
 |===
@@ -178,7 +179,7 @@ Klassen _Kodeelement_ er anbefalt.
 |Kravsnivå|Valgfri
 |===
 
-===== Kodeelement:neste kodeelement (xkos:next) [[Kodeelement-nesteKodeelement]]
+===== Kodeelement: neste kodeelement (xkos:next) [[Kodeelement-nesteKodeelement]]
 
 [cols="30s,70d"]
 |===
@@ -190,7 +191,7 @@ Klassen _Kodeelement_ er anbefalt.
 |Kravsnivå|Valgfri
 |===
 
-===== Kodeelement:omfangsmerknad (skos:scopeNote) [[Kodeelement-omfangsmerknad]]
+===== Kodeelement: omfangsmerknad (skos:scopeNote) [[Kodeelement-omfangsmerknad]]
 
 [cols="30s,70d"]
 |===
@@ -204,7 +205,7 @@ Klassen _Kodeelement_ er anbefalt.
 |===
 
 
-===== Kodeelement:tillatt kodetekst (skos:altLabel) [[Kodeelement-tillattKodetekst]]
+===== Kodeelement: tillatt kodetekst (skos:altLabel) [[Kodeelement-tillattKodetekst]]
 
 [cols="30s,70d"]
 |===
