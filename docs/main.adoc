@@ -95,3 +95,5 @@ include::20b_EgenskaperTidsrom.adoc[]
 include::21_EgenskaperValg.adoc[]
 
 include::xx_Kontrollerte_vokabularer.adoc[]
+
+include::yy_Endringslogg.adoc[]
