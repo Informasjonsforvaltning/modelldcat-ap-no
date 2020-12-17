@@ -39,6 +39,7 @@ Under følger en oversikt over kontrollerte vokabular som skal brukes (= obligat
 |Navn på vokabularet|https://data.europa.eu/euodp/en/data/dataset/licence[Licences Named Authority List]
 |URI til vokabularet|http://publications.europa.eu/resource/dataset/licence
 |Kommentar|Kravet fra EU er forklart slik: "This vocabulary must be used in case the licence […​] is internationally recognised and included in the EU Publications Office NAL."
+|Status|Obligatorisk
 |===
 
 === For egenskapen dct:spatial [[Skal-brukes-for-spatial]]
