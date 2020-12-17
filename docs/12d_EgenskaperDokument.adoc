@@ -31,7 +31,7 @@ Klassen _Dokument_ er valgfri.
 ==== Valgfrie egenskaper for klassen _Dokument_ [[Valgfrie-egenskaper-Dokument]]
 
 
-===== Dokument:format (dct:format) [[Dokument-format]]
+===== Dokument: format (dct:format) [[Dokument-format]]
 
 [cols="30s,70d"]
 |===

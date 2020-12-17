@@ -6,7 +6,7 @@ Klassen _Abstraksjon_ er valgfri.
 
 ==== Anbefalte egenskaper for klassen _Abstraksjon_ [[Anbefalte-egenskaper-abstraksjon]]
 
-===== Abstraksjon:er abstraksjon av (modelldcatno:isAbstractionOf) [[Abstraksjon-erAbstraksjonAv]]
+===== Abstraksjon: er abstraksjon av (modelldcatno:isAbstractionOf) [[Abstraksjon-erAbstraksjonAv]]
 
 
 [cols="30s,70d"]

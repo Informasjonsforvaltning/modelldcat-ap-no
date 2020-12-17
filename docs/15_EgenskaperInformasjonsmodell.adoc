@@ -211,7 +211,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Kravsnivå|Valgfri
 |===
 
-===== Informasjonsmodell:finnes i format (dct:hasFormat) [[Informasjonsmodell-finnesIFormat]]
+===== Informasjonsmodell: finnes i format (dct:hasFormat) [[Informasjonsmodell-finnesIFormat]]
 
 [cols="30s,70d"]
 |===
