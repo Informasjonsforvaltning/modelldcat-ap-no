@@ -4,18 +4,6 @@ Klassen _Informasjonsmodell_ er obligatorisk
 
 ==== Obligatoriske egenskaper for klassen _Informasjonsmodell_ [[Obligatoriske-egenskaper-Informasjonsmodell]]
 
-===== Informasjonsmodell: beskrivelse (dct:description) [[Informasjonsmodell-beskrivelse]]
-
-[cols="30s,70d"]
-|===
-|Engelsk navn | description
-|URI|dct:description
-|Range|rdfs:Literal
-|Beskrivelse|Inneholder fritekstbeskrivelse av modellen. Bør gjentas når beskrivelsen finnes i flere ulike språk/målformer.
-|Multiplisitet|1..n
-|Kravsnivå|Obligatorisk
-|===
-
 =====  Informasjonsmodell: (dct:identifier) identifikator [[Informasjonsmodell-identifikator]]
 
 [cols="30s,70d"]
@@ -65,6 +53,18 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |URI|dct:subject
 |Range|skos:Concept
 |Beskrivelse|Referanse til sentrale begrep som er viktige for å forstå og tolke modellen. Representeres som URI-er.
+|Multiplisitet|0..n
+|Kravsnivå|Anbefalt
+|===
+
+===== Informasjonsmodell: beskrivelse (dct:description) [[Informasjonsmodell-beskrivelse]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn | description
+|URI|dct:description
+|Range|rdfs:Literal
+|Beskrivelse|Inneholder fritekstbeskrivelse av modellen. Bør gjentas når beskrivelsen finnes i flere ulike språk/målformer.
 |Multiplisitet|0..n
 |Kravsnivå|Anbefalt
 |===
