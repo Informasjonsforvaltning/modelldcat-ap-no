@@ -2,7 +2,7 @@
 
 Klassen _Komposisjon_ er valgfri
 
-==== Obligatoriske egenskaper for klassen _Komposisjon_ [[Obligatoriske-egenskaper-Komposisjon]]
+==== Anbefalte egenskaper for klassen _Komposisjon_ [[Anbefalte-egenskaper-Komposisjon]]
 
 ===== Komposisjon: inneholder (modelldcatno:contains) [[Komposisjon-inneholder]]
 
