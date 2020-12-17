@@ -14,5 +14,5 @@ Klassen _Samling_ er valgfri
 |Beskrivelse| Refererer til modellelementet som inngår som et medlem i en samling.
 |Subegenskap av| modelldcatno:hasType
 |Multiplisitet| 0..1
-|Status| Anbefalt
+|Kravsnivå| Anbefalt
 |===

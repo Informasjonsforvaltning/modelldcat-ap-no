@@ -14,5 +14,5 @@ Klassen _Assosiasjon_ er anbefalt.
 |Beskrivelse|Brukes til å referere til et modellelement som assosiasjonen peker til.
 |Subegenskap av|modelldcatno:hasType
 |Multiplisitet|0..1
-|Status|Anbefalt
+|Kravsnivå|Anbefalt
 |===

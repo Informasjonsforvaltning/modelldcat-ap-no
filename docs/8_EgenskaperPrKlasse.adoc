@@ -7,7 +7,7 @@
 |Beskrivelse|
 |URI|f
 |Referanse|
-|Status|Valgfri
+|Kravsnivå|Valgfri
 |===
 
 [cols="30s,70"]
@@ -16,7 +16,7 @@
 |Beskrivelse|
 |URI|f
 |Referanse|
-|Status|Valgfri
+|Kravsnivå|Valgfri
 |===
 
 [cols="30s,70"]
@@ -25,7 +25,7 @@
 |Beskrivelse|
 |URI|f
 |Referanse|
-|Status|Valgfri
+|Kravsnivå|Valgfri
 |===
 
 
@@ -39,7 +39,7 @@
 |URI|dqv:UserQualityFeedback
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:UserQualityFeedback[https://www.w3.org/TR/vocab-dqv/#dqv:UserQualityFeedback]
 |Subklasse av|dqv:QualityAnnotation
-|Status|Anbefalt
+|Kravsnivå|Anbefalt
 |Kommentar|  I tillegg til predefinerte `dqv:qualityAssessment` som er motivasjonen som skal brukes for alle kvalitetsnoter, bør en av predefinerte instanser av `oa:Motivation` brukes for å skille mellom ulike typer brukertilbakemeldinger, f.eks. 'classifications', 'questions'.
 |===
 
@@ -51,7 +51,7 @@
 |Beskrivelse|Brukes til å beskrive en tekstlig kvalitetsbeskrivelse.
 |URI|dqv:QualityAnnotation
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:QualityAnnotation[https://www.w3.org/TR/vocab-dqv/#dqv:QualityAnnotation]
-|Status|Anbefalt
+|Kravsnivå|Anbefalt
 |Kommentar|
 |===
 
@@ -63,7 +63,7 @@
 |Beskrivelse|Brukes til å beskrive et måleresultat.
 |URI|dqv:QualityMeasurement
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:QualityMeasurement[https://www.w3.org/TR/vocab-dqv/#dqv:QualityMeasurement]
-|Status|Anbefalt
+|Kravsnivå|Anbefalt
 |Kommentar|
 |===
 
@@ -82,7 +82,7 @@ Se https://informasjonsforvaltning.github.io/dcat-ap-no/#klasse-standard[beskriv
 |URI|dqvno:SubDimension
 |Subklasse av| dqv:Dimension
 |Referanse|
-|Status|Valgfri
+|Kravsnivå|Valgfri
 |Kommentar|Norsk utvidelse. DQV har ikke definert kvalitets**del**dimensjon som egen klasse, kun kvalitetsdimensjon (`dqv:Dimension`).
 
 Klassen brukes når man skal beskrive sin egen kvalitetsdeldimensjon, dvs. når man ikke bruker prederfinerte instanser av kvalitetsdeldimensjon.
@@ -96,7 +96,7 @@ Klassen brukes når man skal beskrive sin egen kvalitetsdeldimensjon, dvs. når 
 |Beskrivelse|Brukes til å beskrive en kvalitetsdimensjon.
 |URI|dqv:Dimension
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:Dimension[https://www.w3.org/TR/vocab-dqv/#dqv:Dimension]
-|Status|Valgfri
+|Kravsnivå|Valgfri
 |Kommentar| Klassen brukes når man skal beskrive sin egen kvalitetsdimensjon, dvs. når man ikke bruker prederfinerte instanser av kvalitetsdimensjon.
 |===
 
@@ -108,7 +108,7 @@ Klassen brukes når man skal beskrive sin egen kvalitetsdeldimensjon, dvs. når 
 |Beskrivelse|Brukes til å beskrive kvalitetsmål.
 |URI|dqv:Metric
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:Metric[https://www.w3.org/TR/vocab-dqv/#dqv:Metric]
-|Status|Valgfri
+|Kravsnivå|Valgfri
 |Kommentar|Klassen brukes når man skal beskrive sitt eget kvalitetsmål, dvs. når man ikke bruker prederfinerte instanser av kvalitetsmål.
 |===
 
@@ -121,7 +121,7 @@ Klassen brukes når man skal beskrive sin egen kvalitetsdeldimensjon, dvs. når 
 |URI|dqv:QualityCertificate
 |Subklasse av|dqv:QualityAnnotation
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:QualityCertificate[https://www.w3.org/TR/vocab-dqv/#dqv:QualityCertificate]
-|Status|Valgfri
+|Kravsnivå|Valgfri
 |Kommentar|Klassen brukes når  man skal beskrive sitt eget Kvalitetssertifikat, dvs. når man ikke bruker prederfinerte instanser av Kvalitetssertifikat.
 |===
 
@@ -133,7 +133,7 @@ Klassen brukes når man skal beskrive sin egen kvalitetsdeldimensjon, dvs. når 
 |Beskrivelse|Brukes til å beskrive intensjonen eller motivasjonen til en Kvalitetsnote.
 |URI|oa:Motivation
 |Referanse|https://www.w3.org/TR/annotation-vocab/#motivation[https://www.w3.org/TR/annotation-vocab/#motivation]
-|Status|Valgfri
+|Kravsnivå|Valgfri
 |Kommentar|Den predefinerte instansenen https://www.w3.org/TR/vocab-dqv/#dqv:qualityAssessment[`dqv:qualityAssessment`] skal brukes som motivasjon for kvalitetsbeskrivelse.
 |===
 
@@ -145,6 +145,6 @@ Klassen brukes når man skal beskrive sin egen kvalitetsdeldimensjon, dvs. når 
 |Beskrivelse|Brukes til å beskrive tekstdelen av en Kvalitetsnote.
 |URI|oa:TextualBody
 |Referanse|https://www.w3.org/TR/annotation-vocab/#textualbody[https://www.w3.org/TR/annotation-vocab/#textualbody]
-|Status|Valgfri
+|Kravsnivå|Valgfri
 |Kommentar|
 |===
