@@ -1,4 +1,4 @@
-= Endringslogg
+= Endringslogg [[Endringslogg]]
 
 == Endringer fra v.1.0 til v.1.1 [[Endringer_fra_V1.1]]
 
