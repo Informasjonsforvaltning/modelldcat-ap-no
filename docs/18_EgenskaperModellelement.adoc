@@ -33,6 +33,17 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Kravsnivå|Anbefalt
 |===
 
+===== Modellelement: begrensning (modelldcatno:constraint) [[Modellelement-begrensning]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|constraint
+|URI|modelldcatno:constraint
+|Range|modelldcatno:Property
+|Beskrivelse|Brukes til å beskrive begrensninger eller restriksjoner for bruken av et modellelement.
+|Multiplisitet|0..n
+|Kravsnivå|Anbefalt
+|===
 
 =====  Modellelement: identifikator (dct:identifier) [[modellelement-identifikator]]
 

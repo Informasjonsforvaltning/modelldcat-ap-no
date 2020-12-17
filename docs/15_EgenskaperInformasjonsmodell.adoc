@@ -186,6 +186,18 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Kravsnivå|Valgfri
 |===
 
+===== Informasjonsmodell: er profil av (prof:isProfileOf) [[Informasjonsmodell-erProfilAv]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|is profile of
+|URI|prof:isProfileOf
+|Range|dct:Standard
+|Beskrivelse|Refererer til en standard eller spesifikasjon som modellen er en profil av.
+|Multiplisitet|0..n
+|Kravsnivå|Valgfri
+|===
+
 =====  Informasjonsmodell: er erstattet av (dct:isReplacedBy) [[Informasjonsmodell-erErstattetAv]]
 
 [cols="30s,70d"]
@@ -260,6 +272,17 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Kravsnivå|Valgfri
 |===
 
+===== Informasjonsmodell: i samsvar med (dct:conformsTo) [[Informasjonsmodell-iSamsvarMed]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|conforms to
+|URI|dct:conformsTo
+|Range|dct:Standard
+|Beskrivelse|Referanse til en implementasjonsregel eller spesifikasjon, som ligger til grunn for opprettelsen av modellen.
+|Multiplisitet|0..n
+|Kravsnivå|Valgfri
+|===
 
 ===== Informasjonsmodell: modellstatus (adms:status) [[Informasjonsmodell-modellstatus]]
 
