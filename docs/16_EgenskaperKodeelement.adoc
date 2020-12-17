@@ -133,7 +133,7 @@ Klassen _Kodeelement_ er anbefalt.
 |URI|xkos:previous
 |Range|modelldcatno:CodeElement
 |Beskrivelse|Brukes til å referere til kodeelementet som kommer foran det aktuelle kodeelementet.
-|Multiplisitet|0..n
+|Multiplisitet|0..1
 |Kravsnivå|Valgfri
 |===
 
@@ -186,7 +186,7 @@ Klassen _Kodeelement_ er anbefalt.
 |URI|xkos:next
 |Range|modelldcatno:CodeElement
 |Beskrivelse|Brukes til å referere til kodeelementet som kommer etter det aktuelle kodeelementet.
-|Multiplisitet|0..n
+|Multiplisitet|0..1
 |Kravsnivå|Valgfri
 |===
 
