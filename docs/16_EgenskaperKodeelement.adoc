@@ -69,7 +69,7 @@ Klassen _Kodeelement_ er anbefalt.
 |Kravsnivå|Anbefalt
 |===
 
-===== Kodeelement:toppkonsept til (skos:topConceptOf) [[Kodeelement-toppkonseptTil]]
+===== Kodeelement:toppelement til (skos:topConceptOf) [[Kodeelement-toppelementTil]]
 
 [cols="30s,70d"]
 |===
