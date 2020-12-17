@@ -4,6 +4,18 @@ Klassen _Kodeelement_ er anbefalt.
 
 ==== Obligatoriske egenskaper for klassen _Kodeelement_ [[Obligatoriske-egenskaper-Kodeelement]]
 
+===== Kodeelement:i kodeliste (skos:inScheme) [[Kodeelement-iKodeliste]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|in scheme
+|URI|skos:inScheme
+|Range|modelldcatno:CodeList
+|Beskrivelse|Brukes til å referere til kodeliste som kodeelementet inngår i.
+|Multiplisitet|1..n
+|Kravsnivå|Obligatorisk
+|===
+
 ===== Kodeelement:anbefalt kodetekst (skos:prefLabel) [[Kodeelement-anbefaltKodetekst]]
 
 [cols="30s,70d"]
@@ -16,18 +28,6 @@ Klassen _Kodeelement_ er anbefalt.
 |Multiplisitet|1..n
 |Kravsnivå|Obligatorisk
 |Kommentar|Det bør være maksimalt én anbefalt kodetekst per språk/målform.
-|===
-
-===== Kodeelement:i kodeliste (skos:inScheme) [[Kodeelement-iKodeliste]]
-
-[cols="30s,70d"]
-|===
-|Engelsk navn|in scheme
-|URI|skos:inScheme
-|Range|modelldcatno:CodeList
-|Beskrivelse|Brukes til å referere til kodeliste som kodeelementet inngår i.
-|Multiplisitet|0..n
-|Kravsnivå|Obligatorisk
 |===
 
 ===== Kodeelement: identifikator (dct:identifier) [[kodeelement-identifikator]]
@@ -118,7 +118,7 @@ Klassen _Kodeelement_ er anbefalt.
 |===
 |Engelsk navn|exclusion note
 |URI|xkos:exclusionNote
-|Range|rdfs:literal
+|Range|rdfs:Literal
 |Beskrivelse|Brukes til å referere til merknad om hva som er ekskludert i kodeelementet. Bør gjentas når merknaden finnes i flere ulike språk/målformer.
 |Subegenskap av|skos:scopeNote
 |Multiplisitet|0..*

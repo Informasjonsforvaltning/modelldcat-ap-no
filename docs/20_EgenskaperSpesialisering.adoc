@@ -1,4 +1,4 @@
-=== Spesialisering [[Spesialisering-egenskaper]]
+=== Spesialisering (modelldcatno:Specialization) [[Spesialisering-egenskaper]]
 
 Klassen _Spesialisering_ er anbefalt
 

@@ -9,6 +9,7 @@ Klassen _Valg_ er valgfri.
 
 [cols="30s,70d"]
 |===
+|Engelsk navn| has some
 |URI|modelldcatno:hasSome
 |Range|modelldcatno:ModelElement
 |Beskrivelse|Brukes til å beskrive hvilke modellelementer som det kan velges blant i en gruppe av valgbare modellelementer.
