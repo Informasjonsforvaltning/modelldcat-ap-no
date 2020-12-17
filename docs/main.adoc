@@ -78,6 +78,8 @@ include::17b_EgenskaperKomposisjon.adoc[]
 
 include::18_EgenskaperModellelement.adoc[]
 
+include::18a_EgenskaperNote.adoc[]
+
 include::18b_EgenskaperRealisering.adoc[]
 
 include::19_EgenskaperRolle.adoc[]
