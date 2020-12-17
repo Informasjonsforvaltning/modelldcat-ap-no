@@ -86,6 +86,8 @@ include::19b_EgenskaperSamling.adoc[]
 
 include::20_EgenskaperSpesialisering.adoc[]
 
+include::20a_EgenskaperStandard.adoc[]
+
 include::20b_EgenskaperTidsrom.adoc[]
 
 include::21_EgenskaperValg.adoc[]

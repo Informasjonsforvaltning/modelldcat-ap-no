@@ -368,6 +368,17 @@ Klasse som representerer modellen som skal utveksles.
 |Kravsnivå|Valgfri
 |===
 
+=== Standard (dct:Standard) [[klasse-standard]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Standard
+|Beskrivelse|Brukes til å representere en standard eller spesifikasjon som en ressurs er i samsvar med.
+|URI|https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Standard[dct:Standard]
+|Kravsnivå|Valgfri
+|Kommentar|Informasjonsmodell er en subklasse av Standard.  Fra f.eks. et datasett (dcat:Dataset) kan det derfor refereres til en informasjonsmodell vha. https://data.norge.no/specification/dcat-ap-no/#Datasett-iSamsvarMed[dct:conformsTo].
+|===
+
 === Valg (modelldcatno:Choice) [[klasse-valg]]
 
 [cols="30s,70"]
