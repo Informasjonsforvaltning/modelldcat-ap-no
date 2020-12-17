@@ -16,7 +16,7 @@ Under følger en oversikt over kontrollerte vokabular som skal brukes (= obligat
 |Brukt i klasse|Dokument (foaf:Document)
 |Navn på vokabularet|https://data.europa.eu/euodp/en/data/dataset/file-type[File Type Named Authority List]
 |URI til vokabularet|http://publications.europa.eu/resource/authority/file-type
-|Status|Obligatorisk
+|Kravsnivå|Obligatorisk
 |===
 
 === For egenskapen dct:language [[Skal-brukes-for-language]]
@@ -27,7 +27,7 @@ Under følger en oversikt over kontrollerte vokabular som skal brukes (= obligat
 |Brukt i klasse|Modellkatalog (dcat:Catalog); Informasjonsmodell (modelldcatno:InformationModel); Dokument (foaf:Document)
 |Navn på vokabularet|https://data.europa.eu/euodp/en/data/dataset/language[Languages Named Authority List]
 |URI til vokabularet|http://publications.europa.eu/resource/authority/language
-|Status|Obligatorisk
+|Kravsnivå|Obligatorisk
 |===
 
 === For egenskapen dct:license [[Skal-brukes-for-license]]
@@ -39,6 +39,7 @@ Under følger en oversikt over kontrollerte vokabular som skal brukes (= obligat
 |Navn på vokabularet|https://data.europa.eu/euodp/en/data/dataset/licence[Licences Named Authority List]
 |URI til vokabularet|http://publications.europa.eu/resource/dataset/licence
 |Kommentar|Kravet fra EU er forklart slik: "This vocabulary must be used in case the licence […​] is internationally recognised and included in the EU Publications Office NAL."
+|Kravsnivå|Obligatorisk
 |===
 
 === For egenskapen dct:spatial [[Skal-brukes-for-spatial]]
@@ -55,7 +56,7 @@ http://sws.geonames.org/[GeoNames]
 http://publications.europa.eu/resource/dataset/country; +
 http://publications.europa.eu/resource/dataset/place; +
 http://sws.geonames.org/
-|Status|Obligatorisk
+|Kravsnivå|Obligatorisk
 |===
 
 === For egenskapen adms:status [[Skal-brukes-for-status]]
@@ -66,7 +67,7 @@ http://sws.geonames.org/
 |Brukt i klasse|Informasjonsmodell (modelldcatno:InformationModel)
 |Navn på vokabularet|http://purl.org/adms/status/[ADMS Status vocabulary (i RDF)]
 |URI til vokabularet|http://purl.org/adms/status/[http://purl.org/adms/status/]
-|Status|Obligatorisk
+|Kravsnivå|Obligatorisk
 |===
 
 === For egenskapen dct:type [[Skal-brukes-for-type]]
@@ -77,7 +78,7 @@ http://sws.geonames.org/
 |Brukt i klasse|Aktør (foaf:Agent)
 |Navn på vokabularet|http://purl.org/adms/publishertype/[ADMS publisher type vocabulary (i RDF)]. Listen over termer i ADMS publisher type er inkludert i ADMS-spesifikasjonen, https://joinup.ec.europa.eu/solution/asset-description-metadata-schema-adms[Asset Description Metadata Schema (ADMS)]
 |URI til vokabularet|http://purl.org/adms/publishertype/[http://purl.org/adms/publishertype/]
-|Status|Obligatorisk
+|Kravsnivå|Obligatorisk
 |===
 
 [cols="30s,70d"]
@@ -86,7 +87,7 @@ http://sws.geonames.org/
 |Brukt i klasse|Lisensdokument (dct:LicenseDocument)
 |Navn på vokabularet|http://purl.org/adms/licencetype/[ADMS licence type vocabulary (i RDF)]
 |URI til vokabularet|http://purl.org/adms/licencetype/[http://purl.org/adms/licencetype/]
-|Status|Obligatorisk
+|Kravsnivå|Obligatorisk
 |===
 
 == Kontrollerte vokabularer som bør og kan brukes [[Kontrollerte-vobakularer-som-bør-brukes]]
@@ -99,7 +100,7 @@ http://sws.geonames.org/
 |Brukt i klasse|Informasjonsmodell (modelldcatno:InformationModel)
 |Navn på vokabularet|https://psi.norge.no/los/[Los - felles vokabular for å kategorisere og beskrive offentlige tjenester og ressurser]
 |URI til vokabularet|https://psi.norge.no/los/all.rdf
-|Status|Anbefalt
+|Kravsnivå|Anbefalt
 |===
 
 === For egenskapen dcat:themeTaxonomy [[Bør-brukes-for-themeTaxonomy]]
@@ -110,5 +111,5 @@ http://sws.geonames.org/
 |Brukt i klasse|Modellkatalog (dcat:Catalog)
 |Navn på vokabularet|https://psi.norge.no/los/[Los - felles vokabular for å kategorisere og beskrive offentlige tjenester og ressurser]
 |URI til vokabularet|https://psi.norge.no/los/all.rdf
-|Status|Anbefalt
+|Kravsnivå|Anbefalt
 |===

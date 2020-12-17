@@ -7,19 +7,6 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 ==== Obligatoriske egenskaper for klassen _Modellelement_ [[Obligatoriske-egenskaper-Modellelement]]
 
 
-=====  Modellelement: identifikator (dct:identifier) [[modellelement-identifikator]]
-
-[cols="30s,70d"]
-|===
-|Engelsk navn| identifier
-|URI|dct:identifier
-|Range|rdfs:Literal
-|Beskrivelse|Unik og persistent identifisering av et modellelement.
-|Multiplisitet|1..1
-|Status|Obligatorisk
-|===
-
-
 ===== Modellelement: tittel (dct:title) [[Modellelement-tittel]]
 
 [cols="30s,70d"]
@@ -29,7 +16,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Range|rdfs:Literal
 |Beskrivelse|Navn på modellelement. Bør gjentas når navnet finnes i flere ulike språk/målformer.
 |Multiplisitet|1..n
-|Status|Obligatorisk
+|Kravsnivå|Obligatorisk
 |===
 
 ====  Anbefalte egenskaper for klassen _Modellelement_ [[Anbefalte-egenskaper-Modellelement]]
@@ -43,7 +30,20 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Range|skos:Concept
 |Beskrivelse|Referanse til sentralt begrep som er viktig for å forstå og tolke modellelementet. Representeres som URI-er.
 |Multiplisitet|0..1
-|Status|Anbefalt
+|Kravsnivå|Anbefalt
+|===
+
+
+=====  Modellelement: identifikator (dct:identifier) [[modellelement-identifikator]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| identifier
+|URI|dct:identifier
+|Range|rdfs:Literal
+|Beskrivelse|Unik og persistent identifisering av et modellelement.
+|Multiplisitet|0..1
+|Kravsnivå|Anbefalt
 |===
 
 
@@ -56,7 +56,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Range|modelldcatno:Property
 |Beskrivelse|Egenskapen til et modellelement.
 |Multiplisitet|0..n
-|Status|Anbefalt
+|Kravsnivå|Anbefalt
 |===
 
 
@@ -72,7 +72,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Range|rdfs:Literal
 |Beskrivelse|Fritekstbeskrivelse av modellelementet. Bør gjentas når beskrivelsen finnes i flere ulike språk/målformer.
 |Multiplisitet|0..n
-|Status|Valgfri
+|Kravsnivå|Valgfri
 |===
 
 =====  Modellelement: tilhører modul (modelldcatno:belongsToModule) [[Modellelement-tilhørerModul]]
@@ -83,7 +83,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |URI|modelldcatno:belongsToModule
 |Range|rdfs:Literal or xsd:anyURI
 |Beskrivelse|Beskriver hvilken modellmodul/delmodell et modellelement inngår i.
-|Multiplisitet|0..1
-|Status|Valgfri
+|Multiplisitet|0..n
+|Kravsnivå|Valgfri
 |Kommentar|Modeller kan bestå av moduler, som beslektede modellelementer er gruppert under.
 |===

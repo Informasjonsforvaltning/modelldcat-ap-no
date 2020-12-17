@@ -13,7 +13,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Range| rdfs:Literal
 |Beskrivelse| Fritekst-beskrivelse av innholdet i katalogen. Bør gjentas når beskrivelsen finnes i flere ulike språk/målformer.
 |Multiplisitet| 1..n
-|Status| Obligatorisk
+|Kravsnivå| Obligatorisk
 |===
 
 ===== Modellkatalog: har del (dct:hasPart) [[Modellkatalog-harDel]]
@@ -25,7 +25,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Range| dcat:Resource
 |Beskrivelse| Brukes til å referere til en katalogisert ressurs eller en annen katalog.
 |Multiplisitet| 1..n
-|Status| Obligatorisk
+|Kravsnivå| Obligatorisk
 |Kommentar | dcat:Resource er en abstrakt klasse og skal i en konkret anvendelse erstattes med en en instans av dcat:Catalog (en Modellkatalog) eller en instans av modelldcatno:InformatoinModel (en Informasjonsmodell).
 |===
 
@@ -38,7 +38,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Range| rdfs:Literal
 |Beskrivelse| Refererer til identifikatoren av katalogen.
 |Multiplisitet| 1..1
-|Status| Obligatorisk
+|Kravsnivå| Obligatorisk
 |===
 
 ===== Modellkatalog: tittel (dct:title) [[Modellkatalog-tittel]]
@@ -50,7 +50,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Range| rdfs:Literal
 |Beskrivelse| Inneholder navnet på katalogen. Bør gjentas når navnet finnes i flere ulike språk/målformer.
 |Multiplisitet| 1..n
-|Status| Obligatorisk
+|Kravsnivå| Obligatorisk
 |===
 
 ===== Modellkatalog: utgiver (dct:publisher) [[Modellkatalog-utgiver]]
@@ -62,7 +62,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Range| foaf:Agent
 |Beskrivelse| Refererer til en aktør (organisasjon) som er ansvarlig for å gjøre katalogen tilgjengelig. Bør være autoritativ URI for aktøren, sekundært organisasjonsnummer.
 |Multiplisitet| 1..1
-|Status| Obligatorisk
+|Kravsnivå| Obligatorisk
 |===
 
 ==== Anbefalte egenskaper for klassen _Modellkatalog_ [[Anbefalte-egenskaper-Modellkatalog]]
@@ -76,7 +76,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Range| rdfs:Literal typed as xsd:date or xsd:dateTime
 |Beskrivelse| Dato for siste oppdatering/endring av katalogen.
 |Multiplisitet| 0..1
-|Status| Anbefalt
+|Kravsnivå| Anbefalt
 |===
 
 ===== Modellkatalog: hjemmeside (foaf:homepage) [[Modellkatalog-hjemmeside]]
@@ -88,7 +88,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Range| foaf:Document
 |Beskrivelse| Nettside som fungerer som hovedside for modellkatalogen.
 |Multiplisitet| 0..n
-|Status| Anbefalt
+|Kravsnivå| Anbefalt
 |===
 
 ===== Modellkatalog: lisens (dct:license) [[Modellkatalog-lisens]]
@@ -100,7 +100,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Range| dct:LicenseDocument
 |Beskrivelse| Viser til lisens for modellkatalogen som beskriver hvordan den kan viderebrukes.
 |Multiplisitet| 0..1
-|Status| Anbefalt
+|Kravsnivå| Anbefalt
 |===
 
 ===== Modellkatalog: modell (modelldcatno:model) [[Modellkatalog-modell]]
@@ -113,7 +113,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Beskrivelse| Kobler katalogen til informasjonsmodeller som er en del av katalogen.
 |Subegenskap av | dct:hasPart
 |Multiplisitet| 0..n
-|Status| Anbefalt
+|Kravsnivå| Anbefalt
 |Kommentar | Når en Modellkatalog må ha minst én instans av dcat:Resource (jf. <<Modellkatalog-harDel, Modellkatalog: har del>>), og modelldcatno:InformationModel i denne spesifikasjonen er den eneste subklasse av dcat:Resource (jf. <<Forenklet-modell, UML-modellen>>), vil det i realiteten bety at en Modellkatalog skal inneholde minst én instans av modelldcatno:InformationModel, selv om denne egenskap er anbefalt og har multiplisitet 0..n.
 |===
 
@@ -126,7 +126,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Range| dct:LinguisticSystem
 |Beskrivelse| Referanse til språket som katalogen er på. Kan repeteres dersom det er flere språk i katalogen.
 |Multiplisitet| 0..n
-|Status| Anbefalt
+|Kravsnivå| Anbefalt
 |===
 
 ===== Modellkatalog: utgivelsesdato (dct:issued) [[Modellkatalog-utgivelsesdato]]
@@ -138,7 +138,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Range| rdfs:Literal typed as xsd:date or xsd:dateTime
 |Beskrivelse| Dato for formell utgivelse (publisering) av katalogen.
 |Multiplisitet| 0..1
-|Status| Anbefalt
+|Kravsnivå| Anbefalt
 |===
 
 ==== Valgfrie egenskaper for klassen _Modellkatalog_ [[Valgfrie-egenskaper-Modellkatalog]]
@@ -152,7 +152,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Range| dct:Location
 |Beskrivelse| Referanse til et geografisk område som er dekket av katalogen.
 |Multiplisitet| 0..n
-|Status| Valgfri
+|Kravsnivå| Valgfri
 |===
 
 ===== Modellkatalog: er del av (dct:isPartOf) [[Modellkatalog-erDelAv]]
@@ -164,7 +164,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Range| dcat:Catalog
 |Beskrivelse| Referanse til en beslektet katalog som denne katalogen fysisk eller logisk er inkludert i.
 |Multiplisitet| 0..1
-|Status| Valgfri
+|Kravsnivå| Valgfri
 |===
 
 ===== Modellkatalog: temaer (dcat:themeTaxonomy) [[Modellkatalog-temaer]]
@@ -176,5 +176,5 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Range| skos:ConceptScheme
 |Beskrivelse| Refererer til et kunnskapsorganiseringssystem (KOS) som er brukt for å klassifisere katalogens informasjonsmodeller.
 |Multiplisitet| 0..n
-|Status| Valgfri
+|Kravsnivå| Valgfri
 |===

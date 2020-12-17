@@ -16,7 +16,7 @@ NOTE: Egenskapene til `modelldcatno:Attribute` er med unntak av `modelldcatno:ha
 |Beskrivelse| Angir at attributtet har en datatype som type.
 |Subegenskap av |modelldcatno:hasType
 |Multiplisitet| 0..1
-|Status| Anbefalt
+|Kravsnivå| Anbefalt
 |===
 
 ===== Attributt: har enkeltype (modelldcatno:hasSimpleType) [[Attributt-harEnkelType]]
@@ -29,7 +29,7 @@ NOTE: Egenskapene til `modelldcatno:Attribute` er med unntak av `modelldcatno:ha
 |Beskrivelse| Angir at attributtet har en enkeltype som type.
 |Subegenskap av|modelldcatno:hasType
 |Multiplisitet| 0..1
-|Status| Anbefalt
+|Kravsnivå| Anbefalt
 |===
 
 ===== Attributt: inneholder objekttype (modelldcatno:containsObjectType) [[Attributt-inneholderObjekttype]]
@@ -42,7 +42,7 @@ NOTE: Egenskapene til `modelldcatno:Attribute` er med unntak av `modelldcatno:ha
 |Beskrivelse| Angir at attributtet har en objekttype som type.
 |Subegenskap av	| modelldcatno:hasType
 |Multiplisitet| 0..1
-|Status| Anbefalt
+|Kravsnivå| Anbefalt
 |===
 
 ===== Attributt: har verdier fra (modelldcatno:hasValueFrom) [[Attributt-harVerdierFra]]
@@ -55,5 +55,5 @@ NOTE: Egenskapene til `modelldcatno:Attribute` er med unntak av `modelldcatno:ha
 |Beskrivelse| Angir at attributtet har en kodeliste som type.
 |Subegenskap av	| modelldcatno:hasType
 |Multiplisitet| 0..1
-|Status| Anbefalt
+|Kravsnivå| Anbefalt
 |===
