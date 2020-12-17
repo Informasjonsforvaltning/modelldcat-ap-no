@@ -20,14 +20,14 @@ include::locale/attributes.adoc[]
 NOTE: *Innmelding av feil og mangler:* +
 Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på https://github.com/Informasjonsforvaltning/modelldcat-ap-no/issues[Github Issues]. Dersom du ikke allerede har bruker på Github kan du opprette bruker gratis.
 
-*Status*: Under utvikling +
-*Versjon*: 1.1 +
-*Publisert*: løpende oppdatgert  +
+*Status*: [yellow-background]#Under utvikling# +
+*Versjon*: 1.1 (se <<Endringslogg, endringsloggen>>)+
+*Publisert*: [yellow-background]#Løpende oppdatert#  +
 *Gjeldende versjon*: https://data.norge.no/specification/modelldcat-ap-no/ +
 *Forrige versjon*: ingen +
 *Redaktørens utkast*: https://informasjonsforvaltning.github.io/modelldcat-ap-no/
 
-*Ontologi*: Gjeldende versjon av ontologien blir publisert til https://data.norge.no/vocabulary/modelldcatno#. Redaktørens utkast til ontologien er tilgjengelig på https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/review/ontology/[Github].
+*Ontologi*: Gjeldende versjon av ontologien blir publisert til https://data.norge.no/vocabulary/modelldcatno#. Redaktørens utkast til ontologien er tilgjengelig på https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/ontology/[Github].
 
 Denne spesifikasjonen skal sikre at beskrivelser av informasjonsmodeller utføres på en felles, strukturert måte og i en maskinlesbar form. Spesifikasjonen stiller krav til hva som _skal_, _bør_ og _kan_ være med i beskrivelsene, med spesifikasjon av dataformat.
 
@@ -78,6 +78,8 @@ include::17b_EgenskaperKomposisjon.adoc[]
 
 include::18_EgenskaperModellelement.adoc[]
 
+include::18a_EgenskaperNote.adoc[]
+
 include::18b_EgenskaperRealisering.adoc[]
 
 include::19_EgenskaperRolle.adoc[]
@@ -86,8 +88,12 @@ include::19b_EgenskaperSamling.adoc[]
 
 include::20_EgenskaperSpesialisering.adoc[]
 
+include::20a_EgenskaperStandard.adoc[]
+
 include::20b_EgenskaperTidsrom.adoc[]
 
 include::21_EgenskaperValg.adoc[]
 
 include::xx_Kontrollerte_vokabularer.adoc[]
+
+include::yy_Endringslogg.adoc[]

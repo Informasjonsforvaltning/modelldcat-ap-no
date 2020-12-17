@@ -1,0 +1,43 @@
+= Endringslogg [[Endringslogg]]
+
+== Endringer fra v.1.0 til v.1.1 [[Endringer_fra_V1.1]]
+
+
+Tabellen under gir en oversikt over endringene i klasser og egenskaper, fra v.1.0 til v.1.1 av ModellDCAT-AP-NO. Redaksjonelle endringer av tekster (inkl. engelske navn, tekstlige beskrivelser, kommentarer og eksempler) er ikke tatt med i oversikten.
+
+[cols="15,15,35,35"]
+|===
+|*Klasse-/egenskapsnavn*|*URI for klassen/egenskapen*|*Endring*|*Forklaring*
+|Egenskap: identifikator|dct:identifier|Endret fra obligatorisk til anbefalt|For strengt å ha dette som obligatorisk når egenskapene som RDF-ressurser i tillegg tildeles egne URI’er.
+|Egenskap: identifikator|dct:identifier|Multiplisitet endret fra 1..1 til 0..1|Som følge av at kravsnivå endres fra obligatorisk til anbefalt.
+|Egenskap: navigerbar|modelldcatno:navigable|Ny egenskap|For å gi en bedre beskrivelse av retninger på relasjoner, som f.eks. roller, komposisjoner og samlinger.
+|Informasjonsmodell: beskrivelse|dct:description|Endret fra obligatorisk til anbefalt|For strengt å ha dette som en obligatorisk egenskap. Flere virksomheter har ikke tekstlige beskrivelser av modellene sine.
+|Informasjonsmodell: beskrivelse|dct:description|Multiplisitet endret fra 1..n til 0..n|Som følge av at kravsnivå endres fra obligatorisk til anbefalt.
+|Informasjonsmodell: er profil av|prof:isProfileOf|Ny egenskap|En del modeller er profiler av standarder eller spesifikasjoner. Dette kan gi bedre forståelse av modellene og nyttig når man sammenligner eller gjenbruker fra andre modeller.
+|Informasjonsmodell: i samsvar med|dct:conformsTo|Ny egenskap|En del modeller bygger på standarder eller spesifikasjoner. Dette kan gi bedre forståelse av modellene og nyttig når man sammenligne eller gjenbruke fra andre modeller.
+|Informasjonsmodell: identifikator|dct:identifier|Endret fra obligatorisk til anbefalt|For strengt å ha dette som en obligatorisk egenskap når egenskapene som RDF-ressurser i tillegg tildeles egne URI’er.
+|Informasjonsmodell: identifikator|dct:identifier|Multiplisitet endret fra 1..1 til 0..1|Som følge av at kravsnivå endres fra obligatorisk til anbefalt.
+|Informasjonsmodell: tema|dcat:theme|Endret fra obligatorisk til anbefalt|For strengt å ha dette som en obligatorisk egenskap. Det er ikke alle virksomheter som har kategorisert modellene sine etter tema.
+|Informasjonsmodell: tema|dcat:theme|Multiplisitet endret fra 1..n til 0..n|Som følge av at kravsnivå endres fra obligatorisk til anbefalt.
+|Kodeelement: anbefalt kodetekst|skos:prefLabel|Endret fra obligatorisk til anbefalt|Det er ikke alle kodeelementer som har en anbefalt kodetekst knyttet til seg. For eksempel vil UML enumerasjoner inneholde bare kodeverdier.
+|Kodeelement: anbefalt kodetekst|skos:prefLabel|Multiplisitet endret fra 1..n til 0..n|Som følge av at kravsnivå endres fra obligatorisk til anbefalt.
+|Kodeelement: i kodeliste|skos:inScheme|Multiplisitet endret fra 0..n til 1..n|Skrivefeil i forrige versjon. Det bør være et krav at et kodeelement tilhører minst en kodeliste, slik at man unngår at modellene inneholder kodeelementer uten tilhørighet.
+|Kodeelement: identifikator|dct:identifier|Endret fra obligatorisk til anbefalt|For strengt å ha dette som en obligatorisk egenskap når kodeelementene som RDF-ressurser i tillegg tildeles egne URI’er.
+|Kodeelement: identifikator|dct:identifier|Multiplisitet endret fra 1..1 til 0..1|Som følge av at kravsnivå endres fra obligatorisk til anbefalt.
+|Kodeelement: kode|skos:notation|Endret fra valgfri til obligatorisk|Det bør være et krav at et kodeelement har en kode som kan brukes i et datafelt.
+|Kodeelement: kode|skos:notation|Multiplisitet endret fra 0..1 til 1..1|Som følge av at kravsnivå endres fra anbefalt til obligatorisk.
+|Modellelement: identifikator|dct:identifier|Endret fra obligatorisk til anbefalt|Strengt For strengt å ha dette som en obligatorisk egenskap når modellelementene som RDF-ressurser i tillegg tildeles egne URI’er.
+|Modellelement: identifikator|dct:identifier|Multiplisitet endret fra 1..1 til 0..1|Som følge av at kravsnivå endres fra obligatorisk til anbefalt.
+|Modellelement: tilhører modul|modelldcatno:belongsToModule|Multiplisitet endret fra 0..1 til 0..n|Ett og samme modellelement kan tilhøre ulike moduler.
+|Egenskap: tilhører modul|modelldcatno:belongsToModule|Multiplisitet endret fra 0..1 til 0..n|En og samme egenskap kan tilhøre ulike moduler.
+|Standard|dct:Standard|Hele klassen er ny|Brukes som range for dct:conformsTo og prof:isProfileOf, og som referanse fra f.eks. et dcat:Dataset til en informasjonsmodell som beskriver datasettet.
+|Egenskap: begrensning|modelldcatno:constraint|Ny egenskap|Gir en bedre forståelse av bruken av en egenskap.
+|Egenskap: enten eller|modelldcatno:xor|Ny egenskap|Definert som en subegenskap til modelldcatno:constraint, siden dette er en begrensning som benyttes hyppig.
+|Egenskap: eller|modelldcatno:or|Ny egenskap|Definert som en subegenskap til modelldcatno:constraint, siden dette er en begrensning som benyttes hyppig.
+|Modellelement: begrensning|modelldcatno:constraint|Ny egenskap|Gir en bedre forståelse av bruken av et modellelement.
+|Kodeelement: toppelement til|skos:topConceptOf|Endret norsk term|Bedre dekkende navn.
+|Komposisjon|modelldcatno:Composition|Endring i tekst i oversikt over egenskaper per klasse.|Skrivefeil.  Det står at klassen har obligatoriske egenskaper. Dette stemmer ikke, den har kun én egenskap med kravsnivå anbefalt.
+|Note:anmerkning|modelldcatno:propertyNote|Manglende beskrivelse.|Skrivefeil.
+|Kodeelement: neste kodeelement|xkos:next|Endret multiplisitet, fra o..n til 0..1.|Skrivefeil
+|Kodeelement: forrige kodeelement|xkos:previous|Endret multiplisitet, fra o..n til 0..1.|Skrivefeil
+|===

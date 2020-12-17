@@ -114,7 +114,7 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Subegenskap av | dct:hasPart
 |Multiplisitet| 0..n
 |Kravsnivå| Anbefalt
-|Kommentar | Når en Modellkatalog må ha minst én instans av dcat:Resource (jf. <<Modellkatalog-harDel, Modellkatalog: har del>>), og modelldcatno:InformationModel i denne spesifikasjonen er den eneste subklasse av dcat:Resource (jf. <<Forenklet-modell, UML-modellen>>), vil det i realiteten bety at en Modellkatalog skal inneholde minst én instans av modelldcatno:InformationModel, selv om denne egenskap er anbefalt og har multiplisitet 0..n.
+|Kommentar | En Modellkatalog skal ha minst én instans av dcat:Resource (jf. <<Modellkatalog-harDel, Modellkatalog: har del>>). Informasjonsmodell (modelldcatno:InformationModel) og Modellkatalog (dcat:Catalog) er i denne spesifikasjonen subklasser av dcat:Resource (jf. <<Forenklet-modell, UML-modellen>>). Med mindre man skal ha en Modellkatalog som bare består av andre Modellkataloger, skal en Modellkatalog inneholde minst én instans av modelldcatno:InformationModel, selv om denne egenskap er anbefalt og har multiplisitet 0..n.
 |===
 
 ===== Modellkatalog: språk (dct:language) [[Modellkatalog-språk]]

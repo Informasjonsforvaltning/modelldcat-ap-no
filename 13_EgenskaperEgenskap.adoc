@@ -18,6 +18,44 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Kravsnivå| Anbefalt
 |===
 
+===== Egenskap: begrensning (modelldcatno:constraint) [[Egenskap-begrensning]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|constraint
+|URI|modelldcatno:constraint
+|Range|modelldcatno:Property
+|Beskrivelse|Brukes til å beskrive begrensninger eller restriksjoner for bruken av en egenskap.
+|Multiplisitet|0..n
+|Kravsnivå|Anbefalt
+|===
+
+===== Egenskap: enten eller (modelldcatno:xor) [[Egenskap-entenEller]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|exclusive or
+|URI|modelldcatno:xor
+|Range|modelldcatno:Property
+|Beskrivelse|Brukes til å beskrive begrensning som kan settes mellom to eller flere egenskaper til et modellelement, der kun én av dem kan opptre samtidig (ekslusiv eller).
+|Subegenskap av|modelldcatno:constraint
+|Multiplisitet|0..n
+|Kravsnivå|Anbefalt
+|===
+
+===== Egenskap: eller (modelldcatno:or) [[Egenskap-eller]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|or
+|URI|modelldcatno:or
+|Range|modelldcatno:Property
+|Beskrivelse|Brukes til å beskrive begrensning som kan settes mellom to eller flere egenskaper til et modellelement, der minst én av dem må opptre (inklusiv eller).
+|Subegenskap av|modeldcatno:constraint
+|Multiplisitet|0..n
+|Kravsnivå|Anbefalt
+|===
+
 ===== Egenskap: identifikator (dct:identifier) [[Egenskap-identifikator]]
 
 [cols="30s,70d"]
@@ -28,6 +66,18 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Beskrivelse| Unik og persistent identifisering av en egenskap.
 |Multiplisitet| 0..1
 |Kravsnivå| Anbefalt
+|===
+
+===== Egenskap: navigerbar (modelldcatno:navigable) [[Egenskap-navigerbar]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|navigable
+|URI|modelldcatno:navigable
+|Range|xsd:boolean
+|Beskrivelse|Angir om en egenskap er navigerbar eller ikke.
+|Multiplisitet|0..1
+|Kravsnivå|Anbefalt
 |===
 
 ===== Egenskap: nedre multiplisitet (xsd:minOccurs) [[Egenskap-nedreMultiplisitet]]
