@@ -29,18 +29,6 @@ Klassen _Kodeelement_ er anbefalt.
 |===
 
 
-===== Kodeelement: identifikator (dct:identifier) [[kodeelement-identifikator]]
-
-[cols="30s,70d"]
-|===
-|Engelsk navn | identifier
-|URI|dct:identifier
-|Range|rdfs:Literal
-|Beskrivelse|Unik og persistent identifisering av en kode.
-|Multiplisitet|1..1
-|Kravsnivå|Obligatorisk
-|===
-
 
 ==== Anbefalte egenskaper for klassen _Kodeelement_ [[Anbefalte-egenskaper-Kodeelement]]
 
@@ -66,6 +54,18 @@ Klassen _Kodeelement_ er anbefalt.
 |URI|dct:subject
 |Range|skos:Concept
 |Beskrivelse|Referanse til sentralt begrep som er viktig for å forstå og tolke koden. Representeres som URI-er.
+|Multiplisitet|0..1
+|Kravsnivå|Anbefalt
+|===
+
+===== Kodeelement: identifikator (dct:identifier) [[kodeelement-identifikator]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn | identifier
+|URI|dct:identifier
+|Range|rdfs:Literal
+|Beskrivelse|Unik og persistent identifisering av en kode.
 |Multiplisitet|0..1
 |Kravsnivå|Anbefalt
 |===

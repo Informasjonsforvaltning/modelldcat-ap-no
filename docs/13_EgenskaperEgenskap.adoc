@@ -4,20 +4,6 @@ Klassen _Egenskap_ er anbefalt.
 
 Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av spesialiseringene.
 
-==== Obligatoriske egenskaper for klassen _Egenskap_ [[Obligatoriske-egenskaper-Egenskap]]
-
-===== Egenskap: identifikator (dct:identifier) [[Egenskap-identifikator]]
-
-[cols="30s,70d"]
-|===
-|Engelsk navn| identifier
-|URI| dct:identifier
-|Range| rdfs:Literal
-|Beskrivelse| Unik og persistent identifisering av en egenskap.
-|Multiplisitet| 1..1
-|Kravsnivå| Obligatorisk
-|===
-
 ==== Anbefalte egenskaper for klassen _Egenskap_ [[Anbefalte-egenskaper-Egenskap]]
 
 ===== Egenskap: begrep (dct:subject) [[Egenskap-begrep]]
@@ -28,6 +14,18 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |URI| dct:subject
 |Range| skos:Concept
 |Beskrivelse| Referanse til sentralt begrep som er viktig for å forstå og tolke egenskapen. Representeres som URI-er.
+|Multiplisitet| 0..1
+|Kravsnivå| Anbefalt
+|===
+
+===== Egenskap: identifikator (dct:identifier) [[Egenskap-identifikator]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| identifier
+|URI| dct:identifier
+|Range| rdfs:Literal
+|Beskrivelse| Unik og persistent identifisering av en egenskap.
 |Multiplisitet| 0..1
 |Kravsnivå| Anbefalt
 |===

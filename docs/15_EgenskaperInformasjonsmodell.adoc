@@ -4,20 +4,6 @@ Klassen _Informasjonsmodell_ er obligatorisk
 
 ==== Obligatoriske egenskaper for klassen _Informasjonsmodell_ [[Obligatoriske-egenskaper-Informasjonsmodell]]
 
-=====  Informasjonsmodell: (dct:identifier) identifikator [[Informasjonsmodell-identifikator]]
-
-[cols="30s,70d"]
-|===
-|Engelsk navn | identifier
-|URI|dct:identifier
-|Range|rdfs:Literal
-|Beskrivelse|Hovedidentifikator for modellen.
-|Multiplisitet|1..1.
-|Kravsnivå|Obligatorisk
-|Kommentar|F.eks. URI eller annen identifikator som er stabil og globalt unik.
-|===
-
-
 ===== Informasjonsmodell: tittel (dct:title) [[Informasjonsmodell-tittel]]
 
 [cols="30s,70d"]
@@ -68,6 +54,20 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Multiplisitet|0..n
 |Kravsnivå|Anbefalt
 |===
+
+=====  Informasjonsmodell: (dct:identifier) identifikator [[Informasjonsmodell-identifikator]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn | identifier
+|URI|dct:identifier
+|Range|rdfs:Literal
+|Beskrivelse|Hovedidentifikator for modellen.
+|Multiplisitet|0..1
+|Kravsnivå|Anbefalt
+|Kommentar|F.eks. URI eller annen identifikator som er stabil og globalt unik.
+|===
+
 
 ===== Informasjonsmodell: informasjonsmodellidentifikator (modelldcatno:informationModelIdentifier) [[iInformasjonsmodell-informasjonsmodellidentifikator]]
 
