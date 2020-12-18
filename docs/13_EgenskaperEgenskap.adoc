@@ -4,20 +4,6 @@ Klassen _Egenskap_ er anbefalt.
 
 Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av spesialiseringene.
 
-==== Obligatoriske egenskaper for klassen _Egenskap_ [[Obligatoriske-egenskaper-Egenskap]]
-
-===== Egenskap: identifikator (dct:identifier) [[Egenskap-identifikator]]
-
-[cols="30s,70d"]
-|===
-|Engelsk navn| identifier
-|URI| dct:identifier
-|Range| rdfs:Literal
-|Beskrivelse| Unik og persistent identifisering av en egenskap.
-|Multiplisitet| 1..1
-|Status| Obligatorisk
-|===
-
 ==== Anbefalte egenskaper for klassen _Egenskap_ [[Anbefalte-egenskaper-Egenskap]]
 
 ===== Egenskap: begrep (dct:subject) [[Egenskap-begrep]]
@@ -29,7 +15,69 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Range| skos:Concept
 |Beskrivelse| Referanse til sentralt begrep som er viktig for å forstå og tolke egenskapen. Representeres som URI-er.
 |Multiplisitet| 0..1
-|Status| Anbefalt
+|Kravsnivå| Anbefalt
+|===
+
+===== Egenskap: begrensning (modelldcatno:constraint) [[Egenskap-begrensning]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|constraint
+|URI|modelldcatno:constraint
+|Range|modelldcatno:Property
+|Beskrivelse|Brukes til å beskrive begrensninger eller restriksjoner for bruken av en egenskap.
+|Multiplisitet|0..n
+|Kravsnivå|Anbefalt
+|===
+
+===== Egenskap: enten eller (modelldcatno:xor) [[Egenskap-entenEller]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|exclusive or
+|URI|modelldcatno:xor
+|Range|modelldcatno:Property
+|Beskrivelse|Brukes til å referere til andre egenskaper som denne egenskapen ikke kan opptre samtidig med (eksklusiv eller).
+|Subegenskap av|modelldcatno:constraint
+|Multiplisitet|0..n
+|Kravsnivå|Anbefalt
+|===
+
+===== Egenskap: eller (modelldcatno:or) [[Egenskap-eller]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|or
+|URI|modelldcatno:or
+|Range|modelldcatno:Property
+|Beskrivelse|Brukes til å referere til andre egenskaper som denne egenskapen kan opptre blant (inklusiv eller).
+|Subegenskap av|modeldcatno:constraint
+|Multiplisitet|0..n
+|Kravsnivå|Anbefalt
+|===
+
+===== Egenskap: identifikator (dct:identifier) [[Egenskap-identifikator]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| identifier
+|URI| dct:identifier
+|Range| rdfs:Literal
+|Beskrivelse| Unik og persistent identifisering av en egenskap.
+|Multiplisitet| 0..1
+|Kravsnivå| Anbefalt
+|===
+
+===== Egenskap: navigerbar (modelldcatno:navigable) [[Egenskap-navigerbar]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|navigable
+|URI|modelldcatno:navigable
+|Range|xsd:boolean
+|Beskrivelse|Angir om en egenskap er navigerbar eller ikke.
+|Multiplisitet|0..1
+|Kravsnivå|Anbefalt
 |===
 
 ===== Egenskap: nedre multiplisitet (xsd:minOccurs) [[Egenskap-nedreMultiplisitet]]
@@ -41,7 +89,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Range| xsd:nonNegativeInteger
 |Beskrivelse| Angir det minste antallet lovlige forekomster en egenskap kan ha.
 |Multiplisitet| 0..1
-|Status| Anbefalt
+|Kravsnivå| Anbefalt
 |===
 
 ===== Egenskap: tittel (dct:title) [[Egenskap-tittel]]
@@ -53,7 +101,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Range| rdfs:Literal
 |Beskrivelse| Navn på en egenskap. Bør gjentas når navnet finnes i flere ulike språk/målformer.
 |Multiplisitet| 0..*
-|Status| Anbefalt
+|Kravsnivå| Anbefalt
 |===
 
 ===== Egenskap: øvre multiplisitet (xsd:maxOccurs) [[Egenskap-øvreMultiplisitet]]
@@ -65,7 +113,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Range| xsd:nonNegativeInteger
 |Beskrivelse| Angir det største antallet lovlige forekomster en egenskap kan ha.
 |Multiplisitet| 0..1
-|Status| Anbefalt
+|Kravsnivå| Anbefalt
 |===
 
 ==== Valgfrie egenskaper for klassen _Egenskap_ [[Valgfrie-egenskaper-Egenskap]]
@@ -79,7 +127,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Range| rdfs:Literal
 |Beskrivelse| Tekstlig beskrivelse av egenskapen. Bør gjentas når beskrivelsen finnes i flere ulike språk/målformer.
 |Multiplisitet| 0..n
-|Status| Valgfri
+|Kravsnivå| Valgfri
 |===
 
 ===== Egenskap: har type (modelldcatno:hasType) [[Egenskap-harType]]
@@ -91,7 +139,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Range| modelldcatno:ModelElement
 |Beskrivelse| En generell beskrivelse av verdidomenet til en egenskap.
 |Multiplisitet| 0..*
-|Status| Valgfri
+|Kravsnivå| Valgfri
 |===
 
 ===== Egenskap: relasjonsegenskapsnavn (modelldcatno:relationPropertyLabel) [[Egenskap-relasjonsegenskapsnavn]]
@@ -103,7 +151,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Range|modelldcatno:Property
 |Beskrivelse|Navn på relasjon mellom to egenskaper. Brukes i kombinasjon med egenskapen «utgjør symmetrisk relasjon med» (modelldcatno:formsSymmetryWith). Bør gjentas når navnet finnes i flere ulike språk/målformer.
 |Multiplisitet|0..*
-|Status|Valgfri
+|Kravsnivå|Valgfri
 |===
 
 ===== Egenskap: sekvensnummer (modelldcatno:sequenceNumber) [[Egenskap-sekvensnummer]]
@@ -115,7 +163,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Range|xsd:positiveInteger
 |Beskrivelse| En numerisk, sekvensielt stigende verdi som kan brukes til å identifisere og holde orden på rekkefølgen på egenskapene til et modellelement. For enkelte modeller er egenskapenes orden vesentlig, f.eks. slik det ofte er i XML.
 |Multiplisitet| 0..1
-|Status| Valgfri
+|Kravsnivå| Valgfri
 |===
 
 ===== Egenskap: tilhører modul (modelldcatno:belongsToModule) [[Egenskap-tilhørerModul]]
@@ -126,8 +174,8 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |URI|modelldcatno:belongsToModule
 |Range|rdfs:Literal or xsd:anyURI
 |Beskrivelse|Brukes til å referere til en modellmodul/delmodell som modellen inngår i.
-|Multiplisitet|0..1
-|Status|Valgfri
+|Multiplisitet|0..n
+|Kravsnivå|Valgfri
 |===
 
 ===== Egenskap: utgjør symmetrisk relasjon med (modelldcatno:formsSymmetryWith) [[Egenskap-utgjørSymmetriskRelasjonMed]]
@@ -139,5 +187,5 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Range|modelldcatno:Property
 |Beskrivelse|Brukes til å uttrykke at +egenskapen har en symmetrisk relasjon til en annen egenskap.+
 |Multiplisitet|0..1
-|Status|Valgfri
+|Kravsnivå|Valgfri
 |===

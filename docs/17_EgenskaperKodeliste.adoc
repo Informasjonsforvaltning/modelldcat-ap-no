@@ -13,5 +13,5 @@ Klassen _Kodeliste_ er anbefalt.
 |Range|modelldcatno:CodeList
 |Beskrivelse|Referanse til ekstern kodeliste.
 |Multiplisitet|0..1
-|Status|Valgfri
+|Kravsnivå|Valgfri
 |===

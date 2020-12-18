@@ -1,0 +1,18 @@
+=== Realisering (modelldcatno:Note) [[Note-egenskaper]]
+
+Klassen _Note_ er valgfri.
+
+==== Anbefalte egenskaper for klassen _Note_ [[Anbefalte-egenskaper-Note]]
+
+===== Note: anmerkning (modelldcatno:propertyNote) [[Note-anmerkning]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|property note
+|URI|modelldcatno:propertyNote
+|Range|rdfs:Literal
+|Beskrivelse|Inneholder en kommentar i form av en fritekst. Bør gjentas når beskrivelsen finnes i flere ulike språk/målformer.
+|Multiplisitet|0..n
+|Kravsnivå|Anbefalt
+|===
+ 

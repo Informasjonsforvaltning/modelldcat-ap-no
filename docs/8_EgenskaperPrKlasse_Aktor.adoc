@@ -19,7 +19,7 @@ Det anbefales at URI til Aktør (`foaf:Agent`) er identisk med den URI som Enhet
 |Range| rdfs:Literal
 |Beskrivelse| Navn på aktøren. Denne egenskapen kan gjentas for ulike versjoner av navnet (som navnet på forskjellige språk).
 |Multiplisitet| 1..n
-|Status| Obligatorisk
+|Kravsnivå| Obligatorisk
 |===
 
 ==== Anbefalte egenskaper for klassen _Aktør_ [[Anbefalte-egenskaper-for-Aktør]]
@@ -33,7 +33,7 @@ Det anbefales at URI til Aktør (`foaf:Agent`) er identisk med den URI som Enhet
 |Range| rdfs:Literal
 |Beskrivelse| Egenskap som angir organisasjonens identifikasjonsnummer, for eksempel i henhold til Enhetsregisterets organisasjonsnummer.
 |Multiplisitet| 0..1
-|Status| Anbefalt
+|Kravsnivå| Anbefalt
 |===
 
 ===== Aktør: utgivertype (dct:type) [[Aktør-utgivertype]]
@@ -45,5 +45,5 @@ Det anbefales at URI til Aktør (`foaf:Agent`) er identisk med den URI som Enhet
 |Range| skos:Concept
 |Beskrivelse| Refererer til type aktør som gjør katalogen eller ressursen tilgjengelig.
 |Multiplisitet| 0..1
-|Status| Anbefalt
+|Kravsnivå| Anbefalt
 |===

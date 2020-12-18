@@ -4,7 +4,35 @@ Klassen _Kodeelement_ er anbefalt.
 
 ==== Obligatoriske egenskaper for klassen _Kodeelement_ [[Obligatoriske-egenskaper-Kodeelement]]
 
-===== Kodeelement:anbefalt kodetekst (skos:prefLabel) [[Kodeelement-anbefaltKodetekst]]
+===== Kodeelement: i kodeliste (skos:inScheme) [[Kodeelement-iKodeliste]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|in scheme
+|URI|skos:inScheme
+|Range|modelldcatno:CodeList
+|Beskrivelse|Brukes til å referere til kodeliste som kodeelementet inngår i.
+|Multiplisitet|1..n
+|Kravsnivå|Obligatorisk
+|===
+
+===== Kodeelement: kode (skos:notation) [[Kodeelement-kode]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|code
+|URI|skos:notation
+|Range|rdfs:Literal
+|Beskrivelse|Brukes til å referere til representasjonen av kodeelementet, vanligvis kalt «koden».
+|Multiplisitet|1..1
+|Kravsnivå|Obligatorisk
+|===
+
+
+
+==== Anbefalte egenskaper for klassen _Kodeelement_ [[Anbefalte-egenskaper-Kodeelement]]
+
+===== Kodeelement: anbefalt kodetekst (skos:prefLabel) [[Kodeelement-anbefaltKodetekst]]
 
 [cols="30s,70d"]
 |===
@@ -13,37 +41,10 @@ Klassen _Kodeelement_ er anbefalt.
 |Range|rdfs:Literal
 |Beskrivelse|Brukes til å referere til den anbefalte kodeteksten for kodeelementet, dvs. teksten som anses best egnet for kodeelementet. Bør gjentas når teksten finnes i flere ulike språk/målformer.
 |Subegenskap av|rdfs:label
-|Multiplisitet|1..n
-|Status|Obligatorisk
+|Multiplisitet|0..n
+|Kravsnivå|Anbefalt
 |Kommentar|Det bør være maksimalt én anbefalt kodetekst per språk/målform.
 |===
-
-===== Kodeelement:i kodeliste (skos:inScheme) [[Kodeelement-iKodeliste]]
-
-[cols="30s,70d"]
-|===
-|Engelsk navn|in scheme
-|URI|skos:inScheme
-|Range|modelldcatno:CodeList
-|Beskrivelse|Brukes til å referere til kodeliste som kodeelementet inngår i.
-|Multiplisitet|0..n
-|Status|Obligatorisk
-|===
-
-===== Kodeelement: identifikator (dct:identifier) [[kodeelement-identifikator]]
-
-[cols="30s,70d"]
-|===
-|Engelsk navn | identifier
-|URI|dct:identifier
-|Range|rdfs:Literal
-|Beskrivelse|Unik og persistent identifisering av en kode.
-|Multiplisitet|1..1
-|Status|Obligatorisk
-|===
-
-
-==== Anbefalte egenskaper for klassen _Kodeelement_ [[Anbefalte-egenskaper-Kodeelement]]
 
 ===== Kodeelement: begrep (dct:subject) [[Kodeelement-begrep]]
 
@@ -54,22 +55,22 @@ Klassen _Kodeelement_ er anbefalt.
 |Range|skos:Concept
 |Beskrivelse|Referanse til sentralt begrep som er viktig for å forstå og tolke koden. Representeres som URI-er.
 |Multiplisitet|0..1
-|Status|Anbefalt
+|Kravsnivå|Anbefalt
 |===
 
-===== Kodeelement:kode (skos:notation) [[Kodeelement-kode]]
+===== Kodeelement: identifikator (dct:identifier) [[kodeelement-identifikator]]
 
 [cols="30s,70d"]
 |===
-|Engelsk navn|code
-|URI|skos:notation
+|Engelsk navn | identifier
+|URI|dct:identifier
 |Range|rdfs:Literal
-|Beskrivelse|Brukes til å referere til representasjonen av kodeelementet, vanligvis kalt «koden».
+|Beskrivelse|Unik og persistent identifisering av en kode.
 |Multiplisitet|0..1
-|Status|Anbefalt
+|Kravsnivå|Anbefalt
 |===
 
-===== Kodeelement:toppkonsept til (skos:topConceptOf) [[Kodeelement-toppkonseptTil]]
+===== Kodeelement: toppelement til (skos:topConceptOf) [[Kodeelement-toppelementTil]]
 
 [cols="30s,70d"]
 |===
@@ -78,13 +79,13 @@ Klassen _Kodeelement_ er anbefalt.
 |Range|modelldcatno:CodeList
 |Beskrivelse|Brukes til å referere til kodeliste som kodeelementet er det første kodeelementet i.
 |Multiplisitet|0..n
-|Status|Anbefalt
+|Kravsnivå|Anbefalt
 |===
 
 ====  Valgfrie egenskaper for klassen _Kodeelement_ [[Valgfrie-egenskaper-Kodeelement]]
 
 
-===== Kodeelement:definisjon (skos:definition) [[Kodeelement-definisjon]]
+===== Kodeelement: definisjon (skos:definition) [[Kodeelement-definisjon]]
 
 [cols="30s,70d"]
 |===
@@ -94,10 +95,10 @@ Klassen _Kodeelement_ er anbefalt.
 |Beskrivelse|Brukes til å referere til definisjonen av begrepet som kodeelementet representerer. Bør gjentas når definisjonen finnes i flere ulike språk/målformer.
 |Subegenskap av|skos:note
 |Multiplisitet|0..n
-|Status|Valgfri
+|Kravsnivå|Valgfri
 |===
 
-===== Kodeelement:eksempel (skos:example) [[Kodeelement-eksempel]]
+===== Kodeelement: eksempel (skos:example) [[Kodeelement-eksempel]]
 
 [cols="30s,70d"]
 |===
@@ -107,25 +108,25 @@ Klassen _Kodeelement_ er anbefalt.
 |Beskrivelse|Brukes til å referere til eksempler på begrepet som kodeelementet representerer.
 |Subegenskap av|skos:note
 |Multiplisitet|0..n
-|Status|Valgfri
+|Kravsnivå|Valgfri
 |===
 
 
 
-===== Kodeelement:eksklusjonsmerknad (xkos:exclusionNote) [[Kodeelement-eksklusjonsmerknad]]
+===== Kodeelement: eksklusjonsmerknad (xkos:exclusionNote) [[Kodeelement-eksklusjonsmerknad]]
 
 [cols="30s,70d"]
 |===
 |Engelsk navn|exclusion note
 |URI|xkos:exclusionNote
-|Range|rdfs:literal
+|Range|rdfs:Literal
 |Beskrivelse|Brukes til å referere til merknad om hva som er ekskludert i kodeelementet. Bør gjentas når merknaden finnes i flere ulike språk/målformer.
 |Subegenskap av|skos:scopeNote
 |Multiplisitet|0..*
-|Status|Valgfri
+|Kravsnivå|Valgfri
 |===
 
-===== Kodeelement:forrige kodeelement (xkos:previous) [[Kodeelement-forrigeKodeelement]]
+===== Kodeelement: forrige kodeelement (xkos:previous) [[Kodeelement-forrigeKodeelement]]
 
 [cols="30s,70d"]
 |===
@@ -133,8 +134,8 @@ Klassen _Kodeelement_ er anbefalt.
 |URI|xkos:previous
 |Range|modelldcatno:CodeElement
 |Beskrivelse|Brukes til å referere til kodeelementet som kommer foran det aktuelle kodeelementet.
-|Multiplisitet|0..n
-|Status|Valgfri
+|Multiplisitet|0..1
+|Kravsnivå|Valgfri
 |===
 
 
@@ -148,11 +149,11 @@ Klassen _Kodeelement_ er anbefalt.
 |Beskrivelse|Brukes til å referere til kodetekst som anses som uegnet for kodeelementet. Bør gjentas når kodeteksten finnes i flere ulike språk/målformer.
 |Subegenskap av|Rdfs:label
 |Multiplisitet|0..n
-|Status|Valgfri
+|Kravsnivå|Valgfri
 |===
 
 
-===== Kodeelement:inklusjonsmerknad (xkos:inclusionNote) [[Kodeelement-inklusjonsmerknad]]
+===== Kodeelement: inklusjonsmerknad (xkos:inclusionNote) [[Kodeelement-inklusjonsmerknad]]
 
 [cols="30s,70d"]
 |===
@@ -162,11 +163,11 @@ Klassen _Kodeelement_ er anbefalt.
 |Beskrivelse|Brukes til å referere til merknad om hva som er inkludert i kodeelementet. Bør gjentas når merknaden finnes i flere ulike språk/målformer.
 |Subegenskap av|skos:scopeNote
 |Multiplisitet|0..n
-|Status|Valgfri
+|Kravsnivå|Valgfri
 |===
 
 
-===== Kodeelement:merknad (skos:note) [[Kodeelement-merknad]]
+===== Kodeelement: merknad (skos:note) [[Kodeelement-merknad]]
 
 [cols="30s,70d"]
 |===
@@ -175,10 +176,10 @@ Klassen _Kodeelement_ er anbefalt.
 |Range|rdfs:Literal
 |Beskrivelse|Brukes til å referere til merknad om kodeelementet. Bør gjentas når merknaden finnes i flere ulike språk/målformer.
 |Multiplisitet|0..n
-|Status|Valgfri
+|Kravsnivå|Valgfri
 |===
 
-===== Kodeelement:neste kodeelement (xkos:next) [[Kodeelement-nesteKodeelement]]
+===== Kodeelement: neste kodeelement (xkos:next) [[Kodeelement-nesteKodeelement]]
 
 [cols="30s,70d"]
 |===
@@ -186,11 +187,11 @@ Klassen _Kodeelement_ er anbefalt.
 |URI|xkos:next
 |Range|modelldcatno:CodeElement
 |Beskrivelse|Brukes til å referere til kodeelementet som kommer etter det aktuelle kodeelementet.
-|Multiplisitet|0..n
-|Status|Valgfri
+|Multiplisitet|0..1
+|Kravsnivå|Valgfri
 |===
 
-===== Kodeelement:omfangsmerknad (skos:scopeNote) [[Kodeelement-omfangsmerknad]]
+===== Kodeelement: omfangsmerknad (skos:scopeNote) [[Kodeelement-omfangsmerknad]]
 
 [cols="30s,70d"]
 |===
@@ -200,11 +201,11 @@ Klassen _Kodeelement_ er anbefalt.
 |Beskrivelse|Brukes til å referere til merknad ang. bruken av kodeelementet. Bør gjentas når merknaden finnes i flere ulike språk/målformer.
 |Subegenskap av|skos:note
 |Multiplisitet|0..n
-|Status|Valgfri
+|Kravsnivå|Valgfri
 |===
 
 
-===== Kodeelement:tillatt kodetekst (skos:altLabel) [[Kodeelement-tillattKodetekst]]
+===== Kodeelement: tillatt kodetekst (skos:altLabel) [[Kodeelement-tillattKodetekst]]
 
 [cols="30s,70d"]
 |===
@@ -214,5 +215,5 @@ Klassen _Kodeelement_ er anbefalt.
 |Beskrivelse|Brukes til å referere til alternativ kodetekst (som kan brukes ved siden av den anbefalte kodeteksten). Bør gjentas når kodeteksten finnes i flere ulike språk/målformer.
 |Subegenskap av|rdfs:label
 |Multiplisitet|0..n
-|Status|Valgfri
+|Kravsnivå|Valgfri
 |===

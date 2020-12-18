@@ -1,6 +1,6 @@
 = Forenklet modell for ModellDCAT-AP-NO [[Forenklet-modell]]
 
 .Forenklet modell for ModellDCAT-AP-NO.
-image::images/ModellDCAT-ap-no.png[]
+image::images/ModellDCAT-AP-NO-v1_1.png[]
 
-Last ned modell: link:images/ModellDCAT-ap-no.png[png] | link:files/modelldcatno_v1.eapx[XMI for EA]
+Last ned modell: link:images/ModellDCAT-AP-NO-v1_1.png[png] | link:files/ModellDCAT_AP_NO_V1_1.eapx[XMI for EA]
