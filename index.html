@@ -506,6 +506,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#klasse-note">Note (modelldcatno:Note)</a></li>
 <li><a href="#klasse-realisering">Realisering (modelldcatno:Realization)</a></li>
 <li><a href="#klasse-samling">Samling (modelldcatno:Collection)</a></li>
+<li><a href="#klasse-standard">Standard (dct:Standard)</a></li>
 <li><a href="#klasse-valg">Valg (modelldcatno:Choice)</a></li>
 </ul>
 </li>
@@ -601,7 +602,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#Anbefalte-egenskaper-abstraksjon">Anbefalte egenskaper for klassen <em>Abstraksjon</em></a>
 <ul class="sectlevel5">
-<li><a href="#Abstraksjon-erAbstraksjonAv">Abstraksjon:er abstraksjon av (modelldcatno:isAbstractionOf)</a></li>
+<li><a href="#Abstraksjon-erAbstraksjonAv">Abstraksjon: er abstraksjon av (modelldcatno:isAbstractionOf)</a></li>
 </ul>
 </li>
 </ul>
@@ -637,21 +638,21 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#Valgfrie-egenskaper-Dokument">Valgfrie egenskaper for klassen <em>Dokument</em></a>
 <ul class="sectlevel5">
-<li><a href="#Dokument-format">Dokument:format (dct:format)</a></li>
+<li><a href="#Dokument-format">Dokument: format (dct:format)</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a href="#Egenskap-egenskaper">Egenskap (modelldcatno:Property)</a>
 <ul class="sectlevel4">
-<li><a href="#Obligatoriske-egenskaper-Egenskap">Obligatoriske egenskaper for klassen <em>Egenskap</em></a>
-<ul class="sectlevel5">
-<li><a href="#Egenskap-identifikator">Egenskap: identifikator (dct:identifier)</a></li>
-</ul>
-</li>
 <li><a href="#Anbefalte-egenskaper-Egenskap">Anbefalte egenskaper for klassen <em>Egenskap</em></a>
 <ul class="sectlevel5">
 <li><a href="#Egenskap-begrep">Egenskap: begrep (dct:subject)</a></li>
+<li><a href="#Egenskap-begrensning">Egenskap: begrensning (modelldcatno:constraint)</a></li>
+<li><a href="#Egenskap-entenEller">Egenskap: enten eller (modelldcatno:xor)</a></li>
+<li><a href="#Egenskap-eller">Egenskap: eller (modelldcatno:or)</a></li>
+<li><a href="#Egenskap-identifikator">Egenskap: identifikator (dct:identifier)</a></li>
+<li><a href="#Egenskap-navigerbar">Egenskap: navigerbar (modelldcatno:navigable)</a></li>
 <li><a href="#Egenskap-nedreMultiplisitet">Egenskap: nedre multiplisitet (xsd:minOccurs)</a></li>
 <li><a href="#Egenskap-tittel">Egenskap: tittel (dct:title)</a></li>
 <li><a href="#Egenskap-øvreMultiplisitet">Egenskap: øvre multiplisitet (xsd:maxOccurs)</a></li>
@@ -694,9 +695,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#Obligatoriske-egenskaper-Informasjonsmodell">Obligatoriske egenskaper for klassen <em>Informasjonsmodell</em></a>
 <ul class="sectlevel5">
-<li><a href="#Informasjonsmodell-beskrivelse">Informasjonsmodell: beskrivelse (dct:description)</a></li>
-<li><a href="#Informasjonsmodell-identifikator">Informasjonsmodell: (dct:identifier) identifikator</a></li>
-<li><a href="#Informasjonsmodell-tema">Informasjonsmodell: tema (dcat:theme)</a></li>
 <li><a href="#Informasjonsmodell-tittel">Informasjonsmodell: tittel (dct:title)</a></li>
 <li><a href="#Informasjonsmodell-utgiver">Informasjonsmodell: utgiver (dct:publisher)</a></li>
 </ul>
@@ -704,10 +702,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#Anbefalte-egenskaper-Informasjonsmodell">Anbefalte egenskaper i klassen <em>Informasjonsmodell</em></a>
 <ul class="sectlevel5">
 <li><a href="#Informasjonsmodell-begrep">Informasjonsmodell: begrep (dct:subject)</a></li>
+<li><a href="#Informasjonsmodell-beskrivelse">Informasjonsmodell: beskrivelse (dct:description)</a></li>
+<li><a href="#Informasjonsmodell-identifikator">Informasjonsmodell: (dct:identifier) identifikator</a></li>
 <li><a href="#iInformasjonsmodell-informasjonsmodellidentifikator">Informasjonsmodell: informasjonsmodellidentifikator (modelldcatno:informationModelIdentifier)</a></li>
 <li><a href="#Informasjonsmodell-inneholderModellelement">Informasjonsmodell: inneholder modellelement (modelldcatno:containsModelElement)</a></li>
 <li><a href="#Informasjonsmodell-kontaktpunkt">Informasjonsmodell: kontaktpunkt (dcat:contactPoint)</a></li>
 <li><a href="#Informasjonsmodell-lisens">Informasjonsmodell: lisens (dct:license)</a></li>
+<li><a href="#Informasjonsmodell-tema">Informasjonsmodell: tema (dcat:theme)</a></li>
 </ul>
 </li>
 <li><a href="#Valgfrie-egenskaper-Informasjonsmodell">Valgfrie egenskaper til klassen <em>Informasjonsmodell</em></a>
@@ -716,12 +717,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#Informasjonsmodell-emneord">Informasjonsmodell: emneord (dcat:keyword)</a></li>
 <li><a href="#Informasjonsmodell-endringsdato">Informasjonsmodell: endringsdato (dct:modified)</a></li>
 <li><a href="#Informasjonsmodell-erDelAv">Informasjonsmodell: er del av (dct:isPartOf)</a></li>
+<li><a href="#Informasjonsmodell-erProfilAv">Informasjonsmodell: er profil av (prof:isProfileOf)</a></li>
 <li><a href="#Informasjonsmodell-erErstattetAv">Informasjonsmodell: er erstattet av (dct:isReplacedBy)</a></li>
 <li><a href="#Informasjonsmodell-erstatter">Informasjonsmodell: erstatter (dct:replaces)</a></li>
-<li><a href="#Informasjonsmodell-finnesIFormat">Informasjonsmodell:finnes i format (dct:hasFormat)</a></li>
+<li><a href="#Informasjonsmodell-finnesIFormat">Informasjonsmodell: finnes i format (dct:hasFormat)</a></li>
 <li><a href="#Informasjonsmodell-gyldighetsperiode">Informasjonsmodell: gyldighetsperiode (dct:temporal)</a></li>
 <li><a href="#Informasjonsmodell-harDel">Informasjonsmodell: har del (dct:hasPart)</a></li>
 <li><a href="#Informasjonsmodell-hjemmeside">Informasjonsmodell: hjemmeside (foaf:homepage)</a></li>
+<li><a href="#Informasjonsmodell-iSamsvarMed">Informasjonsmodell: i samsvar med (dct:conformsTo)</a></li>
 <li><a href="#Informasjonsmodell-modellstatus">Informasjonsmodell: modellstatus (adms:status)</a></li>
 <li><a href="#Informasjonsmodell-produsent">Informasjonsmodell: produsent (dct:creator)</a></li>
 <li><a href="#Informasjonsmodell-språk">Informasjonsmodell: språk (dct:language)</a></li>
@@ -737,30 +740,30 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#Obligatoriske-egenskaper-Kodeelement">Obligatoriske egenskaper for klassen <em>Kodeelement</em></a>
 <ul class="sectlevel5">
-<li><a href="#Kodeelement-anbefaltKodetekst">Kodeelement:anbefalt kodetekst (skos:prefLabel)</a></li>
-<li><a href="#Kodeelement-iKodeliste">Kodeelement:i kodeliste (skos:inScheme)</a></li>
-<li><a href="#kodeelement-identifikator">Kodeelement: identifikator (dct:identifier)</a></li>
+<li><a href="#Kodeelement-iKodeliste">Kodeelement: i kodeliste (skos:inScheme)</a></li>
+<li><a href="#Kodeelement-kode">Kodeelement: kode (skos:notation)</a></li>
 </ul>
 </li>
 <li><a href="#Anbefalte-egenskaper-Kodeelement">Anbefalte egenskaper for klassen <em>Kodeelement</em></a>
 <ul class="sectlevel5">
+<li><a href="#Kodeelement-anbefaltKodetekst">Kodeelement: anbefalt kodetekst (skos:prefLabel)</a></li>
 <li><a href="#Kodeelement-begrep">Kodeelement: begrep (dct:subject)</a></li>
-<li><a href="#Kodeelement-kode">Kodeelement:kode (skos:notation)</a></li>
-<li><a href="#Kodeelement-toppkonseptTil">Kodeelement:toppkonsept til (skos:topConceptOf)</a></li>
+<li><a href="#kodeelement-identifikator">Kodeelement: identifikator (dct:identifier)</a></li>
+<li><a href="#Kodeelement-toppelementTil">Kodeelement: toppelement til (skos:topConceptOf)</a></li>
 </ul>
 </li>
 <li><a href="#Valgfrie-egenskaper-Kodeelement">Valgfrie egenskaper for klassen <em>Kodeelement</em></a>
 <ul class="sectlevel5">
-<li><a href="#Kodeelement-definisjon">Kodeelement:definisjon (skos:definition)</a></li>
-<li><a href="#Kodeelement-eksempel">Kodeelement:eksempel (skos:example)</a></li>
-<li><a href="#Kodeelement-eksklusjonsmerknad">Kodeelement:eksklusjonsmerknad (xkos:exclusionNote)</a></li>
-<li><a href="#Kodeelement-forrigeKodeelement">Kodeelement:forrige kodeelement (xkos:previous)</a></li>
+<li><a href="#Kodeelement-definisjon">Kodeelement: definisjon (skos:definition)</a></li>
+<li><a href="#Kodeelement-eksempel">Kodeelement: eksempel (skos:example)</a></li>
+<li><a href="#Kodeelement-eksklusjonsmerknad">Kodeelement: eksklusjonsmerknad (xkos:exclusionNote)</a></li>
+<li><a href="#Kodeelement-forrigeKodeelement">Kodeelement: forrige kodeelement (xkos:previous)</a></li>
 <li><a href="#Kodeelement-frarådetKodetekst">Kodeelement: frarådet kodetekst (skos:hiddenLabel)</a></li>
-<li><a href="#Kodeelement-inklusjonsmerknad">Kodeelement:inklusjonsmerknad (xkos:inclusionNote)</a></li>
-<li><a href="#Kodeelement-merknad">Kodeelement:merknad (skos:note)</a></li>
-<li><a href="#Kodeelement-nesteKodeelement">Kodeelement:neste kodeelement (xkos:next)</a></li>
-<li><a href="#Kodeelement-omfangsmerknad">Kodeelement:omfangsmerknad (skos:scopeNote)</a></li>
-<li><a href="#Kodeelement-tillattKodetekst">Kodeelement:tillatt kodetekst (skos:altLabel)</a></li>
+<li><a href="#Kodeelement-inklusjonsmerknad">Kodeelement: inklusjonsmerknad (xkos:inclusionNote)</a></li>
+<li><a href="#Kodeelement-merknad">Kodeelement: merknad (skos:note)</a></li>
+<li><a href="#Kodeelement-nesteKodeelement">Kodeelement: neste kodeelement (xkos:next)</a></li>
+<li><a href="#Kodeelement-omfangsmerknad">Kodeelement: omfangsmerknad (skos:scopeNote)</a></li>
+<li><a href="#Kodeelement-tillattKodetekst">Kodeelement: tillatt kodetekst (skos:altLabel)</a></li>
 </ul>
 </li>
 </ul>
@@ -776,7 +779,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#Komposisjon-egenskaper">Komposisjon (modelldcatno:Composition)</a>
 <ul class="sectlevel4">
-<li><a href="#Obligatoriske-egenskaper-Komposisjon">Obligatoriske egenskaper for klassen <em>Komposisjon</em></a>
+<li><a href="#Anbefalte-egenskaper-Komposisjon">Anbefalte egenskaper for klassen <em>Komposisjon</em></a>
 <ul class="sectlevel5">
 <li><a href="#Komposisjon-inneholder">Komposisjon: inneholder (modelldcatno:contains)</a></li>
 </ul>
@@ -787,13 +790,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#Obligatoriske-egenskaper-Modellelement">Obligatoriske egenskaper for klassen <em>Modellelement</em></a>
 <ul class="sectlevel5">
-<li><a href="#modellelement-identifikator">Modellelement: identifikator (dct:identifier)</a></li>
 <li><a href="#Modellelement-tittel">Modellelement: tittel (dct:title)</a></li>
 </ul>
 </li>
 <li><a href="#Anbefalte-egenskaper-Modellelement">Anbefalte egenskaper for klassen <em>Modellelement</em></a>
 <ul class="sectlevel5">
 <li><a href="#Modellelement-begrep">Modellelement: begrep (dct:subject)</a></li>
+<li><a href="#Modellelement-begrensning">Modellelement: begrensning (modelldcatno:constraint)</a></li>
+<li><a href="#modellelement-identifikator">Modellelement: identifikator (dct:identifier)</a></li>
 <li><a href="#Modellelement-harEgenskap">Modellelement: har egenskap (modelldcatno:hasProperty)</a></li>
 </ul>
 </li>
@@ -801,6 +805,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel5">
 <li><a href="#Modellelement-beskrivelse">Modellelement: beskrivelse (dct:description)</a></li>
 <li><a href="#Modellelement-tilhørerModul">Modellelement: tilhører modul (modelldcatno:belongsToModule)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Note-egenskaper">Realisering (modelldcatno:Note)</a>
+<ul class="sectlevel4">
+<li><a href="#Anbefalte-egenskaper-Note">Anbefalte egenskaper for klassen <em>Note</em></a>
+<ul class="sectlevel5">
+<li><a href="#Note-anmerkning">Note: anmerkning (modelldcatno:propertyNote)</a></li>
 </ul>
 </li>
 </ul>
@@ -832,11 +845,30 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#Spesialisering-egenskaper">Spesialisering</a>
+<li><a href="#Spesialisering-egenskaper">Spesialisering (modelldcatno:Specialization)</a>
 <ul class="sectlevel4">
 <li><a href="#Anbefalte-egenskaper-Spesialisering">Anbefalte egenskaper for klassen <em>Spesialisering</em></a>
 <ul class="sectlevel5">
 <li><a href="#Spesialisering-harGenereltKonsept">Spesialisering: har generelt konsept (modelldcatno:hasGeneralConcept)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Standard-egenskaper">Standard (dct:Standard)</a>
+<ul class="sectlevel4">
+<li><a href="#Obligatoriske-egenskaper-Standard">Obligatoriske egenskaper for klassen <em>Standard</em></a>
+<ul class="sectlevel5">
+<li><a href="#_standard_har_tittel_dcttitle">Standard: har tittel (dct:title)</a></li>
+</ul>
+</li>
+<li><a href="#Anbefalte-egenskaper-Standard">Anbefalte egenskaper for klassen <em>Standard</em></a>
+<ul class="sectlevel5">
+<li><a href="#_standard_har_referanse_rdfsseealso">Standard: har referanse (rdfs:seeAlso)</a></li>
+</ul>
+</li>
+<li><a href="#Valgfrie-egenskaper-Standard">Valgfrie egenskaper for klassen <em>Standard</em></a>
+<ul class="sectlevel5">
+<li><a href="#_standard_har_versjonsnummer_owlversioninfo">Standard: har versjonsnummer (owl:versionInfo)</a></li>
 </ul>
 </li>
 </ul>
@@ -885,6 +917,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
+<li><a href="#Endringslogg">Endringslogg</a>
+<ul class="sectlevel2">
+<li><a href="#Endringer_fra_V1.1">Endringer fra v.1.0 til v.1.1</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -923,14 +960,13 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 <div class="paragraph">
 <p><strong>Status</strong>: Gjeldende<br>
-<strong>Versjon</strong>: 1.0<br>
-<strong>Publisert</strong>: 2020-10-23 <br>
+<strong>Versjon</strong>: 1.1 (se <a href="#Endringslogg">endringsloggen</a>)<br>
+<strong>Publisert</strong>: 2020-12-18 <br>
 <strong>Gjeldende versjon</strong>: <a href="https://data.norge.no/specification/modelldcat-ap-no/" class="bare">https://data.norge.no/specification/modelldcat-ap-no/</a><br>
-<strong>Forrige versjon</strong>: ingen<br>
 <strong>Redaktørens utkast</strong>: <a href="https://informasjonsforvaltning.github.io/modelldcat-ap-no/" class="bare">https://informasjonsforvaltning.github.io/modelldcat-ap-no/</a></p>
 </div>
 <div class="paragraph">
-<p><strong>Ontologi</strong>: Gjeldende versjon av ontologien blir publisert til <a href="https://data.norge.no/vocabulary/modelldcatno#" class="bare">https://data.norge.no/vocabulary/modelldcatno#</a>. Redaktørens utkast til ontologien er tilgjengelig på <a href="https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/review/ontology/">Github</a>.</p>
+<p><strong>Ontologi</strong>: Gjeldende versjon av ontologien blir publisert til <a href="https://data.norge.no/vocabulary/modelldcatno#" class="bare">https://data.norge.no/vocabulary/modelldcatno#</a>. Redaktørens utkast til ontologien er tilgjengelig på <a href="https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/ontology/">Github</a>.</p>
 </div>
 <div class="paragraph">
 <p>Denne spesifikasjonen skal sikre at beskrivelser av informasjonsmodeller utføres på en felles, strukturert måte og i en maskinlesbar form. Spesifikasjonen stiller krav til hva som <em>skal</em>, <em>bør</em> og <em>kan</em> være med i beskrivelsene, med spesifikasjon av dataformat.</p>
@@ -999,7 +1035,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 </dd>
 <dt class="hdlist1">Anbefalt (verb: bør)</dt>
 <dd>
-<p>produsent/avsender av data bør oppgi informasjon om instanser av klassen; produsent/avsender av data skal oppgi informasjon om instanser av klassen hvis informasjonen er tilgjengelig; konsument/mottaker av data skal være i sand til å prosessere informasjon om instanser av klassen.</p>
+<p>produsent/avsender av data bør oppgi informasjon om instanser av klassen; produsent/avsender av data skal oppgi informasjon om instanser av klassen hvis informasjonen er tilgjengelig; konsument/mottaker av data skal være i stand til å prosessere informasjon om instanser av klassen.</p>
 </dd>
 <dt class="hdlist1">Valgfri (verb: kan)</dt>
 <dd>
@@ -1096,6 +1132,11 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RDF Vocabulary Description Language 1.0: RDF Schema</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>prof</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/ns/dx/prof/" class="bare">https://www.w3.org/ns/dx/prof/</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Profiles Vocabulary</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>skos</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.w3.org/2004/02/skos/core#" class="bare">http://www.w3.org/2004/02/skos/core#</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SKOS Simple Knowledge Organization System - Reference</p></td>
@@ -1124,12 +1165,12 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <div class="sectionbody">
 <div class="imageblock">
 <div class="content">
-<img src="images/ModellDCAT-ap-no.png" alt="ModellDCAT ap no">
+<img src="images/ModellDCAT-AP-NO-v1_1.png" alt="ModellDCAT AP NO v1 1">
 </div>
 <div class="title">Figur 1. Forenklet modell for ModellDCAT-AP-NO.</div>
 </div>
 <div class="paragraph">
-<p>Last ned modell: <a href="images/ModellDCAT-ap-no.png">png</a> | <a href="files/modelldcatno_v1.eapx">XMI for EA</a></p>
+<p>Last ned modell: <a href="images/ModellDCAT-AP-NO-v1_1.png">png</a> | <a href="files/ModellDCAT_AP_NO_V1_1.eapx">XMI for EA</a></p>
 </div>
 </div>
 </div>
@@ -1162,7 +1203,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://xmlns.com/foaf/spec/#term_Agent">foaf:Agent</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -1189,7 +1230,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/2009/08/skos-reference/skos.html#Concept">skos:Concept</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -1216,7 +1257,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dcat-2/#Class:Resource">dcat:Resource</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 <tr>
@@ -1247,7 +1288,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/rdf-concepts/#section-Literals">rdfs:Literal</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -1274,7 +1315,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.w3.org/TR/2013/WD-vocab-dcat-20130312/#class-catalog">dcat:Catalog</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -1301,7 +1342,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/skos-reference/#schemes">skos:ConceptScheme</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -1331,7 +1372,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=terms#LicenseDocument">dct:LicenseDocument</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -1361,7 +1402,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.w3.org/TR/2014/NOTE-vcard-rdf-20140522/#d4e181">vcard:Kind</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -1388,7 +1429,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://dublincore.org/documents/dcmi-terms/#terms-Location">dct:Location</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -1415,7 +1456,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://dublincore.org/documents/dcmi-terms/#terms-LinguisticSystem">dct:LinguisticSystem</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -1442,7 +1483,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/skos-reference/#concepts">skos:Concept</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -1469,7 +1510,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://dublincore.org/documents/dcmi-terms/#terms-PeriodOfTime">dct:PeriodOfTime</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -1508,7 +1549,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 Klasse som representerer modellen som skal utveksles.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -1542,7 +1583,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Property</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -1573,7 +1614,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Property</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -1604,7 +1645,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:ModelElement</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -1631,7 +1672,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Property</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -1666,7 +1707,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:ModelElement</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -1693,7 +1734,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:CodeElement</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -1724,7 +1765,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:ModelElement</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -1755,7 +1796,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Typer modellelementer er objekttype, rotobjekttype, kodeliste, enkeltype og datatype.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -1790,7 +1831,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:ModelElement</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -1821,7 +1862,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Property</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -1852,7 +1893,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:ModelElement</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -1883,7 +1924,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Property</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -1917,7 +1958,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Property</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -1944,7 +1985,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/2009/08/skos-reference/skos.html#Concept">skos:Concept</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -1971,7 +2012,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://xmlns.com/foaf/spec/#term_Document">foaf:Document</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -2002,7 +2043,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Property</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -2029,7 +2070,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/MediaType">dct:MediaType</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -2060,7 +2101,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Property</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -2091,7 +2132,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Property</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -2126,8 +2167,39 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">I UML omtales dette som aggregering.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="klasse-standard"><a class="link" href="#klasse-standard">Standard (dct:Standard)</a></h4>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Standard</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å representere en standard eller spesifikasjon som en ressurs er i samsvar med.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Standard">dct:Standard</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell er en subklasse av Standard.  Fra f.eks. et datasett (dcat:Dataset) kan det derfor refereres til en informasjonsmodell vha. <a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-iSamsvarMed">dct:conformsTo</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2157,7 +2229,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Property</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -2210,7 +2282,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -2248,7 +2320,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -2283,7 +2355,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -2327,7 +2399,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -2371,7 +2443,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -2406,7 +2478,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -2444,7 +2516,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -2488,7 +2560,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -2523,7 +2595,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 <tr>
@@ -2562,7 +2634,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -2597,7 +2669,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -2632,7 +2704,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -2670,7 +2742,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -2705,7 +2777,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -2740,7 +2812,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -2779,12 +2851,12 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Når en Modellkatalog må ha minst én instans av dcat:Resource (jf. <a href="#Modellkatalog-harDel">Modellkatalog: har del</a>), og modelldcatno:InformationModel i denne spesifikasjonen er den eneste subklasse av dcat:Resource (jf. <a href="#Forenklet-modell">UML-modellen</a>), vil det i realiteten bety at en Modellkatalog skal inneholde minst én instans av modelldcatno:InformationModel, selv om denne egenskap er anbefalt og har multiplisitet 0..n.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">En Modellkatalog skal ha minst én instans av dcat:Resource (jf. <a href="#Modellkatalog-harDel">Modellkatalog: har del</a>). Informasjonsmodell (modelldcatno:InformationModel) og Modellkatalog (dcat:Catalog) er i denne spesifikasjonen subklasser av dcat:Resource (jf. <a href="#Forenklet-modell">UML-modellen</a>). Med mindre man skal ha en Modellkatalog som bare består av andre Modellkataloger, skal en Modellkatalog inneholde minst én instans av modelldcatno:InformationModel, selv om denne egenskap er anbefalt og har multiplisitet 0..n.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2818,7 +2890,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -2853,7 +2925,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -2891,7 +2963,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -2926,7 +2998,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -2961,7 +3033,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -3005,7 +3077,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -3024,7 +3096,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <div class="sect4">
 <h5 id="Anbefalte-egenskaper-abstraksjon"><a class="link" href="#Anbefalte-egenskaper-abstraksjon">Anbefalte egenskaper for klassen <em>Abstraksjon</em></a></h5>
 <div class="sect5">
-<h6 id="Abstraksjon-erAbstraksjonAv"><a class="link" href="#Abstraksjon-erAbstraksjonAv">Abstraksjon:er abstraksjon av (modelldcatno:isAbstractionOf)</a></h6>
+<h6 id="Abstraksjon-erAbstraksjonAv"><a class="link" href="#Abstraksjon-erAbstraksjonAv">Abstraksjon: er abstraksjon av (modelldcatno:isAbstractionOf)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -3056,7 +3128,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -3081,7 +3153,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Refers to</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">refers to</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
@@ -3104,7 +3176,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -3164,7 +3236,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -3203,7 +3275,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -3242,7 +3314,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -3281,7 +3353,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -3325,7 +3397,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -3360,7 +3432,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -3370,7 +3442,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <div class="sect4">
 <h5 id="Valgfrie-egenskaper-Dokument"><a class="link" href="#Valgfrie-egenskaper-Dokument">Valgfrie egenskaper for klassen <em>Dokument</em></a></h5>
 <div class="sect5">
-<h6 id="Dokument-format"><a class="link" href="#Dokument-format">Dokument:format (dct:format)</a></h6>
+<h6 id="Dokument-format"><a class="link" href="#Dokument-format">Dokument: format (dct:format)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -3398,7 +3470,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -3413,44 +3485,6 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </div>
 <div class="paragraph">
 <p>Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av spesialiseringene.</p>
-</div>
-<div class="sect4">
-<h5 id="Obligatoriske-egenskaper-Egenskap"><a class="link" href="#Obligatoriske-egenskaper-Egenskap">Obligatoriske egenskaper for klassen <em>Egenskap</em></a></h5>
-<div class="sect5">
-<h6 id="Egenskap-identifikator"><a class="link" href="#Egenskap-identifikator">Egenskap: identifikator (dct:identifier)</a></h6>
-<table class="tableblock frame-all grid-all stripes-even stretch">
-<colgroup>
-<col style="width: 30%;">
-<col style="width: 70%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">identifier</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Literal</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Unik og persistent identifisering av en egenskap.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1..1</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
-</tr>
-</tbody>
-</table>
-</div>
 </div>
 <div class="sect4">
 <h5 id="Anbefalte-egenskaper-Egenskap"><a class="link" href="#Anbefalte-egenskaper-Egenskap">Anbefalte egenskaper for klassen <em>Egenskap</em></a></h5>
@@ -3483,7 +3517,190 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="Egenskap-begrensning"><a class="link" href="#Egenskap-begrensning">Egenskap: begrensning (modelldcatno:constraint)</a></h6>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">constraint</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:constraint</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Property</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å beskrive begrensninger eller restriksjoner for bruken av en egenskap.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="Egenskap-entenEller"><a class="link" href="#Egenskap-entenEller">Egenskap: enten eller (modelldcatno:xor)</a></h6>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">exclusive or</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:xor</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Property</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til andre egenskaper som denne egenskapen ikke kan opptre samtidig med (eksklusiv eller).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Subegenskap av</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:constraint</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="Egenskap-eller"><a class="link" href="#Egenskap-eller">Egenskap: eller (modelldcatno:or)</a></h6>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">or</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:or</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Property</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til andre egenskaper som denne egenskapen kan opptre blant (inklusiv eller).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Subegenskap av</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modeldcatno:constraint</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="Egenskap-identifikator"><a class="link" href="#Egenskap-identifikator">Egenskap: identifikator (dct:identifier)</a></h6>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">identifier</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Literal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unik og persistent identifisering av en egenskap.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="Egenskap-navigerbar"><a class="link" href="#Egenskap-navigerbar">Egenskap: navigerbar (modelldcatno:navigable)</a></h6>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">navigable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:navigable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Angir om en egenskap er navigerbar eller ikke.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -3518,7 +3735,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -3553,7 +3770,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -3588,7 +3805,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -3626,7 +3843,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -3661,7 +3878,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -3696,7 +3913,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -3731,7 +3948,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -3763,10 +3980,10 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -3801,7 +4018,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -3845,7 +4062,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -3883,7 +4100,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -3918,7 +4135,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -3953,7 +4170,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -3988,7 +4205,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4023,7 +4240,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4058,7 +4275,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4093,7 +4310,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4128,7 +4345,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4143,115 +4360,6 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </div>
 <div class="sect4">
 <h5 id="Obligatoriske-egenskaper-Informasjonsmodell"><a class="link" href="#Obligatoriske-egenskaper-Informasjonsmodell">Obligatoriske egenskaper for klassen <em>Informasjonsmodell</em></a></h5>
-<div class="sect5">
-<h6 id="Informasjonsmodell-beskrivelse"><a class="link" href="#Informasjonsmodell-beskrivelse">Informasjonsmodell: beskrivelse (dct:description)</a></h6>
-<table class="tableblock frame-all grid-all stripes-even stretch">
-<colgroup>
-<col style="width: 30%;">
-<col style="width: 70%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">description</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dct:description</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Literal</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Inneholder fritekstbeskrivelse av modellen. Bør gjentas når beskrivelsen finnes i flere ulike språk/målformer.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect5">
-<h6 id="Informasjonsmodell-identifikator"><a class="link" href="#Informasjonsmodell-identifikator">Informasjonsmodell: (dct:identifier) identifikator</a></h6>
-<table class="tableblock frame-all grid-all stripes-even stretch">
-<colgroup>
-<col style="width: 30%;">
-<col style="width: 70%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">identifier</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Literal</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Hovedidentifikator for modellen.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1..1.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">F.eks. URI eller annen identifikator som er stabil og globalt unik.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect5">
-<h6 id="Informasjonsmodell-tema"><a class="link" href="#Informasjonsmodell-tema">Informasjonsmodell: tema (dcat:theme)</a></h6>
-<table class="tableblock frame-all grid-all stripes-even stretch">
-<colgroup>
-<col style="width: 30%;">
-<col style="width: 70%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">theme</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dcat:theme</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">skos:Concept</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til et hovedtema for modellen. En modell kan assosieres med flere tema.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
-</tr>
-</tbody>
-</table>
-</div>
 <div class="sect5">
 <h6 id="Informasjonsmodell-tittel"><a class="link" href="#Informasjonsmodell-tittel">Informasjonsmodell: tittel (dct:title)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
@@ -4281,7 +4389,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -4316,7 +4424,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -4354,8 +4462,82 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="Informasjonsmodell-beskrivelse"><a class="link" href="#Informasjonsmodell-beskrivelse">Informasjonsmodell: beskrivelse (dct:description)</a></h6>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Literal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inneholder fritekstbeskrivelse av modellen. Bør gjentas når beskrivelsen finnes i flere ulike språk/målformer.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="Informasjonsmodell-identifikator"><a class="link" href="#Informasjonsmodell-identifikator">Informasjonsmodell: (dct:identifier) identifikator</a></h6>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">identifier</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Literal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hovedidentifikator for modellen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">F.eks. URI eller annen identifikator som er stabil og globalt unik.</p></td>
 </tr>
 </tbody>
 </table>
@@ -4389,7 +4571,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -4428,7 +4610,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -4463,7 +4645,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -4498,7 +4680,42 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="Informasjonsmodell-tema"><a class="link" href="#Informasjonsmodell-tema">Informasjonsmodell: tema (dcat:theme)</a></h6>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">theme</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dcat:theme</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">skos:Concept</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til et hovedtema for modellen. En modell kan assosieres med flere tema.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -4536,7 +4753,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4571,7 +4788,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4606,7 +4823,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4641,7 +4858,42 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="Informasjonsmodell-erProfilAv"><a class="link" href="#Informasjonsmodell-erProfilAv">Informasjonsmodell: er profil av (prof:isProfileOf)</a></h6>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">is profile of</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">prof:isProfileOf</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:Standard</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Refererer til en standard eller spesifikasjon som modellen er en profil av.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4676,7 +4928,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4711,14 +4963,14 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect5">
-<h6 id="Informasjonsmodell-finnesIFormat"><a class="link" href="#Informasjonsmodell-finnesIFormat">Informasjonsmodell:finnes i format (dct:hasFormat)</a></h6>
+<h6 id="Informasjonsmodell-finnesIFormat"><a class="link" href="#Informasjonsmodell-finnesIFormat">Informasjonsmodell: finnes i format (dct:hasFormat)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -4746,7 +4998,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4781,7 +5033,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4816,7 +5068,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4851,7 +5103,42 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="Informasjonsmodell-iSamsvarMed"><a class="link" href="#Informasjonsmodell-iSamsvarMed">Informasjonsmodell: i samsvar med (dct:conformsTo)</a></h6>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">conforms to</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:conformsTo</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:Standard</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Referanse til en implementasjonsregel eller spesifikasjon, som ligger til grunn for opprettelsen av modellen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4886,7 +5173,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4921,7 +5208,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4956,7 +5243,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4991,7 +5278,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -5026,7 +5313,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -5061,7 +5348,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -5096,7 +5383,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -5112,7 +5399,80 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <div class="sect4">
 <h5 id="Obligatoriske-egenskaper-Kodeelement"><a class="link" href="#Obligatoriske-egenskaper-Kodeelement">Obligatoriske egenskaper for klassen <em>Kodeelement</em></a></h5>
 <div class="sect5">
-<h6 id="Kodeelement-anbefaltKodetekst"><a class="link" href="#Kodeelement-anbefaltKodetekst">Kodeelement:anbefalt kodetekst (skos:prefLabel)</a></h6>
+<h6 id="Kodeelement-iKodeliste"><a class="link" href="#Kodeelement-iKodeliste">Kodeelement: i kodeliste (skos:inScheme)</a></h6>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">in scheme</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">skos:inScheme</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:CodeList</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til kodeliste som kodeelementet inngår i.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="Kodeelement-kode"><a class="link" href="#Kodeelement-kode">Kodeelement: kode (skos:notation)</a></h6>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">skos:notation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Literal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til representasjonen av kodeelementet, vanligvis kalt «koden».</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="Anbefalte-egenskaper-Kodeelement"><a class="link" href="#Anbefalte-egenskaper-Kodeelement">Anbefalte egenskaper for klassen <em>Kodeelement</em></a></h5>
+<div class="sect5">
+<h6 id="Kodeelement-anbefaltKodetekst"><a class="link" href="#Kodeelement-anbefaltKodetekst">Kodeelement: anbefalt kodetekst (skos:prefLabel)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5141,11 +5501,11 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
@@ -5155,7 +5515,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </table>
 </div>
 <div class="sect5">
-<h6 id="Kodeelement-iKodeliste"><a class="link" href="#Kodeelement-iKodeliste">Kodeelement:i kodeliste (skos:inScheme)</a></h6>
+<h6 id="Kodeelement-begrep"><a class="link" href="#Kodeelement-begrep">Kodeelement: begrep (dct:subject)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5164,27 +5524,27 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">in scheme</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">subject</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">skos:inScheme</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:subject</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:CodeList</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">skos:Concept</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til kodeliste som kodeelementet inngår i.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Referanse til sentralt begrep som er viktig for å forstå og tolke koden. Representeres som URI-er.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
 </table>
@@ -5215,90 +5575,17 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1..1</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="Anbefalte-egenskaper-Kodeelement"><a class="link" href="#Anbefalte-egenskaper-Kodeelement">Anbefalte egenskaper for klassen <em>Kodeelement</em></a></h5>
-<div class="sect5">
-<h6 id="Kodeelement-begrep"><a class="link" href="#Kodeelement-begrep">Kodeelement: begrep (dct:subject)</a></h6>
-<table class="tableblock frame-all grid-all stripes-even stretch">
-<colgroup>
-<col style="width: 30%;">
-<col style="width: 70%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">subject</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dct:subject</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">skos:Concept</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Referanse til sentralt begrep som er viktig for å forstå og tolke koden. Representeres som URI-er.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect5">
-<h6 id="Kodeelement-kode"><a class="link" href="#Kodeelement-kode">Kodeelement:kode (skos:notation)</a></h6>
-<table class="tableblock frame-all grid-all stripes-even stretch">
-<colgroup>
-<col style="width: 30%;">
-<col style="width: 70%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">skos:notation</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Literal</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til representasjonen av kodeelementet, vanligvis kalt «koden».</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect5">
-<h6 id="Kodeelement-toppkonseptTil"><a class="link" href="#Kodeelement-toppkonseptTil">Kodeelement:toppkonsept til (skos:topConceptOf)</a></h6>
+<h6 id="Kodeelement-toppelementTil"><a class="link" href="#Kodeelement-toppelementTil">Kodeelement: toppelement til (skos:topConceptOf)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5326,7 +5613,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -5336,7 +5623,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <div class="sect4">
 <h5 id="Valgfrie-egenskaper-Kodeelement"><a class="link" href="#Valgfrie-egenskaper-Kodeelement">Valgfrie egenskaper for klassen <em>Kodeelement</em></a></h5>
 <div class="sect5">
-<h6 id="Kodeelement-definisjon"><a class="link" href="#Kodeelement-definisjon">Kodeelement:definisjon (skos:definition)</a></h6>
+<h6 id="Kodeelement-definisjon"><a class="link" href="#Kodeelement-definisjon">Kodeelement: definisjon (skos:definition)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5368,14 +5655,14 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect5">
-<h6 id="Kodeelement-eksempel"><a class="link" href="#Kodeelement-eksempel">Kodeelement:eksempel (skos:example)</a></h6>
+<h6 id="Kodeelement-eksempel"><a class="link" href="#Kodeelement-eksempel">Kodeelement: eksempel (skos:example)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5407,14 +5694,14 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect5">
-<h6 id="Kodeelement-eksklusjonsmerknad"><a class="link" href="#Kodeelement-eksklusjonsmerknad">Kodeelement:eksklusjonsmerknad (xkos:exclusionNote)</a></h6>
+<h6 id="Kodeelement-eksklusjonsmerknad"><a class="link" href="#Kodeelement-eksklusjonsmerknad">Kodeelement: eksklusjonsmerknad (xkos:exclusionNote)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5431,7 +5718,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:literal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Literal</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
@@ -5446,14 +5733,14 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect5">
-<h6 id="Kodeelement-forrigeKodeelement"><a class="link" href="#Kodeelement-forrigeKodeelement">Kodeelement:forrige kodeelement (xkos:previous)</a></h6>
+<h6 id="Kodeelement-forrigeKodeelement"><a class="link" href="#Kodeelement-forrigeKodeelement">Kodeelement: forrige kodeelement (xkos:previous)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5478,10 +5765,10 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -5520,14 +5807,14 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect5">
-<h6 id="Kodeelement-inklusjonsmerknad"><a class="link" href="#Kodeelement-inklusjonsmerknad">Kodeelement:inklusjonsmerknad (xkos:inclusionNote)</a></h6>
+<h6 id="Kodeelement-inklusjonsmerknad"><a class="link" href="#Kodeelement-inklusjonsmerknad">Kodeelement: inklusjonsmerknad (xkos:inclusionNote)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5559,14 +5846,14 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect5">
-<h6 id="Kodeelement-merknad"><a class="link" href="#Kodeelement-merknad">Kodeelement:merknad (skos:note)</a></h6>
+<h6 id="Kodeelement-merknad"><a class="link" href="#Kodeelement-merknad">Kodeelement: merknad (skos:note)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5594,14 +5881,14 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect5">
-<h6 id="Kodeelement-nesteKodeelement"><a class="link" href="#Kodeelement-nesteKodeelement">Kodeelement:neste kodeelement (xkos:next)</a></h6>
+<h6 id="Kodeelement-nesteKodeelement"><a class="link" href="#Kodeelement-nesteKodeelement">Kodeelement: neste kodeelement (xkos:next)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5626,17 +5913,17 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect5">
-<h6 id="Kodeelement-omfangsmerknad"><a class="link" href="#Kodeelement-omfangsmerknad">Kodeelement:omfangsmerknad (skos:scopeNote)</a></h6>
+<h6 id="Kodeelement-omfangsmerknad"><a class="link" href="#Kodeelement-omfangsmerknad">Kodeelement: omfangsmerknad (skos:scopeNote)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5668,14 +5955,14 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect5">
-<h6 id="Kodeelement-tillattKodetekst"><a class="link" href="#Kodeelement-tillattKodetekst">Kodeelement:tillatt kodetekst (skos:altLabel)</a></h6>
+<h6 id="Kodeelement-tillattKodetekst"><a class="link" href="#Kodeelement-tillattKodetekst">Kodeelement: tillatt kodetekst (skos:altLabel)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5707,7 +5994,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -5751,7 +6038,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -5765,7 +6052,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <p>Klassen <em>Komposisjon</em> er valgfri</p>
 </div>
 <div class="sect4">
-<h5 id="Obligatoriske-egenskaper-Komposisjon"><a class="link" href="#Obligatoriske-egenskaper-Komposisjon">Obligatoriske egenskaper for klassen <em>Komposisjon</em></a></h5>
+<h5 id="Anbefalte-egenskaper-Komposisjon"><a class="link" href="#Anbefalte-egenskaper-Komposisjon">Anbefalte egenskaper for klassen <em>Komposisjon</em></a></h5>
 <div class="sect5">
 <h6 id="Komposisjon-inneholder"><a class="link" href="#Komposisjon-inneholder">Komposisjon: inneholder (modelldcatno:contains)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
@@ -5799,7 +6086,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -5817,41 +6104,6 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </div>
 <div class="sect4">
 <h5 id="Obligatoriske-egenskaper-Modellelement"><a class="link" href="#Obligatoriske-egenskaper-Modellelement">Obligatoriske egenskaper for klassen <em>Modellelement</em></a></h5>
-<div class="sect5">
-<h6 id="modellelement-identifikator"><a class="link" href="#modellelement-identifikator">Modellelement: identifikator (dct:identifier)</a></h6>
-<table class="tableblock frame-all grid-all stripes-even stretch">
-<colgroup>
-<col style="width: 30%;">
-<col style="width: 70%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">identifier</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Literal</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Unik og persistent identifisering av et modellelement.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1..1</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
-</tr>
-</tbody>
-</table>
-</div>
 <div class="sect5">
 <h6 id="Modellelement-tittel"><a class="link" href="#Modellelement-tittel">Modellelement: tittel (dct:title)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
@@ -5881,7 +6133,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -5919,7 +6171,77 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="Modellelement-begrensning"><a class="link" href="#Modellelement-begrensning">Modellelement: begrensning (modelldcatno:constraint)</a></h6>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">constraint</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:constraint</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Property</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å beskrive begrensninger eller restriksjoner for bruken av et modellelement.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="modellelement-identifikator"><a class="link" href="#modellelement-identifikator">Modellelement: identifikator (dct:identifier)</a></h6>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">identifier</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Literal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unik og persistent identifisering av et modellelement.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -5954,7 +6276,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -5992,7 +6314,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -6024,15 +6346,59 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Modeller kan bestå av moduler, som beslektede modellelementer er gruppert under.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Note-egenskaper"><a class="link" href="#Note-egenskaper">Realisering (modelldcatno:Note)</a></h4>
+<div class="paragraph">
+<p>Klassen <em>Note</em> er valgfri.</p>
+</div>
+<div class="sect4">
+<h5 id="Anbefalte-egenskaper-Note"><a class="link" href="#Anbefalte-egenskaper-Note">Anbefalte egenskaper for klassen <em>Note</em></a></h5>
+<div class="sect5">
+<h6 id="Note-anmerkning"><a class="link" href="#Note-anmerkning">Note: anmerkning (modelldcatno:propertyNote)</a></h6>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">property note</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:propertyNote</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Literal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inneholder en kommentar i form av en fritekst. Bør gjentas når beskrivelsen finnes i flere ulike språk/målformer.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
 </table>
@@ -6079,7 +6445,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -6127,7 +6493,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -6175,7 +6541,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -6184,7 +6550,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </div>
 </div>
 <div class="sect3">
-<h4 id="Spesialisering-egenskaper"><a class="link" href="#Spesialisering-egenskaper">Spesialisering</a></h4>
+<h4 id="Spesialisering-egenskaper"><a class="link" href="#Spesialisering-egenskaper">Spesialisering (modelldcatno:Specialization)</a></h4>
 <div class="paragraph">
 <p>Klassen <em>Spesialisering</em> er anbefalt</p>
 </div>
@@ -6223,8 +6589,128 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Standard-egenskaper"><a class="link" href="#Standard-egenskaper">Standard (dct:Standard)</a></h4>
+<div class="paragraph">
+<p>Klassen <em>Standard</em> er valgfri.</p>
+</div>
+<div class="sect4">
+<h5 id="Obligatoriske-egenskaper-Standard"><a class="link" href="#Obligatoriske-egenskaper-Standard">Obligatoriske egenskaper for klassen <em>Standard</em></a></h5>
+<div class="sect5">
+<h6 id="_standard_har_tittel_dcttitle"><a class="link" href="#_standard_har_tittel_dcttitle">Standard: har tittel (dct:title)</a></h6>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">has title</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:title</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Literal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til tittelen til standarden/spesifikasjonen. Bør gjentas når tittelen finnes i flere ulike språk/målformer.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="Anbefalte-egenskaper-Standard"><a class="link" href="#Anbefalte-egenskaper-Standard">Anbefalte egenskaper for klassen <em>Standard</em></a></h5>
+<div class="sect5">
+<h6 id="_standard_har_referanse_rdfsseealso"><a class="link" href="#_standard_har_referanse_rdfsseealso">Standard: har referanse (rdfs:seeAlso)</a></h6>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">has reference</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:seeAlso</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Resource</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til en referanse til standarden/spesifikasjonen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="Valgfrie-egenskaper-Standard"><a class="link" href="#Valgfrie-egenskaper-Standard">Valgfrie egenskaper for klassen <em>Standard</em></a></h5>
+<div class="sect5">
+<h6 id="_standard_har_versjonsnummer_owlversioninfo"><a class="link" href="#_standard_har_versjonsnummer_owlversioninfo">Standard: har versjonsnummer (owl:versionInfo)</a></h6>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">has version number</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">owl:versionInfo</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Literal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til versjonsnummer.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
 </table>
@@ -6267,7 +6753,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -6314,7 +6800,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -6338,6 +6824,10 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 </colgroup>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">has some</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:hasSome</p></td>
 </tr>
@@ -6358,7 +6848,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -6408,7 +6898,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/file-type" class="bare">http://publications.europa.eu/resource/authority/file-type</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -6439,7 +6929,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/language" class="bare">http://publications.europa.eu/resource/authority/language</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -6472,6 +6962,10 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Kravet fra EU er forklart slik: "This vocabulary must be used in case the licence […​] is internationally recognised and included in the EU Publications Office NAL."</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
 </table>
@@ -6507,7 +7001,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <a href="http://sws.geonames.org/" class="bare">http://sws.geonames.org/</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -6538,7 +7032,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://purl.org/adms/status/">http://purl.org/adms/status/</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -6569,7 +7063,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://purl.org/adms/publishertype/">http://purl.org/adms/publishertype/</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -6597,7 +7091,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://purl.org/adms/licencetype/">http://purl.org/adms/licencetype/</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -6631,7 +7125,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://psi.norge.no/los/all.rdf" class="bare">https://psi.norge.no/los/all.rdf</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -6662,7 +7156,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://psi.norge.no/los/all.rdf" class="bare">https://psi.norge.no/los/all.rdf</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -6671,10 +7165,229 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="Endringslogg"><a class="link" href="#Endringslogg">Endringslogg</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="Endringer_fra_V1.1"><a class="link" href="#Endringer_fra_V1.1">Endringer fra v.1.0 til v.1.1</a></h3>
+<div class="paragraph">
+<p>Tabellen under gir en oversikt over endringene i klasser og egenskaper, fra v.1.0 til v.1.1 av ModellDCAT-AP-NO. Redaksjonelle endringer av tekster (inkl. engelske navn, tekstlige beskrivelser, kommentarer og eksempler) er ikke tatt med i oversikten.</p>
+</div>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 15%;">
+<col style="width: 15%;">
+<col style="width: 35%;">
+<col style="width: 35%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Klasse-/egenskapsnavn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI for klassen/egenskapen</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Endring</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Forklaring</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskap: identifikator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Endret fra obligatorisk til anbefalt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For strengt å ha dette som obligatorisk når egenskapene som RDF-ressurser i tillegg tildeles egne URI’er.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskap: identifikator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 1..1 til 0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravsnivå endres fra obligatorisk til anbefalt.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskap: navigerbar</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:navigable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ny egenskap</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For å gi en bedre beskrivelse av retninger på relasjoner, som f.eks. roller, komposisjoner og samlinger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: beskrivelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Endret fra obligatorisk til anbefalt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For strengt å ha dette som en obligatorisk egenskap. Flere virksomheter har ikke tekstlige beskrivelser av modellene sine.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: beskrivelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 1..n til 0..n</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravsnivå endres fra obligatorisk til anbefalt.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: er profil av</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">prof:isProfileOf</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ny egenskap</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">En del modeller er profiler av standarder eller spesifikasjoner. Dette kan gi bedre forståelse av modellene og nyttig når man sammenligner eller gjenbruker fra andre modeller.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: i samsvar med</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:conformsTo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ny egenskap</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">En del modeller bygger på standarder eller spesifikasjoner. Dette kan gi bedre forståelse av modellene og nyttig når man sammenligne eller gjenbruke fra andre modeller.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: identifikator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Endret fra obligatorisk til anbefalt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For strengt å ha dette som en obligatorisk egenskap når egenskapene som RDF-ressurser i tillegg tildeles egne URI’er.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: identifikator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 1..1 til 0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravsnivå endres fra obligatorisk til anbefalt.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: tema</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dcat:theme</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Endret fra obligatorisk til anbefalt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For strengt å ha dette som en obligatorisk egenskap. Det er ikke alle virksomheter som har kategorisert modellene sine etter tema.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: tema</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dcat:theme</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 1..n til 0..n</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravsnivå endres fra obligatorisk til anbefalt.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: anbefalt kodetekst</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">skos:prefLabel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Endret fra obligatorisk til anbefalt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Det er ikke alle kodeelementer som har en anbefalt kodetekst knyttet til seg. For eksempel vil UML enumerasjoner inneholde bare kodeverdier.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: anbefalt kodetekst</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">skos:prefLabel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 1..n til 0..n</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravsnivå endres fra obligatorisk til anbefalt.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: i kodeliste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">skos:inScheme</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 0..n til 1..n</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Skrivefeil i forrige versjon. Det bør være et krav at et kodeelement tilhører minst en kodeliste, slik at man unngår at modellene inneholder kodeelementer uten tilhørighet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: identifikator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Endret fra obligatorisk til anbefalt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For strengt å ha dette som en obligatorisk egenskap når kodeelementene som RDF-ressurser i tillegg tildeles egne URI’er.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: identifikator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 1..1 til 0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravsnivå endres fra obligatorisk til anbefalt.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: kode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">skos:notation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Endret fra valgfri til obligatorisk</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Det bør være et krav at et kodeelement har en kode som kan brukes i et datafelt.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: kode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">skos:notation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 0..1 til 1..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravsnivå endres fra anbefalt til obligatorisk.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Modellelement: identifikator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Endret fra obligatorisk til anbefalt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Strengt For strengt å ha dette som en obligatorisk egenskap når modellelementene som RDF-ressurser i tillegg tildeles egne URI’er.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Modellelement: identifikator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 1..1 til 0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravsnivå endres fra obligatorisk til anbefalt.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Modellelement: tilhører modul</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:belongsToModule</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 0..1 til 0..n</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ett og samme modellelement kan tilhøre ulike moduler.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskap: tilhører modul</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:belongsToModule</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 0..1 til 0..n</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">En og samme egenskap kan tilhøre ulike moduler.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Standard</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:Standard</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hele klassen er ny</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes som range for dct:conformsTo og prof:isProfileOf, og som referanse fra f.eks. et dcat:Dataset til en informasjonsmodell som beskriver datasettet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskap: begrensning</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:constraint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ny egenskap</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gir en bedre forståelse av bruken av en egenskap.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskap: enten eller</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:xor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ny egenskap</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Definert som en subegenskap til modelldcatno:constraint, siden dette er en begrensning som benyttes hyppig.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskap: eller</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:or</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ny egenskap</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Definert som en subegenskap til modelldcatno:constraint, siden dette er en begrensning som benyttes hyppig.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Modellelement: begrensning</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:constraint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ny egenskap</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gir en bedre forståelse av bruken av et modellelement.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: toppelement til</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">skos:topConceptOf</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Endret norsk term</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bedre dekkende navn.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Komposisjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Composition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Endring i tekst i oversikt over egenskaper per klasse.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Skrivefeil.  Det står at klassen har obligatoriske egenskaper. Dette stemmer ikke, den har kun én egenskap med kravsnivå anbefalt.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Note:anmerkning</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:propertyNote</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Manglende beskrivelse.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Skrivefeil.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: neste kodeelement</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xkos:next</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Endret multiplisitet, fra o..n til 0..1.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Skrivefeil</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: forrige kodeelement</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xkos:previous</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Endret multiplisitet, fra o..n til 0..1.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Skrivefeil</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2020-11-24 10:17:41 UTC
+Sist oppdatert 2020-12-18 14:45:09 UTC
 </div>
 </div>
 </body>

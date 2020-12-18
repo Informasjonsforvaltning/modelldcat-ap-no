@@ -8,11 +8,11 @@ Klassen _Assosiasjon_ er anbefalt.
 
 [cols="30s,70d"]
 |===
-|Engelsk navn|Refers to
+|Engelsk navn|refers to
 |URI|modelldcatno:refersTo
 |Range|modelldcatno:ModelElement
 |Beskrivelse|Brukes til å referere til et modellelement som assosiasjonen peker til.
 |Subegenskap av|modelldcatno:hasType
 |Multiplisitet|0..1
-|Status|Anbefalt
+|Kravsnivå|Anbefalt
 |===
