@@ -89,7 +89,7 @@ dct:format rdf:type owl:ObjectProperty ;
 dct:hasFormat rdf:type owl:ObjectProperty ;
               rdfs:domain modelldcatno:InformationModel ;
               rdfs:range foaf:Document ;
-              rdfs:label "finnes i format"@en ,
+              rdfs:label "finnes i format"@nb ,
                          "has format"@en .
 
 
@@ -160,7 +160,7 @@ dct:replaces rdf:type owl:ObjectProperty ;
 dct:spatial rdf:type owl:ObjectProperty ;
             rdfs:domain dcat:Resource ;
             rdfs:range dct:Location ;
-            rdfs:label "Dekningsområde"@nb ,
+            rdfs:label "dekningsområde"@nb ,
                        "spatial coverage"@en .
 
 
@@ -202,15 +202,15 @@ dct:type rdf:type owl:ObjectProperty ;
 skos:inScheme rdf:type owl:ObjectProperty ;
               rdfs:domain modelldcatno:CodeElement ;
               rdfs:range modelldcatno:CodeList ;
-              rdfs:label "in scheme"@nb ,
-                         "tilhører liste"@nb .
+              rdfs:label "i kodeliste"@nb ,
+                         "in scheme"@en .
 
 
 ###  http://www.w3.org/2004/02/skos/core#topConceptOf
 skos:topConceptOf rdf:type owl:ObjectProperty ;
                   rdfs:domain modelldcatno:CodeElement ;
                   rdfs:range modelldcatno:CodeList ;
-                  rdfs:label "top concept of"@nb ,
+                  rdfs:label "top concept of"@en ,
                              "toppelement til"@nb .
 
 
@@ -226,8 +226,8 @@ adms:status rdf:type owl:ObjectProperty ;
 dcat:contactPoint rdf:type owl:ObjectProperty ;
                   rdfs:domain dcat:Resource ;
                   rdfs:range vcard:Kind ;
-                  rdfs:label "Kontaktpunkt"@nb ,
-                             "contact point"@en .
+                  rdfs:label "contact point"@en ,
+                             "kontaktpunkt"@nb .
 
 
 ###  http://www.w3.org/ns/dcat#theme
@@ -242,7 +242,7 @@ dcat:theme rdf:type owl:ObjectProperty ;
 dcat:themeTaxonomy rdf:type owl:ObjectProperty ;
                    rdfs:domain dcat:Resource ;
                    rdfs:range skos:ConceptScheme ;
-                   rdfs:label "Tematisk skjema"@nb ,
+                   rdfs:label "tematisk skjema"@nb ,
                               "theme taxonomy"@en .
 
 
@@ -269,8 +269,8 @@ modelldcatno:codeListReference rdf:type owl:ObjectProperty ,
                                         owl:IrreflexiveProperty ;
                                rdfs:domain modelldcatno:CodeList ;
                                rdfs:range modelldcatno:CodeList ;
-                               rdfs:label "Ekstern kodeliste"@nb ,
-                                          "code list reference"@en .
+                               rdfs:label "code list reference"@en ,
+                                          "ekstern kodeliste"@nb .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#constraint
@@ -319,8 +319,8 @@ modelldcatno:formsSymmetryWith rdf:type owl:ObjectProperty ,
                                         owl:SymmetricProperty ;
                                rdfs:domain modelldcatno:Property ;
                                rdfs:range modelldcatno:Property ;
-                               rdfs:label "Forms symmetry with"@en ,
-                                          "Utgjør symetrisk relasjon med"@nb .
+                               rdfs:label "forms symmetry with"@en ,
+                                          "utgjør symetrisk relasjon med"@nb .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#hasDataType
@@ -403,7 +403,7 @@ modelldcatno:hasSome rdf:type owl:ObjectProperty ;
                      rdfs:domain modelldcatno:Choice ;
                      rdfs:range modelldcatno:ModelElement ;
                      rdfs:comment "Brukes for å betegne at en valgmulighet ikke er ekskusiv, dvs. at man kan velge mer enn en."@nb ;
-                     rdfs:label "has some"@nb ,
+                     rdfs:label "has some"@en ,
                                 "kan ha"@nb .
 
 
@@ -498,7 +498,7 @@ xkos:previous rdf:type owl:ObjectProperty ;
               rdfs:domain modelldcatno:CodeElement ;
               rdfs:range modelldcatno:CodeElement ;
               rdfs:label "forrige"@nb ,
-                         "previous"@nb .
+                         "previous"@en .
 
 
 #################################################################
@@ -678,7 +678,9 @@ owl:versionInfo rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.w3.org/2004/02/skos/core#notation
-skos:notation rdf:type owl:DatatypeProperty .
+skos:notation rdf:type owl:DatatypeProperty ;
+              rdfs:label "notation"@en ,
+                         "teknisk navn"@en .
 
 
 ###  http://www.w3.org/ns/dcat#bbox
@@ -693,7 +695,7 @@ dcat:bbox rdf:type owl:DatatypeProperty ;
 dcat:centroid rdf:type owl:DatatypeProperty ;
               rdfs:domain dct:Location ;
               rdfs:range rdfs:Literal ;
-              rdfs:label "centroid"@nb ,
+              rdfs:label "centroid"@en ,
                          "geografisk midtpunkt"@nb .
 
 
@@ -701,8 +703,8 @@ dcat:centroid rdf:type owl:DatatypeProperty ;
 dcat:endDate rdf:type owl:DatatypeProperty ;
              rdfs:domain dct:PeriodOfTime ;
              rdfs:range xsd:dateTime ;
-             rdfs:comment "end date"@en ;
-             rdfs:label "sluttdato"@nb .
+             rdfs:label "end date"@en ,
+                        "sluttdato"@nb .
 
 
 ###  http://www.w3.org/ns/dcat#keyword
@@ -1089,7 +1091,8 @@ foaf:Agent rdf:type owl:Class ;
 
 ###  http://xmlns.com/foaf/0.1/Document
 foaf:Document rdf:type owl:Class ;
-              rdfs:label "Document"@en .
+              rdfs:label "Document"@en ,
+                         "Dokument"@nb .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#Abstraction
