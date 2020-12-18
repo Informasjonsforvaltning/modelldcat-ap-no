@@ -23,6 +23,23 @@
 #    Annotation properties
 #################################################################
 
+###  http://www.w3.org/2000/01/rdf-schema#seeAlso
+rdfs:seeAlso rdfs:label "har referanse"@nb ,
+                        "has reference"@en ;
+             rdfs:range rdfs:Literal ;
+             rdfs:domain dct:Standard ,
+                         dcat:Resource .
+
+
+###  http://www.w3.org/2002/07/owl#versionInfo
+owl:versionInfo rdf:type owl:AnnotationProperty ;
+                rdfs:label "version info"@en ,
+                           "versjonsinfo"@nb ;
+                rdfs:range rdfs:Literal ;
+                rdfs:domain dct:Standard ,
+                            dcat:Resource .
+
+
 ###  http://www.w3.org/2004/02/skos/core#altLabel
 skos:altLabel rdf:type owl:AnnotationProperty ;
               rdfs:subPropertyOf rdfs:label .
@@ -560,7 +577,8 @@ dct:modified rdf:type owl:DatatypeProperty ;
 ###  http://purl.org/dc/terms/title
 dct:title rdf:type owl:DatatypeProperty ;
           rdfs:domain [ rdf:type owl:Class ;
-                        owl:unionOf ( skos:ConceptScheme
+                        owl:unionOf ( dct:Standard
+                                      skos:ConceptScheme
                                       dcat:Resource
                                       foaf:Document
                                       modelldcatno:ModelElement
@@ -667,14 +685,6 @@ xsd:totalDigits rdf:type owl:DatatypeProperty ,
                 rdfs:range xsd:nonNegativeInteger ;
                 rdfs:label "total digits"@en ,
                            "totalt antall siffer"@nb .
-
-
-###  http://www.w3.org/2002/07/owl#versionInfo
-owl:versionInfo rdf:type owl:DatatypeProperty ;
-                rdfs:domain dcat:Resource ;
-                rdfs:range rdfs:Literal ;
-                rdfs:label "version info"@en ,
-                           "versjonsinfo"@nb .
 
 
 ###  http://www.w3.org/2004/02/skos/core#notation
@@ -867,6 +877,10 @@ dct:PeriodOfTime rdf:type owl:Class ;
 
 ###  http://purl.org/dc/terms/Standard
 dct:Standard rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty dct:title ;
+                               owl:minCardinality "1"^^xsd:nonNegativeInteger
+                             ] ;
              rdfs:label "Standard"@en ,
                         "Standard"@nb .
 
@@ -1261,10 +1275,6 @@ modelldcatno:InformationModel rdf:type owl:Class ;
                                                 owl:someValuesFrom xsd:dateTime
                                               ] ,
                                               [ rdf:type owl:Restriction ;
-                                                owl:onProperty owl:versionInfo ;
-                                                owl:someValuesFrom rdfs:Literal
-                                              ] ,
-                                              [ rdf:type owl:Restriction ;
                                                 owl:onProperty dcat:keyword ;
                                                 owl:someValuesFrom rdfs:Literal
                                               ] ,
@@ -1274,10 +1284,6 @@ modelldcatno:InformationModel rdf:type owl:Class ;
                                               ] ,
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty dct:description ;
-                                                owl:minCardinality "1"^^xsd:nonNegativeInteger
-                                              ] ,
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty dct:title ;
                                                 owl:minCardinality "1"^^xsd:nonNegativeInteger
                                               ] ;
                               rdfs:label "Informasjonsmodell"@nb ,
@@ -1301,16 +1307,6 @@ modelldcatno:InformationModel rdf:type owl:Class ;
                          owl:minCardinality "1"^^xsd:nonNegativeInteger
                        ] ;
    rdfs:comment "This property contains descriptive textual information about the Information Model. This property should be repeated in case there are various versions of the text in different languages."@en
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource modelldcatno:InformationModel ;
-   owl:annotatedProperty rdfs:subClassOf ;
-   owl:annotatedTarget [ rdf:type owl:Restriction ;
-                         owl:onProperty dct:title ;
-                         owl:minCardinality "1"^^xsd:nonNegativeInteger
-                       ] ;
-   rdfs:comment "This property refers to the descriptive title or name of a Information Model. This property should be repeated in case there are various versions of the text in different languages."@en
  ] .
 
 
