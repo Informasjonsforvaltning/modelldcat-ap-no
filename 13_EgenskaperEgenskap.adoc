@@ -37,7 +37,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Engelsk navn|exclusive or
 |URI|modelldcatno:xor
 |Range|modelldcatno:Property
-|Beskrivelse|Brukes til å beskrive begrensning som kan settes mellom to eller flere egenskaper til et modellelement, der kun én av dem kan opptre samtidig (ekslusiv eller).
+|Beskrivelse|Brukes til å referere til andre egenskaper som denne egenskapen ikke kan opptre samtidig med (eksklusiv eller).
 |Subegenskap av|modelldcatno:constraint
 |Multiplisitet|0..n
 |Kravsnivå|Anbefalt
@@ -50,7 +50,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Engelsk navn|or
 |URI|modelldcatno:or
 |Range|modelldcatno:Property
-|Beskrivelse|Brukes til å beskrive begrensning som kan settes mellom to eller flere egenskaper til et modellelement, der minst én av dem må opptre (inklusiv eller).
+|Beskrivelse|Brukes til å referere til andre egenskaper som denne egenskapen kan opptre blant (inklusiv eller).
 |Subegenskap av|modeldcatno:constraint
 |Multiplisitet|0..n
 |Kravsnivå|Anbefalt
