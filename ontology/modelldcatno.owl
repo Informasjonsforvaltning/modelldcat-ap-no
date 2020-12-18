@@ -23,8 +23,18 @@
 #    Annotation properties
 #################################################################
 
+###  http://www.w3.org/2000/01/rdf-schema#seeAlso
+rdfs:seeAlso rdfs:label "har referanse"@nb ,
+                        "has reference"@en ;
+             rdfs:range rdfs:Literal ;
+             rdfs:domain dct:Standard ,
+                         dcat:Resource .
+
+
 ###  http://www.w3.org/2002/07/owl#versionInfo
 owl:versionInfo rdf:type owl:AnnotationProperty ;
+                rdfs:label "version info"@en ,
+                           "versjonsinfo"@nb ;
                 rdfs:range rdfs:Literal ;
                 rdfs:domain dct:Standard ,
                             dcat:Resource .
@@ -1365,14 +1375,6 @@ modelldcatno:Specialization rdf:type owl:Class ;
                             rdfs:subClassOf modelldcatno:Property ;
                             rdfs:label "Specialization"@en ,
                                        "Spesialisering"@nb .
-
-
-#################################################################
-#    Annotations
-#################################################################
-
-owl:versionInfo rdfs:label "versjonsinfo"@nb ,
-                           "version info"@en .
 
 
 #################################################################
