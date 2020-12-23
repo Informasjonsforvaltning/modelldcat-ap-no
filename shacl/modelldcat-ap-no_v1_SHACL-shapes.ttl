@@ -207,9 +207,9 @@
       a sh:PropertyShape ;
       sh:name "lisens"@nb , "license"@en ;
       sh:path dct:license ;
-      sh:pattern "^http://publications.europa.eu/resource/dataset/licence" ;
+      sh:pattern "^http://publications.europa.eu/resource/authority/licence" ;
       sh:flags "i";
-      sh:message "Lisenstype skal være i samsvar med http://publications.europa.eu/resource/dataset/licence/"@nb ;
+      sh:message "Lisenstype skal være i samsvar med http://publications.europa.eu/resource/authority/licence/"@nb ;
       sh:severity sh:Violation ;
     .
 
@@ -218,12 +218,12 @@
       sh:name "dekningsområde"@nb , "spatial"@en ;
       sh:path dct:spatial ;
       sh:or (
-        [ sh:pattern "^http://publications.europa.eu/resource/dataset/continent" ; sh:flags "i" ; ]
-        [ sh:pattern "^http://publications.europa.eu/resource/dataset/country" ; sh:flags "i" ; ]
-        [ sh:pattern "^http://publications.europa.eu/resource/dataset/place" ; sh:flags "i" ;]
+        [ sh:pattern "^http://publications.europa.eu/resource/authority/continent" ; sh:flags "i" ; ]
+        [ sh:pattern "^http://publications.europa.eu/resource/authority/country" ; sh:flags "i" ; ]
+        [ sh:pattern "^http://publications.europa.eu/resource/authority/place" ; sh:flags "i" ;]
         [ sh:pattern "^http://sws.geonames.org/" ; sh:flags "i" ; ]
       ) ;
-      sh:message "Dekningsområde skal ha minst en verdi som skal være i henhold til http://publications.europa.eu/resource/dataset/continent, http://publications.europa.eu/resource/dataset/country, http://publications.europa.eu/resource/dataset/place eller http://sws.geonames.org/."@nb ;
+      sh:message "Dekningsområde skal ha minst en verdi som skal være i henhold til http://publications.europa.eu/resource/authority/continent, http://publications.europa.eu/resource/authority/country, http://publications.europa.eu/resource/authority/place eller http://sws.geonames.org/."@nb ;
       sh:severity sh:Violation ;
     .
 
@@ -674,9 +674,9 @@
         # sh:class dct:LicenseDocument ;
         sh:maxCount 1 ;
         sh:path dct:license ;
-        sh:pattern "^http://publications.europa.eu/resource/dataset/licence/" ;
+        sh:pattern "^http://publications.europa.eu/resource/authority/licence/" ;
         sh:flags "i" ;
-        sh:message "Det kan være maks. én lisens som skal være i samsvar med http://publications.europa.eu/resource/dataset/licence/"@nb ;
+        sh:message "Det kan være maks. én lisens som skal være i samsvar med http://publications.europa.eu/resource/authority/licence/"@nb ;
         sh:severity sh:Violation ;
     ],
         :SpatialProperty_Shape ,
