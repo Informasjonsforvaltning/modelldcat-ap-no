@@ -24,9 +24,9 @@
     modelldcatno:informationModelIdentifier "Mod1001" ; # informasjonsmodellidentifikator
     modelldcatno:containsModelElement <https://example.com/models/exModElement1> ; # inneholder modellelement
     dcat:contactPoint <https://example.com/contactPoints/exCP1> ; # kontaktpunkt
-    dct:license <http://publications.europa.eu/resource/dataset/licence/CC_BY_4_0> ; # lisens
+    dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ; # lisens
   ###### optional:
-    dct:spatial <http://publications.europa.eu/resource/dataset/country/NOR/> ; # dekningsområde
+    dct:spatial <http://publications.europa.eu/resource/authority/country/NOR/> ; # dekningsområde
     dcat:keyword ""@nb , ""@en ; # emneord
     dct:modified "2020-11-11"^^xsd:date ; # endringsdato
     dct:isPartOf <https://example.com/models/exMod101> ; # er del av
