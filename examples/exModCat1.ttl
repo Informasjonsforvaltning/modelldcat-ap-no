@@ -28,6 +28,5 @@
   ###### optional:
     dct:spatial <http://publications.europa.eu/resource/authority/country/NOR/> ; # dekningsområde
     dct:isParOf <https://https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exModCat0.ttl/> ; # er del av
-    dcat:themeTaxonomy <https://psi.norge.no/los/all.rdf>,
-       <http://http://eurovoc.europa.eu/> ; # temaer
+    dcat:themeTaxonomy <http://http://eurovoc.europa.eu/> ; # temaer
 .
