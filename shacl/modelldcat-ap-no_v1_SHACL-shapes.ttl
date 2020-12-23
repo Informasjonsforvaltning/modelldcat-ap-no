@@ -50,7 +50,7 @@
     ];
     dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
     cc:attributionURL <http://ec.europa.eu/> ;
-    dct:modified "2020-12-15"^^xsd:date ;
+    dct:modified "2020-12-23"^^xsd:date ;
     rdfs:commet "Validated SUCCESS at https://www.itb.ec.europa.eu/shacl/shacl/upload"@en ;
     dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ;
     dct:relation <http://joinup.ec.europa.eu/collection/access-base-registries/solution/abr-specification-registry-registries/release/200> ;
@@ -403,9 +403,14 @@
         sh:severity sh:Violation ;
     ], [
         sh:name "temaer"@nb , "themes"@en ;
-        sh:class skos:ConceptScheme ;
         sh:path dcat:themeTaxonomy ;
-        sh:severity sh:Violation ;
+        sh:pattern "^https://psi.norge.no/los/" ;
+        sh:flags "i" ;
+        sh:message "LOS bør brukes for dcat:themeTaxonomy"@nb ;
+        sh:severity sh:Warning ;
+        # sh:class skos:ConceptScheme ;
+        # sh:path dcat:themeTaxonomy ;
+        # sh:severity sh:Violation ;
     ], [
         sh:name "er del av"@nb , "is part of"@en ;
         sh:class dcat:Catalog ;
@@ -414,7 +419,7 @@
         sh:severity sh:Violation ;
     ] ;
     sh:or ( # En Modellkatalog skal ha minst en katalog eller en informasjonsmodell
-      [ sh:property [
+      sh:property [
           sh:name "har del"@nb , "has part"@en ;
           sh:minCount 1;
           sh:class dcat:Catalog ;
@@ -423,8 +428,8 @@
           sh:message "En modellkatalog skal inneholde minst enten en katalog eller en informasjonsmodell"@nb ,
             "A model catalog must contain at least one catalog or one information model"@en ;
           ]
-      ]
-      [ sh:property [
+
+      sh:property [
           sh:name "modell"@nb, "model"@en ;
           sh:minCount 1;
           sh:class modelldcatno:InformationModel ;
@@ -433,7 +438,7 @@
           sh:message "En modellkatalog skal inneholde minst enten en katalog eller en informasjonsmodell"@nb ,
             "A model catalog must contain at least one catalog or one information model"@en ;
           ]
-      ]
+
     );
     sh:targetClass dcat:Catalog .
 
