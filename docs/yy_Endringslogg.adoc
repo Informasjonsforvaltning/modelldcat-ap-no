@@ -38,6 +38,6 @@ Tabellen under gir en oversikt over endringene i klasser og egenskaper, fra v.1.
 |Kodeelement: toppelement til|skos:topConceptOf|Endret norsk term|Bedre dekkende navn.
 |Komposisjon|modelldcatno:Composition|Endring i tekst i oversikt over egenskaper per klasse.|Skrivefeil.  Det står at klassen har obligatoriske egenskaper. Dette stemmer ikke, den har kun én egenskap med kravsnivå anbefalt.
 |Note:anmerkning|modelldcatno:propertyNote|Manglende beskrivelse.|Skrivefeil.
-|Kodeelement: neste kodeelement|xkos:next|Endret multiplisitet, fra o..n til 0..1.|Skrivefeil
-|Kodeelement: forrige kodeelement|xkos:previous|Endret multiplisitet, fra o..n til 0..1.|Skrivefeil
+|Kodeelement: neste kodeelement|xkos:next|Endret multiplisitet, fra 0..n til 0..1.|Skrivefeil
+|Kodeelement: forrige kodeelement|xkos:previous|Endret multiplisitet, fra 0..n til 0..1.|Skrivefeil
 |===
