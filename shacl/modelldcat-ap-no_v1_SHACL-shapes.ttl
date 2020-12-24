@@ -14,6 +14,7 @@
 # @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 # @prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix prof: <https://www.w3.org/ns/dx/prof/> .
 # @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 # @prefix rov: <http://www.w3.org/ns/regorg#> .
@@ -50,7 +51,7 @@
     ];
     dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
     cc:attributionURL <http://ec.europa.eu/> ;
-    dct:modified "2020-12-23"^^xsd:date ;
+    dct:modified "2020-12-24"^^xsd:date ;
     rdfs:commet "Validated SUCCESS at https://www.itb.ec.europa.eu/shacl/shacl/upload"@en ;
     dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ;
     dct:relation <http://joinup.ec.europa.eu/collection/access-base-registries/solution/abr-specification-registry-registries/release/200> ;
@@ -65,7 +66,7 @@
     ] .
 
 
-# -+-+- Shapes for some "general" classes -+-+-+-
+# -+-+- Some "general" classes, though modified for modelldcatno when necessary -+-+-+-
 
 :Agent_Shape
     a sh:NodeShape ;
@@ -267,7 +268,6 @@
     sh:severity sh:Warning ;
   .
 
-
 #
 # -+-+-+-+- From here, shapes specific for ModellDCAT-AP-NO -+-+-+-
 #
@@ -459,7 +459,7 @@
     sh:name "Code element"@en , "Kodeelement"@nb ;
     sh:property [
         sh:name "i kodeliste"@nb, "in scheme"@en ;
-        # @v.1.1 # sh:minCount 1 ;
+        sh:minCount 1 ; # @v.1.1
         sh:class modelldcatno:CodeList ;
         sh:path skos:inScheme ;
         sh:severity sh:Violation ;
@@ -478,7 +478,7 @@
         sh:path skos:notation ;
         sh:severity sh:Violation ;
     ], [
-        sh:name "toppkonsept til"@nb , "is top concept of"@en ;
+        sh:name "toppelement til"@nb , "is top concept of"@en ;
         sh:class modelldcatno:CodeList ;
         sh:path skos:topConceptOf ;
         sh:severity sh:Violation
@@ -511,7 +511,7 @@
         sh:severity sh:Violation
     ], [
         sh:name "forrige kodeelement"@nb , "previous"@en ;
-        sh:maxCount 1;
+        sh:maxCount 1; # @v.1.1
         sh:class modelldcatno:CodeElement ;
         sh:path xkos:previous ;
         sh:severity sh:Violation
@@ -532,7 +532,7 @@
         sh:severity sh:Violation
     ], [
         sh:name "neste kodeelement"@nb , "next"@en ;
-        sh:maxCount 1;
+        sh:maxCount 1; # @v.1.1
         sh:class modelldcatno:CodeElement ;
         sh:path xkos:next ;
         sh:severity sh:Violation
@@ -771,6 +771,16 @@
         sh:nodeKind sh:Literal ;
         sh:path adms:versionNotes ;
         sh:severity sh:Violation ;
+    ], [ # @v.1.1
+        sh:name "er profil av"@nb , "is profile of"@en ;
+        sh:path prof:isProfileOf ;
+        sh:class dct:Standard ;
+        sh:severity sh:Violation ;
+    ], [ # @v.1.1
+        sh:name "i samsvar med"@nb , "conforms to"@en ;
+        sh:path dct:conformsTo ;
+        sh:class dct:Standard ;
+        sh:severity sh:Violation ;
     ] ;
     sh:targetClass modelldcatno:InformationModel .
 
@@ -812,18 +822,23 @@
         sh:shape sh:IRIOrLiteral ;
         sh:path modelldcatno:belongsToModule ;
         sh:severity sh:Violation ;
+    ], [ # @v.1.1
+        sh:name "begrensning"@nb , "constraint"@en ;
+        sh:path modelldcatno:constraint ;
+        sh:class modelldcatno:Property ;
+        sh:severity sh:Violation ;
     ] ;
     sh:targetClass modelldcatno:ModelElement ,
         modelldcatno:CodeList ,
         modelldcatno:ObjectType , modelldcatno:RootObjectType ,
         modelldcatno:DataType , modelldcatno:SimpleType .
 
-:Note_Shape
+:Note_Shape # @v.1.1
     a sh:NodeShape ;
     sh:name "Note"@nb, "Note"@en ;
     sh:subClassOf modelldcatno:Property ;
     sh:property [
-        sh:name "egenskapsnote"@nb , "property note"@en ;
+        sh:name "anmerkning"@nb , "property note"@en ;
         sh:nodeKind sh:Literal ;
         sh:path modelldcatno:propertyNote ;
         sh:severity sh:Violation ;
@@ -886,7 +901,7 @@
         sh:severity sh:Violation
     ], [
         sh:name "tilhører modul"@nb , "belongs to module"@en ;
-        sh:maxCount 1 ;
+        # @v.1.1 sh:maxCount 1 ;
         sh:nodeKind sh:IRIOrLiteral ;
         sh:path modelldcatno:belongsToModule ;
         sh:severity sh:Violation
@@ -896,6 +911,29 @@
         sh:class modelldcatno:Property ;
         sh:path modelldcatno:formsSymmetryWith ;
         sh:severity sh:Violation
+    ], [ # @v.1.1
+        sh:name "nagiverbar"@nb , "navigable"@en ;
+        sh:maxCount 1;
+        sh:path modelldcatno:navigable ;
+        sh:datatype xsd:boolean ;
+        sh:severity sh:Violation ;
+    ], [ # @v.1.1
+        sh:name "begrensning"@nb , "constraint"@en ;
+        sh:path modelldcatno:constraint ;
+        sh:class modelldcatno:Property ;
+        sh:severity sh:Violation ;
+    ], [ # @v.1.1
+        sh:name "enten eller"@nb , "exclusive or"@en ;
+        sh:subClassOf modelldcatno:constraint ;
+        sh:path modelldcatno:xor ;
+        sh:class modelldcatno:Property ;
+        sh:severity sh:Violation ;
+    ], [ # @v.1.1
+        sh:name "eller"@nb , "or"@en ;
+        sh:subClassOf modelldcatno:constraint ;
+        sh:path modelldcatno:or ;
+        sh:class modelldcatno:Property ;
+        sh:severity sh:Violation ;
     ] ;
     sh:targetClass modelldcatno:Property,
         modelldcatno:Absraction , modelldcatno:Association , modelldcatno:Attribute ,
@@ -1004,3 +1042,26 @@
       sh:severity sh:Violation ;
   ] ;
   sh:targetClass modelldcatno:Specialization .
+
+:Standard_Shape
+    a sh:NodeShape ;
+    sh:name "Standard"@en , "Standard"@nb ;
+    sh:property [
+        sh:name "har tittel"@nb , "has title"@en ;
+        sh:minCount 1;
+        sh:nodeKind sh:Literal ;
+        sh:path dct:title ;
+        sh:severity sh:Violation
+    ], [
+        sh:name "har versjonsnummer"@nb , "has version number"@en ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path owl:versionInfo ;
+        sh:severity sh:Violation
+    ], [
+        sh:name "har referanse"@nb , "has reference"@en ;
+        sh:nodeKind sh:BlankNodeOrIRI;
+        sh:path rdfs:seeAlso ;
+        sh:severity sh:Violation
+    ] ;
+    sh:targetClass dct:Standard .
