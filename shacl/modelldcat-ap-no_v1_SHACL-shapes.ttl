@@ -1,28 +1,15 @@
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix cc: <http://creativecommons.org/ns#> .
-# @prefix cpsv: <http://purl.org/vocab/cpsv#> .
-# @prefix cv: <http://data.europa.eu/m8g/> .
-# @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
-# @prefix dcatap: <http://data.europa.eu/r5r> .
 @prefix dct: <http://purl.org/dc/terms/> .
-# @prefix dqv: <http://www.w3.org/ns/dqv#> .
-# @prefix eli: <http://data.europa.eu/eli/ontology#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
-# @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-# @prefix odrl: <http://www.w3.org/ns/odrl/2/> .
 @prefix prof: <https://www.w3.org/ns/dx/prof/> .
-# @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-# @prefix rov: <http://www.w3.org/ns/regorg#> .
-# @prefix schema: <http://schema.org/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-# @prefix spdx: <http://spdx.org/rdf/terms#> .
-# @prefix time: <http://www.w3.org/2006/time#> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix xkos: <https://ddialliance.org/Specification/XKOS/1.2/OWL/xkos.html> .
@@ -183,50 +170,50 @@
     ) .
 
 :FormatProperty_Shape
-      a sh:PropertyShape ;
-      sh:name "format"@nb, "format"@en ;
-      sh:path dct:format ;
-      # sh:class dct:MediaType ;
-      sh:pattern "^http://publications.europa.eu/resource/authority/file-type/" ;
-      sh:flags "i" ;
-      sh:message "Medietype skal være i samsvar med http://publications.europa.eu/resource/authority/file-type/"@nb ;
-      sh:severity sh:Violation ;
-    .
+    a sh:PropertyShape ;
+    sh:name "format"@nb, "format"@en ;
+    sh:path dct:format ;
+    # sh:class dct:MediaType ;
+    sh:pattern "^http://publications.europa.eu/resource/authority/file-type/" ;
+    sh:flags "i" ;
+    sh:message "Medietype skal være i samsvar med http://publications.europa.eu/resource/authority/file-type/"@nb ;
+    sh:severity sh:Violation ;
+  .
 
 :LanguageProperty_Shape
-      a sh:PropertyShape ;
-      sh:name "språk"@nb , "language"@en ;
-      sh:path dct:language ;
-      # sh:class dct:LinguisticSystem ;
-      sh:pattern "^http://publications.europa.eu/resource/authority/language/" ;
-      sh:flags "i" ;
-      sh:message "Språkkoden skal være i samsvar med http://publications.europa.eu/resource/authority/language/"@nb ;
-      sh:severity sh:Violation ;
-    .
+    a sh:PropertyShape ;
+    sh:name "språk"@nb , "language"@en ;
+    sh:path dct:language ;
+    # sh:class dct:LinguisticSystem ;
+    sh:pattern "^http://publications.europa.eu/resource/authority/language/" ;
+    sh:flags "i" ;
+    sh:message "Språkkoden skal være i samsvar med http://publications.europa.eu/resource/authority/language/"@nb ;
+    sh:severity sh:Violation ;
+  .
 
 :LicenseProperty_Shape
-      a sh:PropertyShape ;
-      sh:name "lisens"@nb , "license"@en ;
-      sh:path dct:license ;
-      sh:pattern "^http://publications.europa.eu/resource/authority/licence" ;
-      sh:flags "i";
-      sh:message "Lisenstype skal være i samsvar med http://publications.europa.eu/resource/authority/licence/"@nb ;
-      sh:severity sh:Violation ;
-    .
+    a sh:PropertyShape ;
+    sh:name "lisens"@nb , "license"@en ;
+    sh:path dct:license ;
+    sh:pattern "^http://publications.europa.eu/resource/authority/licence" ;
+    sh:flags "i";
+    sh:message "Lisenstype skal være i samsvar med http://publications.europa.eu/resource/authority/licence/"@nb ;
+    sh:severity sh:Violation ;
+  .
 
 :SpatialProperty_Shape
-      a sh:PropertyShape ;
-      sh:name "dekningsområde"@nb , "spatial"@en ;
-      sh:path dct:spatial ;
-      sh:or (
-        [ sh:pattern "^http://publications.europa.eu/resource/authority/continent" ; sh:flags "i" ; ]
-        [ sh:pattern "^http://publications.europa.eu/resource/authority/country" ; sh:flags "i" ; ]
-        [ sh:pattern "^http://publications.europa.eu/resource/authority/place" ; sh:flags "i" ;]
-        [ sh:pattern "^http://sws.geonames.org/" ; sh:flags "i" ; ]
-      ) ;
-      sh:message "Dekningsområde skal ha minst en verdi som skal være i henhold til http://publications.europa.eu/resource/authority/continent, http://publications.europa.eu/resource/authority/country, http://publications.europa.eu/resource/authority/place eller http://sws.geonames.org/."@nb ;
-      sh:severity sh:Violation ;
-    .
+    a sh:PropertyShape ;
+    sh:name "dekningsområde"@nb , "spatial"@en ;
+    sh:path dct:spatial ;
+    sh:or (
+      [ sh:pattern "^http://publications.europa.eu/resource/authority/continent" ; sh:flags "i" ; ]
+      [ sh:pattern "^http://publications.europa.eu/resource/authority/country" ; sh:flags "i" ; ]
+      [ sh:pattern "^http://publications.europa.eu/resource/authority/place" ; sh:flags "i" ;]
+      [ sh:pattern "^http://sws.geonames.org/" ; sh:flags "i" ; ]
+    ) ;
+    sh:message "Dekningsområde skal ha minst en verdi som skal være i henhold til http://publications.europa.eu/resource/authority/continent, http://publications.europa.eu/resource/authority/country, http://publications.europa.eu/resource/authority/place eller http://sws.geonames.org/."@nb ;
+    sh:severity sh:Violation ;
+  .
 
 :StatusProperty_Shape
     a sh:PropertyShape ;
@@ -284,7 +271,8 @@
         sh:class modelldcatno:ModelElement ;
         sh:severity sh:Violation ;
     ] ;
-    sh:targetClass modelldcatno:Abstraction .
+    sh:targetClass modelldcatno:Abstraction ;
+  .
 
 :Association_Shape
     a sh:NodeShape ;
@@ -298,7 +286,8 @@
         sh:class modelldcatno:ModelElement ;
         sh:severity sh:Violation ;
     ] ;
-    sh:targetClass modelldcatno:Association .
+    sh:targetClass modelldcatno:Association ;
+  .
 
 :Attribute_Shape
     a sh:NodeShape ;
@@ -341,7 +330,8 @@
         sh:class modelldcatno:CodeList ;
         sh:severity sh:Violation ;
       ] ;
-    sh:targetClass modelldcatno:Attribute .
+    sh:targetClass modelldcatno:Attribute ;
+  .
 
 :Catalog_Shape
     a sh:NodeShape ;
@@ -440,9 +430,11 @@
           ]
 
     );
-    sh:targetClass dcat:Catalog .
+    sh:targetClass dcat:Catalog ;
+  .
 
 :Choice_Shape
+    a sh:NodeShape ;
     sh:name "Valg"@nb , "Choice"@en ;
     sh:subClassOf modelldcatno:Property ;
     sh:property [
@@ -452,7 +444,8 @@
         sh:subClassOf modelldcatno:hasType ;
         sh:severity sh:Violation ;
     ] ;
-    sh:targetClass modelldcatno:Choice .
+    sh:targetClass modelldcatno:Choice ;
+  .
 
 :CodeElement_Shape
     a sh:NodeShape ;
@@ -547,7 +540,8 @@
         sh:path skos:altLabel ;
         sh:severity sh:Violation ;
     ] ;
-    sh:targetClass modelldcatno:CodeElement .
+    sh:targetClass modelldcatno:CodeElement ;
+  .
 
 :CodeList_Shape
     a sh:NodeShape ;
@@ -560,20 +554,23 @@
         sh:path modelldcatno:codeListReference ;
         sh:severity sh:Violation ;
     ] ;
-    sh:targetClass modelldcatno:CodeList .
+    sh:targetClass modelldcatno:CodeList ;
+  .
 
 :Collection_Shape
-  sh:name "Samling"@nb , "Collection"@en ;
-  sh:subClassOf modelldcatno:Property ;
-  sh:property [
-      sh:name "har medlem"@nb , "has member"@en ;
-      sh:path modelldcatno:hasMember ;
-      sh:class modelldcatno:ModelElement ;
-      sh:subClassOf modelldcatno:hasType ;
-      sh:maxCount 1;
-      sh:severity sh:Violation ;
-  ] ;
-  sh:targetClass modelldcatno:Collection .
+    a sh:NodeShape ;
+    sh:name "Samling"@nb , "Collection"@en ;
+    sh:subClassOf modelldcatno:Property ;
+    sh:property [
+        sh:name "har medlem"@nb , "has member"@en ;
+        sh:path modelldcatno:hasMember ;
+        sh:class modelldcatno:ModelElement ;
+        sh:subClassOf modelldcatno:hasType ;
+        sh:maxCount 1;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:targetClass modelldcatno:Collection ;
+  .
 
 :Composition_Shape
     a sh:NodeShape ;
@@ -587,7 +584,8 @@
         sh:subClassOf modelldcatno:hasType ;
         sh:severity sh:Violation ;
     ] ;
-    sh:targetClass modelldcatno:Composition .
+    sh:targetClass modelldcatno:Composition ;
+  .
 
 :Document_Shape
     a sh:NodeShape ;
@@ -612,7 +610,8 @@
         sh:message "Det skal være maks. én medietype."@nb ;
         sh:severity sh:Violation ;
     ] ;
-    sh:targetClass foaf:Document .
+    sh:targetClass foaf:Document ;
+  .
 
 :InformationModel_Shape
     a sh:NodeShape ;
@@ -782,7 +781,8 @@
         sh:class dct:Standard ;
         sh:severity sh:Violation ;
     ] ;
-    sh:targetClass modelldcatno:InformationModel .
+    sh:targetClass modelldcatno:InformationModel ;
+  .
 
 :ModelElement_Shape
     a sh:NodeShape ;
@@ -831,7 +831,8 @@
     sh:targetClass modelldcatno:ModelElement ,
         modelldcatno:CodeList ,
         modelldcatno:ObjectType , modelldcatno:RootObjectType ,
-        modelldcatno:DataType , modelldcatno:SimpleType .
+        modelldcatno:DataType , modelldcatno:SimpleType ;
+  .
 
 :Note_Shape # @v.1.1
     a sh:NodeShape ;
@@ -843,7 +844,8 @@
         sh:path modelldcatno:propertyNote ;
         sh:severity sh:Violation ;
     ] ;
-    sh:targetClass modelldcatno:Note .
+    sh:targetClass modelldcatno:Note ;
+  .
 
 :Property_Shape
     a sh:NodeShape ;
@@ -940,7 +942,8 @@
         modelldcatno:Choice , modelldcatno:Collection , modelldcatno:Composition ,
         modelldcatno:Note ,
         modelldcatno:Realization , modelldcatno:Role ,
-        modelldcatno:Specialization .
+        modelldcatno:Specialization ;
+  .
 
 :Realization_Shape
     a sh:NodeShape ;
@@ -954,20 +957,23 @@
         sh:maxCount 1;
         sh:severity sh:Violation ;
     ] ;
-    sh:targetClass modelldcatno:Realization .
+    sh:targetClass modelldcatno:Realization ;
+  .
 
 :Role_Shape
-  sh:name "Rolle"@nb , "Role"@en ;
-  sh:subClassOf modelldcatno:Property ;
-  sh:property [
-      sh:name "har objekttype"@nb , "has object type"@en ;
-      sh:path modelldcatno:hasObjectType ;
-      sh:class modelldcatno:ObjectType ;
-      sh:subClassOf modelldcatno:hasType ;
-      sh:maxCount 1;
-      sh:severity sh:Violation ;
-  ] ;
-  sh:targetClass modelldcatno:Role .
+    a sh:NodeShape ;
+    sh:name "Rolle"@nb , "Role"@en ;
+    sh:subClassOf modelldcatno:Property ;
+    sh:property [
+        sh:name "har objekttype"@nb , "has object type"@en ;
+        sh:path modelldcatno:hasObjectType ;
+        sh:class modelldcatno:ObjectType ;
+        sh:subClassOf modelldcatno:hasType ;
+        sh:maxCount 1;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:targetClass modelldcatno:Role ;
+  .
 
 :SimpleType_Shape
     a sh:NodeShape ;
@@ -1028,20 +1034,23 @@
         sh:path xsd:totalDigits ;
         sh:severity sh:Violation ;
     ] ;
-    sh:targetClass modelldcatno:SimpleType .
+    sh:targetClass modelldcatno:SimpleType ;
+  .
 
 :Specialization_Shape
-  sh:name "Spesialisering"@nb , "Specialization"@en ;
-  sh:subClassOf modelldcatno:Property ;
-  sh:property [
-      sh:name "har generelt konsept"@nb , "has general concept"@en ;
-      sh:path modelldcatno:hasGeneralConcept ;
-      sh:class modelldcatno:ModelElement ;
-      sh:subClassOf modelldcatno:hasType ;
-      sh:maxCount 1;
-      sh:severity sh:Violation ;
-  ] ;
-  sh:targetClass modelldcatno:Specialization .
+    a sh:NodeShape ;
+    sh:name "Spesialisering"@nb , "Specialization"@en ;
+    sh:subClassOf modelldcatno:Property ;
+    sh:property [
+        sh:name "har generelt konsept"@nb , "has general concept"@en ;
+        sh:path modelldcatno:hasGeneralConcept ;
+        sh:class modelldcatno:ModelElement ;
+        sh:subClassOf modelldcatno:hasType ;
+        sh:maxCount 1;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:targetClass modelldcatno:Specialization ;
+  .
 
 :Standard_Shape
     a sh:NodeShape ;
@@ -1064,4 +1073,5 @@
         sh:path rdfs:seeAlso ;
         sh:severity sh:Violation
     ] ;
-    sh:targetClass dct:Standard .
+    sh:targetClass dct:Standard ;
+  .
