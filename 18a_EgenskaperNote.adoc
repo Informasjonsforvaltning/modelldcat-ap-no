@@ -1,4 +1,4 @@
-=== Realisering (modelldcatno:Note) [[Note-egenskaper]]
+=== Note (modelldcatno:Note) [[Note-egenskaper]]
 
 Klassen _Note_ er valgfri.
 
@@ -15,4 +15,3 @@ Klassen _Note_ er valgfri.
 |Multiplisitet|0..n
 |Kravsnivå|Anbefalt
 |===
- 
