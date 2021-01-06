@@ -37,7 +37,7 @@ Under følger en oversikt over kontrollerte vokabular som skal brukes (= obligat
 |URI til egenskapen|dct:license
 |Brukt i klasse|Informasjonsmodell (modelldcatno:InformationModel); Modellkatalog (dcat:Catalog)
 |Navn på vokabularet|https://data.europa.eu/euodp/en/data/dataset/licence[Licences Named Authority List]
-|URI til vokabularet|http://publications.europa.eu/resource/dataset/licence
+|URI til vokabularet|http://publications.europa.eu/resource/authority/licence
 |Kommentar|Kravet fra EU er forklart slik: "This vocabulary must be used in case the licence […​] is internationally recognised and included in the EU Publications Office NAL."
 |Kravsnivå|Obligatorisk
 |===
@@ -52,9 +52,9 @@ Under følger en oversikt over kontrollerte vokabular som skal brukes (= obligat
 https://data.europa.eu/euodp/en/data/dataset/country[Countries Named Authority List]; +
 https://data.europa.eu/euodp/en/data/dataset/place[Places Named Authority List]; +
 http://sws.geonames.org/[GeoNames]
-|URI til vokabularet| http://publications.europa.eu/resource/dataset/continent; +
-http://publications.europa.eu/resource/dataset/country; +
-http://publications.europa.eu/resource/dataset/place; +
+|URI til vokabularet| http://publications.europa.eu/resource/authority/continent; +
+http://publications.europa.eu/resource/authority/country; +
+http://publications.europa.eu/resource/authority/place; +
 http://sws.geonames.org/
 |Kravsnivå|Obligatorisk
 |===
