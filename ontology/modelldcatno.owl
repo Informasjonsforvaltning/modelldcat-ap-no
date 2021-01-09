@@ -292,12 +292,12 @@ modelldcatno:codeListReference rdf:type owl:ObjectProperty ,
 
 ###  https://data.norge.no/vocabulary/modelldcatno#constraint
 modelldcatno:constraint rdf:type owl:ObjectProperty ;
-                        rdfs:domain [ rdf:type owl:Class ;
-                                      owl:unionOf ( modelldcatno:ModelElement
-                                                    modelldcatno:Property
-                                                  )
-                                    ] ;
-                        rdfs:range modelldcatno:Property ;
+                        rdfs:domain modelldcatno:ConstraintRule ;
+                        rdfs:range [ rdf:type owl:Class ;
+                                     owl:unionOf ( modelldcatno:ModelElement
+                                                   modelldcatno:Property
+                                                 )
+                                   ] ;
                         rdfs:label "begrensning"@nb ,
                                    "constraint"@en .
 
@@ -480,7 +480,7 @@ modelldcatno:model rdf:type owl:ObjectProperty ;
 ###  https://data.norge.no/vocabulary/modelldcatno#or
 modelldcatno:or rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf modelldcatno:constraint ;
-                rdfs:label "eller"@nb ,
+                rdfs:label "og/eller"@nb ,
                            "or"@en .
 
 
@@ -765,6 +765,14 @@ modelldcatno:belongsToModule rdf:type owl:DatatypeProperty ,
                                         ] ;
                              rdfs:label "belongs to module"@en ,
                                         "konseptet tilhører modul"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#constraintExpression
+modelldcatno:constraintExpression rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain modelldcatno:ConstraintRule ;
+                                  rdfs:range rdfs:Literal ;
+                                  rdfs:label "begrensningsuttrykk"@nb ,
+                                             "constraint rule"@en .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#informationModelIdentifier
@@ -1197,6 +1205,13 @@ modelldcatno:Composition rdf:type owl:Class ;
                          rdfs:subClassOf modelldcatno:Property ;
                          rdfs:label "Composition"@en ,
                                     "Komposisjon"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#ConstraintRule
+modelldcatno:ConstraintRule rdf:type owl:Class ;
+                            rdfs:subClassOf modelldcatno:Property ;
+                            rdfs:label "Begrensningsregel"@nb ,
+                                       "Constraint Rule"@en .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#DataType
