@@ -637,6 +637,12 @@ xsd:maxOccurs rdf:type owl:DatatypeProperty ;
                                                        rdf:rest rdf:nil
                                                      ]
                                          ]
+                                         [ rdf:type rdfs:Datatype ;
+                                           owl:oneOf [ rdf:type rdf:List ;
+                                                       rdf:first "n" ;
+                                                       rdf:rest rdf:nil
+                                                     ]
+                                         ]
                                        )
                          ] ;
               rdfs:label "maks multiplisitet"@nb ,
