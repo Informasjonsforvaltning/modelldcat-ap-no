@@ -949,7 +949,10 @@
     ], [
         sh:name "øvre multiplisitet"@nb , "max occurs"@en ;
         sh:maxCount 1 ;
-        sh:datatype xsd:nonNegativeInteger ;
+        sh:or ( # enten ikke-negativt tall, eller "*"
+          [ sh:datatype xsd:nonNegativeInteger ; ]
+          [ sh:hasValue "*" ; ]
+        ) ;
         sh:path xsd:maxOccurs ;
         sh:severity sh:Violation
     ], [
