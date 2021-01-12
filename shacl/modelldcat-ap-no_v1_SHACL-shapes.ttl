@@ -38,13 +38,13 @@
     ];
     dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
     cc:attributionURL <http://ec.europa.eu/> ;
-    dct:modified "2020-12-24"^^xsd:date ;
+    dct:modified "2021-01-11"^^xsd:date ;
     rdfs:commet "Validated SUCCESS at https://www.itb.ec.europa.eu/shacl/shacl/upload"@en ;
     dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ;
     dct:relation <http://joinup.ec.europa.eu/collection/access-base-registries/solution/abr-specification-registry-registries/release/200> ;
     dct:description "This document specifies the constraints on properties and classes expressed by ModellDCAT-AP-NO in SHACL."@en ;
     dct:title "The constraints of ModellDCAT-AP-NO"@en ;
-    owl:versionInfo "0.1";
+    owl:versionInfo "0.2";
     foaf:homepage <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/shacl/> ;
     foaf:maker [
         foaf:mbox <mailto:informasjonsforvaltning@diggir.no> ;
@@ -293,64 +293,106 @@
     a sh:NodeShape ;
     sh:name "Attribute"@en , "Attributt"@nb ;
     sh:subClassOf modelldcatno:Property ;
-# sh:xone virker ikke ennå, kommenteres bort
-#    sh:xone (
-#      [ sh:property [
-#          sh:name "har datatype"@nb , "has data type"@en ;
-#          sh:maxCount 1;
-#          sh:subClassOf modelldcatno:hasType ;
-#          sh:path modelldcatno:hasDataType ;
-#          sh:class modelldcatno:DataType ;
-#          sh:severity sh:Violation ;
-#          ];
-#      ]
-#      [ sh:property [
-#          sh:name "har enkeltype"@nb , "has simple type"@en ;
-#          sh:maxCount 1;
-#          sh:subClassOf modelldcatno:hasType ;
-#          sh:path modelldcatno:hasSimpleType ;
-#          sh:class modelldcatno:SimpleType ;
-#          sh:severity sh:Violation ;
-#          ];
-#      ]
-#      [ sh:property [
-#          sh:name "inneholder objekttype"@nb , "contains object type"@en ;
-#          sh:maxCount 1;
-#          sh:subClassOf modelldcatno:hasType ;
-#          sh:path modelldcatno:containsObjectType ;
-#          sh:class modelldcatno:ObjectType ;
-#          sh:severity sh:Violation ;
-#          ];
-#      ]
-#    ) ;
 
-# uten sjekk på gjensidig utelukkendehet:
-
-  sh:property [
-      sh:name "har datatype"@nb , "has data type"@en ;
-      sh:maxCount 1;
-      sh:subClassOf modelldcatno:hasType ;
-      sh:path modelldcatno:hasDataType ;
-      sh:class modelldcatno:DataType ;
-      sh:severity sh:Violation ;
-      ];
-  sh:property [
-      sh:name "har enkeltype"@nb , "has simple type"@en ;
-      sh:maxCount 1;
-      sh:subClassOf modelldcatno:hasType ;
-      sh:path modelldcatno:hasSimpleType ;
-      sh:class modelldcatno:SimpleType ;
-      sh:severity sh:Violation ;
-      ];
-  sh:property [
-      sh:name "inneholder objekttype"@nb , "contains object type"@en ;
-      sh:maxCount 1;
-      sh:subClassOf modelldcatno:hasType ;
-      sh:path modelldcatno:containsObjectType ;
-      sh:class modelldcatno:ObjectType ;
-      sh:severity sh:Violation ;
-      ];
-####
+    ### sh:or under er for de tre egenskapene som er gjensidig utelukkende:
+    sh:or (
+        [
+            sh:message "Egenskapene modelldcatno:hasDataType, modelldcatno:hasSimpleType og modelldcatno:containsObjectType er gjensidig utelukkende og kan ikke forekomme samtidig."@nb ;
+            sh:and (
+                [
+                  sh:property [
+                    sh:name "inneholder objekttype"@nb , "contains object type"@en ;
+                    sh:maxCount 1 ;
+                    sh:path modelldcatno:containsObjectType ;
+                    sh:subClassOf modelldcatno:hasType ;
+                    sh:class modelldcatno:ObjectType ;
+                  ] ;
+                ]
+                [
+                  sh:property [
+                    sh:name "har datatype"@nb , "has data type"@en ;
+                    sh:maxCount 0 ;
+                    sh:path modelldcatno:hasDataType ;
+                    sh:subClassOf modelldcatno:hasType ;
+                    sh:class modelldcatno:DataType ;
+                  ] ;
+                ]
+                [
+                  sh:property [
+                    sh:name "har enkeltype"@nb , "has simple type"@en ;
+                    sh:maxCount 0 ;
+                    sh:path modelldcatno:hasSimpleType ;
+                    sh:subClassOf modelldcatno:hasType ;
+                    sh:class modelldcatno:SimpleType ;
+                  ] ;
+                ]
+            );
+        ]
+        [
+            sh:message "Egenskapene modelldcatno:hasDataType, modelldcatno:hasSimpleType og modelldcatno:containsObjectType er gjensidig utelukkende og kan ikke forekomme samtidig."@nb ;
+            sh:and (
+                [
+                  sh:property [
+                    sh:name "inneholder objekttype"@nb , "contains object type"@en ;
+                    sh:maxCount 0 ;
+                    sh:path modelldcatno:containsObjectType ;
+                    sh:subClassOf modelldcatno:hasType ;
+                    sh:class modelldcatno:ObjectType ;
+                  ] ;
+                ]
+                [
+                  sh:property [
+                    sh:name "har datatype"@nb , "has data type"@en ;
+                    sh:maxCount 1 ;
+                    sh:path modelldcatno:hasDataType ;
+                    sh:subClassOf modelldcatno:hasType ;
+                    sh:class modelldcatno:DataType ;
+                  ] ;
+                ]
+                [
+                  sh:property [
+                    sh:name "har enkeltype"@nb , "has simple type"@en ;
+                    sh:maxCount 0 ;
+                    sh:path modelldcatno:hasSimpleType ;
+                    sh:subClassOf modelldcatno:hasType ;
+                    sh:class modelldcatno:SimpleType ;
+                  ] ;
+                ]
+            );
+        ]
+        [
+            sh:message "Egenskapene modelldcatno:hasDataType, modelldcatno:hasSimpleType og modelldcatno:containsObjectType er gjensidig utelukkende og kan ikke forekomme samtidig."@nb ;
+            sh:and (
+                [
+                  sh:property [
+                    sh:name "inneholder objekttype"@nb , "contains object type"@en ;
+                    sh:maxCount 0 ;
+                    sh:path modelldcatno:containsObjectType ;
+                    sh:subClassOf modelldcatno:hasType ;
+                    sh:class modelldcatno:ObjectType ;
+                  ] ;
+                ]
+                [
+                  sh:property [
+                    sh:name "har datatype"@nb , "has data type"@en ;
+                    sh:maxCount 0 ;
+                    sh:path modelldcatno:hasDataType ;
+                    sh:subClassOf modelldcatno:hasType ;
+                    sh:class modelldcatno:DataType ;
+                  ] ;
+                ]
+                [
+                  sh:property [
+                    sh:name "har enkeltype"@nb , "has simple type"@en ;
+                    sh:maxCount 1 ;
+                    sh:path modelldcatno:hasSimpleType ;
+                    sh:subClassOf modelldcatno:hasType ;
+                    sh:class modelldcatno:SimpleType ;
+                  ] ;
+                ]
+            );
+        ]
+    );
 
     sh:property [
         sh:name "har verdier fra"@nb , "has value from"@en ;
@@ -907,7 +949,10 @@
     ], [
         sh:name "øvre multiplisitet"@nb , "max occurs"@en ;
         sh:maxCount 1 ;
-        sh:datatype xsd:nonNegativeInteger ;
+        sh:or ( # enten ikke-negativt tall, eller "*"
+          [ sh:datatype xsd:nonNegativeInteger ; ]
+          [ sh:hasValue "*" ; ]
+        ) ;
         sh:path xsd:maxOccurs ;
         sh:severity sh:Violation
     ], [
