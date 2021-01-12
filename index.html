@@ -964,7 +964,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <p><strong>Status</strong>: Gjeldende<br>
 <strong>Versjon</strong>: 1.1 (se <a href="#Endringslogg">endringsloggen</a>)<br>
 <strong>Publisert</strong>: 2020-12-18 <br>
-<strong>Oppdatert</strong>: 2021-01-06<br>
+<strong>Oppdatert</strong>: 2021-01-12<br>
 <strong>Gjeldende versjon</strong>: <a href="https://data.norge.no/specification/modelldcat-ap-no/" class="bare">https://data.norge.no/specification/modelldcat-ap-no/</a><br>
 <strong>Redaktørens utkast</strong>: <a href="https://informasjonsforvaltning.github.io/modelldcat-ap-no/" class="bare">https://informasjonsforvaltning.github.io/modelldcat-ap-no/</a></p>
 </div>
@@ -3813,7 +3813,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Når xsd:string brukes, skal verdien være "*".</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Når xsd:string brukes, skal verdien være "*" eller "n".</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
@@ -7243,6 +7243,12 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <td class="tableblock halign-left valign-top"><p class="tableblock">En og samme egenskap kan tilhøre ulike moduler.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskap: øvre multiplisitet</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:maxOccurs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Range endret fra <code>xsd:nonNegativeInteger</code> til <code>xsd:nonNegativeInteger eller xsd:string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For å kunne ha "*" eller "n" som øvre multiplisitet.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: beskrivelse</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dct:description</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Endret fra obligatorisk til anbefalt</p></td>
@@ -7400,7 +7406,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2021-01-12 12:29:04 UTC
+Sist oppdatert 2021-01-12 12:52:02 UTC
 </div>
 </div>
 </body>
