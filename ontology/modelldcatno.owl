@@ -541,6 +541,7 @@ dct:identifier rdf:type owl:DatatypeProperty ;
                              owl:unionOf ( dcat:Resource
                                            foaf:Agent
                                            modelldcatno:CodeElement
+                                           modelldcatno:ConstraintRule
                                            modelldcatno:ModelElement
                                            modelldcatno:Property
                                          )
@@ -581,6 +582,7 @@ dct:title rdf:type owl:DatatypeProperty ;
                                       skos:ConceptScheme
                                       dcat:Resource
                                       foaf:Document
+                                      modelldcatno:ConstraintRule
                                       modelldcatno:ModelElement
                                       modelldcatno:Property
                                     )
@@ -754,7 +756,8 @@ foaf:name rdf:type owl:DatatypeProperty ;
 modelldcatno:belongsToModule rdf:type owl:DatatypeProperty ,
                                       owl:FunctionalProperty ;
                              rdfs:domain [ rdf:type owl:Class ;
-                                           owl:unionOf ( modelldcatno:ModelElement
+                                           owl:unionOf ( modelldcatno:ConstraintRule
+                                                         modelldcatno:ModelElement
                                                          modelldcatno:Property
                                                        )
                                          ] ;
@@ -1209,7 +1212,6 @@ modelldcatno:Composition rdf:type owl:Class ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#ConstraintRule
 modelldcatno:ConstraintRule rdf:type owl:Class ;
-                            rdfs:subClassOf modelldcatno:Property ;
                             rdfs:label "Begrensningsregel"@nb ,
                                        "Constraint Rule"@en .
 
