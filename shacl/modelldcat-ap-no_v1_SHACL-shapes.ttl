@@ -1,0 +1,1156 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <https://www.w3.org/ns/dx/prof/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xkos: <https://ddialliance.org/Specification/XKOS/1.2/OWL/xkos.html> .
+@prefix : <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/shacl/modelldcatno-shacl.ttl#> .
+
+# -+-+-+-+-+-
+# Merknader:
+#
+#  * Krav til bruk av kontrollerte vokabularer er nå implementert som egne xxxProperty_Shape.
+#    Dette muliggjør både gjenbruk av kravene, og egen sh:message (vs. sh:message på multilisitetssjekk).
+#
+#  * Anbefalte bruk av kontrollerte vokabularer er nå implementert med sh:severity sh:Warning.
+# -+-+-+-+-+-
+
+
+# about this SHACL:
+<https://github.com/Informasjonsforvaltning/modelldcat-ap-no/shacl/modelldcatno-shacl.ttl>
+    dcat:accessURL <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/shacl/>;
+    dcat:downloadURL <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/shacl/modelldcatno-shacl.ttl> ;
+    adms:status <http://purl.org/adms/status/UnderDevelopment> ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:conformsTo <https://www.w3.org/TR/shacl> ;
+    dct:creator [
+        foaf:homepage <https://www.digdir.no/> ;
+        foaf:name "Digitaliseringsdirektoratet"@nb , "Norwegian Digitalisation Agency"@en ;
+    ];
+    dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+    cc:attributionURL <http://ec.europa.eu/> ;
+    dct:modified "2021-01-11"^^xsd:date ;
+    rdfs:commet "Validated SUCCESS at https://www.itb.ec.europa.eu/shacl/shacl/upload"@en ;
+    dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ;
+    dct:relation <http://joinup.ec.europa.eu/collection/access-base-registries/solution/abr-specification-registry-registries/release/200> ;
+    dct:description "This document specifies the constraints on properties and classes expressed by ModellDCAT-AP-NO in SHACL."@en ;
+    dct:title "The constraints of ModellDCAT-AP-NO"@en ;
+    owl:versionInfo "0.2";
+    foaf:homepage <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/shacl/> ;
+    foaf:maker [
+        foaf:mbox <mailto:informasjonsforvaltning@diggir.no> ;
+        foaf:name "Informasjonsforvaltning, Digitaliseringsdirektoratet"@nb ;
+        foaf:page <https://www.digdir.no> ;
+    ] .
+
+
+# -+-+- Some "general" classes, though modified for modelldcatno when necessary -+-+-+-
+
+:Agent_Shape
+    a sh:NodeShape ;
+    sh:name "Agent"@en , "Aktør"@nb ;
+    sh:property [
+        sh:name "navn"@nb , "name"@en ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path foaf:name ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "organisasjonsidentifikator"@nb , "identifier"@en ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path dct:identifier ;
+        sh:severity sh:Violation ;
+    ],
+        :TypeAgentProperty_Shape , # sjekker Kontrollert vokabular
+    [ # sjekker multiplisitet
+        sh:name "type (AKtør)"@nb , "type (Agent)"@en ;
+        sh:path dct:type ;
+        sh:maxCount 1 ;
+        sh:message "Det kan være maks. én aktørtype."@nb ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:targetClass foaf:Agent .
+
+:ConceptScheme_Shape
+    a sh:NodeShape ;
+    sh:name "Thematic Scheme"@en , "Tematisk skjema"@nb ;
+    sh:property [
+        sh:name "tittel"@nb , "title"@en ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path dct:title ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:targetClass skos:ConceptScheme .
+
+:LicenceDocument_Shape
+    a sh:NodeShape ;
+    sh:name "Licence Document"@en , "Lisensdokument"@nb ;
+    sh:property
+        :TypeLicenseDocumentProperty_Shape ; # sjekker kontrollert vokabular
+    sh:targetClass dct:LicenseDocument .
+
+:Location_Shape
+    a sh:NodeShape ;
+    sh:name "Location"@en , "Lokasjon"@nb ;
+    sh:property [
+        sh:name "område"@nb, "bounding box"@en ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path dcat:bbox ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "geografisk midtpunkt"@nb , "centroid"@en ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path dcat:centroid ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "geometri"@nb , "geometry"@en ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path locn:geometry ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:targetClass dct:Location .
+
+:PeriodOfTime_Shape
+    a sh:NodeShape ;
+    sh:name "Period of Time"@en , "Tidsrom"@nb ;
+    sh:or (
+      [
+        sh:property [
+          sh:name "sluttdato/tid"@nb , "end date"@en ;
+          sh:minCount 1;
+          sh:maxCount 1 ;
+          sh:path dcat:endDate ;
+          sh:severity sh:Violation ;
+          sh:shape :DateOrDateTimeDataType_Shape ;
+        ]
+      ]
+      [
+        sh:property [
+          sh:name "startdato/tid"@nb , "start date"@en ;
+          sh:minCount 1;
+          sh:maxCount 1 ;
+          sh:path dcat:startDate ;
+          sh:severity sh:Violation ;
+          sh:shape :DateOrDateTimeDataType_Shape ;
+        ]
+      ]
+    ) ;
+    sh:message "Enten startdato eller sluttdato må ha verdi"@nb ,
+      "Either start date or end date must have value"@en ;
+    sh:targetClass dct:PeriodOfTime .
+
+# -+-+- Some commonly used property-shapes, especially for use of Controlled Vocabularies: -+-+-
+
+:DateOrDateTimeDataType_Shape
+    a sh:NodeShape ;
+    rdfs:comment "Date time date disjunction shape checks that a datatype property receives a date or a dateTime literal" ;
+    sh:name "Date time date disjunction"@en , "Enten dato eller datotid"@nb ;
+    sh:message "The values must be data typed as either xsd:date or xsd:dateTime"@en ,
+       "Verdien må være oppgitt som enten xsd:date eller xsd:dateTime"@nb ;
+    sh:or ([
+            sh:datatype xsd:date
+        ]
+        [
+            sh:datatype xsd:dateTime
+        ]
+    ) .
+
+:FormatProperty_Shape
+    a sh:PropertyShape ;
+    sh:name "format"@nb, "format"@en ;
+    sh:path dct:format ;
+    # sh:class dct:MediaType ;
+    sh:pattern "^http://publications.europa.eu/resource/authority/file-type/" ;
+    sh:flags "i" ;
+    sh:message "Medietype skal være i samsvar med http://publications.europa.eu/resource/authority/file-type/"@nb ;
+    sh:severity sh:Violation ;
+  .
+
+:LanguageProperty_Shape
+    a sh:PropertyShape ;
+    sh:name "språk"@nb , "language"@en ;
+    sh:path dct:language ;
+    # sh:class dct:LinguisticSystem ;
+    sh:pattern "^http://publications.europa.eu/resource/authority/language/" ;
+    sh:flags "i" ;
+    sh:message "Språkkoden skal være i samsvar med http://publications.europa.eu/resource/authority/language/"@nb ;
+    sh:severity sh:Violation ;
+  .
+
+:LicenseProperty_Shape
+    a sh:PropertyShape ;
+    sh:name "lisens"@nb , "license"@en ;
+    sh:path dct:license ;
+    sh:pattern "^http://publications.europa.eu/resource/authority/licence" ;
+    sh:flags "i";
+    sh:message "Lisenstype skal være i samsvar med http://publications.europa.eu/resource/authority/licence/"@nb ;
+    sh:severity sh:Violation ;
+  .
+
+:SpatialProperty_Shape
+    a sh:PropertyShape ;
+    sh:name "dekningsområde"@nb , "spatial"@en ;
+    sh:path dct:spatial ;
+    sh:or (
+      [ sh:pattern "^http://publications.europa.eu/resource/authority/continent" ; sh:flags "i" ; ]
+      [ sh:pattern "^http://publications.europa.eu/resource/authority/country" ; sh:flags "i" ; ]
+      [ sh:pattern "^http://publications.europa.eu/resource/authority/place" ; sh:flags "i" ;]
+      [ sh:pattern "^http://sws.geonames.org/" ; sh:flags "i" ; ]
+    ) ;
+    sh:message "Dekningsområde skal ha minst en verdi som skal være i henhold til http://publications.europa.eu/resource/authority/continent, http://publications.europa.eu/resource/authority/country, http://publications.europa.eu/resource/authority/place eller http://sws.geonames.org/."@nb ;
+    sh:severity sh:Violation ;
+  .
+
+:StatusProperty_Shape
+    a sh:PropertyShape ;
+    sh:name "status"@nb , "status"@en ;
+    sh:path adms:status ;
+    sh:pattern "^http://purl.org/adms/status/" ;
+    sh:flags "i" ;
+    sh:message "Status skal være i samsvar med http://purl.org/adms/status/"@nb ;
+    sh:severity sh:Violation ;
+  .
+
+:TypeAgentProperty_Shape
+    a sh:PropertyShape ;
+    sh:name "type (Aktør)"@nb , "type (Agent)"@en ;
+    sh:path dct:type ;
+    sh:pattern "^http://purl.org/adms/publishertype/" ;
+    sh:flags "i" ;
+    sh:message "AKtørtype skal være i samsvar med http://purl.org/adms/publishertype/"@nb ;
+    sh:severity sh:Violation ;
+  .
+
+:TypeLicenseDocumentProperty_Shape
+    a sh:PropertyShape ;
+    sh:name "type (Lisensdokument)"@nb , "type (License document)"@en ;
+    sh:path dct:type ;
+    sh:pattern "^http://purl.org/adms/licencetype/" ;
+    sh:flags "i" ;
+    sh:message "Lisensdokumenttype skal være i samsvar med http://purl.org/adms/licencetype/"@nb ;
+    sh:severity sh:Violation ;
+  .
+
+:ThemePropertyLOS_Shape
+    a sh:PropertyShape ;
+    sh:name "tema (LOS)"@nb , "theme (Norwegian LOS)"@en ;
+    sh:path dcat:theme ;
+    sh:pattern "^https://psi.norge.no/los/tema/" ;
+    sh:flags "i" ;
+    sh:message "LOS bør brukes for dcat:theme"@nb ;
+    sh:severity sh:Warning ;
+  .
+
+#
+# -+-+-+-+- From here, shapes specific for ModellDCAT-AP-NO -+-+-+-
+#
+
+:Abstraction_Shape
+    a sh:NodeShape ;
+    sh:name "Abstraction"@en , "Abstraksjon"@nb ;
+    sh:subClassOf modelldcatno:Property ;
+    sh:property [
+        sh:name "abstraksjon av"@nb , "is abstraction of"@en ;
+        sh:maxCount 1 ;
+        sh:subClassOf modelldcatno:hasType ;
+        sh:path modelldcatno:isAbstractionOf ;
+        sh:class modelldcatno:ModelElement ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:targetClass modelldcatno:Abstraction ;
+  .
+
+:Association_Shape
+    a sh:NodeShape ;
+    sh:name "Association"@en , "Assosiasjon"@nb ;
+    sh:subClassOf modelldcatno:Property ;
+    sh:property [
+        sh:name "refererer til"@nb, "refers to"@en ;
+        sh:maxCount 1;
+        sh:subClassOf modelldcatno:hasType ;
+        sh:path modelldcatno:refersTo ;
+        sh:class modelldcatno:ModelElement ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:targetClass modelldcatno:Association ;
+  .
+
+:Attribute_Shape
+    a sh:NodeShape ;
+    sh:name "Attribute"@en , "Attributt"@nb ;
+    sh:subClassOf modelldcatno:Property ;
+
+    ### sh:or under er for de tre egenskapene som er gjensidig utelukkende:
+    sh:or (
+        [
+            sh:message "Egenskapene modelldcatno:hasDataType, modelldcatno:hasSimpleType og modelldcatno:containsObjectType er gjensidig utelukkende og kan ikke forekomme samtidig."@nb ;
+            sh:and (
+                [
+                  sh:property [
+                    sh:name "inneholder objekttype"@nb , "contains object type"@en ;
+                    sh:maxCount 1 ;
+                    sh:path modelldcatno:containsObjectType ;
+                    sh:subClassOf modelldcatno:hasType ;
+                    sh:class modelldcatno:ObjectType ;
+                  ] ;
+                ]
+                [
+                  sh:property [
+                    sh:name "har datatype"@nb , "has data type"@en ;
+                    sh:maxCount 0 ;
+                    sh:path modelldcatno:hasDataType ;
+                    sh:subClassOf modelldcatno:hasType ;
+                    sh:class modelldcatno:DataType ;
+                  ] ;
+                ]
+                [
+                  sh:property [
+                    sh:name "har enkeltype"@nb , "has simple type"@en ;
+                    sh:maxCount 0 ;
+                    sh:path modelldcatno:hasSimpleType ;
+                    sh:subClassOf modelldcatno:hasType ;
+                    sh:class modelldcatno:SimpleType ;
+                  ] ;
+                ]
+            );
+        ]
+        [
+            sh:message "Egenskapene modelldcatno:hasDataType, modelldcatno:hasSimpleType og modelldcatno:containsObjectType er gjensidig utelukkende og kan ikke forekomme samtidig."@nb ;
+            sh:and (
+                [
+                  sh:property [
+                    sh:name "inneholder objekttype"@nb , "contains object type"@en ;
+                    sh:maxCount 0 ;
+                    sh:path modelldcatno:containsObjectType ;
+                    sh:subClassOf modelldcatno:hasType ;
+                    sh:class modelldcatno:ObjectType ;
+                  ] ;
+                ]
+                [
+                  sh:property [
+                    sh:name "har datatype"@nb , "has data type"@en ;
+                    sh:maxCount 1 ;
+                    sh:path modelldcatno:hasDataType ;
+                    sh:subClassOf modelldcatno:hasType ;
+                    sh:class modelldcatno:DataType ;
+                  ] ;
+                ]
+                [
+                  sh:property [
+                    sh:name "har enkeltype"@nb , "has simple type"@en ;
+                    sh:maxCount 0 ;
+                    sh:path modelldcatno:hasSimpleType ;
+                    sh:subClassOf modelldcatno:hasType ;
+                    sh:class modelldcatno:SimpleType ;
+                  ] ;
+                ]
+            );
+        ]
+        [
+            sh:message "Egenskapene modelldcatno:hasDataType, modelldcatno:hasSimpleType og modelldcatno:containsObjectType er gjensidig utelukkende og kan ikke forekomme samtidig."@nb ;
+            sh:and (
+                [
+                  sh:property [
+                    sh:name "inneholder objekttype"@nb , "contains object type"@en ;
+                    sh:maxCount 0 ;
+                    sh:path modelldcatno:containsObjectType ;
+                    sh:subClassOf modelldcatno:hasType ;
+                    sh:class modelldcatno:ObjectType ;
+                  ] ;
+                ]
+                [
+                  sh:property [
+                    sh:name "har datatype"@nb , "has data type"@en ;
+                    sh:maxCount 0 ;
+                    sh:path modelldcatno:hasDataType ;
+                    sh:subClassOf modelldcatno:hasType ;
+                    sh:class modelldcatno:DataType ;
+                  ] ;
+                ]
+                [
+                  sh:property [
+                    sh:name "har enkeltype"@nb , "has simple type"@en ;
+                    sh:maxCount 1 ;
+                    sh:path modelldcatno:hasSimpleType ;
+                    sh:subClassOf modelldcatno:hasType ;
+                    sh:class modelldcatno:SimpleType ;
+                  ] ;
+                ]
+            );
+        ]
+    );
+
+    sh:property [
+        sh:name "har verdier fra"@nb , "has value from"@en ;
+        sh:maxCount 1;
+        sh:subClassOf modelldcatno:hasType ;
+        sh:path modelldcatno:hasValueFrom ;
+        sh:class modelldcatno:CodeList ;
+        sh:severity sh:Violation ;
+      ] ;
+    sh:targetClass modelldcatno:Attribute ;
+  .
+
+:Catalog_Shape
+    a sh:NodeShape ;
+    sh:name "Catalog"@en , "Modellkatalog"@nb ;
+    sh:property [
+        sh:name "beskrivelse"@nb , "description"@en ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path dct:description ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "identifikator"@nb , "identifier"@en ;
+        sh:nodeKind sh:Literal ;
+        sh:maxCount 1 ;
+        sh:minCount 1 ;
+        sh:path dct:identifier ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "tittel"@nb , "title"@en ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path dct:title ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "utgiver"@nb , "publisher"@en ;
+        sh:class foaf:Agent ;
+        sh:maxCount 1 ;
+        sh:minCount 1 ;
+        sh:path dct:publisher ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "hjemmeside"@nb , "homepage"@en ;
+        sh:class foaf:Document ;
+        sh:path foaf:homepage ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "utgivelsesdato"@nb , "issued (release date)"@en ;
+        sh:maxCount 1 ;
+        sh:node :DateOrDateTimeDataType_Shape ;
+        sh:path dct:issued ;
+        sh:severity sh:Violation ;
+    ],
+        :LicenseProperty_Shape , # sjekker kontrollert vokab.
+    [ # sjekker multiplisitet
+        sh:name "lisens"@nb , "licence"@en ;
+        # sh:class dct:LicenseDocument ;
+        sh:maxCount 1 ;
+        sh:path dct:license ;
+        sh:message "Det kan være maks. én lisens."@nb ;
+        sh:severity sh:Violation ;
+    ],
+        :LanguageProperty_Shape ,
+        :SpatialProperty_Shape ,
+    [
+        sh:name "endringsdato"@nb , "modified (last update)"@en ;
+        sh:maxCount 1 ;
+        sh:node :DateOrDateTimeDataType_Shape ;
+        sh:path dct:modified ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "temaer"@nb , "themes"@en ;
+        sh:path dcat:themeTaxonomy ;
+        sh:pattern "^https://psi.norge.no/los/" ;
+        sh:flags "i" ;
+        sh:message "LOS bør brukes for dcat:themeTaxonomy"@nb ;
+        sh:severity sh:Warning ;
+        # sh:class skos:ConceptScheme ;
+        # sh:path dcat:themeTaxonomy ;
+        # sh:severity sh:Violation ;
+    ], [
+        sh:name "er del av"@nb , "is part of"@en ;
+        sh:class dcat:Catalog ;
+        sh:maxCount 1 ;
+        sh:path dct:isPartOf ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:or ( # En Modellkatalog skal ha minst en katalog eller en informasjonsmodell
+      sh:property [
+          sh:name "har del"@nb , "has part"@en ;
+          sh:minCount 1;
+          sh:class dcat:Catalog ;
+          sh:path dct:hasPart ;
+          sh:severity sh:Violation ;
+          sh:message "En modellkatalog skal inneholde minst enten en katalog eller en informasjonsmodell"@nb ,
+            "A model catalog must contain at least one catalog or one information model"@en ;
+          ]
+
+      sh:property [
+          sh:name "modell"@nb, "model"@en ;
+          sh:minCount 1;
+          sh:class modelldcatno:InformationModel ;
+          sh:path modelldcatno:model ;
+          sh:severity sh:Violation ;
+          sh:message "En modellkatalog skal inneholde minst enten en katalog eller en informasjonsmodell"@nb ,
+            "A model catalog must contain at least one catalog or one information model"@en ;
+          ]
+
+    );
+    sh:targetClass dcat:Catalog ;
+  .
+
+:Choice_Shape
+    a sh:NodeShape ;
+    sh:name "Valg"@nb , "Choice"@en ;
+    sh:subClassOf modelldcatno:Property ;
+    sh:property [
+        sh:name "kan ha"@nb , "has some"@en ;
+        sh:path modelldcatno:hasSome ;
+        sh:class modelldcatno:ModelElement ;
+        sh:subClassOf modelldcatno:hasType ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:targetClass modelldcatno:Choice ;
+  .
+
+:CodeElement_Shape
+    a sh:NodeShape ;
+    sh:name "Code element"@en , "Kodeelement"@nb ;
+    sh:property [
+        sh:name "i kodeliste"@nb, "in scheme"@en ;
+        sh:minCount 1 ; # @v.1.1
+        sh:class modelldcatno:CodeList ;
+        sh:path skos:inScheme ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "identifikator"@nb , "identifier"@en ;
+        sh:nodeKind sh:Literal ;
+        # @v.1.1 # sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:path dct:identifier ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "kode"@nb , "code"@en ;
+        sh:minCount 1; # @v.1.1 #
+        sh:maxCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path skos:notation ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "toppelement til"@nb , "is top concept of"@en ;
+        sh:class modelldcatno:CodeList ;
+        sh:path skos:topConceptOf ;
+        sh:severity sh:Violation
+    ], [
+        sh:name "anbefalt kodetekst"@nb , "preferred label"@en ;
+        # @v.1.1 # sh:minCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path skos:prefLabel ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "begrep"@nb , "subject"@en ;
+        sh:maxCount 1 ;
+        sh:class skos:Concept ;
+        sh:path dct:subject ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "definisjon"@nb , "definition"@en ;
+        sh:nodeKind sh:Literal ;
+        sh:path skos:definition ;
+        sh:severity sh:Violation
+    ], [
+        sh:name "eksempel"@nb , "example"@en ;
+        sh:nodeKind sh:Literal ;
+        sh:path skos:example ;
+        sh:severity sh:Violation
+    ], [
+        sh:name "eksklusjonsmerknad"@nb , "exclusion note"@en ;
+        sh:nodeKind sh:Literal ;
+        sh:path xkos:exclusionNote ;
+        sh:severity sh:Violation
+    ], [
+        sh:name "forrige kodeelement"@nb , "previous"@en ;
+        sh:maxCount 1; # @v.1.1
+        sh:class modelldcatno:CodeElement ;
+        sh:path xkos:previous ;
+        sh:severity sh:Violation
+    ], [
+        sh:name "frarådet kodetekst"@nb , "hidden label"@en ;
+        sh:nodeKind sh:Literal ;
+        sh:path skos:hiddenLabel ;
+        sh:severity sh:Violation
+    ], [
+        sh:name "inklusjonsmerknad"@nb , "inclusion note"@en ;
+        sh:nodeKind sh:Literal ;
+        sh:path xkos:inclusionNote ;
+        sh:severity sh:Violation
+    ], [
+        sh:name "merknad"@nb , "note"@en ;
+        sh:nodeKind sh:Literal ;
+        sh:path skos:note ;
+        sh:severity sh:Violation
+    ], [
+        sh:name "neste kodeelement"@nb , "next"@en ;
+        sh:maxCount 1; # @v.1.1
+        sh:class modelldcatno:CodeElement ;
+        sh:path xkos:next ;
+        sh:severity sh:Violation
+    ], [
+        sh:name "omfangsmerknad"@nb , "scope note"@en ;
+        sh:nodeKind sh:Literal ;
+        sh:path skos:scopeNote ;
+        sh:severity sh:Violation
+    ], [
+        sh:name "tillatt kodetekst"@nb , "alternative label"@en ;
+        sh:nodeKind sh:Literal ;
+        sh:path skos:altLabel ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:targetClass modelldcatno:CodeElement ;
+  .
+
+:CodeList_Shape
+    a sh:NodeShape ;
+    sh:name "Codelist"@en , "Kodeliste"@nb ;
+    sh:subClassOf modelldcatno:ModelElement ;
+    sh:property [
+        sh:name "ekstern kodeliste"@nb , "code list reference"@en ;
+        sh:maxCount 1 ;
+        sh:class modelldcatno:CodeList ;
+        sh:path modelldcatno:codeListReference ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:targetClass modelldcatno:CodeList ;
+  .
+
+:Collection_Shape
+    a sh:NodeShape ;
+    sh:name "Samling"@nb , "Collection"@en ;
+    sh:subClassOf modelldcatno:Property ;
+    sh:property [
+        sh:name "har medlem"@nb , "has member"@en ;
+        sh:path modelldcatno:hasMember ;
+        sh:class modelldcatno:ModelElement ;
+        sh:subClassOf modelldcatno:hasType ;
+        sh:maxCount 1;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:targetClass modelldcatno:Collection ;
+  .
+
+:Composition_Shape
+    a sh:NodeShape ;
+    sh:name "Composition"@en , "Komposisjon"@nb ;
+    sh:subClassOf modelldcatno:Property ;
+    sh:property [
+        sh:name "inneholder"@nb , "contains"@en ;
+        sh:path modelldcatno:contains ;
+        sh:class modelldcatno:ModelElement ;
+        sh:maxCount 1;
+        sh:subClassOf modelldcatno:hasType ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:targetClass modelldcatno:Composition ;
+  .
+
+:Document_Shape
+    a sh:NodeShape ;
+    sh:name "Document"@en , "Dokument"@nb ;
+    sh:property
+    :LanguageProperty_Shape ,
+    [
+        sh:maxCount 1 ;
+        sh:path dct:language ;
+        sh:message "Det kan være maks. et språk per dokument."@nb ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "tittel"@nb, "title"@en ;
+        sh:nodeKind sh:Literal ;
+        sh:path dct:title ;
+        sh:severity sh:Violation ;
+    ],
+        :FormatProperty_Shape ,
+    [
+        sh:path dct:format ;
+        sh:maxCount 1 ;
+        sh:message "Det skal være maks. én medietype."@nb ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:targetClass foaf:Document ;
+  .
+
+:InformationModel_Shape
+    a sh:NodeShape ;
+    sh:name "Information model"@en , "Informasjonsmodell"@nb ;
+    sh:property [
+        sh:name "tittel"@nb , "title"@en ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path dct:title ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "beskrivelse"@nb , "description"@en ;
+        # @v.1.1 # sh:minCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path dct:description ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "utgiver"@nb , "publisher"@en ;
+        sh:class foaf:Agent ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:path dct:publisher ;
+        sh:severity sh:Violation ;
+    ],
+        :ThemePropertyLOS_Shape ,  # sjekker bruk av kontrollert vokabular
+    [ # sjekker multiplisitet
+        sh:name "tema"@nb , "theme"@en ;
+        # sh:class skos:Concept ;
+        # @v.1.1 # sh:minCount 1 ;
+        sh:path dcat:theme ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "identifikator"@nb , "identifier"@en ;
+        sh:nodeKind sh:Literal ;
+        # @v.1.1 # sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:path dct:identifier ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "informasjonsmodellidentifikator"@nb , "information model identifier"@en ;
+        sh:nodeKind sh:Literal ;
+        sh:maxCount 1;
+        sh:path modelldcatno:informationModelIdentifier ;
+        sh:severity sh:Violation ;
+        sh:message "Informasjonsmodellidentifikatoren skal være Literal"@nb ,
+            "The information model identifier shall be Literal"@en ;
+    ], [
+        sh:name "begrep"@nb , "subject"@en ;
+        sh:class skos:Concept ;
+        sh:path dct:subject ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "inneholder modellelement"@nb , "contains model element"@en ;
+        sh:class modelldcatno:ModelElement ;
+        sh:path modelldcatno:containsModelElement ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "kontaktpunkt"@nb , "contact point"@en ;
+        sh:class vcard:Kind ;
+        sh:path dcat:contactPoint ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "lisens"@nb , "license"@en ;
+        # sh:class dct:LicenseDocument ;
+        sh:maxCount 1 ;
+        sh:path dct:license ;
+        sh:pattern "^http://publications.europa.eu/resource/authority/licence/" ;
+        sh:flags "i" ;
+        sh:message "Det kan være maks. én lisens som skal være i samsvar med http://publications.europa.eu/resource/authority/licence/"@nb ;
+        sh:severity sh:Violation ;
+    ],
+        :SpatialProperty_Shape ,
+    [
+        sh:name "emneord"@nb , "keyword"@en ;
+        sh:nodeKind sh:Literal ;
+        sh:path dcat:keyword ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "endringsdato"@nb , "modified"@en ;
+        sh:node :DateOrDateTimeDataType_Shape ;
+        sh:maxCount 1 ;
+        sh:path dct:modified ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "er del av"@nb , "is part of"@en ;
+        sh:class modelldcatno:InformationModel ;
+        sh:path dct:isPartOf ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "er erstattet av"@nb , "is replaced by"@en ;
+        sh:class modelldcatno:InformationModel ;
+        sh:path dct:isReplacedBy ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "erstatter"@nb , "replaces"@en ;
+        sh:class modelldcatno:InformationModel ;
+        sh:path dct:replaces ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "finnes i format"@nb , "has format"@en ;
+        sh:class foaf:Document ;
+        sh:path dct:hasFormat ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "gyldighetsperiode"@nb , "temopral"@en ;
+        sh:class dct:PeriodOfTime ;
+        sh:path dct:temporal ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "har del"@nb , "has part"@en ;
+        sh:class modelldcatno:InformationModel ;
+        sh:path dct:hasPart ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "hjemmeside"@nb , "homepage"@en ;
+        sh:class foaf:Document ;
+        sh:maxCount 1 ;
+        sh:path foaf:homepage ;
+        sh:severity sh:Violation ;
+    ],
+        :StatusProperty_Shape , # sjekker Kontrollert vokabular
+    [ # sjekker multiplisitet
+        sh:name "mdoellstatus"@nb , "status"@en ;
+        sh:path adms:status ;
+        sh:maxCount 1 ;
+        sh:message "Det kan være maks. én status."@nb ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "produsent"@nb , "creator"@en ;
+        sh:class foaf:Agent ;
+        sh:maxCount 1 ;
+        sh:path dct:creator ;
+        sh:severity sh:Violation ;
+    ],
+    :LanguageProperty_Shape ,
+    [
+        sh:name "type"@nb , "type"@en ;
+        sh:class skos:Concept ;
+        sh:maxCount 1 ;
+        sh:path dct:type ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "utgivelsesdato"@nb , "issued"@en ;
+        sh:node :DateOrDateTimeDataType_Shape ;
+        sh:maxCount 1 ;
+        sh:path dct:issued ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "versjon"@nb , "version"@en ;
+        sh:nodeKind sh:Literal ;
+        sh:maxCount 1 ;
+        sh:path owl:versionInfo ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "versjonsnote"@nb , "version notes"@en ;
+        sh:nodeKind sh:Literal ;
+        sh:path adms:versionNotes ;
+        sh:severity sh:Violation ;
+    ], [ # @v.1.1
+        sh:name "er profil av"@nb , "is profile of"@en ;
+        sh:path prof:isProfileOf ;
+        sh:class dct:Standard ;
+        sh:severity sh:Violation ;
+    ], [ # @v.1.1
+        sh:name "i samsvar med"@nb , "conforms to"@en ;
+        sh:path dct:conformsTo ;
+        sh:class dct:Standard ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:targetClass modelldcatno:InformationModel ;
+  .
+
+:ModelElement_Shape
+    a sh:NodeShape ;
+    sh:name "Model element"@en , "Modellelement"@nb ;
+    sh:property [
+        sh:name "tittel"@nb , "title"@en ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path dct:title ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "identifikator"@nb , "identifier"@en ;
+        sh:nodeKind sh:Literal ;
+        # @v.1.1 #  sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:path dct:identifier ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "begrep"@nb , "subject"@en ;
+        sh:maxCount 1 ;
+        sh:class skos:Concept ;
+        sh:path dct:subject ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "har egenskap"@nb , "has property"@en ;
+        sh:class modelldcatno:Property ;
+        sh:path modelldcatno:hasProperty ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "beskrivelse"@nb , "description"@en ;
+        sh:nodeKind sh:Literal ;
+        sh:path dct:description ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "tilhører modul"@nb , "belongs to module"@en ;
+        # @v.1.1 # sh:maxCount 1 ;
+        sh:shape sh:IRIOrLiteral ;
+        sh:path modelldcatno:belongsToModule ;
+        sh:severity sh:Violation ;
+    ], [ # @v.1.1
+        sh:name "begrensning"@nb , "constraint"@en ;
+        sh:path modelldcatno:constraint ;
+        sh:class modelldcatno:Property ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:targetClass modelldcatno:ModelElement ,
+        modelldcatno:CodeList ,
+        modelldcatno:ObjectType , modelldcatno:RootObjectType ,
+        modelldcatno:DataType , modelldcatno:SimpleType ;
+  .
+
+:Note_Shape # @v.1.1
+    a sh:NodeShape ;
+    sh:name "Note"@nb, "Note"@en ;
+    sh:subClassOf modelldcatno:Property ;
+    sh:property [
+        sh:name "anmerkning"@nb , "property note"@en ;
+        sh:nodeKind sh:Literal ;
+        sh:path modelldcatno:propertyNote ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:targetClass modelldcatno:Note ;
+  .
+
+:Property_Shape
+    a sh:NodeShape ;
+    sh:name "Property"@en , "Egenskap"@nb ;
+    sh:property [
+        sh:name "identifikator"@nb , "identifier"@en ;
+        # @v.1.1 # sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path dct:identifier ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "begrep"@nb , "subject"@en ;
+        sh:maxCount 1 ;
+        sh:class skos:Concept ;
+        sh:path dct:subject ;
+        sh:severity sh:Violation
+    ], [
+        sh:name "nedre multiplisitet"@nb , "min occurs"@en ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:nonNegativeInteger ;
+        sh:path xsd:minOccurs ;
+        sh:severity sh:Violation
+    ], [
+        sh:name "tittel"@nb , "title"@en ;
+        sh:nodeKind sh:Literal ;
+        sh:path dct:title ;
+        sh:severity sh:Violation
+    ], [
+        sh:name "øvre multiplisitet"@nb , "max occurs"@en ;
+        sh:maxCount 1 ;
+        sh:or ( # enten ikke-negativt tall, eller "*"/"n"
+          [ sh:datatype xsd:nonNegativeInteger ; ]
+          [ sh:or (
+              [sh:hasValue "n" ; ]
+              [sh:hasValue "*" ; ]
+              )
+          ]
+        ) ;
+        sh:path xsd:maxOccurs ;
+        sh:severity sh:Violation
+    ], [
+        sh:name "beskrivelse"@nb , "description"@en ;
+        sh:nodeKind sh:Literal ;
+        sh:path dct:description ;
+        sh:severity sh:Violation
+    ], [
+        sh:name "har type"@nb , "has type"@en ;
+        sh:class modelldcatno:ModelElement ;
+        sh:path modelldcatno:hasType ;
+        sh:severity sh:Violation
+    ], [
+        sh:name "relasjonsegenskapsnavn"@nb , "relation property label"@en ;
+        sh:class modelldcatno:Property ;
+        sh:path modelldcatno:relationPropertyLabel ;
+        sh:severity sh:Violation
+    ], [
+        sh:name "sekvensnummer"@nb , "sequence number"@en ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:positiveInteger ;
+        sh:path modelldcatno:sequenceNumber ;
+        sh:severity sh:Violation
+    ], [
+        sh:name "tilhører modul"@nb , "belongs to module"@en ;
+        # @v.1.1 sh:maxCount 1 ;
+        sh:nodeKind sh:IRIOrLiteral ;
+        sh:path modelldcatno:belongsToModule ;
+        sh:severity sh:Violation
+    ], [
+        sh:name "utgjør symmetrisk relasjon med"@nb , "forms symmetry with"@en ;
+        sh:maxCount 1 ;
+        sh:class modelldcatno:Property ;
+        sh:path modelldcatno:formsSymmetryWith ;
+        sh:severity sh:Violation
+    ], [ # @v.1.1
+        sh:name "nagiverbar"@nb , "navigable"@en ;
+        sh:maxCount 1;
+        sh:path modelldcatno:navigable ;
+        sh:datatype xsd:boolean ;
+        sh:severity sh:Violation ;
+    ], [ # @v.1.1
+        sh:name "begrensning"@nb , "constraint"@en ;
+        sh:path modelldcatno:constraint ;
+        sh:class modelldcatno:Property ;
+        sh:severity sh:Violation ;
+    ], [ # @v.1.1
+        sh:name "enten eller"@nb , "exclusive or"@en ;
+        sh:subClassOf modelldcatno:constraint ;
+        sh:path modelldcatno:xor ;
+        sh:class modelldcatno:Property ;
+        sh:severity sh:Violation ;
+    ], [ # @v.1.1
+        sh:name "eller"@nb , "or"@en ;
+        sh:subClassOf modelldcatno:constraint ;
+        sh:path modelldcatno:or ;
+        sh:class modelldcatno:Property ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:targetClass modelldcatno:Property,
+        modelldcatno:Absraction , modelldcatno:Association , modelldcatno:Attribute ,
+        modelldcatno:Choice , modelldcatno:Collection , modelldcatno:Composition ,
+        modelldcatno:Note ,
+        modelldcatno:Realization , modelldcatno:Role ,
+        modelldcatno:Specialization ;
+  .
+
+:Realization_Shape
+    a sh:NodeShape ;
+    sh:name "Realization"@en , "Realisering"@nb ;
+    sh:subClassOf modelldcatno:Property ;
+    sh:property [
+        sh:name "har leverandør"@nb , "has supplier"@en ;
+        sh:path modelldcatno:hasSupplier ;
+        sh:class modelldcatno:ModelElement ;
+        sh:subClassOf modelldcatno:hasType ;
+        sh:maxCount 1;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:targetClass modelldcatno:Realization ;
+  .
+
+:Role_Shape
+    a sh:NodeShape ;
+    sh:name "Rolle"@nb , "Role"@en ;
+    sh:subClassOf modelldcatno:Property ;
+    sh:property [
+        sh:name "har objekttype"@nb , "has object type"@en ;
+        sh:path modelldcatno:hasObjectType ;
+        sh:class modelldcatno:ObjectType ;
+        sh:subClassOf modelldcatno:hasType ;
+        sh:maxCount 1;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:targetClass modelldcatno:Role ;
+  .
+
+:SimpleType_Shape
+    a sh:NodeShape ;
+    sh:name "Simple type"@en , "Enkeltype"@nb ;
+    sh:subClassOf modelldcatno:ModelElement ;
+    sh:property [
+        sh:name "typedefinisjon"@nb , "type definition reference"@en ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:anyURI ;
+        sh:path modelldcatno:typeDefinitionReference ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "antall desimaler"@nb , "fraction digits"@en ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:nonNegativeInteger ;
+        sh:path xsd:fractionDigits ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "lengde"@nb , "length"@en ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:nonNegativeInteger ;
+        sh:path xsd:length ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "maks inklusiv"@nb , "max inclusive"@en ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:decimal ;
+        sh:path xsd:maxInclusive ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "maks lengde"@nb , "max length"@en ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:nonNegativeInteger ;
+        sh:path xsd:maxLength ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "minimum inklusiv"@nb , "min inclusive"@en ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:decimal ;
+        sh:path xsd:minInclusive ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "minimum lengde"@nb , "min length"@en ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:nonNegativeInteger ;
+        sh:path xsd:minLength ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "mønster"@nb , "pattern"@en ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:path xsd:pattern ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "totalt antall siffer"@nb , "total digits"@en ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:nonNegativeInteger ;
+        sh:path xsd:totalDigits ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:targetClass modelldcatno:SimpleType ;
+  .
+
+:Specialization_Shape
+    a sh:NodeShape ;
+    sh:name "Spesialisering"@nb , "Specialization"@en ;
+    sh:subClassOf modelldcatno:Property ;
+    sh:property [
+        sh:name "har generelt konsept"@nb , "has general concept"@en ;
+        sh:path modelldcatno:hasGeneralConcept ;
+        sh:class modelldcatno:ModelElement ;
+        sh:subClassOf modelldcatno:hasType ;
+        sh:maxCount 1;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:targetClass modelldcatno:Specialization ;
+  .
+
+:Standard_Shape
+    a sh:NodeShape ;
+    sh:name "Standard"@en , "Standard"@nb ;
+    sh:property [
+        sh:name "har tittel"@nb , "has title"@en ;
+        sh:minCount 1;
+        sh:nodeKind sh:Literal ;
+        sh:path dct:title ;
+        sh:severity sh:Violation
+    ], [
+        sh:name "har versjonsnummer"@nb , "has version number"@en ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path owl:versionInfo ;
+        sh:severity sh:Violation
+    ], [
+        sh:name "har referanse"@nb , "has reference"@en ;
+        sh:nodeKind sh:BlankNodeOrIRI;
+        sh:path rdfs:seeAlso ;
+        sh:severity sh:Violation
+    ] ;
+    sh:targetClass dct:Standard ;
+  .
