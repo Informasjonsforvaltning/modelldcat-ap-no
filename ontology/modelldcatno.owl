@@ -477,13 +477,6 @@ modelldcatno:model rdf:type owl:ObjectProperty ;
                               "modell"@nb .
 
 
-###  https://data.norge.no/vocabulary/modelldcatno#or
-modelldcatno:or rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf modelldcatno:constraint ;
-                rdfs:label "og/eller"@nb ,
-                           "or"@en .
-
-
 ###  https://data.norge.no/vocabulary/modelldcatno#references
 modelldcatno:references rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf modelldcatno:hasType ;
@@ -492,14 +485,6 @@ modelldcatno:references rdf:type owl:ObjectProperty ;
                         rdfs:range modelldcatno:ModelElement ;
                         rdfs:label "references"@en ,
                                    "refererer"@nb .
-
-
-###  https://data.norge.no/vocabulary/modelldcatno#xor
-modelldcatno:xor rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf modelldcatno:constraint ;
-                 rdf:type owl:SymmetricProperty ;
-                 rdfs:label "enten eller"@nb ,
-                            "xor"@en .
 
 
 ###  https://rdf-vocabulary.ddialliance.org/xkos/next
@@ -1347,6 +1332,23 @@ modelldcatno:ObjectType rdf:type owl:Class ;
                                    "Objekttype"@nb .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#Or
+modelldcatno:Or rdf:type owl:Class ;
+                rdfs:subClassOf modelldcatno:ConstraintRule ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty modelldcatno:constraintExpression ;
+                                  owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                      owl:oneOf [ rdf:type rdf:List ;
+                                                                  rdf:first "{xor}" ;
+                                                                  rdf:rest rdf:nil
+                                                                ]
+                                                    ]
+                                ] ;
+                owl:disjointWith modelldcatno:Xor ;
+                rdfs:label "og/eller"@nb ,
+                           "or"@en .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#Property
 modelldcatno:Property rdf:type owl:Class ;
                       rdfs:label "Egenskap"@nb ,
@@ -1395,6 +1397,22 @@ modelldcatno:Specialization rdf:type owl:Class ;
                             rdfs:subClassOf modelldcatno:Property ;
                             rdfs:label "Specialization"@en ,
                                        "Spesialisering"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#Xor
+modelldcatno:Xor rdf:type owl:Class ;
+                 rdfs:subClassOf modelldcatno:ConstraintRule ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty modelldcatno:constraintExpression ;
+                                   owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                       owl:oneOf [ rdf:type rdf:List ;
+                                                                   rdf:first "{xor}" ;
+                                                                   rdf:rest rdf:nil
+                                                                 ]
+                                                     ]
+                                 ] ;
+                 rdfs:label "enten eller"@nb ,
+                            "xor"@en .
 
 
 #################################################################
