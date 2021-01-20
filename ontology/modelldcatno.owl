@@ -760,7 +760,7 @@ modelldcatno:constraintExpression rdf:type owl:DatatypeProperty ;
                                   rdfs:domain modelldcatno:ConstraintRule ;
                                   rdfs:range rdfs:Literal ;
                                   rdfs:label "begrensningsuttrykk"@nb ,
-                                             "constraint rule"@en .
+                                             "constraint expression"@en .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#informationModelIdentifier
