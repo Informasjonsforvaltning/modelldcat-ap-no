@@ -18,44 +18,6 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Kravsnivå| Anbefalt
 |===
 
-===== Egenskap: begrensning (modelldcatno:constraint) [[Egenskap-begrensning]]
-
-[cols="30s,70d"]
-|===
-|Engelsk navn|constraint
-|URI|modelldcatno:constraint
-|Range|modelldcatno:Property
-|Beskrivelse|Brukes til å beskrive begrensninger eller restriksjoner for bruken av en egenskap.
-|Multiplisitet|0..n
-|Kravsnivå|Anbefalt
-|===
-
-===== Egenskap: enten eller (modelldcatno:xor) [[Egenskap-entenEller]]
-
-[cols="30s,70d"]
-|===
-|Engelsk navn|exclusive or
-|URI|modelldcatno:xor
-|Range|modelldcatno:Property
-|Beskrivelse|Brukes til å referere til andre egenskaper som denne egenskapen ikke kan opptre samtidig med (eksklusiv eller).
-|Subegenskap av|modelldcatno:constraint
-|Multiplisitet|0..n
-|Kravsnivå|Anbefalt
-|===
-
-===== Egenskap: eller (modelldcatno:or) [[Egenskap-eller]]
-
-[cols="30s,70d"]
-|===
-|Engelsk navn|or
-|URI|modelldcatno:or
-|Range|modelldcatno:Property
-|Beskrivelse|Brukes til å referere til andre egenskaper som denne egenskapen kan opptre blant (inklusiv eller).
-|Subegenskap av|modeldcatno:constraint
-|Multiplisitet|0..n
-|Kravsnivå|Anbefalt
-|===
-
 ===== Egenskap: identifikator (dct:identifier) [[Egenskap-identifikator]]
 
 [cols="30s,70d"]
@@ -110,12 +72,11 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |===
 |Engelsk navn| max occurs
 |URI| xsd:maxOccurs
-|Range| xsd:nonNegativeInteger eller xsd:string
+|Range| xsd:nonNegativeInteger or {"*"} or {"n"}
 |Beskrivelse| Angir det største antallet lovlige forekomster en egenskap kan ha.
 |Multiplisitet| 0..1
 |Kravsnivå| Anbefalt
-|Kommentar| Når xsd:string brukes, skal verdien være "*" eller "n".
-|Eksempel a| `<ex:EksEgenskap> xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;` eller `<ex:EksEgenskap> xsd:maxOccurs "*"^^xsd:string ;`
+|Eksempel a| `<ex:EksEgenskap> xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;` eller `<ex:EksEgenskap> xsd:maxOccurs "*" ;`
 |===
 
 ==== Valgfrie egenskaper for klassen _Egenskap_ [[Valgfrie-egenskaper-Egenskap]]
@@ -175,7 +136,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Engelsk navn|belongs to module
 |URI|modelldcatno:belongsToModule
 |Range|rdfs:Literal or xsd:anyURI
-|Beskrivelse|Brukes til å referere til en modellmodul/delmodell som modellen inngår i.
+|Beskrivelse|Brukes til å referere til en modellmodul/delmodell som egenskapen inngår i.
 |Multiplisitet|0..n
 |Kravsnivå|Valgfri
 |===

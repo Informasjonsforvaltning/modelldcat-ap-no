@@ -23,7 +23,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 *Status*: Gjeldende +
 *Versjon*: 1.1 (se <<Endringslogg, endringsloggen>>) +
 *Publisert*: 2020-12-18  +
-*Oppdatert*: 2021-01-12 + 
+*Oppdatert*: 2021-01-25 +
 *Gjeldende versjon*: https://data.norge.no/specification/modelldcat-ap-no/ +
 *Redaktørens utkast*: https://informasjonsforvaltning.github.io/modelldcat-ap-no/
 
@@ -61,6 +61,8 @@ include::12a_EgenskaperAbstraksjon.adoc[]
 include::12b_EgenskaperAssosiasjon.adoc[]
 
 include::12c_EgenskaperAttributt.adoc[]
+
+include::EgenskaperBegrensningsregel.adoc[]
 
 include::12d_EgenskaperDokument.adoc[]
 
