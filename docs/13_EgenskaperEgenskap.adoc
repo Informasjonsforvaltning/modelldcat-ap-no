@@ -98,12 +98,11 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |===
 |Engelsk navn| max occurs
 |URI| xsd:maxOccurs
-|Range| xsd:nonNegativeInteger eller xsd:string
+|Range| xsd:nonNegativeInteger or {"*"} or {"n"}
 |Beskrivelse| Angir det største antallet lovlige forekomster en egenskap kan ha.
 |Multiplisitet| 0..1
 |Kravsnivå| Anbefalt
-|Kommentar| Når xsd:string brukes, skal verdien være "*" eller "n".
-|Eksempel a| `<ex:EksEgenskap> xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;` eller `<ex:EksEgenskap> xsd:maxOccurs "*"^^xsd:string ;`
+|Eksempel a| `<ex:EksEgenskap> xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;` eller `<ex:EksEgenskap> xsd:maxOccurs "*" ;`
 |===
 
 ==== Valgfrie egenskaper for klassen _Egenskap_ [[Valgfrie-egenskaper-Egenskap]]
