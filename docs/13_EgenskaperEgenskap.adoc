@@ -175,7 +175,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Engelsk navn|belongs to module
 |URI|modelldcatno:belongsToModule
 |Range|rdfs:Literal or xsd:anyURI
-|Beskrivelse|Brukes til å referere til en modellmodul/delmodell som modellen inngår i.
+|Beskrivelse|Brukes til å referere til en modellmodul/delmodell som egenskapen inngår i.
 |Multiplisitet|0..n
 |Kravsnivå|Valgfri
 |===
