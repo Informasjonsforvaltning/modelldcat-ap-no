@@ -18,32 +18,6 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Kravsnivå| Anbefalt
 |===
 
-===== Egenskap: enten eller (modelldcatno:xor) [[Egenskap-entenEller]]
-
-[cols="30s,70d"]
-|===
-|Engelsk navn|exclusive or
-|URI|modelldcatno:xor
-|Range|modelldcatno:Property
-|Beskrivelse|Brukes til å referere til andre egenskaper som denne egenskapen ikke kan opptre samtidig med (eksklusiv eller).
-|Subegenskap av|modelldcatno:constraint
-|Multiplisitet|0..n
-|Kravsnivå|Anbefalt
-|===
-
-===== Egenskap: eller (modelldcatno:or) [[Egenskap-eller]]
-
-[cols="30s,70d"]
-|===
-|Engelsk navn|or
-|URI|modelldcatno:or
-|Range|modelldcatno:Property
-|Beskrivelse|Brukes til å referere til andre egenskaper som denne egenskapen kan opptre blant (inklusiv eller).
-|Subegenskap av|modeldcatno:constraint
-|Multiplisitet|0..n
-|Kravsnivå|Anbefalt
-|===
-
 ===== Egenskap: identifikator (dct:identifier) [[Egenskap-identifikator]]
 
 [cols="30s,70d"]
