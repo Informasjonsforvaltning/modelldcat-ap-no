@@ -18,18 +18,6 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Kravsnivå| Anbefalt
 |===
 
-===== Egenskap: begrensning (modelldcatno:constraint) [[Egenskap-begrensning]]
-
-[cols="30s,70d"]
-|===
-|Engelsk navn|constraint
-|URI|modelldcatno:constraint
-|Range|modelldcatno:Property
-|Beskrivelse|Brukes til å beskrive begrensninger eller restriksjoner for bruken av en egenskap.
-|Multiplisitet|0..n
-|Kravsnivå|Anbefalt
-|===
-
 ===== Egenskap: enten eller (modelldcatno:xor) [[Egenskap-entenEller]]
 
 [cols="30s,70d"]

@@ -168,6 +168,16 @@ Klasse som representerer modellen som skal utveksles.
 |Kravsnivå|Anbefalt
 |===
 
+=== Begrensningsregel  (modelldcatno:ConstraintRule) [[klasse-begrensningsregel]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Constraint rule
+|Beskrivelse|Brukes til å beskrive en regel for hvilke begrensninger som gjelder for én eller flere egenskaper og/eller modellelementer.
+|URI|modelldcatno:ConstraintRule
+|Kravsnivå|Anbefalt
+|===
+
 === Datatype (modelldcatno:DataType) [[klasse-datatype]]
 
 [cols="30s,70"]
@@ -200,6 +210,33 @@ Klasse som representerer modellen som skal utveksles.
 |Subklasse av|modelldcatno:ModelElement
 |Kravsnivå|Anbefalt
 |===
+
+=== Eller (modelldcatno:Or) [[klasse-eller]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Or
+|Beskrivelse|Begrensningsregel som uttrykker at som minimum må én av egenskapene og/eller modellelementene som den refererer til forekomme (inklusiv eller).
+|URI|modelldcatno:Or
+|Subklasse av|modelldcatno:ConstraintRule
+|Kravsnivå|Anbefalt
+|Kommentar|Som minimum må begrensningsregelen være knyttet til to egenskaper/modellelementer.
+|===
+
+
+=== Enten eller (modelldcatno:Xor) [[klasse-enten-eller]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Exclusive or
+|Beskrivelse|Begrensningsregel som uttrykker at kun én av egenskapene eller modellelementene den refererer til kan opptre samtidig (eksklusiv eller).
+|URI|modelldcatno:Xor
+|Subklasse av|modelldcatno:ConstraintRule
+|Kravsnivå|Anbefalt
+|Kommentar|Som minimum må begrensningsregelen være knyttet til to egenskaper/modellelementer.
+|===
+
+
 
 === Kodeelement (modelldcatno:CodeElement) [[klasse-kodeelement]]
 
