@@ -25,7 +25,7 @@ Klassen _Begrensningsregel_ er anbefalt.
 |===
 |Engelsk navn|constraint expression
 |URI|modelldcatno:constraintExpression
-|Range|Rdfs:Literal
+|Range|rdfs:Literal
 |Beskrivelse|Uttrykk som beskriver en begrensningsregel. Bør gjentas når uttrykket finnes i flere ulike språk/målformer.
 |Multiplisitet|0..*
 |Kravsnivå|Anbefalt
