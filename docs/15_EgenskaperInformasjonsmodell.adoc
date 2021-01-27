@@ -55,7 +55,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Kravsnivå|Anbefalt
 |===
 
-=====  Informasjonsmodell: (dct:identifier) identifikator [[Informasjonsmodell-identifikator]]
+=====  Informasjonsmodell: identifikator (dct:identifier)  [[Informasjonsmodell-identifikator]]
 
 [cols="30s,70d"]
 |===
