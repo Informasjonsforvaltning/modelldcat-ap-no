@@ -9,15 +9,16 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <https://www.w3.org/ns/dx/prof/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exMod1.ttl>
+<https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exMod1>
   a modelldcatno:InformationModel ;
   ###### mandatory:
     dct:title "Eksempel modell 1"@nb , "Example model 1"@en ; # tittel
     dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ; # utgiver
   ###### recommended:
-    dct:identifier "https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exMod1.ttl"^^xsd:anyURI ; # identifikator
+    dct:identifier "https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exMod1"^^xsd:anyURI ; # identifikator
     dct:subject <https://example.com/concepts/exConcept1> ; # begrep
     dct:description "En eksempelmodell"@nb , "An example model"@en ; # beskrivelse
     dcat:theme <https://psi.norge.no/los/tema/naringsliv> ; # tema
@@ -27,16 +28,18 @@
     dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ; # lisens
   ###### optional:
     dct:spatial <http://publications.europa.eu/resource/authority/country/NOR/> ; # dekningsområde
-    dcat:keyword ""@nb , ""@en ; # emneord
+    dcat:keyword "stikkord1"@nb , "keyword1"@en ; # emneord
     dct:modified "2020-11-11"^^xsd:date ; # endringsdato
     dct:isPartOf <https://example.com/models/exMod101> ; # er del av
-    dct:isReplacedBy <https://example.com/models/exMod102> ; # er erstattet av
-    dct:replaces <https://example.com/models/exMod103> ; # erstatter
+    prof:isProfileOf <https://example.com/models/exMod102> ; # er profil av
+    dct:isReplacedBy <https://example.com/models/exMod103> ; # er erstattet av
+    dct:replaces <https://example.com/models/exMod104> ; # erstatter
     dct:hasFormat <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exMod1.png> ; # finnes i format
-    dct:PeriodOfTime [ # gyldighetsperiode
+    dct:temporal [ # gyldighetsperiode
       a dct:PeriodOfTime ; dcat:startDate "2020-01-01"^^xsd:date ; dcat:endDate "2020-12-31"^^xsd:date ;] ;
     dct:hasPart <https://example.com/models/exMod104> ; # har del
-    foaf:homepage <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/> ; # hjemmeside
+    foaf:homepage <https://example.com/models/> ; # hjemmeside
+    dct:conformsTo <https://example.com/standards/exStd1> ; # i samsvar med
     adms:status <http://purl.org/adms/status/Completed> ; # modellstatus
     dct:creator <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ; # produsent
     dct:language <http://publications.europa.eu/resource/authority/language/NOB> ,

@@ -122,7 +122,7 @@ Klassen _Kodeelement_ er anbefalt.
 |Range|rdfs:Literal
 |Beskrivelse|Brukes til å referere til merknad om hva som er ekskludert i kodeelementet. Bør gjentas når merknaden finnes i flere ulike språk/målformer.
 |Subegenskap av|skos:scopeNote
-|Multiplisitet|0..*
+|Multiplisitet|0..n
 |Kravsnivå|Valgfri
 |===
 
@@ -147,7 +147,7 @@ Klassen _Kodeelement_ er anbefalt.
 |URI|skos:hiddenLabel
 |Range|rdfs:Literal
 |Beskrivelse|Brukes til å referere til kodetekst som anses som uegnet for kodeelementet. Bør gjentas når kodeteksten finnes i flere ulike språk/målformer.
-|Subegenskap av|Rdfs:label
+|Subegenskap av|rdfs:label
 |Multiplisitet|0..n
 |Kravsnivå|Valgfri
 |===
