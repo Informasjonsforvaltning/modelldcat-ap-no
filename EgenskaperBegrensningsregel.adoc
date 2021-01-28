@@ -25,9 +25,9 @@ Klassen _Begrensningsregel_ er anbefalt.
 |===
 |Engelsk navn|constraint expression
 |URI|modelldcatno:constraintExpression
-|Range|Rdfs:Literal
+|Range|rdfs:Literal
 |Beskrivelse|Uttrykk som beskriver en begrensningsregel. Bør gjentas når uttrykket finnes i flere ulike språk/målformer.
-|Multiplisitet|0..*
+|Multiplisitet|0..n
 |Kravsnivå|Anbefalt
 |Kommentar|En Begrensningsregel, med unntak av subklassene Enten eller (modelldcatno:Xor) og Eller (modelldcatno:OR), må som minimum ha en tittel eller et begrensningsuttrykk.
 |===
@@ -52,7 +52,7 @@ Klassen _Begrensningsregel_ er anbefalt.
 |URI|dct:title
 |Range|rdfs:Literal
 |Beskrivelse|Navn på en begrensningsregel. Bør gjentas når navnet finnes i flere ulike språk/målformer.
-|Multiplisitet|0..*
+|Multiplisitet|0..n
 |Kravsnivå|Anbefalt
 |Kommentar|En Begrensningsregel, med unntak av subklassene Enten eller (modelldcatno:Xor) og Eller (modelldcatno:OR), må som minimum ha en tittel eller et begrensningsuttrykk.
 |===
@@ -68,6 +68,6 @@ Klassen _Begrensningsregel_ er anbefalt.
 |URI|modelldcatno:belongsToModule
 |Range|rdfs:Literal or xsd:anyURI
 |Beskrivelse|Brukes til å referere til en modellmodul/delmodell som beregningsregelen inngår i.
-|Multiplisitet|0..*
+|Multiplisitet|0..n
 |Kravsnivå|Valgfri
 |===

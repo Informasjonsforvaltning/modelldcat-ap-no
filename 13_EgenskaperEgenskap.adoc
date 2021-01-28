@@ -62,7 +62,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |URI| dct:title
 |Range| rdfs:Literal
 |Beskrivelse| Navn på en egenskap. Bør gjentas når navnet finnes i flere ulike språk/målformer.
-|Multiplisitet| 0..*
+|Multiplisitet| 0..n
 |Kravsnivå| Anbefalt
 |===
 
@@ -101,7 +101,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |URI| modelldcatno:hasType
 |Range| modelldcatno:ModelElement
 |Beskrivelse| En generell beskrivelse av verdidomenet til en egenskap.
-|Multiplisitet| 0..*
+|Multiplisitet| 0..n
 |Kravsnivå| Valgfri
 |===
 
@@ -113,7 +113,7 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |URI|modelldcatno:relationPropertyLabel
 |Range|modelldcatno:Property
 |Beskrivelse|Navn på relasjon mellom to egenskaper. Brukes i kombinasjon med egenskapen «utgjør symmetrisk relasjon med» (modelldcatno:formsSymmetryWith). Bør gjentas når navnet finnes i flere ulike språk/målformer.
-|Multiplisitet|0..*
+|Multiplisitet|0..n
 |Kravsnivå|Valgfri
 |===
 
