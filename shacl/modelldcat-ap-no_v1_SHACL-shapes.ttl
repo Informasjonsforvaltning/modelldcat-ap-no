@@ -38,7 +38,7 @@
     ];
     dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
     cc:attributionURL <http://ec.europa.eu/> ;
-    dct:modified "2021-01-11"^^xsd:date ;
+    dct:modified "2021-01-25"^^xsd:date ;
     rdfs:commet "Validated SUCCESS at https://www.itb.ec.europa.eu/shacl/shacl/upload"@en ;
     dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ;
     dct:relation <http://joinup.ec.europa.eu/collection/access-base-registries/solution/abr-specification-registry-registries/release/200> ;
@@ -404,6 +404,92 @@
       ] ;
     sh:targetClass modelldcatno:Attribute ;
   .
+
+:Begrensningsregel_Shape # hele klassen er ny i v.1.1
+    a sh:NodeShape ;
+    sh:name "Constraint rule"@en , "Begrensningsregel"@nb ;
+    sh:property [
+        sh:name "begrensning"@nb , "constraint"@en ;
+        sh:minCount 1 ;
+        sh:path modelldcatno:constraint;
+        sh:or (
+          [ sh:class modelldcatno:ModelElement ]
+          [ sh:class modelldcatno:Property ]
+        ) ;
+    ], [
+        sh:name "identifikator"@nb , "identifier"@en ;
+        sh:maxCount 1 ;
+        sh:path dct:identifier;
+        sh:nodeKind sh:Literal ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "tilhører modul"@nb , "title"@en ;
+        sh:path modelldcatno:belongsToModule;
+        sh:nodeKind sh:IRIOrLiteral ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:or ( # minst en av følgende to egenskaper må være med
+      [ sh:property [
+            sh:name "begrensningsuttrykk"@nb , "constraint expression"@en ;
+            sh:path modelldcatno:constraintExpression;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:severity sh:Violation ;
+            sh:message "Begrensningsregel (med unntak av subklassene modelldcatno:Xor  og modelldcatno:OR) må som minimum ha en tittel eller et begrensningsuttrykk"@nb ;
+        ]
+      ]
+      [ sh:property [
+          sh:name "tittel"@nb , "title"@en ;
+          sh:path dct:title;
+          sh:minCount 1 ;
+          sh:nodeKind sh:Literal ;
+          sh:severity sh:Violation ;
+          sh:message "Begrensningsregel (med unntak av subklassene modelldcatno:Xor  og modelldcatno:OR) må som minimum ha en tittel eller et begrensningsuttrykk"@nb ;
+        ]
+      ]
+    ) ;
+    sh:targetClass modelldcatno:Begrensningsregel ;
+    .
+
+# Lager en egen shape for modelldcatno:Or og modelldcatno:Xor
+# pga. at min-krav som gjelder for superklassen ikke gjelder her
+:OrXor_Shape # hele klassen er ny i v.1.1
+    a sh:NodeShape ;
+    sh:name "OR/XOR"@en , "Eller / Enten eller"@nb ;
+    sh:property [
+        sh:name "begrensning"@nb , "constraint"@en ;
+        sh:minCount 1 ;
+        sh:path modelldcatno:constraint;
+        sh:or (
+          [ sh:class modelldcatno:ModelElement ]
+          [ sh:class modelldcatno:Property ]
+        ) ;
+    ], [
+        sh:name "identifikator"@nb , "identifier"@en ;
+        sh:maxCount 1 ;
+        sh:path dct:identifier;
+        sh:nodeKind sh:Literal ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "tilhører modul"@nb , "title"@en ;
+        sh:path modelldcatno:belongsToModule;
+        sh:nodeKind sh:IRIOrLiteral ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:property [
+            sh:name "begrensningsuttrykk"@nb , "constraint expression"@en ;
+            sh:path modelldcatno:constraintExpression;
+            sh:nodeKind sh:Literal ;
+            sh:severity sh:Violation ;
+        ] ;
+    sh:property [
+          sh:name "tittel"@nb , "title"@en ;
+          sh:path dct:title;
+          sh:nodeKind sh:Literal ;
+          sh:severity sh:Violation ;
+        ] ;
+    sh:targetClass modelldcatno:Or, modelldcatno:Xor ;
+    .
 
 :Catalog_Shape
     a sh:NodeShape ;
@@ -894,11 +980,6 @@
         sh:shape sh:IRIOrLiteral ;
         sh:path modelldcatno:belongsToModule ;
         sh:severity sh:Violation ;
-    ], [ # @v.1.1
-        sh:name "begrensning"@nb , "constraint"@en ;
-        sh:path modelldcatno:constraint ;
-        sh:class modelldcatno:Property ;
-        sh:severity sh:Violation ;
     ] ;
     sh:targetClass modelldcatno:ModelElement ,
         modelldcatno:CodeList ,
@@ -997,23 +1078,6 @@
         sh:maxCount 1;
         sh:path modelldcatno:navigable ;
         sh:datatype xsd:boolean ;
-        sh:severity sh:Violation ;
-    ], [ # @v.1.1
-        sh:name "begrensning"@nb , "constraint"@en ;
-        sh:path modelldcatno:constraint ;
-        sh:class modelldcatno:Property ;
-        sh:severity sh:Violation ;
-    ], [ # @v.1.1
-        sh:name "enten eller"@nb , "exclusive or"@en ;
-        sh:subClassOf modelldcatno:constraint ;
-        sh:path modelldcatno:xor ;
-        sh:class modelldcatno:Property ;
-        sh:severity sh:Violation ;
-    ], [ # @v.1.1
-        sh:name "eller"@nb , "or"@en ;
-        sh:subClassOf modelldcatno:constraint ;
-        sh:path modelldcatno:or ;
-        sh:class modelldcatno:Property ;
         sh:severity sh:Violation ;
     ] ;
     sh:targetClass modelldcatno:Property,
