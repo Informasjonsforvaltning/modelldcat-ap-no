@@ -1,0 +1,82 @@
+# ----
+# Eksempel på begrensningsregel (dcat:ConstraintRule), med alle egenskaper
+# status: under arbeid
+# ---
+
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex-cons: <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exConstraintRule#> .
+
+#Eksempel på Begrensningsregel (modelldcatno:ConstraintRule) på rolle.
+ex-cons:Kjønnsbegrensning   a modelldcatno:ConstraintRule ; #Begrensningsregel
+        ###### mandatory:
+        modelldcatno:constraint           ex-cons:ektefelle ; #begrensning
+        ###### recommended:
+        modelldcatno:title                "Kjønnsbegrensning"@nb ; #tittel
+        dct:identifier                    "https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exConstraintRule/Kjønnsbegrensning"^^xsd:anyURI ; #identifikator
+        modelldcatno:constraintExpression "{gjelder personer av ulike kjønn}"@nb ; #begrensningsuttrykk
+        ###### optional:
+        modelldcatno:belongsToModule      "Begrensningsregler"@nb . #tilhører modul
+
+ex-cons:Ektepakt a    modelldcatno:ObjectType ;
+        modelldcatno:hasProperty ex-cons:ektefelle , ex-cons:partner ;
+        dct:title       "Ektepakt"@nb .
+
+ex-cons:ektefelle  a  modelldcatno:Role ;
+        dct:title               "ektefelle"@nb ;
+        dct:hasObjectType       ex-cons:Ektefelle ;
+        xsd:maxOccurs "2"^^xsd:nonNegativeInteger ;
+        xsd:minOccurs "0"^^xsd:nonNegativeInteger .
+
+ex-cons:partner  a  modelldcatno:Role ;
+       dct:title    "registrertPartner"@nb ;
+       dct:hasObjectType       ex-cons:RegistrertPartner ;
+       xsd:maxOccurs "2"^^xsd:nonNegativeInteger ;
+       xsd:minOccurs "0"^^xsd:nonNegativeInteger .
+
+ex-cons:Ektefelle      a  modelldcatno:ObjectType ;
+        dct:title       "Ektefelle"@nb .
+
+ex-cons:RegistrertPartner a  modelldcatno:ObjectType ;
+        dct:title       "RegistrertPartner"@nb .
+
+#Eksempel på Begrensningsregel (modelldcatno:ConstraintRule) på objekttype.
+ex-cons:Begrensning_RegistrertPartner   a  modelldcatno:ConstraintRule ; #Begrensningsuttrykk
+        ###### mandatory:
+        modelldcatno:constraint           ex-cons:RegistrertPartner ; #begrensning
+        ###### recommended:
+        modelldcatno:title                "Aldersbegrensning"@nb ; #tittel
+        dct:identifier                    "https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exConstraintRule/Aldersbegrensning"^^xsd:anyURI ; #identifikator
+        modelldcatno:constraintExpression "{En registrert partner må være over 18 år.}"@nb ; #begrensningsuttrykk
+        ###### optional:
+        modelldcatno:belongsToModule      "Begrensningsregler"@nb . #tilhører modul
+
+#Eksempel på Enten eller (modelldcatno:Xor)
+ex-cons:EntenEller                   a modelldcatno:Xor ; #Enten eller
+        ###### mandatory:
+        modelldcatno:constraint          ex-cons:ektefelle , ex-cons:registrertPartner . #begrensning
+
+#Eksempel på Eller (modelldcatno:Or)
+ex-cons:Eller                       a modelldcatno:Or ; #Eller
+        ###### mandatory:
+        modelldcatno:constraint           ex-cons:personkunde , ex-cons:bedriftskunde . #begrensning
+
+ex-cons:Bankkonto                    a modelldcatno:ObjectType ;
+        modelldcatno:hasProperty          ex-cons:personkunde , ex-cons:bedriftskunde ;
+        dct:title                         "Bankkonto"@nb .
+
+ex-cons:Personkunde                  a  modelldcatno:ObjectType ;
+        dct:title                        "Personkunde"@nb .
+
+ex-cons:Bedriftskunde                a  modelldcatno:ObjectType ;
+        dct:title                         "Bedriftskunde"@nb .
+
+ex-cons:personkunde                  a  modelldcatno:Role ;
+        dct:title                         "personkunde"@nb ;
+        dct:hasObjectType                 ex-cons:Personkunde .
+
+ex-cons:bedriftskunde                a  modelldcatno:Role ;
+        dct:title                         "bedriftskunde"@nb ;
+        dct:hasObjectType                 ex-cons:Bedriftskunde .
