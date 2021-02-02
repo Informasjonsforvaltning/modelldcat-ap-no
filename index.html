@@ -726,7 +726,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel5">
 <li><a href="#Informasjonsmodell-begrep">Informasjonsmodell: begrep (dct:subject)</a></li>
 <li><a href="#Informasjonsmodell-beskrivelse">Informasjonsmodell: beskrivelse (dct:description)</a></li>
-<li><a href="#Informasjonsmodell-identifikator">Informasjonsmodell: (dct:identifier) identifikator</a></li>
+<li><a href="#Informasjonsmodell-identifikator">Informasjonsmodell: identifikator (dct:identifier) </a></li>
 <li><a href="#iInformasjonsmodell-informasjonsmodellidentifikator">Informasjonsmodell: informasjonsmodellidentifikator (modelldcatno:informationModelIdentifier)</a></li>
 <li><a href="#Informasjonsmodell-inneholderModellelement">Informasjonsmodell: inneholder modellelement (modelldcatno:containsModelElement)</a></li>
 <li><a href="#Informasjonsmodell-kontaktpunkt">Informasjonsmodell: kontaktpunkt (dcat:contactPoint)</a></li>
@@ -984,7 +984,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <p><strong>Status</strong>: Gjeldende<br>
 <strong>Versjon</strong>: 1.1 (se <a href="#Endringslogg">endringsloggen</a>)<br>
 <strong>Publisert</strong>: 2020-12-18 <br>
-<strong>Oppdatert</strong>: 2021-01-25<br>
+<strong>Oppdatert</strong>: 2021-01-27<br>
 <strong>Gjeldende versjon</strong>: <a href="https://data.norge.no/specification/modelldcat-ap-no/" class="bare">https://data.norge.no/specification/modelldcat-ap-no/</a><br>
 <strong>Redaktørens utkast</strong>: <a href="https://informasjonsforvaltning.github.io/modelldcat-ap-no/" class="bare">https://informasjonsforvaltning.github.io/modelldcat-ap-no/</a></p>
 </div>
@@ -3544,7 +3544,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Rdfs:Literal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Literal</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
@@ -3552,7 +3552,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
@@ -3626,7 +3626,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
@@ -3668,7 +3668,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
@@ -3972,7 +3972,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
@@ -4086,7 +4086,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
@@ -4121,7 +4121,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
@@ -4715,7 +4715,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </table>
 </div>
 <div class="sect5">
-<h6 id="Informasjonsmodell-identifikator"><a class="link" href="#Informasjonsmodell-identifikator">Informasjonsmodell: (dct:identifier) identifikator</a></h6>
+<h6 id="Informasjonsmodell-identifikator"><a class="link" href="#Informasjonsmodell-identifikator">Informasjonsmodell: identifikator (dct:identifier) </a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5941,7 +5941,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
@@ -6011,7 +6011,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Subegenskap av</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Rdfs:label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:label</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
@@ -7569,7 +7569,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2021-01-25 15:05:09 UTC
+Sist oppdatert 2021-02-02 12:16:32 UTC
 </div>
 </div>
 </body>
