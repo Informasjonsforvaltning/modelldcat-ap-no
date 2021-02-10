@@ -602,6 +602,14 @@ xsd:maxInclusive rdf:type owl:DatatypeProperty ,
                  rdfs:range xsd:decimal ;
                  rdfs:label "maks inklusiv"@nb ,
                             "max inclusive"@en .
+                            
+                            
+xsd:maxExclusive rdf:type owl:DatatypeProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:domain modelldcatno:SimpleType ;
+                 rdfs:range xsd:decimal ;
+                 rdfs:label "maks eksklusiv"@nb ,
+                            "max exclusive"@en .
 
 
 ###  http://www.w3.org/2001/XMLSchema#maxLength
@@ -634,6 +642,15 @@ xsd:maxOccurs rdf:type owl:DatatypeProperty ;
                          ] ;
               rdfs:label "maks multiplisitet"@nb ,
                          "max occurs"@en .
+
+
+###  http://www.w3.org/2001/XMLSchema#minExclusive
+xsd:minExclusive rdf:type owl:DatatypeProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:domain modelldcatno:SimpleType ;
+                 rdfs:range xsd:decimal ;
+                 rdfs:label "min exclusive"@en ,
+                            "minimum eksklusive"@nb .
 
 
 ###  http://www.w3.org/2001/XMLSchema#minInclusive
