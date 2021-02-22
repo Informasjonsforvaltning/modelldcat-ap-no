@@ -703,8 +703,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_valgfrie_egenskaper_for_klassen_enkeltype">Valgfrie egenskaper for klassen <em>Enkeltype</em></a>
 <ul class="sectlevel5">
 <li><a href="#Enkeltype-antallDesimaler">Enkeltype: antall desimaler (xsd:fractionDigits)</a></li>
-<li><a href="#_enkeltype_eksklusivt_minimum_xsdminexclusive">Enkeltype: eksklusivt minimum (xsd:minExclusive)	</a></li>
-<li><a href="#_enkeltype_eksklusivt_maksimum_xsdmaxexclusive">Enkeltype: eksklusivt maksimum (xsd:maxExclusive)	</a></li>
+<li><a href="#Enkeltype-eksklusivtMaksimum">Enkeltype: eksklusivt maksimum (xsd:maxExclusive)</a></li>
+<li><a href="#Enkeltype-eksklusivtMinimum">Enkeltype: eksklusivt minimum (xsd:minExclusive)</a></li>
 <li><a href="#Enkeltype-lengde">Enkeltype: lengde (xsd:length)</a></li>
 <li><a href="#Enkeltype-maksInklusiv">Enkeltype: maks inklusiv (xsd:maxInclusive)</a></li>
 <li><a href="#Enkeltype-maksLengde">Enkeltype: maks lengde (xsd:maxLength)</a></li>
@@ -4320,42 +4320,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </table>
 </div>
 <div class="sect5">
-<h6 id="_enkeltype_eksklusivt_minimum_xsdminexclusive"><a class="link" href="#_enkeltype_eksklusivt_minimum_xsdminexclusive">Enkeltype: eksklusivt minimum (xsd:minExclusive)	<a id="Enkeltype-eksklusivtMinimum"></a></a></h6>
-<table class="tableblock frame-all grid-all stripes-even stretch">
-<colgroup>
-<col style="width: 30%;">
-<col style="width: 70%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">exclusive minimum</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:minExclusive</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:decimal</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Spesifiserer den nedre grensene for en numerisk verdi (verdien må være større enn denne verdien).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect5">
-<h6 id="_enkeltype_eksklusivt_maksimum_xsdmaxexclusive"><a class="link" href="#_enkeltype_eksklusivt_maksimum_xsdmaxexclusive">Enkeltype: eksklusivt maksimum (xsd:maxExclusive)	<a id="Enkeltype-eksklusivtMaksimum"></a></a></h6>
+<h6 id="Enkeltype-eksklusivtMaksimum"><a class="link" href="#Enkeltype-eksklusivtMaksimum">Enkeltype: eksklusivt maksimum (xsd:maxExclusive)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -4377,6 +4342,41 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Spesifiserer den øvre grensene for en numerisk verdi (verdien må være mindre enn denne verdien)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="Enkeltype-eksklusivtMinimum"><a class="link" href="#Enkeltype-eksklusivtMinimum">Enkeltype: eksklusivt minimum (xsd:minExclusive)</a></h6>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">exclusive minimum</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:minExclusive</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:decimal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Spesifiserer den nedre grensene for en numerisk verdi (verdien må være større enn denne verdien).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
@@ -7665,7 +7665,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2021-02-22 14:15:59 UTC
+Sist oppdatert 2021-02-22 14:31:43 UTC
 </div>
 </div>
 </body>
