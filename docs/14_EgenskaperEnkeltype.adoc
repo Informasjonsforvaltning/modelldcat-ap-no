@@ -30,6 +30,30 @@ Klassen _Enkeltype_ er anbefalt
 |Kravsnivå| Valgfri
 |===
 
+===== Enkeltype: eksklusivt minimum (xsd:minExclusive)	[[Enkeltype-eksklusivtMinimum]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn |exclusive minimum
+|URI |xsd:minExclusive
+|Range |xsd:decimal
+|Beskrivelse |Spesifiserer den nedre grensene for en numerisk verdi (verdien må være større enn denne verdien).
+|Multiplisitet |0..1
+|Kravsnivå |Valgfri
+|===
+
+===== Enkeltype: eksklusivt maksimum (xsd:maxExclusive)	[[Enkeltype-eksklusivtMaksimum]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn |maximum exclusive
+|URI |xsd:maxExclusive
+|Range |xsd:decimal
+|Beskrivelse |Spesifiserer den øvre grensene for en numerisk verdi (verdien må være mindre enn denne verdien)
+|Multiplisitet |0..1
+|Kravsnivå |Valgfri
+|===
+
 ===== Enkeltype: lengde (xsd:length) [[Enkeltype-lengde]]
 
 [cols="30s,70d"]
