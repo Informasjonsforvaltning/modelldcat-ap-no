@@ -703,6 +703,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_valgfrie_egenskaper_for_klassen_enkeltype">Valgfrie egenskaper for klassen <em>Enkeltype</em></a>
 <ul class="sectlevel5">
 <li><a href="#Enkeltype-antallDesimaler">Enkeltype: antall desimaler (xsd:fractionDigits)</a></li>
+<li><a href="#_enkeltype_eksklusivt_minimum_xsdminexclusive">Enkeltype: eksklusivt minimum (xsd:minExclusive)	</a></li>
+<li><a href="#_enkeltype_eksklusivt_maksimum_xsdmaxexclusive">Enkeltype: eksklusivt maksimum (xsd:maxExclusive)	</a></li>
 <li><a href="#Enkeltype-lengde">Enkeltype: lengde (xsd:length)</a></li>
 <li><a href="#Enkeltype-maksInklusiv">Enkeltype: maks inklusiv (xsd:maxInclusive)</a></li>
 <li><a href="#Enkeltype-maksLengde">Enkeltype: maks lengde (xsd:maxLength)</a></li>
@@ -842,7 +844,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#Realisering-egenskaper">Realisering (modelldcatno:Realization)</a>
 <ul class="sectlevel4">
-<li><a href="#Valgfrie-egenskaper-Realisering">Valgfrie egenskaper for klassen <em>Realisering</em></a>
+<li><a href="#Anbefalte-egenskaper-Realisering">Anbefalte egenskaper for klassen <em>Realisering</em></a>
 <ul class="sectlevel5">
 <li><a href="#Realsering-harLeverandør">Realisering: har leverandør (modelldcatno:hasSupplier)</a></li>
 </ul>
@@ -984,7 +986,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <p><strong>Status</strong>: Gjeldende<br>
 <strong>Versjon</strong>: 1.1 (se <a href="#Endringslogg">endringsloggen</a>)<br>
 <strong>Publisert</strong>: 2020-12-18 <br>
-<strong>Oppdatert</strong>: 2021-01-27<br>
+<strong>Oppdatert</strong>: 2021-02-22<br>
 <strong>Gjeldende versjon</strong>: <a href="https://data.norge.no/specification/modelldcat-ap-no/" class="bare">https://data.norge.no/specification/modelldcat-ap-no/</a><br>
 <strong>Redaktørens utkast</strong>: <a href="https://informasjonsforvaltning.github.io/modelldcat-ap-no/" class="bare">https://informasjonsforvaltning.github.io/modelldcat-ap-no/</a></p>
 </div>
@@ -1188,12 +1190,12 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <div class="sectionbody">
 <div class="imageblock">
 <div class="content">
-<img src="images/ModellDCAT-AP-NO-v1_1.png" alt="ModellDCAT AP NO v1 1">
+<img src="images/ModellDCAT-AP-NO22022021.png" alt="ModellDCAT AP NO22022021">
 </div>
 <div class="title">Figur 1. Forenklet modell for ModellDCAT-AP-NO.</div>
 </div>
 <div class="paragraph">
-<p>Last ned modell: <a href="images/ModellDCAT-AP-NO-v1_1.png">png</a> | <a href="files/ModellDCAT_AP_NO_V1_1.eapx">XMI for EA</a></p>
+<p>Last ned modell: <a href="images/ModellDCAT-AP-NO22022021.png">png</a> | <a href="files/ModellDCAT-AP-NO22022021.eapx">XMI for EA</a></p>
 </div>
 </div>
 </div>
@@ -3233,7 +3235,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:ModelElement</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:ModelElement or modelldcatno:Property</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
@@ -4305,6 +4307,76 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Spesifiserer maksimalt antall tillatte desimaler.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="_enkeltype_eksklusivt_minimum_xsdminexclusive"><a class="link" href="#_enkeltype_eksklusivt_minimum_xsdminexclusive">Enkeltype: eksklusivt minimum (xsd:minExclusive)	<a id="Enkeltype-eksklusivtMinimum"></a></a></h6>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">exclusive minimum</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:minExclusive</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:decimal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Spesifiserer den nedre grensene for en numerisk verdi (verdien må være større enn denne verdien).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="_enkeltype_eksklusivt_maksimum_xsdmaxexclusive"><a class="link" href="#_enkeltype_eksklusivt_maksimum_xsdmaxexclusive">Enkeltype: eksklusivt maksimum (xsd:maxExclusive)	<a id="Enkeltype-eksklusivtMaksimum"></a></a></h6>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">maximum exclusive</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:maxExclusive</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:decimal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Spesifiserer den øvre grensene for en numerisk verdi (verdien må være mindre enn denne verdien)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
@@ -6587,7 +6659,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <p>Klassen <em>Realisering</em> er valgfri.</p>
 </div>
 <div class="sect4">
-<h5 id="Valgfrie-egenskaper-Realisering"><a class="link" href="#Valgfrie-egenskaper-Realisering">Valgfrie egenskaper for klassen <em>Realisering</em></a></h5>
+<h5 id="Anbefalte-egenskaper-Realisering"><a class="link" href="#Anbefalte-egenskaper-Realisering">Anbefalte egenskaper for klassen <em>Realisering</em></a></h5>
 <div class="sect5">
 <h6 id="Realsering-harLeverandør"><a class="link" href="#Realsering-harLeverandør">Realisering: har leverandør (modelldcatno:hasSupplier)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
@@ -6606,7 +6678,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:ModelElement</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:ModelElement or modelldcatno:Property</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
@@ -6622,7 +6694,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
 </table>
@@ -7364,6 +7436,12 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Forklaring</strong></p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Abstraksjon: er abstraksjon av</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:isAbstractionOf</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Utvidet range til også å omfatte modelldcatno:Property.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For å kunne si at en egenskap kan være en abstraksjon av en annen egenskap eller modellelement.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Begrensningsregel</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:ConstraintRule</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ny klasse</p></td>
@@ -7398,6 +7476,18 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <td class="tableblock halign-left valign-top"><p class="tableblock">xsd:maxOccurs</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Range endret fra <code>xsd:nonNegativeInteger</code> til <code>xsd:nonNegativeInteger or {"*"} or {"n"}</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">For å kunne ha "*" eller "n" som øvre multiplisitet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enkeltype: eksklusivt maximum</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:maxExclusive</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ny egenskap</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Uteglemt i tidligere versjon.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enkeltype: eksklusivt minimum</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:minExclusive</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ny egenskap</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Uteglemt i tidligere versjon.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Eller</p></td>
@@ -7556,6 +7646,12 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <td class="tableblock halign-left valign-top"><p class="tableblock">Skrivefeil.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Realisering: har leverandør</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:hasSupplier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Utvidet range til også å omfatte modelldcatno:Property.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For å kunne si at en egenskap kan være en abstraksjon av enn annen egenskap eller modellelement.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Standard</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dct:Standard</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Hele klassen er ny</p></td>
@@ -7569,7 +7665,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2021-01-28 12:03:06 UTC
+Sist oppdatert 2021-02-22 14:15:59 UTC
 </div>
 </div>
 </body>
