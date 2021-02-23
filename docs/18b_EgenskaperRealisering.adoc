@@ -2,7 +2,7 @@
 
 Klassen _Realisering_ er valgfri.
 
-==== Valgfrie egenskaper for klassen _Realisering_ [[Valgfrie-egenskaper-Realisering]]
+==== Anbefalte egenskaper for klassen _Realisering_ [[Anbefalte-egenskaper-Realisering]]
 
 ===== Realisering: har leverandør (modelldcatno:hasSupplier) [[Realsering-harLeverandør]]
 
@@ -10,9 +10,9 @@ Klassen _Realisering_ er valgfri.
 |===
 |Engelsk navn|has supplier
 |URI|modelldcatno:hasSupplier
-|Range|modelldcatno:ModelElement
+|Range|modelldcatno:ModelElement or modelldcatno:Property
 |Beskrivelse|Brukes til å referere til modellelementet som det aktuelle modellelementet er en realisering av.
 |Subegenskap av|modelldcatno:hasType
 |Multiplisitet|0..1
-|Kravsnivå|Valgfri
+|Kravsnivå|Anbefalt
 |===

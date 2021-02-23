@@ -8,12 +8,15 @@ Tabellen under gir en oversikt over endringene i klasser og egenskaper, fra v.1.
 [cols="15,15,35,35"]
 |===
 |*Klasse-/egenskapsnavn*|*URI for klassen/egenskapen*|*Endring*|*Forklaring*
+|Abstraksjon: er abstraksjon av | modelldcatno:isAbstractionOf | Utvidet range til også å omfatte modelldcatno:Property. | For å kunne si at en egenskap kan være en abstraksjon av en annen egenskap eller modellelement.
 |Begrensningsregel | modelldcatno:ConstraintRule | Ny klasse | Gjennom konkret anvendelse har man erfart at det er hensiktsmessig å uttrykke begrensninger som en egen klasse enn som en egenskap på klassene Modellelement og Egenskap.
 |Egenskap: identifikator|dct:identifier|Endret fra obligatorisk til anbefalt|For strengt å ha dette som obligatorisk når egenskapene som RDF-ressurser i tillegg tildeles egne URI’er.
 |Egenskap: identifikator|dct:identifier|Multiplisitet endret fra 1..1 til 0..1|Som følge av at kravsnivå endres fra obligatorisk til anbefalt.
 |Egenskap: navigerbar|modelldcatno:navigable|Ny egenskap|For å gi en bedre beskrivelse av retninger på relasjoner, som f.eks. roller, komposisjoner og samlinger.
 |Egenskap: tilhører modul|modelldcatno:belongsToModule|Multiplisitet endret fra 0..1 til 0..n|En og samme egenskap kan tilhøre ulike moduler.
 |Egenskap: øvre multiplisitet| xsd:maxOccurs | Range endret fra `xsd:nonNegativeInteger` til `xsd:nonNegativeInteger or {"*"} or {"n"}` | For å kunne ha "*" eller "n" som øvre multiplisitet.
+|Enkeltype: eksklusivt maximum | xsd:maxExclusive | Ny egenskap | Uteglemt i tidligere versjon.
+|Enkeltype: eksklusivt minimum | xsd:minExclusive | Ny egenskap | Uteglemt i tidligere versjon.
 |Eller | modelldcatno:Or | Ny klasse | Som et resultat av at klassen Beregningsregel (modelldcatno:ConstraintRule) innføres.
 | Enten eller | modelldcatno:Xor | Ny klasse | Som et resultat av at klassen Beregningsregel (modelldcatno:ConstraintRule) innføres.
 |Informasjonsmodell: beskrivelse|dct:description|Endret fra obligatorisk til anbefalt|For strengt å ha dette som en obligatorisk egenskap. Flere virksomheter har ikke tekstlige beskrivelser av modellene sine.
@@ -40,5 +43,6 @@ Tabellen under gir en oversikt over endringene i klasser og egenskaper, fra v.1.
 |Modellelement: identifikator|dct:identifier|Multiplisitet endret fra 1..1 til 0..1|Som følge av at kravsnivå endres fra obligatorisk til anbefalt.
 |Modellelement: tilhører modul|modelldcatno:belongsToModule|Multiplisitet endret fra 0..1 til 0..n|Ett og samme modellelement kan tilhøre ulike moduler.
 |Note: anmerkning|modelldcatno:propertyNote|Manglende beskrivelse.|Skrivefeil.
+|Realisering: har leverandør | modelldcatno:hasSupplier | Utvidet range til også å omfatte modelldcatno:Property. | For å kunne si at en egenskap kan være en abstraksjon av enn annen egenskap eller modellelement.
 |Standard|dct:Standard|Hele klassen er ny|Brukes som range for dct:conformsTo og prof:isProfileOf, og som referanse fra f.eks. et dcat:Dataset til en informasjonsmodell som beskriver datasettet.
 |===
