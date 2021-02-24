@@ -29,29 +29,23 @@
 <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/shacl/modelldcatno-shacl.ttl>
     dcat:accessURL <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/shacl/>;
     dcat:downloadURL <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/shacl/modelldcatno-shacl.ttl> ;
+    foaf:homepage <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/shacl/> ;
     adms:status <http://purl.org/adms/status/UnderDevelopment> ;
     dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
     dct:conformsTo <https://www.w3.org/TR/shacl> ;
     dct:creator [
         foaf:homepage <https://www.digdir.no/> ;
         foaf:name "Digitaliseringsdirektoratet"@nb , "Norwegian Digitalisation Agency"@en ;
+        foaf:mbox <mailto:informasjonsforvaltning@diggir.no> ;
     ];
     dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
-    cc:attributionURL <http://ec.europa.eu/> ;
-    dct:modified "2021-01-25"^^xsd:date ;
     rdfs:commet "Validated SUCCESS at https://www.itb.ec.europa.eu/shacl/shacl/upload"@en ;
     dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ;
-    dct:relation <http://joinup.ec.europa.eu/collection/access-base-registries/solution/abr-specification-registry-registries/release/200> ;
     dct:description "This document specifies the constraints on properties and classes expressed by ModellDCAT-AP-NO in SHACL."@en ;
     dct:title "The constraints of ModellDCAT-AP-NO"@en ;
-    owl:versionInfo "0.2";
-    foaf:homepage <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/shacl/> ;
-    foaf:maker [
-        foaf:mbox <mailto:informasjonsforvaltning@diggir.no> ;
-        foaf:name "Informasjonsforvaltning, Digitaliseringsdirektoratet"@nb ;
-        foaf:page <https://www.digdir.no> ;
-    ] .
-
+    owl:versionInfo "0.3";
+    dct:modified "2021-02-24"^^xsd:date ;
+    .
 
 # -+-+- Some "general" classes, though modified for modelldcatno when necessary -+-+-+-
 
@@ -64,19 +58,24 @@
         sh:nodeKind sh:Literal ;
         sh:path foaf:name ;
         sh:severity sh:Violation ;
+        sh:message "Agent must have at least one name (foaf:name)."@en ,
+            "Aktør må ha minst ett navn (foaf:name)."@nb ;
     ], [
         sh:name "organisasjonsidentifikator"@nb , "identifier"@en ;
         sh:maxCount 1 ;
         sh:nodeKind sh:Literal ;
         sh:path dct:identifier ;
         sh:severity sh:Violation ;
+        sh:message "Agent may have max. one identifier (dct:identifier)."@en ,
+            "Aktør kan ha maks. én identifikator (dct:identifier)."@nb ;
     ],
         :TypeAgentProperty_Shape , # sjekker Kontrollert vokabular
     [ # sjekker multiplisitet
         sh:name "type (AKtør)"@nb , "type (Agent)"@en ;
         sh:path dct:type ;
         sh:maxCount 1 ;
-        sh:message "Det kan være maks. én aktørtype."@nb ;
+        sh:message "Agent may have max. one agent type (dct:type)."@en ,
+            "Aktør kan ha maks. én aktørtype (dct:type)."@nb ;
         sh:severity sh:Violation ;
     ] ;
     sh:targetClass foaf:Agent .
@@ -90,6 +89,8 @@
         sh:nodeKind sh:Literal ;
         sh:path dct:title ;
         sh:severity sh:Violation ;
+        sh:message "Thematic scheme must have at least one title (dct:title)."@en ,
+            "Tematisk skjema må ha minst én tittel (dct:title)."@nb ;
     ] ;
     sh:targetClass skos:ConceptScheme .
 
@@ -109,18 +110,24 @@
         sh:nodeKind sh:Literal ;
         sh:path dcat:bbox ;
         sh:severity sh:Violation ;
+        sh:message "Location may have max. one bouding box (dcat:bbox)."@en ,
+            "Lokasjon kan ha maks. et område (dcat:bbox)."@nb ;
     ], [
         sh:name "geografisk midtpunkt"@nb , "centroid"@en ;
         sh:maxCount 1 ;
         sh:nodeKind sh:Literal ;
         sh:path dcat:centroid ;
         sh:severity sh:Violation ;
+        sh:message "Location may have max. one centroid (dcat:centroid)."@en ,
+            "Lokasjon kan ha maks. ett geografisk midtpunnt (dcat:centroid)."@nb ;
     ], [
         sh:name "geometri"@nb , "geometry"@en ;
         sh:maxCount 1 ;
         sh:nodeKind sh:Literal ;
         sh:path locn:geometry ;
         sh:severity sh:Violation ;
+        sh:message "Location may have max. one geometry (locn:geometry)."@en ,
+            "Lokasjon kan ha maks. en geometri (locn:geometry)."@nb ;
     ] ;
     sh:targetClass dct:Location .
 
@@ -159,8 +166,8 @@
     a sh:NodeShape ;
     rdfs:comment "Date time date disjunction shape checks that a datatype property receives a date or a dateTime literal" ;
     sh:name "Date time date disjunction"@en , "Enten dato eller datotid"@nb ;
-    sh:message "The values must be data typed as either xsd:date or xsd:dateTime"@en ,
-       "Verdien må være oppgitt som enten xsd:date eller xsd:dateTime"@nb ;
+    sh:message "The values must be data typed as either xsd:date or xsd:dateTime."@en ,
+       "Verdien må være oppgitt som enten xsd:date eller xsd:dateTime."@nb ;
     sh:or ([
             sh:datatype xsd:date
         ]
@@ -176,7 +183,7 @@
     # sh:class dct:MediaType ;
     sh:pattern "^http://publications.europa.eu/resource/authority/file-type/" ;
     sh:flags "i" ;
-    sh:message "Medietype skal være i samsvar med http://publications.europa.eu/resource/authority/file-type/"@nb ;
+    sh:message "Medietype (dct:format) skal være en av verdiene fra http://publications.europa.eu/resource/authority/file-type/."@nb ;
     sh:severity sh:Violation ;
   .
 
@@ -187,7 +194,7 @@
     # sh:class dct:LinguisticSystem ;
     sh:pattern "^http://publications.europa.eu/resource/authority/language/" ;
     sh:flags "i" ;
-    sh:message "Språkkoden skal være i samsvar med http://publications.europa.eu/resource/authority/language/"@nb ;
+    sh:message "Språkkoden (dct:language) skal være en av verdiene fra http://publications.europa.eu/resource/authority/language/."@nb ;
     sh:severity sh:Violation ;
   .
 
@@ -197,7 +204,7 @@
     sh:path dct:license ;
     sh:pattern "^http://publications.europa.eu/resource/authority/licence" ;
     sh:flags "i";
-    sh:message "Lisenstype skal være i samsvar med http://publications.europa.eu/resource/authority/licence/"@nb ;
+    sh:message "Lisens (dct:license) skal være en av verdiene fra http://publications.europa.eu/resource/authority/licence/."@nb ;
     sh:severity sh:Violation ;
   .
 
@@ -211,7 +218,7 @@
       [ sh:pattern "^http://publications.europa.eu/resource/authority/place" ; sh:flags "i" ;]
       [ sh:pattern "^http://sws.geonames.org/" ; sh:flags "i" ; ]
     ) ;
-    sh:message "Dekningsområde skal ha minst en verdi som skal være i henhold til http://publications.europa.eu/resource/authority/continent, http://publications.europa.eu/resource/authority/country, http://publications.europa.eu/resource/authority/place eller http://sws.geonames.org/."@nb ;
+    sh:message "Dekningsområde (dct:spatial) skal være minst en av verdiene fra http://publications.europa.eu/resource/authority/continent, http://publications.europa.eu/resource/authority/country, http://publications.europa.eu/resource/authority/place eller http://sws.geonames.org/."@nb ;
     sh:severity sh:Violation ;
   .
 
@@ -221,7 +228,7 @@
     sh:path adms:status ;
     sh:pattern "^http://purl.org/adms/status/" ;
     sh:flags "i" ;
-    sh:message "Status skal være i samsvar med http://purl.org/adms/status/"@nb ;
+    sh:message "Status (adms:status) skal være en av verdiene fra http://purl.org/adms/status/."@nb ;
     sh:severity sh:Violation ;
   .
 
@@ -231,7 +238,7 @@
     sh:path dct:type ;
     sh:pattern "^http://purl.org/adms/publishertype/" ;
     sh:flags "i" ;
-    sh:message "AKtørtype skal være i samsvar med http://purl.org/adms/publishertype/"@nb ;
+    sh:message "Aktørtype (dct:type) skal være en av verdiene fra http://purl.org/adms/publishertype/."@nb ;
     sh:severity sh:Violation ;
   .
 
@@ -241,7 +248,7 @@
     sh:path dct:type ;
     sh:pattern "^http://purl.org/adms/licencetype/" ;
     sh:flags "i" ;
-    sh:message "Lisensdokumenttype skal være i samsvar med http://purl.org/adms/licencetype/"@nb ;
+    sh:message "Lisensdokumenttype (dct:type) skal være en av verdiene fra http://purl.org/adms/licencetype/."@nb ;
     sh:severity sh:Violation ;
   .
 
@@ -251,7 +258,7 @@
     sh:path dcat:theme ;
     sh:pattern "^https://psi.norge.no/los/tema/" ;
     sh:flags "i" ;
-    sh:message "LOS bør brukes for dcat:theme"@nb ;
+    sh:message "LOS (https://psi.norge.no/los/tema/) bør brukes for dcat:theme"@nb ;
     sh:severity sh:Warning ;
   .
 
@@ -264,12 +271,15 @@
     sh:name "Abstraction"@en , "Abstraksjon"@nb ;
     sh:subClassOf modelldcatno:Property ;
     sh:property [
-        sh:name "abstraksjon av"@nb , "is abstraction of"@en ;
+        sh:name "er abstraksjon av"@nb , "is abstraction of"@en ;
         sh:maxCount 1 ;
         sh:subClassOf modelldcatno:hasType ;
         sh:path modelldcatno:isAbstractionOf ;
-        sh:class modelldcatno:ModelElement ;
+        sh:or ( [sh:class modelldcatno:ModelElement]
+                [sh:class modelldcatno:Property] ) ; # v.1.1
         sh:severity sh:Violation ;
+        sh:message "The property `is abstraction of` ((modelldcatno:isAbstractionOf) may have max. one value, whish mush be an instance of modelldcatno:ModelElement or modelldcatno:Property."@en ,
+            "Egenskal `er abstraksjon av` (modelldcatno:isAbstractionOf) kan ha maks. ´én verdi, som skal være instans av enten modelldcatno:ModelElement eller modelldcatno:Property."
     ] ;
     sh:targetClass modelldcatno:Abstraction ;
   .
@@ -285,6 +295,8 @@
         sh:path modelldcatno:refersTo ;
         sh:class modelldcatno:ModelElement ;
         sh:severity sh:Violation ;
+        sh:message "The property `refers to` (modelldcatno:refersTo) may have max. one value, which must be an instance of modelldcatno:ModelElement."@en ,
+        "Egenskap `refererer til` (modelldcatno:refersTo) kan ha maks. én verdi, som skal være instans av modelldcatno:ModelElement."@nb ;
     ] ;
     sh:targetClass modelldcatno:Association ;
   .
@@ -306,6 +318,7 @@
                     sh:path modelldcatno:containsObjectType ;
                     sh:subClassOf modelldcatno:hasType ;
                     sh:class modelldcatno:ObjectType ;
+                    sh:message "Egenskap `inneholder objekttype` (modelldcatno:hasType) kan ha maks. én verdi, som skal være instans av modelldcatno:ObjectType."@nb ;
                   ] ;
                 ]
                 [
@@ -347,6 +360,7 @@
                     sh:path modelldcatno:hasDataType ;
                     sh:subClassOf modelldcatno:hasType ;
                     sh:class modelldcatno:DataType ;
+                    sh:message "Egenskap `har datatype` (modelldcatno:hasDataType) kan ha maks. én verdi, som skal være instans av modelldcatno:DataType."@nb ;
                   ] ;
                 ]
                 [
@@ -388,6 +402,7 @@
                     sh:path modelldcatno:hasSimpleType ;
                     sh:subClassOf modelldcatno:hasType ;
                     sh:class modelldcatno:SimpleType ;
+                    sh:message "Egenskap `har enkeltype` (modelldcatno:hasSimpleType) kan ha maks. én verdi, som skal være instans av modelldcatno:SimpleType."@nb ;
                   ] ;
                 ]
             );
@@ -401,6 +416,7 @@
         sh:path modelldcatno:hasValueFrom ;
         sh:class modelldcatno:CodeList ;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `har verdier fra` (modelldcatno:hasValueFrom) kan ha maks. én verdi, som skal være instans av modelldcatno:CodeList."@nb ;
       ] ;
     sh:targetClass modelldcatno:Attribute ;
   .
@@ -416,17 +432,21 @@
           [ sh:class modelldcatno:ModelElement ]
           [ sh:class modelldcatno:Property ]
         ) ;
+        sh:severity sh:Violation ;
+        sh:message "Egenskap `begrensning` (modelldcatno:constraint) skal ha minst én verdi, som skal være instans av modelldcatno:ModelElement eller modelldcatno:Property."@nb ;
     ], [
         sh:name "identifikator"@nb , "identifier"@en ;
         sh:maxCount 1 ;
         sh:path dct:identifier;
         sh:nodeKind sh:Literal ;
         sh:severity sh:Violation ;
+        sh:message "Begresningsregel kan ha maks. én identifikator (dct:identifier)."@nb ;
     ], [
-        sh:name "tilhører modul"@nb , "title"@en ;
+        sh:name "tilhører modul"@nb , "belongs to module"@en ;
         sh:path modelldcatno:belongsToModule;
         sh:nodeKind sh:IRIOrLiteral ;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `tilhører modul` (modelldcatno:belongsToModule skal være enten Literal eller IRI."@nb ;
     ] ;
     sh:or ( # minst en av følgende to egenskaper må være med
       [ sh:property [
@@ -435,7 +455,7 @@
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:severity sh:Violation ;
-            sh:message "Begrensningsregel (med unntak av subklassene modelldcatno:Xor  og modelldcatno:OR) må som minimum ha en tittel eller et begrensningsuttrykk"@nb ;
+            sh:message "Begrensningsregel (med unntak av subklassene modelldcatno:Xor og modelldcatno:OR) må som minimum ha en tittel (dct:title) eller et begrensningsuttrykk (modelldcatno:constraintExpression)."@nb ;
         ]
       ]
       [ sh:property [
@@ -444,7 +464,7 @@
           sh:minCount 1 ;
           sh:nodeKind sh:Literal ;
           sh:severity sh:Violation ;
-          sh:message "Begrensningsregel (med unntak av subklassene modelldcatno:Xor  og modelldcatno:OR) må som minimum ha en tittel eller et begrensningsuttrykk"@nb ;
+          sh:message "Begrensningsregel (med unntak av subklassene modelldcatno:Xor og modelldcatno:OR) må som minimum ha en tittel (dct:title) eller et begrensningsuttrykk (modelldcatno:constraintExpression)."@nb ;
         ]
       ]
     ) ;
@@ -464,29 +484,35 @@
           [ sh:class modelldcatno:ModelElement ]
           [ sh:class modelldcatno:Property ]
         ) ;
+        sh:severity sh:Violation ;
+        sh:message "Egenskap `begrensning` (modelldcatno:constraint) skal ha minst én verdi, som skal være instans av modelldcatno:ModelElement eller modelldcatno:Property."@nb ;
     ], [
         sh:name "identifikator"@nb , "identifier"@en ;
         sh:maxCount 1 ;
         sh:path dct:identifier;
         sh:nodeKind sh:Literal ;
         sh:severity sh:Violation ;
+        sh:message "OR/XOR kan ha maks. én identifikator (dct:identifier)."@nb ;
     ], [
         sh:name "tilhører modul"@nb , "title"@en ;
         sh:path modelldcatno:belongsToModule;
         sh:nodeKind sh:IRIOrLiteral ;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `tilhører modul` (belongsToModule) kan bare være enten Literal eller IRI."@nb ;
     ] ;
     sh:property [
-            sh:name "begrensningsuttrykk"@nb , "constraint expression"@en ;
-            sh:path modelldcatno:constraintExpression;
-            sh:nodeKind sh:Literal ;
-            sh:severity sh:Violation ;
+        sh:name "begrensningsuttrykk"@nb , "constraint expression"@en ;
+        sh:path modelldcatno:constraintExpression;
+        sh:nodeKind sh:Literal ;
+        sh:severity sh:Violation ;
+        sh:message "Egenskap `begrensningsuttrykk` (modelldcatno:constraintExpression) kan bare være Literal."@nb ;
         ] ;
     sh:property [
-          sh:name "tittel"@nb , "title"@en ;
-          sh:path dct:title;
-          sh:nodeKind sh:Literal ;
-          sh:severity sh:Violation ;
+        sh:name "tittel"@nb , "title"@en ;
+        sh:path dct:title;
+        sh:nodeKind sh:Literal ;
+        sh:severity sh:Violation ;
+        sh:message "Egenskap `tittel` (dct:title) kan bare være Literal."@nb ;
         ] ;
     sh:targetClass modelldcatno:Or, modelldcatno:Xor ;
     .
@@ -500,6 +526,7 @@
         sh:nodeKind sh:Literal ;
         sh:path dct:description ;
         sh:severity sh:Violation ;
+        sh:message "En katalog skal ma minst én beskrivelse (dct:description)."@nb ;
     ], [
         sh:name "identifikator"@nb , "identifier"@en ;
         sh:nodeKind sh:Literal ;
@@ -507,12 +534,14 @@
         sh:minCount 1 ;
         sh:path dct:identifier ;
         sh:severity sh:Violation ;
+        sh:message "En katalog skal én og bare én identifikator (dct:identifier)."@nb ;
     ], [
         sh:name "tittel"@nb , "title"@en ;
         sh:minCount 1 ;
         sh:nodeKind sh:Literal ;
         sh:path dct:title ;
         sh:severity sh:Violation ;
+        sh:message "En katalog skal ma minst én tittel (dct:title)."@nb ;
     ], [
         sh:name "utgiver"@nb , "publisher"@en ;
         sh:class foaf:Agent ;
@@ -520,17 +549,20 @@
         sh:minCount 1 ;
         sh:path dct:publisher ;
         sh:severity sh:Violation ;
+        sh:message "En katalog skal én og bare én utgiver (dct:publisher)."@nb ;
     ], [
         sh:name "hjemmeside"@nb , "homepage"@en ;
         sh:class foaf:Document ;
         sh:path foaf:homepage ;
         sh:severity sh:Violation ;
+        sh:message "Egenskal `hjemmeside` (foaf:homepage) kan bare ha verdi som er instans av foaf:Document."@nb ;
     ], [
         sh:name "utgivelsesdato"@nb , "issued (release date)"@en ;
         sh:maxCount 1 ;
         sh:node :DateOrDateTimeDataType_Shape ;
         sh:path dct:issued ;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `utgivelsesdato` (dct:issued) kan ha maks. én verdi, som skal være enten av datatype xsd:date eller xsd:dateTime."@nb ;
     ],
         :LicenseProperty_Shape , # sjekker kontrollert vokab.
     [ # sjekker multiplisitet
@@ -549,6 +581,7 @@
         sh:node :DateOrDateTimeDataType_Shape ;
         sh:path dct:modified ;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `endringsdato` (dct:modified) kan ha maks. én verdi, som skal være enten av datatype xsd:date eller xsd:dateTime."@nb ;
     ], [
         sh:name "temaer"@nb , "themes"@en ;
         sh:path dcat:themeTaxonomy ;
@@ -565,6 +598,7 @@
         sh:maxCount 1 ;
         sh:path dct:isPartOf ;
         sh:severity sh:Violation ;
+        sh:message "En katalog kan være en del av (dct:isPartOf) maks. én annen katalog (instans av dcat:Catalog)."@nb ;
     ] ;
     sh:or ( # En Modellkatalog skal ha minst en katalog eller en informasjonsmodell
       sh:property [
@@ -576,7 +610,6 @@
           sh:message "En modellkatalog skal inneholde minst enten en katalog eller en informasjonsmodell"@nb ,
             "A model catalog must contain at least one catalog or one information model"@en ;
           ]
-
       sh:property [
           sh:name "modell"@nb, "model"@en ;
           sh:minCount 1;
@@ -586,7 +619,6 @@
           sh:message "En modellkatalog skal inneholde minst enten en katalog eller en informasjonsmodell"@nb ,
             "A model catalog must contain at least one catalog or one information model"@en ;
           ]
-
     );
     sh:targetClass dcat:Catalog ;
   .
@@ -601,6 +633,7 @@
         sh:class modelldcatno:ModelElement ;
         sh:subClassOf modelldcatno:hasType ;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `kan ha` (modelldcatno:hasSome) kan bare ha verdi som er instans av modelldcatno:ModelElement."@nb ;
     ] ;
     sh:targetClass modelldcatno:Choice ;
   .
@@ -614,6 +647,7 @@
         sh:class modelldcatno:CodeList ;
         sh:path skos:inScheme ;
         sh:severity sh:Violation ;
+        sh:message "Et kodeelement skal være i (skos:inScheme) minst én kodeliste (modelldcatno:CodeList)."@nb ;
     ], [
         sh:name "identifikator"@nb , "identifier"@en ;
         sh:nodeKind sh:Literal ;
@@ -621,6 +655,7 @@
         sh:maxCount 1 ;
         sh:path dct:identifier ;
         sh:severity sh:Violation ;
+        sh:message "Et kodeelement kan ha maks. én identifikator (dct:identifier)."@nb ;
     ], [
         sh:name "kode"@nb , "code"@en ;
         sh:minCount 1; # @v.1.1 #
@@ -628,11 +663,13 @@
         sh:nodeKind sh:Literal ;
         sh:path skos:notation ;
         sh:severity sh:Violation ;
+        sh:message "Et kodeelement skal ha én og bare én kode (skos:notation)."@nb ;
     ], [
         sh:name "toppelement til"@nb , "is top concept of"@en ;
         sh:class modelldcatno:CodeList ;
         sh:path skos:topConceptOf ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
+        sh:message "Egenskap `skos:topConceptOf` kan bare ha verdi som er instans av modelldcatno:CodeList."@nb ;
     ], [
         sh:name "anbefalt kodetekst"@nb , "preferred label"@en ;
         # @v.1.1 # sh:minCount 1 ;
@@ -645,6 +682,7 @@
         sh:class skos:Concept ;
         sh:path dct:subject ;
         sh:severity sh:Violation ;
+        sh:message "Et kodeelement kan ha maks. ett begrep (instans av skos:Concept) tilknyttet (vha. dct:subject)."@nb ;
     ], [
         sh:name "definisjon"@nb , "definition"@en ;
         sh:nodeKind sh:Literal ;
@@ -665,7 +703,8 @@
         sh:maxCount 1; # @v.1.1
         sh:class modelldcatno:CodeElement ;
         sh:path xkos:previous ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
+        sh:message "Et kodeelement kan ha maks. ett forrige kodeelement (xkos:previous)."@nb ;
     ], [
         sh:name "frarådet kodetekst"@nb , "hidden label"@en ;
         sh:nodeKind sh:Literal ;
@@ -686,7 +725,8 @@
         sh:maxCount 1; # @v.1.1
         sh:class modelldcatno:CodeElement ;
         sh:path xkos:next ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
+        sh:message "Et kodeelement kan ha maks. ett neste kodeelement (xkos:next)."@nb ;
     ], [
         sh:name "omfangsmerknad"@nb , "scope note"@en ;
         sh:nodeKind sh:Literal ;
@@ -711,6 +751,7 @@
         sh:class modelldcatno:CodeList ;
         sh:path modelldcatno:codeListReference ;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `ekstern kodeliste` (modelldcatno:codeListReference) kan ha maks. én verdi, som skal være instans av modelldcatno:CodeList."@nb ;
     ] ;
     sh:targetClass modelldcatno:CodeList ;
   .
@@ -726,6 +767,7 @@
         sh:subClassOf modelldcatno:hasType ;
         sh:maxCount 1;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `har medlem` (modelldcatno:hasMember) kan bare ha verdi som er instans av modelldcatno:ModelElement."@nb ;
     ] ;
     sh:targetClass modelldcatno:Collection ;
   .
@@ -741,6 +783,7 @@
         sh:maxCount 1;
         sh:subClassOf modelldcatno:hasType ;
         sh:severity sh:Violation ;
+        sh:message "En kompoisisjon kan inneholde (modelldcatno:contains) maks. ett Modellelement (instans av modelldcatno:ModelElement)."@nb ;
     ] ;
     sh:targetClass modelldcatno:Composition ;
   .
@@ -753,7 +796,7 @@
     [
         sh:maxCount 1 ;
         sh:path dct:language ;
-        sh:message "Det kan være maks. et språk per dokument."@nb ;
+        sh:message "Egenskap `dct:language` kan ha maks. én verdi."@nb ;
         sh:severity sh:Violation ;
     ], [
         sh:name "tittel"@nb, "title"@en ;
@@ -763,9 +806,10 @@
     ],
         :FormatProperty_Shape ,
     [
+        sh:name "format"@en, "format"@nb ;
         sh:path dct:format ;
         sh:maxCount 1 ;
-        sh:message "Det skal være maks. én medietype."@nb ;
+        sh:message "Egenskap `format` `(dct:format) kan ha maks. én verdi."@nb ;
         sh:severity sh:Violation ;
     ] ;
     sh:targetClass foaf:Document ;
@@ -780,6 +824,7 @@
         sh:nodeKind sh:Literal ;
         sh:path dct:title ;
         sh:severity sh:Violation ;
+        sh:message "En informasjonsmodell skal ha minst én tittel (dct:title)."@nb ;
     ], [
         sh:name "beskrivelse"@nb , "description"@en ;
         # @v.1.1 # sh:minCount 1 ;
@@ -793,6 +838,7 @@
         sh:maxCount 1 ;
         sh:path dct:publisher ;
         sh:severity sh:Violation ;
+        sh:message "En informasjonsmodell skal ha én og bare én utgiver (dct:publisher), som skal være instans av foaf:Agent."@nb ;
     ],
         :ThemePropertyLOS_Shape ,  # sjekker bruk av kontrollert vokabular
     [ # sjekker multiplisitet
@@ -808,24 +854,27 @@
         sh:maxCount 1 ;
         sh:path dct:identifier ;
         sh:severity sh:Violation ;
+        sh:message "En informasjonsmodell kan ha maks. én identifikator (maks. én verdi til dct:identifier)."@nb ;
     ], [
         sh:name "informasjonsmodellidentifikator"@nb , "information model identifier"@en ;
         sh:nodeKind sh:Literal ;
         sh:maxCount 1;
         sh:path modelldcatno:informationModelIdentifier ;
         sh:severity sh:Violation ;
-        sh:message "Informasjonsmodellidentifikatoren skal være Literal"@nb ,
-            "The information model identifier shall be Literal"@en ;
+        sh:message "Egenskap `informasjonsmodellidentifikator` (modelldcatno:informationModelIdentifier) kan ha maks. én verdi, som skal være Literal."@nb ,
+            "The information model identifier may have only one value, which must be Literal."@en ;
     ], [
         sh:name "begrep"@nb , "subject"@en ;
         sh:class skos:Concept ;
         sh:path dct:subject ;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `begrep` (dct:subject) kan bare ha verdi som er instans av skos:Concept."@nb ;
     ], [
         sh:name "inneholder modellelement"@nb , "contains model element"@en ;
         sh:class modelldcatno:ModelElement ;
         sh:path modelldcatno:containsModelElement ;
         sh:severity sh:Violation ;
+        sh:message "Egenskap ìnneholder modellelement` (modelldcatno:containsModelElement) kan bare ha verdi som er instans av modelldcatno:ModelElement."@nb ;
     ], [
         sh:name "kontaktpunkt"@nb , "contact point"@en ;
         sh:class vcard:Kind ;
@@ -838,7 +887,7 @@
         sh:path dct:license ;
         sh:pattern "^http://publications.europa.eu/resource/authority/licence/" ;
         sh:flags "i" ;
-        sh:message "Det kan være maks. én lisens som skal være i samsvar med http://publications.europa.eu/resource/authority/licence/"@nb ;
+        sh:message "Egenskap `lisens` (dct:license) kan ha maks. én verdi, som skal være en av verdiene fra http://publications.europa.eu/resource/authority/licence/."@nb ;
         sh:severity sh:Violation ;
     ],
         :SpatialProperty_Shape ,
@@ -853,26 +902,31 @@
         sh:maxCount 1 ;
         sh:path dct:modified ;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `endringsdato` (dct:modified) kan ha maks. én verdi, som skal være av datatype xsd:date eller xsd:dateTime."@nb ;
     ], [
         sh:name "er del av"@nb , "is part of"@en ;
         sh:class modelldcatno:InformationModel ;
         sh:path dct:isPartOf ;
         sh:severity sh:Violation ;
+        sh:message "En informasjonsmodell kan bare være del av (dct:isPartOf) en annen informasjonsmodell (instans av modelldcatno:InformationModel)."@nb ;
     ], [
         sh:name "er erstattet av"@nb , "is replaced by"@en ;
         sh:class modelldcatno:InformationModel ;
         sh:path dct:isReplacedBy ;
         sh:severity sh:Violation ;
+        sh:message "En informasjonsmodell kan bare være ertattet av (dct:isReplacedBy) en annen informasjonsmodell (instans av modelldcatno:InformationModel)."@nb ;
     ], [
         sh:name "erstatter"@nb , "replaces"@en ;
         sh:class modelldcatno:InformationModel ;
         sh:path dct:replaces ;
         sh:severity sh:Violation ;
+        sh:message "En informasjonsmodell kan bare erstatte (dct:replaces) en annen informasjonsmodell (instans av modelldcatno:InformationModel)."@nb ;
     ], [
         sh:name "finnes i format"@nb , "has format"@en ;
         sh:class foaf:Document ;
         sh:path dct:hasFormat ;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `finnes i format` (dct:hasFormat) kan bare ha verdi som er instans av foaf:Document."@nb ;
     ], [
         sh:name "gyldighetsperiode"@nb , "temopral"@en ;
         sh:class dct:PeriodOfTime ;
@@ -883,19 +937,21 @@
         sh:class modelldcatno:InformationModel ;
         sh:path dct:hasPart ;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `har del` (dct:hasPart) kan bare ha verdi som er instans av modelldcatno:InformationModel)."@nb ;
     ], [
         sh:name "hjemmeside"@nb , "homepage"@en ;
         sh:class foaf:Document ;
         sh:maxCount 1 ;
         sh:path foaf:homepage ;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `hjemmeside` (foaf:homepage) kan ha maks. én verdi, som skal være instans av foaf:Document."@nb ;
     ],
         :StatusProperty_Shape , # sjekker Kontrollert vokabular
     [ # sjekker multiplisitet
         sh:name "mdoellstatus"@nb , "status"@en ;
         sh:path adms:status ;
         sh:maxCount 1 ;
-        sh:message "Det kan være maks. én status."@nb ;
+        sh:message "Egenskap `status` (adms:status) kan ha maks. én verdi."@nb ;
         sh:severity sh:Violation ;
     ], [
         sh:name "produsent"@nb , "creator"@en ;
@@ -903,6 +959,7 @@
         sh:maxCount 1 ;
         sh:path dct:creator ;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `produsent` (dct:creator) kan ha maks. én verdi, som skal være instans av foaf:Agent."@nb ;
     ],
     :LanguageProperty_Shape ,
     [
@@ -911,18 +968,21 @@
         sh:maxCount 1 ;
         sh:path dct:type ;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `type` (dct:type) kan ha maks. én verdi, som skal være instans av skos:Concept."@nb ;
     ], [
         sh:name "utgivelsesdato"@nb , "issued"@en ;
         sh:node :DateOrDateTimeDataType_Shape ;
         sh:maxCount 1 ;
         sh:path dct:issued ;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `utgivelsesdato` (dct:issued) kan ha maks. én verdi, som skal være av datatype xsd:date eller xsd:dateTime."@nb ;
     ], [
         sh:name "versjon"@nb , "version"@en ;
         sh:nodeKind sh:Literal ;
         sh:maxCount 1 ;
         sh:path owl:versionInfo ;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `versjon` (owl:versionInfo) kan ha maks. én verdi."@nb ;
     ], [
         sh:name "versjonsnote"@nb , "version notes"@en ;
         sh:nodeKind sh:Literal ;
@@ -933,11 +993,13 @@
         sh:path prof:isProfileOf ;
         sh:class dct:Standard ;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `er profil av` (prof:isProfileOf) kan bare ha verdi som er instans av dct:Standard."@nb ;
     ], [ # @v.1.1
         sh:name "i samsvar med"@nb , "conforms to"@en ;
         sh:path dct:conformsTo ;
         sh:class dct:Standard ;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `i samsvar med` (dct:conformsTo) kan bare ha verdi som er instans av dct:Standard."@nb ;
     ] ;
     sh:targetClass modelldcatno:InformationModel ;
   .
@@ -951,6 +1013,7 @@
         sh:nodeKind sh:Literal ;
         sh:path dct:title ;
         sh:severity sh:Violation ;
+        sh:message "Et modellelement må ha minst én tittel (dct:title)."@nb ;
     ], [
         sh:name "identifikator"@nb , "identifier"@en ;
         sh:nodeKind sh:Literal ;
@@ -958,17 +1021,20 @@
         sh:maxCount 1 ;
         sh:path dct:identifier ;
         sh:severity sh:Violation ;
+        sh:message "Et modellelement kan ha maks. én identifikator (dct:identifier)."@nb ;
     ], [
         sh:name "begrep"@nb , "subject"@en ;
         sh:maxCount 1 ;
         sh:class skos:Concept ;
         sh:path dct:subject ;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `begrep` ( dct:subject) kan ha maks. én verdi, som skal være instans av skos:Concept."@nb ;
     ], [
         sh:name "har egenskap"@nb , "has property"@en ;
         sh:class modelldcatno:Property ;
         sh:path modelldcatno:hasProperty ;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `har egenskap` (modelldcatno:hasProperty) kan bare ha verdi som er instans av modelldcatno:Property."@nb ;
     ], [
         sh:name "beskrivelse"@nb , "description"@en ;
         sh:nodeKind sh:Literal ;
@@ -1010,18 +1076,21 @@
         sh:nodeKind sh:Literal ;
         sh:path dct:identifier ;
         sh:severity sh:Violation ;
+        sh:message "Egenskap kan ha maks. én identifikator (dct:identifier)."@nb ;
     ], [
         sh:name "begrep"@nb , "subject"@en ;
         sh:maxCount 1 ;
         sh:class skos:Concept ;
         sh:path dct:subject ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
+        sh:message "Egenskap `begrep` (dct:subject) kan ha maks. én verdi, som skal være instans av skos:Concept."@nb ;
     ], [
         sh:name "nedre multiplisitet"@nb , "min occurs"@en ;
         sh:maxCount 1 ;
         sh:datatype xsd:nonNegativeInteger ;
         sh:path xsd:minOccurs ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
+        sh:message "Egenskap `nedre multiplisitet` (xsd:minOccurs) kan ha maks. én verdi, som skal være en xsd:nonNegativeInteger."@nb ;
     ], [
         sh:name "tittel"@nb , "title"@en ;
         sh:nodeKind sh:Literal ;
@@ -1039,7 +1108,8 @@
           ]
         ) ;
         sh:path xsd:maxOccurs ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
+        sh:message "Egenskap `øvre multiplisitet` (xsd:maxOccurs) kan ha maks. én verdi, som skal være en xsd:nonNegativeInteger, `*` eller `n`."@nb ;
     ], [
         sh:name "beskrivelse"@nb , "description"@en ;
         sh:nodeKind sh:Literal ;
@@ -1049,10 +1119,11 @@
         sh:name "har type"@nb , "has type"@en ;
         sh:class modelldcatno:ModelElement ;
         sh:path modelldcatno:hasType ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
+        sh:message "Egenskap `har type` (modelldcatno:hasType) kan bare ha verdi som er instans av modelldcatno:ModelElement."@nb ;
     ], [
         sh:name "relasjonsegenskapsnavn"@nb , "relation property label"@en ;
-        sh:class modelldcatno:Property ;
+        sh:nodeKind sh:Literal ;
         sh:path modelldcatno:relationPropertyLabel ;
         sh:severity sh:Violation
     ], [
@@ -1060,7 +1131,8 @@
         sh:maxCount 1 ;
         sh:datatype xsd:positiveInteger ;
         sh:path modelldcatno:sequenceNumber ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
+        sh:message "Egenskap `sekvensnummer` (modelldcatno:sequenceNumber) kan ha maks. én verdi, som skal være en xsd:positiveInteger."@nb ;
     ], [
         sh:name "tilhører modul"@nb , "belongs to module"@en ;
         # @v.1.1 sh:maxCount 1 ;
@@ -1072,13 +1144,15 @@
         sh:maxCount 1 ;
         sh:class modelldcatno:Property ;
         sh:path modelldcatno:formsSymmetryWith ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
+        sh:message "Egenskapen `utgjør symmetrisk relasjon med` (modelldcatno:formsSymmetryWith) kan ha maks. én verdi, som skal være instans av modelldcatno:Property."@nb ;
     ], [ # @v.1.1
         sh:name "nagiverbar"@nb , "navigable"@en ;
         sh:maxCount 1;
         sh:path modelldcatno:navigable ;
         sh:datatype xsd:boolean ;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `navigverbar` (modelldcatno:navigable) kan ha maks. én verdi, som skal være xsd:boolean."@nb ;
     ] ;
     sh:targetClass modelldcatno:Property,
         modelldcatno:Absraction , modelldcatno:Association , modelldcatno:Attribute ,
@@ -1095,10 +1169,12 @@
     sh:property [
         sh:name "har leverandør"@nb , "has supplier"@en ;
         sh:path modelldcatno:hasSupplier ;
-        sh:class modelldcatno:ModelElement ;
+        sh:or ( [sh:class modelldcatno:ModelElement]
+                [sh:class modelldcatno:Property ] ) ; # v.1.1
         sh:subClassOf modelldcatno:hasType ;
         sh:maxCount 1;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `har leverandør` (modelldcatno:hasSupplier) kan bare ha verdi som er instans av modelldcatno:ModelElement eller modelldcatno:Property."@nb ;
     ] ;
     sh:targetClass modelldcatno:Realization ;
   .
@@ -1114,6 +1190,7 @@
         sh:subClassOf modelldcatno:hasType ;
         sh:maxCount 1;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `modelldcatno:hasObjectType` (modelldcatno:hasObjectType) kan bare ha verdi som er instans av modelldcatno:ObjectType."@nb ;
     ] ;
     sh:targetClass modelldcatno:Role ;
   .
@@ -1128,55 +1205,79 @@
         sh:datatype xsd:anyURI ;
         sh:path modelldcatno:typeDefinitionReference ;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `typedefinisjon` (modelldcatno:typeDefinitionReference) kan ha maks. én verdi."@nb ;
     ], [
         sh:name "antall desimaler"@nb , "fraction digits"@en ;
         sh:maxCount 1 ;
         sh:datatype xsd:nonNegativeInteger ;
         sh:path xsd:fractionDigits ;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `antall desimaler` (xsd:fractionDigits) kan ha maks. én verdi, som skal være xsd:nonNegativeInteger."@nb ;
     ], [
         sh:name "lengde"@nb , "length"@en ;
         sh:maxCount 1 ;
         sh:datatype xsd:nonNegativeInteger ;
         sh:path xsd:length ;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `lengde´ (xsd:length) kan ha maks. én verdi, som skal være xsd:nonNegativeInteger."@nb ;
     ], [
-        sh:name "maks inklusiv"@nb , "max inclusive"@en ;
+        sh:name "maksimum inklusivt"@nb , "max inclusive"@en ;
         sh:maxCount 1 ;
         sh:datatype xsd:decimal ;
         sh:path xsd:maxInclusive ;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `maksimum inklusivt` (xsd:maxInclusive) kan ha maks. én verdi, som skal være xsd:decimal."@nb ;
     ], [
         sh:name "maks lengde"@nb , "max length"@en ;
         sh:maxCount 1 ;
         sh:datatype xsd:nonNegativeInteger ;
         sh:path xsd:maxLength ;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `maks lengde` (xsd:maxLength) kan ha maks. én verdi, som skal være xsd:nonNegativeInteger."@nb ;
     ], [
-        sh:name "minimum inklusiv"@nb , "min inclusive"@en ;
+        sh:name "minimum inklusivt"@nb , "min inclusive"@en ;
         sh:maxCount 1 ;
         sh:datatype xsd:decimal ;
         sh:path xsd:minInclusive ;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `minimum inklusivt` (xsd:minInclusive) kan ha maks. én verdi, som skal være xsd:decimal."@nb ;
     ], [
         sh:name "minimum lengde"@nb , "min length"@en ;
         sh:maxCount 1 ;
         sh:datatype xsd:nonNegativeInteger ;
         sh:path xsd:minLength ;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `minimum lengde` (xsd:minLength) kan ha maks. én verdi, som skal være xsd:nonNegativeInteger."@nb ;
     ], [
         sh:name "mønster"@nb , "pattern"@en ;
         sh:maxCount 1 ;
         sh:datatype xsd:string ;
         sh:path xsd:pattern ;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `mønster` (xsd:pattern) kan ha maks. én verdi, som skal være xsd:string."@nb ;
     ], [
         sh:name "totalt antall siffer"@nb , "total digits"@en ;
         sh:maxCount 1 ;
         sh:datatype xsd:nonNegativeInteger ;
         sh:path xsd:totalDigits ;
         sh:severity sh:Violation ;
-    ] ;
+        sh:message "Egenskap `totalt antall siffer` (xsd:totalDigits) kan ha maks. én verdi, som skal være xsd:nonNegativeInteger."@nb ;
+    ], [ # v.1.1
+        sh:name "maksimum ikke-inklusivt"@nb , "exclusive maximum"@en ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:decimal ;
+        sh:path xsd:maxExclusive ;
+        sh:severity sh:Violation ;
+        sh:message "Egenskap `maksimum ikke-inklusivt` (xsd:maxExclusive) kan ha maks. én verdi, som skal være xsd:decimal."@nb ;
+    ], [ # v.1.1
+        sh:name "minimum ikke-inklusivt"@nb , "exclusive minimum"@en ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:decimal ;
+        sh:path xsd:minExclusive ;
+        sh:severity sh:Violation ;
+        sh:message "Egenskap `minimum ikke-inklusivt` (xsd:minExclusive) kan ha maks. én verdi, som skal være xsd:decimal."@nb ;
+    ]
+     ;
     sh:targetClass modelldcatno:SimpleType ;
   .
 
@@ -1191,6 +1292,7 @@
         sh:subClassOf modelldcatno:hasType ;
         sh:maxCount 1;
         sh:severity sh:Violation ;
+        sh:message "Egenskap `har generelt konsept` (modelldcatno:hasGeneralConcept) kan ha maks. én verdi, som skal være instans av modelldcatno:ModelElement."@nb ;
     ] ;
     sh:targetClass modelldcatno:Specialization ;
   .
@@ -1203,13 +1305,15 @@
         sh:minCount 1;
         sh:nodeKind sh:Literal ;
         sh:path dct:title ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
+        sh:message "En standard skal ha minst én tittel (dct:title)."@nb ;
     ], [
         sh:name "har versjonsnummer"@nb , "has version number"@en ;
         sh:maxCount 1 ;
         sh:nodeKind sh:Literal ;
         sh:path owl:versionInfo ;
-        sh:severity sh:Violation
+        sh:severity sh:Violation ;
+        sh:message "Egenskap `har versjonsnummer` (owl:versionInfo) kan ha maks. én verdi."@nb ;
     ], [
         sh:name "har referanse"@nb , "has reference"@en ;
         sh:nodeKind sh:BlankNodeOrIRI;
