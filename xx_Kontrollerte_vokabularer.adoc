@@ -14,9 +14,13 @@ Under følger en oversikt over kontrollerte vokabular som skal brukes (= obligat
 |===
 |URI til egenskapen|dct:format
 |Brukt i klasse|Dokument (foaf:Document)
-|Navn på vokabularet|https://data.europa.eu/euodp/en/data/dataset/file-type[File Type Named Authority List]
-|URI til vokabularet|http://publications.europa.eu/resource/authority/file-type
+|Navn på vokabularet|https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/file-type[File type]
+|URI til vokabularet|http://publications.europa.eu/resource/authority/file-type/
 |Kravsnivå|Obligatorisk
+|Eksempel a|
+------
+<> dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> .
+------
 |===
 
 === For egenskapen dct:language [[Skal-brukes-for-language]]
@@ -25,9 +29,13 @@ Under følger en oversikt over kontrollerte vokabular som skal brukes (= obligat
 |===
 |URI til egenskapen|dct:language
 |Brukt i klasse|Modellkatalog (dcat:Catalog); Informasjonsmodell (modelldcatno:InformationModel); Dokument (foaf:Document)
-|Navn på vokabularet|https://data.europa.eu/euodp/en/data/dataset/language[Languages Named Authority List]
-|URI til vokabularet|http://publications.europa.eu/resource/authority/language
+|Navn på vokabularet|https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/language[Language]
+|URI til vokabularet||URI til vokabularet|http://publications.europa.eu/resource/authority/file-type/
 |Kravsnivå|Obligatorisk
+|Eksempel a|
+------
+<> dct:language <http://publications.europa.eu/resource/authority/language/NOB> . # Norsk bokmål
+------
 |===
 
 === For egenskapen dct:license [[Skal-brukes-for-license]]
@@ -36,10 +44,14 @@ Under følger en oversikt over kontrollerte vokabular som skal brukes (= obligat
 |===
 |URI til egenskapen|dct:license
 |Brukt i klasse|Informasjonsmodell (modelldcatno:InformationModel); Modellkatalog (dcat:Catalog)
-|Navn på vokabularet|https://data.europa.eu/euodp/en/data/dataset/licence[Licences Named Authority List]
-|URI til vokabularet|http://publications.europa.eu/resource/authority/licence
+|Navn på vokabularet|https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence[Licence]
+|URI til vokabularet|http://publications.europa.eu/resource/authority/licence/
 |Kommentar|Kravet fra EU er forklart slik: "This vocabulary must be used in case the licence […​] is internationally recognised and included in the EU Publications Office NAL."
 |Kravsnivå|Obligatorisk
+|Eksempel a|
+------
+<> dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> .
+------
 |===
 
 === For egenskapen dct:spatial [[Skal-brukes-for-spatial]]
@@ -48,15 +60,22 @@ Under følger en oversikt over kontrollerte vokabular som skal brukes (= obligat
 |===
 |URI til egenskapen|dct:spatial
 |Brukt i klasse|Informasjonsmodell (modelldcatno:InformationModel); Modellkatalog (dcat:Catalog)
-|Navn på vokabularet| https://data.europa.eu/euodp/en/data/dataset/continent[Continents Named Authority List]; +
-https://data.europa.eu/euodp/en/data/dataset/country[Countries Named Authority List]; +
-https://data.europa.eu/euodp/en/data/dataset/place[Places Named Authority List]; +
+|Navn på vokabularet|
+https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/continent[Continent]; +
+https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/country[Country]; +
+https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/place[Place]; +
 http://sws.geonames.org/[GeoNames]
-|URI til vokabularet| http://publications.europa.eu/resource/authority/continent; +
-http://publications.europa.eu/resource/authority/country; +
-http://publications.europa.eu/resource/authority/place; +
+|URI til vokabularet|
+http://publications.europa.eu/resource/authority/continent/; +
+http://publications.europa.eu/resource/authority/country/; +
+http://publications.europa.eu/resource/authority/place/; +
 http://sws.geonames.org/
 |Kravsnivå|Obligatorisk
+|Eksempel a|
+------
+<> dct:spatial <http://publications.europa.eu/resource/authority/country/NOR> . # Norge
+------
+|
 |===
 
 === For egenskapen adms:status [[Skal-brukes-for-status]]
@@ -79,6 +98,11 @@ http://sws.geonames.org/
 |Navn på vokabularet|http://purl.org/adms/publishertype/[ADMS publisher type vocabulary (i RDF)]. Listen over termer i ADMS publisher type er inkludert i ADMS-spesifikasjonen, https://joinup.ec.europa.eu/solution/asset-description-metadata-schema-adms[Asset Description Metadata Schema (ADMS)]
 |URI til vokabularet|http://purl.org/adms/publishertype/[http://purl.org/adms/publishertype/]
 |Kravsnivå|Obligatorisk
+| Eksempel a|
+------
+<> a foaf:Agent ;
+    dct:type <http://purl.org/adms/publishertype/NationalAuthority> .
+------
 |===
 
 [cols="30s,70d"]
@@ -91,6 +115,25 @@ http://sws.geonames.org/
 |===
 
 == Kontrollerte vokabularer som bør og kan brukes [[Kontrollerte-vobakularer-som-bør-brukes]]
+
+=== For egenskapen dct:spatial [[Bør-brukes-for-spatial]]
+
+[cols="30s,70d"]
+|===
+|URI til egenskapen|dct:spatial
+|Brukt i klasse|Informasjonsmodell (modelldcatno:InformationModel); Modellkatalog (dcat:Catalog)
+|Navn på vokabularet|https://data.geonorge.no/administrativeEnheter/nasjon/doc/173163[Administrative enheter]
+|URI til vokabularet|Fylke https://data.geonorge.no/administrativeEnheter/fylke/id/; +
+Kommune https://data.geonorge.no/administrativeEnheter/kommune/id/
+|Kravsnivå| Anbefalt
+|Kommentar | https://data.geonorge.no/administrativeEnheter/nasjon/doc/173163[Administrative enheter] bør brukes i tillegg til det som er nevnt under <<Skal-brukes-for-spatial, Kontrollerte vokabularer som skal brukes>>.
+|Eksempel a|
+--------
+<> dct:spatial <https://data.geonorge.no/administrativeEnheter/fylke/id/173159> . # Oslo som fylke
+
+<> dct:spatial <https://data.geonorge.no/administrativeEnheter/kommune/id/173018> . # Oslo som kommune
+--------
+|===
 
 === For egenskapen dcat:theme [[Bør-brukes-for-theme]]
 

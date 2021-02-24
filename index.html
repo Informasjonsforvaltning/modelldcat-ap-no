@@ -703,12 +703,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_valgfrie_egenskaper_for_klassen_enkeltype">Valgfrie egenskaper for klassen <em>Enkeltype</em></a>
 <ul class="sectlevel5">
 <li><a href="#Enkeltype-antallDesimaler">Enkeltype: antall desimaler (xsd:fractionDigits)</a></li>
-<li><a href="#Enkeltype-eksklusivtMaksimum">Enkeltype: eksklusivt maksimum (xsd:maxExclusive)</a></li>
-<li><a href="#Enkeltype-eksklusivtMinimum">Enkeltype: eksklusivt minimum (xsd:minExclusive)</a></li>
 <li><a href="#Enkeltype-lengde">Enkeltype: lengde (xsd:length)</a></li>
-<li><a href="#Enkeltype-maksInklusiv">Enkeltype: maks inklusiv (xsd:maxInclusive)</a></li>
+<li><a href="#Enkeltype-maksimumIkkeInklusivt">Enkeltype: maksimum ikke-inklusivt (xsd:maxExclusive)</a></li>
+<li><a href="#Enkeltype-maksimumInklusivt">Enkeltype: maksimum inklusivt (xsd:maxInclusive)</a></li>
 <li><a href="#Enkeltype-maksLengde">Enkeltype: maks lengde (xsd:maxLength)</a></li>
-<li><a href="#Enkeltype-minimumInklusiv">Enkeltype: minimum inklusiv (xsd:minInclusive)</a></li>
+<li><a href="#Enkeltype-minimumIkkeInklusivt">Enkeltype: minimum ikke-inklusivt (xsd:minExclusive)</a></li>
+<li><a href="#Enkeltype-minimumInklusivt">Enkeltype: minimum inklusivt (xsd:minInclusive)</a></li>
 <li><a href="#Enkeltype-minimumLengde">Enkeltype: minimum lengde (xsd:minLength)</a></li>
 <li><a href="#Enkeltype-mønster">Enkeltype: mønster (xsd:pattern)</a></li>
 <li><a href="#Enkeltype-totaltAntallSiffer">Enkeltype: totalt antall siffer (xsd:totalDigits)</a></li>
@@ -935,6 +935,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#Kontrollerte-vobakularer-som-bør-brukes">Kontrollerte vokabularer som bør og kan brukes</a>
 <ul class="sectlevel3">
+<li><a href="#Bør-brukes-for-spatial">For egenskapen dct:spatial</a></li>
 <li><a href="#Bør-brukes-for-theme">For egenskapen dcat:theme</a></li>
 <li><a href="#Bør-brukes-for-themeTaxonomy">For egenskapen dcat:themeTaxonomy</a></li>
 </ul>
@@ -986,7 +987,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <p><strong>Status</strong>: Gjeldende<br>
 <strong>Versjon</strong>: 1.1 (se <a href="#Endringslogg">endringsloggen</a>)<br>
 <strong>Publisert</strong>: 2020-12-18 <br>
-<strong>Oppdatert</strong>: 2021-02-22<br>
+<strong>Oppdatert</strong>: 2021-02-24<br>
 <strong>Gjeldende versjon</strong>: <a href="https://data.norge.no/specification/modelldcat-ap-no/" class="bare">https://data.norge.no/specification/modelldcat-ap-no/</a><br>
 <strong>Redaktørens utkast</strong>: <a href="https://informasjonsforvaltning.github.io/modelldcat-ap-no/" class="bare">https://informasjonsforvaltning.github.io/modelldcat-ap-no/</a></p>
 </div>
@@ -4115,7 +4116,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Property</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Literal</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
@@ -4320,76 +4321,6 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </table>
 </div>
 <div class="sect5">
-<h6 id="Enkeltype-eksklusivtMaksimum"><a class="link" href="#Enkeltype-eksklusivtMaksimum">Enkeltype: eksklusivt maksimum (xsd:maxExclusive)</a></h6>
-<table class="tableblock frame-all grid-all stripes-even stretch">
-<colgroup>
-<col style="width: 30%;">
-<col style="width: 70%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">maximum exclusive</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:maxExclusive</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:decimal</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Spesifiserer den øvre grensene for en numerisk verdi (verdien må være mindre enn denne verdien)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect5">
-<h6 id="Enkeltype-eksklusivtMinimum"><a class="link" href="#Enkeltype-eksklusivtMinimum">Enkeltype: eksklusivt minimum (xsd:minExclusive)</a></h6>
-<table class="tableblock frame-all grid-all stripes-even stretch">
-<colgroup>
-<col style="width: 30%;">
-<col style="width: 70%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">exclusive minimum</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:minExclusive</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:decimal</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Spesifiserer den nedre grensene for en numerisk verdi (verdien må være større enn denne verdien).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect5">
 <h6 id="Enkeltype-lengde"><a class="link" href="#Enkeltype-lengde">Enkeltype: lengde (xsd:length)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
@@ -4425,7 +4356,42 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </table>
 </div>
 <div class="sect5">
-<h6 id="Enkeltype-maksInklusiv"><a class="link" href="#Enkeltype-maksInklusiv">Enkeltype: maks inklusiv (xsd:maxInclusive)</a></h6>
+<h6 id="Enkeltype-maksimumIkkeInklusivt"><a class="link" href="#Enkeltype-maksimumIkkeInklusivt">Enkeltype: maksimum ikke-inklusivt (xsd:maxExclusive)</a></h6>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">maximum exclusive</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:maxExclusive</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:decimal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Spesifiserer den øvre grensene for en numerisk verdi (verdien må være mindre enn denne verdien)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="Enkeltype-maksimumInklusivt"><a class="link" href="#Enkeltype-maksimumInklusivt">Enkeltype: maksimum inklusivt (xsd:maxInclusive)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -4495,7 +4461,42 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </table>
 </div>
 <div class="sect5">
-<h6 id="Enkeltype-minimumInklusiv"><a class="link" href="#Enkeltype-minimumInklusiv">Enkeltype: minimum inklusiv (xsd:minInclusive)</a></h6>
+<h6 id="Enkeltype-minimumIkkeInklusivt"><a class="link" href="#Enkeltype-minimumIkkeInklusivt">Enkeltype: minimum ikke-inklusivt (xsd:minExclusive)</a></h6>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">exclusive minimum</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:minExclusive</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:decimal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Spesifiserer den nedre grensene for en numerisk verdi (verdien må være større enn denne verdien).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="Enkeltype-minimumInklusivt"><a class="link" href="#Enkeltype-minimumInklusivt">Enkeltype: minimum inklusivt (xsd:minInclusive)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -7139,15 +7140,23 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Navn på vokabularet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://data.europa.eu/euodp/en/data/dataset/file-type">File Type Named Authority List</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/file-type">File type</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI til vokabularet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/file-type" class="bare">http://publications.europa.eu/resource/authority/file-type</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/file-type/" class="bare">http://publications.europa.eu/resource/authority/file-type/</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre>&lt;&gt; dct:format &lt;http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE&gt; .</pre>
+</div>
+</div></div></td>
 </tr>
 </tbody>
 </table>
@@ -7170,15 +7179,27 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Navn på vokabularet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://data.europa.eu/euodp/en/data/dataset/language">Languages Named Authority List</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/language">Language</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI til vokabularet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/language" class="bare">http://publications.europa.eu/resource/authority/language</a></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI til vokabularet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/file-type/" class="bare">http://publications.europa.eu/resource/authority/file-type/</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre>&lt;&gt; dct:language &lt;http://publications.europa.eu/resource/authority/language/NOB&gt; . # Norsk bokmål</pre>
+</div>
+</div></div></td>
 </tr>
 </tbody>
 </table>
@@ -7201,11 +7222,11 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Navn på vokabularet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://data.europa.eu/euodp/en/data/dataset/licence">Licences Named Authority List</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence">Licence</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI til vokabularet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/licence" class="bare">http://publications.europa.eu/resource/authority/licence</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/licence/" class="bare">http://publications.europa.eu/resource/authority/licence/</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
@@ -7214,6 +7235,14 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre>&lt;&gt; dct:license &lt;http://publications.europa.eu/resource/authority/licence/CC_BY_4_0&gt; .</pre>
+</div>
+</div></div></td>
 </tr>
 </tbody>
 </table>
@@ -7236,21 +7265,29 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Navn på vokabularet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://data.europa.eu/euodp/en/data/dataset/continent">Continents Named Authority List</a>;<br>
-<a href="https://data.europa.eu/euodp/en/data/dataset/country">Countries Named Authority List</a>;<br>
-<a href="https://data.europa.eu/euodp/en/data/dataset/place">Places Named Authority List</a>;<br>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/continent">Continent</a>;<br>
+<a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/country">Country</a>;<br>
+<a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/place">Place</a>;<br>
 <a href="http://sws.geonames.org/">GeoNames</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI til vokabularet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/continent" class="bare">http://publications.europa.eu/resource/authority/continent</a>;<br>
-<a href="http://publications.europa.eu/resource/authority/country" class="bare">http://publications.europa.eu/resource/authority/country</a>;<br>
-<a href="http://publications.europa.eu/resource/authority/place" class="bare">http://publications.europa.eu/resource/authority/place</a>;<br>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/continent/" class="bare">http://publications.europa.eu/resource/authority/continent/</a>;<br>
+<a href="http://publications.europa.eu/resource/authority/country/" class="bare">http://publications.europa.eu/resource/authority/country/</a>;<br>
+<a href="http://publications.europa.eu/resource/authority/place/" class="bare">http://publications.europa.eu/resource/authority/place/</a>;<br>
 <a href="http://sws.geonames.org/" class="bare">http://sws.geonames.org/</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre>&lt;&gt; dct:spatial &lt;http://publications.europa.eu/resource/authority/country/NOR&gt; . # Norge</pre>
+</div>
+</div></div></td>
 </tr>
 </tbody>
 </table>
@@ -7314,6 +7351,15 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre>&lt;&gt; a foaf:Agent ;
+    dct:type &lt;http://purl.org/adms/publishertype/NationalAuthority&gt; .</pre>
+</div>
+</div></div></td>
+</tr>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stripes-even stretch">
@@ -7348,6 +7394,52 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 </div>
 <div class="sect2">
 <h3 id="Kontrollerte-vobakularer-som-bør-brukes"><a class="link" href="#Kontrollerte-vobakularer-som-bør-brukes">Kontrollerte vokabularer som bør og kan brukes</a></h3>
+<div class="sect3">
+<h4 id="Bør-brukes-for-spatial"><a class="link" href="#Bør-brukes-for-spatial">For egenskapen dct:spatial</a></h4>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI til egenskapen</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:spatial</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Brukt i klasse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell (modelldcatno:InformationModel); Modellkatalog (dcat:Catalog)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Navn på vokabularet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://data.geonorge.no/administrativeEnheter/nasjon/doc/173163">Administrative enheter</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI til vokabularet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fylke <a href="https://data.geonorge.no/administrativeEnheter/fylke/id/" class="bare">https://data.geonorge.no/administrativeEnheter/fylke/id/</a>;<br>
+Kommune <a href="https://data.geonorge.no/administrativeEnheter/kommune/id/" class="bare">https://data.geonorge.no/administrativeEnheter/kommune/id/</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://data.geonorge.no/administrativeEnheter/nasjon/doc/173163">Administrative enheter</a> bør brukes i tillegg til det som er nevnt under <a href="#Skal-brukes-for-spatial">Kontrollerte vokabularer som skal brukes</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre>&lt;&gt; dct:spatial &lt;https://data.geonorge.no/administrativeEnheter/fylke/id/173159&gt; . # Oslo som fylke
+
+&lt;&gt; dct:spatial &lt;https://data.geonorge.no/administrativeEnheter/kommune/id/173018&gt; . # Oslo som kommune</pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="sect3">
 <h4 id="Bør-brukes-for-theme"><a class="link" href="#Bør-brukes-for-theme">For egenskapen dcat:theme</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
@@ -7466,6 +7558,12 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <td class="tableblock halign-left valign-top"><p class="tableblock">For å gi en bedre beskrivelse av retninger på relasjoner, som f.eks. roller, komposisjoner og samlinger.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskap : relasjonsegenskapsnavn</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:relationPropertyLabel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Range endret fra modelldcatno:Property til rdfs:Literal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Skrivefeil i forrige versjon.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Egenskap: tilhører modul</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:belongsToModule</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 0..1 til 0..n</p></td>
@@ -7478,16 +7576,28 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <td class="tableblock halign-left valign-top"><p class="tableblock">For å kunne ha "*" eller "n" som øvre multiplisitet.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Enkeltype: eksklusivt maximum</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enkeltype: maksimum ikke-inklusivt</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">xsd:maxExclusive</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ny egenskap</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Uteglemt i tidligere versjon.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Enkeltype: eksklusivt minimum</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enkeltype: maksimum inklusivt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:minInclusive</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Norsk navn endret fra "maks inklusiv" til "maksimum inklusivt"</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bedre dekkende navn.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enkeltype: minimum ikke-inklusivt</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">xsd:minExclusive</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ny egenskap</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Uteglemt i tidligere versjon.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enkeltype: minimum inklusivt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:minInclusive</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Norsk navn endret fra "minimum inklusiv" til "minimum inklusivt"</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bedre dekkende navn.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Eller</p></td>
@@ -7657,6 +7767,15 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <td class="tableblock halign-left valign-top"><p class="tableblock">Hele klassen er ny</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Brukes som range for dct:conformsTo og prof:isProfileOf, og som referanse fra f.eks. et dcat:Dataset til en informasjonsmodell som beskriver datasettet.</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Krav til bruk av kontrollerte vokabularer</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For egenskap dct:spatial</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:spatial</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Administrative enheter" fra Kartverket anbefalt brukt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fordi EU-vokalubarer som skal brukes, ikke inneholder norske administrative enheter som fylker og kommuner.</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -7665,7 +7784,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2021-02-23 11:00:10 UTC
+Sist oppdatert 2021-02-24 15:05:41 UTC
 </div>
 </div>
 </body>
