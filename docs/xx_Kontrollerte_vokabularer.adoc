@@ -92,6 +92,25 @@ http://sws.geonames.org/
 
 == Kontrollerte vokabularer som bør og kan brukes [[Kontrollerte-vobakularer-som-bør-brukes]]
 
+=== For egenskapen dct:spatial [[Bør-brukes-for-spatial]]
+
+[cols="30s,70d"]
+|===
+|URI til egenskapen|dct:spatial
+|Brukt i klasse|Informasjonsmodell (modelldcatno:InformationModel); Modellkatalog (dcat:Catalog)
+|Navn på vokabularet|https://data.geonorge.no/administrativeEnheter/nasjon/doc/173163[Administrative enheter]
+|URI til vokabularet|Fylke https://data.geonorge.no/administrativeEnheter/fylke/id/; +
+Kommune https://data.geonorge.no/administrativeEnheter/kommune/id/
+|Kravsnivå| Anbefalt
+|Kommentar | https://data.geonorge.no/administrativeEnheter/nasjon/doc/173163[Administrative enheter] bør brukes i tillegg til det som er nevnt under <<Skal-brukes-for-spatial, Kontrollerte vokabularer som skal brukes>>.
+|Eksempel a|
+--------
+<> dct:spatial <https://data.geonorge.no/administrativeEnheter/fylke/id/173159> . # Oslo som fylke
+
+<> dct:spatial <https://data.geonorge.no/administrativeEnheter/kommune/id/173018> . # Oslo som kommune
+--------
+|===
+
 === For egenskapen dcat:theme [[Bør-brukes-for-theme]]
 
 [cols="30s,70d"]

@@ -119,7 +119,7 @@
         sh:path dcat:centroid ;
         sh:severity sh:Violation ;
         sh:message "Location may have max. one centroid (dcat:centroid)."@en ,
-            "Lokasjon kan ha makx. ett geografisk midtpunnt (dcat:centroid)."@nb ;
+            "Lokasjon kan ha maks. ett geografisk midtpunnt (dcat:centroid)."@nb ;
     ], [
         sh:name "geometri"@nb , "geometry"@en ;
         sh:maxCount 1 ;
@@ -127,7 +127,7 @@
         sh:path locn:geometry ;
         sh:severity sh:Violation ;
         sh:message "Location may have max. one geometry (locn:geometry)."@en ,
-            "Lokasjon kan ha makx. en geometri (locn:geometry)."@nb ;
+            "Lokasjon kan ha maks. en geometri (locn:geometry)."@nb ;
     ] ;
     sh:targetClass dct:Location .
 
@@ -238,7 +238,7 @@
     sh:path dct:type ;
     sh:pattern "^http://purl.org/adms/publishertype/" ;
     sh:flags "i" ;
-    sh:message "AKtørtype (dct:type) skal være en av verdiene fra http://purl.org/adms/publishertype/."@nb ;
+    sh:message "Aktørtype (dct:type) skal være en av verdiene fra http://purl.org/adms/publishertype/."@nb ;
     sh:severity sh:Violation ;
   .
 
@@ -446,7 +446,7 @@
         sh:path modelldcatno:belongsToModule;
         sh:nodeKind sh:IRIOrLiteral ;
         sh:severity sh:Violation ;
-        sh:message "EGenskap `tilhører modul` (modelldcatno:belongsToModule skal være enten Literal eller IRI."@nb ;
+        sh:message "Egenskap `tilhører modul` (modelldcatno:belongsToModule skal være enten Literal eller IRI."@nb ;
     ] ;
     sh:or ( # minst en av følgende to egenskaper må være med
       [ sh:property [
@@ -655,7 +655,7 @@
         sh:maxCount 1 ;
         sh:path dct:identifier ;
         sh:severity sh:Violation ;
-        sh:message "Et kodeelement kan ha maks. én identifier (dct:identifier)."@nb ;
+        sh:message "Et kodeelement kan ha maks. én identifikator (dct:identifier)."@nb ;
     ], [
         sh:name "kode"@nb , "code"@en ;
         sh:minCount 1; # @v.1.1 #
@@ -861,14 +861,14 @@
         sh:maxCount 1;
         sh:path modelldcatno:informationModelIdentifier ;
         sh:severity sh:Violation ;
-        sh:message "EGenskap `informasjonsmodellidentifikator` (modelldcatno:informationModelIdentifier) kan ha maks. én verdi, som skal være Literal."@nb ,
+        sh:message "Egenskap `informasjonsmodellidentifikator` (modelldcatno:informationModelIdentifier) kan ha maks. én verdi, som skal være Literal."@nb ,
             "The information model identifier may have only one value, which must be Literal."@en ;
     ], [
         sh:name "begrep"@nb , "subject"@en ;
         sh:class skos:Concept ;
         sh:path dct:subject ;
         sh:severity sh:Violation ;
-        sh:message "EGenskap `begrep` (dct:subject) kan bare ha verdi som er instans av skos:Concept."@nb ;
+        sh:message "Egenskap `begrep` (dct:subject) kan bare ha verdi som er instans av skos:Concept."@nb ;
     ], [
         sh:name "inneholder modellelement"@nb , "contains model element"@en ;
         sh:class modelldcatno:ModelElement ;
