@@ -655,7 +655,7 @@
         sh:maxCount 1 ;
         sh:path dct:identifier ;
         sh:severity sh:Violation ;
-        sh:message "Et kodeelement kan ha maks. én identifier (dct:identifier)."@nb ;
+        sh:message "Et kodeelement kan ha maks. én identifikator (dct:identifier)."@nb ;
     ], [
         sh:name "kode"@nb , "code"@en ;
         sh:minCount 1; # @v.1.1 #
@@ -861,14 +861,14 @@
         sh:maxCount 1;
         sh:path modelldcatno:informationModelIdentifier ;
         sh:severity sh:Violation ;
-        sh:message "EGenskap `informasjonsmodellidentifikator` (modelldcatno:informationModelIdentifier) kan ha maks. én verdi, som skal være Literal."@nb ,
+        sh:message "Egenskap `informasjonsmodellidentifikator` (modelldcatno:informationModelIdentifier) kan ha maks. én verdi, som skal være Literal."@nb ,
             "The information model identifier may have only one value, which must be Literal."@en ;
     ], [
         sh:name "begrep"@nb , "subject"@en ;
         sh:class skos:Concept ;
         sh:path dct:subject ;
         sh:severity sh:Violation ;
-        sh:message "EGenskap `begrep` (dct:subject) kan bare ha verdi som er instans av skos:Concept."@nb ;
+        sh:message "Egenskap `begrep` (dct:subject) kan bare ha verdi som er instans av skos:Concept."@nb ;
     ], [
         sh:name "inneholder modellelement"@nb , "contains model element"@en ;
         sh:class modelldcatno:ModelElement ;
