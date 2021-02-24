@@ -446,7 +446,7 @@
         sh:path modelldcatno:belongsToModule;
         sh:nodeKind sh:IRIOrLiteral ;
         sh:severity sh:Violation ;
-        sh:message "EGenskap `tilhører modul` (modelldcatno:belongsToModule skal være enten Literal eller IRI."@nb ;
+        sh:message "Egenskap `tilhører modul` (modelldcatno:belongsToModule skal være enten Literal eller IRI."@nb ;
     ] ;
     sh:or ( # minst en av følgende to egenskaper må være med
       [ sh:property [
