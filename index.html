@@ -703,12 +703,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_valgfrie_egenskaper_for_klassen_enkeltype">Valgfrie egenskaper for klassen <em>Enkeltype</em></a>
 <ul class="sectlevel5">
 <li><a href="#Enkeltype-antallDesimaler">Enkeltype: antall desimaler (xsd:fractionDigits)</a></li>
-<li><a href="#Enkeltype-eksklusivtMaksimum">Enkeltype: eksklusivt maksimum (xsd:maxExclusive)</a></li>
-<li><a href="#Enkeltype-eksklusivtMinimum">Enkeltype: eksklusivt minimum (xsd:minExclusive)</a></li>
 <li><a href="#Enkeltype-lengde">Enkeltype: lengde (xsd:length)</a></li>
-<li><a href="#Enkeltype-maksInklusiv">Enkeltype: maks inklusiv (xsd:maxInclusive)</a></li>
+<li><a href="#Enkeltype-maksimumIkkeInklusivt">Enkeltype: maksimum ikke-inklusivt (xsd:maxExclusive)</a></li>
+<li><a href="#Enkeltype-maksimumInklusivt">Enkeltype: maksimum inklusivt (xsd:maxInclusive)</a></li>
 <li><a href="#Enkeltype-maksLengde">Enkeltype: maks lengde (xsd:maxLength)</a></li>
-<li><a href="#Enkeltype-minimumInklusiv">Enkeltype: minimum inklusiv (xsd:minInclusive)</a></li>
+<li><a href="#Enkeltype-minimumIkkeInklusivt">Enkeltype: minimum ikke-inklusivt (xsd:minExclusive)</a></li>
+<li><a href="#Enkeltype-minimumInklusivt">Enkeltype: minimum inklusivt (xsd:minInclusive)</a></li>
 <li><a href="#Enkeltype-minimumLengde">Enkeltype: minimum lengde (xsd:minLength)</a></li>
 <li><a href="#Enkeltype-mønster">Enkeltype: mønster (xsd:pattern)</a></li>
 <li><a href="#Enkeltype-totaltAntallSiffer">Enkeltype: totalt antall siffer (xsd:totalDigits)</a></li>
@@ -4115,7 +4115,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Property</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Literal</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
@@ -4320,76 +4320,6 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </table>
 </div>
 <div class="sect5">
-<h6 id="Enkeltype-eksklusivtMaksimum"><a class="link" href="#Enkeltype-eksklusivtMaksimum">Enkeltype: eksklusivt maksimum (xsd:maxExclusive)</a></h6>
-<table class="tableblock frame-all grid-all stripes-even stretch">
-<colgroup>
-<col style="width: 30%;">
-<col style="width: 70%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">maximum exclusive</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:maxExclusive</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:decimal</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Spesifiserer den øvre grensene for en numerisk verdi (verdien må være mindre enn denne verdien)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect5">
-<h6 id="Enkeltype-eksklusivtMinimum"><a class="link" href="#Enkeltype-eksklusivtMinimum">Enkeltype: eksklusivt minimum (xsd:minExclusive)</a></h6>
-<table class="tableblock frame-all grid-all stripes-even stretch">
-<colgroup>
-<col style="width: 30%;">
-<col style="width: 70%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">exclusive minimum</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:minExclusive</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:decimal</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Spesifiserer den nedre grensene for en numerisk verdi (verdien må være større enn denne verdien).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect5">
 <h6 id="Enkeltype-lengde"><a class="link" href="#Enkeltype-lengde">Enkeltype: lengde (xsd:length)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
@@ -4425,7 +4355,42 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </table>
 </div>
 <div class="sect5">
-<h6 id="Enkeltype-maksInklusiv"><a class="link" href="#Enkeltype-maksInklusiv">Enkeltype: maks inklusiv (xsd:maxInclusive)</a></h6>
+<h6 id="Enkeltype-maksimumIkkeInklusivt"><a class="link" href="#Enkeltype-maksimumIkkeInklusivt">Enkeltype: maksimum ikke-inklusivt (xsd:maxExclusive)</a></h6>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">maximum exclusive</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:maxExclusive</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:decimal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Spesifiserer den øvre grensene for en numerisk verdi (verdien må være mindre enn denne verdien)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="Enkeltype-maksimumInklusivt"><a class="link" href="#Enkeltype-maksimumInklusivt">Enkeltype: maksimum inklusivt (xsd:maxInclusive)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -4495,7 +4460,42 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </table>
 </div>
 <div class="sect5">
-<h6 id="Enkeltype-minimumInklusiv"><a class="link" href="#Enkeltype-minimumInklusiv">Enkeltype: minimum inklusiv (xsd:minInclusive)</a></h6>
+<h6 id="Enkeltype-minimumIkkeInklusivt"><a class="link" href="#Enkeltype-minimumIkkeInklusivt">Enkeltype: minimum ikke-inklusivt (xsd:minExclusive)</a></h6>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">exclusive minimum</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:minExclusive</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:decimal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Spesifiserer den nedre grensene for en numerisk verdi (verdien må være større enn denne verdien).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="Enkeltype-minimumInklusivt"><a class="link" href="#Enkeltype-minimumInklusivt">Enkeltype: minimum inklusivt (xsd:minInclusive)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -7466,6 +7466,12 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <td class="tableblock halign-left valign-top"><p class="tableblock">For å gi en bedre beskrivelse av retninger på relasjoner, som f.eks. roller, komposisjoner og samlinger.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskap : relasjonsegenskapsnavn</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:relationPropertyLabel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Range endret fra modelldcatno:Property til rdfs:Literal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Skrivefeil i forrige versjon.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Egenskap: tilhører modul</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:belongsToModule</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 0..1 til 0..n</p></td>
@@ -7478,184 +7484,190 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <td class="tableblock halign-left valign-top"><p class="tableblock">For å kunne ha "*" eller "n" som øvre multiplisitet.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Enkeltype: eksklusivt maximum</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enkeltype: maksimum ikke-inklusivt</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">xsd:maxExclusive</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ny egenskap</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Uteglemt i tidligere versjon.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Enkeltype: eksklusivt minimum</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enkeltype: maksimum inklusivt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:minInclusive</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Norsk navn endret fra "maks inklusiv" til "maksimum inklusivt"</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bedre dekkende navn.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enkeltype: minimum ikke-inklusivt</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">xsd:minExclusive</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ny egenskap</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Uteglemt i tidligere versjon.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enkeltype: minimum inklusivt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:minInclusive</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Norsk navn endret fra "minimum inklusiv" til "minimum inklusivt"</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Eller</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Or</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ny klasse</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Som et resultat av at klassen Beregningsregel (modelldcatno:ConstraintRule) innføres.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enten eller</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Enten eller</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Xor</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ny klasse</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Som et resultat av at klassen Beregningsregel (modelldcatno:ConstraintRule) innføres.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: beskrivelse</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: beskrivelse</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dct:description</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Endret fra obligatorisk til anbefalt</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">For strengt å ha dette som en obligatorisk egenskap. Flere virksomheter har ikke tekstlige beskrivelser av modellene sine.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: beskrivelse</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: beskrivelse</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dct:description</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 1..n til 0..n</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravsnivå endres fra obligatorisk til anbefalt.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: er profil av</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: er profil av</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">prof:isProfileOf</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ny egenskap</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">En del modeller er profiler av standarder eller spesifikasjoner. Dette kan gi bedre forståelse av modellene og nyttig når man sammenligner eller gjenbruker fra andre modeller.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: i samsvar med</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: i samsvar med</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dct:conformsTo</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ny egenskap</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">En del modeller bygger på standarder eller spesifikasjoner. Dette kan gi bedre forståelse av modellene og nyttig når man sammenligne eller gjenbruke fra andre modeller.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: identifikator</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: identifikator</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Endret fra obligatorisk til anbefalt</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">For strengt å ha dette som en obligatorisk egenskap når egenskapene som RDF-ressurser i tillegg tildeles egne URI’er.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: identifikator</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: identifikator</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 1..1 til 0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravsnivå endres fra obligatorisk til anbefalt.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: tema</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: tema</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dcat:theme</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Endret fra obligatorisk til anbefalt</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">For strengt å ha dette som en obligatorisk egenskap. Det er ikke alle virksomheter som har kategorisert modellene sine etter tema.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: tema</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: tema</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dcat:theme</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 1..n til 0..n</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravsnivå endres fra obligatorisk til anbefalt.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: anbefalt kodetekst</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: anbefalt kodetekst</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">skos:prefLabel</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Endret fra obligatorisk til anbefalt</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Det er ikke alle kodeelementer som har en anbefalt kodetekst knyttet til seg. For eksempel vil UML enumerasjoner inneholde bare kodeverdier.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: anbefalt kodetekst</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: anbefalt kodetekst</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">skos:prefLabel</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 1..n til 0..n</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravsnivå endres fra obligatorisk til anbefalt.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: forrige kodeelement</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: forrige kodeelement</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">xkos:previous</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Endret multiplisitet, fra 0..n til 0..1.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Skrivefeil</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: i kodeliste</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: i kodeliste</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">skos:inScheme</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 0..n til 1..n</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Skrivefeil i forrige versjon. Det bør være et krav at et kodeelement tilhører minst en kodeliste, slik at man unngår at modellene inneholder kodeelementer uten tilhørighet.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: identifikator</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: identifikator</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Endret fra obligatorisk til anbefalt</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">For strengt å ha dette som en obligatorisk egenskap når kodeelementene som RDF-ressurser i tillegg tildeles egne URI’er.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: identifikator</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: identifikator</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 1..1 til 0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravsnivå endres fra obligatorisk til anbefalt.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: kode</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: kode</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">skos:notation</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Endret fra valgfri til obligatorisk</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Det bør være et krav at et kodeelement har en kode som kan brukes i et datafelt.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: kode</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: kode</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">skos:notation</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 0..1 til 1..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravsnivå endres fra anbefalt til obligatorisk.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: neste kodeelement</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: neste kodeelement</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">xkos:next</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Endret multiplisitet, fra 0..n til 0..1.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Skrivefeil</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: toppelement til</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: toppelement til</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">skos:topConceptOf</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Endret norsk term</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Bedre dekkende navn.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Komposisjon</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Komposisjon</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Composition</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Endring i tekst i oversikt over egenskaper per klasse.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Skrivefeil.  Det står at klassen har obligatoriske egenskaper. Dette stemmer ikke, den har kun én egenskap med kravsnivå anbefalt.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Modellelement: begrensning</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Modellelement: begrensning</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:constraint</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ny egenskap</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Gir en bedre forståelse av bruken av et modellelement.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Modellelement: identifikator</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Modellelement: identifikator</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Endret fra obligatorisk til anbefalt</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Strengt For strengt å ha dette som en obligatorisk egenskap når modellelementene som RDF-ressurser i tillegg tildeles egne URI’er.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Modellelement: identifikator</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Modellelement: identifikator</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 1..1 til 0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravsnivå endres fra obligatorisk til anbefalt.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Modellelement: tilhører modul</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Modellelement: tilhører modul</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:belongsToModule</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 0..1 til 0..n</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ett og samme modellelement kan tilhøre ulike moduler.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Note: anmerkning</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Note: anmerkning</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:propertyNote</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Manglende beskrivelse.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Skrivefeil.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Realisering: har leverandør</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Realisering: har leverandør</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:hasSupplier</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Utvidet range til også å omfatte modelldcatno:Property.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">For å kunne si at en egenskap kan være en abstraksjon av enn annen egenskap eller modellelement.</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Standard</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dct:Standard</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Hele klassen er ny</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes som range for dct:conformsTo og prof:isProfileOf, og som referanse fra f.eks. et dcat:Dataset til en informasjonsmodell som beskriver datasettet.</p></td>
 </tr>
 </tbody>
 </table>
@@ -7665,7 +7677,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2021-02-22 14:31:43 UTC
+Sist oppdatert 2021-02-24 09:47:36 UTC
 </div>
 </div>
 </body>
