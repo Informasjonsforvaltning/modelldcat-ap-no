@@ -44,7 +44,7 @@
     dct:description "This document specifies the constraints on properties and classes expressed by ModellDCAT-AP-NO in SHACL."@en ;
     dct:title "The constraints of ModellDCAT-AP-NO"@en ;
     owl:versionInfo "0.3";
-    dct:modified "2021-02-23"^^xsd:date ;
+    dct:modified "2021-02-24"^^xsd:date ;
     .
 
 # -+-+- Some "general" classes, though modified for modelldcatno when necessary -+-+-+-
@@ -1123,7 +1123,7 @@
         sh:message "Egenskap `har type` (modelldcatno:hasType) kan bare ha verdi som er instans av modelldcatno:ModelElement."@nb ;
     ], [
         sh:name "relasjonsegenskapsnavn"@nb , "relation property label"@en ;
-        sh:class modelldcatno:Property ;
+        sh:nodeKind sh:Literal ;
         sh:path modelldcatno:relationPropertyLabel ;
         sh:severity sh:Violation
     ], [
