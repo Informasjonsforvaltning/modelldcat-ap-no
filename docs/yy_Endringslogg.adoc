@@ -13,12 +13,13 @@ Tabellen under gir en oversikt over endringene i klasser og egenskaper, fra v.1.
 |Egenskap: identifikator|dct:identifier|Endret fra obligatorisk til anbefalt|For strengt å ha dette som obligatorisk når egenskapene som RDF-ressurser i tillegg tildeles egne URI’er.
 |Egenskap: identifikator|dct:identifier|Multiplisitet endret fra 1..1 til 0..1|Som følge av at kravsnivå endres fra obligatorisk til anbefalt.
 |Egenskap: navigerbar|modelldcatno:navigable|Ny egenskap|For å gi en bedre beskrivelse av retninger på relasjoner, som f.eks. roller, komposisjoner og samlinger.
+|Egenskap : relasjonsegenskapsnavn | modelldcatno:relationPropertyLabel | Range endret fra modelldcatno:Property til rdfs:Literal | Skrivefeil i forrige versjon.
 |Egenskap: tilhører modul|modelldcatno:belongsToModule|Multiplisitet endret fra 0..1 til 0..n|En og samme egenskap kan tilhøre ulike moduler.
 |Egenskap: øvre multiplisitet| xsd:maxOccurs | Range endret fra `xsd:nonNegativeInteger` til `xsd:nonNegativeInteger or {"*"} or {"n"}` | For å kunne ha "*" eller "n" som øvre multiplisitet.
 |Enkeltype: maksimum ikke-inklusivt | xsd:maxExclusive | Ny egenskap | Uteglemt i tidligere versjon.
 |Enkeltype: maksimum inklusivt | xsd:minInclusive | Norsk navn endret fra "maks inklusiv" til "maksimum inklusivt" | Bedre dekkende navn.
 |Enkeltype: minimum ikke-inklusivt | xsd:minExclusive | Ny egenskap | Uteglemt i tidligere versjon.
-|Enkeltype: minimum inklusivt | xsd:minInclusive | Norsk navn endret fra "minimum inklusiv" til "minimum inklusivt" 
+|Enkeltype: minimum inklusivt | xsd:minInclusive | Norsk navn endret fra "minimum inklusiv" til "minimum inklusivt"
 |Eller | modelldcatno:Or | Ny klasse | Som et resultat av at klassen Beregningsregel (modelldcatno:ConstraintRule) innføres.
 | Enten eller | modelldcatno:Xor | Ny klasse | Som et resultat av at klassen Beregningsregel (modelldcatno:ConstraintRule) innføres.
 |Informasjonsmodell: beskrivelse|dct:description|Endret fra obligatorisk til anbefalt|For strengt å ha dette som en obligatorisk egenskap. Flere virksomheter har ikke tekstlige beskrivelser av modellene sine.
