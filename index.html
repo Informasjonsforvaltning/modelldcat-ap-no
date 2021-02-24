@@ -935,6 +935,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#Kontrollerte-vobakularer-som-bør-brukes">Kontrollerte vokabularer som bør og kan brukes</a>
 <ul class="sectlevel3">
+<li><a href="#Bør-brukes-for-spatial">For egenskapen dct:spatial</a></li>
 <li><a href="#Bør-brukes-for-theme">For egenskapen dcat:theme</a></li>
 <li><a href="#Bør-brukes-for-themeTaxonomy">For egenskapen dcat:themeTaxonomy</a></li>
 </ul>
@@ -986,7 +987,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <p><strong>Status</strong>: Gjeldende<br>
 <strong>Versjon</strong>: 1.1 (se <a href="#Endringslogg">endringsloggen</a>)<br>
 <strong>Publisert</strong>: 2020-12-18 <br>
-<strong>Oppdatert</strong>: 2021-02-22<br>
+<strong>Oppdatert</strong>: 2021-02-24<br>
 <strong>Gjeldende versjon</strong>: <a href="https://data.norge.no/specification/modelldcat-ap-no/" class="bare">https://data.norge.no/specification/modelldcat-ap-no/</a><br>
 <strong>Redaktørens utkast</strong>: <a href="https://informasjonsforvaltning.github.io/modelldcat-ap-no/" class="bare">https://informasjonsforvaltning.github.io/modelldcat-ap-no/</a></p>
 </div>
@@ -7349,6 +7350,52 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <div class="sect2">
 <h3 id="Kontrollerte-vobakularer-som-bør-brukes"><a class="link" href="#Kontrollerte-vobakularer-som-bør-brukes">Kontrollerte vokabularer som bør og kan brukes</a></h3>
 <div class="sect3">
+<h4 id="Bør-brukes-for-spatial"><a class="link" href="#Bør-brukes-for-spatial">For egenskapen dct:spatial</a></h4>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI til egenskapen</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:spatial</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Brukt i klasse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell (modelldcatno:InformationModel); Modellkatalog (dcat:Catalog)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Navn på vokabularet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://data.geonorge.no/administrativeEnheter/nasjon/doc/173163">Administrative enheter</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI til vokabularet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fylke <a href="https://data.geonorge.no/administrativeEnheter/fylke/id/" class="bare">https://data.geonorge.no/administrativeEnheter/fylke/id/</a>;<br>
+Kommune <a href="https://data.geonorge.no/administrativeEnheter/kommune/id/" class="bare">https://data.geonorge.no/administrativeEnheter/kommune/id/</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://data.geonorge.no/administrativeEnheter/nasjon/doc/173163">Administrative enheter</a> bør brukes i tillegg til det som er nevnt under <a href="#Skal-brukes-for-spatial">Kontrollerte vokabularer som skal brukes</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre>&lt;&gt; dct:spatial &lt;https://data.geonorge.no/administrativeEnheter/fylke/id/173159&gt; . # Oslo som fylke
+
+&lt;&gt; dct:spatial &lt;https://data.geonorge.no/administrativeEnheter/kommune/id/173018&gt; . # Oslo som kommune</pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
 <h4 id="Bør-brukes-for-theme"><a class="link" href="#Bør-brukes-for-theme">For egenskapen dcat:theme</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
@@ -7505,169 +7552,184 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <td class="tableblock halign-left valign-top"><p class="tableblock">Enkeltype: minimum inklusivt</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">xsd:minInclusive</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Norsk navn endret fra "minimum inklusiv" til "minimum inklusivt"</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Eller</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bedre dekkende navn.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Eller</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Or</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ny klasse</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Som et resultat av at klassen Beregningsregel (modelldcatno:ConstraintRule) innføres.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Enten eller</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enten eller</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Xor</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ny klasse</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Som et resultat av at klassen Beregningsregel (modelldcatno:ConstraintRule) innføres.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: beskrivelse</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: beskrivelse</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dct:description</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Endret fra obligatorisk til anbefalt</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">For strengt å ha dette som en obligatorisk egenskap. Flere virksomheter har ikke tekstlige beskrivelser av modellene sine.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: beskrivelse</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: beskrivelse</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dct:description</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 1..n til 0..n</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravsnivå endres fra obligatorisk til anbefalt.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: er profil av</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: er profil av</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">prof:isProfileOf</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ny egenskap</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">En del modeller er profiler av standarder eller spesifikasjoner. Dette kan gi bedre forståelse av modellene og nyttig når man sammenligner eller gjenbruker fra andre modeller.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: i samsvar med</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: i samsvar med</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dct:conformsTo</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ny egenskap</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">En del modeller bygger på standarder eller spesifikasjoner. Dette kan gi bedre forståelse av modellene og nyttig når man sammenligne eller gjenbruke fra andre modeller.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: identifikator</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: identifikator</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Endret fra obligatorisk til anbefalt</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">For strengt å ha dette som en obligatorisk egenskap når egenskapene som RDF-ressurser i tillegg tildeles egne URI’er.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: identifikator</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: identifikator</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 1..1 til 0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravsnivå endres fra obligatorisk til anbefalt.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: tema</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: tema</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dcat:theme</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Endret fra obligatorisk til anbefalt</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">For strengt å ha dette som en obligatorisk egenskap. Det er ikke alle virksomheter som har kategorisert modellene sine etter tema.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: tema</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: tema</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dcat:theme</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 1..n til 0..n</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravsnivå endres fra obligatorisk til anbefalt.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: anbefalt kodetekst</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: anbefalt kodetekst</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">skos:prefLabel</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Endret fra obligatorisk til anbefalt</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Det er ikke alle kodeelementer som har en anbefalt kodetekst knyttet til seg. For eksempel vil UML enumerasjoner inneholde bare kodeverdier.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: anbefalt kodetekst</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: anbefalt kodetekst</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">skos:prefLabel</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 1..n til 0..n</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravsnivå endres fra obligatorisk til anbefalt.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: forrige kodeelement</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: forrige kodeelement</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">xkos:previous</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Endret multiplisitet, fra 0..n til 0..1.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Skrivefeil</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: i kodeliste</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: i kodeliste</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">skos:inScheme</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 0..n til 1..n</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Skrivefeil i forrige versjon. Det bør være et krav at et kodeelement tilhører minst en kodeliste, slik at man unngår at modellene inneholder kodeelementer uten tilhørighet.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: identifikator</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: identifikator</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Endret fra obligatorisk til anbefalt</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">For strengt å ha dette som en obligatorisk egenskap når kodeelementene som RDF-ressurser i tillegg tildeles egne URI’er.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: identifikator</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: identifikator</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 1..1 til 0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravsnivå endres fra obligatorisk til anbefalt.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: kode</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: kode</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">skos:notation</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Endret fra valgfri til obligatorisk</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Det bør være et krav at et kodeelement har en kode som kan brukes i et datafelt.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: kode</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: kode</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">skos:notation</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 0..1 til 1..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravsnivå endres fra anbefalt til obligatorisk.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: neste kodeelement</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: neste kodeelement</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">xkos:next</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Endret multiplisitet, fra 0..n til 0..1.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Skrivefeil</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: toppelement til</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: toppelement til</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">skos:topConceptOf</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Endret norsk term</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Bedre dekkende navn.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Komposisjon</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Komposisjon</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Composition</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Endring i tekst i oversikt over egenskaper per klasse.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Skrivefeil.  Det står at klassen har obligatoriske egenskaper. Dette stemmer ikke, den har kun én egenskap med kravsnivå anbefalt.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Modellelement: begrensning</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Modellelement: begrensning</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:constraint</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ny egenskap</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Gir en bedre forståelse av bruken av et modellelement.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Modellelement: identifikator</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Modellelement: identifikator</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Endret fra obligatorisk til anbefalt</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Strengt For strengt å ha dette som en obligatorisk egenskap når modellelementene som RDF-ressurser i tillegg tildeles egne URI’er.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Modellelement: identifikator</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Modellelement: identifikator</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 1..1 til 0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravsnivå endres fra obligatorisk til anbefalt.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Modellelement: tilhører modul</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Modellelement: tilhører modul</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:belongsToModule</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 0..1 til 0..n</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ett og samme modellelement kan tilhøre ulike moduler.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Note: anmerkning</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Note: anmerkning</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:propertyNote</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Manglende beskrivelse.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Skrivefeil.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Realisering: har leverandør</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Realisering: har leverandør</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:hasSupplier</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Utvidet range til også å omfatte modelldcatno:Property.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">For å kunne si at en egenskap kan være en abstraksjon av enn annen egenskap eller modellelement.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Standard</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:Standard</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hele klassen er ny</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes som range for dct:conformsTo og prof:isProfileOf, og som referanse fra f.eks. et dcat:Dataset til en informasjonsmodell som beskriver datasettet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Krav til bruk av kontrollerte vokabularer</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For egenskap dct:spatial</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:spatial</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Administrative enheter" fra Kartverket anbefalt brukt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fordi EU-vokalubarer som skal brukes, ikke inneholder norske administrative enheter som fylker og kommuner.</p></td>
 </tr>
 </tbody>
 </table>
@@ -7677,7 +7739,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2021-02-24 09:47:36 UTC
+Sist oppdatert 2021-02-24 11:19:24 UTC
 </div>
 </div>
 </body>

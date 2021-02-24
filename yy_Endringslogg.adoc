@@ -19,7 +19,7 @@ Tabellen under gir en oversikt over endringene i klasser og egenskaper, fra v.1.
 |Enkeltype: maksimum ikke-inklusivt | xsd:maxExclusive | Ny egenskap | Uteglemt i tidligere versjon.
 |Enkeltype: maksimum inklusivt | xsd:minInclusive | Norsk navn endret fra "maks inklusiv" til "maksimum inklusivt" | Bedre dekkende navn.
 |Enkeltype: minimum ikke-inklusivt | xsd:minExclusive | Ny egenskap | Uteglemt i tidligere versjon.
-|Enkeltype: minimum inklusivt | xsd:minInclusive | Norsk navn endret fra "minimum inklusiv" til "minimum inklusivt"
+|Enkeltype: minimum inklusivt | xsd:minInclusive | Norsk navn endret fra "minimum inklusiv" til "minimum inklusivt" | Bedre dekkende navn.
 |Eller | modelldcatno:Or | Ny klasse | Som et resultat av at klassen Beregningsregel (modelldcatno:ConstraintRule) innføres.
 | Enten eller | modelldcatno:Xor | Ny klasse | Som et resultat av at klassen Beregningsregel (modelldcatno:ConstraintRule) innføres.
 |Informasjonsmodell: beskrivelse|dct:description|Endret fra obligatorisk til anbefalt|For strengt å ha dette som en obligatorisk egenskap. Flere virksomheter har ikke tekstlige beskrivelser av modellene sine.
@@ -48,4 +48,6 @@ Tabellen under gir en oversikt over endringene i klasser og egenskaper, fra v.1.
 |Note: anmerkning|modelldcatno:propertyNote|Manglende beskrivelse.|Skrivefeil.
 |Realisering: har leverandør | modelldcatno:hasSupplier | Utvidet range til også å omfatte modelldcatno:Property. | For å kunne si at en egenskap kan være en abstraksjon av enn annen egenskap eller modellelement.
 |Standard|dct:Standard|Hele klassen er ny|Brukes som range for dct:conformsTo og prof:isProfileOf, og som referanse fra f.eks. et dcat:Dataset til en informasjonsmodell som beskriver datasettet.
+4+|*Krav til bruk av kontrollerte vokabularer*
+|For egenskap dct:spatial | dct:spatial | "Administrative enheter" fra Kartverket anbefalt brukt | Fordi EU-vokalubarer som skal brukes, ikke inneholder norske administrative enheter som fylker og kommuner.
 |===
