@@ -1,0 +1,59 @@
+# ------
+# Dette er en testfil (test = syntaksmessig ok, men uten garanti for faglig korrekthet pga. bl.a. bruk av dummydata)
+#
+# Denne viser bruken av modelldcatno:InformationModel, med alle egenskaper
+# status: ferdig og validert korrekt
+# ------
+
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <https://www.w3.org/ns/dx/prof/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/testMod1>
+  a modelldcatno:InformationModel ;
+  ###### mandatory:
+    dct:title "Eksempel modell 1"@nb , "Example model 1"@en ; # tittel, dummydata
+    dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ; # utgiver
+  ###### recommended:
+    dct:identifier "https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/testMod1"^^xsd:anyURI ; # identifikator
+    dct:subject <https://example.com/concepts/dummyConcept1> ; # begrep, dummydata
+    dct:description "En eksempelmodell"@nb , "An example model"@en ; # beskrivelse, dummydata
+    dcat:theme <https://psi.norge.no/los/tema/naringsliv> ; # tema
+    modelldcatno:informationModelIdentifier "Mod1001" ; # informasjonsmodellidentifikator, dummydata
+    modelldcatno:containsModelElement <https://example.com/models/dummyModElement1> ; # inneholder modellelement, dummydata
+    dcat:contactPoint <https://example.com/contactPoints/dummyCP1> ; # kontaktpunkt, dummydata
+    dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ; # lisens
+  ###### optional:
+    dct:spatial <http://publications.europa.eu/resource/authority/country/NOR/> ; # dekningsområde
+    dcat:keyword "stikkord1"@nb , "keyword1"@en ; # emneord, dummydata
+    dct:modified "2020-11-11"^^xsd:date ; # endringsdato
+    dct:isPartOf <https://example.com/models/dummyMod101> ; # er del av, dummydata
+    prof:isProfileOf <https://example.com/models/dummyxMod102> ; # er profil av, dummydata
+    dct:isReplacedBy <https://example.com/models/dummyMod103> ; # er erstattet av, dummydata
+    dct:replaces <https://example.com/models/dummyMod104> ; # erstatter, dummydata
+    dct:hasFormat <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/dummyFil1.png> ; # finnes i format, dummydata
+    dct:temporal [ # gyldighetsperiode
+      a dct:PeriodOfTime ; dcat:startDate "2020-01-01"^^xsd:date ; dcat:endDate "2020-12-31"^^xsd:date ;] ;
+    dct:hasPart <https://example.com/models/dummyMod104> ; # har del, dummydata
+    foaf:homepage <https://example.com/models/dummy> ; # hjemmeside, dummydata
+    dct:conformsTo <https://example.com/standards/dummyStd1> ; # i samsvar med, dummydata
+    adms:status <http://purl.org/adms/status/Completed> ; # modellstatus
+    dct:creator <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ; # produsent
+    dct:language <http://publications.europa.eu/resource/authority/language/NOB> ; # språk
+    dct:type <https://example.com/modtypes/dummyType1> ; # type, dummydata
+    dct:issued "2020-01-01"^^xsd:date ; # utgivelsesdato
+    owl:versionInfo "1.0" ; # versjon
+    adms:versionNotes "Kun redaksjonelle endringer fra v.0.99"@nb, "Only editoral changes from v.0.99"@en ; #versjonsnote
+.
+
+# Dummy-eksempel på et foaf:Document i png
+<https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/dummyFil1.png>
+    a foaf:Document ;
+    dct:title "Eksempel modell 1"@nb , "Example model 1"@en ; # tittel, dummydata
+    dct:format <http://publications.europa.eu/resource/authority/file-type/PNG> ; # format
+.
