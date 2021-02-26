@@ -1,0 +1,75 @@
+# ------
+# Dette er en testfil (test = syntaksmessig ok, men uten garanti for faglig korrekthet pga. bl.a. bruk av dummydata)
+#
+# Denne viser bruken av modelldcatno:CodeList og flere modelldcatno:CodeElement, med alle egenskaper
+# status: ferdig og validert korrekt
+# ------
+
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xkos: <https://ddialliance.org/Specification/XKOS/1.2/OWL/xkos.html> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# An example Codelist for gender
+<https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/testCodeList>
+  a modelldcatno:CodeList ;
+  ###### mandatory:
+    dct:title "Kodeliste kjønn"@nb , # tittel - norsk bokmål
+      "Codelist gender" ; # tittel - engelsk
+  ###### recommended:
+    dct:identifier "https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/testCodeList"^^xsd:anyURI ; # identifikator
+    dct:subject <https://examples.com/concepts/dummyConcept0> ; # begrep, dummydata
+  ###### optional:
+    modelldcatno:belongsToModule <https://example.com/modules/mod1> ; # tilhører modul - dummydata
+    dct:description "En eksempelkodeliste for kjønn"@nb , # beskrivelse, norsk bokmål
+       "An example codelist for gender"@en ; # beskrivelse, engelsk
+   .
+
+<https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/testCodeList#1>
+  a modelldcatno:CodeElement ;
+  ###### mandatory:
+    skos:inScheme <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/testCodeList> ; # i kodeliste
+    skos:notation "1"@nb ; # kode
+  ###### recommended:
+    dct:identifier "https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/testCodeList#1"^^xsd:anyURI ; # identifikator
+    skos:prefLabel "kvinne"@nb, "female"@en ; # anbefalt kodetekst
+    dct:subject <https://examples.com/concepts/dummyConcept1> ; # begrep, dummydata
+  ###### optional:
+    skos:altLabel "hunkjønn"@nb ; # tillatt kodetekst
+    skos:definition "definisjonstekst"@nb ; # definisjon, dummydata
+    skos:example "noen eksempler"@nb ; # eksempel, dummydata
+    skos:hiddenLabel "term1"@nb ; # frarådet kodetekst, dummydata
+    skos:note "ev. merknad her"@nb ; # # merknad, dummydata
+    skos:scopeNote "ev. omfangsmerknad her"@nb ; # omfangsmerknad, dummydata
+    xkos:exclusionNote "ev. inklusjonsmerknad her"@nb ; # eksklusjonsmerknad, dummydata
+    xkos:inclusionNote "ev. eksklusjonsmerknad her"@nb ; # inklusjonsmerknad, dummydata
+    skos:isTopConceptOf <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/testCodeList> ; # toppelement til
+    xkos:next <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/testCodeList#2> ; # neste kodeelement
+.
+
+<https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/testCodeList#2>
+  a modelldcatno:CodeElement ;
+  ###### mandatory:
+    skos:inScheme <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/testCodeList> ; # i kodeliste
+    skos:notation "2" ; # kode
+  ###### recommended:
+    dct:identifier "https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/testCodeList#2"^^xsd:anyURI ; # identifikator
+    skos:prefLabel "mann"@nb , "male"@en ; # anbefalt kodetekst, norsk bokmål og engelsk
+    dct:subject <https://examples.com/concepts/dummyConcept2> ; # begrep, dummydata
+  ###### optional:
+    xkos:next <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/testCodeList#9> ; # neste kodeelement
+.
+
+<https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/testCodeList#9>
+  a modelldcatno:CodeElement ;
+  ###### mandatory:
+    skos:inScheme <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/testCodeList> ; # kodeliste
+    skos:notation "9" ; # kode
+  ###### recommended:
+    dct:identifier "https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/testCodeList#9"^^xsd:anyURI ; # identifikator
+    skos:prefLabel "ukjent"@nb , "unknown"@en ; # anbefalt kodetekst
+    dct:subject <https://examples.com/concepts/dummyConcept9> ; # begrep, dummydata
+.
