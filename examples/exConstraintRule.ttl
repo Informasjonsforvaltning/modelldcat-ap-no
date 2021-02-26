@@ -14,7 +14,7 @@ ex-cons:Kjønnsbegrensning   a modelldcatno:ConstraintRule ; #Begrensningsregel
         ###### mandatory:
         modelldcatno:constraint           ex-cons:ektefelle ; #begrensning
         ###### recommended:
-        modelldcatno:title                "Kjønnsbegrensning"@nb ; #tittel
+        dct:title                "Kjønnsbegrensning"@nb ; #tittel
         dct:identifier                    "https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exConstraintRule/Kjønnsbegrensning"^^xsd:anyURI ; #identifikator
         modelldcatno:constraintExpression "{gjelder personer av ulike kjønn}"@nb ; #begrensningsuttrykk
         ###### optional:
@@ -26,13 +26,13 @@ ex-cons:Ektepakt a    modelldcatno:ObjectType ;
 
 ex-cons:ektefelle  a  modelldcatno:Role ;
         dct:title               "ektefelle"@nb ;
-        dct:hasObjectType       ex-cons:Ektefelle ;
+        modelldcatno:hasObjectType       ex-cons:Ektefelle ;
         xsd:maxOccurs "2"^^xsd:nonNegativeInteger ;
         xsd:minOccurs "0"^^xsd:nonNegativeInteger .
 
 ex-cons:partner  a  modelldcatno:Role ;
        dct:title    "registrertPartner"@nb ;
-       dct:hasObjectType       ex-cons:RegistrertPartner ;
+       modelldcatno:hasObjectType       ex-cons:RegistrertPartner ;
        xsd:maxOccurs "2"^^xsd:nonNegativeInteger ;
        xsd:minOccurs "0"^^xsd:nonNegativeInteger .
 
@@ -47,7 +47,7 @@ ex-cons:Begrensning_RegistrertPartner   a  modelldcatno:ConstraintRule ; #Begren
         ###### mandatory:
         modelldcatno:constraint           ex-cons:RegistrertPartner ; #begrensning
         ###### recommended:
-        modelldcatno:title                "Aldersbegrensning"@nb ; #tittel
+        dct:title                "Aldersbegrensning"@nb ; #tittel
         dct:identifier                    "https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exConstraintRule/Aldersbegrensning"^^xsd:anyURI ; #identifikator
         modelldcatno:constraintExpression "{En registrert partner må være over 18 år.}"@nb ; #begrensningsuttrykk
         ###### optional:
@@ -56,7 +56,7 @@ ex-cons:Begrensning_RegistrertPartner   a  modelldcatno:ConstraintRule ; #Begren
 #Eksempel på Enten eller (modelldcatno:Xor)
 ex-cons:EntenEller                   a modelldcatno:Xor ; #Enten eller
         ###### mandatory:
-        modelldcatno:constraint          ex-cons:ektefelle , ex-cons:registrertPartner . #begrensning
+        modelldcatno:constraint          ex-cons:ektefelle , ex-cons:partner . #begrensning
 
 #Eksempel på Eller (modelldcatno:Or)
 ex-cons:Eller                       a modelldcatno:Or ; #Eller
@@ -75,8 +75,8 @@ ex-cons:Bedriftskunde                a  modelldcatno:ObjectType ;
 
 ex-cons:personkunde                  a  modelldcatno:Role ;
         dct:title                         "personkunde"@nb ;
-        dct:hasObjectType                 ex-cons:Personkunde .
+        modelldcatno:hasObjectType                 ex-cons:Personkunde .
 
 ex-cons:bedriftskunde                a  modelldcatno:Role ;
         dct:title                         "bedriftskunde"@nb ;
-        dct:hasObjectType                 ex-cons:Bedriftskunde .
+        modelldcatno:hasObjectType                 ex-cons:Bedriftskunde .
