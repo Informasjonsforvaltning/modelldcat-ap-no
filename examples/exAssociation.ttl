@@ -1,0 +1,33 @@
+#----------
+#Eksempel på bruk av assosiasjon(modelldcatno:Associaton).
+#status: under arbeid
+#----------
+
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
+@prefix ex-relation: <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exAssociation#> .
+
+ex-relation:Folkeregisterperson  a                    modelldcatno:ObjectType ; #Objekttype
+        ###### mandatory:
+        dct:title                      "Folkeregisterperson"@nb ; #tittel
+        ###### recommended:
+        modelldcatno:hasProperty       ex-relation:representerer , ex-relation:har . #har egenskap
+
+ex-relation:representerer  a                     modelldcatno:Associaton ; #Assosiasjon
+        ###### recommended:
+        dct:title                           "representerer"@nb ; #tittel
+        modelldcatno:refersTo               ex-relation:Person . #refererer til
+
+ex-relation:har  a                     modelldcatno:Associaton ; #Assosiasjon
+        ###### recommended:
+        dct:title                           "har"@nb ; #tittel
+        modelldcatno:refersTo               ex-relation:Personnavn . #refererer til
+
+ex-relation:Person  a                     modelldcatno:ObjectType ; #Objekttype
+        ###### mandatory:
+        dct:title                     "Person"@nb . #tittel
+
+ex-relation:Personnavn a                    modelldcatno:ObjectType ; #Objekttype
+        ###### mandatory:
+        dct:title                      "Personnavn"@nb ; #tittel
