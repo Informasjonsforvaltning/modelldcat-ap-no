@@ -1,0 +1,45 @@
+#----------
+#Eksempel på samling (modelldcatno:Collection) og komposisjon (modelldcatno:Composition).
+#status: under arbeid
+#----------
+
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
+@prefix ex-relation: <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exCollectionAndComposition#> .
+
+#Eksempel med samling (modelldcatno:Collection)
+ex-relation:Forening  a                    modelldcatno:ObjectType ; #Objekttype
+        ###### mandatory:
+        dct:title                      "Forening"@nb ; #tittel
+        ###### recommended:
+        modelldcatno:hasProperty       ex-relation:medlem . #har egenskap
+
+ex-relation:medlem  a                     modelldcatno:Collection ; #Samling
+        ###### recommended:
+        dct:title                           "medlem" ; #tittel
+        modelldcatno:hasMember              ex-relation:Person ; #har medlem
+        xsd:minOccurs              "2"^^xsd:nonNegativeInteger ; #nedre multiplisitet
+        xsd:maxOccurs              "*" . #øvre multiplisitet
+
+ex-relation:Person  a                     modelldcatno:ObjectType ; #Objekttype
+        ###### mandatory:
+        dct:title                     "Person"@nb . #tittel
+
+#Eksempel med komposisjon (modelldcatno:Composition)
+ex-relation:Bil a                    modelldcatno:ObjectType ; #Objekttype
+        ###### mandatory:
+        dct:title                      "Bil"@nb ; #tittel
+        ###### recommended:
+        modelldcatno:hasProperty       ex-relation:hjul . #har egenskap
+
+ex-relation:hjul  a                     modelldcatno:Composition ; #Komposisjon
+        ###### recommended:
+        dct:title                           "hjul"@nb ; #tittel
+        modelldcatno:contains            ex-relation:Hjul ; #inneholder
+        xsd:minOccurs              "3"^^xsd:nonNegativeInteger ; #nedre multiplisitet
+        xsd:maxOccurs              "*" . #øvre multiplisitet
+
+ex-relation:Hjul a                     modelldcatno:ObjectType ; #Objekttype
+        ###### mandatory:
+        dct:title                     "Hjul"@nb . #tittel
