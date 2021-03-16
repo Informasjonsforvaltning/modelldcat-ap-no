@@ -370,6 +370,17 @@ Klasse som representerer modellen som skal utveksles.
 |Kravsnivå|Valgfri
 |===
 
+=== Modul (modelldcatno:Module) [[klasse-module]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Module
+|Beskrivelse|Brukes til å beskrive en modellmodul/delmodell av modellen.
+|URI|modelldcatno:Module
+|Subklasse av|modelldcatno:ModelElement
+|Kravsnivå|Valgfri
+|Kommentar|Modeller kan bestå av moduler, som beslektede modellelementer er gruppert under.
+|===
 
 === Note (modelldcatno:Note) [[klasse-note]]
 

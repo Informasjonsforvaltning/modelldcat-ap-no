@@ -66,7 +66,7 @@ Klassen _Begrensningsregel_ er anbefalt.
 |===
 |Engelsk navn|belongs to module
 |URI|modelldcatno:belongsToModule
-|Range|rdfs:Literal or xsd:anyURI
+|Range|modelldcatno:Module
 |Beskrivelse|Brukes til å referere til en modellmodul/delmodell som beregningsregelen inngår i.
 |Multiplisitet|0..n
 |Kravsnivå|Valgfri

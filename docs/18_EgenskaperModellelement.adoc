@@ -80,9 +80,8 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |===
 |Engelsk navn| belongs to module
 |URI|modelldcatno:belongsToModule
-|Range|rdfs:Literal or xsd:anyURI
+|Range|modelldcatno:Module
 |Beskrivelse|Beskriver hvilken modellmodul/delmodell et modellelement inngår i.
 |Multiplisitet|0..n
 |Kravsnivå|Valgfri
-|Kommentar|Modeller kan bestå av moduler, som beslektede modellelementer er gruppert under.
 |===
