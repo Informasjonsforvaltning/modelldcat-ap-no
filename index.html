@@ -508,6 +508,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#klasse-dokument">Dokument (foaf:Document)</a></li>
 <li><a href="#klasse-komposisjon">Komposisjon (modelldcatno:Composition)</a></li>
 <li><a href="#klasse-medietype">Medietype (dct:MediaType)</a></li>
+<li><a href="#klasse-module">Modul (modelldcatno:Module)</a></li>
 <li><a href="#klasse-note">Note (modelldcatno:Note)</a></li>
 <li><a href="#klasse-realisering">Realisering (modelldcatno:Realization)</a></li>
 <li><a href="#klasse-samling">Samling (modelldcatno:Collection)</a></li>
@@ -987,7 +988,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <p><strong>Status</strong>: Gjeldende<br>
 <strong>Versjon</strong>: 1.1 (se <a href="#Endringslogg">endringsloggen</a>)<br>
 <strong>Publisert</strong>: 2020-12-18 <br>
-<strong>Oppdatert</strong>: 2021-02-24<br>
+<strong>Oppdatert</strong>: 2021-03-16<br>
 <strong>Gjeldende versjon</strong>: <a href="https://data.norge.no/specification/modelldcat-ap-no/" class="bare">https://data.norge.no/specification/modelldcat-ap-no/</a><br>
 <strong>Redaktørens utkast</strong>: <a href="https://informasjonsforvaltning.github.io/modelldcat-ap-no/" class="bare">https://informasjonsforvaltning.github.io/modelldcat-ap-no/</a></p>
 </div>
@@ -1191,12 +1192,12 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <div class="sectionbody">
 <div class="imageblock">
 <div class="content">
-<img src="images/ModellDCAT-AP-NO22022021.png" alt="ModellDCAT AP NO22022021">
+<img src="images/ModellDCAT-AP-NO-22010316.png" alt="ModellDCAT AP NO 22010316">
 </div>
 <div class="title">Figur 1. Forenklet modell for ModellDCAT-AP-NO.</div>
 </div>
 <div class="paragraph">
-<p>Last ned modell: <a href="images/ModellDCAT-AP-NO22022021.png">png</a> | <a href="files/ModellDCAT-AP-NO22022021.eapx">XMI for EA</a></p>
+<p>Last ned modell: <a href="images/ModellDCAT-AP-NO-22010316.png">png</a> | <a href="files/ModellDCAT-AP-NO-22010316.eapx">XMI for EA</a></p>
 </div>
 </div>
 </div>
@@ -2195,6 +2196,41 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="klasse-module"><a class="link" href="#klasse-module">Modul (modelldcatno:Module)</a></h4>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Module</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å beskrive en modellmodul/delmodell av modellen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Module</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Subklasse av</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:ModelElement</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Modeller kan bestå av moduler, som beslektede modellelementer er gruppert under.</p></td>
 </tr>
 </tbody>
 </table>
@@ -3663,7 +3699,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Literal or xsd:anyURI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Module</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
@@ -4186,7 +4222,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Literal or xsd:anyURI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Module</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
@@ -6587,7 +6623,7 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Literal or xsd:anyURI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Module</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
@@ -6600,10 +6636,6 @@ Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>model
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Modeller kan bestå av moduler, som beslektede modellelementer er gruppert under.</p></td>
 </tr>
 </tbody>
 </table>
@@ -7570,6 +7602,12 @@ Kommune <a href="https://data.geonorge.no/administrativeEnheter/kommune/id/" cla
 <td class="tableblock halign-left valign-top"><p class="tableblock">En og samme egenskap kan tilhøre ulike moduler.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskap: tilhører modul</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:belongsToModule</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Range endret range fra rdfs:Literal eller xsd:anyURI til modelldcatno:Module</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at klassen Modul (modelldcatno:Module) er innført.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Egenskap: øvre multiplisitet</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">xsd:maxOccurs</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Range endret fra <code>xsd:nonNegativeInteger</code> til <code>xsd:nonNegativeInteger or {"*"} or {"n"}</code></p></td>
@@ -7750,6 +7788,18 @@ Kommune <a href="https://data.geonorge.no/administrativeEnheter/kommune/id/" cla
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ett og samme modellelement kan tilhøre ulike moduler.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Modellelement: tilhører modul</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:belongsToModule</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Range endret fra rdfs:Literal eller xsd:anyURI til modelldcatno:Module</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at klassen Modul (modelldcatno:Module) er innført.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Modul</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Module</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ny klasse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gjennom egenskapen tilhører modul (modelldcatno:belongsToModule), kan man angi om et modellelement, begrensningsregel eller egenskap tilhører en modellmodul. Ved konkret anvendelse har man sett at det er mer hensiktsmessig å framstille modul som egen klasse enn at egenskapen modelldcatno:belongsToModule har range rdfs:Literal eller xsd:anyURI.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Note: anmerkning</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:propertyNote</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Manglende beskrivelse.</p></td>
@@ -7784,7 +7834,7 @@ Kommune <a href="https://data.geonorge.no/administrativeEnheter/kommune/id/" cla
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2021-02-24 14:40:49 UTC
+Sist oppdatert 2021-03-16 13:43:54 UTC
 </div>
 </div>
 </body>
