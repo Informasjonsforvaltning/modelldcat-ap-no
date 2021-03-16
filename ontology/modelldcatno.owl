@@ -280,6 +280,20 @@ foaf:homepage rdf:type owl:ObjectProperty ,
                          "homepage"@en .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#belongsToModule
+modelldcatno:belongsToModule rdf:type owl:ObjectProperty ,
+                                      owl:FunctionalProperty ;
+                             rdfs:domain [ rdf:type owl:Class ;
+                                           owl:unionOf ( modelldcatno:ConstraintRule
+                                                         modelldcatno:ModelElement
+                                                         modelldcatno:Property
+                                                       )
+                                         ] ;
+                             rdfs:range modelldcatno:Module ;
+                             rdfs:label "belongs to module"@en ,
+                                        "konseptet tilhører modul"@nb .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#codeListReference
 modelldcatno:codeListReference rdf:type owl:ObjectProperty ,
                                         owl:FunctionalProperty ,
@@ -595,6 +609,15 @@ xsd:length rdf:type owl:DatatypeProperty ,
                       "length"@en .
 
 
+###  http://www.w3.org/2001/XMLSchema#maxExclusive
+xsd:maxExclusive rdf:type owl:DatatypeProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:domain modelldcatno:SimpleType ;
+                 rdfs:range xsd:decimal ;
+                 rdfs:label "maks eksklusiv"@nb ,
+                            "max exclusive"@en .
+
+
 ###  http://www.w3.org/2001/XMLSchema#maxInclusive
 xsd:maxInclusive rdf:type owl:DatatypeProperty ,
                           owl:FunctionalProperty ;
@@ -602,14 +625,6 @@ xsd:maxInclusive rdf:type owl:DatatypeProperty ,
                  rdfs:range xsd:decimal ;
                  rdfs:label "maks inklusiv"@nb ,
                             "max inclusive"@en .
-                            
-                            
-xsd:maxExclusive rdf:type owl:DatatypeProperty ,
-                          owl:FunctionalProperty ;
-                 rdfs:domain modelldcatno:SimpleType ;
-                 rdfs:range xsd:decimal ;
-                 rdfs:label "maks eksklusiv"@nb ,
-                            "max exclusive"@en .
 
 
 ###  http://www.w3.org/2001/XMLSchema#maxLength
@@ -760,24 +775,6 @@ foaf:name rdf:type owl:DatatypeProperty ;
                      "navn"@nb .
 
 
-###  https://data.norge.no/vocabulary/modelldcatno#belongsToModule
-modelldcatno:belongsToModule rdf:type owl:DatatypeProperty ,
-                                      owl:FunctionalProperty ;
-                             rdfs:domain [ rdf:type owl:Class ;
-                                           owl:unionOf ( modelldcatno:ConstraintRule
-                                                         modelldcatno:ModelElement
-                                                         modelldcatno:Property
-                                                       )
-                                         ] ;
-                             rdfs:range [ rdf:type rdfs:Datatype ;
-                                          owl:unionOf ( rdfs:Literal
-                                                        xsd:anyURI
-                                                      )
-                                        ] ;
-                             rdfs:label "belongs to module"@en ,
-                                        "konseptet tilhører modul"@nb .
-
-
 ###  https://data.norge.no/vocabulary/modelldcatno#constraintExpression
 modelldcatno:constraintExpression rdf:type owl:DatatypeProperty ;
                                   rdfs:domain modelldcatno:ConstraintRule ;
@@ -793,19 +790,6 @@ modelldcatno:informationModelIdentifier rdf:type owl:DatatypeProperty ;
                                         rdfs:isDefinedBy dct:identifier ;
                                         rdfs:label "informasjonsmodell-identifikator"@nb ,
                                                    "information model identifier"@en .
-
-
-###  https://data.norge.no/vocabulary/modelldcatno#modelElementBelongsToModule
-modelldcatno:modelElementBelongsToModule rdf:type owl:DatatypeProperty ,
-                                                  owl:FunctionalProperty ;
-                                         rdfs:domain modelldcatno:ModelElement ;
-                                         rdfs:range [ rdf:type rdfs:Datatype ;
-                                                      owl:unionOf ( rdfs:Literal
-                                                                    xsd:anyURI
-                                                                  )
-                                                    ] ;
-                                         rdfs:label "model element belongs to module"@en ,
-                                                    "modelelementet tilhører modul"@nb .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#navigable
@@ -1339,6 +1323,13 @@ modelldcatno:InformationModel rdf:type owl:Class ;
 modelldcatno:ModelElement rdf:type owl:Class ;
                           rdfs:label "Model Element"@en ,
                                      "Modell element"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#Module
+modelldcatno:Module rdf:type owl:Class ;
+                    rdfs:subClassOf modelldcatno:ModelElement ;
+                    rdfs:label "Modul"@nb ,
+                               "Module"@en .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#Note
