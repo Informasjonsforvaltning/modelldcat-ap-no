@@ -34,7 +34,7 @@ ex-simpleModel:Aktør  a                      modelldcatno:ObjectType ; #Objektt
         ###### mandatory:
         dct:title                      "Aktør"@nb ; #tittel
         ###### optional:
-        modelldcatno:belongsToModule   "Aktør"@nb . #tilhører modul
+        modelldcatno:belongsToModule   modelldcatno:ModulAktør . #tilhører modul
 
 #Objekttype Person med egenskaper.
 ex-simpleModel:Person  a                     modelldcatno:ObjectType ; #Objekttype
@@ -43,7 +43,7 @@ ex-simpleModel:Person  a                     modelldcatno:ObjectType ; #Objektty
         ###### recommended:
         modelldcatno:hasProperty       ex-simpleModel:fulltNavn , ex-simpleModel:navn , ex-simpleModel:kjønn , ex-simpleModel:personadresse , ex-simpleModel:personSpesialiserer ; #har egenskap
         ###### optional:
-        modelldcatno:belongsToModule   "Person"@nb . #tilhører modul
+        modelldcatno:belongsToModule   modelldcatno:ModulPerson . #tilhører modul
 
 ex-simpleModel:fulltNavn  a               modelldcatno:Attribute ; #Attributt
         ###### recommended:
@@ -52,7 +52,7 @@ ex-simpleModel:fulltNavn  a               modelldcatno:Attribute ; #Attributt
         xsd:maxOccurs               "1"^^xsd:nonNegativeInteger ; #øvre multiplisitet
         xsd:minOccurs            "0"^^xsd:nonNegativeInteger ; #nedre multiplisitet
         ###### optional:
-        modelldcatno:belongsToModule   "Person"@nb . #tilhører modul
+        modelldcatno:belongsToModule   modelldcatno:ModulPerson . #tilhører modul
 
 ex-simpleModel:navn  a                   modelldcatno:Attribute ; #Attributt
         ###### recommended:
@@ -61,7 +61,7 @@ ex-simpleModel:navn  a                   modelldcatno:Attribute ; #Attributt
         xsd:maxOccurs            "1"^^xsd:nonNegativeInteger ; #øvre multiplisitet
         xsd:minOccurs            "1"^^xsd:nonNegativeInteger ; #nedre multiplisitet
         ###### optional:
-        modelldcatno:belongsToModule   "Person"@nb . #tilhører modul
+        modelldcatno:belongsToModule   modelldcatno:ModulPerson . #tilhører modul
 
 ex-simpleModel:kjønn  a                  modelldcatno:Attribute ; #Attributt
         ###### recommended:
@@ -70,7 +70,7 @@ ex-simpleModel:kjønn  a                  modelldcatno:Attribute ; #Attributt
         xsd:maxOccurs            "1"^^xsd:nonNegativeInteger ; #øvre multiplisitet
         xsd:minOccurs            "0"^^xsd:nonNegativeInteger ; #nedre multiplisitet
         ###### optional:
-        modelldcatno:belongsToModule   "Person"@nb . #tilhører modul
+        modelldcatno:belongsToModule   modelldcatno:ModulPerson . #tilhører modul
 
 ex-simpleModel:personadresse  a                modelldcatno:Role ; #Rolle
         ###### recommended:
@@ -79,20 +79,20 @@ ex-simpleModel:personadresse  a                modelldcatno:Role ; #Rolle
         xsd:maxOccurs             "*" ; #øvre multiplisitet
         xsd:minOccurs            "0"^^xsd:nonNegativeInteger ; #nedre multiplisitet
         ###### optional:
-        modelldcatno:belongsToModule   "Person"@nb . #tilhører modul
+        modelldcatno:belongsToModule   modelldcatno:ModulPerson . #tilhører modul
 
 ex-simpleModel:personSpesialiserer a       modelldcatno:Specialization ; #Spesialisering
         ###### recommended:
         modelldcatno:hasGeneralConcept ex-simpleModel:Aktør ;
         ###### optional:
-        modelldcatno:belongsToModule   "Person"@nb . #tilhører modul
+        modelldcatno:belongsToModule   modelldcatno:ModulPerson . #tilhører modul
 
 #Objekttype GeografiskAdresse
 ex-simpleModel:GeografiskAdresse  a         modelldcatno:ObjectType ; #Objekttype
         ###### mandatory:
         dct:title                      "GeografiskAdresse"@nb ; #tittel
         ###### optional:
-        modelldcatno:belongsToModule   "Adresse"@nb . #tilhører modul
+        modelldcatno:belongsToModule   modelldcatno:ModulAdresse . #tilhører modul
 
 #Datatype Personnavn med egenskaper
 ex-simpleModel:Personnavn  a                 modelldcatno:DataType ; #Datatype
@@ -101,7 +101,7 @@ ex-simpleModel:Personnavn  a                 modelldcatno:DataType ; #Datatype
         ###### recommended:
         modelldcatno:hasProperty       ex-simpleModel:etternavn , ex-simpleModel:mellomnavn , ex-simpleModel:fornavn ; #har egenskap
         ###### optional:
-        modelldcatno:belongsToModule   "Person"@nb . #tilhører modul
+        modelldcatno:belongsToModule   modelldcatno:ModulPerson . #tilhører modul
 
 ex-simpleModel:fornavn  a                 modelldcatno:Attribute ; #Attributt
         ###### recommended:
@@ -110,7 +110,7 @@ ex-simpleModel:fornavn  a                 modelldcatno:Attribute ; #Attributt
         xsd:maxOccurs             "1"^^xsd:nonNegativeInteger ; #øvre multiplisitet
         xsd:minOccurs             "1"^^xsd:nonNegativeInteger ; #nedre multiplisitet
         ###### optional:
-        modelldcatno:belongsToModule   "Person"@nb . #tilhører modul
+        modelldcatno:belongsToModule   modelldcatno:ModulPerson . #tilhører modul
 
 ex-simpleModel:mellomnavn  a              modelldcatno:Attribute ; #Attributt
         ###### recommended:
@@ -119,7 +119,7 @@ ex-simpleModel:mellomnavn  a              modelldcatno:Attribute ; #Attributt
         xsd:maxOccurs             "1"^^xsd:nonNegativeInteger ; #øvre multiplisitet
         xsd:minOccurs            "0"^^xsd:nonNegativeInteger ; #nedre multiplisitet
         ###### optional:
-        modelldcatno:belongsToModule   "Person"@nb . #tilhører modul
+        modelldcatno:belongsToModule   modelldcatno:ModulPerson . #tilhører modul
 
 ex-simpleModel:etternavn  a               modelldcatno:Attribute ; #Attributt
         ###### recommended:
@@ -128,46 +128,55 @@ ex-simpleModel:etternavn  a               modelldcatno:Attribute ; #Attributt
         xsd:maxOccurs             "1"^^xsd:nonNegativeInteger ; #øvre multiplisitet
         xsd:minOccurs             "1"^^xsd:nonNegativeInteger ; #nedre multiplisitet
         ###### optional:
-        modelldcatno:belongsToModule   "Person"@nb . #tilhører modul
+        modelldcatno:belongsToModule   modelldcatno:ModulPerson . #tilhører modul
 
 #Type Tekst
 ex-simpleModel:Tekst  a                      modelldcatno:SimpleType ; #Enkeltype
         ###### mandatory:
         dct:title                      "Tekst"@nb ; #tittel
         ###### optional:
-        modelldcatno:belongsToModule   "Typer"@nb . #tilhører modul
+        modelldcatno:belongsToModule   modelldcatno:ModulTyper . #tilhører modul
 
 #Kodeliste Kjønn med kodeelementer.
 ex-simpleModel:Kjønn  a                      modelldcatno:CodeList ; #Kodeliste
         ###### mandatory:
         dct:title                      "Kjønn"@nb ; #tittel
         ###### optional:
-        modelldcatno:belongsToModule   "Person"@nb . #tilhører modul
+        modelldcatno:belongsToModule   modelldcatno:ModulPerson . #tilhører modul
 
 ex-simpleModel:Kvinne  a         modelldcatno:CodeElement ; #Kodeelement
         ###### mandatory:
         skos:inScheme   ex-simpleModel:Kjønn ; #i kodeliste
-        skos:notation  "kvinne"^^xsd:string ;
-        ###### optional:
-        modelldcatno:belongsToModule   "Person"@nb . #tilhører modul
+        skos:notation  "kvinne"^^xsd:string .
 
 ex-simpleModel:Mann  a           modelldcatno:CodeElement ; #Kodeelement
         ###### mandatory:
         skos:inScheme   ex-simpleModel:Kjønn ; #i kodeliste
-        skos:notation  "mann"^^xsd:string ;
-        ###### optional:
-        modelldcatno:belongsToModule   "Person"@nb . #tilhører modul
+        skos:notation  "mann"^^xsd:string .
 
 ex-simpleModel:Ubestemt  a       modelldcatno:CodeElement ; #Kodeelement
         ###### mandatory:
         skos:inScheme   ex-simpleModel:Kjønn ; #i kodeliste
-        skos:notation  "ubestemt"^^xsd:string ;
-        ###### optional:
-        modelldcatno:belongsToModule   "Person"@nb . #tilhører modul
+        skos:notation  "ubestemt"^^xsd:string .
 
 ex-simpleModel:Ukjent  a         modelldcatno:CodeElement ; #Kodeelement
         ###### mandatory:
         skos:inScheme   ex-simpleModel:Kjønn ; #i kodeliste
-        skos:notation  "ukjent"^^xsd:string ;
-        ###### optional:
-        modelldcatno:belongsToModule   "Person"@nb . #tilhører modul
+        skos:notation  "ukjent"^^xsd:string .
+
+#Moduler
+modelldcatno:ModulPerson   a      modelldcatno:Module ; #Modul
+        ###### mandatory:
+        dct:title       "Person"@nb . #tittel
+
+modelldcatno:ModulAktør    a      modelldcatno:Modul ; #Modul
+        ###### mandatory:
+        dct:title       "Aktør"@nb . #tittel
+
+modelldcatno:ModulTyper   a      modelldcatno:Module ; #Modul
+        ###### mandatory:
+        dct:title       "Typer"@nb . #tittel
+
+modelldcatno:ModulAdresse   a      modelldcatno:Module ; #Modul
+        ###### mandatory:
+        dct:title       "Adresse"@nb . #tittel
