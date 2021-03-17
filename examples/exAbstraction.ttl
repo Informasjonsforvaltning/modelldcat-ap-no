@@ -1,0 +1,47 @@
+# ----
+# Eksempel på bruk av abstraksjon (dcat:Abstraction)
+# status: under arbeid
+# ---
+
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex-abstraction: <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exAbstraction#> .
+
+#Eksempel på bruk av abstraksjon mellom klasser (modelldcatno:Abstraction).
+ex-abstraction:KlasseA a    modelldcatno:ObjectType ; #Objekttype
+        #mandatory
+        dct:title       "KlasseA"@nb . #tittel
+
+ex-abstraction:KlasseB a    modelldcatno:ObjectType ; #Objekttype
+        #mandatory
+        dct:title       "KlasseB"@nb ; #tittel
+        #recommended
+        modelldcatno:hasProperty ex-abstraction:abstraksjon1 . #harEgenskap
+
+ex-abstraction:abstraksjon1 a  modelldcatno:Abstraction ; #Abstraksjon
+        ###### recommended:
+        modelldcatno:isAbstractionOf  ex-abstraction:KlasseA . # er abstraksjon av
+
+#Eksempel med abstraksjon mellom attributter
+ex-abstraction:KlasseC a    modelldcatno:ObjectType ; #Objekttype
+        #mandatory
+        dct:title       "KlasseC"@nb ; #tittel
+        #recommended
+        modelldcatno:hasProperty  ex-abstraction:attributt1 . #harEgenskap
+
+ex-abstraction:KlasseD a    modelldcatno:ObjectType ; #Objekttype
+        #mandatory
+        dct:title       "KlasseD"@nb ; #tittel
+        #recommended
+        modelldcatno:hasProperty  ex-abstraction:attributt2 . #harEgenskap
+
+ex-abstraction:attributt1   a                   modelldcatno:Attribute ; #Attributt
+        ###### recommended:
+        dct:title          "attributt1"@nb . #tittel
+
+ex-abstraction:attributt2   a                   modelldcatno:Attribute , modelldcatno:Abstraction ; #Attributt og Abstraksjon
+        ###### recommended:
+        dct:title          "attributt2"@nb ; #tittel
+        modelldcatno:isAbstractionOf  ex-abstraction:attributt1 . #er abstraksjon av
