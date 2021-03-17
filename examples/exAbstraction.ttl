@@ -39,7 +39,7 @@ ex-abstraction:KlasseD a    modelldcatno:ObjectType ; #Objekttype
 
 ex-abstraction:attributt1   a                   modelldcatno:Attribute ; #Attributt
         ###### recommended:
-        dct:title          "attributt1"@nb ; #tittel
+        dct:title          "attributt1"@nb . #tittel
 
 ex-abstraction:attributt2   a                   modelldcatno:Attribute , modelldcatno:Abstraction ; #Attributt og Abstraksjon
         ###### recommended:
