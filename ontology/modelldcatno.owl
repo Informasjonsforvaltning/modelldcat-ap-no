@@ -280,6 +280,18 @@ foaf:homepage rdf:type owl:ObjectProperty ,
                          "homepage"@en .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#annotates
+modelldcatno:annotates rdf:type owl:ObjectProperty ;
+                       rdfs:domain modelldcatno:Note ;
+                       rdfs:range [ rdf:type owl:Class ;
+                                    owl:unionOf ( modelldcatno:ModelElement
+                                                  modelldcatno:Property
+                                                )
+                                  ] ;
+                       rdfs:label "anmerker"@nb ,
+                                  "annotates"@en .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#belongsToModule
 modelldcatno:belongsToModule rdf:type owl:ObjectProperty ,
                                       owl:FunctionalProperty ;
@@ -540,8 +552,8 @@ dct:identifier rdf:type owl:DatatypeProperty ;
                              owl:unionOf ( dcat:Resource
                                            foaf:Agent
                                            modelldcatno:CodeElement
-                                           modelldcatno:ConstraintRule
                                            modelldcatno:ModelElement
+                                           modelldcatno:Note
                                            modelldcatno:Property
                                          )
                            ] ;
@@ -581,8 +593,8 @@ dct:title rdf:type owl:DatatypeProperty ;
                                       skos:ConceptScheme
                                       dcat:Resource
                                       foaf:Document
-                                      modelldcatno:ConstraintRule
                                       modelldcatno:ModelElement
+                                      modelldcatno:Note
                                       modelldcatno:Property
                                     )
                       ] ;
@@ -1204,6 +1216,7 @@ modelldcatno:Composition rdf:type owl:Class ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#ConstraintRule
 modelldcatno:ConstraintRule rdf:type owl:Class ;
+                            rdfs:subClassOf modelldcatno:Note ;
                             rdfs:label "Begrensningsregel"@nb ,
                                        "Constraint Rule"@en .
 
@@ -1334,7 +1347,6 @@ modelldcatno:Module rdf:type owl:Class ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#Note
 modelldcatno:Note rdf:type owl:Class ;
-                  rdfs:subClassOf modelldcatno:Property ;
                   rdfs:label "Note"@en ,
                              "Note"@nb .
 
