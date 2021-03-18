@@ -1,0 +1,38 @@
+# ----
+# Eksempel på Note (modelldcatno:Note)
+# status: under arbeid
+# ---
+
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex-note: <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exNote#> .
+
+#Note på modellelement.
+ex-note:Person  a                     modelldcatno:ObjectType ; #Objekttype
+        ###### mandatory:
+        dct:title                     "Person"@nb ; #tittel
+        ###### recommended:
+        modelldcatno:hasProperty      ex-note:fulltNavn . #har egenskap
+
+ex-note:note1  a                             modelldcatno:Note ; #Note
+        ###### mandatory:
+        modelldcatno:annotates           ex-note:Person ; #anmerker
+        ###### recommended:
+        modelldcatno:propertyNote "Privat fysisk person"@nb . #anmerkning
+
+#Note på egenskap.
+ex-note:fulltNavn  a               modelldcatno:Attribute ; #Attributt
+        ###### recommended:
+        dct:title                           "fulltNavn"@nb ; #tittel
+        modelldcatno:hasSimpleType          ex-note:String . #har enkeltype
+
+ex-note:note2  a                             modelldcatno:Note ; #Note
+        ###### mandatory:
+        modelldcatno:annotates           ex-note:fulltNavn ; #anmerker
+        ###### recommended:
+        modelldcatno:propertyNote "full utskrevet navn"@nb . #anmerkning
+
+ex-note:String  a                      modelldcatno:SimpleType ; #Enkeltype
+        ###### mandatory:
+        dct:title                      "String"@nb . #tittel
