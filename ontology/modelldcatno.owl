@@ -316,16 +316,17 @@ modelldcatno:codeListReference rdf:type owl:ObjectProperty ,
                                           "ekstern kodeliste"@nb .
 
 
-###  https://data.norge.no/vocabulary/modelldcatno#constraint
-modelldcatno:constraint rdf:type owl:ObjectProperty ;
-                        rdfs:domain modelldcatno:ConstraintRule ;
-                        rdfs:range [ rdf:type owl:Class ;
-                                     owl:unionOf ( modelldcatno:ModelElement
-                                                   modelldcatno:Property
-                                                 )
-                                   ] ;
-                        rdfs:label "begrensning"@nb ,
-                                   "constraint"@en .
+###  https://data.norge.no/vocabulary/modelldcatno#constraints
+modelldcatno:constraints rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf modelldcatno:annotates ;
+                         rdfs:domain modelldcatno:ConstraintRule ;
+                         rdfs:range [ rdf:type owl:Class ;
+                                      owl:unionOf ( modelldcatno:ModelElement
+                                                    modelldcatno:Property
+                                                  )
+                                    ] ;
+                         rdfs:label "begrenser"@nb ,
+                                    "constraints"@en .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#contains
