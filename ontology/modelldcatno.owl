@@ -296,8 +296,8 @@ modelldcatno:annotates rdf:type owl:ObjectProperty ;
 modelldcatno:belongsToModule rdf:type owl:ObjectProperty ,
                                       owl:FunctionalProperty ;
                              rdfs:domain [ rdf:type owl:Class ;
-                                           owl:unionOf ( modelldcatno:ConstraintRule
-                                                         modelldcatno:ModelElement
+                                           owl:unionOf ( modelldcatno:ModelElement
+                                                         modelldcatno:Note
                                                          modelldcatno:Property
                                                        )
                                          ] ;
@@ -316,17 +316,17 @@ modelldcatno:codeListReference rdf:type owl:ObjectProperty ,
                                           "ekstern kodeliste"@nb .
 
 
-###  https://data.norge.no/vocabulary/modelldcatno#constraints
-modelldcatno:constraints rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf modelldcatno:annotates ;
-                         rdfs:domain modelldcatno:ConstraintRule ;
-                         rdfs:range [ rdf:type owl:Class ;
-                                      owl:unionOf ( modelldcatno:ModelElement
-                                                    modelldcatno:Property
-                                                  )
-                                    ] ;
-                         rdfs:label "begrenser"@nb ,
-                                    "constraints"@en .
+###  https://data.norge.no/vocabulary/modelldcatno#constrains
+modelldcatno:constrains rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf modelldcatno:annotates ;
+                        rdfs:domain modelldcatno:ConstraintRule ;
+                        rdfs:range [ rdf:type owl:Class ;
+                                     owl:unionOf ( modelldcatno:ModelElement
+                                                   modelldcatno:Property
+                                                 )
+                                   ] ;
+                        rdfs:label "begrenser"@nb ,
+                                   "constrains"@en .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#contains
