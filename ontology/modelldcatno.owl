@@ -1442,6 +1442,59 @@ modelldcatno:Xor rdf:type owl:Class ;
 
 
 #################################################################
+#    Individuals
+#################################################################
+
+###  https://data.norge.no/vocabulary/modelldcatno#applicationModel
+modelldcatno:applicationModel rdf:type owl:NamedIndividual ,
+                                       modelldcatno:CodeElement ;
+                              skos:inScheme modelldcatno:modelTypes ;
+                              skos:prefLabel "Anvendelsesmodell"@nb ,
+                                             "Application model"@en .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#commonSharedModel
+modelldcatno:commonSharedModel rdf:type owl:NamedIndividual ,
+                                        modelldcatno:CodeElement ;
+                               skos:inScheme modelldcatno:modelTypes ;
+                               skos:prefLabel "Common shared model"@en ,
+                                              "Fellesmodell"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#conceptualModel
+modelldcatno:conceptualModel rdf:type owl:NamedIndividual ,
+                                      modelldcatno:CodeElement ;
+                             skos:inScheme modelldcatno:modelTypes ;
+                             skos:prefLabel "Conceptual model"@en ,
+                                            "Konseptuell modell"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#logicalModel
+modelldcatno:logicalModel rdf:type owl:NamedIndividual ,
+                                   modelldcatno:CodeElement ;
+                          skos:inScheme modelldcatno:modelTypes ;
+                          skos:prefLabel "Logical model"@en ,
+                                         "Logisk modell"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#modelTypes
+modelldcatno:modelTypes rdf:type owl:NamedIndividual ,
+                                 modelldcatno:CodeList ;
+                        dct:title "Model types"@en ,
+                                  "Modelltyper"@nb ;
+                        rdfs:label "Model types"@en ,
+                                   "Modelltyper"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#physicalModel
+modelldcatno:physicalModel rdf:type owl:NamedIndividual ,
+                                    modelldcatno:CodeElement ;
+                           skos:inScheme modelldcatno:modelTypes ;
+                           skos:prefLabel "Fysisk modell"@nb ,
+                                          "Physical model"@en .
+
+
+#################################################################
 #    General axioms
 #################################################################
 
