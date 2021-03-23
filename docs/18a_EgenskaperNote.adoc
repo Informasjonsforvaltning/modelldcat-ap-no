@@ -4,6 +4,19 @@ Klassen _Note_ er valgfri.
 
 ==== Anbefalte egenskaper for klassen _Note_ [[Anbefalte-egenskaper-Note]]
 
+===== Note: anmerker (modelldcatno:annotates) [[Note-anmerker]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|annotates
+|URI|modelldcatno:annotates
+|Range|modelldcatno:ModelElement or modelldcatno:Property
+|Beskrivelse|Referanse til egenskap eller modellelement som noten omhandler.
+|Multiplisitet|0..n
+|Kravsnivå|Anbefalt
+|Kommentar|En note, med unntak av subklassen Beregningsregel (modelldcatno:ConstraintRule), må referere til en egenskap (modelldcatno:Property) eller et modellelement (modelldcatno:ModelElement).
+|===
+
 ===== Note: anmerkning (modelldcatno:propertyNote) [[Note-anmerkning]]
 
 [cols="30s,70d"]
@@ -14,4 +27,44 @@ Klassen _Note_ er valgfri.
 |Beskrivelse|Inneholder en kommentar i form av en fritekst. Bør gjentas når beskrivelsen finnes i flere ulike språk/målformer.
 |Multiplisitet|0..n
 |Kravsnivå|Anbefalt
+|Kommentar|En Note, med unntak av subklassen Beregningsregel (modelldcatno:ConstraintRule), må som minimum ha enten en tittel (dct:title) eller anmerkning (modelldcatno:propertyNote).
+|===
+
+===== Note: identifikator (dct:identifier) [[Note-identifikator]]
+
+[cols="30s,70d"]
+|===
+|*Engelsk navn*|identifier
+|*URI*|dct:identifier
+|*Range*|rdfs:Literal
+|*Beskrivelse*|Unik og persistent identifikator til en note.
+|*Multiplisitet*|0..1
+|*Kravsnivå*|Anbefalt
+|===
+
+===== Note: tittel (dct:title) [[Note-tittel]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|title
+|URI|dct:title
+|Range|rdfs:Literal
+|Beskrivelse|Tittelen til en note. Bør gjentas når tittelen finnes i flere ulike språk/målformer.
+|Multiplisitet|0..n
+|Kravsnivå|Anbefalt
+|Kommentar|En Note, med unntak av subklassen Beregningsregel (modelldcatno:ConstraintRule), må som minimum ha enten en tittel (dct:title) eller anmerkning (modelldcatno:propertyNote).
+|===
+
+==== Valgfrie egenskaper for klassen _Note_ [[Valgfrie-egenskaper-Note]]
+
+===== Note: tilhører modul (modelldcatno:belongsToModule) [[NOte-tilhørerModul]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|belongs to module
+|URI|modelldcatno:belongsToModule
+|Range|rdfs:Literal or xsd:anyURI
+|Beskrivelse|Brukes til å referere til en modellmodul/delmodell som noten inngår i.
+|Multiplisitet|0..n
+|Kravsnivå|Valgfri
 |===

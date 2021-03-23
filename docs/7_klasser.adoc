@@ -387,9 +387,8 @@ Klasse som representerer modellen som skal utveksles.
 [cols="30s,70"]
 |===
 |Engelsk navn|Note
-|Beskrivelse|Brukes til å beskrive en merknad, forklaring eller tilleggsopplysning til ett eller flere modellelementer.
+|Beskrivelse|Brukes til å beskrive en merknad, forklaring eller tilleggsopplysning til ett eller flere modellelementer og/eller egenskaper.
 |URI|modelldcatno:Note
-|Subklasse av|modelldcatno:Property
 |Kravsnivå|Valgfri
 |===
 
