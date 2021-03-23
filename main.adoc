@@ -1,4 +1,5 @@
 = Spesifikasjon for beskrivelse av informasjonsmodeller (ModellDCAT-AP-NO)
+- versjon 1.1 (under utvikling)
 :doctype: book
 :docinfo:
 :icons: font
@@ -21,9 +22,9 @@ NOTE: *Innmelding av feil og mangler:* +
 Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på https://github.com/Informasjonsforvaltning/modelldcat-ap-no/issues[Github Issues]. Dersom du ikke allerede har bruker på Github kan du opprette bruker gratis.
 
 *Status*: Gjeldende +
-*Versjon*: 1.1 (se <<Endringslogg, endringsloggen>>) +
+*Versjon*: 1.1 (under utvikling, se <<Endringslogg, endringsloggen>>) +
 *Publisert*: 2020-12-18  +
-*Oppdatert*: 2021-03-16 +
+*Oppdatert*: 2021-03-23 +
 *Gjeldende versjon*: https://data.norge.no/specification/modelldcat-ap-no/ +
 *Redaktørens utkast*: https://informasjonsforvaltning.github.io/modelldcat-ap-no/
 
