@@ -63,7 +63,7 @@ Klassen _Note_ er valgfri.
 |===
 |Engelsk navn|belongs to module
 |URI|modelldcatno:belongsToModule
-|Range|rdfs:Literal or xsd:anyURI
+|Range|modelldcatno:Module
 |Beskrivelse|Brukes til å referere til en modellmodul/delmodell som noten inngår i.
 |Multiplisitet|0..n
 |Kravsnivå|Valgfri
