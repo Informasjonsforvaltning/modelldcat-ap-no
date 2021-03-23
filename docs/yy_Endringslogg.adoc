@@ -48,9 +48,15 @@ Tabellen under gir en oversikt over endringene i klasser og egenskaper, fra v.1.
 |Modellelement: tilhører modul|modelldcatno:belongsToModule|Multiplisitet endret fra 0..1 til 0..n|Ett og samme modellelement kan tilhøre ulike moduler.
 |Modellelement: tilhører modul|modelldcatno:belongsToModule|Range endret fra rdfs:Literal eller xsd:anyURI til modelldcatno:Module|Som følge av at klassen Modul (modelldcatno:Module) er innført.
 |Modul | modelldcatno:Module | Ny klasse | Gjennom egenskapen tilhører modul (modelldcatno:belongsToModule), kan man angi om et modellelement, begrensningsregel eller egenskap tilhører en modellmodul. Ved konkret anvendelse har man sett at det er mer hensiktsmessig å framstille modul som egen klasse enn at egenskapen modelldcatno:belongsToModule har range rdfs:Literal eller xsd:anyURI.
+|Note|modelldcatno:Note|Klassen er ikke lenger definert som en subklasse til klassen Egenskap (modelldcatno:Property).|For at modellen skal gjøres lettere å lese og mer anvendbar med tanke på at en note både kan være knyttet til et modellelement og en egenskap.
+|Note: anmerker|modelldcatno:annotates|Ny egenskap|Som er resultat av at klassen Note (modelldcatno:Note) ikke lenger er en subklasse av Egenskap (modelldcatno:Property).
 |Note: anmerkning|modelldcatno:propertyNote|Manglende beskrivelse.|Skrivefeil.
+|Note: identifikator|dct:identifier|Ny egenskap.|Som er resultat av at klassen Note (modelldcatno:Note) ikke lenger er en subklasse av Egenskap (modelldcatno:Property) og arver egenskapen der fra.
+|Note: tittel|dct:title|Ny egenskap.|Som er resultat av at klassen Note (modelldcatno:Note) ikke lenger er en subklasse av Egenskap (modelldcatno:Property) og arver egenskapen der fra.
+|Note: tilhører modul|modelldcatno:belongsToModule|Ny egenskap.|Som er resultat av at klassen Note (modelldcatno:Note) ikke lenger er en subklasse av Egenskap (modelldcatno:Property) og arver egenskapen der fra.
 |Realisering: har leverandør | modelldcatno:hasSupplier | Utvidet range til også å omfatte modelldcatno:Property. | For å kunne si at en egenskap kan være en abstraksjon av enn annen egenskap eller modellelement.
 |Standard|dct:Standard|Hele klassen er ny|Brukes som range for dct:conformsTo og prof:isProfileOf, og som referanse fra f.eks. et dcat:Dataset til en informasjonsmodell som beskriver datasettet.
 4+|*Krav til bruk av kontrollerte vokabularer*
 |For egenskap dct:spatial | dct:spatial | "Administrative enheter" fra Kartverket anbefalt brukt | Fordi EU-vokalubarer som skal brukes, ikke inneholder norske administrative enheter som fylker og kommuner.
+|For egenskap dct:type i klassen modelldcatno:InformationModel | dct:type |Nytt kontrollert vokabular, Modelltyper, som skal brukes for egenskapen dct:type i klassen Informasjonsmodell (modelldcatno:InformationModel) | Egenskapen har manglet et kontrollert vokabular.
 |===
