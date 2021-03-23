@@ -21,7 +21,7 @@ Klassen _Note_ er valgfri.
 
 [cols="30s,70d"]
 |===
-|Engelsk navn|property note
+|Engelsk navn|note text
 |URI|modelldcatno:propertyNote
 |Range|rdfs:Literal
 |Beskrivelse|Inneholder en kommentar i form av en fritekst. Bør gjentas når beskrivelsen finnes i flere ulike språk/målformer.
