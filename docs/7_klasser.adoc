@@ -175,6 +175,7 @@ Klasse som representerer modellen som skal utveksles.
 |Engelsk navn|Constraint rule
 |Beskrivelse|Brukes til å beskrive en regel for hvilke begrensninger som gjelder for én eller flere egenskaper og/eller modellelementer.
 |URI|modelldcatno:ConstraintRule
+|Subklasse av|modelldcatno:Note
 |Kravsnivå|Anbefalt
 |===
 
