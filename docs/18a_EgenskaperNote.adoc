@@ -14,7 +14,7 @@ Klassen _Note_ er valgfri.
 |Beskrivelse|Referanse til egenskap eller modellelement som noten omhandler.
 |Multiplisitet|0..n
 |Kravsnivå|Anbefalt
-|Kommentar|En note, med unntak av subklassen Beregningsregel (modelldcatno:ConstraintRule), må referere til en egenskap (modelldcatno:Property) eller et modellelement (modelldcatno:ModelElement).
+|Kommentar|En note, med unntak av subklassen Begrensningsregel (modelldcatno:ConstraintRule), må referere til en egenskap (modelldcatno:Property) eller et modellelement (modelldcatno:ModelElement).
 |===
 
 ===== Note: anmerkning (modelldcatno:propertyNote) [[Note-anmerkning]]
@@ -27,7 +27,7 @@ Klassen _Note_ er valgfri.
 |Beskrivelse|Inneholder en kommentar i form av en fritekst. Bør gjentas når beskrivelsen finnes i flere ulike språk/målformer.
 |Multiplisitet|0..n
 |Kravsnivå|Anbefalt
-|Kommentar|En Note, med unntak av subklassen Beregningsregel (modelldcatno:ConstraintRule), må som minimum ha enten en tittel (dct:title) eller anmerkning (modelldcatno:propertyNote).
+|Kommentar|En Note, med unntak av subklassen Begrensningsregel (modelldcatno:ConstraintRule), må som minimum ha enten en tittel (dct:title) eller anmerkning (modelldcatno:propertyNote).
 |===
 
 ===== Note: identifikator (dct:identifier) [[Note-identifikator]]
@@ -52,7 +52,7 @@ Klassen _Note_ er valgfri.
 |Beskrivelse|Tittelen til en note. Bør gjentas når tittelen finnes i flere ulike språk/målformer.
 |Multiplisitet|0..n
 |Kravsnivå|Anbefalt
-|Kommentar|En Note, med unntak av subklassen Beregningsregel (modelldcatno:ConstraintRule), må som minimum ha enten en tittel (dct:title) eller anmerkning (modelldcatno:propertyNote).
+|Kommentar|En Note, med unntak av subklassen Begrensningsregel (modelldcatno:ConstraintRule), må som minimum ha enten en tittel (dct:title) eller anmerkning (modelldcatno:propertyNote).
 |===
 
 ==== Valgfrie egenskaper for klassen _Note_ [[Valgfrie-egenskaper-Note]]
