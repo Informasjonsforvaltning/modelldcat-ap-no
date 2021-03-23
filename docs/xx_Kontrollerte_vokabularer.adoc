@@ -115,7 +115,7 @@ http://sws.geonames.org/
 |Eksempel a|
 --------
 <> dct:type
-   <https://data.norge.no/vocabulary/modelldcatno#logicalModel >.
+      <https://data.norge.no/vocabulary/modelldcatno#logicalModel >.
 --------
 |===
 
