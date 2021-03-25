@@ -993,7 +993,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <p><strong>Status</strong>: Gjeldende<br>
 <strong>Versjon</strong>: 1.1 (under utvikling, se <a href="#Endringslogg">endringsloggen</a>)<br>
 <strong>Publisert</strong>: 2020-12-18 <br>
-<strong>Oppdatert</strong>: 2021-03-23<br>
+<strong>Oppdatert</strong>: 2021-03-25<br>
 <strong>Gjeldende versjon</strong>: <a href="https://data.norge.no/specification/modelldcat-ap-no/" class="bare">https://data.norge.no/specification/modelldcat-ap-no/</a><br>
 <strong>Redaktørens utkast</strong>: <a href="https://informasjonsforvaltning.github.io/modelldcat-ap-no/" class="bare">https://informasjonsforvaltning.github.io/modelldcat-ap-no/</a></p>
 </div>
@@ -1197,12 +1197,12 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <div class="sectionbody">
 <div class="imageblock">
 <div class="content">
-<a class="image" href="images/ModellDCAT-AP-NO-20210323.png"><img src="images/ModellDCAT-AP-NO-20210323.png" alt="ModellDCAT AP NO 20210323"></a>
+<a class="image" href="images/ModellDCAT-AP-NO-20210325.png"><img src="images/ModellDCAT-AP-NO-20210325.png" alt="ModellDCAT AP NO 20210325"></a>
 </div>
 <div class="title">Figur 1. Forenklet modell for ModellDCAT-AP-NO.</div>
 </div>
 <div class="paragraph">
-<p>Last ned modell: <a href="images/ModellDCAT-AP-NO-20210323.png">png</a> | <a href="files/ModellDCAT_AP_NO_20210323.eapx">XMI for EA</a></p>
+<p>Last ned modell: <a href="images/ModellDCAT-AP-NO-20210325.png">png</a> | <a href="files/ModellDCAT_AP_NO_20210325.eapx">XMI for EA</a></p>
 </div>
 </div>
 </div>
@@ -3360,7 +3360,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <i class="fa icon-note" title="Merk"></i>
 </td>
 <td class="content">
-Egenskapene til <code>modelldcatno:Attribute</code> er med unntak av <code>modelldcatno:hasValueFrom</code> gjensidig utelukkende, dvs. at de ikke kan forekomme samtidig. Egenskapen <code>modelldcatno:hasValueFrom</code> kan brukes i kombinasjon med <code>modelldcatno:hasSimpleType</code> til å utdype et dataformat.
+Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke kan forekomme samtidig.
 </td>
 </tr>
 </table>
@@ -7655,6 +7655,12 @@ Kommune <a href="https://data.geonorge.no/administrativeEnheter/kommune/id/" cla
 <td class="tableblock halign-left valign-top"><p class="tableblock">For å kunne si at en egenskap kan være en abstraksjon av en annen egenskap eller modellelement.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attributt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Attribute</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Alle egenskapene til Attributt-klassen er nå gjensidig utelukkende til hverandre, uten unntak som var i v.1.0.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For å unngå misforståelse.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Begrensningsregel</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:ConstraintRule</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ny klasse</p></td>
@@ -7959,7 +7965,7 @@ Kommune <a href="https://data.geonorge.no/administrativeEnheter/kommune/id/" cla
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2021-03-25 09:20:25 UTC
+Sist oppdatert 2021-03-25 13:28:10 UTC
 </div>
 </div>
 </body>
