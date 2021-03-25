@@ -2,7 +2,7 @@
 
 Klassen _Attributt_ er anbefalt.
 
-NOTE: Egenskapene til `modelldcatno:Attribute` er med unntak av `modelldcatno:hasValueFrom` gjensidig utelukkende, dvs. at de ikke kan forekomme samtidig. Egenskapen `modelldcatno:hasValueFrom` kan brukes i kombinasjon med `modelldcatno:hasSimpleType` til å utdype et dataformat.
+NOTE: Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke kan forekomme samtidig.
 
 ==== Anbefalte egenskaper for klassen _Attributt_ [[Anbefalte-egenskaper-attributt]]
 
