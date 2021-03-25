@@ -108,6 +108,20 @@ http://sws.geonames.org/
 [cols="30s,70d"]
 |===
 |URI til egenskapen|dct:type
+|Brukt i klasse|Informasjonsmodell (modelldcatno:InformationModel)
+|Navn på vokabularet|Modelltyper (https://data.norge.no/vocabulary/modelldcatno#modelTypes[vokabularet i RDF])
+|URI til vokabularet|https://data.norge.no/vocabulary/modelldcatno#
+|Kravsnivå|Obligatorisk
+|Eksempel a|
+--------
+<> dct:type
+      <https://data.norge.no/vocabulary/modelldcatno#logicalModel >.
+--------
+|===
+
+[cols="30s,70d"]
+|===
+|URI til egenskapen|dct:type
 |Brukt i klasse|Lisensdokument (dct:LicenseDocument)
 |Navn på vokabularet|http://purl.org/adms/licencetype/[ADMS licence type vocabulary (i RDF)]
 |URI til vokabularet|http://purl.org/adms/licencetype/[http://purl.org/adms/licencetype/]
