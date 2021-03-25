@@ -1,0 +1,101 @@
+#----------
+#Eksempel på relasjonsegenskaper.
+#status: under arbeid
+#----------
+
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
+@prefix ex-relation: <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exRelationProperty.ttl#> .
+
+#Eksempel på relasjon mellom navigerbare roller (modelldcatno:Role).
+ex-relation:Person  a                     modelldcatno:ObjectType ; #Objekttype
+        ###### mandatory:
+        dct:title                     "Person"@nb ; #tittel
+        ###### recommended:
+        modelldcatno:hasProperty       ex-relation:eiendel . #har egenskap
+
+ex-relation:Bil  a                    modelldcatno:ObjectType ; #Objekttype
+        ###### mandatory:
+        dct:title                      "Bil"@nb ; #tittel
+        ###### recommended:
+        modelldcatno:hasProperty       ex-relation:bileier . #har egenskap
+
+ex-relation:eiendel  a                     modelldcatno:Role ; #Rolle
+        ###### recommended:
+        dct:title                           "eiendel"@nb ; #tittel
+        modelldcatno:hasObjectType          ex-relation:Bil ; #har objekttype
+        xsd:maxOccurs                       "*" ; #øvre multiplisitet
+        xsd:minOccurs                       "0"^^xsd:nonNegativeInteger ; #nedre multiplisitet
+ ; #nedre multiplisitet
+        ###### optional:
+        modelldcatno:formsSymmetryWith      ex-relation:bileier ; #utgjør symmetrisk relasjon med, denne kan settes på den ene eller begge egenskapene som inngår i en relasjon.
+        modelldcatno:navigable              "true"^^xsd:boolean ; #navigerbar
+        modelldcatno:relationPropertyLabel  "Eier" . #relasjonsegenskapsnavn, kam settes på den ene eller begge egenskapene som inngår i en relasjon.
+
+ex-relation:bileier  a                     modelldcatno:Role ; #Rolle
+        ###### recommended:
+        dct:title                           "bileier"@nb ; #tittel
+        modelldcatno:hasObjectType          ex-relation:Person ; #har objekttype
+        xsd:maxOccurs                       "*" ; #øvre multiplisitet
+        xsd:minOccurs                       "1"^^xsd:nonNegativeInteger ; #nedre multiplisitet
+        ###### optional:
+        modelldcatno:navigable              "true"^^xsd:boolean . #navigerbar
+
+#Eksempel på relasjon mellom komposisjon (modelldcatno:Composition) og rolle (modelldcatno:Role), hvor komposisjonen er navigerbar.
+ex-relation:Sykkel  a                     modelldcatno:ObjectType ; #Objekttype
+        ###### mandatory:
+        dct:title                     "Sykkel"@nb ; #tittel
+        ###### recommended:
+        modelldcatno:hasProperty       ex-relation:del . #har egenskap
+
+ex-relation:Rammedel  a                    modelldcatno:ObjectType ; #Objekttype
+        ###### mandatory:
+        dct:title                      "Rammedel"@nb ; #tittel
+        ###### recommended:
+        modelldcatno:hasProperty       ex-relation:sykkel . #har egenskap
+
+ex-relation:del  a                     modelldcatno:Composition ; #Komposisjon
+        ###### recommended:
+        dct:title                           "del"@nb ; #tittel
+        modelldcatno:contains         ex-relation:Rammedel ; #har objekttype
+        xsd:maxOccurs                 "*" ; #øvre multiplisitet
+        xsd:minOccurs                 "1"^^xsd:nonNegativeInteger ;#nedre multiplisitet
+        ###### optional:
+        modelldcatno:formsSymmetryWith      ex-relation:sykkel ; #utgjør symmetrisk relasjon med, denne kan settes på den ene eller begge egenskapene som inngår i en relasjon.
+        modelldcatno:navigable              "true"^^xsd:boolean ; #navigerbar
+        modelldcatno:relationPropertyLabel  "Består av" . #relasjonsegenskapsnavn, kam settes på den ene eller begge egenskapene som inngår i en relasjon.
+
+
+ex-relation:sykkel  a                     modelldcatno:Role ; #Rolle
+        ###### recommended:
+        modelldcatno:hasObjectType          ex-relation:Sykkel ; #har objekttype
+        ###### optional:
+        modelldcatno:navigable              "false"^^xsd:boolean . #navigerbar
+
+#Eksempel på relasjon mellom samling (modelldcatno:Collection) og rolle (modelldcatno:Role), hvor navigerbarhet ikke er spesifisert.
+ex-relation:Forening  a                     modelldcatno:ObjectType ; #Objekttype
+        ###### mandatory:
+        dct:title                     "Forening"@nb ; #tittel
+        ###### recommended:
+        modelldcatno:hasProperty       ex-relation:medlem . #har egenskap
+
+ex-relation:Medlem  a                    modelldcatno:ObjectType ; #Objekttype
+        ###### mandatory:
+        dct:title                      "Medlem"@nb ; #tittel
+        ###### recommended:
+        modelldcatno:hasProperty       ex-relation:forening . #har egenskap
+
+ex-relation:medlem  a                     modelldcatno:Collection ; #Samling
+        ###### recommended:
+        dct:title                       "medlem"@nb ; #tittel
+        modelldcatno:hasMember          ex-relation:Medlem ; #har objekttype
+        xsd:maxOccurs                   "*" ; #øvre multiplisitet
+        xsd:minOccurs                   "0"^^xsd:nonNegativeInteger ;#nedre multiplisitet
+        ###### optional:
+        modelldcatno:formsSymmetryWith      ex-relation:sykkel ; #utgjør symmetrisk relasjon med, denne kan settes på den ene eller begge egenskapene som inngår i en relasjon.
+        modelldcatno:relationPropertyLabel  "Har" . #relasjonsegenskapsnavn, kam settes på den ene eller begge egenskapene som inngår i en relasjon.
+
+ex-relation:forening  a                     modelldcatno:Role ; #Rolle
+        ###### recommended:
+        modelldcatno:hasObjectType          ex-relation:Forening . #har objekttype

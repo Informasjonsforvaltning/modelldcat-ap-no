@@ -4,14 +4,15 @@ Klassen _Begrensningsregel_ er anbefalt.
 
 ==== Obligatoriske egenskaper for klassen _Begrensningsregel_ [[Obligatoriske-egenskaper-Begrensningsregel]]
 
-===== Begrensningsregel: begrensning (modelldcatno:constraint) [[Begrensningsregel-begrensning]]
+===== Begrensningsregel: begrenser (modelldcatno:constrains) [[Begrensningsregel-begrenser]]
 
 [cols="30s,70d"]
 |===
-|Engelsk navn|constraint
-|URI|modelldcatno:constraint
+|Engelsk navn|constrains
+|URI|modelldcatno:constrains
 |Range|modelldcatno:ModelElement or modelldcatno:Property
 |Beskrivelse|Referanse til egenskap eller modellelement som begrensningsregelen gjelder for.
+|Subegenskap av|modelldcatno:annotates
 |Multiplisitet|1..*
 |Kravsnivå|Obligatorisk
 |===
@@ -30,44 +31,4 @@ Klassen _Begrensningsregel_ er anbefalt.
 |Multiplisitet|0..n
 |Kravsnivå|Anbefalt
 |Kommentar|En Begrensningsregel, med unntak av subklassene Enten eller (modelldcatno:Xor) og Eller (modelldcatno:OR), må som minimum ha en tittel eller et begrensningsuttrykk.
-|===
-
-===== Begrensningsregel: identifikator (dct:identifier) [[Begrensningsregel-identifikator]]
-
-[cols="30s,70d"]
-|===
-|Engelsk navn|identifier
-|URI|dct:identifier
-|Range|rdfs:Literal
-|Beskrivelse|Unik og persistent identifisering av en begrensningsregel.
-|Multiplisitet|0..1
-|Kravsnivå|Anbefalt
-|===
-
-===== Begrensningsregel: tittel (dct:title) [[Begrensningsregel-tittel]]
-
-[cols="30s,70d"]
-|===
-|Engelsk navn|title
-|URI|dct:title
-|Range|rdfs:Literal
-|Beskrivelse|Navn på en begrensningsregel. Bør gjentas når navnet finnes i flere ulike språk/målformer.
-|Multiplisitet|0..n
-|Kravsnivå|Anbefalt
-|Kommentar|En Begrensningsregel, med unntak av subklassene Enten eller (modelldcatno:Xor) og Eller (modelldcatno:OR), må som minimum ha en tittel eller et begrensningsuttrykk.
-|===
-
-
-==== Valgfrie egenskaper for klassen _Begrensningsregel_ [[Valgfrie-egenskaper-Begrensningsregel]]
-
-===== Begrensningsregel: tilhører modul (modelldcatno:belongsToModule) [[Begrensningsregel-tilhørerModul]]
-
-[cols="30s,70d"]
-|===
-|Engelsk navn|belongs to module
-|URI|modelldcatno:belongsToModule
-|Range|rdfs:Literal or xsd:anyURI
-|Beskrivelse|Brukes til å referere til en modellmodul/delmodell som beregningsregelen inngår i.
-|Multiplisitet|0..n
-|Kravsnivå|Valgfri
 |===

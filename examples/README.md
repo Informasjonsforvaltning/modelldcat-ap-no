@@ -1,7 +1,11 @@
-# Eksempler på bruk av ModellDCAT-AP-NO
+# Eksempler på og testfiler for bruk av ModellDCAT-AP-NO
+
+Flere testfiler i denne mappa:
+- En komplett testfil for en modellcatalog (testModCat1.ttl)
+- En komplett testfil for en informasjonsmodell (testMod1.ttl)
+- En komplett testfil for en kodeliste (testCodeList.ttl)
+- En testfil for en Kodeliste som en informasjonsmodell (testMod2.ttl)
 
 Flere eksempler i denne mappa:
-- En komplett modellcatalog (exModCat1.ttl)
-- En komplett informasjonsmodell (exMod1.ttl)
-- En komplett kodeliste (exCodeList.ttl)
-- Kodeliste som en informasjonsmodell (exMod2.ttl)
+- Eksempel på begrensningsregel (exConstraintRule.ttl)
+- Eksempel på en enkel modell (exSimpleModel.ttl)

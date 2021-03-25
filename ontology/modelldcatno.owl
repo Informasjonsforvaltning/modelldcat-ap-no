@@ -280,6 +280,32 @@ foaf:homepage rdf:type owl:ObjectProperty ,
                          "homepage"@en .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#annotates
+modelldcatno:annotates rdf:type owl:ObjectProperty ;
+                       rdfs:domain modelldcatno:Note ;
+                       rdfs:range [ rdf:type owl:Class ;
+                                    owl:unionOf ( modelldcatno:ModelElement
+                                                  modelldcatno:Property
+                                                )
+                                  ] ;
+                       rdfs:label "anmerker"@nb ,
+                                  "annotates"@en .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#belongsToModule
+modelldcatno:belongsToModule rdf:type owl:ObjectProperty ,
+                                      owl:FunctionalProperty ;
+                             rdfs:domain [ rdf:type owl:Class ;
+                                           owl:unionOf ( modelldcatno:ModelElement
+                                                         modelldcatno:Note
+                                                         modelldcatno:Property
+                                                       )
+                                         ] ;
+                             rdfs:range modelldcatno:Module ;
+                             rdfs:label "belongs to module"@en ,
+                                        "konseptet tilhører modul"@nb .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#codeListReference
 modelldcatno:codeListReference rdf:type owl:ObjectProperty ,
                                         owl:FunctionalProperty ,
@@ -290,16 +316,17 @@ modelldcatno:codeListReference rdf:type owl:ObjectProperty ,
                                           "ekstern kodeliste"@nb .
 
 
-###  https://data.norge.no/vocabulary/modelldcatno#constraint
-modelldcatno:constraint rdf:type owl:ObjectProperty ;
+###  https://data.norge.no/vocabulary/modelldcatno#constrains
+modelldcatno:constrains rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf modelldcatno:annotates ;
                         rdfs:domain modelldcatno:ConstraintRule ;
                         rdfs:range [ rdf:type owl:Class ;
                                      owl:unionOf ( modelldcatno:ModelElement
                                                    modelldcatno:Property
                                                  )
                                    ] ;
-                        rdfs:label "begrensning"@nb ,
-                                   "constraint"@en .
+                        rdfs:label "begrenser"@nb ,
+                                   "constrains"@en .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#contains
@@ -526,8 +553,8 @@ dct:identifier rdf:type owl:DatatypeProperty ;
                              owl:unionOf ( dcat:Resource
                                            foaf:Agent
                                            modelldcatno:CodeElement
-                                           modelldcatno:ConstraintRule
                                            modelldcatno:ModelElement
+                                           modelldcatno:Note
                                            modelldcatno:Property
                                          )
                            ] ;
@@ -567,8 +594,8 @@ dct:title rdf:type owl:DatatypeProperty ;
                                       skos:ConceptScheme
                                       dcat:Resource
                                       foaf:Document
-                                      modelldcatno:ConstraintRule
                                       modelldcatno:ModelElement
+                                      modelldcatno:Note
                                       modelldcatno:Property
                                     )
                       ] ;
@@ -595,6 +622,15 @@ xsd:length rdf:type owl:DatatypeProperty ,
                       "length"@en .
 
 
+###  http://www.w3.org/2001/XMLSchema#maxExclusive
+xsd:maxExclusive rdf:type owl:DatatypeProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:domain modelldcatno:SimpleType ;
+                 rdfs:range xsd:decimal ;
+                 rdfs:label "maks eksklusiv"@nb ,
+                            "max exclusive"@en .
+
+
 ###  http://www.w3.org/2001/XMLSchema#maxInclusive
 xsd:maxInclusive rdf:type owl:DatatypeProperty ,
                           owl:FunctionalProperty ;
@@ -602,14 +638,6 @@ xsd:maxInclusive rdf:type owl:DatatypeProperty ,
                  rdfs:range xsd:decimal ;
                  rdfs:label "maks inklusiv"@nb ,
                             "max inclusive"@en .
-                            
-                            
-xsd:maxExclusive rdf:type owl:DatatypeProperty ,
-                          owl:FunctionalProperty ;
-                 rdfs:domain modelldcatno:SimpleType ;
-                 rdfs:range xsd:decimal ;
-                 rdfs:label "maks eksklusiv"@nb ,
-                            "max exclusive"@en .
 
 
 ###  http://www.w3.org/2001/XMLSchema#maxLength
@@ -760,24 +788,6 @@ foaf:name rdf:type owl:DatatypeProperty ;
                      "navn"@nb .
 
 
-###  https://data.norge.no/vocabulary/modelldcatno#belongsToModule
-modelldcatno:belongsToModule rdf:type owl:DatatypeProperty ,
-                                      owl:FunctionalProperty ;
-                             rdfs:domain [ rdf:type owl:Class ;
-                                           owl:unionOf ( modelldcatno:ConstraintRule
-                                                         modelldcatno:ModelElement
-                                                         modelldcatno:Property
-                                                       )
-                                         ] ;
-                             rdfs:range [ rdf:type rdfs:Datatype ;
-                                          owl:unionOf ( rdfs:Literal
-                                                        xsd:anyURI
-                                                      )
-                                        ] ;
-                             rdfs:label "belongs to module"@en ,
-                                        "konseptet tilhører modul"@nb .
-
-
 ###  https://data.norge.no/vocabulary/modelldcatno#constraintExpression
 modelldcatno:constraintExpression rdf:type owl:DatatypeProperty ;
                                   rdfs:domain modelldcatno:ConstraintRule ;
@@ -793,19 +803,6 @@ modelldcatno:informationModelIdentifier rdf:type owl:DatatypeProperty ;
                                         rdfs:isDefinedBy dct:identifier ;
                                         rdfs:label "informasjonsmodell-identifikator"@nb ,
                                                    "information model identifier"@en .
-
-
-###  https://data.norge.no/vocabulary/modelldcatno#modelElementBelongsToModule
-modelldcatno:modelElementBelongsToModule rdf:type owl:DatatypeProperty ,
-                                                  owl:FunctionalProperty ;
-                                         rdfs:domain modelldcatno:ModelElement ;
-                                         rdfs:range [ rdf:type rdfs:Datatype ;
-                                                      owl:unionOf ( rdfs:Literal
-                                                                    xsd:anyURI
-                                                                  )
-                                                    ] ;
-                                         rdfs:label "model element belongs to module"@en ,
-                                                    "modelelementet tilhører modul"@nb .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#navigable
@@ -1220,6 +1217,7 @@ modelldcatno:Composition rdf:type owl:Class ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#ConstraintRule
 modelldcatno:ConstraintRule rdf:type owl:Class ;
+                            rdfs:subClassOf modelldcatno:Note ;
                             rdfs:label "Begrensningsregel"@nb ,
                                        "Constraint Rule"@en .
 
@@ -1341,9 +1339,15 @@ modelldcatno:ModelElement rdf:type owl:Class ;
                                      "Modell element"@nb .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#Module
+modelldcatno:Module rdf:type owl:Class ;
+                    rdfs:subClassOf modelldcatno:ModelElement ;
+                    rdfs:label "Modul"@nb ,
+                               "Module"@en .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#Note
 modelldcatno:Note rdf:type owl:Class ;
-                  rdfs:subClassOf modelldcatno:Property ;
                   rdfs:label "Note"@en ,
                              "Note"@nb .
 
@@ -1436,6 +1440,59 @@ modelldcatno:Xor rdf:type owl:Class ;
                                  ] ;
                  rdfs:label "enten eller"@nb ,
                             "xor"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://data.norge.no/vocabulary/modelldcatno#applicationModel
+modelldcatno:applicationModel rdf:type owl:NamedIndividual ,
+                                       modelldcatno:CodeElement ;
+                              skos:inScheme modelldcatno:modelTypes ;
+                              skos:prefLabel "Anvendelsesmodell"@nb ,
+                                             "Application model"@en .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#commonSharedModel
+modelldcatno:commonSharedModel rdf:type owl:NamedIndividual ,
+                                        modelldcatno:CodeElement ;
+                               skos:inScheme modelldcatno:modelTypes ;
+                               skos:prefLabel "Common shared model"@en ,
+                                              "Fellesmodell"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#conceptualModel
+modelldcatno:conceptualModel rdf:type owl:NamedIndividual ,
+                                      modelldcatno:CodeElement ;
+                             skos:inScheme modelldcatno:modelTypes ;
+                             skos:prefLabel "Conceptual model"@en ,
+                                            "Konseptuell modell"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#logicalModel
+modelldcatno:logicalModel rdf:type owl:NamedIndividual ,
+                                   modelldcatno:CodeElement ;
+                          skos:inScheme modelldcatno:modelTypes ;
+                          skos:prefLabel "Logical model"@en ,
+                                         "Logisk modell"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#modelTypes
+modelldcatno:modelTypes rdf:type owl:NamedIndividual ,
+                                 modelldcatno:CodeList ;
+                        dct:title "Model types"@en ,
+                                  "Modelltyper"@nb ;
+                        rdfs:label "Model types"@en ,
+                                   "Modelltyper"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#physicalModel
+modelldcatno:physicalModel rdf:type owl:NamedIndividual ,
+                                    modelldcatno:CodeElement ;
+                           skos:inScheme modelldcatno:modelTypes ;
+                           skos:prefLabel "Fysisk modell"@nb ,
+                                          "Physical model"@en .
 
 
 #################################################################

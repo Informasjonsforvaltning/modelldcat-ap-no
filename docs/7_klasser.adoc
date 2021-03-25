@@ -175,6 +175,7 @@ Klasse som representerer modellen som skal utveksles.
 |Engelsk navn|Constraint rule
 |Beskrivelse|Brukes til å beskrive en regel for hvilke begrensninger som gjelder for én eller flere egenskaper og/eller modellelementer.
 |URI|modelldcatno:ConstraintRule
+|Subklasse av|modelldcatno:Note
 |Kravsnivå|Anbefalt
 |===
 
@@ -370,15 +371,25 @@ Klasse som representerer modellen som skal utveksles.
 |Kravsnivå|Valgfri
 |===
 
+=== Modul (modelldcatno:Module) [[klasse-module]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Module
+|Beskrivelse|Brukes til å beskrive en modellmodul/delmodell av modellen.
+|URI|modelldcatno:Module
+|Subklasse av|modelldcatno:ModelElement
+|Kravsnivå|Valgfri
+|Kommentar|Modeller kan bestå av moduler, som beslektede modellelementer er gruppert under.
+|===
 
 === Note (modelldcatno:Note) [[klasse-note]]
 
 [cols="30s,70"]
 |===
 |Engelsk navn|Note
-|Beskrivelse|Brukes til å beskrive en merknad, forklaring eller tilleggsopplysning til ett eller flere modellelementer.
+|Beskrivelse|Brukes til å beskrive en merknad, forklaring eller tilleggsopplysning til ett eller flere modellelementer og/eller egenskaper.
 |URI|modelldcatno:Note
-|Subklasse av|modelldcatno:Property
 |Kravsnivå|Valgfri
 |===
 

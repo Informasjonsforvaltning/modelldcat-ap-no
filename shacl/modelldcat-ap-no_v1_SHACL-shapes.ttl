@@ -21,7 +21,9 @@
 #  * Krav til bruk av kontrollerte vokabularer er nå implementert som egne xxxProperty_Shape.
 #    Dette muliggjør både gjenbruk av kravene, og egen sh:message (vs. sh:message på multilisitetssjekk).
 #
-#  * Anbefalte bruk av kontrollerte vokabularer er nå implementert med sh:severity sh:Warning.
+#  * Anbefalt bruk av kontrollerte vokabularer er nå implementert med sh:severity sh:Warning.
+#
+#  * For å unngå at validatoren også sjekker importerte grafer, er det brukt sh:targetObjectsOf istf. sh:targetClass
 # -+-+-+-+-+-
 
 
@@ -43,8 +45,8 @@
     dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ;
     dct:description "This document specifies the constraints on properties and classes expressed by ModellDCAT-AP-NO in SHACL."@en ;
     dct:title "The constraints of ModellDCAT-AP-NO"@en ;
-    owl:versionInfo "0.3";
-    dct:modified "2021-02-24"^^xsd:date ;
+    owl:versionInfo "0.4";
+    dct:modified "2021-03-23"^^xsd:date ;
     .
 
 # -+-+- Some "general" classes, though modified for modelldcatno when necessary -+-+-+-
@@ -78,7 +80,10 @@
             "Aktør kan ha maks. én aktørtype (dct:type)."@nb ;
         sh:severity sh:Violation ;
     ] ;
-    sh:targetClass foaf:Agent .
+    # sh:targetClass foaf:Agent ;
+    sh:or ( [sh:targetObjectsOf dct:publisher]
+            [sh:targetObjectsOf dct:creator] ) ;
+    .
 
 :ConceptScheme_Shape
     a sh:NodeShape ;
@@ -92,14 +97,18 @@
         sh:message "Thematic scheme must have at least one title (dct:title)."@en ,
             "Tematisk skjema må ha minst én tittel (dct:title)."@nb ;
     ] ;
-    sh:targetClass skos:ConceptScheme .
+    # sh:targetClass skos:ConceptScheme ;
+    sh:sh:targetObjectsOf dcat:themeTaxonomy ;
+    .
 
 :LicenceDocument_Shape
     a sh:NodeShape ;
     sh:name "Licence Document"@en , "Lisensdokument"@nb ;
     sh:property
         :TypeLicenseDocumentProperty_Shape ; # sjekker kontrollert vokabular
-    sh:targetClass dct:LicenseDocument .
+    # sh:targetClass dct:LicenseDocument ;
+    sh:targetObjectsOf dct:license ;
+    .
 
 :Location_Shape
     a sh:NodeShape ;
@@ -129,7 +138,9 @@
         sh:message "Location may have max. one geometry (locn:geometry)."@en ,
             "Lokasjon kan ha maks. en geometri (locn:geometry)."@nb ;
     ] ;
-    sh:targetClass dct:Location .
+    # sh:targetClass dct:Location ;
+    sh:targetObjectsOf dct:spatial ;
+    .
 
 :PeriodOfTime_Shape
     a sh:NodeShape ;
@@ -158,7 +169,9 @@
     ) ;
     sh:message "Enten startdato eller sluttdato må ha verdi"@nb ,
       "Either start date or end date must have value"@en ;
-    sh:targetClass dct:PeriodOfTime .
+    # sh:targetClass dct:PeriodOfTime ;
+    sh:targetObjectsOf dct:temporal ;
+    .
 
 # -+-+- Some commonly used property-shapes, especially for use of Controlled Vocabularies: -+-+-
 
@@ -279,7 +292,7 @@
                 [sh:class modelldcatno:Property] ) ; # v.1.1
         sh:severity sh:Violation ;
         sh:message "The property `is abstraction of` ((modelldcatno:isAbstractionOf) may have max. one value, whish mush be an instance of modelldcatno:ModelElement or modelldcatno:Property."@en ,
-            "Egenskal `er abstraksjon av` (modelldcatno:isAbstractionOf) kan ha maks. ´én verdi, som skal være instans av enten modelldcatno:ModelElement eller modelldcatno:Property."
+            "Egenskap `er abstraksjon av` (modelldcatno:isAbstractionOf) kan ha maks. ´én verdi, som skal være instans av enten modelldcatno:ModelElement eller modelldcatno:Property."
     ] ;
     sh:targetClass modelldcatno:Abstraction ;
   .
@@ -421,54 +434,55 @@
     sh:targetClass modelldcatno:Attribute ;
   .
 
-:Begrensningsregel_Shape # hele klassen er ny i v.1.1
+:ConstraintRule_Shape # hele klassen er ny i v.1.1
     a sh:NodeShape ;
     sh:name "Constraint rule"@en , "Begrensningsregel"@nb ;
-    sh:property [
-        sh:name "begrensning"@nb , "constraint"@en ;
-        sh:minCount 1 ;
-        sh:path modelldcatno:constraint;
-        sh:or (
-          [ sh:class modelldcatno:ModelElement ]
-          [ sh:class modelldcatno:Property ]
-        ) ;
+    sh:subClassOf modelldcatno:Note ;
+    sh:property [ # arvet fra modelldcatno:Note
+        sh:name "tittel"@nb , "title"@en ;
+        sh:path dct:title;
+        sh:nodeKind sh:Literal ;
         sh:severity sh:Violation ;
-        sh:message "Egenskap `begrensning` (modelldcatno:constraint) skal ha minst én verdi, som skal være instans av modelldcatno:ModelElement eller modelldcatno:Property."@nb ;
-    ], [
+    ] ;
+    sh:property [ # arvet fra modelldcatno:Note
+      sh:name "anmerkning"@nb , "note text"@en ;
+      sh:path modelldcatno:propertyNote ;
+      sh:nodeKind sh:Literal ;
+      sh:severity sh:Violation ;
+    ] ;
+    sh:property [ # arvet fra modelldcatno:Note
         sh:name "identifikator"@nb , "identifier"@en ;
         sh:maxCount 1 ;
         sh:path dct:identifier;
         sh:nodeKind sh:Literal ;
         sh:severity sh:Violation ;
         sh:message "Begresningsregel kan ha maks. én identifikator (dct:identifier)."@nb ;
-    ], [
+    ] ;
+    sh:property [ # arvet fra modelldcatno:Note
         sh:name "tilhører modul"@nb , "belongs to module"@en ;
         sh:path modelldcatno:belongsToModule;
-        sh:nodeKind sh:IRIOrLiteral ;
+        sh:class modelldcatno:Module ;
         sh:severity sh:Violation ;
-        sh:message "Egenskap `tilhører modul` (modelldcatno:belongsToModule skal være enten Literal eller IRI."@nb ;
+        sh:message "Egenskap `tilhører modul` (modelldcatno:belongsToModule skal være instans av modelldcatno:Module."@nb ;
     ] ;
-    sh:or ( # minst en av følgende to egenskaper må være med
-      [ sh:property [
-            sh:name "begrensningsuttrykk"@nb , "constraint expression"@en ;
-            sh:path modelldcatno:constraintExpression;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:severity sh:Violation ;
-            sh:message "Begrensningsregel (med unntak av subklassene modelldcatno:Xor og modelldcatno:OR) må som minimum ha en tittel (dct:title) eller et begrensningsuttrykk (modelldcatno:constraintExpression)."@nb ;
-        ]
-      ]
-      [ sh:property [
-          sh:name "tittel"@nb , "title"@en ;
-          sh:path dct:title;
-          sh:minCount 1 ;
-          sh:nodeKind sh:Literal ;
-          sh:severity sh:Violation ;
-          sh:message "Begrensningsregel (med unntak av subklassene modelldcatno:Xor og modelldcatno:OR) må som minimum ha en tittel (dct:title) eller et begrensningsuttrykk (modelldcatno:constraintExpression)."@nb ;
-        ]
-      ]
-    ) ;
-    sh:targetClass modelldcatno:Begrensningsregel ;
+    sh:property [ # egen egenskap
+        sh:name "begrenser"@nb , "constrains"@en ;
+        sh:minCount 1 ;
+        sh:path modelldcatno:constrains;
+        sh:or (
+          [ sh:class modelldcatno:ModelElement ]
+          [ sh:class modelldcatno:Property ]
+        ) ;
+        sh:severity sh:Violation ;
+        sh:message "Egenskap `begrenser` (modelldcatno:constrains) skal ha minst én verdi, som skal være instans av modelldcatno:ModelElement eller modelldcatno:Property."@nb ;
+    ];
+    sh:property [ # egen egenskap
+        sh:name "begrensningsuttrykk"@nb , "constraint expression"@en ;
+        sh:path modelldcatno:constraintExpression;
+        sh:nodeKind sh:Literal ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:targetClass modelldcatno:ConstraintRule ;
     .
 
 # Lager en egen shape for modelldcatno:Or og modelldcatno:Xor
@@ -555,7 +569,7 @@
         sh:class foaf:Document ;
         sh:path foaf:homepage ;
         sh:severity sh:Violation ;
-        sh:message "Egenskal `hjemmeside` (foaf:homepage) kan bare ha verdi som er instans av foaf:Document."@nb ;
+        sh:message "Egenskap `hjemmeside` (foaf:homepage) kan bare ha verdi som er instans av foaf:Document."@nb ;
     ], [
         sh:name "utgivelsesdato"@nb , "issued (release date)"@en ;
         sh:maxCount 1 ;
@@ -1047,20 +1061,73 @@
         sh:path modelldcatno:belongsToModule ;
         sh:severity sh:Violation ;
     ] ;
-    sh:targetClass modelldcatno:ModelElement ,
-        modelldcatno:CodeList ,
-        modelldcatno:ObjectType , modelldcatno:RootObjectType ,
-        modelldcatno:DataType , modelldcatno:SimpleType ;
+    sh:or ( # med subklassene her også
+        [ sh:targetClass modelldcatno:ModelElement ]
+        [ sh:targetClass modelldcatno:CodeList ]
+        [ sh:targetClass modelldcatno:ObjectType ]
+        [ sh:targetClass modelldcatno:RootObjectType ]
+        [ sh:targetClass modelldcatno:DataType ]
+        [ sh:targetClass modelldcatno:SimpleType ]
+        [ sh:targetClass modelldcatno:Module] ) ;
+  .
+
+:ModelTypeCV_Shape a sh:PropertyShape ; # modelltype, dct:type i modelldcatno:InformationModel
+    sh:name "modelltype"@nb , "model type"@en ;
+    sh:path dct:type ;
+    sh:patern "^https://data.norge.no/vocabulary/modelldcatno" ;
+    sh:flags "i" ;
+    sh:message "Modelltype (dct:type) skal være en av modelltype-verdiene fra https://data.norge.no/vocabulary/modelldcatno"@nb ;
+    sh:severity sh:Violation ;
+    sh:targetClass modelldcatno:InformationModel ;
   .
 
 :Note_Shape # @v.1.1
     a sh:NodeShape ;
     sh:name "Note"@nb, "Note"@en ;
-    sh:subClassOf modelldcatno:Property ;
     sh:property [
-        sh:name "anmerkning"@nb , "property note"@en ;
+        sh:name "anmerkning"@nb , "note text"@en ;
         sh:nodeKind sh:Literal ;
         sh:path modelldcatno:propertyNote ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:property [
+        sh:name "identifikator"@nb , "identifier"@en ;
+        sh:nodeKind sh:Literal ;
+        sh:path dct:identifier ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:or ( # minst en av følgende to egenskaper må være med
+      [   sh:property [
+              sh:name "anmerkning"@nb , "note text"@en ;
+              sh:minCount 1 ;
+              sh:path modelldcatno:propertyNote ;
+              sh:nodeKind sh:Literal ;
+              sh:severity sh:Violation ;
+              sh:message "En Note, med unntak av subklassen Beregningsregel (modelldcatno:ConstraintRule), må som minimum ha enten en tittel (dct:title) eller anmerkning (modelldcatno:propertyNote)."@nb ;
+          ]
+      ]
+      [ sh:property [
+          sh:name "tittel"@nb , "title"@en ;
+          sh:minCount 1 ;
+          sh:path dct:title;
+          sh:nodeKind sh:Literal ;
+          sh:severity sh:Violation ;
+          sh:message "En Note, med unntak av subklassen Beregningsregel (modelldcatno:ConstraintRule), må som minimum ha enten en tittel (dct:title) eller anmerkning (modelldcatno:propertyNote)."@nb ;
+        ]
+      ]
+    ) ;
+    sh:property [
+        sh:name "anmerker"@nb , "annotates"@en ;
+        sh:or (
+        [ sh:class modelldcatno:ModelElement ]
+        [ sh:class modelldcatno:Property ] ) ;
+        sh:path modelldcatno:annotates ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:property [
+        sh:name "tilhører modul"@nb , "belongs to module"@en ;
+        sh:class modelldcatno:Module ;
+        sh:path modelldcatno:belongsToModule ;
         sh:severity sh:Violation ;
     ] ;
     sh:targetClass modelldcatno:Note ;
