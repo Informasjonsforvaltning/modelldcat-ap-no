@@ -416,7 +416,11 @@ modelldcatno:hasObjectType rdf:type owl:ObjectProperty ;
 modelldcatno:hasOneOf rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf modelldcatno:hasType ;
                       rdfs:domain modelldcatno:Choice ;
-                      rdfs:range modelldcatno:ModelElement ;
+                      rdfs:range [ rdf:type owl:Class ;
+                                   owl:unionOf ( modelldcatno:ModelElement
+                                                 modelldcatno:Property
+                                               )
+                                 ] ;
                       owl:propertyDisjointWith modelldcatno:hasSome ;
                       rdfs:label "har en av"@nb ,
                                  "has one of"@en .
@@ -445,7 +449,11 @@ modelldcatno:hasSimpleType rdf:type owl:ObjectProperty ;
 modelldcatno:hasSome rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf modelldcatno:hasType ;
                      rdfs:domain modelldcatno:Choice ;
-                     rdfs:range modelldcatno:ModelElement ;
+                     rdfs:range [ rdf:type owl:Class ;
+                                  owl:unionOf ( modelldcatno:ModelElement
+                                                modelldcatno:Property
+                                              )
+                                ] ;
                      rdfs:comment "Brukes for å betegne at en valgmulighet ikke er ekskusiv, dvs. at man kan velge mer enn en."@nb ;
                      rdfs:label "has some"@en ,
                                 "kan ha"@nb .
@@ -986,6 +994,16 @@ dcat:Catalog rdf:type owl:Class ;
    owl:annotatedSource dcat:Catalog ;
    owl:annotatedProperty rdfs:subClassOf ;
    owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dct:title ;
+                         owl:minCardinality "1"^^xsd:nonNegativeInteger
+                       ] ;
+   rdfs:comment "This property contains a descriptive name of the Registry Catalogue. This property should be repeated in case there are various versions of the text in different languages."@nb
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource dcat:Catalog ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
                          owl:onProperty dct:language ;
                          owl:someValuesFrom dct:LinguisticSystem
                        ] ;
@@ -1093,16 +1111,6 @@ thesaurus, taxonomy) used to classify Datasets in a Registry Catalogue."""@nb
                          owl:minCardinality "1"^^xsd:nonNegativeInteger
                        ] ;
    rdfs:comment "This property contains an identifier for the catalogue."@en
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource dcat:Catalog ;
-   owl:annotatedProperty rdfs:subClassOf ;
-   owl:annotatedTarget [ rdf:type owl:Restriction ;
-                         owl:onProperty dct:title ;
-                         owl:minCardinality "1"^^xsd:nonNegativeInteger
-                       ] ;
-   rdfs:comment "This property contains a descriptive name of the Registry Catalogue. This property should be repeated in case there are various versions of the text in different languages."@nb
  ] .
 
 
