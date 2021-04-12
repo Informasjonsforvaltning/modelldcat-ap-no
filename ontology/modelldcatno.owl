@@ -412,16 +412,6 @@ modelldcatno:hasObjectType rdf:type owl:ObjectProperty ;
                                       "has object type"@en .
 
 
-###  https://data.norge.no/vocabulary/modelldcatno#hasOneOf
-modelldcatno:hasOneOf rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf modelldcatno:hasType ;
-                      rdfs:domain modelldcatno:Choice ;
-                      rdfs:range modelldcatno:ModelElement ;
-                      owl:propertyDisjointWith modelldcatno:hasSome ;
-                      rdfs:label "har en av"@nb ,
-                                 "has one of"@en .
-
-
 ###  https://data.norge.no/vocabulary/modelldcatno#hasProperty
 modelldcatno:hasProperty rdf:type owl:ObjectProperty ,
                                   owl:AsymmetricProperty ;
@@ -445,7 +435,11 @@ modelldcatno:hasSimpleType rdf:type owl:ObjectProperty ;
 modelldcatno:hasSome rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf modelldcatno:hasType ;
                      rdfs:domain modelldcatno:Choice ;
-                     rdfs:range modelldcatno:ModelElement ;
+                     rdfs:range [ rdf:type owl:Class ;
+                                  owl:unionOf ( modelldcatno:ModelElement
+                                                modelldcatno:Property
+                                              )
+                                ] ;
                      rdfs:comment "Brukes for å betegne at en valgmulighet ikke er ekskusiv, dvs. at man kan velge mer enn en."@nb ;
                      rdfs:label "has some"@en ,
                                 "kan ha"@nb .
