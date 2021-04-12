@@ -703,7 +703,9 @@
     sh:property [
         sh:name "kan ha"@nb , "has some"@en ;
         sh:path modelldcatno:hasSome ;
-        sh:class modelldcatno:ModelElement ;
+        sh:or (
+            [sh:class modelldcatno:ModelElement]
+            [sh:class modelldcatno:Property] ) ;
         sh:subClassOf modelldcatno:hasType ;
         sh:severity sh:Violation ;
         sh:message "Egenskap `kan ha` (modelldcatno:hasSome) kan bare ha verdi som er instans av modelldcatno:ModelElement."@nb ;
