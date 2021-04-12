@@ -1,0 +1,97 @@
+# ----
+# Eksempler på Choice (modelldcatno:Choice)
+# status: under arbeid
+# ---
+
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex-choice: <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exChoice#> .
+
+#Ett valg
+ex-choice:Person  a                     modelldcatno:ObjectType ; #Objekttype
+        ###### mandatory:
+        dct:title                     "Person"@nb ; #tittel
+        ###### recommended:
+        modelldcatno:hasProperty      ex-choice:bostedsadresse . #har egenskap
+
+ex-choice:bostedsadresse  a               modelldcatno:Role ; #Attributt
+        ###### recommended:
+        dct:title                     "bostedsadresse"@nb ; #tittel
+        modelldcatno:hasObjectType    ex-choice::Bostedsadresse ; #har objekttype
+        xsd:maxOccurs                 "*" ; #øvre multiplisitet
+        xsd:minOccurs                 "0"^^xsd:nonNegativeInteger . #nedre multiplisitet
+
+ex-choice:Bostedsadresse  a               modelldcatno:ObjectType ; #Objekttype
+        ###### mandatory:
+        dct:title                     "Bostedsadresse"@nb ; #tittel
+        ###### recommended:
+        modelldcatno:hasProperty      ex-choice:adressevalg . #har egenskap
+
+ex-choice:adressevalg a                             modelldcatno:Choice ; #Valg
+        ###### recommended:
+        dct:title                     "adressevalg"@nb ; #tittel
+        modelldcatno:hasSome          ex-choice:vegadresse , ex-choice:matrikkeladresse ; #kan ha
+        xsd:maxOccurs                 "1"^^xsd:nonNegativeInteger ; #øvre multiplisitet
+        xsd:minOccurs                 "1"^^xsd:nonNegativeInteger . #nedre multiplisitet
+
+ex-choice:vegadresse  a               modelldcatno:Role ; #Rolle
+        ###### recommended:
+        dct:title                     "vegadresse"@nb ; #tittel
+        modelldcatno:hasObjectType    ex-choice::Vegadresse ; #har objekttype
+        xsd:maxOccurs                 "2"^^xsd:nonNegativeInteger ; #øvre multiplisitet
+        xsd:minOccurs                 "0"^^xsd:nonNegativeInteger . #nedre multiplisitet
+
+ex-choice:matrikkeladresse  a          modelldcatno:Role ; #Rolle
+        ###### recommended:
+        dct:title                     "matrikkeladresse"@nb ; #tittel
+        modelldcatno:hasObjectType    ex-choice::Matrikkeladresse ; #har objekttype
+        xsd:maxOccurs                 "2"^^xsd:nonNegativeInteger ; #øvre multiplisitet
+        xsd:minOccurs                 "0"^^xsd:nonNegativeInteger . #nedre multiplisitet
+
+ex-choice:Vegadresse  a                     modelldcatno:ObjectType ; #Objekttype
+        ###### mandatory:
+        dct:title                     "Vegadresse"@nb . #tittel
+
+ex-choice:Matrikkeladresse  a                     modelldcatno:ObjectType ; #Objekttype
+        ###### mandatory:
+        dct:title                     "Matrikkeladresse"@nb . #tittel
+
+#Flervalg
+ex-choice:Kontaktinformasjon  a                     modelldcatno:ObjectType ; #Objekttype
+        ###### mandatory:
+        dct:title                     "Kontaktinformasjon"@nb ; #tittel
+        ###### recommended:
+        modelldcatno:hasProperty      ex-choice:telefonvalg . #har egenskap
+
+ex-choice:telefonvalg a                             modelldcatno:Choice ; #Valg
+        ###### recommended:
+        dct:title                     "telefonvalg"@nb ; #tittel
+        modelldcatno:hasSome          ex-choice:mobiltelefon , ex-choice:arbeidstelefon , ex-choice:hjemmetelefon; #kan ha
+        xsd:maxOccurs                 "2"^^xsd:nonNegativeInteger ; #øvre multiplisitet
+        xsd:minOccurs                 "0"^^xsd:nonNegativeInteger . #nedre multiplisitet
+
+ex-choice:mobiltelefon  a               modelldcatno:Attribute ; #Attributt
+        ###### recommended:
+        dct:title                           "mobiltelefon"@nb ; #tittel
+        modelldcatno:hasSimpleType    ex-choice:String ; #har enkeltype
+        xsd:maxOccurs                 "1"^^xsd:nonNegativeInteger ; #øvre multiplisitet
+        xsd:minOccurs                 "1"^^xsd:nonNegativeInteger . #nedre multiplisitet
+
+ex-choice:arbeidstelefon a               modelldcatno:Attribute ; #Attributt
+        ###### recommended:
+        dct:title                     "arbeidstelefon"@nb ; #tittel
+        modelldcatno:hasSimpleType    ex-choice:String ; #har enkeltype
+        xsd:maxOccurs                 "1"^^xsd:nonNegativeInteger ; #øvre multiplisitet
+        xsd:minOccurs                 "1"^^xsd:nonNegativeInteger . #nedre multiplisitet
+
+ex-choice:hjemmetelefon  a               modelldcatno:Attribute ; #Attributt
+        ###### recommended:
+        dct:title                     "hjemmetelefon"@nb ; #tittel
+        modelldcatno:hasSimpleType    ex-choice:String ; #har enkeltype
+        xsd:maxOccurs                 "1"^^xsd:nonNegativeInteger ; #øvre multiplisitet
+        xsd:minOccurs                 "1"^^xsd:nonNegativeInteger . #nedre multiplisitet
+
+ex-choice:String  a                      modelldcatno:SimpleType ; #Enkeltype
+        ###### mandatory:
+        dct:title                      "String"@nb . #tittel
