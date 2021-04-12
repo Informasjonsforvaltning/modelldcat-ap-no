@@ -9,7 +9,7 @@ Tabellen under gir en oversikt over endringene i klasser og egenskaper, fra v.1.
 |===
 |*Klasse-/egenskapsnavn*|*URI for klassen/egenskapen*|*Endring*|*Forklaring*
 |Abstraksjon: er abstraksjon av | modelldcatno:isAbstractionOf | Utvidet range til også å omfatte modelldcatno:Property. | For å kunne si at en egenskap kan være en abstraksjon av en annen egenskap eller modellelement.
-|Attributt |modelldcatno:Attribute | Alle egenskapene til Attributt-klassen er nå gjensidig utelukkende til hverandre, uten unntak som var i v.1.0. | For å unngå misforståelse.  
+|Attributt |modelldcatno:Attribute | Alle egenskapene til Attributt-klassen er nå gjensidig utelukkende til hverandre, uten unntak som var i v.1.0. | For å unngå misforståelse.
 |Begrensningsregel | modelldcatno:ConstraintRule | Ny klasse | Gjennom konkret anvendelse har man erfart at det er hensiktsmessig å uttrykke begrensninger som en egen klasse enn som en egenskap på klassene Modellelement og Egenskap.
 |Egenskap: identifikator|dct:identifier|Endret fra obligatorisk til anbefalt|For strengt å ha dette som obligatorisk når egenskapene som RDF-ressurser i tillegg tildeles egne URI’er.
 |Egenskap: identifikator|dct:identifier|Multiplisitet endret fra 1..1 til 0..1|Som følge av at kravsnivå endres fra obligatorisk til anbefalt.
@@ -57,6 +57,7 @@ Tabellen under gir en oversikt over endringene i klasser og egenskaper, fra v.1.
 |Note: tilhører modul|modelldcatno:belongsToModule|Ny egenskap.|Som er resultat av at klassen Note (modelldcatno:Note) ikke lenger er en subklasse av Egenskap (modelldcatno:Property) og arver egenskapen der fra.
 |Realisering: har leverandør | modelldcatno:hasSupplier | Utvidet range til også å omfatte modelldcatno:Property. | For å kunne si at en egenskap kan være en abstraksjon av enn annen egenskap eller modellelement.
 |Standard|dct:Standard|Hele klassen er ny|Brukes som range for dct:conformsTo og prof:isProfileOf, og som referanse fra f.eks. et dcat:Dataset til en informasjonsmodell som beskriver datasettet.
+|Valg: kan ha| modelldcatno:hasSome | Utvidet range til også å omfatte modelldcatno:Property | For å kunne støtte valg mellom egenskaper og ikke bare modellelementer.
 4+|*Krav til bruk av kontrollerte vokabularer*
 |For egenskap dct:spatial | dct:spatial | "Administrative enheter" fra Kartverket anbefalt brukt | Fordi EU-vokalubarer som skal brukes, ikke inneholder norske administrative enheter som fylker og kommuner.
 |For egenskap dct:type i klassen modelldcatno:InformationModel | dct:type |Nytt kontrollert vokabular, Modelltyper, som skal brukes for egenskapen dct:type i klassen Informasjonsmodell (modelldcatno:InformationModel) | Egenskapen har manglet et kontrollert vokabular.
