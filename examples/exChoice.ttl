@@ -39,15 +39,15 @@ ex-choice:vegadresse  a               modelldcatno:Role ; #Rolle
         ###### recommended:
         dct:title                     "vegadresse"@nb ; #tittel
         modelldcatno:hasObjectType    ex-choice::Vegadresse ; #har objekttype
-        xsd:maxOccurs                 "2"^^xsd:nonNegativeInteger ; #øvre multiplisitet
-        xsd:minOccurs                 "0"^^xsd:nonNegativeInteger . #nedre multiplisitet
+        xsd:maxOccurs                 "1"^^xsd:nonNegativeInteger ; #øvre multiplisitet
+        xsd:minOccurs                 "1"^^xsd:nonNegativeInteger . #nedre multiplisitet
 
 ex-choice:matrikkeladresse  a          modelldcatno:Role ; #Rolle
         ###### recommended:
         dct:title                     "matrikkeladresse"@nb ; #tittel
         modelldcatno:hasObjectType    ex-choice::Matrikkeladresse ; #har objekttype
-        xsd:maxOccurs                 "2"^^xsd:nonNegativeInteger ; #øvre multiplisitet
-        xsd:minOccurs                 "0"^^xsd:nonNegativeInteger . #nedre multiplisitet
+        xsd:maxOccurs                 "1"^^xsd:nonNegativeInteger ; #øvre multiplisitet
+        xsd:minOccurs                 "1"^^xsd:nonNegativeInteger . #nedre multiplisitet
 
 ex-choice:Vegadresse  a                     modelldcatno:ObjectType ; #Objekttype
         ###### mandatory:
