@@ -9,7 +9,7 @@
 @prefix ex-root: <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exRootObjectType#> .
 
 #Ett valg
-ex-root:Melding a                     modelldcatno:ObjectType ; #Rotobjekttype
+ex-root:Melding a                     modelldcatno:RootObjectType ; #Rotobjekttype
         ###### mandatory:
         dct:title                     "Melding"@nb ; #tittel
         ###### recommended:
