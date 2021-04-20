@@ -1,0 +1,51 @@
+# ----
+# Eksempl på RootObjectType (modelldcatno:RootObjectType)
+# status: under arbeid
+# ---
+
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex-root: <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exRootObjectType#> .
+
+#Ett valg
+ex-root:Melding a                     modelldcatno:ObjectType ; #Rotobjekttype
+        ###### mandatory:
+        dct:title                     "Melding"@nb ; #tittel
+        ###### recommended:
+        modelldcatno:hasProperty      ex-root:leveranse, ex-root:oppgavegiver . #har egenskap
+
+ex-root:leveranse  a               modelldcatno:Role ; #rolle
+        ###### recommended:
+        dct:title                     "leveranse"@nb ; #tittel
+        modelldcatno:hasObjectType    ex-root::Leveranse ; #har objekttype
+        xsd:maxOccurs                 "*" ; #øvre multiplisitet
+        xsd:minOccurs                 "1"^^xsd:nonNegativeInteger . #nedre multiplisitet
+
+ex-root:oppgavegiver  a               modelldcatno:Role ; #rolle
+        ###### recommended:
+        dct:title                     "oppgavegiver"@nb ; #tittel
+        modelldcatno:hasObjectType    ex-root::Oppgavegiver ; #har objekttype
+        xsd:maxOccurs                 "1" ; #øvre multiplisitet
+        xsd:minOccurs                 "1"^^xsd:nonNegativeInteger . #nedre multiplisitet
+
+ex-root:Leveranse a                     modelldcatno:ObjectType ; #Objekttype
+        ###### mandatory:
+        dct:title                     "Leveranse"@nb ; #tittel
+        ###### recommended:
+        modelldcatno:hasProperty      ex-root:oppgave . #har egenskap
+
+ex-root:oppgave  a               modelldcatno:Role ; #rolle
+        ###### recommended:
+        dct:title                     "oppgave"@nb ; #tittel
+        modelldcatno:hasObjectType    ex-root::OppgaveBarnepass ; #har objekttype
+        xsd:maxOccurs                 "*" ; #øvre multiplisitet
+        xsd:minOccurs                 "0"^^xsd:nonNegativeInteger . #nedre multiplisitet
+
+ex-root:OppgaveBarnepass  a               modelldcatno:ObjectType ; #Objekttype
+        ###### mandatory:
+        dct:title                     "OppgaveBarnepass"@nb . #tittel
+
+ex-root:Oppgavegiver a                     modelldcatno:ObjectType ; #Objekttype
+        ###### mandatory:
+        dct:title                     "Oppgavegiver"@nb . #tittel
