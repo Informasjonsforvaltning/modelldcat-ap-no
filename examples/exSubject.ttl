@@ -1,0 +1,27 @@
+# ----
+# Eksempl på bruk av subject (dct:subject)
+# status: under arbeid
+# ---
+
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex-subject: <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exSubject#> .
+
+#Eksempel
+ex-subject::Folkeregisterperson a        modelldcatno:ObjectType ; #Objekttype
+        ###### mandatory:
+        dct:title                     "Folkeregisterperson"@nb ; #tittel
+        ###### recommended:
+        dct:subject                   <http://begrepskatalogen/begrep/5138da00-be20-11e6-8004-005056825ca0> ; #begrep
+        modelldcatno:hasProperty      ex-subject:foedselsdato . #har egenskap
+
+ex-subject:foedselsdato   a               modelldcatno:Attribute ; #Attributt
+        ###### recommended:
+        dct:title                     "fødselsdato"@nb ; #tittel
+        dct:subject                   <http://begrepskatalogen/begrep/5138da00-be20-11e6-8004-005056825ca0> ; #begrep
+        modelldcatno:hasSimpleType    ex-subject:DatoKlokkeslett . #har enkeltype
+
+ex-subject:DatoKlokkeslett  a                      modelldcatno:SimpleType ; #Enkeltype
+        ###### mandatory:
+        dct:title                      "DatoKlokkeslett"@nb . #tittel
