@@ -16,10 +16,10 @@ ex-external:Person  a                     modelldcatno:ObjectType ; #Objekttype
 ex-external:bosted  a                     modelldcatno:Attribute ; #attributt
         ###### recommended:
         dct:title                     "bosted"@nb ;
-        modelldcatno:hasValueFrom     ex-external:Kommunenummer . #har verdi fra
+        modelldcatno:hasValueFrom     ex-external:Kommuneinndeling . #har verdi fra
 
-ex-external:Kommunenummer   a             modelldcatno:CodeList ; #Kodeliste
+ex-external:Kommuneinndeling   a             modelldcatno:CodeList ; #Kodeliste
         ###### mandatory:
-        dct:title                     "Kommunenummer"@nb ; #tittel
+        dct:title                     "StandardForKommuneinndeling"@nb ; #tittel
         ###### optional
         modelldcatno:codeListReference <https://www.ssb.no/klass/klassifikasjoner/131> . #ekstern kodeliste
