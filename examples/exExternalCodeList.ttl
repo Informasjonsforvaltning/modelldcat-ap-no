@@ -1,0 +1,25 @@
+#----------
+#Eksempel på bruk av referanse til ekstern kodeliste (modelldcatno:codeListReference).
+#status: under arbeid
+#----------
+
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
+@prefix ex-external: <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exExternalCodeList#> .
+
+ex-external:Person  a                     modelldcatno:ObjectType ; #Objekttype
+        ###### mandatory:
+        dct:title                     "Person"@nb ; #tittel
+        modelldcatno:hasProperty       ex-external:bosted . #har egenskap
+
+ex-external:bosted  a                     modelldcatno:Attribute ; #attributt
+        ###### recommended:
+        dct:title                     "bosted"@nb ;
+        modelldcatno:hasValueFrom     ex-external:Kommunenummer . #har verdi fra
+
+ex-external:Kommunenummer   a             modelldcatno:CodeList ; #Kodeliste
+        ###### mandatory:
+        dct:title                     "Kommunenummer"@nb ; #tittel
+        ###### optional
+        modelldcatno:codeListReference <https://www.ssb.no/klass/klassifikasjoner/131> . #ekstern kodeliste
