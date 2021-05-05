@@ -42,6 +42,8 @@ Tabellen under gir en oversikt over endringene i klasser og egenskaper, fra v.1.
 |Kodeelement: kode|skos:notation|Multiplisitet endret fra 0..1 til 1..1|Som følge av at kravsnivå endres fra anbefalt til obligatorisk.
 |Kodeelement: neste kodeelement|xkos:next|Endret multiplisitet, fra 0..n til 0..1.|Skrivefeil
 |Kodeelement: toppelement til|skos:topConceptOf|Endret norsk term|Bedre dekkende navn.
+|[.line-through]#Kodeliste: ekstern kodeliste# | [.line-through]#modelldcatno:codeListReference# | Fjernet. Erstattes med Kodeliste: har referanse (rdfs:seeAlso). | Egenskapen hadde modelldcatno:CodeList som range. Det blir feil, siden det er en ekstern beskrivelse av kodelisten man ønsker å referere til.
+|Kodeliste: har referanse | rdfs:seeAlso | Ny egenskap | Erstatter egenskapen Kodeliste: ekstern kodeliste  (modelldcatno:codeListReference).
 |Komposisjon|modelldcatno:Composition|Endring i tekst i oversikt over egenskaper per klasse.|Skrivefeil.  Det står at klassen har obligatoriske egenskaper. Dette stemmer ikke, den har kun én egenskap med kravsnivå anbefalt.
 |Modellelement: begrensning|modelldcatno:constraint|Ny egenskap|Gir en bedre forståelse av bruken av et modellelement.
 |Modellelement: identifikator|dct:identifier|Endret fra obligatorisk til anbefalt|Strengt For strengt å ha dette som en obligatorisk egenskap når modellelementene som RDF-ressurser i tillegg tildeles egne URI’er.
