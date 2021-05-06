@@ -323,7 +323,7 @@ Klasse som representerer modellen som skal utveksles.
 [cols="30s,70"]
 |===
 |Engelsk navn|Abstraction
-|Beskrivelse|Brukes til å beskrive at et modellelement er en abstraksjon av et annet.
+|Beskrivelse|Brukes til å beskrive at et modellelement/egenskap er en abstraksjon av et annet modellelement/egenskap.
 |URI|modelldcatno:Abstraction
 |Subklasse av|modelldcatno:Property
 

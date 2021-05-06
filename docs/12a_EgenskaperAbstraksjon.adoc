@@ -14,7 +14,7 @@ Klassen _Abstraksjon_ er valgfri.
 |Engelsk navn|is abstraction of
 |URI|modelldcatno:isAbstractionOf
 |Range|modelldcatno:ModelElement or modelldcatno:Property
-|Beskrivelse|Brukes til å referere til elementet det aktuelle elementet er en abstraksjon av.
+|Beskrivelse|Brukes til å referere til modellelementet/egenskapen det aktuelle modellelementet/egenskapen er en abstraksjon av.
 |Subegenskap av|modelldcatno:hasType
 |Multiplisitet|0..1
 |Kravsnivå|Anbefalt
