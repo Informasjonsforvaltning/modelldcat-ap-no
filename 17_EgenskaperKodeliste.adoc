@@ -4,14 +4,14 @@ Klassen _Kodeliste_ er anbefalt.
 
 ==== Valgfrie egenskaper for klassen _Kodeliste_ [[Valgfrie-egenskaper-Kodeliste]]
 
-===== Kodeliste: ekstern kodeliste (modelldcatno:codeListReference) [[Kodeliste-eksternKodeliste]]
+===== Kodeliste: har referanse (rdfs:seeAlso) [[Kodeliste-harReferanse]]
 
 [cols="30s,70d"]
 |===
-|Engelsk navn | code list reference
-|URI|modelldcatno:codeListReference
-|Range|modelldcatno:CodeList
-|Beskrivelse|Referanse til ekstern kodeliste.
-|Multiplisitet|0..1
+|Engelsk navn|has reference
+|URI|rdfs:seeAlso
+|Range|rdfs:Resource
+|Beskrivelse|Referanse til en ekstern beskrivelse av kodelisten.
+|Multiplisitet|0..n
 |Kravsnivå|Valgfri
 |===
