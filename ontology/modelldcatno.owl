@@ -26,9 +26,9 @@
 ###  http://www.w3.org/2000/01/rdf-schema#seeAlso
 rdfs:seeAlso rdfs:label "har referanse"@nb ,
                         "has reference"@en ;
-             rdfs:range rdfs:Literal ;
              rdfs:domain dct:Standard ,
-                         dcat:Resource .
+                         dcat:Resource ,
+                         modelldcatno:CodeList .
 
 
 ###  http://www.w3.org/2002/07/owl#versionInfo
@@ -304,16 +304,6 @@ modelldcatno:belongsToModule rdf:type owl:ObjectProperty ,
                              rdfs:range modelldcatno:Module ;
                              rdfs:label "belongs to module"@en ,
                                         "konseptet tilhører modul"@nb .
-
-
-###  https://data.norge.no/vocabulary/modelldcatno#codeListReference
-modelldcatno:codeListReference rdf:type owl:ObjectProperty ,
-                                        owl:FunctionalProperty ,
-                                        owl:IrreflexiveProperty ;
-                               rdfs:domain modelldcatno:CodeList ;
-                               rdfs:range modelldcatno:CodeList ;
-                               rdfs:label "code list reference"@en ,
-                                          "ekstern kodeliste"@nb .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#constrains
