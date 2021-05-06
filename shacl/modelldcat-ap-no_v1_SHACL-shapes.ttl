@@ -821,12 +821,10 @@
     sh:name "Codelist"@en , "Kodeliste"@nb ;
     sh:subClassOf modelldcatno:ModelElement ;
     sh:property [
-        sh:name "ekstern kodeliste"@nb , "code list reference"@en ;
-        sh:maxCount 1 ;
-        sh:class modelldcatno:CodeList ;
-        sh:path modelldcatno:codeListReference ;
+        sh:name "har referanse"@nb , "has reference"@en ;
+        sh:nodeKind sh:IRIOrLiteral ;
+        sh:path rdfs:seeAlso ;
         sh:severity sh:Violation ;
-        sh:message "Egenskap `ekstern kodeliste` (modelldcatno:codeListReference) kan ha maks. én verdi, som skal være instans av modelldcatno:CodeList."@nb ;
     ] ;
     sh:targetClass modelldcatno:CodeList ;
   .
