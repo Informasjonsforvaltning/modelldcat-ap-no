@@ -1,0 +1,29 @@
+# ----
+# Eksempl på SimpleType (modelldcatno:SimpleType)
+# status: under arbeid
+# ---
+
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex-simple: <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exSimpleType#> .
+
+#Ett valg
+ex-simple:Person a                     modelldcatno:ObjectType ; #Objekttype
+        ###### mandatory:
+        dct:title                     "Person"@nb ; #tittel
+        ###### recommended:
+        modelldcatno:hasProperty      ex-simple:alder . #har egenskap
+
+ex-simple:alder  a               modelldcatno:Attribute ; #Attributt
+        ###### recommended:
+        dct:title                   "alder"@nb ; #tittel
+        modelldcatno:hasSimpleType           ex-simple:integer . #har enkeltype
+
+ex-simple:integer  a                      modelldcatno:SimpleType ; #enkeltype
+        ###### recommended:
+        dct:title                      "integer"@nb ; #tittel
+        modelldcatno:typeDefinitionReference      "http://www.w3.org/2001/XMLSchema#integer"^^xsd:anyURI ; #typedefinisjon
+        ###### optional:
+        xsd:maxInclusive               "120"^^xsd:decimal ; #maksimum inklusivt
+        xsd:minInclusive               "0"^^xsd:decimal . #minimum inklusivt

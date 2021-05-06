@@ -1,0 +1,52 @@
+# ----
+# Eksempler på Module (modelldcatno:Module)
+# status: under arbeid
+# ---
+
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex-module: <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exModule#> .
+
+#Eksempel på bruk av module for å beskrive en stereotype (strukturEntitetstype)
+ex-module:Folkeregisterperson  a                      modelldcatno:ObjectType ; #Objekttype
+        ###### mandatory:
+        dct:title                      "Folkeregisterperson"@en ; #tittel
+        ###### optional:
+        modelldcatno:belongsToModule   ex-module:strukturEntitetstype . #tilhører modul
+
+ex-module:strukturEntitetstype   a      modelldcatno:Module ; #Modul
+        ###### mandatory:
+        dct:title       "strukturEntitetstype"@en . #tittel
+
+
+#Eksempel på bruk av module for å beskrive gruppering av objekttyper ved bruk av farger i diagrammer, se eksempel i veileder for ModellDCAT-AP-NO.
+ex-module:DataResource  a                      modelldcatno:ObjectType ; #Objekttype
+        ###### mandatory:
+        dct:title                      "DataResource"@en ; #tittel
+        ###### optional:
+        modelldcatno:belongsToModule   ex-module:GSIM_StructureGroup . #tilhører modul
+
+ex-module:GSIM_StructureGroup   a      modelldcatno:Module ; #Modul
+        ###### mandatory:
+        dct:title       "GSIM Structure Group"@en . #tittel
+
+ex-module:Concept  a                      modelldcatno:ObjectType ; #Objekttype
+        ###### mandatory:
+        dct:title                      "Concept"@en ; #tittel
+        ###### optional:
+        modelldcatno:belongsToModule   ex-module:GSIM_ConceptGroup . #tilhører modul
+
+ex-module:GSIM_ConceptGroup   a      modelldcatno:Module ; #Modul
+        ###### mandatory:
+        dct:title       "GSIM Concept Group"@en . #tittel
+
+ex-module:StatisticalProgram  a                      modelldcatno:ObjectType ; #Objekttype
+        ###### mandatory:
+        dct:title                      "StatisticalProgram"@en ; #tittel
+        ###### optional:
+        modelldcatno:belongsToModule   ex-module:GSIM_BusinessGroup . #tilhører modul
+
+ex-module:GSIM_BusinessGroup  a      modelldcatno:Module ; #Modul
+        ###### mandatory:
+        dct:title       "GSIM Business Group"@en . #tittel

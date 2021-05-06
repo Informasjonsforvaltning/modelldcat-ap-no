@@ -10,38 +10,44 @@
 @prefix ex-realization: <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exRealization#> .
 
 #Eksempel på bruk av realisering mellom klasser.
-ex-realization:KlasseA a    modelldcatno:ObjectType ; #Objekttype
+ex-realization:NamedPlace a    modelldcatno:ObjectType ; #Objekttype
         #mandatory
-        dct:title       "KlasseA"@nb . #tittel
+        dct:title       "NamedPlace"@en . #tittel
 
-ex-realization:KlasseB a    modelldcatno:ObjectType ; #Objekttype
+ex-realization:Navneenhet a    modelldcatno:ObjectType ; #Objekttype
         #mandatory
-        dct:title       "KlasseB"@nb ; #tittel
+        dct:title       "Navneenhet"@nb ; #tittel
         #recommended
         modelldcatno:hasProperty ex-realization:realisering1 . #harEgenskap
 
-ex-realization:realisering1 a  modelldcatno:Realization ; #Abstraksjon
+ex-realization:realisering1 a  modelldcatno:Realization ; #Realisering
         ###### recommended:
-        modelldcatno:hasSupplier ex-realization:KlasseA . # er abstraksjon av
+        modelldcatno:hasSupplier ex-realization:NamedPlace . # er leverandør av
 
-#Eksempel med realisering mellom attributter
-ex-realization:KlasseC a    modelldcatno:ObjectType ; #Objekttype
+#Eksempel med realisering mellom datatyper og attributter
+ex-realization:GeographicalName a    modelldcatno:DataType ; #Datatype
         #mandatory
-        dct:title       "KlasseC"@nb ; #tittel
+        dct:title       "GeographicalName"@en ; #tittel
         #recommended
-        modelldcatno:hasProperty  ex-realization:attributt1 . #harEgenskap
+        modelldcatno:hasProperty  ex-realization:sourceOfName . #harEgenskap
 
-ex-realization:KlasseD a    modelldcatno:ObjectType ; #Objekttype
+ex-realization:Skrivemaate a    modelldcatno:DataType ; #Datatype
         #mandatory
-        dct:title       "KlasseD"@nb ; #tittel
+        dct:title       "Skrivemåte"@nb ; #tittel
         #recommended
-        modelldcatno:hasProperty  ex-realization:attributt2 . #harEgenskap
+        modelldcatno:hasProperty  ex-realization:stedsnavnKilde . #harEgenskap
 
-ex-realization:attributt1   a                   modelldcatno:Attribute ; #Attributt
+ex-realization:sourceOfName  a   modelldcatno:Attribute ; #Attributt
         ###### recommended:
-        dct:title          "attributt1"@nb . #tittel
+        dct:title                           "sourceOfName"@en ; #tittel
+        modelldcatno:hasSimpleType           ex-realization:CharacterString  . #har enkeltype
 
-ex-realization:attributt2   a                   modelldcatno:Attribute , modelldcatno:Realization ; #Attributt og Abstraksjon
+ex-realization:stedsnavnKilde   a   modelldcatno:Attribute , modelldcatno:Realization ; #Attributt og Abstraksjon
         ###### recommended:
-        dct:title          "attributt2"@nb ; #tittel
-        modelldcatno:hasSupplier  ex-realization:attributt1 . #har leverandør
+        dct:title          "stedsnavnKilde"@nb ; #tittel
+        modelldcatno:hasSupplier             ex-realization:sourceOfName ; #har leverandør
+        modelldcatno:hasSimpleType           ex-realization:CharacterString  . #har enkeltype
+
+ex-realization:CharacterString  a   modelldcatno:SimpleType ;
+        #mandatory
+        dct:title       "CharacterString"@en . #tittel
