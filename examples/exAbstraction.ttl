@@ -9,39 +9,30 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex-abstraction: <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exAbstraction#> .
 
-#Eksempel på bruk av abstraksjon mellom klasser (modelldcatno:Abstraction).
-ex-abstraction:KlasseA a    modelldcatno:ObjectType ; #Objekttype
+ex-abstraction:EBU_EditorialObject a    modelldcatno:ObjectType ; #Objekttype
         #mandatory
-        dct:title       "KlasseA"@nb . #tittel
+        dct:title       "EBU_EditorialObject"@en . #tittel
 
-ex-abstraction:KlasseB a    modelldcatno:ObjectType ; #Objekttype
+ex-abstraction:Program a    modelldcatno:ObjectType ; #Objekttype
         #mandatory
-        dct:title       "KlasseB"@nb ; #tittel
+        dct:title       "Program"@nb ; #tittel
         #recommended
-        modelldcatno:hasProperty ex-abstraction:abstraksjon1 . #harEgenskap
+        modelldcatno:hasProperty ex-abstraction:abstraksjon , ex-abstraction:sammendrag . #harEgenskap
 
-ex-abstraction:abstraksjon1 a  modelldcatno:Abstraction ; #Abstraksjon
+ex-abstraction:abstraksjon a  modelldcatno:Abstraction ; #Abstraksjon
         ###### recommended:
-        modelldcatno:isAbstractionOf  ex-abstraction:KlasseA . # er abstraksjon av
+        modelldcatno:isAbstractionOf  ex-abstraction:EBU_EditorialObject . # er abstraksjon av
 
-#Eksempel med abstraksjon mellom attributter
-ex-abstraction:KlasseC a    modelldcatno:ObjectType ; #Objekttype
-        #mandatory
-        dct:title       "KlasseC"@nb ; #tittel
-        #recommended
-        modelldcatno:hasProperty  ex-abstraction:attributt1 . #harEgenskap
-
-ex-abstraction:KlasseD a    modelldcatno:ObjectType ; #Objekttype
-        #mandatory
-        dct:title       "KlasseD"@nb ; #tittel
-        #recommended
-        modelldcatno:hasProperty  ex-abstraction:attributt2 . #harEgenskap
-
-ex-abstraction:attributt1   a                   modelldcatno:Attribute ; #Attributt
+ex-abstraction:sammendrag   a                 modelldcatno:Attribute , modelldcatno:Abstraction ; #Attributt og Abstraksjon
         ###### recommended:
-        dct:title          "attributt1"@nb . #tittel
-
-ex-abstraction:attributt2   a                   modelldcatno:Attribute , modelldcatno:Abstraction ; #Attributt og Abstraksjon
+        dct:title          "sammendrag"@nb ; #tittel
         ###### recommended:
-        dct:title          "attributt2"@nb ; #tittel
-        modelldcatno:isAbstractionOf  ex-abstraction:attributt1 . #er abstraksjon av
+        modelldcatno:isAbstractionOf  ex-abstraction:Timeline . #er abstraksjon av
+        modelldcatno:hasSimpleType             ex-abstraction:TekstType . #har enkeltype
+
+ex-abstraction:Timeline a    modelldcatno:ObjectType ; #Objekttype
+        ###### mandatory:
+        dct:title       "Timeline"@en . #tittel
+
+ex-abstraction:TekstType a                 modelldcatno:SimpleType ; #Enkeltype
+        dct:title                       "TekstType"@nb . #tittel
