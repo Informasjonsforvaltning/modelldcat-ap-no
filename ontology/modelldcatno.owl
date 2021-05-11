@@ -28,6 +28,7 @@ rdfs:seeAlso rdfs:label "har referanse"@nb ,
                         "has reference"@en ;
              rdfs:domain dct:Standard ,
                          dcat:Resource ,
+                         foaf:Document ,
                          modelldcatno:CodeList .
 
 
