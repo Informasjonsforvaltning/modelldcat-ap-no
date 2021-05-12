@@ -45,8 +45,8 @@
     dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ;
     dct:description "This document specifies the constraints on properties and classes expressed by ModellDCAT-AP-NO in SHACL."@en ;
     dct:title "The constraints of ModellDCAT-AP-NO"@en ;
-    owl:versionInfo "0.4";
-    dct:modified "2021-03-23"^^xsd:date ;
+    owl:versionInfo "0.5";
+    dct:modified "2021-05-11"^^xsd:date ;
     .
 
 # -+-+- Some "general" classes, though modified for modelldcatno when necessary -+-+-+-
@@ -884,6 +884,12 @@
         sh:maxCount 1 ;
         sh:message "Egenskap `format` `(dct:format) kan ha maks. én verdi."@nb ;
         sh:severity sh:Violation ;
+    ],
+    [
+        sh:name "has reference"@en , "har referanse"@nb ;
+        sh:path rdfs:seeAlso ;
+        sh:nodeKind sh:IRIOrLiteral ;
+        sh:severity sh:Violation ;
     ] ;
     sh:targetClass foaf:Document ;
   .
@@ -1038,10 +1044,9 @@
     [
         sh:name "type"@nb , "type"@en ;
         sh:class skos:Concept ;
-        sh:maxCount 1 ;
         sh:path dct:type ;
         sh:severity sh:Violation ;
-        sh:message "Egenskap `type` (dct:type) kan ha maks. én verdi, som skal være instans av skos:Concept."@nb ;
+        sh:message "Egenskap `type` (dct:type) skal ha instans av skos:Concept som verdi."@nb ;
     ], [
         sh:name "utgivelsesdato"@nb , "issued"@en ;
         sh:node :DateOrDateTimeDataType_Shape ;
