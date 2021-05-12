@@ -660,6 +660,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#Valgfrie-egenskaper-Dokument">Valgfrie egenskaper for klassen <em>Dokument</em></a>
 <ul class="sectlevel5">
 <li><a href="#Dokument-format">Dokument: format (dct:format)</a></li>
+<li><a href="#Dokument-harReferanse">Dokument: har referanse (rdfs:seeAlso)</a></li>
 </ul>
 </li>
 </ul>
@@ -990,7 +991,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <p><strong>Status</strong>: Gjeldende<br>
 <strong>Versjon</strong>: 1.1 (under utvikling, se <a href="#Endringslogg">endringsloggen</a>)<br>
 <strong>Publisert</strong>: 2020-12-18 <br>
-<strong>Oppdatert</strong>: 2021-05-05<br>
+<strong>Oppdatert</strong>: 2021-05-12<br>
 <strong>Gjeldende versjon</strong>: <a href="https://data.norge.no/specification/modelldcat-ap-no/" class="bare">https://data.norge.no/specification/modelldcat-ap-no/</a><br>
 <strong>Redaktørens utkast</strong>: <a href="https://informasjonsforvaltning.github.io/modelldcat-ap-no/" class="bare">https://informasjonsforvaltning.github.io/modelldcat-ap-no/</a></p>
 </div>
@@ -1194,12 +1195,12 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <div class="sectionbody">
 <div class="imageblock">
 <div class="content">
-<a class="image" href="images/ModellDCAT-AP-NO-20210505.png"><img src="images/ModellDCAT-AP-NO-20210505.png" alt="ModellDCAT AP NO 20210505"></a>
+<a class="image" href="images/ModellDCAT-AP-NO-20210512.png"><img src="images/ModellDCAT-AP-NO-20210512.png" alt="ModellDCAT AP NO 20210512"></a>
 </div>
 <div class="title">Figur 1. Forenklet modell for ModellDCAT-AP-NO.</div>
 </div>
 <div class="paragraph">
-<p>Last ned modell: <a href="images/ModellDCAT-AP-NO-20210505.png">png</a> | <a href="files/ModellDCAT_AP_NO_20210505.eapx">XMI for EA</a></p>
+<p>Last ned modell: <a href="images/ModellDCAT-AP-NO-20210512.png">png</a> | <a href="files/ModellDCAT-AP-NO-20210512.eapx">XMI for EA</a></p>
 </div>
 </div>
 </div>
@@ -1570,7 +1571,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Subklasse av</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dct:Standard</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:Standard, dcat:Resource</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
@@ -3727,6 +3728,41 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </tbody>
 </table>
 </div>
+<div class="sect5">
+<h6 id="Dokument-harReferanse"><a class="link" href="#Dokument-harReferanse">Dokument: har referanse (rdfs:seeAlso)</a></h6>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">has reference</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:seeAlso</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Resource</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å oppgi referanse til dokumentet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -5489,7 +5525,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
@@ -7664,6 +7700,12 @@ Kommune <a href="https://data.geonorge.no/administrativeEnheter/kommune/id/" cla
 <td class="tableblock halign-left valign-top"><p class="tableblock">Gjennom konkret anvendelse har man erfart at det er hensiktsmessig å uttrykke begrensninger som en egen klasse enn som en egenskap på klassene Modellelement og Egenskap.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dokument: har referanse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:seeAlso</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ny egenskap.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gjør det mulig å referere til et dokument.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Egenskap: identifikator</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Endret fra obligatorisk til anbefalt</p></td>
@@ -7742,6 +7784,12 @@ Kommune <a href="https://data.geonorge.no/administrativeEnheter/kommune/id/" cla
 <td class="tableblock halign-left valign-top"><p class="tableblock">Som et resultat av at klassen Beregningsregel (modelldcatno:ConstraintRule) innføres.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:InformationModel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Føyet til dcat:Resource i ruten "Subklasse av"</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Presisering av at klassen er en subklasse av både Standard (dct:Standard) og Katalogisert ressurs (dcat:Resource), som ikke har kommet godt nok fram av spesifikasjonen.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: beskrivelse</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dct:description</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Endret fra obligatorisk til anbefalt</p></td>
@@ -7788,6 +7836,12 @@ Kommune <a href="https://data.geonorge.no/administrativeEnheter/kommune/id/" cla
 <td class="tableblock halign-left valign-top"><p class="tableblock">dcat:theme</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 1..n til 0..n</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravsnivå endres fra obligatorisk til anbefalt.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endres fra 0..1 til 0..n.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">En modell kan være av flere typer. F.eks. kan en logisk modell også være en fellesmodell.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: anbefalt kodetekst</p></td>
@@ -7980,7 +8034,7 @@ Kommune <a href="https://data.geonorge.no/administrativeEnheter/kommune/id/" cla
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2021-05-06 08:18:59 UTC
+Sist oppdatert 2021-05-12 12:50:07 UTC
 </div>
 </div>
 </body>
