@@ -28,6 +28,7 @@ rdfs:seeAlso rdfs:label "har referanse"@nb ,
                         "has reference"@en ;
              rdfs:domain dct:Standard ,
                          dcat:Resource ,
+                         foaf:Document ,
                          modelldcatno:CodeList .
 
 
@@ -1432,6 +1433,7 @@ modelldcatno:Xor rdf:type owl:Class ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#applicationModel
 modelldcatno:applicationModel rdf:type owl:NamedIndividual ,
+                                       skos:Concept ,
                                        modelldcatno:CodeElement ;
                               skos:inScheme modelldcatno:modelTypes ;
                               skos:prefLabel "Anvendelsesmodell"@nb ,
@@ -1440,6 +1442,7 @@ modelldcatno:applicationModel rdf:type owl:NamedIndividual ,
 
 ###  https://data.norge.no/vocabulary/modelldcatno#commonSharedModel
 modelldcatno:commonSharedModel rdf:type owl:NamedIndividual ,
+                                        skos:Concept ,
                                         modelldcatno:CodeElement ;
                                skos:inScheme modelldcatno:modelTypes ;
                                skos:prefLabel "Common shared model"@en ,
@@ -1448,6 +1451,7 @@ modelldcatno:commonSharedModel rdf:type owl:NamedIndividual ,
 
 ###  https://data.norge.no/vocabulary/modelldcatno#conceptualModel
 modelldcatno:conceptualModel rdf:type owl:NamedIndividual ,
+                                      skos:Concept ,
                                       modelldcatno:CodeElement ;
                              skos:inScheme modelldcatno:modelTypes ;
                              skos:prefLabel "Conceptual model"@en ,
@@ -1456,6 +1460,7 @@ modelldcatno:conceptualModel rdf:type owl:NamedIndividual ,
 
 ###  https://data.norge.no/vocabulary/modelldcatno#logicalModel
 modelldcatno:logicalModel rdf:type owl:NamedIndividual ,
+                                   skos:Concept ,
                                    modelldcatno:CodeElement ;
                           skos:inScheme modelldcatno:modelTypes ;
                           skos:prefLabel "Logical model"@en ,
@@ -1473,6 +1478,7 @@ modelldcatno:modelTypes rdf:type owl:NamedIndividual ,
 
 ###  https://data.norge.no/vocabulary/modelldcatno#physicalModel
 modelldcatno:physicalModel rdf:type owl:NamedIndividual ,
+                                    skos:Concept ,
                                     modelldcatno:CodeElement ;
                            skos:inScheme modelldcatno:modelTypes ;
                            skos:prefLabel "Fysisk modell"@nb ,
