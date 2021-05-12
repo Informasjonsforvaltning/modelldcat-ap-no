@@ -329,7 +329,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |URI|dct:type
 |Range|skos:Concept
 |Beskrivelse|Referanse til typedefinisjoner som kategoriserer modellen og abstraksjonsnivået.
-|Multiplisitet|0..1
+|Multiplisitet|0..n
 |Kravsnivå|Valgfri
 |===
 
