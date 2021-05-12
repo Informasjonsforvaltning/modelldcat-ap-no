@@ -11,6 +11,7 @@ Tabellen under gir en oversikt over endringene i klasser og egenskaper, fra v.1.
 |Abstraksjon: er abstraksjon av | modelldcatno:isAbstractionOf | Utvidet range til også å omfatte modelldcatno:Property. | For å kunne si at en egenskap kan være en abstraksjon av en annen egenskap eller modellelement.
 |Attributt |modelldcatno:Attribute | Alle egenskapene til Attributt-klassen er nå gjensidig utelukkende til hverandre, uten unntak som var i v.1.0. | For å unngå misforståelse.
 |Begrensningsregel | modelldcatno:ConstraintRule | Ny klasse | Gjennom konkret anvendelse har man erfart at det er hensiktsmessig å uttrykke begrensninger som en egen klasse enn som en egenskap på klassene Modellelement og Egenskap.
+|Dokument: har referanse | rdfs:seeAlso | Ny egenskap. | Gjør det mulig å referere til et dokument.
 |Egenskap: identifikator|dct:identifier|Endret fra obligatorisk til anbefalt|For strengt å ha dette som obligatorisk når egenskapene som RDF-ressurser i tillegg tildeles egne URI’er.
 |Egenskap: identifikator|dct:identifier|Multiplisitet endret fra 1..1 til 0..1|Som følge av at kravsnivå endres fra obligatorisk til anbefalt.
 |Egenskap: navigerbar|modelldcatno:navigable|Ny egenskap|For å gi en bedre beskrivelse av retninger på relasjoner, som f.eks. roller, komposisjoner og samlinger.
@@ -32,6 +33,7 @@ Tabellen under gir en oversikt over endringene i klasser og egenskaper, fra v.1.
 |Informasjonsmodell: identifikator|dct:identifier|Multiplisitet endret fra 1..1 til 0..1|Som følge av at kravsnivå endres fra obligatorisk til anbefalt.
 |Informasjonsmodell: tema|dcat:theme|Endret fra obligatorisk til anbefalt|For strengt å ha dette som en obligatorisk egenskap. Det er ikke alle virksomheter som har kategorisert modellene sine etter tema.
 |Informasjonsmodell: tema|dcat:theme|Multiplisitet endret fra 1..n til 0..n|Som følge av at kravsnivå endres fra obligatorisk til anbefalt.
+|Informasjonsmodell: type | dct:type | Multiplisitet endres fra 0..1 til 0..n. | En modell kan være av flere typer. F.eks. kan en logisk modell også være en fellesmodell.
 |Kodeelement: anbefalt kodetekst|skos:prefLabel|Endret fra obligatorisk til anbefalt|Det er ikke alle kodeelementer som har en anbefalt kodetekst knyttet til seg. For eksempel vil UML enumerasjoner inneholde bare kodeverdier.
 |Kodeelement: anbefalt kodetekst|skos:prefLabel|Multiplisitet endret fra 1..n til 0..n|Som følge av at kravsnivå endres fra obligatorisk til anbefalt.
 |Kodeelement: forrige kodeelement|xkos:previous|Endret multiplisitet, fra 0..n til 0..1.|Skrivefeil
