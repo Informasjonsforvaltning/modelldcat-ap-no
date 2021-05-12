@@ -138,7 +138,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Engelsk navn|Information model
 |Beskrivelse|Brukes til å beskrive en informasjonsmodell for en spesifikk informasjonsutveksling eller applikasjon.
 |URI|modelldcatno:InformationModel
-|Subklasse av| dct:Standard
+|Subklasse av| dct:Standard, dcat:Resource
 |Kommentar|Synonym: løsningsmodell, meldingsmodell, tjenestemodell, datamodell, implementasjonsmodell, konstruksjonsmodell.
 Klasse som representerer modellen som skal utveksles.
 |Kravsnivå|Obligatorisk
