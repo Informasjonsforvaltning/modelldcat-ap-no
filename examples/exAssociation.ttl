@@ -30,4 +30,4 @@ ex-relation:Person  a                     modelldcatno:ObjectType ; #Objekttype
 
 ex-relation:Personnavn a                    modelldcatno:ObjectType ; #Objekttype
         ###### mandatory:
-        dct:title                      "Personnavn"@nb ; #tittel
+        dct:title                      "Personnavn"@nb . #tittel

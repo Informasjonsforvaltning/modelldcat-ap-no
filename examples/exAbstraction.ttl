@@ -27,7 +27,7 @@ ex-abstraction:sammendrag   a                 modelldcatno:Attribute , modelldca
         ###### recommended:
         dct:title          "sammendrag"@nb ; #tittel
         ###### recommended:
-        modelldcatno:isAbstractionOf  ex-abstraction:Timeline . #er abstraksjon av
+        modelldcatno:isAbstractionOf  ex-abstraction:Timeline ; #er abstraksjon av
         modelldcatno:hasSimpleType             ex-abstraction:TekstType . #har enkeltype
 
 ex-abstraction:Timeline a    modelldcatno:ObjectType ; #Objekttype
