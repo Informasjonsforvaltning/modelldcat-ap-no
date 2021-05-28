@@ -11,7 +11,13 @@
 
 ex-abstraction:EditorialObject a    modelldcatno:ObjectType ; #Objekttype
         #mandatory
-        dct:title       "EditorialObject"@en . #tittel
+        dct:title       "EditorialObject"@en ; #tittel
+        #recommended
+        modelldcatno:hasProperty  ex-abstraction:timeline .
+
+ex-abstraction:timeline  a               modelldcatno:Role ; #Rolle
+      #recommended
+      modelldcatno:hasObjectType  ex-abstraction:Timeline . #har objekttype
 
 ex-abstraction:Program a    modelldcatno:ObjectType ; #Objekttype
         #mandatory
@@ -33,7 +39,11 @@ ex-abstraction:Timeline a    modelldcatno:ObjectType ; #Objekttype
       ###### mandatory:
       dct:title       "Timeline"@en ; #tittel
       #recommended
-      modelldcatno:hasProperty ex-abstraction:mediaItems . #har egenskap
+      modelldcatno:hasProperty ex-abstraction:mediaItems , ex-abstraction:editorialObject . #har egenskap
+
+ex-abstraction:editorialObject  a               modelldcatno:Role ; #Rolle
+      #recommended
+      modelldcatno:hasObjectType  ex-abstraction:EditorialObject . #har objekttype
 
 ex-abstraction:mediaItems a   modelldcatno:Collection ; #Samling
       ###### recommended:
