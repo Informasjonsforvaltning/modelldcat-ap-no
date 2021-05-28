@@ -9,30 +9,40 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex-abstraction: <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exAbstraction#> .
 
-ex-abstraction:EBU_EditorialObject a    modelldcatno:ObjectType ; #Objekttype
+ex-abstraction:EditorialObject a    modelldcatno:ObjectType ; #Objekttype
         #mandatory
-        dct:title       "EBU_EditorialObject"@en . #tittel
+        dct:title       "EditorialObject"@en . #tittel
 
 ex-abstraction:Program a    modelldcatno:ObjectType ; #Objekttype
         #mandatory
         dct:title       "Program"@nb ; #tittel
         #recommended
-        modelldcatno:hasProperty ex-abstraction:abstraksjon , ex-abstraction:sammendrag . #harEgenskap
+        modelldcatno:hasProperty ex-abstraction:abstraksjon , ex-abstraction:description . #harEgenskap
 
 ex-abstraction:abstraksjon a  modelldcatno:Abstraction ; #Abstraksjon
         ###### recommended:
-        modelldcatno:isAbstractionOf  ex-abstraction:EBU_EditorialObject . # er abstraksjon av
+        modelldcatno:isAbstractionOf  ex-abstraction:EditorialObject . # er abstraksjon av
 
-ex-abstraction:sammendrag   a                 modelldcatno:Attribute , modelldcatno:Abstraction ; #Attributt og Abstraksjon
+ex-abstraction:description   a                 modelldcatno:Attribute , modelldcatno:Abstraction ; #Attributt og Abstraksjon
         ###### recommended:
-        dct:title          "sammendrag"@nb ; #tittel
-        ###### recommended:
+        dct:title          "description"@nb ; #tittel
         modelldcatno:isAbstractionOf  ex-abstraction:Timeline ; #er abstraksjon av
-        modelldcatno:hasSimpleType             ex-abstraction:TekstType . #har enkeltype
+        modelldcatno:hasSimpleType             ex-abstraction:string . #har enkeltype
 
 ex-abstraction:Timeline a    modelldcatno:ObjectType ; #Objekttype
-        ###### mandatory:
-        dct:title       "Timeline"@en . #tittel
+      ###### mandatory:
+      dct:title       "Timeline"@en ; #tittel
+      #recommended
+      modelldcatno:hasProperty ex-abstraction:mediaItems . #har egenskap
 
-ex-abstraction:TekstType a                 modelldcatno:SimpleType ; #Enkeltype
-        dct:title                       "TekstType"@nb . #tittel
+ex-abstraction:mediaItems a   modelldcatno:Collection ; #Samling
+      ###### recommended:
+      modelldcatno:hasMember ex-abstraction:MediaItems . #har medlem
+
+ex-abstraction:MediaItems a    modelldcatno:ObjectType ; #Objekttype
+        ###### mandatory:
+        dct:title       "MediaItems"@en . #tittel
+
+ex-abstraction:string a                 modelldcatno:SimpleType ; #Enkeltype
+        ###### mandatory:
+        dct:title                       "string"@nb . #tittel
