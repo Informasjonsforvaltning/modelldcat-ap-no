@@ -18,11 +18,11 @@ ex-simple:Person a                     modelldcatno:ObjectType ; #Objekttype
 ex-simple:alder  a               modelldcatno:Attribute ; #Attributt
         ###### recommended:
         dct:title                   "alder"@nb ; #tittel
-        modelldcatno:hasSimpleType           ex-simple:integer . #har enkeltype
+        modelldcatno:hasSimpleType           ex-simple:AlderIAar . #har enkeltype
 
-ex-simple:integer  a                      modelldcatno:SimpleType ; #enkeltype
+ex-simple:AlderIAar  a                      modelldcatno:SimpleType ; #enkeltype
         ###### recommended:
-        dct:title                      "integer"@nb ; #tittel
+        dct:title                      "AlderIÅr"@nb ; #tittel
         modelldcatno:typeDefinitionReference      "http://www.w3.org/2001/XMLSchema#integer"^^xsd:anyURI ; #typedefinisjon
         ###### optional:
         xsd:maxInclusive               "120"^^xsd:decimal ; #maksimum inklusivt
