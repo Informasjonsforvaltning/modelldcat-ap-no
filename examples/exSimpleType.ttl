@@ -23,7 +23,7 @@ ex-simple:alder  a               modelldcatno:Attribute ; #Attributt
 ex-simple:AlderIAar  a                      modelldcatno:SimpleType ; #enkeltype
         ###### recommended:
         dct:title                      "AlderIÅr"@nb ; #tittel
-        modelldcatno:typeDefinitionReference      "http://www.w3.org/2001/XMLSchema#integer"^^xsd:anyURI ; #typedefinisjon
+        modelldcatno:typeDefinitionReference      "https://www.w3.org/TR/xmlschema11-2/#integer"^^xsd:anyURI ; #typedefinisjon
         ###### optional:
         xsd:maxInclusive               "120"^^xsd:decimal ; #maksimum inklusivt
         xsd:minInclusive               "0"^^xsd:decimal . #minimum inklusivt
