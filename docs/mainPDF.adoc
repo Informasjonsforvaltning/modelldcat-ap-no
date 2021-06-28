@@ -1,0 +1,12 @@
+// denne filen brukes til PDF-generering
+:toc: macro
+
+// Tittel og versjonsinfo som oppdateres i egen fil og inkluderes her:
+include::main1_TittelOgVersjonsinfo.adoc[]
+
+toc::[]
+
+// Rekkefølge av kapitler oppdateres i egen fil og inkluderes her:
+include::main2_Kapittelrekkefølge.adoc[]
+
+include::./shared/stats.adoc[]
