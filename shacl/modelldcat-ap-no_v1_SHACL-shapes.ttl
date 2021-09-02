@@ -45,8 +45,8 @@
     dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ;
     dct:description "This document specifies the constraints on properties and classes expressed by ModellDCAT-AP-NO in SHACL."@en ;
     dct:title "The constraints of ModellDCAT-AP-NO"@en ;
-    owl:versionInfo "0.5";
-    dct:modified "2021-05-11"^^xsd:date ;
+    owl:versionInfo "0.6";
+    dct:modified "2021-09-02"^^xsd:date ;
     .
 
 # -+-+- Some "general" classes, though modified for modelldcatno when necessary -+-+-+-
@@ -153,7 +153,7 @@
           sh:maxCount 1 ;
           sh:path dcat:endDate ;
           sh:severity sh:Violation ;
-          sh:shape :DateOrDateTimeDataType_Shape ;
+          sh:node :DateOrDateTimeDataType_Shape ;
         ]
       ]
       [
@@ -163,7 +163,7 @@
           sh:maxCount 1 ;
           sh:path dcat:startDate ;
           sh:severity sh:Violation ;
-          sh:shape :DateOrDateTimeDataType_Shape ;
+          sh:node :DateOrDateTimeDataType_Shape ;
         ]
       ]
     ) ;
@@ -1121,7 +1121,7 @@
     ], [
         sh:name "tilhører modul"@nb , "belongs to module"@en ;
         # @v.1.1 # sh:maxCount 1 ;
-        sh:shape sh:IRIOrLiteral ;
+        sh:node sh:IRIOrLiteral ;
         sh:path modelldcatno:belongsToModule ;
         sh:severity sh:Violation ;
     ] ;
