@@ -47,7 +47,6 @@
     xkos:exclusionNote "ev. inklusjonsmerknad her"@nb ; # eksklusjonsmerknad, dummydata
     xkos:inclusionNote "ev. eksklusjonsmerknad her"@nb ; # inklusjonsmerknad, dummydata
     skos:isTopConceptOf <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/testCodeList> ; # toppelement til
-    xkos:next <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/testCodeList#2> ; # neste kodeelement
 .
 
 <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/testCodeList#2>
@@ -60,7 +59,6 @@
     skos:prefLabel "mann"@nb , "male"@en ; # anbefalt kodetekst, norsk bokmål og engelsk
     dct:subject <https://examples.com/concepts/dummyConcept2> ; # begrep, dummydata
   ###### optional:
-    xkos:next <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/testCodeList#9> ; # neste kodeelement
 .
 
 <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/testCodeList#9>
