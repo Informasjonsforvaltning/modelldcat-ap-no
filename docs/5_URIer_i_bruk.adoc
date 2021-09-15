@@ -1,6 +1,6 @@
 = URIer som er i bruk [[URIer-som-er-i-bruk]]
 
-Navnerom for dette vokabualret skal vere https://data.norge.no/vocabulary/modelldcatno#
+Navnerom for dette vokabularet skal være https://data.norge.no/vocabulary/modelldcatno#
 
 [cols="10s,45d,45d"]
 |===
