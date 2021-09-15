@@ -25,7 +25,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 *Status*: Gjeldende +
 *Versjon*: 1.1 (se <<Endringslogg, endringsloggen>>) +
 *Publisert*: 2021-06-28 (versjon 1.1), 2020-12-18 (versjon 1.0)  +
-*Oppdatert*: 2021-09-06 +
+*Oppdatert*: 2021-09-15 +
 *Gjeldende versjon*: https://data.norge.no/specification/modelldcat-ap-no/ +
 *Redaktørens utkast*: https://informasjonsforvaltning.github.io/modelldcat-ap-no/ +
 *Veileder*: https://data.norge.no/guide/veileder-modelldcat-ap-no/
