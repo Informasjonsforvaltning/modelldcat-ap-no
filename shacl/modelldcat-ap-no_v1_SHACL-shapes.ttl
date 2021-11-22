@@ -45,8 +45,8 @@
     dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ;
     dct:description "This document specifies the constraints on properties and classes expressed by ModellDCAT-AP-NO in SHACL."@en ;
     dct:title "The constraints of ModellDCAT-AP-NO"@en ;
-    owl:versionInfo "0.6";
-    dct:modified "2021-09-02"^^xsd:date ;
+    owl:versionInfo "0.7";
+    dct:modified "2021-11-22"^^xsd:date ;
     .
 
 # -+-+- Some "general" classes, though modified for modelldcatno when necessary -+-+-+-
@@ -194,9 +194,11 @@
     sh:name "format"@nb, "format"@en ;
     sh:path dct:format ;
     # sh:class dct:MediaType ;
-    sh:pattern "^http://publications.europa.eu/resource/authority/file-type/" ;
+    sh:or (
+      [sh:pattern "^http://publications.europa.eu/resource/authority/file-type/"]
+      [sh:pattern "^https://publications.europa.eu/resource/authority/file-type/"] ) ;
     sh:flags "i" ;
-    sh:message "Medietype (dct:format) skal være en av verdiene fra http://publications.europa.eu/resource/authority/file-type/."@nb ;
+    sh:message "Medietype (dct:format) skal være en av verdiene fra http(s)://publications.europa.eu/resource/authority/file-type/."@nb ;
     sh:severity sh:Violation ;
   .
 
@@ -205,9 +207,11 @@
     sh:name "språk"@nb , "language"@en ;
     sh:path dct:language ;
     # sh:class dct:LinguisticSystem ;
-    sh:pattern "^http://publications.europa.eu/resource/authority/language/" ;
+    sh:or (
+      [sh:pattern "^http://publications.europa.eu/resource/authority/language/"]
+      [sh:pattern "^https://publications.europa.eu/resource/authority/language/"] ) ;
     sh:flags "i" ;
-    sh:message "Språkkoden (dct:language) skal være en av verdiene fra http://publications.europa.eu/resource/authority/language/."@nb ;
+    sh:message "Språkkoden (dct:language) skal være en av verdiene fra http(s)://publications.europa.eu/resource/authority/language/."@nb ;
     sh:severity sh:Violation ;
   .
 
@@ -215,9 +219,11 @@
     a sh:PropertyShape ;
     sh:name "lisens"@nb , "license"@en ;
     sh:path dct:license ;
-    sh:pattern "^http://publications.europa.eu/resource/authority/licence" ;
+    sh:or (
+      [sh:pattern "^http://publications.europa.eu/resource/authority/licence"]
+      [sh:pattern "^https://publications.europa.eu/resource/authority/licence"] ) ;
     sh:flags "i";
-    sh:message "Lisens (dct:license) skal være en av verdiene fra http://publications.europa.eu/resource/authority/licence/."@nb ;
+    sh:message "Lisens (dct:license) skal være en av verdiene fra http(s)://publications.europa.eu/resource/authority/licence/."@nb ;
     sh:severity sh:Violation ;
   .
 
@@ -226,12 +232,20 @@
     sh:name "dekningsområde"@nb , "spatial"@en ;
     sh:path dct:spatial ;
     sh:or (
-      [ sh:pattern "^http://publications.europa.eu/resource/authority/continent" ; sh:flags "i" ; ]
-      [ sh:pattern "^http://publications.europa.eu/resource/authority/country" ; sh:flags "i" ; ]
-      [ sh:pattern "^http://publications.europa.eu/resource/authority/place" ; sh:flags "i" ;]
-      [ sh:pattern "^http://sws.geonames.org/" ; sh:flags "i" ; ]
+      [ sh:or (
+          [ sh:pattern "^http://publications.europa.eu/resource/authority/continent" ; sh:flags "i" ; ]
+          [ sh:pattern "^https://publications.europa.eu/resource/authority/continent" ; sh:flags "i" ; ] ) ]
+      [ sh:or (
+          [sh:pattern "^http://publications.europa.eu/resource/authority/country" ; sh:flags "i" ; ]
+          [sh:pattern "^https://publications.europa.eu/resource/authority/country" ; sh:flags "i" ; ] ) ]
+      [ sh:or (
+          [sh:pattern "^http://publications.europa.eu/resource/authority/place" ; sh:flags "i" ;]
+          [sh:pattern "^https://publications.europa.eu/resource/authority/place" ; sh:flags "i" ;] ) ]
+      [ sh:or (
+        [ sh:pattern "^http://sws.geonames.org/" ; sh:flags "i" ; ]
+        [ sh:pattern "^https://sws.geonames.org/" ; sh:flags "i" ; ] ) ]
     ) ;
-    sh:message "Dekningsområde (dct:spatial) skal være minst en av verdiene fra http://publications.europa.eu/resource/authority/continent, http://publications.europa.eu/resource/authority/country, http://publications.europa.eu/resource/authority/place eller http://sws.geonames.org/."@nb ;
+    sh:message "Dekningsområde (dct:spatial) skal være minst en av verdiene fra http(s)://publications.europa.eu/resource/authority/continent, http(s)://publications.europa.eu/resource/authority/country, http(s)://publications.europa.eu/resource/authority/place eller http(s)://sws.geonames.org/."@nb ;
     sh:severity sh:Violation ;
   .
 
@@ -964,9 +978,11 @@
         # sh:class dct:LicenseDocument ;
         sh:maxCount 1 ;
         sh:path dct:license ;
-        sh:pattern "^http://publications.europa.eu/resource/authority/licence/" ;
+        sh:or (
+          [sh:pattern "^http://publications.europa.eu/resource/authority/licence/"]
+          [sh:pattern "^https://publications.europa.eu/resource/authority/licence/"] ) ;
         sh:flags "i" ;
-        sh:message "Egenskap `lisens` (dct:license) kan ha maks. én verdi, som skal være en av verdiene fra http://publications.europa.eu/resource/authority/licence/."@nb ;
+        sh:message "Egenskap `lisens` (dct:license) kan ha maks. én verdi, som skal være en av verdiene fra http(s)://publications.europa.eu/resource/authority/licence/."@nb ;
         sh:severity sh:Violation ;
     ],
         :SpatialProperty_Shape ,
