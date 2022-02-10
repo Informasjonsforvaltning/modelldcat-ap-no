@@ -1,0 +1,24 @@
+name: Publish ontology to GitHub pages
+
+on:
+  push:
+    branches:
+      - develop
+    paths:
+      - ontology/**
+
+jobs:
+  build_html:
+    runs-on: ubuntu-latest
+    name: html build
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./ontology
+          destination_dir: /vocabulary
