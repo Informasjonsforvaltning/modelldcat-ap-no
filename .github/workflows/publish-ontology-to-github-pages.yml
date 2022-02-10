@@ -21,4 +21,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./ontology
-          destination_dir: /vocabulary
+          destination_dir: ./vocabulary
