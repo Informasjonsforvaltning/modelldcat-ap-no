@@ -6,6 +6,7 @@ on:
       - develop
     paths:
       - ontology/**
+  workflow_dispatch:
 
 jobs:
   build_html:
