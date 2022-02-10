@@ -11,7 +11,7 @@ on:
 jobs:
   adoc_build:
     runs-on: ubuntu-latest
-    name: Publish README to GitHub pages
+    name: Publish README, docs and ontology to GitHub pages
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -22,5 +22,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./
-          exclude_assets: ".github,docs,examples,ontology,shacl,.gitignore,CONTRIBUTING.md"
+          exclude_assets: ".github,examples,shacl,.gitignore,CONTRIBUTING.md"
           destination_dir: ./
