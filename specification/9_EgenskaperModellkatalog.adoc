@@ -1,0 +1,180 @@
+=== Modellkatalog (dcat:Catalog) [[Modellkatalog-egenskaper]]
+
+Klassen _Modellkatalog_ er obligatorisk.
+
+==== Obligatoriske egenskaper for klassen _Modellkatalog_ [[Obligatoriske-egenskaper-Modellkatalog]]
+
+===== Modellkatalog: beskrivelse (dct:description) [[Modellkatalog-beskrivelse]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| description
+|URI| dct:description
+|Range| rdfs:Literal
+|Beskrivelse| Fritekst-beskrivelse av innholdet i katalogen. Bør gjentas når beskrivelsen finnes i flere ulike språk/målformer.
+|Multiplisitet| 1..n
+|Kravsnivå| Obligatorisk
+|===
+
+===== Modellkatalog: har del (dct:hasPart) [[Modellkatalog-harDel]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| has part
+|URI| dct:hasPart
+|Range| dcat:Resource
+|Beskrivelse| Brukes til å referere til en katalogisert ressurs eller en annen katalog.
+|Multiplisitet| 1..n
+|Kravsnivå| Obligatorisk
+|Kommentar | dcat:Resource er en abstrakt klasse og skal i en konkret anvendelse erstattes med en en instans av dcat:Catalog (en Modellkatalog) eller en instans av modelldcatno:InformatoinModel (en Informasjonsmodell).
+|===
+
+===== Modellkatalog: identifikator (dct:identifier) [[Modellkatalog-identifikator]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| identifier
+|URI| dct:identifier
+|Range| rdfs:Literal
+|Beskrivelse| Refererer til identifikatoren av katalogen.
+|Multiplisitet| 1..1
+|Kravsnivå| Obligatorisk
+|===
+
+===== Modellkatalog: tittel (dct:title) [[Modellkatalog-tittel]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| title
+|URI| dct:title
+|Range| rdfs:Literal
+|Beskrivelse| Inneholder navnet på katalogen. Bør gjentas når navnet finnes i flere ulike språk/målformer.
+|Multiplisitet| 1..n
+|Kravsnivå| Obligatorisk
+|===
+
+===== Modellkatalog: utgiver (dct:publisher) [[Modellkatalog-utgiver]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| publisher
+|URI| dct:publisher
+|Range| foaf:Agent
+|Beskrivelse| Refererer til en aktør (organisasjon) som er ansvarlig for å gjøre katalogen tilgjengelig. Bør være autoritativ URI for aktøren, sekundært organisasjonsnummer.
+|Multiplisitet| 1..1
+|Kravsnivå| Obligatorisk
+|===
+
+==== Anbefalte egenskaper for klassen _Modellkatalog_ [[Anbefalte-egenskaper-Modellkatalog]]
+
+===== Modellkatalog: endringsdato (dct:modified) [[Modellkatalog-endringsdato]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| modified (last update)
+|URI| dct:modified
+|Range| rdfs:Literal typed as xsd:date or xsd:dateTime
+|Beskrivelse| Dato for siste oppdatering/endring av katalogen.
+|Multiplisitet| 0..1
+|Kravsnivå| Anbefalt
+|===
+
+===== Modellkatalog: hjemmeside (foaf:homepage) [[Modellkatalog-hjemmeside]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| homepage
+|URI| foaf:homepage
+|Range| foaf:Document
+|Beskrivelse| Nettside som fungerer som hovedside for modellkatalogen.
+|Multiplisitet| 0..n
+|Kravsnivå| Anbefalt
+|===
+
+===== Modellkatalog: lisens (dct:license) [[Modellkatalog-lisens]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| licence
+|URI| dct:license
+|Range| dct:LicenseDocument
+|Beskrivelse| Viser til lisens for modellkatalogen som beskriver hvordan den kan viderebrukes.
+|Multiplisitet| 0..1
+|Kravsnivå| Anbefalt
+|===
+
+===== Modellkatalog: modell (modelldcatno:model) [[Modellkatalog-modell]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| model
+|URI| modelldcatno:model
+|Range| modelldcatno:InformationModel
+|Beskrivelse| Kobler katalogen til informasjonsmodeller som er en del av katalogen.
+|Subegenskap av | dct:hasPart
+|Multiplisitet| 0..n
+|Kravsnivå| Anbefalt
+|Kommentar | En Modellkatalog skal ha minst én instans av dcat:Resource (jf. <<Modellkatalog-harDel, Modellkatalog: har del>>). Informasjonsmodell (modelldcatno:InformationModel) og Modellkatalog (dcat:Catalog) er i denne spesifikasjonen subklasser av dcat:Resource (jf. <<Forenklet-modell, UML-modellen>>). Med mindre man skal ha en Modellkatalog som bare består av andre Modellkataloger, skal en Modellkatalog inneholde minst én instans av modelldcatno:InformationModel, selv om denne egenskap er anbefalt og har multiplisitet 0..n.
+|===
+
+===== Modellkatalog: språk (dct:language) [[Modellkatalog-språk]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| language
+|URI| dct:language
+|Range| dct:LinguisticSystem
+|Beskrivelse| Referanse til språket som katalogen er på. Kan repeteres dersom det er flere språk i katalogen.
+|Multiplisitet| 0..n
+|Kravsnivå| Anbefalt
+|===
+
+===== Modellkatalog: utgivelsesdato (dct:issued) [[Modellkatalog-utgivelsesdato]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| issued (release date)
+|URI| dct:issued
+|Range| rdfs:Literal typed as xsd:date or xsd:dateTime
+|Beskrivelse| Dato for formell utgivelse (publisering) av katalogen.
+|Multiplisitet| 0..1
+|Kravsnivå| Anbefalt
+|===
+
+==== Valgfrie egenskaper for klassen _Modellkatalog_ [[Valgfrie-egenskaper-Modellkatalog]]
+
+===== Modellkatalog: dekningsområde (dct:spatial) [[Modellkatalog-dekningsområde]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| spatial/geographic
+|URI| dct:spatial
+|Range| dct:Location
+|Beskrivelse| Referanse til et geografisk område som er dekket av katalogen.
+|Multiplisitet| 0..n
+|Kravsnivå| Valgfri
+|===
+
+===== Modellkatalog: er del av (dct:isPartOf) [[Modellkatalog-erDelAv]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| is part of
+|URI| dct:isPartOf
+|Range| dcat:Catalog
+|Beskrivelse| Referanse til en beslektet katalog som denne katalogen fysisk eller logisk er inkludert i.
+|Multiplisitet| 0..1
+|Kravsnivå| Valgfri
+|===
+
+===== Modellkatalog: temaer (dcat:themeTaxonomy) [[Modellkatalog-temaer]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| themes
+|URI| dcat:themeTaxonomy
+|Range| skos:ConceptScheme
+|Beskrivelse| Refererer til et kunnskapsorganiseringssystem (KOS) som er brukt for å klassifisere katalogens informasjonsmodeller.
+|Multiplisitet| 0..n
+|Kravsnivå| Valgfri
+|===

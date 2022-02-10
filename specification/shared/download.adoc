@@ -1,0 +1,7 @@
+ifeval::["{backend}" == "html5"]
+
+[TIP]
+//.Nedlasting av dokumentet
+Dette dokumentet kan også lastes ned link:modelldcat-ap-no.pdf[som PDF].
+
+endif::[]
