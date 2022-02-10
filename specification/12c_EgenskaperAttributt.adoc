@@ -1,0 +1,59 @@
+=== Attributt (modelldcatno:Attribute) [[Attributt-egenskaper]]
+
+Klassen _Attributt_ er anbefalt.
+
+NOTE: Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke kan forekomme samtidig.
+
+==== Anbefalte egenskaper for klassen _Attributt_ [[Anbefalte-egenskaper-attributt]]
+
+===== Attributt: har datatype (modelldcatno:hasDataType) [[Attributt-harDataType]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| has data type
+|URI| modelldcatno:hasDataType
+|Range| modelldcatno:DataType
+|Beskrivelse| Angir at attributtet har en datatype som type.
+|Subegenskap av |modelldcatno:hasType
+|Multiplisitet| 0..1
+|Kravsnivå| Anbefalt
+|===
+
+===== Attributt: har enkeltype (modelldcatno:hasSimpleType) [[Attributt-harEnkelType]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| has simple type
+|URI| modelldcatno:hasSimpleType
+|Range| modelldcatno:SimpleType
+|Beskrivelse| Angir at attributtet har en enkeltype som type.
+|Subegenskap av|modelldcatno:hasType
+|Multiplisitet| 0..1
+|Kravsnivå| Anbefalt
+|===
+
+===== Attributt: inneholder objekttype (modelldcatno:containsObjectType) [[Attributt-inneholderObjekttype]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| contains object type
+|URI| modelldcatno:containsObjectType
+|Range| modelldcatno:ObjectType
+|Beskrivelse| Angir at attributtet har en objekttype som type.
+|Subegenskap av	| modelldcatno:hasType
+|Multiplisitet| 0..1
+|Kravsnivå| Anbefalt
+|===
+
+===== Attributt: har verdier fra (modelldcatno:hasValueFrom) [[Attributt-harVerdierFra]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| has value from
+|URI|modelldcatno:hasValueFrom
+|Range| modelldcatno:CodeList
+|Beskrivelse| Angir at attributtet har en kodeliste som type.
+|Subegenskap av	| modelldcatno:hasType
+|Multiplisitet| 0..1
+|Kravsnivå| Anbefalt
+|===

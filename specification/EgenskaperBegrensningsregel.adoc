@@ -1,0 +1,34 @@
+=== Begrensningsregel (modelldcatno:ConstraintRule) [[Begrensningsregel-egenskaper]]
+
+Klassen _Begrensningsregel_ er anbefalt.
+
+==== Obligatoriske egenskaper for klassen _Begrensningsregel_ [[Obligatoriske-egenskaper-Begrensningsregel]]
+
+===== Begrensningsregel: begrenser (modelldcatno:constrains) [[Begrensningsregel-begrenser]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|constrains
+|URI|modelldcatno:constrains
+|Range|modelldcatno:ModelElement or modelldcatno:Property
+|Beskrivelse|Referanse til egenskap eller modellelement som begrensningsregelen gjelder for.
+|Subegenskap av|modelldcatno:annotates
+|Multiplisitet|1..*
+|Kravsnivå|Obligatorisk
+|===
+
+
+==== Anbefalte egenskaper for klassen _Begrensningsregel_ [[Anbefalte-egenskaper-Begrensningsregel]]
+
+===== Begrensningsregel: begrensningsuttrykk (modelldcatno:constraintExpression) [[Begrensningsregel-begrensningsuttrykk]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|constraint expression
+|URI|modelldcatno:constraintExpression
+|Range|rdfs:Literal
+|Beskrivelse|Uttrykk som beskriver en begrensningsregel. Bør gjentas når uttrykket finnes i flere ulike språk/målformer.
+|Multiplisitet|0..n
+|Kravsnivå|Anbefalt
+|Kommentar|En Begrensningsregel, med unntak av subklassene Enten eller (modelldcatno:Xor) og Eller (modelldcatno:OR), må som minimum ha en tittel eller et begrensningsuttrykk.
+|===
