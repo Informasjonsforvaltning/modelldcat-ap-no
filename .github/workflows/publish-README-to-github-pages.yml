@@ -1,0 +1,26 @@
+name: Build and publish README to GitHub pages
+
+on:
+  push:
+    branches:
+      - develop
+    paths:
+      - README.md
+  workflow_dispatch:
+
+jobs:
+  adoc_build:
+    runs-on: ubuntu-latest
+    name: Publish README to GitHub pages
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./
+          exclude_assets: ".github,docs,examples,ontology,shacl,.gitignore,CONTRIBUTING.md"
+          destination_dir: ./
