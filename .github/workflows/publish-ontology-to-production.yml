@@ -35,7 +35,7 @@ jobs:
         with:
           ontology-type: "vocabulary"
           ontology: "modelldcatno"
-          file: "ontology/modelldcatno-nb.html"
+          file: "ontology/index.html"
           file-type: "text/html"
           file-language: "nb"
           host: "https://data.norge.no"

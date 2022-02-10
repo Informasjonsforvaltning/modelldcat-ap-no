@@ -7,6 +7,6 @@ Spesifikasjonen vil inngå i [Rammeverk for informasjonsforvaltning]/<https://ww
 Gjeldende versjon: <https://data.norge.no/specification/modelldcat-ap-no>
 
 Redaktørens utkast av spesifikasjon: <https://informasjonsforvaltning.github.io/modelldcat-ap-no/specification>
-Redaktørens utkast av ontology: <https://informasjonsforvaltning.github.io/modelldcat-ap-no/ontology>  
+Redaktørens utkast av ontology: <https://informasjonsforvaltning.github.io/modelldcat-ap-no/vocabulary>  
 
 \- _Norwegian Digitalisation Agency / Digitaliseringsdirektoratet (<https://digdir.no>)_
