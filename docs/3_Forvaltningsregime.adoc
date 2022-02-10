@@ -1,5 +1,0 @@
-= Forvaltningsregime [[forvaltningsregime]]
-
-Utarbeidelse av nye versjoner av denne spesifikasjonen initieres av Digitaliseringsdirektoratet. ModellDCAT-AP-NO er en nokså umoden spesifikasjon og vi forventer en del endringer fremover når den blir tatt mer i bruk. Digitaliseringsdirektoratet vil har ansvar for å følge opp innspillene som kommer og tilpasse spesifikasjonen etter behov. Endringer skal som vanlig forankres i relevante organer.   +
-
-Gjeldende og eventuelle tidligere versjoner av spesifikasjonen skal være tilgjengelige på Digitaliseringsdirektoratets nettsider, slik at det er enkelt å finne ut når tidligere versjoner var gyldige, og hvilke endringer som er foretatt mellom to versjoner.
