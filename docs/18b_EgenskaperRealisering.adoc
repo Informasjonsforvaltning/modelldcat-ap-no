@@ -1,0 +1,18 @@
+=== Realisering (modelldcatno:Realization) [[Realisering-egenskaper]]
+
+Klassen _Realisering_ er valgfri.
+
+==== Anbefalte egenskaper for klassen _Realisering_ [[Anbefalte-egenskaper-Realisering]]
+
+===== Realisering: har leverandør (modelldcatno:hasSupplier) [[Realsering-harLeverandør]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|has supplier
+|URI|modelldcatno:hasSupplier
+|Range|modelldcatno:ModelElement or modelldcatno:Property
+|Beskrivelse|Brukes til å referere til modellelementet/egenskapen som det aktuelle modellelementet/egenskapen er en realisering av.
+|Subegenskap av|modelldcatno:hasType
+|Multiplisitet|0..1
+|Kravsnivå|Anbefalt
+|===

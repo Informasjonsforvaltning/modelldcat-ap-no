@@ -1,0 +1,17 @@
+=== Kodeliste (modelldcatno:CodeList) [[Kodeliste-egenskaper]]
+
+Klassen _Kodeliste_ er anbefalt.
+
+==== Valgfrie egenskaper for klassen _Kodeliste_ [[Valgfrie-egenskaper-Kodeliste]]
+
+===== Kodeliste: har referanse (rdfs:seeAlso) [[Kodeliste-harReferanse]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|has reference
+|URI|rdfs:seeAlso
+|Range|rdfs:Resource
+|Beskrivelse|Referanse til en ekstern beskrivelse av kodelisten.
+|Multiplisitet|0..n
+|Kravsnivå|Valgfri
+|===
