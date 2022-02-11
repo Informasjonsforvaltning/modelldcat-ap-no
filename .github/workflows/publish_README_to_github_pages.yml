@@ -11,7 +11,7 @@ on:
 jobs:
   adoc_build:
     runs-on: ubuntu-latest
-    name: asciidoctor build
+    name: copy README
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -20,7 +20,8 @@ jobs:
         env:
           TARGET_BRANCH: "gh-pages"
         run: |
-          files=$(find . -maxdepth 1 -name "README.md") # get the file list
+          cp README.md index.md
+          files=$(find . -maxdepth 1 -name "index.md") # get the file list
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
           git fetch                         # fetch branches
