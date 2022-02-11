@@ -6,6 +6,7 @@ on:
       - v1
     paths:
       - ontology/**
+  workflow_dispatch:
 
 jobs:
   test_uploading_of_file:

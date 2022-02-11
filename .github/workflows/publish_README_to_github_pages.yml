@@ -1,0 +1,25 @@
+name: Build and publish docs to GitHub pages
+
+on:
+  push:
+    branches:
+      - develop
+    paths:
+      - README.md
+  workflow_dispatch:
+
+jobs:
+  adoc_build:
+    runs-on: ubuntu-latest
+    name: asciidoctor build
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Push to output branch.
+        run: |
+          git fetch
+          git checkout gh-pages
+          git add README.md
+          git commit -am "Automated Build ${{github.event.head_commit.message}}"
+          git push -f origin HEAD
