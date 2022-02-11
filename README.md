@@ -1,6 +1,4 @@
----
-title: modelldcat-ap-no – Spesifikasjon for beskrivelse av informasjonsmodeller
----
+# modelldcat-ap-no – Spesifikasjon for beskrivelse av informasjonsmodeller
 
 Spesifikasjon for beskrivelse og tilgjengeliggjøring av informasjonsmodeller basert på DCAT, ModellDcat-AP-NO, med tilhørende ontologi, valideringsregler og eksempler.
 
