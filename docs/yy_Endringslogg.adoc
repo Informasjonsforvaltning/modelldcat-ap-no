@@ -1,6 +1,6 @@
 = Endringslogg [[Endringslogg]]
 
-== Endringer fra v.1.0 til v.1.1.1 [[Endringer_fra_v.1.1]]
+== Endringer fra v.1.1 til v.1.1.1 [[Endringer_fra_v.1.1]]
 
 * Multiplisiteten for egenskapen <<Dokument-harReferanse>> er endret fra 0..n til 0..1 (for å rette opp en feil)
 
