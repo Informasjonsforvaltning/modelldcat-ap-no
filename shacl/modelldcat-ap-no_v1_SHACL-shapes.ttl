@@ -896,13 +896,15 @@
         sh:name "format"@en, "format"@nb ;
         sh:path dct:format ;
         sh:maxCount 1 ;
-        sh:message "Egenskap `format` `(dct:format) kan ha maks. én verdi."@nb ;
+        sh:message "Egenskap `format` (dct:format) kan ha maks. én verdi."@nb ;
         sh:severity sh:Violation ;
     ],
     [
         sh:name "has reference"@en , "har referanse"@nb ;
         sh:path rdfs:seeAlso ;
+        sh:maxCount 1 ;
         sh:nodeKind sh:IRIOrLiteral ;
+        sh:message "Egenskap `referanse` (rdfs:seeAlso) kan ha maks. én verdi."@nb ;
         sh:severity sh:Violation ;
     ] ;
     sh:targetClass foaf:Document ;
