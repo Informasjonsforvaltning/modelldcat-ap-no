@@ -1,0 +1,43 @@
+name: Publish ontology to data.norge.no/vocabulary
+
+on:
+  push:
+    branches:
+      - v1
+    paths:
+      - ontology/**
+  workflow_dispatch:
+
+jobs:
+  test_uploading_of_file:
+    name: Upload vocabulary to static-rdf-server
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.draft == false
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Upload rdf to static-rdf-server
+        uses: Informasjonsforvaltning/upload-files-to-static-rdf-server-action@v2
+        id: upload-rdf
+        with:
+          ontology-type: "vocabulary"
+          ontology: "modelldcatno"
+          file: "ontology/modelldcatno.ttl"
+          file-type: "text/turtle"
+          file-language: "en"
+          host: "https://data.norge.no"
+          api-key: ${{ secrets.STATIC_RDF_SERVER_API_KEY }}
+
+      - name: Upload html nb to static-rdf-server
+        uses: Informasjonsforvaltning/upload-files-to-static-rdf-server-action@v2
+        id: upload-html-nb
+        with:
+          ontology-type: "vocabulary"
+          ontology: "modelldcatno"
+          file: "ontology/index.html"
+          file-type: "text/html"
+          file-language: "nb"
+          host: "https://data.norge.no"
+          api-key: ${{ secrets.STATIC_RDF_SERVER_API_KEY }}

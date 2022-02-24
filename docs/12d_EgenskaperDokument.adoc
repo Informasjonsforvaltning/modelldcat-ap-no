@@ -51,6 +51,6 @@ Klassen _Dokument_ er valgfri.
 |URI|rdfs:seeAlso
 |Range|rdfs:Resource
 |Beskrivelse|Brukes til å oppgi referanse til dokumentet.
-|Multiplisitet|0..n
+|Multiplisitet|0..1
 |Kravsnivå|Valgfri
 |===
