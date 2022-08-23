@@ -1157,9 +1157,9 @@
 :ModelTypeCV_Shape a sh:PropertyShape ; # modelltype, dct:type i modelldcatno:InformationModel
     sh:name "modelltype"@nb , "model type"@en ;
     sh:path dct:type ;
-    sh:patern "^https://data.norge.no/vocabulary/modelldcatno" ;
+    sh:patern "^https://data.norge.no/vocabulary/information-model-type#" ;
     sh:flags "i" ;
-    sh:message "Modelltype (dct:type) skal være en av modelltype-verdiene fra https://data.norge.no/vocabulary/modelldcatno"@nb ;
+    sh:message "Modelltype (dct:type) skal være en av modelltype-verdiene fra https://data.norge.no/vocabulary/information-model-type"@nb ;
     sh:severity sh:Violation ;
     sh:targetClass modelldcatno:InformationModel ;
   .
