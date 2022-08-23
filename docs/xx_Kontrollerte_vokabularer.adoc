@@ -109,13 +109,13 @@ http://sws.geonames.org/
 |===
 |URI til egenskapen|dct:type
 |Brukt i klasse|Informasjonsmodell (modelldcatno:InformationModel)
-|Navn på vokabularet|Modelltyper (https://data.norge.no/vocabulary/modelldcatno#modelTypes[vokabularet i RDF])
-|URI til vokabularet|https://data.norge.no/vocabulary/modelldcatno#
+|Navn på vokabularet| https://data.norge.no/vocabulary/information-model-type[Informasjonsmodelltype]
+|URI til vokabularet| https://data.norge.no/vocabulary/information-model-type#
 |Kravnivå|Obligatorisk
 |Eksempel a|
 --------
 <> dct:type
-      <https://data.norge.no/vocabulary/modelldcatno#logicalModel >.
+      <https://data.norge.no/vocabulary/information-model-type#logical-model> .
 --------
 |===
 
