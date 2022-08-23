@@ -42,12 +42,12 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Kravnivå|Anbefalt
 |===
 
-===== Egenskap: nedre multiplisitet (xsd:minOccurs) [[Egenskap-nedreMultiplisitet]]
+===== Egenskap: nedre multiplisitet (modelldcatno:minOccurs) [[Egenskap-nedreMultiplisitet]]
 
 [cols="30s,70d"]
 |===
 |Engelsk navn| min occurs
-|URI| xsd:minOccurs
+|URI| modelldcatno:minOccurs
 |Range| xsd:nonNegativeInteger
 |Beskrivelse| Angir det minste antallet lovlige forekomster en egenskap kan ha.
 |Multiplisitet| 0..1
@@ -66,17 +66,17 @@ Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av 
 |Kravnivå| Anbefalt
 |===
 
-===== Egenskap: øvre multiplisitet (xsd:maxOccurs) [[Egenskap-øvreMultiplisitet]]
+===== Egenskap: øvre multiplisitet (modelldcatno:maxOccurs) [[Egenskap-øvreMultiplisitet]]
 
 [cols="30s,70d"]
 |===
 |Engelsk navn| max occurs
-|URI| xsd:maxOccurs
+|URI| modelldcatno:maxOccurs
 |Range| xsd:nonNegativeInteger or {"*"} or {"n"}
 |Beskrivelse| Angir det største antallet lovlige forekomster en egenskap kan ha.
 |Multiplisitet| 0..1
 |Kravnivå| Anbefalt
-|Eksempel a| `<ex:EksEgenskap> xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;` eller `<ex:EksEgenskap> xsd:maxOccurs "*" ;`
+|Eksempel a| `<ex:EksEgenskap> modelldcatno:maxOccurs "1"^^xsd:nonNegativeInteger ;` eller `<ex:EksEgenskap> modelldcatno:maxOccurs "*" ;`
 |===
 
 ==== Valgfrie egenskaper for klassen _Egenskap_ [[Valgfrie-egenskaper-Egenskap]]
