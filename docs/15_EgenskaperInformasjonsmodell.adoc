@@ -102,7 +102,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |===
 |Engelsk navn | contact point
 |URI|dcat:contactPoint
-|Range|vcard:Kind
+|Range|vcard:Organization
 |Beskrivelse|Referanse til kontaktpunktsobjekt med kontaktopplysninger. Disse kan brukes til å sende kommentarer om modellen.
 |Multiplisitet|0..n
 |Kravnivå|Anbefalt
