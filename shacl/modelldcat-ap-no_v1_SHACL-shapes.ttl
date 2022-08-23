@@ -45,8 +45,9 @@
     dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ;
     dct:description "This document specifies the constraints on properties and classes expressed by ModellDCAT-AP-NO in SHACL."@en ;
     dct:title "The constraints of ModellDCAT-AP-NO"@en ;
-    owl:versionInfo "0.7";
-    dct:modified "2021-11-22"^^xsd:date ;
+    owl:versionInfo "1.2.001";
+    adms:versionNote "Alligned with v.1.2.0 of ModellDCAT-AP-NO"
+    dct:modified "2022-08-23"^^xsd:date ;
     .
 
 # -+-+- Some "general" classes, though modified for modelldcatno when necessary -+-+-+-
@@ -972,7 +973,7 @@
         sh:message "Egenskap ìnneholder modellelement` (modelldcatno:containsModelElement) kan bare ha verdi som er instans av modelldcatno:ModelElement."@nb ;
     ], [
         sh:name "kontaktpunkt"@nb , "contact point"@en ;
-        sh:class vcard:Kind ;
+        sh:class vcard:Organization ;
         sh:path dcat:contactPoint ;
         sh:severity sh:Violation ;
     ], [
