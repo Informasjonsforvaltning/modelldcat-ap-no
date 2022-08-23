@@ -15,5 +15,5 @@ Klassen _Valg_ er valgfri.
 |Beskrivelse|Brukes til å beskrive hvilke modellelementer eller egenskaper som det kan velges blant i en gruppe av valgbare modellelementer.
 |Subegenskap av |	modelldcatno:hasType
 |Multiplisitet|0..n
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |===

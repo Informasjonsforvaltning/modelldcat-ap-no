@@ -11,7 +11,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Engelsk navn|Agent
 |Beskrivelse|Brukes til å representere en aktør som er assosiert med modellkatalogen og/eller modellene. Dersom aktøren er en organisasjon er det anbefalt å bruke «Organization Ontology».
 |URI| http://xmlns.com/foaf/spec/#term_Agent[foaf:Agent]
-|Kravsnivå|Obligatorisk
+|Kravnivå|Obligatorisk
 |===
 
 === Begrep (skos:Concept) [[klasse-begrep-1]]
@@ -21,7 +21,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Engelsk navn|Concept
 |Beskrivelse|Brukes til å representere begrep som er viktig for å forstå eller tolke en informasjonsmodell eller et modellelement.
 |URI| https://www.w3.org/2009/08/skos-reference/skos.html#Concept[skos:Concept]
-|Kravsnivå|Obligatorisk
+|Kravnivå|Obligatorisk
 |===
 
 === Katalogisert ressurs (dcat:Resource) [[klasse-katalogisert-ressurs]]
@@ -31,7 +31,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Engelsk navn|Catalogued Resource
 |Beskrivelse|Brukes til å representere en ressurs som er beskrevet i en katalog.
 |URI| https://www.w3.org/TR/vocab-dcat-2/#Class:Resource[dcat:Resource]
-|Kravsnivå|Obligatorisk
+|Kravnivå|Obligatorisk
 |Kommentar|Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av spesialiseringene.
 |===
 
@@ -42,7 +42,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Engelsk navn|Literal
 |Beskrivelse|Brukes til å representere en literal-verdi slik som en streng eller heltall (integer). Literaler kan inneholde datatype, og for eksempel være formatert som en dato. Literaler som inneholder maskinlesbar tekst har en valgfri språk-tag, definert av BCP47 (no=norsk, nb=bokmål, nn=nynorsk, en=engelsk).
 |URI| https://www.w3.org/TR/rdf-concepts/#section-Literals[rdfs:Literal]
-|Kravsnivå|Obligatorisk
+|Kravnivå|Obligatorisk
 |===
 
 === Modellkatalog (dcat:Catalog) [[klasse-modellkatalog]]
@@ -52,7 +52,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Engelsk navn|Catalog
 |Beskrivelse|Brukes til å representere en katalog eller repository som inneholder beskrivelsene av modellene.
 |URI| http://www.w3.org/TR/2013/WD-vocab-dcat-20130312/#class-catalog[dcat:Catalog]
-|Kravsnivå|Obligatorisk
+|Kravnivå|Obligatorisk
 |===
 
 === Tematisk skjema (skos:ConceptScheme) [[klasse-tematisk-skjema]]
@@ -62,7 +62,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Engelsk navn|Thematic scheme
 |Beskrivelse|Brukes til å representere en taksonomi eller en annen type kontrollert vokabular hvor emnet er definert.
 |URI| https://www.w3.org/TR/skos-reference/#schemes[skos:ConceptScheme]
-|Kravsnivå|Obligatorisk
+|Kravnivå|Obligatorisk
 |===
 
 == Anbefalte klasser i katalogdelen [[Anbefalte-klasser-i-katalogdelen]]
@@ -74,7 +74,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Engelsk navn|License document
 |Beskrivelse|Brukes til å representere et juridisk dokument som gir offisiell tillatelse til å gjøre noe med en modell.
 |URI| http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=terms#LicenseDocument[dct:LicenseDocument]
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |===
 
 == Valgfrie klasser i katalogdelen [[Valgfri-klasser-i-katalogdelen]]
@@ -86,7 +86,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Engelsk navn|Kind
 |Beskrivelse|Brukes til å representere en beskrivelse av en kontaktopplysning i henhold til vCard-spesifikasjonen. Her kan man for eksempel oppgi telefonnr og/eller epost. Merk at beskrivelsen må være en instans av en av fire typer: individ, organisasjon, lokasjon eller gruppe.
 |URI| http://www.w3.org/TR/2014/NOTE-vcard-rdf-20140522/#d4e181[vcard:Kind]
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 === Lokasjon (dct:Location) [[klasse-lokasjon]]
@@ -96,7 +96,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Engelsk navn|Location
 |Beskrivelse|Brukes til å representere en region eller et navngitt sted. Det kan representeres ved hjelp av et kontrollert vokabular eller med geografiske koordinater.
 |URI| http://dublincore.org/documents/dcmi-terms/#terms-Location[dct:Location]
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 === Språksystem (dct:LinguisticSystem) [[klasse-spraksystem]]
@@ -106,7 +106,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Engelsk navn|Linguistic system
 |Beskrivelse|Brukes til å representere et system av tegn, symboler, lyder, gester, eller regler som brukes i kommunikasjon, for eksempel et språk.
 |URI| http://dublincore.org/documents/dcmi-terms/#terms-LinguisticSystem[dct:LinguisticSystem]
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 === Tema (skos:Concept) [[klasse-tema]]
@@ -116,7 +116,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Engelsk navn|Theme
 |Beskrivelse|Brukes til å representere et tema/temaområde for en modell beskrevet i en katalog
 |URI| https://www.w3.org/TR/skos-reference/#concepts[skos:Concept]
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 === Tidsrom (dct:PeriodOfTime) [[klasse-tidsrom]]
@@ -126,7 +126,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Engelsk navn|Period of time
 |Beskrivelse|Brukes til å beskrive et tidsintervall som er navngitt eller definert av en start- og sluttdato.
 |URI| http://dublincore.org/documents/dcmi-terms/#terms-PeriodOfTime[dct:PeriodOfTime]
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 == Obligatoriske klasser i modelldelen [[Obligatoriske-klasser-i-modelldelen]]
@@ -141,7 +141,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Subklasse av| dct:Standard, dcat:Resource
 |Kommentar|Synonym: løsningsmodell, meldingsmodell, tjenestemodell, datamodell, implementasjonsmodell, konstruksjonsmodell.
 Klasse som representerer modellen som skal utveksles.
-|Kravsnivå|Obligatorisk
+|Kravnivå|Obligatorisk
 |===
 
 == Anbefalte klasser i modelldelen [[Anbefalte-klasser-i-modelldelen]]
@@ -154,7 +154,7 @@ Klasse som representerer modellen som skal utveksles.
 |Beskrivelse|Brukes til å beskrive et forhold mellom to modellelementer.
 |URI|modelldcatno:Association
 |Subklasse av|modelldcatno:Property
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |===
 
 === Attributt (modelldcatno:Attribute) [[klasse-attributt]]
@@ -165,7 +165,7 @@ Klasse som representerer modellen som skal utveksles.
 |Beskrivelse|Brukes til å beskrive en basisegenskap ved et modellelement.
 |URI|modelldcatno:Attribute
 |Subklasse av|modelldcatno:Property
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |===
 
 === Begrensningsregel  (modelldcatno:ConstraintRule) [[klasse-begrensningsregel]]
@@ -176,7 +176,7 @@ Klasse som representerer modellen som skal utveksles.
 |Beskrivelse|Brukes til å beskrive en regel for hvilke begrensninger som gjelder for én eller flere egenskaper og/eller modellelementer.
 |URI|modelldcatno:ConstraintRule
 |Subklasse av|modelldcatno:Note
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |===
 
 === Datatype (modelldcatno:DataType) [[klasse-datatype]]
@@ -187,7 +187,7 @@ Klasse som representerer modellen som skal utveksles.
 |Beskrivelse|Brukes til å beskrive en sammensatt verdistruktur uten identitet.
 |URI|modelldcatno:DataType
 |Subklasse av|modelldcatno:ModelElement
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |===
 
 === Egenskap (modelldcatno:Property) [[klasse-egenskap]]
@@ -197,7 +197,7 @@ Klasse som representerer modellen som skal utveksles.
 |Engelsk navn|Property
 |Beskrivelse|Brukes til å representere et trekk eller karakteristikk ved et modellelement, f.eks. at det har et attributt, rolle eller en assosiasjon knyttet til seg eller er en realisering av et annet modellelement.
 |URI|modelldcatno:Property
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |Kommentar|Merk at egenskap her ikke er ekvivalent med hvordan egenskap defineres innenfor objektorientert modellering, f.eks. UML, men representeres noe som kan “hektes på” et modellelement.
 |===
 
@@ -209,7 +209,7 @@ Klasse som representerer modellen som skal utveksles.
 |Beskrivelse|Brukes til å beskrive verdidomenet for et attributt.
 |URI|modelldcatno:SimpleType
 |Subklasse av|modelldcatno:ModelElement
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |===
 
 === Eller (modelldcatno:Or) [[klasse-eller]]
@@ -220,7 +220,7 @@ Klasse som representerer modellen som skal utveksles.
 |Beskrivelse|Begrensningsregel som uttrykker at som minimum må én av egenskapene og/eller modellelementene som den refererer til forekomme (inklusiv eller).
 |URI|modelldcatno:Or
 |Subklasse av|modelldcatno:ConstraintRule
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |Kommentar|Som minimum må begrensningsregelen være knyttet til to egenskaper/modellelementer.
 |===
 
@@ -233,7 +233,7 @@ Klasse som representerer modellen som skal utveksles.
 |Beskrivelse|Begrensningsregel som uttrykker at kun én av egenskapene eller modellelementene den refererer til kan opptre samtidig (eksklusiv eller).
 |URI|modelldcatno:Xor
 |Subklasse av|modelldcatno:ConstraintRule
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |Kommentar|Som minimum må begrensningsregelen være knyttet til to egenskaper/modellelementer.
 |===
 
@@ -246,7 +246,7 @@ Klasse som representerer modellen som skal utveksles.
 |Engelsk navn|Code element
 |Beskrivelse|Brukes til å representere et navngitt og unikt element i en kodeliste.
 |URI|modelldcatno:CodeElement
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |===
 
 === Kodeliste (modelldcatno:CodeList) [[klasse-kodeliste]]
@@ -257,7 +257,7 @@ Klasse som representerer modellen som skal utveksles.
 |Beskrivelse|Brukes til å beskrive et sett av lovlige verdier for et attributt.
 |URI|modelldcatno:CodeList
 |Subklasse av|modelldcatno:ModelElement
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |===
 
 === Modellelement (modelldcatno:ModelElement) [[klasse-modellelement]]
@@ -268,7 +268,7 @@ Klasse som representerer modellen som skal utveksles.
 |Beskrivelse|Brukes til å beskrive en navngitt og elementær komponent i en modell som kan ha en eller flere egenskaper.
 |URI|modelldcatno:ModelElement
 |Kommentar|Typer modellelementer er objekttype, rotobjekttype, kodeliste, enkeltype og datatype.
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |Kommentar|Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av spesialiseringene.
 |===
 
@@ -280,7 +280,7 @@ Klasse som representerer modellen som skal utveksles.
 |Beskrivelse|Brukes til å beskrive en klasse av objekter med felles egenskaper.
 |URI|modelldcatno:ObjectType
 |Subklasse av|modelldcatno:ModelElement
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |===
 
 === Rolle (modelldcatno:Role) [[klasse-rolle]]
@@ -291,7 +291,7 @@ Klasse som representerer modellen som skal utveksles.
 |Beskrivelse|Brukes til å beskrive en rolle et objekt har overfor et annet i en assosiasjon.
 |URI|modelldcatno:Role
 |Subklasse av|modelldcatno:Property
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |===
 
 === Rotobjekttype (modelldcatno:RootObjectType) [[klasse-rotobjekttype]]
@@ -302,7 +302,7 @@ Klasse som representerer modellen som skal utveksles.
 |Beskrivelse|Brukes til å beskrive den overordnede objekttypen som omslutter alle de andre modellelementene i en modell.
 |URI|modelldcatno:RootObjectType
 |Subklasse av|modelldcatno:ModelElement
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |===
 
 === Spesialisering (modelldcatno:Specialization) [[klasse-spesialisering]]
@@ -313,7 +313,7 @@ Klasse som representerer modellen som skal utveksles.
 |Beskrivelse|Brukes til å beskrive et arveforhold mellom modellelementer, hvor en subtype er en spesialisering av en mer generell type (supertype).
 |URI|modelldcatno:Specialization
 |Subklasse av|modelldcatno:Property
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |===
 
 == Valgfrie klasser i modelldelen [[Valgfrie-klasser-i-modelldelen]]
@@ -327,7 +327,7 @@ Klasse som representerer modellen som skal utveksles.
 |URI|modelldcatno:Abstraction
 |Subklasse av|modelldcatno:Property
 
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 === Begrep (skos:Concept) [[klasse-begrep-2]]
@@ -337,7 +337,7 @@ Klasse som representerer modellen som skal utveksles.
 |Engelsk navn|Concept
 |Beskrivelse|Brukes til å beskrive et begrep som er viktig for å forstå eller tolke modellen eller modellelementene.
 |URI| https://www.w3.org/2009/08/skos-reference/skos.html#Concept[skos:Concept]
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 === Dokument (foaf:Document) [[klasse-dokument]]
@@ -347,7 +347,7 @@ Klasse som representerer modellen som skal utveksles.
 |Engelsk navn|Document
 |Beskrivelse|Brukes til å representere en tekstlig ressurs som inneholder informasjon beregnet på mennesker. For eksempel en nettside om en modell.
 |URI| http://xmlns.com/foaf/spec/#term_Document[foaf:Document]
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 === Komposisjon (modelldcatno:Composition) [[klasse-komposisjon]]
@@ -358,7 +358,7 @@ Klasse som representerer modellen som skal utveksles.
 |Beskrivelse|Brukes til å beskrive en relasjon mellom to modellelementer, hvor et modellelement inngår som en del av et annet som representerer helheten, og der levetiden av delen kun eksisterer i levetiden til helhet.
 |URI|modelldcatno:Composition
 |Subklasse av|modelldcatno:Property
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 === Medietype (dct:MediaType) [[klasse-medietype]]
@@ -368,7 +368,7 @@ Klasse som representerer modellen som skal utveksles.
 |Engelsk navn|Media type
 |Beskrivelse|Brukes til å representere en medietype, for eksempel formatet til en datafil.
 |URI|https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/MediaType[dct:MediaType]
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 === Modul (modelldcatno:Module) [[klasse-module]]
@@ -379,7 +379,7 @@ Klasse som representerer modellen som skal utveksles.
 |Beskrivelse|Brukes til å beskrive en modellmodul/delmodell av modellen.
 |URI|modelldcatno:Module
 |Subklasse av|modelldcatno:ModelElement
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |Kommentar|Modeller kan bestå av moduler, som beslektede modellelementer er gruppert under.
 |===
 
@@ -390,7 +390,7 @@ Klasse som representerer modellen som skal utveksles.
 |Engelsk navn|Note
 |Beskrivelse|Brukes til å beskrive en merknad, forklaring eller tilleggsopplysning til ett eller flere modellelementer og/eller egenskaper.
 |URI|modelldcatno:Note
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 === Realisering (modelldcatno:Realization) [[klasse-realisering]]
@@ -401,7 +401,7 @@ Klasse som representerer modellen som skal utveksles.
 |Beskrivelse|Brukes til å beskrive at et modellelement eller egenskap er en realisering av et annet modellelement eller egenskap.
 |URI|modelldcatno:Realization
 |Subklasse av|modelldcatno:Property
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 === Samling (modelldcatno:Collection) [[klasse-samling]]
@@ -413,7 +413,7 @@ Klasse som representerer modellen som skal utveksles.
 |URI|modelldcatno:Collection
 |Subklasse av|modelldcatno:Property
 |Kommentar|I UML omtales dette som aggregering.
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 === Standard (dct:Standard) [[klasse-standard]]
@@ -423,7 +423,7 @@ Klasse som representerer modellen som skal utveksles.
 |Engelsk navn|Standard
 |Beskrivelse|Brukes til å representere en standard eller spesifikasjon som en ressurs er i samsvar med.
 |URI|https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Standard[dct:Standard]
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |Kommentar|Informasjonsmodell er en subklasse av Standard.  Fra f.eks. et datasett (dcat:Dataset) kan det derfor refereres til en informasjonsmodell vha. https://data.norge.no/specification/dcat-ap-no/#Datasett-iSamsvarMed[dct:conformsTo].
 |===
 
@@ -435,5 +435,5 @@ Klasse som representerer modellen som skal utveksles.
 |Beskrivelse|Brukes til å beskrive en egenskap som beskriver at ett eller flere elementer av et sett av valgbare elementer kan inngå i det bærende modellelement.
 |URI|modelldcatno:Choice
 |Subklasse av|modelldcatno:Property
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
