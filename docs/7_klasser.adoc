@@ -330,6 +330,17 @@ Klasse som representerer modellen som skal utveksles.
 |Kravnivå|Valgfri
 |===
 
+=== Alle (modelldcatno:AllOf) [[klasse-alle]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn| All of
+|Beskrivelse| Brukes til å representere valg som uttrykker at alle valgbare modellelementer og/eller egenskaper må velges samtidig.
+|URI| modelldcatno:AllOf
+|Subklasse av| modelldcatno:Choice
+|Kravnivå| Valgfri
+|===
+
 === Begrep (skos:Concept) [[klasse-begrep-2]]
 
 [cols="30s,70"]
@@ -348,6 +359,17 @@ Klasse som representerer modellen som skal utveksles.
 |Beskrivelse|Brukes til å representere en tekstlig ressurs som inneholder informasjon beregnet på mennesker. For eksempel en nettside om en modell.
 |URI| http://xmlns.com/foaf/spec/#term_Document[foaf:Document]
 |Kravnivå|Valgfri
+|===
+
+=== Ikke (modelldcatno:Not) [[klasse-ikke]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn| Not
+|Beskrivelse| Brukes til å representere begrensningsregel som uttrykker at kun instanser som ikke samsvarer med egenskaper og/eller modellelementer som den refererer til, kan forekomme.
+|URI| modelldcatno:Not
+|Subklasse av| modelldcatno:ConstraintRule
+|Kravnivå| Valgfri
 |===
 
 === Komposisjon (modelldcatno:Composition) [[klasse-komposisjon]]
@@ -383,6 +405,17 @@ Klasse som representerer modellen som skal utveksles.
 |Kommentar|Modeller kan bestå av moduler, som beslektede modellelementer er gruppert under.
 |===
 
+=== Noen av (modelldcatno:AnyOf) [[klasse-noen-av]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn| Any of
+|Beskrivelse| Brukes til å representere valg som uttrykker at ett eller flere valgbare modellelementer og/eller egenskaper må velges samtidig.
+|URI| modelldcatno:AnyOf
+|Subklasse av| modelldcatno:Choice
+|Kravnivå| Valgfri
+|===
+
 === Note (modelldcatno:Note) [[klasse-note]]
 
 [cols="30s,70"]
@@ -391,6 +424,17 @@ Klasse som representerer modellen som skal utveksles.
 |Beskrivelse|Brukes til å beskrive en merknad, forklaring eller tilleggsopplysning til ett eller flere modellelementer og/eller egenskaper.
 |URI|modelldcatno:Note
 |Kravnivå|Valgfri
+|===
+
+=== Og (modelldcatno:And) [[klasse-og]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn| And
+|Beskrivelse| Brukes til å representere begrensningsregel som uttrykker at alle egenskaper og/eller modellelementer den refererer til, må opptre samtidig.
+|URI| modelldcatno:And
+|Subklasse av| modelldcatno:ConstraintRule
+|Kravnivå| Valgfri
 |===
 
 === Realisering (modelldcatno:Realization) [[klasse-realisering]]

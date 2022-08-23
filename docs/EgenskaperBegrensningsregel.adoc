@@ -30,5 +30,5 @@ Klassen _Begrensningsregel_ er anbefalt.
 |Beskrivelse|Uttrykk som beskriver en begrensningsregel. Bør gjentas når uttrykket finnes i flere ulike språk/målformer.
 |Multiplisitet|0..n
 |Kravnivå|Anbefalt
-|Kommentar|En Begrensningsregel, med unntak av subklassene Enten eller (modelldcatno:Xor) og Eller (modelldcatno:OR), må som minimum ha en tittel eller et begrensningsuttrykk.
+|Kommentar| En Begrensningsregel, med unntak av subklassene Og (`modelldcatno:And`), Enten eller (`modelldcatno:Xor`), Eller (`modelldcatno:Or`) og Ikke (`modelldcatno:Not`), må som minimum ha en tittel eller et begrensningsuttrykk.
 |===
