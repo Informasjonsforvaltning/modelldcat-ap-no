@@ -13,7 +13,7 @@ Klassen _Note_ er valgfri.
 |Range|modelldcatno:ModelElement or modelldcatno:Property
 |Beskrivelse|Referanse til egenskap eller modellelement som noten omhandler.
 |Multiplisitet|0..n
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |Kommentar|En note, med unntak av subklassen Begrensningsregel (modelldcatno:ConstraintRule), må referere til en egenskap (modelldcatno:Property) eller et modellelement (modelldcatno:ModelElement).
 |===
 
@@ -26,7 +26,7 @@ Klassen _Note_ er valgfri.
 |Range|rdfs:Literal
 |Beskrivelse|Inneholder en kommentar i form av en fritekst. Bør gjentas når beskrivelsen finnes i flere ulike språk/målformer.
 |Multiplisitet|0..n
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |Kommentar|En Note, med unntak av subklassen Begrensningsregel (modelldcatno:ConstraintRule), må som minimum ha enten en tittel (dct:title) eller anmerkning (modelldcatno:propertyNote).
 |===
 
@@ -34,12 +34,12 @@ Klassen _Note_ er valgfri.
 
 [cols="30s,70d"]
 |===
-|*Engelsk navn*|identifier
-|*URI*|dct:identifier
-|*Range*|rdfs:Literal
-|*Beskrivelse*|Unik og persistent identifikator til en note.
-|*Multiplisitet*|0..1
-|*Kravsnivå*|Anbefalt
+|Engelsk navn|identifier
+|URI|dct:identifier
+|Range|rdfs:Literal
+|Beskrivelse|Unik og persistent identifikator til en note.
+|Multiplisitet|0..1
+|Kravnivå|Anbefalt
 |===
 
 ===== Note: tittel (dct:title) [[Note-tittel]]
@@ -51,7 +51,7 @@ Klassen _Note_ er valgfri.
 |Range|rdfs:Literal
 |Beskrivelse|Tittelen til en note. Bør gjentas når tittelen finnes i flere ulike språk/målformer.
 |Multiplisitet|0..n
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |Kommentar|En Note, med unntak av subklassen Begrensningsregel (modelldcatno:ConstraintRule), må som minimum ha enten en tittel (dct:title) eller anmerkning (modelldcatno:propertyNote).
 |===
 
@@ -66,5 +66,5 @@ Klassen _Note_ er valgfri.
 |Range|modelldcatno:Module
 |Beskrivelse|Brukes til å referere til en modellmodul/delmodell som noten inngår i.
 |Multiplisitet|0..n
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===

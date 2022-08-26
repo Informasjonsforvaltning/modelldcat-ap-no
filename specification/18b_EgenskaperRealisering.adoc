@@ -14,5 +14,5 @@ Klassen _Realisering_ er valgfri.
 |Beskrivelse|Brukes til å referere til modellelementet/egenskapen som det aktuelle modellelementet/egenskapen er en realisering av.
 |Subegenskap av|modelldcatno:hasType
 |Multiplisitet|0..1
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |===
