@@ -13,7 +13,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Range|rdfs:Literal
 |Beskrivelse|Navn på modell. Bør gjentas når navnet finnes i flere ulike språk/målformer.
 |Multiplisitet|1..n
-|Kravsnivå|Obligatorisk
+|Kravnivå|Obligatorisk
 |===
 
 ===== Informasjonsmodell: utgiver (dct:publisher) [[Informasjonsmodell-utgiver]]
@@ -25,7 +25,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Range|foaf:Agent
 |Beskrivelse|Referanse til en aktør (organisasjon) som er ansvarlig for å gjøre modellen tilgjengelig. Bør være autoritativ URI for aktøren, sekundært organisasjonsnummer.
 |Multiplisitet|1..1
-|Kravsnivå|Obligatorisk
+|Kravnivå|Obligatorisk
 |===
 
 
@@ -40,7 +40,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Range|skos:Concept
 |Beskrivelse|Referanse til sentrale begrep som er viktige for å forstå og tolke modellen. Representeres som URI-er.
 |Multiplisitet|0..n
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |===
 
 ===== Informasjonsmodell: beskrivelse (dct:description) [[Informasjonsmodell-beskrivelse]]
@@ -52,7 +52,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Range|rdfs:Literal
 |Beskrivelse|Inneholder fritekstbeskrivelse av modellen. Bør gjentas når beskrivelsen finnes i flere ulike språk/målformer.
 |Multiplisitet|0..n
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |===
 
 =====  Informasjonsmodell: identifikator (dct:identifier)  [[Informasjonsmodell-identifikator]]
@@ -64,7 +64,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Range|rdfs:Literal
 |Beskrivelse|Hovedidentifikator for modellen.
 |Multiplisitet|0..1
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |Kommentar|F.eks. URI eller annen identifikator som er stabil og globalt unik.
 |===
 
@@ -78,7 +78,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Range|rdfs:Literal
 |Beskrivelse|Modellens identifikator slik det fremkommer av den som har laget modellen
 |Multiplisitet|0..1
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |Kommentar|Dette er typisk hva elementet er kjent som i modelleringsverktøyet hvor modellen er laget.
 |===
 
@@ -92,7 +92,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Range|modelldcatno:ModelElement
 |Beskrivelse|Kobler modellen til modellelementene som er en del av modellen.
 |Multiplisitet|0..n
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |===
 
 
@@ -102,10 +102,10 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |===
 |Engelsk navn | contact point
 |URI|dcat:contactPoint
-|Range|vcard:Kind
+|Range|vcard:Organization
 |Beskrivelse|Referanse til kontaktpunktsobjekt med kontaktopplysninger. Disse kan brukes til å sende kommentarer om modellen.
 |Multiplisitet|0..n
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |===
 
 =====  Informasjonsmodell: lisens (dct:license) [[Informasjonsmodell-lisens]]
@@ -117,7 +117,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Range|dct:LicenseDocument
 |Beskrivelse|Viser til lisens for informasjonsmodellen som beskriver hvordan den kan viderebrukes.
 |Multiplisitet|0..1
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |===
 
 =====  Informasjonsmodell: tema (dcat:theme) [[Informasjonsmodell-tema]]
@@ -129,7 +129,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Range|skos:Concept
 |Beskrivelse|Brukes til å referere til et hovedtema for modellen. En modell kan assosieres med flere tema.
 |Multiplisitet|0..n
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |===
 
 
@@ -147,7 +147,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Range|dct:Location
 |Beskrivelse|Brukes til å referere til et geografisk eller administrativt område som dekkes av modellen.
 |Multiplisitet|0..n
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 =====  Informasjonsmodell: emneord (dcat:keyword) [[Informasjonsmodell-emneord]]
@@ -159,7 +159,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Range|rdfs:Literal
 |Beskrivelse|Inneholder emneord (eller tag) som beskriver modellen.
 |Multiplisitet|0..n
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 =====  Informasjonsmodell: endringsdato (dct:modified) [[Informasjonsmodell-endringsdato]]
@@ -171,7 +171,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Range|rdfs:Literal typed as xsd:dateTime
 |Beskrivelse|Dato for siste oppdatering av modellen.
 |Multiplisitet|0..1
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 =====  Informasjonsmodell: er del av (dct:isPartOf) [[Informasjonsmodell-erDelAv]]
@@ -183,7 +183,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Range|modelldcatno:InformationModel
 |Beskrivelse|Referanse til en annen modell som denne modellen er en del av.
 |Multiplisitet|0..n
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 ===== Informasjonsmodell: er profil av (prof:isProfileOf) [[Informasjonsmodell-erProfilAv]]
@@ -195,7 +195,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Range|dct:Standard
 |Beskrivelse|Refererer til en standard eller spesifikasjon som modellen er en profil av.
 |Multiplisitet|0..n
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 =====  Informasjonsmodell: er erstattet av (dct:isReplacedBy) [[Informasjonsmodell-erErstattetAv]]
@@ -207,7 +207,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Range|modelldcatno:InformationModel
 |Beskrivelse|Referanse til oppdatert og nyere modell som erstatter modellen.
 |Multiplisitet|0..n
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 
@@ -220,7 +220,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Range|modelldcatno:InformationModel
 |Beskrivelse|Referanse til eldre utgått modell denne modellen er ment å erstatte.
 |Multiplisitet|0..n
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 ===== Informasjonsmodell: finnes i format (dct:hasFormat) [[Informasjonsmodell-finnesIFormat]]
@@ -232,7 +232,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Range|foaf:Document
 |Beskrivelse|Brukes til å referere til et dokument som representerer modellen i et annet format.
 |Multiplisitet|0..n
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 ===== Informasjonsmodell: gyldighetsperiode (dct:temporal) [[Informasjonsmodell-gyldighetsperiode]]
@@ -244,7 +244,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Range|dct:PeriodOfTime
 |Beskrivelse|Modellens gyldighetsintervall.
 |Multiplisitet|0..n
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 ===== Informasjonsmodell: har del (dct:hasPart) [[Informasjonsmodell-harDel]]
@@ -256,7 +256,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Range|modelldcatno:InformationModel
 |Beskrivelse|Referanse til en annen modell som er en del av denne modellen.
 |Multiplisitet|0..n
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 
@@ -269,7 +269,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Range|foaf:Document
 |Beskrivelse|Brukes til å referere til hjemmesiden til modellen.
 |Multiplisitet|0..1
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 ===== Informasjonsmodell: i samsvar med (dct:conformsTo) [[Informasjonsmodell-iSamsvarMed]]
@@ -281,7 +281,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Range|dct:Standard
 |Beskrivelse|Referanse til en implementasjonsregel eller spesifikasjon, som ligger til grunn for opprettelsen av modellen.
 |Multiplisitet|0..n
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 ===== Informasjonsmodell: modellstatus (adms:status) [[Informasjonsmodell-modellstatus]]
@@ -293,7 +293,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Range|skos:Concept
 |Beskrivelse|Modellens modenhet. Må ha en av verdiene Completed, Deprecated, Under Development, Withdrawn.
 |Multiplisitet|0..1
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 ===== Informasjonsmodell: produsent (dct:creator) [[Informasjonsmodell-produsent]]
@@ -305,7 +305,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Range|foaf:Agent
 |Beskrivelse|Referanse til aktøren som er produsent av modellen.
 |Multiplisitet|0..1
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 
@@ -318,7 +318,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Range| dct:LinguisticSystem
 |Beskrivelse|Brukes til å referere til språket som er brukt i modellen. Kan repeteres dersom det er flere språk benyttet i modellen.
 |Multiplisitet|0..n
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 ===== Informasjonsmodell: type (dct:type) [[Informasjonsmodell-type]]
@@ -330,7 +330,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Range|skos:Concept
 |Beskrivelse|Referanse til typedefinisjoner som kategoriserer modellen og abstraksjonsnivået.
 |Multiplisitet|0..n
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 ===== Informasjonsmodell: utgivelsesdato (dct:issued) [[Informasjonsmodell-utgivelsesdato]]
@@ -342,7 +342,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Range|rdfs:Literal typed as xsd:dateTime
 |Beskrivelse|Dato for den formelle utgivelsen av modellen.
 |Multiplisitet|0..1
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 
@@ -355,7 +355,7 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Range|rdfs:Literal
 |Beskrivelse|Et versjonsnummer eller annen versjonsbetegnelse for modellen.
 |Multiplisitet|0..1
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 
@@ -368,5 +368,5 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Range|rdfs:Literal
 |Beskrivelse|Egenskap som beskriver forskjellene mellom denne og en tidligere versjon av modellen. Bør gjentas når versjonsnoten finnes i flere ulike språk/målformer.
 |Multiplisitet|0..n
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===

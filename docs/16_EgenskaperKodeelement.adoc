@@ -13,7 +13,7 @@ Klassen _Kodeelement_ er anbefalt.
 |Range|modelldcatno:CodeList
 |Beskrivelse|Brukes til å referere til kodeliste som kodeelementet inngår i.
 |Multiplisitet|1..n
-|Kravsnivå|Obligatorisk
+|Kravnivå|Obligatorisk
 |===
 
 ===== Kodeelement: kode (skos:notation) [[Kodeelement-kode]]
@@ -25,7 +25,7 @@ Klassen _Kodeelement_ er anbefalt.
 |Range|rdfs:Literal
 |Beskrivelse|Brukes til å referere til representasjonen av kodeelementet, vanligvis kalt «koden».
 |Multiplisitet|1..1
-|Kravsnivå|Obligatorisk
+|Kravnivå|Obligatorisk
 |===
 
 
@@ -42,7 +42,7 @@ Klassen _Kodeelement_ er anbefalt.
 |Beskrivelse|Brukes til å referere til den anbefalte kodeteksten for kodeelementet, dvs. teksten som anses best egnet for kodeelementet. Bør gjentas når teksten finnes i flere ulike språk/målformer.
 |Subegenskap av|rdfs:label
 |Multiplisitet|0..n
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |Kommentar|Det bør være maksimalt én anbefalt kodetekst per språk/målform.
 |===
 
@@ -55,7 +55,7 @@ Klassen _Kodeelement_ er anbefalt.
 |Range|skos:Concept
 |Beskrivelse|Referanse til sentralt begrep som er viktig for å forstå og tolke koden. Representeres som URI-er.
 |Multiplisitet|0..1
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |===
 
 ===== Kodeelement: identifikator (dct:identifier) [[kodeelement-identifikator]]
@@ -67,7 +67,7 @@ Klassen _Kodeelement_ er anbefalt.
 |Range|rdfs:Literal
 |Beskrivelse|Unik og persistent identifisering av en kode.
 |Multiplisitet|0..1
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |===
 
 ===== Kodeelement: toppelement til (skos:topConceptOf) [[Kodeelement-toppelementTil]]
@@ -79,7 +79,7 @@ Klassen _Kodeelement_ er anbefalt.
 |Range|modelldcatno:CodeList
 |Beskrivelse|Brukes til å referere til kodeliste som kodeelementet er det første kodeelementet i.
 |Multiplisitet|0..n
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |===
 
 ====  Valgfrie egenskaper for klassen _Kodeelement_ [[Valgfrie-egenskaper-Kodeelement]]
@@ -95,7 +95,7 @@ Klassen _Kodeelement_ er anbefalt.
 |Beskrivelse|Brukes til å referere til definisjonen av begrepet som kodeelementet representerer. Bør gjentas når definisjonen finnes i flere ulike språk/målformer.
 |Subegenskap av|skos:note
 |Multiplisitet|0..n
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 ===== Kodeelement: eksempel (skos:example) [[Kodeelement-eksempel]]
@@ -108,7 +108,7 @@ Klassen _Kodeelement_ er anbefalt.
 |Beskrivelse|Brukes til å referere til eksempler på begrepet som kodeelementet representerer.
 |Subegenskap av|skos:note
 |Multiplisitet|0..n
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 
@@ -123,7 +123,7 @@ Klassen _Kodeelement_ er anbefalt.
 |Beskrivelse|Brukes til å referere til merknad om hva som er ekskludert i kodeelementet. Bør gjentas når merknaden finnes i flere ulike språk/målformer.
 |Subegenskap av|skos:scopeNote
 |Multiplisitet|0..n
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 ===== Kodeelement: forrige kodeelement (xkos:previous) [[Kodeelement-forrigeKodeelement]]
@@ -135,7 +135,7 @@ Klassen _Kodeelement_ er anbefalt.
 |Range|modelldcatno:CodeElement
 |Beskrivelse|Brukes til å referere til kodeelementet som kommer foran det aktuelle kodeelementet.
 |Multiplisitet|0..1
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 
@@ -149,7 +149,7 @@ Klassen _Kodeelement_ er anbefalt.
 |Beskrivelse|Brukes til å referere til kodetekst som anses som uegnet for kodeelementet. Bør gjentas når kodeteksten finnes i flere ulike språk/målformer.
 |Subegenskap av|rdfs:label
 |Multiplisitet|0..n
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 
@@ -163,7 +163,7 @@ Klassen _Kodeelement_ er anbefalt.
 |Beskrivelse|Brukes til å referere til merknad om hva som er inkludert i kodeelementet. Bør gjentas når merknaden finnes i flere ulike språk/målformer.
 |Subegenskap av|skos:scopeNote
 |Multiplisitet|0..n
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 
@@ -176,7 +176,7 @@ Klassen _Kodeelement_ er anbefalt.
 |Range|rdfs:Literal
 |Beskrivelse|Brukes til å referere til merknad om kodeelementet. Bør gjentas når merknaden finnes i flere ulike språk/målformer.
 |Multiplisitet|0..n
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 ===== Kodeelement: neste kodeelement (xkos:next) [[Kodeelement-nesteKodeelement]]
@@ -188,7 +188,7 @@ Klassen _Kodeelement_ er anbefalt.
 |Range|modelldcatno:CodeElement
 |Beskrivelse|Brukes til å referere til kodeelementet som kommer etter det aktuelle kodeelementet.
 |Multiplisitet|0..1
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 ===== Kodeelement: omfangsmerknad (skos:scopeNote) [[Kodeelement-omfangsmerknad]]
@@ -201,7 +201,7 @@ Klassen _Kodeelement_ er anbefalt.
 |Beskrivelse|Brukes til å referere til merknad ang. bruken av kodeelementet. Bør gjentas når merknaden finnes i flere ulike språk/målformer.
 |Subegenskap av|skos:note
 |Multiplisitet|0..n
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 
@@ -215,5 +215,5 @@ Klassen _Kodeelement_ er anbefalt.
 |Beskrivelse|Brukes til å referere til alternativ kodetekst (som kan brukes ved siden av den anbefalte kodeteksten). Bør gjentas når kodeteksten finnes i flere ulike språk/målformer.
 |Subegenskap av|rdfs:label
 |Multiplisitet|0..n
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===

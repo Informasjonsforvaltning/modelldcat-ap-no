@@ -13,7 +13,7 @@ Klassen _Enkeltype_ er anbefalt
 |Range| xsd:anyURI
 |Beskrivelse|Brukes til å referere til en standard ontologi eller bibliotek for typer, f.eks. typer definert av W3C og UML.
 |Multiplisitet| 0..1
-|Kravsnivå| Anbefalt
+|Kravnivå| Anbefalt
 |===
 
 ==== Valgfrie egenskaper for klassen _Enkeltype_
@@ -27,7 +27,7 @@ Klassen _Enkeltype_ er anbefalt
 |Range| xsd:nonNegativeInteger
 |Beskrivelse|Spesifiserer maksimalt antall tillatte desimaler.
 |Multiplisitet| 0..1
-|Kravsnivå| Valgfri
+|Kravnivå| Valgfri
 |===
 
 ===== Enkeltype: lengde (xsd:length) [[Enkeltype-lengde]]
@@ -39,7 +39,7 @@ Klassen _Enkeltype_ er anbefalt
 |Range| xsd:nonNegativeInteger
 |Beskrivelse|Eksakt lengde på en streng.
 |Multiplisitet| 0..1
-|Kravsnivå| Valgfri
+|Kravnivå| Valgfri
 |===
 
 ===== Enkeltype: maksimum ikke-inklusivt (xsd:maxExclusive) [[Enkeltype-maksimumIkkeInklusivt]]
@@ -51,7 +51,7 @@ Klassen _Enkeltype_ er anbefalt
 |Range |xsd:decimal
 |Beskrivelse |Spesifiserer den øvre grensene for en numerisk verdi (verdien må være mindre enn denne verdien)
 |Multiplisitet |0..1
-|Kravsnivå |Valgfri
+|Kravnivå |Valgfri
 |===
 
 ===== Enkeltype: maksimum inklusivt (xsd:maxInclusive) [[Enkeltype-maksimumInklusivt]]
@@ -63,7 +63,7 @@ Klassen _Enkeltype_ er anbefalt
 |Range| xsd:decimal
 |Beskrivelse|Angir den øvre grensen for en numerisk verdi (verdien må være mindre enn eller lik denne verdien).
 |Multiplisitet| 0..1
-|Kravsnivå| Valgfri
+|Kravnivå| Valgfri
 |===
 
 ===== Enkeltype: maks lengde (xsd:maxLength) [[Enkeltype-maksLengde]]
@@ -75,7 +75,7 @@ Klassen _Enkeltype_ er anbefalt
 |Range| xsd:nonNegativeInteger
 |Beskrivelse|Spesifiserer maksimum lengde på en streng.
 |Multiplisitet| 0..1
-|Kravsnivå| Valgfri
+|Kravnivå| Valgfri
 |===
 
 ===== Enkeltype: minimum ikke-inklusivt (xsd:minExclusive) [[Enkeltype-minimumIkkeInklusivt]]
@@ -87,7 +87,7 @@ Klassen _Enkeltype_ er anbefalt
 |Range |xsd:decimal
 |Beskrivelse |Spesifiserer den nedre grensene for en numerisk verdi (verdien må være større enn denne verdien).
 |Multiplisitet |0..1
-|Kravsnivå |Valgfri
+|Kravnivå |Valgfri
 |===
 
 ===== Enkeltype: minimum inklusivt (xsd:minInclusive) [[Enkeltype-minimumInklusivt]]
@@ -99,7 +99,7 @@ Klassen _Enkeltype_ er anbefalt
 |Range| xsd:decimal
 |Beskrivelse|Angir den nedre grensen for en numerisk verdi (verdien må være større enn eller lik denne verdien).
 |Multiplisitet| 0..1
-|Kravsnivå| Valgfri
+|Kravnivå| Valgfri
 |===
 
 ===== Enkeltype: minimum lengde (xsd:minLength) [[Enkeltype-minimumLengde]]
@@ -111,7 +111,7 @@ Klassen _Enkeltype_ er anbefalt
 |Range| xsd:nonNegativeInteger
 |Beskrivelse|Minimum lengde på en streng
 |Multiplisitet| 0..1
-|Kravsnivå| Valgfri
+|Kravnivå| Valgfri
 |===
 
 ===== Enkeltype: mønster (xsd:pattern) [[Enkeltype-mønster]]
@@ -123,7 +123,7 @@ Klassen _Enkeltype_ er anbefalt
 |Range| xsd:string
 |Beskrivelse|Regulært uttrykk som beskriver gyldig syntaks for et dataelement.
 |Multiplisitet| 0..1
-|Kravsnivå| Valgfri
+|Kravnivå| Valgfri
 |===
 
 ===== Enkeltype: totalt antall siffer (xsd:totalDigits) [[Enkeltype-totaltAntallSiffer]]
@@ -135,5 +135,5 @@ Klassen _Enkeltype_ er anbefalt
 |Range| xsd:nonNegativeInteger
 |Beskrivelse|Angir nøyaktig antall tillatte sifre. Må være større enn null.
 |Multiplisitet| 0..1
-|Kravsnivå| Valgfri
+|Kravnivå| Valgfri
 |===

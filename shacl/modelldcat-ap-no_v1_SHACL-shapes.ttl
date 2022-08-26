@@ -45,8 +45,9 @@
     dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ;
     dct:description "This document specifies the constraints on properties and classes expressed by ModellDCAT-AP-NO in SHACL."@en ;
     dct:title "The constraints of ModellDCAT-AP-NO"@en ;
-    owl:versionInfo "0.7";
-    dct:modified "2021-11-22"^^xsd:date ;
+    owl:versionInfo "1.2.001";
+    adms:versionNote "Alligned with v.1.2.0 of ModellDCAT-AP-NO"
+    dct:modified "2022-08-23"^^xsd:date ;
     .
 
 # -+-+- Some "general" classes, though modified for modelldcatno when necessary -+-+-+-
@@ -341,7 +342,6 @@
                 [
                   sh:property [
                     sh:name "inneholder objekttype"@nb , "contains object type"@en ;
-                    sh:maxCount 1 ;
                     sh:path modelldcatno:containsObjectType ;
                     sh:subClassOf modelldcatno:hasType ;
                     sh:class modelldcatno:ObjectType ;
@@ -392,7 +392,6 @@
                 [
                   sh:property [
                     sh:name "har datatype"@nb , "has data type"@en ;
-                    sh:maxCount 1 ;
                     sh:path modelldcatno:hasDataType ;
                     sh:subClassOf modelldcatno:hasType ;
                     sh:class modelldcatno:DataType ;
@@ -443,7 +442,6 @@
                 [
                   sh:property [
                     sh:name "har enkeltype"@nb , "has simple type"@en ;
-                    sh:maxCount 1 ;
                     sh:path modelldcatno:hasSimpleType ;
                     sh:subClassOf modelldcatno:hasType ;
                     sh:class modelldcatno:SimpleType ;
@@ -495,7 +493,6 @@
                 [
                   sh:property [
                     sh:name "har verdi fra"@nb , "has value from"@en ;
-                    sh:maxCount 1 ;
                     sh:path modelldcatno:hasValueFrom ;
                     sh:subClassOf modelldcatno:hasType ;
                     sh:class modelldcatno:CodeList ;
@@ -556,7 +553,7 @@
         sh:severity sh:Violation ;
     ] ;
     sh:targetClass modelldcatno:ConstraintRule ;
-    .
+ .
 
 # Lager en egen shape for modelldcatno:Or og modelldcatno:Xor
 # pga. at min-krav som gjelder for superklassen ikke gjelder her
@@ -601,7 +598,11 @@
         sh:severity sh:Violation ;
         sh:message "Egenskap `tittel` (dct:title) kan bare være Literal."@nb ;
         ] ;
-    sh:targetClass modelldcatno:Or, modelldcatno:Xor ;
+    sh:or (
+      [sh:targetClass modelldcatno:Or ]
+      [sh:targetClass modelldcatno:Xor ]
+      [sh:targetClass modelldcatno:And ]
+      [sh:targetClass modelldcatno:Not ] );
     .
 
 :Catalog_Shape
@@ -724,7 +725,10 @@
         sh:severity sh:Violation ;
         sh:message "Egenskap `kan ha` (modelldcatno:hasSome) kan bare ha verdi som er instans av modelldcatno:ModelElement."@nb ;
     ] ;
-    sh:targetClass modelldcatno:Choice ;
+    sh:or (
+      [ sh:targetClass modelldcatno:Choice ]
+      [ sh:targetClass modelldcatno:AllOf ]
+      [ sh:targetClass modelldcatno:AnyOf ] );
   .
 
 :CodeElement_Shape
@@ -972,7 +976,7 @@
         sh:message "Egenskap ìnneholder modellelement` (modelldcatno:containsModelElement) kan bare ha verdi som er instans av modelldcatno:ModelElement."@nb ;
     ], [
         sh:name "kontaktpunkt"@nb , "contact point"@en ;
-        sh:class vcard:Kind ;
+        sh:class vcard:Organization ;
         sh:path dcat:contactPoint ;
         sh:severity sh:Violation ;
     ], [
@@ -1156,9 +1160,9 @@
 :ModelTypeCV_Shape a sh:PropertyShape ; # modelltype, dct:type i modelldcatno:InformationModel
     sh:name "modelltype"@nb , "model type"@en ;
     sh:path dct:type ;
-    sh:patern "^https://data.norge.no/vocabulary/modelldcatno" ;
+    sh:patern "^https://data.norge.no/vocabulary/information-model-type#" ;
     sh:flags "i" ;
-    sh:message "Modelltype (dct:type) skal være en av modelltype-verdiene fra https://data.norge.no/vocabulary/modelldcatno"@nb ;
+    sh:message "Modelltype (dct:type) skal være en av modelltype-verdiene fra https://data.norge.no/vocabulary/information-model-type"@nb ;
     sh:severity sh:Violation ;
     sh:targetClass modelldcatno:InformationModel ;
   .
@@ -1237,9 +1241,9 @@
         sh:name "nedre multiplisitet"@nb , "min occurs"@en ;
         sh:maxCount 1 ;
         sh:datatype xsd:nonNegativeInteger ;
-        sh:path xsd:minOccurs ;
+        sh:path modelldcatno:minOccurs ;
         sh:severity sh:Violation ;
-        sh:message "Egenskap `nedre multiplisitet` (xsd:minOccurs) kan ha maks. én verdi, som skal være en xsd:nonNegativeInteger."@nb ;
+        sh:message "Egenskap `nedre multiplisitet` (modelldcatno:minOccurs) kan ha maks. én verdi, som skal være en xsd:nonNegativeInteger."@nb ;
     ], [
         sh:name "tittel"@nb , "title"@en ;
         sh:nodeKind sh:Literal ;
@@ -1256,9 +1260,9 @@
               )
           ]
         ) ;
-        sh:path xsd:maxOccurs ;
+        sh:path modelldcatno:maxOccurs ;
         sh:severity sh:Violation ;
-        sh:message "Egenskap `øvre multiplisitet` (xsd:maxOccurs) kan ha maks. én verdi, som skal være en xsd:nonNegativeInteger, `*` eller `n`."@nb ;
+        sh:message "Egenskap `øvre multiplisitet` (modelldcatno:maxOccurs) kan ha maks. én verdi, som skal være en xsd:nonNegativeInteger, `*` eller `n`."@nb ;
     ], [
         sh:name "beskrivelse"@nb , "description"@en ;
         sh:nodeKind sh:Literal ;
@@ -1334,10 +1338,10 @@
     sh:subClassOf modelldcatno:Property ;
     sh:property [
         sh:name "har objekttype"@nb , "has object type"@en ;
+        sh:minCount 1 ;
         sh:path modelldcatno:hasObjectType ;
         sh:class modelldcatno:ObjectType ;
         sh:subClassOf modelldcatno:hasType ;
-        sh:maxCount 1;
         sh:severity sh:Violation ;
         sh:message "Egenskap `modelldcatno:hasObjectType` (modelldcatno:hasObjectType) kan bare ha verdi som er instans av modelldcatno:ObjectType."@nb ;
     ] ;
