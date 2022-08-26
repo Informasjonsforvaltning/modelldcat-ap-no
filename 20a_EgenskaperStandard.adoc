@@ -13,7 +13,7 @@ Klassen _Standard_ er valgfri.
 |Range|rdfs:Literal
 |Beskrivelse|Brukes til å referere til tittelen til standarden/spesifikasjonen. Bør gjentas når tittelen finnes i flere ulike språk/målformer.
 |Multiplisitet|1..n
-|Kravsnivå|Obligatorisk
+|Kravnivå|Obligatorisk
 |===
 
 ==== Anbefalte egenskaper for klassen _Standard_ [[Anbefalte-egenskaper-Standard]]
@@ -27,7 +27,7 @@ Klassen _Standard_ er valgfri.
 |Range|rdfs:Resource
 |Beskrivelse|Brukes til å referere til en referanse til standarden/spesifikasjonen.
 |Multiplisitet|0..n
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |===
 
 ==== Valgfrie egenskaper for klassen _Standard_ [[Valgfrie-egenskaper-Standard]]
@@ -41,5 +41,5 @@ Klassen _Standard_ er valgfri.
 |Range|rdfs:Literal
 |Beskrivelse|Brukes til å referere til versjonsnummer.
 |Multiplisitet|0..1
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===

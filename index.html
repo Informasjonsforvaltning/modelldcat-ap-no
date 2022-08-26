@@ -468,7 +468,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#Valgfri-klasser-i-katalogdelen">Valgfrie klasser i katalogdelen</a>
 <ul class="sectlevel3">
-<li><a href="#klasse-kontaktopplysning">Kontaktopplysning (vcard:Kind)</a></li>
+<li><a href="#klasse-kontaktopplysning">Kontaktopplysning (vcard:Organization)</a></li>
 <li><a href="#klasse-lokasjon">Lokasjon (dct:Location)</a></li>
 <li><a href="#klasse-spraksystem">Språksystem (dct:LinguisticSystem)</a></li>
 <li><a href="#klasse-tema">Tema (skos:Concept)</a></li>
@@ -502,12 +502,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#Valgfrie-klasser-i-modelldelen">Valgfrie klasser i modelldelen</a>
 <ul class="sectlevel3">
 <li><a href="#klasse-Abstraksjon">Abstraksjon (modelldcatno:Abstraction)</a></li>
+<li><a href="#klasse-alle">Alle (modelldcatno:AllOf)</a></li>
 <li><a href="#klasse-begrep-2">Begrep (skos:Concept)</a></li>
 <li><a href="#klasse-dokument">Dokument (foaf:Document)</a></li>
+<li><a href="#klasse-ikke">Ikke (modelldcatno:Not)</a></li>
 <li><a href="#klasse-komposisjon">Komposisjon (modelldcatno:Composition)</a></li>
 <li><a href="#klasse-medietype">Medietype (dct:MediaType)</a></li>
 <li><a href="#klasse-module">Modul (modelldcatno:Module)</a></li>
+<li><a href="#klasse-noen-av">Noen av (modelldcatno:AnyOf)</a></li>
 <li><a href="#klasse-note">Note (modelldcatno:Note)</a></li>
+<li><a href="#klasse-og">Og (modelldcatno:And)</a></li>
 <li><a href="#klasse-realisering">Realisering (modelldcatno:Realization)</a></li>
 <li><a href="#klasse-samling">Samling (modelldcatno:Collection)</a></li>
 <li><a href="#klasse-standard">Standard (dct:Standard)</a></li>
@@ -626,8 +630,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel5">
 <li><a href="#Attributt-harDataType">Attributt: har datatype (modelldcatno:hasDataType)</a></li>
 <li><a href="#Attributt-harEnkelType">Attributt: har enkeltype (modelldcatno:hasSimpleType)</a></li>
-<li><a href="#Attributt-inneholderObjekttype">Attributt: inneholder objekttype (modelldcatno:containsObjectType)</a></li>
 <li><a href="#Attributt-harVerdierFra">Attributt: har verdier fra (modelldcatno:hasValueFrom)</a></li>
+<li><a href="#Attributt-inneholderObjekttype">Attributt: inneholder objekttype (modelldcatno:containsObjectType)</a></li>
 </ul>
 </li>
 </ul>
@@ -669,9 +673,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#Egenskap-begrep">Egenskap: begrep (dct:subject)</a></li>
 <li><a href="#Egenskap-identifikator">Egenskap: identifikator (dct:identifier)</a></li>
 <li><a href="#Egenskap-navigerbar">Egenskap: navigerbar (modelldcatno:navigable)</a></li>
-<li><a href="#Egenskap-nedreMultiplisitet">Egenskap: nedre multiplisitet (xsd:minOccurs)</a></li>
+<li><a href="#Egenskap-nedreMultiplisitet">Egenskap: nedre multiplisitet (modelldcatno:minOccurs)</a></li>
 <li><a href="#Egenskap-tittel">Egenskap: tittel (dct:title)</a></li>
-<li><a href="#Egenskap-øvreMultiplisitet">Egenskap: øvre multiplisitet (xsd:maxOccurs)</a></li>
+<li><a href="#Egenskap-øvreMultiplisitet">Egenskap: øvre multiplisitet (modelldcatno:maxOccurs)</a></li>
 </ul>
 </li>
 <li><a href="#Valgfrie-egenskaper-Egenskap">Valgfrie egenskaper for klassen <em>Egenskap</em></a>
@@ -945,6 +949,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#Endringslogg">Endringslogg</a>
 <ul class="sectlevel2">
+<li><a href="#Endringer_fra_v_1.1.x">Endringer fra v.1.1.x til v.1.2.0</a></li>
 <li><a href="#Endringer_fra_v.1.1">Endringer fra v.1.1 til v.1.1.1</a></li>
 <li><a href="#Endringer_fra_v1.0">Endringer fra v.1.0 til v.1.1</a></li>
 </ul>
@@ -987,9 +992,9 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 <div class="paragraph">
 <p><strong>Status</strong>: Gjeldende<br>
-<strong>Versjon</strong>: 1.1.1 (se <a href="#Endringslogg">endringsloggen</a>)<br>
-<strong>Publisert</strong>: 2021-06-28 (versjon 1.1), 2020-12-18 (versjon 1.0) <br>
-<strong>Oppdatert</strong>: 2022-02-21<br>
+<strong>Versjon</strong>: 1.2.0 (se <a href="#Endringslogg">endringsloggen</a>)<br>
+<strong>Publisert</strong>: 2022-08-26 (v.1.2) 2021-06-28 (v.1.1), 2020-12-18 (v.1.0) <br>
+<strong>Oppdatert</strong>: 2022-08-26<br>
 <strong>Gjeldende versjon av spesifikasjon</strong>: <a href="https://data.norge.no/specification/modelldcat-ap-no/" class="bare">https://data.norge.no/specification/modelldcat-ap-no/</a><br>
 <strong>Gjeldende versjon av ontologi</strong>: <a href="https://data.norge.no/vocabulary/modelldcatno" class="bare">https://data.norge.no/vocabulary/modelldcatno</a><br>
 <strong>Redaktørens utkast av spesifikasjon</strong>: <a href="https://informasjonsforvaltning.github.io/modelldcat-ap-no/specification" class="bare">https://informasjonsforvaltning.github.io/modelldcat-ap-no/specification</a><br>
@@ -1194,12 +1199,12 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <div class="sectionbody">
 <div class="imageblock">
 <div class="content">
-<a class="image" href="images/ModellDCAT-AP-NO-20210906.png"><img src="images/ModellDCAT-AP-NO-20210906.png" alt="ModellDCAT AP NO 20210906"></a>
+<a class="image" href="images/ModellDcat_AP_NOv1_2_20220826.png"><img src="images/ModellDcat_AP_NOv1_2_20220826.png" alt="ModellDcat AP NOv1 2 20220826"></a>
 </div>
 <div class="title">Figur 1. Forenklet modell for ModellDCAT-AP-NO.</div>
 </div>
 <div class="paragraph">
-<p>Last ned modell: <a href="images/ModellDCAT-AP-NO-20210906.png">png</a> | <a href="files/ModellDCAT-AP-NO-20210906.eapx">XMI for EA</a></p>
+<p>Last ned modell: <a href="images/ModellDcat_AP_NOv1_2_20220826.png">png</a> | <a href="files/ModellDcat_AP_NOv1_2_20220826.eapx">XMI for EA</a></p>
 </div>
 </div>
 </div>
@@ -1232,7 +1237,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://xmlns.com/foaf/spec/#term_Agent">foaf:Agent</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -1259,7 +1264,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/2009/08/skos-reference/skos.html#Concept">skos:Concept</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -1286,7 +1291,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dcat-2/#Class:Resource">dcat:Resource</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 <tr>
@@ -1317,7 +1322,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/rdf-concepts/#section-Literals">rdfs:Literal</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -1344,7 +1349,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.w3.org/TR/2013/WD-vocab-dcat-20130312/#class-catalog">dcat:Catalog</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -1371,7 +1376,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/skos-reference/#schemes">skos:ConceptScheme</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -1401,7 +1406,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=terms#LicenseDocument">dct:LicenseDocument</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -1411,7 +1416,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <div class="sect2">
 <h3 id="Valgfri-klasser-i-katalogdelen"><a class="anchor" href="#Valgfri-klasser-i-katalogdelen"></a>Valgfrie klasser i katalogdelen</h3>
 <div class="sect3">
-<h4 id="klasse-kontaktopplysning"><a class="anchor" href="#klasse-kontaktopplysning"></a>Kontaktopplysning (vcard:Kind)</h4>
+<h4 id="klasse-kontaktopplysning"><a class="anchor" href="#klasse-kontaktopplysning"></a>Kontaktopplysning (vcard:Organization)</h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1420,18 +1425,18 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kind</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Organization</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å representere en beskrivelse av en kontaktopplysning i henhold til vCard-spesifikasjonen. Her kan man for eksempel oppgi telefonnr og/eller epost. Merk at beskrivelsen må være en instans av en av fire typer: individ, organisasjon, lokasjon eller gruppe.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å representere en beskrivelse av en kontaktopplysning i henhold til vCard-spesifikasjonen. Her kan man for eksempel oppgi telefonnummer og/eller e-post. Man bør om mulig bruke den organisatoriske enheten eller gruppen i virksomheten som har det funksjonelle ansvaret.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.w3.org/TR/2014/NOTE-vcard-rdf-20140522/#d4e181">vcard:Kind</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/2014/NOTE-vcard-rdf-20140522/#d4e2121">vcard:Organization</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -1458,7 +1463,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://dublincore.org/documents/dcmi-terms/#terms-Location">dct:Location</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -1485,7 +1490,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://dublincore.org/documents/dcmi-terms/#terms-LinguisticSystem">dct:LinguisticSystem</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -1512,7 +1517,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/skos-reference/#concepts">skos:Concept</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -1539,7 +1544,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://dublincore.org/documents/dcmi-terms/#terms-PeriodOfTime">dct:PeriodOfTime</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -1578,7 +1583,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 Klasse som representerer modellen som skal utveksles.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -1612,7 +1617,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Property</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -1643,7 +1648,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Property</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -1674,7 +1679,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Note</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -1705,7 +1710,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:ModelElement</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -1732,7 +1737,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Property</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -1767,7 +1772,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:ModelElement</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -1798,7 +1803,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:ConstraintRule</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -1833,7 +1838,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:ConstraintRule</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -1864,7 +1869,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:CodeElement</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -1895,7 +1900,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:ModelElement</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -1926,7 +1931,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Typer modellelementer er objekttype, rotobjekttype, kodeliste, enkeltype og datatype.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -1961,7 +1966,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:ModelElement</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -1992,7 +1997,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Property</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -2023,7 +2028,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:ModelElement</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -2054,7 +2059,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Property</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -2088,7 +2093,38 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Property</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="klasse-alle"><a class="anchor" href="#klasse-alle"></a>Alle (modelldcatno:AllOf)</h4>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All of</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å representere valg som uttrykker at alle valgbare modellelementer og/eller egenskaper må velges samtidig.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:AllOf</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Subklasse av</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Choice</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -2115,7 +2151,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/2009/08/skos-reference/skos.html#Concept">skos:Concept</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -2142,7 +2178,38 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://xmlns.com/foaf/spec/#term_Document">foaf:Document</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="klasse-ikke"><a class="anchor" href="#klasse-ikke"></a>Ikke (modelldcatno:Not)</h4>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å representere begrensningsregel som uttrykker at kun instanser som ikke samsvarer med egenskaper og/eller modellelementer som den refererer til, kan forekomme.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Not</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Subklasse av</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:ConstraintRule</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -2173,7 +2240,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Property</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -2200,7 +2267,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/MediaType">dct:MediaType</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -2231,12 +2298,43 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:ModelElement</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Modeller kan bestå av moduler, som beslektede modellelementer er gruppert under.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="klasse-noen-av"><a class="anchor" href="#klasse-noen-av"></a>Noen av (modelldcatno:AnyOf)</h4>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Any of</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å representere valg som uttrykker at ett eller flere valgbare modellelementer og/eller egenskaper må velges samtidig.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:AnyOf</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Subklasse av</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Choice</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
 </table>
@@ -2262,7 +2360,38 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Note</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="klasse-og"><a class="anchor" href="#klasse-og"></a>Og (modelldcatno:And)</h4>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">And</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å representere begrensningsregel som uttrykker at alle egenskaper og/eller modellelementer den refererer til, må opptre samtidig.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:And</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Subklasse av</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:ConstraintRule</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -2293,7 +2422,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Property</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -2328,7 +2457,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">I UML omtales dette som aggregering.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -2355,7 +2484,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Standard">dct:Standard</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 <tr>
@@ -2390,7 +2519,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Property</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -2410,7 +2539,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <p>Klassen <em>Aktør</em> er obligatorisk.</p>
 </div>
 <div class="paragraph">
-<p>Det anbefales at URI til Aktør (<code>foaf:Agent</code>) er identisk med den URI som Enhetsregisteret (Brønnøysundregistrene) har på enheten/virksomheten dersom den finnes i registeret, f.eks. <code>dct:publisher &lt;<a href="https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/974760673&gt;" class="bare">https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/974760673&gt;</a></code>.</p>
+<p>Det anbefales at URI til Aktør (<code>foaf:Agent</code>) er identisk med den URI som Enhetsregisteret (Brønnøysundregistrene) har på enheten/virksomheten dersom den finnes i registeret, f.eks. <code>dct:publisher &lt;<a href="https://organization-catalog.fellesdatakatalog.digdir.no/organizations/974760673&gt;" class="bare">https://organization-catalog.fellesdatakatalog.digdir.no/organizations/974760673&gt;</a></code>.</p>
 </div>
 <div class="sect4">
 <h5 id="Obligatoriske-egenskaper-for-Aktør"><a class="anchor" href="#Obligatoriske-egenskaper-for-Aktør"></a>Obligatoriske egenskaper for klassen <em>Aktør</em></h5>
@@ -2443,7 +2572,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -2481,7 +2610,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -2516,7 +2645,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -2560,7 +2689,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -2604,7 +2733,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -2639,7 +2768,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -2677,7 +2806,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -2721,7 +2850,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -2756,7 +2885,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 <tr>
@@ -2795,7 +2924,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -2830,7 +2959,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -2865,7 +2994,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -2903,7 +3032,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -2938,7 +3067,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -2973,7 +3102,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -3012,7 +3141,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -3051,7 +3180,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -3086,7 +3215,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -3124,7 +3253,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -3159,7 +3288,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -3194,7 +3323,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -3238,7 +3367,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -3289,7 +3418,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -3337,7 +3466,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -3394,10 +3523,10 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -3433,49 +3562,10 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect5">
-<h6 id="Attributt-inneholderObjekttype"><a class="anchor" href="#Attributt-inneholderObjekttype"></a>Attributt: inneholder objekttype (modelldcatno:containsObjectType)</h6>
-<table class="tableblock frame-all grid-all stripes-even stretch">
-<colgroup>
-<col style="width: 30%;">
-<col style="width: 70%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">contains object type</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:containsObjectType</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:ObjectType</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Angir at attributtet har en objekttype som type.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Subegenskap av</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:hasType</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -3511,10 +3601,49 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="Attributt-inneholderObjekttype"><a class="anchor" href="#Attributt-inneholderObjekttype"></a>Attributt: inneholder objekttype (modelldcatno:containsObjectType)</h6>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contains object type</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:containsObjectType</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:ObjectType</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Angir at attributtet har en objekttype som type.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Subegenskap av</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:hasType</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -3562,7 +3691,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..*</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -3600,12 +3729,12 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">En Begrensningsregel, med unntak av subklassene Enten eller (modelldcatno:Xor) og Eller (modelldcatno:OR), må som minimum ha en tittel eller et begrensningsuttrykk.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">En Begrensningsregel, med unntak av subklassene Og (<code>modelldcatno:And</code>), Enten eller (<code>modelldcatno:Xor</code>), Eller (<code>modelldcatno:Or</code>) og Ikke (<code>modelldcatno:Not</code>), må som minimum ha en tittel eller et begrensningsuttrykk.</p></td>
 </tr>
 </tbody>
 </table>
@@ -3648,7 +3777,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -3683,7 +3812,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -3721,7 +3850,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -3756,7 +3885,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -3803,7 +3932,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -3838,7 +3967,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -3873,14 +4002,14 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect5">
-<h6 id="Egenskap-nedreMultiplisitet"><a class="anchor" href="#Egenskap-nedreMultiplisitet"></a>Egenskap: nedre multiplisitet (xsd:minOccurs)</h6>
+<h6 id="Egenskap-nedreMultiplisitet"><a class="anchor" href="#Egenskap-nedreMultiplisitet"></a>Egenskap: nedre multiplisitet (modelldcatno:minOccurs)</h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -3893,7 +4022,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:minOccurs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:minOccurs</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
@@ -3908,7 +4037,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -3943,14 +4072,14 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect5">
-<h6 id="Egenskap-øvreMultiplisitet"><a class="anchor" href="#Egenskap-øvreMultiplisitet"></a>Egenskap: øvre multiplisitet (xsd:maxOccurs)</h6>
+<h6 id="Egenskap-øvreMultiplisitet"><a class="anchor" href="#Egenskap-øvreMultiplisitet"></a>Egenskap: øvre multiplisitet (modelldcatno:maxOccurs)</h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -3963,7 +4092,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:maxOccurs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:maxOccurs</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
@@ -3978,13 +4107,13 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><code>&lt;ex:EksEgenskap&gt; xsd:maxOccurs "1"^^xsd:nonNegativeInteger ;</code> eller <code>&lt;ex:EksEgenskap&gt; xsd:maxOccurs "*" ;</code></p>
+<p><code>&lt;ex:EksEgenskap&gt; modelldcatno:maxOccurs "1"^^xsd:nonNegativeInteger ;</code> eller <code>&lt;ex:EksEgenskap&gt; modelldcatno:maxOccurs "*" ;</code></p>
 </div></div></td>
 </tr>
 </tbody>
@@ -4022,7 +4151,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4057,7 +4186,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4092,7 +4221,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4127,7 +4256,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4162,7 +4291,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4197,7 +4326,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4241,7 +4370,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -4279,7 +4408,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4314,7 +4443,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4349,7 +4478,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4384,7 +4513,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4419,7 +4548,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4454,7 +4583,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4489,7 +4618,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4524,7 +4653,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4559,7 +4688,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4594,7 +4723,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -4638,7 +4767,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -4673,7 +4802,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -4711,7 +4840,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -4746,7 +4875,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -4781,7 +4910,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -4820,7 +4949,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -4859,7 +4988,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -4883,7 +5012,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">vcard:Kind</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vcard:Organization</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
@@ -4894,7 +5023,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -4929,7 +5058,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -4964,7 +5093,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -5002,7 +5131,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -5037,7 +5166,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -5072,7 +5201,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -5107,7 +5236,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -5142,7 +5271,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -5177,7 +5306,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -5212,7 +5341,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -5247,7 +5376,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -5282,7 +5411,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -5317,7 +5446,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -5352,7 +5481,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -5387,7 +5516,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -5422,7 +5551,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -5457,7 +5586,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -5492,7 +5621,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -5527,7 +5656,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -5562,7 +5691,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -5597,7 +5726,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -5632,7 +5761,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -5676,7 +5805,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -5711,7 +5840,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -5753,7 +5882,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -5792,7 +5921,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -5827,7 +5956,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -5862,7 +5991,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -5904,7 +6033,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -5943,7 +6072,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -5982,7 +6111,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -6017,7 +6146,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -6056,7 +6185,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -6095,7 +6224,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -6130,7 +6259,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -6165,7 +6294,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -6204,7 +6333,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -6243,7 +6372,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -6287,7 +6416,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -6335,7 +6464,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -6382,7 +6511,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -6420,7 +6549,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -6455,7 +6584,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -6490,7 +6619,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -6528,7 +6657,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -6563,7 +6692,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -6607,7 +6736,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -6646,7 +6775,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -6665,27 +6794,27 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><strong>Engelsk navn</strong></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">identifier</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><strong>URI</strong></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><strong>Range</strong></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Literal</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><strong>Beskrivelse</strong></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Unik og persistent identifikator til en note.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><strong>Multiplisitet</strong></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><strong>Kravsnivå</strong></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -6720,7 +6849,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -6762,7 +6891,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -6810,7 +6939,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -6855,11 +6984,11 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
 </table>
@@ -6906,7 +7035,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -6954,7 +7083,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -6998,7 +7127,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -7036,7 +7165,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -7074,7 +7203,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -7118,7 +7247,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -7165,7 +7294,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -7213,7 +7342,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -7263,7 +7392,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/file-type/" class="bare">http://publications.europa.eu/resource/authority/file-type/</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 <tr>
@@ -7306,7 +7435,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/file-type/" class="bare">http://publications.europa.eu/resource/authority/file-type/</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 <tr>
@@ -7349,7 +7478,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <td class="tableblock halign-left valign-top"><p class="tableblock">Kravet fra EU er forklart slik: "This vocabulary must be used in case the licence […​] is internationally recognised and included in the EU Publications Office NAL."</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 <tr>
@@ -7394,7 +7523,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <a href="http://sws.geonames.org/" class="bare">http://sws.geonames.org/</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 <tr>
@@ -7433,7 +7562,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://purl.org/adms/status/">http://purl.org/adms/status/</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -7464,7 +7593,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://purl.org/adms/publishertype/">http://purl.org/adms/publishertype/</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 <tr>
@@ -7494,14 +7623,14 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Navn på vokabularet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Modelltyper (<a href="https://data.norge.no/vocabulary/modelldcatno#modelTypes">vokabularet i RDF</a>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://data.norge.no/vocabulary/information-model-type">Informasjonsmodelltype</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI til vokabularet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://data.norge.no/vocabulary/modelldcatno#" class="bare">https://data.norge.no/vocabulary/modelldcatno#</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://data.norge.no/vocabulary/information-model-type#" class="bare">https://data.norge.no/vocabulary/information-model-type#</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 <tr>
@@ -7509,7 +7638,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
 <div class="content">
 <pre>&lt;&gt; dct:type
-      &lt;https://data.norge.no/vocabulary/modelldcatno#logicalModel &gt;.</pre>
+      &lt;https://data.norge.no/vocabulary/information-model-type#logical-model&gt; .</pre>
 </div>
 </div></div></td>
 </tr>
@@ -7538,7 +7667,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://purl.org/adms/licencetype/">http://purl.org/adms/licencetype/</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
@@ -7573,7 +7702,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 Kommune <a href="https://data.geonorge.no/administrativeEnheter/kommune/id/" class="bare">https://data.geonorge.no/administrativeEnheter/kommune/id/</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -7618,7 +7747,7 @@ Kommune <a href="https://data.geonorge.no/administrativeEnheter/kommune/id/" cla
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://psi.norge.no/los/all.rdf" class="bare">https://psi.norge.no/los/all.rdf</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -7649,7 +7778,7 @@ Kommune <a href="https://data.geonorge.no/administrativeEnheter/kommune/id/" cla
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://psi.norge.no/los/all.rdf" class="bare">https://psi.norge.no/los/all.rdf</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -7661,6 +7790,70 @@ Kommune <a href="https://data.geonorge.no/administrativeEnheter/kommune/id/" cla
 <div class="sect1">
 <h2 id="Endringslogg"><a class="anchor" href="#Endringslogg"></a>Endringslogg</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="Endringer_fra_v_1.1.x"><a class="anchor" href="#Endringer_fra_v_1.1.x"></a>Endringer fra v.1.1.x til v.1.2.0</h3>
+<div class="paragraph">
+<p>I tillegg til noen redaksjonelle justeringer, er følgende endret:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>URIen for klassen Kontaktopplysning er endret fra <code>vcard:Kind</code> til <code>vcard:Organization</code>. Dette fordi <code>vcard:Kind</code> uansett ikke skal brukes, og det er organisasjon som egentlig er ment å skulle brukes.</p>
+</li>
+<li>
+<p>URIen for følgende egenskaper er endret:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>xsd:minOccurs</code> endret til <code>modelldcatno:minOccurs</code>, og <code>xsd:maxOccurs</code> endret til <code>modelldcatno:maxOccurs</code>, fordi det ville ellers bryte med XML Schema sin definisjon av  <code>xsd:minOccurs</code> og <code>xsd:maxOccurs</code>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>URIen for det kontrollerte vokabularet som skal brukes for egenskapen <a href="#Informasjonsmodell-type">Informasjonsmodell: type (dct:type)</a> er endret til <a href="https://data.norge.no/vocabulary/information-model-type#" class="bare">https://data.norge.no/vocabulary/information-model-type#</a>. Dette fordi vokabularet er nå publisert som en egen publisering (istedenfor tidligere gjemt inne i ontologifilen for ModellDCAT-AP-NO).</p>
+</li>
+<li>
+<p>Kravnivå for <a href="#Rolle-harObjekttype">Rolle: har objekttype (modelldcatno:hasObjectType)</a> er endret fra 'anbefalt' til 'obligatorisk', fordi en rolle må være relatert til noe.</p>
+</li>
+<li>
+<p>Følgende multiplisiteter er endret, for å kunne tillate "multiple range":</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#Attributt-harDataType">Attributt: har datatype (modelldcatno:hasDataType)</a>, endret fra <code>0..1</code> til <code>0..n</code></p>
+</li>
+<li>
+<p><a href="#Attributt-harEnkelType">Attributt: har enkeltype (modelldcatno:hasSimpleType)</a>, endret fra <code>0..1</code> til <code>0..n</code></p>
+</li>
+<li>
+<p><a href="#Attributt-harVerdierFra">Attributt: har verdier fra (modelldcatno:hasValueFrom)</a>, endret fra <code>0..1</code> til <code>0..n</code></p>
+</li>
+<li>
+<p><a href="#Attributt-inneholderObjekttype">Attributt: inneholder objekttype (modelldcatno:containsObjectType)</a>, endret fra <code>0..1</code> til <code>0..n</code></p>
+</li>
+<li>
+<p><a href="#Rolle-harObjekttype">Rolle: har objekttype (modelldcatno:hasObjectType)</a>, endret fra <code>0..1</code> til <code>1..n</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Følgende nye klasser er føyet til:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#klasse-alle">Alle (modelldcatno:AllOf)</a> og <a href="#klasse-noen-av">Noen av (modelldcatno:AnyOf)</a>, begge er valgfrie og er subklasser av <a href="#klasse-valg">Valg (modelldcatno:Choice)</a>. Dette for å kunne dekke behov for å uttrykke slike konstruksjoner som finnes f.eks. i JSON.</p>
+</li>
+<li>
+<p><a href="#klasse-ikke">Ikke (modelldcatno:Not)</a> og <a href="#klasse-og">Og (modelldcatno:And)</a>, begge er valgfrie og er subklasser av <a href="#klasse-begrensningsregel">Begrensningsregel  (modelldcatno:ConstraintRule)</a>. Dette for å kunne støtte disse to vanlige begrensningsregler.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
 <div class="sect2">
 <h3 id="Endringer_fra_v.1.1"><a class="anchor" href="#Endringer_fra_v.1.1"></a>Endringer fra v.1.1 til v.1.1.1</h3>
 <div class="ulist">
@@ -7724,7 +7917,7 @@ Kommune <a href="https://data.geonorge.no/administrativeEnheter/kommune/id/" cla
 <td class="tableblock halign-left valign-top"><p class="tableblock">Egenskap: identifikator</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 1..1 til 0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravsnivå endres fra obligatorisk til anbefalt.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravnivå endres fra obligatorisk til anbefalt.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Egenskap: navigerbar</p></td>
@@ -7808,7 +8001,7 @@ Kommune <a href="https://data.geonorge.no/administrativeEnheter/kommune/id/" cla
 <td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: beskrivelse</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dct:description</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 1..n til 0..n</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravsnivå endres fra obligatorisk til anbefalt.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravnivå endres fra obligatorisk til anbefalt.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: er profil av</p></td>
@@ -7832,7 +8025,7 @@ Kommune <a href="https://data.geonorge.no/administrativeEnheter/kommune/id/" cla
 <td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: identifikator</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 1..1 til 0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravsnivå endres fra obligatorisk til anbefalt.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravnivå endres fra obligatorisk til anbefalt.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: tema</p></td>
@@ -7844,7 +8037,7 @@ Kommune <a href="https://data.geonorge.no/administrativeEnheter/kommune/id/" cla
 <td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: tema</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dcat:theme</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 1..n til 0..n</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravsnivå endres fra obligatorisk til anbefalt.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravnivå endres fra obligatorisk til anbefalt.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonsmodell: type</p></td>
@@ -7862,7 +8055,7 @@ Kommune <a href="https://data.geonorge.no/administrativeEnheter/kommune/id/" cla
 <td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: anbefalt kodetekst</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">skos:prefLabel</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 1..n til 0..n</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravsnivå endres fra obligatorisk til anbefalt.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravnivå endres fra obligatorisk til anbefalt.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: forrige kodeelement</p></td>
@@ -7886,7 +8079,7 @@ Kommune <a href="https://data.geonorge.no/administrativeEnheter/kommune/id/" cla
 <td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: identifikator</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 1..1 til 0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravsnivå endres fra obligatorisk til anbefalt.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravnivå endres fra obligatorisk til anbefalt.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: kode</p></td>
@@ -7898,7 +8091,7 @@ Kommune <a href="https://data.geonorge.no/administrativeEnheter/kommune/id/" cla
 <td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: kode</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">skos:notation</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 0..1 til 1..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravsnivå endres fra anbefalt til obligatorisk.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravnivå endres fra anbefalt til obligatorisk.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Kodeelement: neste kodeelement</p></td>
@@ -7928,7 +8121,7 @@ Kommune <a href="https://data.geonorge.no/administrativeEnheter/kommune/id/" cla
 <td class="tableblock halign-left valign-top"><p class="tableblock">Komposisjon</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Composition</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Endring i tekst i oversikt over egenskaper per klasse.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Skrivefeil.  Det står at klassen har obligatoriske egenskaper. Dette stemmer ikke, den har kun én egenskap med kravsnivå anbefalt.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Skrivefeil.  Det står at klassen har obligatoriske egenskaper. Dette stemmer ikke, den har kun én egenskap med kravnivå anbefalt.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Modellelement: begrensning</p></td>
@@ -7946,7 +8139,7 @@ Kommune <a href="https://data.geonorge.no/administrativeEnheter/kommune/id/" cla
 <td class="tableblock halign-left valign-top"><p class="tableblock">Modellelement: identifikator</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiplisitet endret fra 1..1 til 0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravsnivå endres fra obligatorisk til anbefalt.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Som følge av at kravnivå endres fra obligatorisk til anbefalt.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Modellelement: tilhører modul</p></td>
@@ -8054,7 +8247,7 @@ ga('send', 'pageview');
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2022-02-24 12:02:45 UTC
+Sist oppdatert 2022-08-26 12:50:37 UTC
 </div>
 </div>
 </body>

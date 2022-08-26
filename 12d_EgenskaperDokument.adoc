@@ -13,7 +13,7 @@ Klassen _Dokument_ er valgfri.
 |Range|dct:LinguisticSystem
 |Beskrivelse|Brukes til å referere til språket som dokumentet er i.
 |Multiplisitet|0..1
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |===
 
 ===== Dokument: tittel (dct:title) [[Dokument-tittel]]
@@ -25,7 +25,7 @@ Klassen _Dokument_ er valgfri.
 |Range|rdfs:Literal
 |Beskrivelse|Brukes til å referere til tittel for dokumentet. Bør gjentas når tittelen finnes i flere ulike språk/målformer.
 |Multiplisitet|0..n
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |===
 
 ==== Valgfrie egenskaper for klassen _Dokument_ [[Valgfrie-egenskaper-Dokument]]
@@ -40,7 +40,7 @@ Klassen _Dokument_ er valgfri.
 |Range|dct:MediaType
 |Beskrivelse|Opplysing om dokumentets filformat. Brukes til å angi hvilket format en alternativ representasjon av modellen er på.
 |Multiplisitet|0..1
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 ===== Dokument: har referanse (rdfs:seeAlso) [[Dokument-harReferanse]]
@@ -52,5 +52,5 @@ Klassen _Dokument_ er valgfri.
 |Range|rdfs:Resource
 |Beskrivelse|Brukes til å oppgi referanse til dokumentet.
 |Multiplisitet|0..1
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===

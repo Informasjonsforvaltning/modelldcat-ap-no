@@ -14,7 +14,7 @@ Klassen _Begrensningsregel_ er anbefalt.
 |Beskrivelse|Referanse til egenskap eller modellelement som begrensningsregelen gjelder for.
 |Subegenskap av|modelldcatno:annotates
 |Multiplisitet|1..*
-|Kravsnivå|Obligatorisk
+|Kravnivå|Obligatorisk
 |===
 
 
@@ -29,6 +29,6 @@ Klassen _Begrensningsregel_ er anbefalt.
 |Range|rdfs:Literal
 |Beskrivelse|Uttrykk som beskriver en begrensningsregel. Bør gjentas når uttrykket finnes i flere ulike språk/målformer.
 |Multiplisitet|0..n
-|Kravsnivå|Anbefalt
-|Kommentar|En Begrensningsregel, med unntak av subklassene Enten eller (modelldcatno:Xor) og Eller (modelldcatno:OR), må som minimum ha en tittel eller et begrensningsuttrykk.
+|Kravnivå|Anbefalt
+|Kommentar| En Begrensningsregel, med unntak av subklassene Og (`modelldcatno:And`), Enten eller (`modelldcatno:Xor`), Eller (`modelldcatno:Or`) og Ikke (`modelldcatno:Not`), må som minimum ha en tittel eller et begrensningsuttrykk.
 |===

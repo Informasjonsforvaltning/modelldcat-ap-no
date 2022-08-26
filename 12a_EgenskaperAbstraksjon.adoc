@@ -17,5 +17,5 @@ Klassen _Abstraksjon_ er valgfri.
 |Beskrivelse|Brukes til å referere til modellelementet/egenskapen det aktuelle modellelementet/egenskapen er en abstraksjon av.
 |Subegenskap av|modelldcatno:hasType
 |Multiplisitet|0..1
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |===
