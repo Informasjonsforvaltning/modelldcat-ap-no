@@ -15,8 +15,8 @@ NOTE: Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at d
 |Range| modelldcatno:DataType
 |Beskrivelse| Angir at attributtet har en datatype som type.
 |Subegenskap av |modelldcatno:hasType
-|Multiplisitet| 0..1
-|Kravsnivå| Anbefalt
+|Multiplisitet| 0..n
+|Kravnivå| Anbefalt
 |===
 
 ===== Attributt: har enkeltype (modelldcatno:hasSimpleType) [[Attributt-harEnkelType]]
@@ -28,21 +28,8 @@ NOTE: Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at d
 |Range| modelldcatno:SimpleType
 |Beskrivelse| Angir at attributtet har en enkeltype som type.
 |Subegenskap av|modelldcatno:hasType
-|Multiplisitet| 0..1
-|Kravsnivå| Anbefalt
-|===
-
-===== Attributt: inneholder objekttype (modelldcatno:containsObjectType) [[Attributt-inneholderObjekttype]]
-
-[cols="30s,70d"]
-|===
-|Engelsk navn| contains object type
-|URI| modelldcatno:containsObjectType
-|Range| modelldcatno:ObjectType
-|Beskrivelse| Angir at attributtet har en objekttype som type.
-|Subegenskap av	| modelldcatno:hasType
-|Multiplisitet| 0..1
-|Kravsnivå| Anbefalt
+|Multiplisitet| 0..n
+|Kravnivå| Anbefalt
 |===
 
 ===== Attributt: har verdier fra (modelldcatno:hasValueFrom) [[Attributt-harVerdierFra]]
@@ -54,6 +41,19 @@ NOTE: Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at d
 |Range| modelldcatno:CodeList
 |Beskrivelse| Angir at attributtet har en kodeliste som type.
 |Subegenskap av	| modelldcatno:hasType
-|Multiplisitet| 0..1
-|Kravsnivå| Anbefalt
+|Multiplisitet| 0..n
+|Kravnivå| Anbefalt
+|===
+
+===== Attributt: inneholder objekttype (modelldcatno:containsObjectType) [[Attributt-inneholderObjekttype]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| contains object type
+|URI| modelldcatno:containsObjectType
+|Range| modelldcatno:ObjectType
+|Beskrivelse| Angir at attributtet har en objekttype som type.
+|Subegenskap av	| modelldcatno:hasType
+|Multiplisitet| 0..n
+|Kravnivå| Anbefalt
 |===

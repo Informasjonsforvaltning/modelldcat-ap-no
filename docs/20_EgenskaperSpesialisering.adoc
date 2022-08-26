@@ -15,5 +15,5 @@ Klassen _Spesialisering_ er anbefalt
 |Beskrivelse|Refererer til det generelle konseptet (supertypen) i et arveforhold.
 |Subegenskap av	| modelldcatno:hasType
 |Multiplisitet|0..1
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |===

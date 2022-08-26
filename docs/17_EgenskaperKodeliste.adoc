@@ -13,5 +13,5 @@ Klassen _Kodeliste_ er anbefalt.
 |Range|rdfs:Resource
 |Beskrivelse|Referanse til en ekstern beskrivelse av kodelisten.
 |Multiplisitet|0..n
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===

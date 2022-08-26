@@ -14,6 +14,6 @@ Klassen _Rolle_ er anbefalt.
 |Range|modelldcatno:ObjectType
 |Beskrivelse|Referanse til objekttypen som er knyttet til en rolle.
 |Subegenskap av |	modelldcatno:hasType
-|Multiplisitet|0..1
-|Kravsnivå|Anbefalt
+|Multiplisitet|1..n
+|Kravnivå|Obligatorisk
 |===
