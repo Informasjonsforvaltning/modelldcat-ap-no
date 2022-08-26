@@ -1,5 +1,30 @@
 = Endringslogg [[Endringslogg]]
 
+== Endringer fra v.1.1.x til v.1.2.0 [[Endringer_fra_v_1.1.x]]
+
+I tillegg til noen redaksjonelle justeringer, er følgende endret:
+
+* URIen for klassen Kontaktopplysning er endret fra `vcard:Kind` til `vcard:Organization`. Dette fordi `vcard:Kind` uansett ikke skal brukes, og det er organisasjon som egentlig er ment å skulle brukes.
+
+* URIen for følgende egenskaper er endret:
+** `xsd:minOccurs` endret til `modelldcatno:minOccurs`, og `xsd:maxOccurs` endret til `modelldcatno:maxOccurs`, fordi det ville ellers bryte med XML Schema sin definisjon av  `xsd:minOccurs` og `xsd:maxOccurs`.
+
+* URIen for det kontrollerte vokabularet som skal brukes for egenskapen <<Informasjonsmodell-type>> er endret til https://data.norge.no/vocabulary/information-model-type#. Dette fordi vokabularet er nå publisert som en egen publisering (istedenfor tidligere gjemt inne i ontologifilen for ModellDCAT-AP-NO).
+
+* Kravnivå for <<Rolle-harObjekttype>> er endret fra 'anbefalt' til 'obligatorisk', fordi en rolle må være relatert til noe.
+
+* Følgende multiplisiteter er endret, for å kunne tillate "multiple range":
+** <<Attributt-harDataType>>, endret fra `0..1` til `0..n`
+** <<Attributt-harEnkelType>>, endret fra `0..1` til `0..n`
+** <<Attributt-harVerdierFra>>, endret fra `0..1` til `0..n`
+** <<Attributt-inneholderObjekttype>>, endret fra `0..1` til `0..n`
+** <<Rolle-harObjekttype>>, endret fra `0..1` til `1..n`
+
+* Følgende nye klasser er føyet til:
+** <<klasse-alle>> og <<klasse-noen-av>>, begge er valgfrie og er subklasser av <<klasse-valg>>. Dette for å kunne dekke behov for å uttrykke slike konstruksjoner som finnes f.eks. i JSON.
+** <<klasse-ikke>> og <<klasse-og>>, begge er valgfrie og er subklasser av <<klasse-begrensningsregel>>. Dette for å kunne støtte disse to vanlige begrensningsregler.
+
+
 == Endringer fra v.1.1 til v.1.1.1 [[Endringer_fra_v.1.1]]
 
 * Multiplisiteten for egenskapen <<Dokument-harReferanse>> er endret fra 0..n til 0..1 (for å rette opp en feil)

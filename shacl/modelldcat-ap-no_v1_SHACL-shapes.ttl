@@ -1338,6 +1338,7 @@
     sh:subClassOf modelldcatno:Property ;
     sh:property [
         sh:name "har objekttype"@nb , "has object type"@en ;
+        sh:minCount 1 ;
         sh:path modelldcatno:hasObjectType ;
         sh:class modelldcatno:ObjectType ;
         sh:subClassOf modelldcatno:hasType ;

@@ -32,19 +32,6 @@ NOTE: Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at d
 |Kravnivå| Anbefalt
 |===
 
-===== Attributt: inneholder objekttype (modelldcatno:containsObjectType) [[Attributt-inneholderObjekttype]]
-
-[cols="30s,70d"]
-|===
-|Engelsk navn| contains object type
-|URI| modelldcatno:containsObjectType
-|Range| modelldcatno:ObjectType
-|Beskrivelse| Angir at attributtet har en objekttype som type.
-|Subegenskap av	| modelldcatno:hasType
-|Multiplisitet| 0..n
-|Kravnivå| Anbefalt
-|===
-
 ===== Attributt: har verdier fra (modelldcatno:hasValueFrom) [[Attributt-harVerdierFra]]
 
 [cols="30s,70d"]
@@ -53,6 +40,19 @@ NOTE: Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at d
 |URI|modelldcatno:hasValueFrom
 |Range| modelldcatno:CodeList
 |Beskrivelse| Angir at attributtet har en kodeliste som type.
+|Subegenskap av	| modelldcatno:hasType
+|Multiplisitet| 0..n
+|Kravnivå| Anbefalt
+|===
+
+===== Attributt: inneholder objekttype (modelldcatno:containsObjectType) [[Attributt-inneholderObjekttype]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn| contains object type
+|URI| modelldcatno:containsObjectType
+|Range| modelldcatno:ObjectType
+|Beskrivelse| Angir at attributtet har en objekttype som type.
 |Subegenskap av	| modelldcatno:hasType
 |Multiplisitet| 0..n
 |Kravnivå| Anbefalt
