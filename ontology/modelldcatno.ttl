@@ -1464,7 +1464,8 @@ modelldcatno:applicationModel rdf:type owl:NamedIndividual ,
                                        skos:Concept ,
                                        modelldcatno:CodeElement ;
                               skos:inScheme modelldcatno:modelTypes ;
-                              adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED> ;
+                              adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED> ,
+                                          <https://data.norge.no/vocabulary/information-model-type#application-model> ;
                               skos:prefLabel "Anvendelsesmodell"@nb ,
                                              "Application model"@en .
 
