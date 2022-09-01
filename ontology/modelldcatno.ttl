@@ -1117,6 +1117,20 @@ modelldcatno:Abstraction rdf:type owl:Class ;
                                     "Abstraksjon"@nb .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#AllOf
+modelldcatno:AllOf rdf:type owl:Class ;
+                   rdfs:subClassOf modelldcatno:Property ;
+                   rdfs:label "All of"@en ,
+                              "Alle"@no .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#AnyOf
+modelldcatno:AnyOf rdf:type owl:Class ;
+                   rdfs:subClassOf modelldcatno:Property ;
+                   rdfs:label "AnyOf"@en ,
+                              "Noen av"@no .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#Association
 modelldcatno:Association rdf:type owl:Class ;
                          rdfs:subClassOf modelldcatno:Property ;
@@ -1490,7 +1504,9 @@ modelldcatno:physicalModel rdf:type owl:NamedIndividual ,
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( modelldcatno:Association
+  owl:members ( modelldcatno:AllOf
+                modelldcatno:AnyOf
+                modelldcatno:Association
                 modelldcatno:Attribute
                 modelldcatno:Choice
                 modelldcatno:Collection
