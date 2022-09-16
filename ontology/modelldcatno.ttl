@@ -1463,9 +1463,9 @@ modelldcatno:Xor rdf:type owl:Class ;
 modelldcatno:applicationModel rdf:type owl:NamedIndividual ,
                                        skos:Concept ,
                                        modelldcatno:CodeElement ;
+                              dct:isReplacedBy <https://data.norge.no/vocabulary/information-model-type#application-model> ;
                               skos:inScheme modelldcatno:modelTypes ;
-                              adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED> ,
-                                          <https://data.norge.no/vocabulary/information-model-type#application-model> ;
+                              adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED> ;
                               skos:prefLabel "Anvendelsesmodell"@nb ,
                                              "Application model"@en .
 
