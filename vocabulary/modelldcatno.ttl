@@ -1474,11 +1474,41 @@ modelldcatno:Xor rdf:type owl:Class ;
 #    Individuals
 #################################################################
 
+###  http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED
+<http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED> rdf:type owl:NamedIndividual .
+
+
+###  https://data.norge.no/vocabulary/information-model-type
+<https://data.norge.no/vocabulary/information-model-type> rdf:type owl:NamedIndividual .
+
+
+###  https://data.norge.no/vocabulary/information-model-type#application-model
+<https://data.norge.no/vocabulary/information-model-type#application-model> rdf:type owl:NamedIndividual .
+
+
+###  https://data.norge.no/vocabulary/information-model-type#common-shared-model
+<https://data.norge.no/vocabulary/information-model-type#common-shared-model> rdf:type owl:NamedIndividual .
+
+
+###  https://data.norge.no/vocabulary/information-model-type#conceptual-model
+<https://data.norge.no/vocabulary/information-model-type#conceptual-model> rdf:type owl:NamedIndividual .
+
+
+###  https://data.norge.no/vocabulary/information-model-type#logical-model
+<https://data.norge.no/vocabulary/information-model-type#logical-model> rdf:type owl:NamedIndividual .
+
+
+###  https://data.norge.no/vocabulary/information-model-type#physical-model
+<https://data.norge.no/vocabulary/information-model-type#physical-model> rdf:type owl:NamedIndividual .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#applicationModel
 modelldcatno:applicationModel rdf:type owl:NamedIndividual ,
                                        skos:Concept ,
                                        modelldcatno:CodeElement ;
+                              dct:isReplacedBy <https://data.norge.no/vocabulary/information-model-type#application-model> ;
                               skos:inScheme modelldcatno:modelTypes ;
+                              adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED> ;
                               skos:prefLabel "Anvendelsesmodell"@nb ,
                                              "Application model"@en .
 
@@ -1487,7 +1517,9 @@ modelldcatno:applicationModel rdf:type owl:NamedIndividual ,
 modelldcatno:commonSharedModel rdf:type owl:NamedIndividual ,
                                         skos:Concept ,
                                         modelldcatno:CodeElement ;
+                               dct:isReplacedBy <https://data.norge.no/vocabulary/information-model-type#common-shared-model> ;
                                skos:inScheme modelldcatno:modelTypes ;
+                               adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED> ;
                                skos:prefLabel "Common shared model"@en ,
                                               "Fellesmodell"@nb .
 
@@ -1496,7 +1528,9 @@ modelldcatno:commonSharedModel rdf:type owl:NamedIndividual ,
 modelldcatno:conceptualModel rdf:type owl:NamedIndividual ,
                                       skos:Concept ,
                                       modelldcatno:CodeElement ;
+                             dct:isReplacedBy <https://data.norge.no/vocabulary/information-model-type#conceptual-model> ;
                              skos:inScheme modelldcatno:modelTypes ;
+                             adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED> ;
                              skos:prefLabel "Conceptual model"@en ,
                                             "Konseptuell modell"@nb .
 
@@ -1505,7 +1539,9 @@ modelldcatno:conceptualModel rdf:type owl:NamedIndividual ,
 modelldcatno:logicalModel rdf:type owl:NamedIndividual ,
                                    skos:Concept ,
                                    modelldcatno:CodeElement ;
+                          dct:isReplacedBy <https://data.norge.no/vocabulary/information-model-type#logical-model> ;
                           skos:inScheme modelldcatno:modelTypes ;
+                          adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED> ;
                           skos:prefLabel "Logical model"@en ,
                                          "Logisk modell"@nb .
 
@@ -1513,6 +1549,8 @@ modelldcatno:logicalModel rdf:type owl:NamedIndividual ,
 ###  https://data.norge.no/vocabulary/modelldcatno#modelTypes
 modelldcatno:modelTypes rdf:type owl:NamedIndividual ,
                                  modelldcatno:CodeList ;
+                        dct:isReplacedBy <https://data.norge.no/vocabulary/information-model-type> ;
+                        adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED> ;
                         dct:title "Model types"@en ,
                                   "Modelltyper"@nb ;
                         rdfs:label "Model types"@en ,
@@ -1523,7 +1561,9 @@ modelldcatno:modelTypes rdf:type owl:NamedIndividual ,
 modelldcatno:physicalModel rdf:type owl:NamedIndividual ,
                                     skos:Concept ,
                                     modelldcatno:CodeElement ;
+                           dct:isReplacedBy <https://data.norge.no/vocabulary/information-model-type#physical-model> ;
                            skos:inScheme modelldcatno:modelTypes ;
+                           adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED> ;
                            skos:prefLabel "Fysisk modell"@nb ,
                                           "Physical model"@en .
 
