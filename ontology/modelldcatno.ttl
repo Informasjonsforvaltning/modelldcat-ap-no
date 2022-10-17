@@ -243,7 +243,7 @@ adms:status rdf:type owl:ObjectProperty ;
 ###  http://www.w3.org/ns/dcat#contactPoint
 dcat:contactPoint rdf:type owl:ObjectProperty ;
                   rdfs:domain dcat:Resource ;
-                  rdfs:range vcard:Kind ;
+                  rdfs:range vcard:Organization ;
                   rdfs:label "contact point"@en ,
                              "kontaktpunkt"@nb .
 
@@ -361,7 +361,6 @@ modelldcatno:formsSymmetryWith rdf:type owl:ObjectProperty ,
 ###  https://data.norge.no/vocabulary/modelldcatno#hasDataType
 modelldcatno:hasDataType rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf modelldcatno:hasType ;
-                         rdf:type owl:FunctionalProperty ;
                          rdfs:domain modelldcatno:Attribute ;
                          rdfs:range modelldcatno:DataType ;
                          owl:propertyDisjointWith modelldcatno:hasSimpleType ,
@@ -396,7 +395,6 @@ modelldcatno:hasMember rdf:type owl:ObjectProperty ;
 ###  https://data.norge.no/vocabulary/modelldcatno#hasObjectType
 modelldcatno:hasObjectType rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf modelldcatno:hasType ;
-                           rdf:type owl:FunctionalProperty ;
                            rdfs:domain modelldcatno:Role ;
                            rdfs:range modelldcatno:ObjectType ;
                            rdfs:label "har objekttype"@nb ,
@@ -415,7 +413,6 @@ modelldcatno:hasProperty rdf:type owl:ObjectProperty ,
 ###  https://data.norge.no/vocabulary/modelldcatno#hasSimpleType
 modelldcatno:hasSimpleType rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf modelldcatno:hasType ;
-                           rdf:type owl:FunctionalProperty ;
                            rdfs:domain modelldcatno:Attribute ;
                            rdfs:range modelldcatno:SimpleType ;
                            rdfs:label "har enkeltype"@nb ,
@@ -461,7 +458,6 @@ modelldcatno:hasType rdf:type owl:ObjectProperty ;
 ###  https://data.norge.no/vocabulary/modelldcatno#hasValueFrom
 modelldcatno:hasValueFrom rdf:type owl:ObjectProperty ;
                           rdfs:subPropertyOf modelldcatno:hasType ;
-                          rdf:type owl:FunctionalProperty ;
                           rdfs:domain modelldcatno:Attribute ;
                           rdfs:range modelldcatno:CodeList ;
                           rdfs:label "har verdier fra"@nb ,
@@ -634,29 +630,6 @@ xsd:maxLength rdf:type owl:DatatypeProperty ,
                          "max length"@en .
 
 
-###  http://www.w3.org/2001/XMLSchema#maxOccurs
-xsd:maxOccurs rdf:type owl:DatatypeProperty ;
-              rdfs:domain modelldcatno:Property ;
-              rdfs:range [ rdf:type rdfs:Datatype ;
-                           owl:unionOf ( xsd:nonNegativeInteger
-                                         [ rdf:type rdfs:Datatype ;
-                                           owl:oneOf [ rdf:type rdf:List ;
-                                                       rdf:first "*" ;
-                                                       rdf:rest rdf:nil
-                                                     ]
-                                         ]
-                                         [ rdf:type rdfs:Datatype ;
-                                           owl:oneOf [ rdf:type rdf:List ;
-                                                       rdf:first "n" ;
-                                                       rdf:rest rdf:nil
-                                                     ]
-                                         ]
-                                       )
-                         ] ;
-              rdfs:label "maks multiplisitet"@nb ,
-                         "max occurs"@en .
-
-
 ###  http://www.w3.org/2001/XMLSchema#minExclusive
 xsd:minExclusive rdf:type owl:DatatypeProperty ,
                           owl:FunctionalProperty ;
@@ -682,14 +655,6 @@ xsd:minLength rdf:type owl:DatatypeProperty ,
               rdfs:range xsd:nonNegativeInteger ;
               rdfs:label "min length"@en ,
                          "minimum lengde"@nb .
-
-
-###  http://www.w3.org/2001/XMLSchema#minOccurs
-xsd:minOccurs rdf:type owl:DatatypeProperty ;
-              rdfs:domain modelldcatno:Property ;
-              rdfs:range xsd:nonNegativeInteger ;
-              rdfs:label "min occurs"@en ,
-                         "minimum multiplisitet"@nb .
 
 
 ###  http://www.w3.org/2001/XMLSchema#pattern
@@ -788,6 +753,37 @@ modelldcatno:informationModelIdentifier rdf:type owl:DatatypeProperty ;
                                         rdfs:isDefinedBy dct:identifier ;
                                         rdfs:label "informasjonsmodell-identifikator"@nb ,
                                                    "information model identifier"@en .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#maxOccurs
+modelldcatno:maxOccurs rdf:type owl:DatatypeProperty ;
+                       rdfs:domain modelldcatno:Property ;
+                       rdfs:range [ rdf:type rdfs:Datatype ;
+                                    owl:unionOf ( xsd:nonNegativeInteger
+                                                  [ rdf:type rdfs:Datatype ;
+                                                    owl:oneOf [ rdf:type rdf:List ;
+                                                                rdf:first "*" ;
+                                                                rdf:rest rdf:nil
+                                                              ]
+                                                  ]
+                                                  [ rdf:type rdfs:Datatype ;
+                                                    owl:oneOf [ rdf:type rdf:List ;
+                                                                rdf:first "n" ;
+                                                                rdf:rest rdf:nil
+                                                              ]
+                                                  ]
+                                                )
+                                  ] ;
+                       rdfs:label "maks multiplisitet"@nb ,
+                                  "max occurs"@en .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#minOccurs
+modelldcatno:minOccurs rdf:type owl:DatatypeProperty ;
+                       rdfs:domain modelldcatno:Property ;
+                       rdfs:range xsd:nonNegativeInteger ;
+                       rdfs:label "min occurs"@en ,
+                                  "minimum multiplisitet"@nb .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#navigable
@@ -898,9 +894,10 @@ skos:ConceptScheme rdf:type owl:Class ;
                               "Tematisk skjema"@nb .
 
 
-###  http://www.w3.org/2006/vcard/ns#Kind
-vcard:Kind rdf:type owl:Class ;
-           rdfs:label "Kind"@en .
+###  http://www.w3.org/2006/vcard/ns#Organization
+vcard:Organization rdf:type owl:Class ;
+                   rdfs:label "Organisasjon"@nb ,
+                              "Organization"@en .
 
 
 ###  http://www.w3.org/ns/dcat#Catalog
@@ -1117,6 +1114,37 @@ modelldcatno:Abstraction rdf:type owl:Class ;
                                     "Abstraksjon"@nb .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#AllOf
+modelldcatno:AllOf rdf:type owl:Class ;
+                   rdfs:subClassOf modelldcatno:Choice ;
+                   owl:disjointWith modelldcatno:AnyOf ;
+                   rdfs:label "All of"@en ,
+                              "Alle"@no .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#And
+modelldcatno:And rdf:type owl:Class ;
+                 rdfs:subClassOf modelldcatno:ConstraintRule ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty modelldcatno:constraintExpression ;
+                                   owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                       owl:oneOf [ rdf:type rdf:List ;
+                                                                   rdf:first "{and}" ;
+                                                                   rdf:rest rdf:nil
+                                                                 ]
+                                                     ]
+                                 ] ;
+                 rdfs:label "And"@en ,
+                            "Og"@no .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#AnyOf
+modelldcatno:AnyOf rdf:type owl:Class ;
+                   rdfs:subClassOf modelldcatno:Choice ;
+                   rdfs:label "AnyOf"@en ,
+                              "Noen av"@no .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#Association
 modelldcatno:Association rdf:type owl:Class ;
                          rdfs:subClassOf modelldcatno:Property ;
@@ -1260,7 +1288,7 @@ modelldcatno:InformationModel rdf:type owl:Class ;
                                               ] ,
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty dcat:contactPoint ;
-                                                owl:someValuesFrom vcard:Kind
+                                                owl:someValuesFrom vcard:Organization
                                               ] ,
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty dcat:theme ;
@@ -1331,6 +1359,22 @@ modelldcatno:Module rdf:type owl:Class ;
                                "Module"@en .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#Not
+modelldcatno:Not rdf:type owl:Class ;
+                 rdfs:subClassOf modelldcatno:ConstraintRule ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty modelldcatno:constraintExpression ;
+                                   owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                       owl:oneOf [ rdf:type rdf:List ;
+                                                                   rdf:first "{not}" ;
+                                                                   rdf:rest rdf:nil
+                                                                 ]
+                                                     ]
+                                 ] ;
+                 rdfs:label "Ikke"@no ,
+                            "Not"@en .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#Note
 modelldcatno:Note rdf:type owl:Class ;
                   rdfs:label "Note"@en ,
@@ -1351,12 +1395,11 @@ modelldcatno:Or rdf:type owl:Class ;
                                   owl:onProperty modelldcatno:constraintExpression ;
                                   owl:allValuesFrom [ rdf:type rdfs:Datatype ;
                                                       owl:oneOf [ rdf:type rdf:List ;
-                                                                  rdf:first "{xor}" ;
+                                                                  rdf:first "{or}" ;
                                                                   rdf:rest rdf:nil
                                                                 ]
                                                     ]
                                 ] ;
-                owl:disjointWith modelldcatno:Xor ;
                 rdfs:label "og/eller"@nb ,
                            "or"@en .
 
@@ -1488,6 +1531,15 @@ modelldcatno:physicalModel rdf:type owl:NamedIndividual ,
 #################################################################
 #    General axioms
 #################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( modelldcatno:And
+                modelldcatno:Not
+                modelldcatno:Or
+                modelldcatno:Xor
+              )
+] .
+
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( modelldcatno:Association
