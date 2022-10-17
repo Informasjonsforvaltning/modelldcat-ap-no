@@ -1,9 +1,9 @@
-name: Publish ontology to data.norge.no/vocabulary
+name: Publish ontology to staging.fellesdatakatalog.digdir.no/vocabulary
 
 on:
   push:
     branches:
-      - v1
+      - develop
     paths:
       - ontology/**
   workflow_dispatch:
@@ -24,8 +24,8 @@ jobs:
         with:
           ontology-type: "vocabulary"
           ontology: "modelldcatno"
-          host: "https://data.norge.no"
-          api-key: ${{ secrets.STATIC_RDF_SERVER_API_KEY }}
+          host: "https://staging.fellesdatakatalog.digdir.no"
+          api-key: ${{ secrets.STATIC_RDF_SERVER_API_KEY_STAGING }}
           files: |
             ontology/modelldcatno.ttl text/turtle en
             ontology/index.html text/html nb
