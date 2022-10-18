@@ -1,47 +1,21 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <title></title>
-  <meta name="generator" content="LibreOffice 7.3.0.3 (Linux)" />
-  <meta name="created" content="00:00:00" />
-  <meta name="changed" content="00:00:00" />
-  <style type="text/css">
-    @page {
-      size: 8.27in 11.69in;
-      margin: 0.79in
-    }
-
-    p {
-      line-height: 115%;
-      margin-bottom: 0.1in;
-      background: transparent
-    }
-
-    pre {
-      background: transparent
-    }
-
-    pre.western {
-      font-family: "Liberation Mono", monospace;
-      font-size: 10pt
-    }
-
-    pre.cjk {
-      font-family: "Noto Sans Mono CJK SC", monospace;
-      font-size: 10pt
-    }
-
-    pre.ctl {
-      font-family: "Liberation Mono", monospace;
-      font-size: 10pt
-    }
-  </style>
+	<meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 7.3.0.3 (Windows)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="00:00:00"/>
+	<style type="text/css">
+		@page { size: 21cm 29.7cm; margin: 2cm }
+		p { line-height: 115%; margin-bottom: 0.25cm; background: transparent }
+		pre { background: transparent }
+		pre.western { font-family: "Liberation Mono", monospace; font-size: 10pt }
+		pre.cjk { font-family: "NSimSun", monospace; font-size: 10pt }
+		pre.ctl { font-family: "Liberation Mono", monospace; font-size: 10pt }
+	</style>
 </head>
-
-<body lang="nb-NO" link="#000080" vlink="#800000" dir="ltr">
-  <pre class="western">@prefix : &lt;https://data.norge.no/vocabulary/modelldcatno/&gt; .
+<body lang="nb-NO" link="#000080" vlink="#800000" dir="ltr"><pre class="western">@prefix : &lt;https://data.norge.no/vocabulary/modelldcatno/&gt; .
 @prefix dct: &lt;http://purl.org/dc/terms/&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
 @prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
@@ -190,7 +164,7 @@ dct:language rdf:type owl:ObjectProperty ;
                          ] ;
              rdfs:range dct:LinguisticSystem ;
              rdfs:label &quot;language&quot;@en ,
-                        &quot;språk&quot;@nb .
+                        &quot;spr&Atilde;&yen;k&quot;@nb .
 
 
 ###  http://purl.org/dc/terms/license
@@ -221,7 +195,7 @@ dct:replaces rdf:type owl:ObjectProperty ;
 dct:spatial rdf:type owl:ObjectProperty ;
             rdfs:domain dcat:Resource ;
             rdfs:range dct:Location ;
-            rdfs:label &quot;dekningsområde&quot;@nb ,
+            rdfs:label &quot;dekningsomr&Atilde;&yen;de&quot;@nb ,
                        &quot;spatial coverage&quot;@en .
 
 
@@ -286,7 +260,7 @@ adms:status rdf:type owl:ObjectProperty ;
 ###  http://www.w3.org/ns/dcat#contactPoint
 dcat:contactPoint rdf:type owl:ObjectProperty ;
                   rdfs:domain dcat:Resource ;
-                  rdfs:range vcard:Kind ;
+                  rdfs:range vcard:Organization ;
                   rdfs:label &quot;contact point&quot;@en ,
                              &quot;kontaktpunkt&quot;@nb .
 
@@ -347,7 +321,7 @@ modelldcatno:belongsToModule rdf:type owl:ObjectProperty ,
                                          ] ;
                              rdfs:range modelldcatno:Module ;
                              rdfs:label &quot;belongs to module&quot;@en ,
-                                        &quot;konseptet tilhører modul&quot;@nb .
+                                        &quot;konseptet tilh&Atilde;&cedil;rer modul&quot;@nb .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#constrains
@@ -398,13 +372,12 @@ modelldcatno:formsSymmetryWith rdf:type owl:ObjectProperty ,
                                rdfs:domain modelldcatno:Property ;
                                rdfs:range modelldcatno:Property ;
                                rdfs:label &quot;forms symmetry with&quot;@en ,
-                                          &quot;utgjør symetrisk relasjon med&quot;@nb .
+                                          &quot;utgj&Atilde;&cedil;r symetrisk relasjon med&quot;@nb .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#hasDataType
 modelldcatno:hasDataType rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf modelldcatno:hasType ;
-                         rdf:type owl:FunctionalProperty ;
                          rdfs:domain modelldcatno:Attribute ;
                          rdfs:range modelldcatno:DataType ;
                          owl:propertyDisjointWith modelldcatno:hasSimpleType ,
@@ -439,7 +412,6 @@ modelldcatno:hasMember rdf:type owl:ObjectProperty ;
 ###  https://data.norge.no/vocabulary/modelldcatno#hasObjectType
 modelldcatno:hasObjectType rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf modelldcatno:hasType ;
-                           rdf:type owl:FunctionalProperty ;
                            rdfs:domain modelldcatno:Role ;
                            rdfs:range modelldcatno:ObjectType ;
                            rdfs:label &quot;har objekttype&quot;@nb ,
@@ -458,7 +430,6 @@ modelldcatno:hasProperty rdf:type owl:ObjectProperty ,
 ###  https://data.norge.no/vocabulary/modelldcatno#hasSimpleType
 modelldcatno:hasSimpleType rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf modelldcatno:hasType ;
-                           rdf:type owl:FunctionalProperty ;
                            rdfs:domain modelldcatno:Attribute ;
                            rdfs:range modelldcatno:SimpleType ;
                            rdfs:label &quot;har enkeltype&quot;@nb ,
@@ -474,7 +445,7 @@ modelldcatno:hasSome rdf:type owl:ObjectProperty ;
                                                 modelldcatno:Property
                                               )
                                 ] ;
-                     rdfs:comment &quot;Brukes for å betegne at en valgmulighet ikke er ekskusiv, dvs. at man kan velge mer enn en.&quot;@nb ;
+                     rdfs:comment &quot;Brukes for &Atilde;&yen; betegne at en valgmulighet ikke er ekskusiv, dvs. at man kan velge mer enn en.&quot;@nb ;
                      rdfs:label &quot;has some&quot;@en ,
                                 &quot;kan ha&quot;@nb .
 
@@ -489,7 +460,7 @@ modelldcatno:hasSupplier rdf:type owl:ObjectProperty ;
                                                     modelldcatno:Property
                                                   )
                                     ] ;
-                         rdfs:label &quot;har leverandør&quot;@nb ,
+                         rdfs:label &quot;har leverand&Atilde;&cedil;r&quot;@nb ,
                                     &quot;has supplier&quot;@en .
 
 
@@ -504,7 +475,6 @@ modelldcatno:hasType rdf:type owl:ObjectProperty ;
 ###  https://data.norge.no/vocabulary/modelldcatno#hasValueFrom
 modelldcatno:hasValueFrom rdf:type owl:ObjectProperty ;
                           rdfs:subPropertyOf modelldcatno:hasType ;
-                          rdf:type owl:FunctionalProperty ;
                           rdfs:domain modelldcatno:Attribute ;
                           rdfs:range modelldcatno:CodeList ;
                           rdfs:label &quot;har verdier fra&quot;@nb ,
@@ -677,29 +647,6 @@ xsd:maxLength rdf:type owl:DatatypeProperty ,
                          &quot;max length&quot;@en .
 
 
-###  http://www.w3.org/2001/XMLSchema#maxOccurs
-xsd:maxOccurs rdf:type owl:DatatypeProperty ;
-              rdfs:domain modelldcatno:Property ;
-              rdfs:range [ rdf:type rdfs:Datatype ;
-                           owl:unionOf ( xsd:nonNegativeInteger
-                                         [ rdf:type rdfs:Datatype ;
-                                           owl:oneOf [ rdf:type rdf:List ;
-                                                       rdf:first &quot;*&quot; ;
-                                                       rdf:rest rdf:nil
-                                                     ]
-                                         ]
-                                         [ rdf:type rdfs:Datatype ;
-                                           owl:oneOf [ rdf:type rdf:List ;
-                                                       rdf:first &quot;n&quot; ;
-                                                       rdf:rest rdf:nil
-                                                     ]
-                                         ]
-                                       )
-                         ] ;
-              rdfs:label &quot;maks multiplisitet&quot;@nb ,
-                         &quot;max occurs&quot;@en .
-
-
 ###  http://www.w3.org/2001/XMLSchema#minExclusive
 xsd:minExclusive rdf:type owl:DatatypeProperty ,
                           owl:FunctionalProperty ;
@@ -727,20 +674,12 @@ xsd:minLength rdf:type owl:DatatypeProperty ,
                          &quot;minimum lengde&quot;@nb .
 
 
-###  http://www.w3.org/2001/XMLSchema#minOccurs
-xsd:minOccurs rdf:type owl:DatatypeProperty ;
-              rdfs:domain modelldcatno:Property ;
-              rdfs:range xsd:nonNegativeInteger ;
-              rdfs:label &quot;min occurs&quot;@en ,
-                         &quot;minimum multiplisitet&quot;@nb .
-
-
 ###  http://www.w3.org/2001/XMLSchema#pattern
 xsd:pattern rdf:type owl:DatatypeProperty ,
                      owl:FunctionalProperty ;
             rdfs:domain modelldcatno:SimpleType ;
             rdfs:range xsd:string ;
-            rdfs:label &quot;mønster&quot;@nb ,
+            rdfs:label &quot;m&Atilde;&cedil;nster&quot;@nb ,
                        &quot;pattern&quot;@en .
 
 
@@ -764,7 +703,7 @@ dcat:bbox rdf:type owl:DatatypeProperty ;
           rdfs:domain dct:Location ;
           rdfs:range rdfs:Literal ;
           rdfs:label &quot;bounding box&quot;@en ,
-                     &quot;geografisk område&quot;@nb .
+                     &quot;geografisk omr&Atilde;&yen;de&quot;@nb .
 
 
 ###  http://www.w3.org/ns/dcat#centroid
@@ -833,6 +772,37 @@ modelldcatno:informationModelIdentifier rdf:type owl:DatatypeProperty ;
                                                    &quot;information model identifier&quot;@en .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#maxOccurs
+modelldcatno:maxOccurs rdf:type owl:DatatypeProperty ;
+                       rdfs:domain modelldcatno:Property ;
+                       rdfs:range [ rdf:type rdfs:Datatype ;
+                                    owl:unionOf ( xsd:nonNegativeInteger
+                                                  [ rdf:type rdfs:Datatype ;
+                                                    owl:oneOf [ rdf:type rdf:List ;
+                                                                rdf:first &quot;*&quot; ;
+                                                                rdf:rest rdf:nil
+                                                              ]
+                                                  ]
+                                                  [ rdf:type rdfs:Datatype ;
+                                                    owl:oneOf [ rdf:type rdf:List ;
+                                                                rdf:first &quot;n&quot; ;
+                                                                rdf:rest rdf:nil
+                                                              ]
+                                                  ]
+                                                )
+                                  ] ;
+                       rdfs:label &quot;maks multiplisitet&quot;@nb ,
+                                  &quot;max occurs&quot;@en .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#minOccurs
+modelldcatno:minOccurs rdf:type owl:DatatypeProperty ;
+                       rdfs:domain modelldcatno:Property ;
+                       rdfs:range xsd:nonNegativeInteger ;
+                       rdfs:label &quot;min occurs&quot;@en ,
+                                  &quot;minimum multiplisitet&quot;@nb .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#navigable
 modelldcatno:navigable rdf:type owl:DatatypeProperty ;
                        rdfs:domain modelldcatno:Property ;
@@ -865,7 +835,7 @@ modelldcatno:sequenceNumber rdf:type owl:DatatypeProperty ;
                                                       )
                                         ] ;
                             rdfs:range xsd:nonNegativeInteger ;
-                            rdfs:comment &quot;Der man har en modell der elementenes orden er vesentlig, f. eks. slik det kan være i XML eller en kodeliste.&quot;@nb ;
+                            rdfs:comment &quot;Der man har en modell der elementenes orden er vesentlig, f. eks. slik det kan v&Atilde;&brvbar;re i XML eller en kodeliste.&quot;@nb ;
                             rdfs:label &quot;Sekvensnummer&quot;@nb ,
                                        &quot;sequence number&quot;@en .
 
@@ -897,7 +867,7 @@ dct:LicenseDocument rdf:type owl:Class ;
 ###  http://purl.org/dc/terms/LinguisticSystem
 dct:LinguisticSystem rdf:type owl:Class ;
                      rdfs:label &quot;Linguistic System&quot;@en ,
-                                &quot;Språksystem&quot;@nb .
+                                &quot;Spr&Atilde;&yen;ksystem&quot;@nb .
 
 
 ###  http://purl.org/dc/terms/Location
@@ -941,9 +911,10 @@ skos:ConceptScheme rdf:type owl:Class ;
                               &quot;Tematisk skjema&quot;@nb .
 
 
-###  http://www.w3.org/2006/vcard/ns#Kind
-vcard:Kind rdf:type owl:Class ;
-           rdfs:label &quot;Kind&quot;@en .
+###  http://www.w3.org/2006/vcard/ns#Organization
+vcard:Organization rdf:type owl:Class ;
+                   rdfs:label &quot;Organisasjon&quot;@nb ,
+                              &quot;Organization&quot;@en .
 
 
 ###  http://www.w3.org/ns/dcat#Catalog
@@ -1144,7 +1115,7 @@ dcat:Resource rdf:type owl:Class ;
 ###  http://xmlns.com/foaf/0.1/Agent
 foaf:Agent rdf:type owl:Class ;
            rdfs:label &quot;Agent&quot;@en ,
-                      &quot;Aktør&quot;@nb .
+                      &quot;Akt&Atilde;&cedil;r&quot;@nb .
 
 
 ###  http://xmlns.com/foaf/0.1/Document
@@ -1158,6 +1129,37 @@ modelldcatno:Abstraction rdf:type owl:Class ;
                          rdfs:subClassOf modelldcatno:Property ;
                          rdfs:label &quot;Abstraction&quot;@en ,
                                     &quot;Abstraksjon&quot;@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#AllOf
+modelldcatno:AllOf rdf:type owl:Class ;
+                   rdfs:subClassOf modelldcatno:Choice ;
+                   owl:disjointWith modelldcatno:AnyOf ;
+                   rdfs:label &quot;All of&quot;@en ,
+                              &quot;Alle&quot;@no .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#And
+modelldcatno:And rdf:type owl:Class ;
+                 rdfs:subClassOf modelldcatno:ConstraintRule ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty modelldcatno:constraintExpression ;
+                                   owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                       owl:oneOf [ rdf:type rdf:List ;
+                                                                   rdf:first &quot;{and}&quot; ;
+                                                                   rdf:rest rdf:nil
+                                                                 ]
+                                                     ]
+                                 ] ;
+                 rdfs:label &quot;And&quot;@en ,
+                            &quot;Og&quot;@no .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#AnyOf
+modelldcatno:AnyOf rdf:type owl:Class ;
+                   rdfs:subClassOf modelldcatno:Choice ;
+                   rdfs:label &quot;AnyOf&quot;@en ,
+                              &quot;Noen av&quot;@no .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#Association
@@ -1303,7 +1305,7 @@ modelldcatno:InformationModel rdf:type owl:Class ;
                                               ] ,
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty dcat:contactPoint ;
-                                                owl:someValuesFrom vcard:Kind
+                                                owl:someValuesFrom vcard:Organization
                                               ] ,
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty dcat:theme ;
@@ -1374,6 +1376,22 @@ modelldcatno:Module rdf:type owl:Class ;
                                &quot;Module&quot;@en .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#Not
+modelldcatno:Not rdf:type owl:Class ;
+                 rdfs:subClassOf modelldcatno:ConstraintRule ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty modelldcatno:constraintExpression ;
+                                   owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                       owl:oneOf [ rdf:type rdf:List ;
+                                                                   rdf:first &quot;{not}&quot; ;
+                                                                   rdf:rest rdf:nil
+                                                                 ]
+                                                     ]
+                                 ] ;
+                 rdfs:label &quot;Ikke&quot;@no ,
+                            &quot;Not&quot;@en .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#Note
 modelldcatno:Note rdf:type owl:Class ;
                   rdfs:label &quot;Note&quot;@en ,
@@ -1394,12 +1412,11 @@ modelldcatno:Or rdf:type owl:Class ;
                                   owl:onProperty modelldcatno:constraintExpression ;
                                   owl:allValuesFrom [ rdf:type rdfs:Datatype ;
                                                       owl:oneOf [ rdf:type rdf:List ;
-                                                                  rdf:first &quot;{xor}&quot; ;
+                                                                  rdf:first &quot;{or}&quot; ;
                                                                   rdf:rest rdf:nil
                                                                 ]
                                                     ]
                                 ] ;
-                owl:disjointWith modelldcatno:Xor ;
                 rdfs:label &quot;og/eller&quot;@nb ,
                            &quot;or&quot;@en .
 
@@ -1474,11 +1491,41 @@ modelldcatno:Xor rdf:type owl:Class ;
 #    Individuals
 #################################################################
 
+###  http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED
+&lt;http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED&gt; rdf:type owl:NamedIndividual .
+
+
+###  https://data.norge.no/vocabulary/information-model-type
+&lt;https://data.norge.no/vocabulary/information-model-type&gt; rdf:type owl:NamedIndividual .
+
+
+###  https://data.norge.no/vocabulary/information-model-type#application-model
+&lt;https://data.norge.no/vocabulary/information-model-type#application-model&gt; rdf:type owl:NamedIndividual .
+
+
+###  https://data.norge.no/vocabulary/information-model-type#common-shared-model
+&lt;https://data.norge.no/vocabulary/information-model-type#common-shared-model&gt; rdf:type owl:NamedIndividual .
+
+
+###  https://data.norge.no/vocabulary/information-model-type#conceptual-model
+&lt;https://data.norge.no/vocabulary/information-model-type#conceptual-model&gt; rdf:type owl:NamedIndividual .
+
+
+###  https://data.norge.no/vocabulary/information-model-type#logical-model
+&lt;https://data.norge.no/vocabulary/information-model-type#logical-model&gt; rdf:type owl:NamedIndividual .
+
+
+###  https://data.norge.no/vocabulary/information-model-type#physical-model
+&lt;https://data.norge.no/vocabulary/information-model-type#physical-model&gt; rdf:type owl:NamedIndividual .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#applicationModel
 modelldcatno:applicationModel rdf:type owl:NamedIndividual ,
                                        skos:Concept ,
                                        modelldcatno:CodeElement ;
+                              dct:isReplacedBy &lt;https://data.norge.no/vocabulary/information-model-type#application-model&gt; ;
                               skos:inScheme modelldcatno:modelTypes ;
+                              adms:status &lt;http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED&gt; ;
                               skos:prefLabel &quot;Anvendelsesmodell&quot;@nb ,
                                              &quot;Application model&quot;@en .
 
@@ -1487,7 +1534,9 @@ modelldcatno:applicationModel rdf:type owl:NamedIndividual ,
 modelldcatno:commonSharedModel rdf:type owl:NamedIndividual ,
                                         skos:Concept ,
                                         modelldcatno:CodeElement ;
+                               dct:isReplacedBy &lt;https://data.norge.no/vocabulary/information-model-type#common-shared-model&gt; ;
                                skos:inScheme modelldcatno:modelTypes ;
+                               adms:status &lt;http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED&gt; ;
                                skos:prefLabel &quot;Common shared model&quot;@en ,
                                               &quot;Fellesmodell&quot;@nb .
 
@@ -1496,7 +1545,9 @@ modelldcatno:commonSharedModel rdf:type owl:NamedIndividual ,
 modelldcatno:conceptualModel rdf:type owl:NamedIndividual ,
                                       skos:Concept ,
                                       modelldcatno:CodeElement ;
+                             dct:isReplacedBy &lt;https://data.norge.no/vocabulary/information-model-type#conceptual-model&gt; ;
                              skos:inScheme modelldcatno:modelTypes ;
+                             adms:status &lt;http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED&gt; ;
                              skos:prefLabel &quot;Conceptual model&quot;@en ,
                                             &quot;Konseptuell modell&quot;@nb .
 
@@ -1505,7 +1556,9 @@ modelldcatno:conceptualModel rdf:type owl:NamedIndividual ,
 modelldcatno:logicalModel rdf:type owl:NamedIndividual ,
                                    skos:Concept ,
                                    modelldcatno:CodeElement ;
+                          dct:isReplacedBy &lt;https://data.norge.no/vocabulary/information-model-type#logical-model&gt; ;
                           skos:inScheme modelldcatno:modelTypes ;
+                          adms:status &lt;http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED&gt; ;
                           skos:prefLabel &quot;Logical model&quot;@en ,
                                          &quot;Logisk modell&quot;@nb .
 
@@ -1513,6 +1566,8 @@ modelldcatno:logicalModel rdf:type owl:NamedIndividual ,
 ###  https://data.norge.no/vocabulary/modelldcatno#modelTypes
 modelldcatno:modelTypes rdf:type owl:NamedIndividual ,
                                  modelldcatno:CodeList ;
+                        dct:isReplacedBy &lt;https://data.norge.no/vocabulary/information-model-type&gt; ;
+                        adms:status &lt;http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED&gt; ;
                         dct:title &quot;Model types&quot;@en ,
                                   &quot;Modelltyper&quot;@nb ;
                         rdfs:label &quot;Model types&quot;@en ,
@@ -1523,7 +1578,9 @@ modelldcatno:modelTypes rdf:type owl:NamedIndividual ,
 modelldcatno:physicalModel rdf:type owl:NamedIndividual ,
                                     skos:Concept ,
                                     modelldcatno:CodeElement ;
+                           dct:isReplacedBy &lt;https://data.norge.no/vocabulary/information-model-type#physical-model&gt; ;
                            skos:inScheme modelldcatno:modelTypes ;
+                           adms:status &lt;http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED&gt; ;
                            skos:prefLabel &quot;Fysisk modell&quot;@nb ,
                                           &quot;Physical model&quot;@en .
 
@@ -1531,6 +1588,15 @@ modelldcatno:physicalModel rdf:type owl:NamedIndividual ,
 #################################################################
 #    General axioms
 #################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( modelldcatno:And
+                modelldcatno:Not
+                modelldcatno:Or
+                modelldcatno:Xor
+              )
+] .
+
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( modelldcatno:Association
@@ -1555,5 +1621,4 @@ modelldcatno:physicalModel rdf:type owl:NamedIndividual ,
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi</pre>
 </body>
-
 </html>
