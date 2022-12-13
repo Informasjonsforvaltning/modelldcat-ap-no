@@ -7,3 +7,4 @@ index.html
 # Shall not be committed:
 build
 !ontology/index.html
+.idea/
