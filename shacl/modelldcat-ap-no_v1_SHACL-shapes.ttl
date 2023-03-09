@@ -46,7 +46,7 @@
     dct:description "This document specifies the constraints on properties and classes expressed by ModellDCAT-AP-NO in SHACL."@en ;
     dct:title "The constraints of ModellDCAT-AP-NO"@en ;
     owl:versionInfo "1.2.001";
-    adms:versionNote "Alligned with v.1.2.0 of ModellDCAT-AP-NO"
+    adms:versionNote "Alligned with v.1.2.0 of ModellDCAT-AP-NO"@en ; 
     dct:modified "2022-08-23"^^xsd:date ;
     .
 
