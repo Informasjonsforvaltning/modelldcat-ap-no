@@ -10,7 +10,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |===
 |Engelsk navn|Agent
 |Beskrivelse|Brukes til å representere en aktør som er assosiert med modellkatalogen og/eller modellene. Dersom aktøren er en organisasjon er det anbefalt å bruke «Organization Ontology».
-|URI| http://xmlns.com/foaf/spec/#term_Agent[foaf:Agent]
+|URI| http://xmlns.com/foaf/0.1/#term_Agent[foaf:Agent]
 |Kravnivå|Obligatorisk
 |===
 
@@ -20,7 +20,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |===
 |Engelsk navn|Concept
 |Beskrivelse|Brukes til å representere begrep som er viktig for å forstå eller tolke en informasjonsmodell eller et modellelement.
-|URI| https://www.w3.org/2009/08/skos-reference/skos.html#Concept[skos:Concept]
+|URI| https://www.w3.org/TR/skos-reference/#concepts[skos:Concept]
 |Kravnivå|Obligatorisk
 |===
 
@@ -30,7 +30,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |===
 |Engelsk navn|Catalogued Resource
 |Beskrivelse|Brukes til å representere en ressurs som er beskrevet i en katalog.
-|URI| https://www.w3.org/TR/vocab-dcat-2/#Class:Resource[dcat:Resource]
+|URI| https://www.w3.org/TR/vocab-dcat/#Class:Resource[dcat:Resource]
 |Kravnivå|Obligatorisk
 |Kommentar|Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av spesialiseringene.
 |===
@@ -51,7 +51,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |===
 |Engelsk navn|Literal
 |Beskrivelse|Brukes til å representere en literal-verdi slik som en streng eller heltall (integer). Literaler kan inneholde datatype, og for eksempel være formatert som en dato. Literaler som inneholder maskinlesbar tekst har en valgfri språk-tag, definert av BCP47 (no=norsk, nb=bokmål, nn=nynorsk, en=engelsk).
-|URI| https://www.w3.org/TR/rdf-concepts/#section-Literals[rdfs:Literal]
+|URI| https://www.w3.org/TR/rdf-concepts/#section-Graph-Literal[rdfs:Literal]
 |Kravnivå|Obligatorisk
 |===
 
@@ -61,7 +61,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |===
 |Engelsk navn|Catalog
 |Beskrivelse|Brukes til å representere en katalog eller repository som inneholder beskrivelsene av modellene.
-|URI| http://www.w3.org/TR/2013/WD-vocab-dcat-20130312/#class-catalog[dcat:Catalog]
+|URI| https://www.w3.org/TR/vocab-dcat/#Class:Catalog[dcat:Catalog]
 |Kravnivå|Obligatorisk
 |===
 
@@ -83,7 +83,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |===
 |Engelsk navn|License document
 |Beskrivelse|Brukes til å representere et juridisk dokument som gir offisiell tillatelse til å gjøre noe med en modell.
-|URI| http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=terms#LicenseDocument[dct:LicenseDocument]
+|URI| http://purl.org/dc/terms/LicenseDocument[dct:LicenseDocument]
 |Kravnivå|Anbefalt
 |===
 
@@ -95,7 +95,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |===
 |Engelsk navn|Location
 |Beskrivelse|Brukes til å representere en region eller et navngitt sted. Det kan representeres ved hjelp av et kontrollert vokabular eller med geografiske koordinater.
-|URI| http://dublincore.org/documents/dcmi-terms/#terms-Location[dct:Location]
+|URI| http://purl.org/dc/terms/Location[dct:Location]
 |Kravnivå|Valgfri
 |===
 
@@ -105,7 +105,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |===
 |Engelsk navn|Linguistic system
 |Beskrivelse|Brukes til å representere et system av tegn, symboler, lyder, gester, eller regler som brukes i kommunikasjon, for eksempel et språk.
-|URI| http://dublincore.org/documents/dcmi-terms/#terms-LinguisticSystem[dct:LinguisticSystem]
+|URI| http://purl.org/dc/terms/LinguisticSystem[dct:LinguisticSystem]
 |Kravnivå|Valgfri
 |===
 
@@ -125,7 +125,7 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |===
 |Engelsk navn|Period of time
 |Beskrivelse|Brukes til å beskrive et tidsintervall som er navngitt eller definert av en start- og sluttdato.
-|URI| http://dublincore.org/documents/dcmi-terms/#terms-PeriodOfTime[dct:PeriodOfTime]
+|URI| http://purl.org/dc/terms/PeriodOfTime[dct:PeriodOfTime]
 |Kravnivå|Valgfri
 |===
 
