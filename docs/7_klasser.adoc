@@ -168,6 +168,17 @@ Klasse som representerer modellen som skal utveksles.
 |Kravnivå|Anbefalt
 |===
 
+=== Avhengighet (modelldcatno:Dependency) [[klasse-avhengighet]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Dependency
+|Beskrivelse|Brukes til å beskrive avhengighet mellom to modellelementer.
+|URI|modelldcatno:Dependency
+|Subklasse av|modelldcatno:Property
+|Kravnivå|Anbefalt
+|===
+
 === Begrensningsregel  (modelldcatno:ConstraintRule) [[klasse-begrensningsregel]]
 
 [cols="30s,70"]
