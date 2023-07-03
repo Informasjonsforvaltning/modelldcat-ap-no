@@ -1,7 +1,7 @@
 include::locale/attributes.adoc[]
 = Spesifikasjon for beskrivelse av informasjonsmodeller (ModellDCAT-AP-NO)
 :doctype: book
-:docinfo:
+:docinfo: shared
 :icons: font
 :toc: left
 ifdef::backend-pdf[:toc: macro]
@@ -25,9 +25,9 @@ NOTE: *Innmelding av feil og mangler:* +
 Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på https://github.com/Informasjonsforvaltning/modelldcat-ap-no/issues[Github Issues]. Dersom du ikke allerede har bruker på Github kan du opprette bruker gratis.
 
 *Status*: Gjeldende +
-*Versjon*: 1.2.0 (se <<Endringslogg, endringsloggen>>) +
-*Publisert*: 2022-08-26 (v.1.2) 2021-06-28 (v.1.1), 2020-12-18 (v.1.0)  +
-*Oppdatert*: 2022-08-26 +
+*Versjon*: 1.3.0 (se <<Endringslogg, endringsloggen>>) +
+*Publisert*: 2023-07-03 (v.1.3) 2022-08-26 (v.1.2) 2021-06-28 (v.1.1), 2020-12-18 (v.1.0)  +
+*Oppdatert*: 2023-07-03 +
 *Gjeldende versjon av spesifikasjon*: https://data.norge.no/specification/modelldcat-ap-no/ +
 *Gjeldende versjon av ontologi*: https://data.norge.no/vocabulary/modelldcatno +
 *Redaktørens utkast av spesifikasjon*: https://informasjonsforvaltning.github.io/modelldcat-ap-no/specification +
@@ -70,6 +70,8 @@ include::12a_EgenskaperAbstraksjon.adoc[]
 include::12b_EgenskaperAssosiasjon.adoc[]
 
 include::12c_EgenskaperAttributt.adoc[]
+
+include::12c_EgenskaperAvhengighet.adoc[]
 
 include::EgenskaperBegrensningsregel.adoc[]
 
