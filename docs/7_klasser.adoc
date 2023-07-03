@@ -35,6 +35,16 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |Kommentar|Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av spesialiseringene.
 |===
 
+=== Kontaktopplysning (vcard:Organization) [[klasse-kontaktopplysning]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|Organization
+|Beskrivelse|Brukes til å representere en beskrivelse av en kontaktopplysning i henhold til vCard-spesifikasjonen. Her kan man for eksempel oppgi telefonnummer og/eller e-post. Man bør om mulig bruke den organisatoriske enheten eller gruppen i virksomheten som har det funksjonelle ansvaret.
+|URI| https://www.w3.org/TR/2014/NOTE-vcard-rdf-20140522/#d4e2121[vcard:Organization]
+|Kravnivå|Obligatorisk
+|===
+
 === Literal (rdfs:Literal) [[klasse-literal]]
 
 [cols="30s,70"]
@@ -78,16 +88,6 @@ Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsr
 |===
 
 == Valgfrie klasser i katalogdelen [[Valgfri-klasser-i-katalogdelen]]
-
-=== Kontaktopplysning (vcard:Organization) [[klasse-kontaktopplysning]]
-
-[cols="30s,70"]
-|===
-|Engelsk navn|Organization
-|Beskrivelse|Brukes til å representere en beskrivelse av en kontaktopplysning i henhold til vCard-spesifikasjonen. Her kan man for eksempel oppgi telefonnummer og/eller e-post. Man bør om mulig bruke den organisatoriske enheten eller gruppen i virksomheten som har det funksjonelle ansvaret.
-|URI| https://www.w3.org/TR/2014/NOTE-vcard-rdf-20140522/#d4e2121[vcard:Organization]
-|Kravnivå|Valgfri
-|===
 
 === Lokasjon (dct:Location) [[klasse-lokasjon]]
 
