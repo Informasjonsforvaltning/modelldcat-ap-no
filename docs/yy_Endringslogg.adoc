@@ -1,5 +1,13 @@
 = Endringslogg [[Endringslogg]]
 
+== Endringer fra v.1.2.x til v.1.3.0 [[Endringer_fra_v_1.2.x]]
+
+I tillegg til noen redaksjonelle justeringer, er følgende endret:
+
+* Det er føyet til en ny obligatorisk <<Modellkatalog-kontaktpunkt, egenskap  kontaktpunkt (dcat:contactPoint) i klassen Modellkatalog (dcat:Catalog)>>, slik at det er mulig å kunne ta kontakt med den som har publisert en modellkatalog. 
+
+* Det er føyet til en ny anbefalt <<Avhengighet-egenskaper, klasse Avhengighet (modelldcatno:Dependency)>>, slik at det er mulig å eksplisitt modellere avhengighet mellom to modellelementer. 
+
 == Endringer fra v.1.1.x til v.1.2.0 [[Endringer_fra_v_1.1.x]]
 
 I tillegg til noen redaksjonelle justeringer, er følgende endret:
