@@ -624,6 +624,13 @@
         sh:severity sh:Violation ;
         sh:message "En katalog skal én og bare én identifikator (dct:identifier)."@nb ;
     ], [
+        sh:name "kontaktpunkt"@nb , "contact point"@en ;
+        sh:nodeKind vcard:Organization ;
+        sh:minCount 1 ;
+        sh:path dcat:contactPoint ;
+        sh:severity sh:Violation ;
+        sh:message "En katalog skal minst ett kontaktpunkt (dcat:contactPoint)."@nb ;
+    ], [
         sh:name "tittel"@nb , "title"@en ;
         sh:minCount 1 ;
         sh:nodeKind sh:Literal ;
