@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.17">
+<meta name="generator" content="Asciidoctor 2.0.20">
 <title>Spesifikasjon for beskrivelse av informasjonsmodeller (ModellDCAT-AP-NO)</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -84,10 +84,10 @@ code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;
 ul,ol,dl{line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
 ul,ol{margin-left:1.5em}
 ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0}
-ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
-ul.square{list-style-type:square}
 ul.circle{list-style-type:circle}
 ul.disc{list-style-type:disc}
+ul.square{list-style-type:square}
+ul.circle ul:not([class]),ul.disc ul:not([class]),ul.square ul:not([class]){list-style:inherit}
 ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
 dl dt{margin-bottom:.3125em;font-weight:bold}
 dl dd{margin-bottom:1.25em}
@@ -208,13 +208,10 @@ table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
 .admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
 .exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
-.exampleblock>.content>:first-child{margin-top:0}
-.exampleblock>.content>:last-child{margin-bottom:0}
 .sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
-.sidebarblock>:first-child{margin-top:0}
-.sidebarblock>:last-child{margin-bottom:0}
 .sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
-.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content>:first-child,.sidebarblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child,.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
 .literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
 @media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
 @media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
@@ -393,7 +390,7 @@ b.conum *{color:inherit!important}
 dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
 h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
 p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
-p,blockquote,dt,td.content,span.alt,summary{font-size:1.0625rem}
+p,blockquote,dt,td.content,td.hdlist1,span.alt,summary{font-size:1.0625rem}
 p{margin-bottom:1.25rem}
 .sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
 .exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
@@ -436,6 +433,81 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Generate a nice TOC -->
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js"></script>
+<!-- We do not need the tocify CSS because the asciidoc CSS already provides most of what we neeed -->
+
+<style>
+.tocify-header {
+    font-style: italic;
+}
+
+.tocify-subheader {
+    font-style: normal;
+    font-size: 90%;
+}
+
+.tocify ul {
+    margin: 0;
+ }
+
+.tocify-focus {
+    color: #7a2518;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.tocify-focus > a {
+    color: #7a2518;
+}
+</style>
+
+<script type="text/javascript">
+    $(function () {
+        // Add a new container for the tocify toc into the existing toc so we can re-use its
+        // styling
+        $("#toc").append("<div id='generated-toc'></div>");
+        $("#generated-toc").tocify({
+            extendPage: true,
+            context: "#content",
+            highlightOnScroll: true,
+            hideEffect: "slideUp",
+            // Use the IDs that asciidoc already provides so that TOC links and intra-document
+            // links are the same. Anything else might confuse users when they create bookmarks.
+            hashGenerator: function(text, element) {
+                return $(element).attr("id");
+            },
+            // Smooth scrolling doesn't work properly if we use the asciidoc IDs
+            smoothScroll: false,
+            // Set to 'none' to use the tocify classes
+            theme: "none",
+            // Handle book (may contain h1) and article (only h2 deeper)
+            selectors: $( "#content" ).has( "h1" ).size() > 0 ? "h1,h2,h3,h4,h5" : "h2,h3,h4,h5",
+            ignoreSelector: ".discrete"
+        });
+
+        // Switch between static asciidoc toc and dynamic tocify toc based on browser size
+        // This is set to match the media selectors in the asciidoc CSS
+        // Without this, we keep the dynamic toc even if it is moved from the side to preamble
+        // position which will cause odd scrolling behavior
+        var handleTocOnResize = function() {
+            if ($(document).width() < 768) {
+                $("#generated-toc").hide();
+                $(".sectlevel0").show();
+                $(".sectlevel1").show();
+            }
+            else {
+                $("#generated-toc").show();
+                $(".sectlevel0").hide();
+                $(".sectlevel1").hide();
+            }
+        }
+
+        $(window).resize(handleTocOnResize);
+        handleTocOnResize();
+    });
+</script>
 </head>
 <body class="book toc2 toc-left">
 <div id="header">
@@ -456,6 +528,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#klasse-aktor">Aktør (foaf:Agent)</a></li>
 <li><a href="#klasse-begrep-1">Begrep (skos:Concept)</a></li>
 <li><a href="#klasse-katalogisert-ressurs">Katalogisert ressurs (dcat:Resource)</a></li>
+<li><a href="#klasse-kontaktopplysning">Kontaktopplysning (vcard:Organization)</a></li>
 <li><a href="#klasse-literal">Literal (rdfs:Literal)</a></li>
 <li><a href="#klasse-modellkatalog">Modellkatalog (dcat:Catalog)</a></li>
 <li><a href="#klasse-tematisk-skjema">Tematisk skjema (skos:ConceptScheme)</a></li>
@@ -468,7 +541,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#Valgfri-klasser-i-katalogdelen">Valgfrie klasser i katalogdelen</a>
 <ul class="sectlevel3">
-<li><a href="#klasse-kontaktopplysning">Kontaktopplysning (vcard:Organization)</a></li>
 <li><a href="#klasse-lokasjon">Lokasjon (dct:Location)</a></li>
 <li><a href="#klasse-spraksystem">Språksystem (dct:LinguisticSystem)</a></li>
 <li><a href="#klasse-tema">Tema (skos:Concept)</a></li>
@@ -484,6 +556,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel3">
 <li><a href="#klasse-assosiasjon">Assosiasjon (modelldcatno:Association)</a></li>
 <li><a href="#klasse-attributt">Attributt (modelldcatno:Attribute)</a></li>
+<li><a href="#klasse-avhengighet">Avhengighet (modelldcatno:Dependency)</a></li>
 <li><a href="#klasse-begrensningsregel">Begrensningsregel  (modelldcatno:ConstraintRule)</a></li>
 <li><a href="#klasse-datatype">Datatype (modelldcatno:DataType)</a></li>
 <li><a href="#klasse-egenskap">Egenskap (modelldcatno:Property)</a></li>
@@ -570,6 +643,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#Modellkatalog-beskrivelse">Modellkatalog: beskrivelse (dct:description)</a></li>
 <li><a href="#Modellkatalog-harDel">Modellkatalog: har del (dct:hasPart)</a></li>
 <li><a href="#Modellkatalog-identifikator">Modellkatalog: identifikator (dct:identifier)</a></li>
+<li><a href="#Modellkatalog-kontaktpunkt">Modellkatalog: kontaktpunkt (dcat:contactPoint)</a></li>
 <li><a href="#Modellkatalog-tittel">Modellkatalog: tittel (dct:title)</a></li>
 <li><a href="#Modellkatalog-utgiver">Modellkatalog: utgiver (dct:publisher)</a></li>
 </ul>
@@ -632,6 +706,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#Attributt-harEnkelType">Attributt: har enkeltype (modelldcatno:hasSimpleType)</a></li>
 <li><a href="#Attributt-harVerdierFra">Attributt: har verdier fra (modelldcatno:hasValueFrom)</a></li>
 <li><a href="#Attributt-inneholderObjekttype">Attributt: inneholder objekttype (modelldcatno:containsObjectType)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Avhengighet-egenskaper">Avhengighet (modelldcatno:Dependency)</a>
+<ul class="sectlevel4">
+<li><a href="#Anbefalte-egenskaper-avhengighet">Anbefalte egenskaper for klassen <em>Avhengighet</em></a>
+<ul class="sectlevel5">
+<li><a href="#Avhengighet-erAvhengigAv">Avhengighet: er avhengig av (modelldcatno:dependentOn)</a></li>
 </ul>
 </li>
 </ul>
@@ -949,6 +1032,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#Endringslogg">Endringslogg</a>
 <ul class="sectlevel2">
+<li><a href="#Endringer_fra_v_1.2.x">Endringer fra v.1.2.x til v.1.3.0</a></li>
 <li><a href="#Endringer_fra_v_1.1.x">Endringer fra v.1.1.x til v.1.2.0</a></li>
 <li><a href="#Endringer_fra_v.1.1">Endringer fra v.1.1 til v.1.1.1</a></li>
 <li><a href="#Endringer_fra_v1.0">Endringer fra v.1.0 til v.1.1</a></li>
@@ -992,9 +1076,9 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 <div class="paragraph">
 <p><strong>Status</strong>: Gjeldende<br>
-<strong>Versjon</strong>: 1.2.0 (se <a href="#Endringslogg">endringsloggen</a>)<br>
-<strong>Publisert</strong>: 2022-08-26 (v.1.2) 2021-06-28 (v.1.1), 2020-12-18 (v.1.0) <br>
-<strong>Oppdatert</strong>: 2022-08-26<br>
+<strong>Versjon</strong>: 1.3.0 (se <a href="#Endringslogg">endringsloggen</a>)<br>
+<strong>Publisert</strong>: 2023-07-03 (v.1.3) 2022-08-26 (v.1.2) 2021-06-28 (v.1.1), 2020-12-18 (v.1.0) <br>
+<strong>Oppdatert</strong>: 2023-07-03<br>
 <strong>Gjeldende versjon av spesifikasjon</strong>: <a href="https://data.norge.no/specification/modelldcat-ap-no/" class="bare">https://data.norge.no/specification/modelldcat-ap-no/</a><br>
 <strong>Gjeldende versjon av ontologi</strong>: <a href="https://data.norge.no/vocabulary/modelldcatno" class="bare">https://data.norge.no/vocabulary/modelldcatno</a><br>
 <strong>Redaktørens utkast av spesifikasjon</strong>: <a href="https://informasjonsforvaltning.github.io/modelldcat-ap-no/specification" class="bare">https://informasjonsforvaltning.github.io/modelldcat-ap-no/specification</a><br>
@@ -1199,12 +1283,12 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <div class="sectionbody">
 <div class="imageblock">
 <div class="content">
-<a class="image" href="images/ModellDcat_AP_NOv1_2_20220826.png"><img src="images/ModellDcat_AP_NOv1_2_20220826.png" alt="ModellDcat AP NOv1 2 20220826"></a>
+<a class="image" href="images/ModellDCAT-AP-NO_V1-3_20230703.png"><img src="images/ModellDCAT-AP-NO_V1-3_20230703.png" alt="ModellDCAT AP NO V1 3 20230703"></a>
 </div>
 <div class="title">Figur 1. Forenklet modell for ModellDCAT-AP-NO.</div>
 </div>
 <div class="paragraph">
-<p>Last ned modell: <a href="images/ModellDcat_AP_NOv1_2_20220826.png">png</a> | <a href="files/ModellDcat_AP_NOv1_2_20220826.eapx">XMI for EA</a></p>
+<p>Last ned modell: <a href="images/ModellDCAT-AP-NO_V1-3_20230703.png">png</a> | <a href="files/ModellDCAT-AP-NO_V1_3_20230703.eapx">XMI for EA</a></p>
 </div>
 </div>
 </div>
@@ -1234,7 +1318,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://xmlns.com/foaf/spec/#term_Agent">foaf:Agent</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://xmlns.com/foaf/0.1/#term_Agent">foaf:Agent</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
@@ -1261,7 +1345,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/2009/08/skos-reference/skos.html#Concept">skos:Concept</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/skos-reference/#concepts">skos:Concept</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
@@ -1288,7 +1372,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dcat-2/#Class:Resource">dcat:Resource</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dcat/#Class:Resource">dcat:Resource</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
@@ -1297,6 +1381,33 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av spesialiseringene.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="klasse-kontaktopplysning"><a class="anchor" href="#klasse-kontaktopplysning"></a>Kontaktopplysning (vcard:Organization)</h4>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Organization</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å representere en beskrivelse av en kontaktopplysning i henhold til vCard-spesifikasjonen. Her kan man for eksempel oppgi telefonnummer og/eller e-post. Man bør om mulig bruke den organisatoriske enheten eller gruppen i virksomheten som har det funksjonelle ansvaret.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/2014/NOTE-vcard-rdf-20140522/#d4e2121">vcard:Organization</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 </tbody>
 </table>
@@ -1319,7 +1430,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/rdf-concepts/#section-Literals">rdfs:Literal</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/rdf-concepts/#section-Graph-Literal">rdfs:Literal</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
@@ -1346,7 +1457,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.w3.org/TR/2013/WD-vocab-dcat-20130312/#class-catalog">dcat:Catalog</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dcat/#Class:Catalog">dcat:Catalog</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
@@ -1403,7 +1514,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=terms#LicenseDocument">dct:LicenseDocument</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://purl.org/dc/terms/LicenseDocument">dct:LicenseDocument</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
@@ -1415,33 +1526,6 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 </div>
 <div class="sect2">
 <h3 id="Valgfri-klasser-i-katalogdelen"><a class="anchor" href="#Valgfri-klasser-i-katalogdelen"></a>Valgfrie klasser i katalogdelen</h3>
-<div class="sect3">
-<h4 id="klasse-kontaktopplysning"><a class="anchor" href="#klasse-kontaktopplysning"></a>Kontaktopplysning (vcard:Organization)</h4>
-<table class="tableblock frame-all grid-all stripes-even stretch">
-<colgroup>
-<col style="width: 30%;">
-<col style="width: 70%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Organization</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å representere en beskrivelse av en kontaktopplysning i henhold til vCard-spesifikasjonen. Her kan man for eksempel oppgi telefonnummer og/eller e-post. Man bør om mulig bruke den organisatoriske enheten eller gruppen i virksomheten som har det funksjonelle ansvaret.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/2014/NOTE-vcard-rdf-20140522/#d4e2121">vcard:Organization</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
-</tr>
-</tbody>
-</table>
-</div>
 <div class="sect3">
 <h4 id="klasse-lokasjon"><a class="anchor" href="#klasse-lokasjon"></a>Lokasjon (dct:Location)</h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
@@ -1460,7 +1544,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://dublincore.org/documents/dcmi-terms/#terms-Location">dct:Location</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://purl.org/dc/terms/Location">dct:Location</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
@@ -1487,7 +1571,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://dublincore.org/documents/dcmi-terms/#terms-LinguisticSystem">dct:LinguisticSystem</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://purl.org/dc/terms/LinguisticSystem">dct:LinguisticSystem</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
@@ -1541,7 +1625,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://dublincore.org/documents/dcmi-terms/#terms-PeriodOfTime">dct:PeriodOfTime</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://purl.org/dc/terms/PeriodOfTime">dct:PeriodOfTime</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
@@ -1642,6 +1726,37 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Attribute</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Subklasse av</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Property</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="klasse-avhengighet"><a class="anchor" href="#klasse-avhengighet"></a>Avhengighet (modelldcatno:Dependency)</h4>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dependency</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å beskrive avhengighet mellom to modellelementer.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:Dependency</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Subklasse av</strong></p></td>
@@ -2931,6 +3046,41 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect5">
+<h6 id="Modellkatalog-kontaktpunkt"><a class="anchor" href="#Modellkatalog-kontaktpunkt"></a>Modellkatalog: kontaktpunkt (dcat:contactPoint)</h6>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contact point</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dcat:contactPoint</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vcard:Organization</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Referanse til kontaktpunktsobjekt med kontaktopplysninger. Disse kan brukes til å sende spørsmål om modellkatalogen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
 <h6 id="Modellkatalog-tittel"><a class="anchor" href="#Modellkatalog-tittel"></a>Modellkatalog: tittel (dct:title)</h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
@@ -3641,6 +3791,50 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Avhengighet-egenskaper"><a class="anchor" href="#Avhengighet-egenskaper"></a>Avhengighet (modelldcatno:Dependency)</h4>
+<div class="paragraph">
+<p>Klassen <em>Avhengighet</em> er anbefalt.</p>
+</div>
+<div class="sect4">
+<h5 id="Anbefalte-egenskaper-avhengighet"><a class="anchor" href="#Anbefalte-egenskaper-avhengighet"></a>Anbefalte egenskaper for klassen <em>Avhengighet</em></h5>
+<div class="sect5">
+<h6 id="Avhengighet-erAvhengigAv"><a class="anchor" href="#Avhengighet-erAvhengigAv"></a>Avhengighet: er avhengig av (modelldcatno:dependentOn)</h6>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">is dependent on</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:dependentOn</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelldcatno:ModelElement</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til modellelementet det aktuelle modellelementet er avhengig av.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå</strong></p></td>
@@ -7791,6 +7985,22 @@ Kommune <a href="https://data.geonorge.no/administrativeEnheter/kommune/id/" cla
 <h2 id="Endringslogg"><a class="anchor" href="#Endringslogg"></a>Endringslogg</h2>
 <div class="sectionbody">
 <div class="sect2">
+<h3 id="Endringer_fra_v_1.2.x"><a class="anchor" href="#Endringer_fra_v_1.2.x"></a>Endringer fra v.1.2.x til v.1.3.0</h3>
+<div class="paragraph">
+<p>I tillegg til noen redaksjonelle justeringer, er følgende endret:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Det er føyet til en ny obligatorisk <a href="#Modellkatalog-kontaktpunkt">egenskap  kontaktpunkt (dcat:contactPoint) i klassen Modellkatalog (dcat:Catalog)</a>, slik at det er mulig å kunne ta kontakt med den som har publisert en modellkatalog.</p>
+</li>
+<li>
+<p>Det er føyet til en ny anbefalt <a href="#Avhengighet-egenskaper">klasse Avhengighet (modelldcatno:Dependency)</a>, slik at det er mulig å eksplisitt modellere avhengighet mellom to modellelementer.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
 <h3 id="Endringer_fra_v_1.1.x"><a class="anchor" href="#Endringer_fra_v_1.1.x"></a>Endringer fra v.1.1.x til v.1.2.0</h3>
 <div class="paragraph">
 <p>I tillegg til noen redaksjonelle justeringer, er følgende endret:</p>
@@ -8247,7 +8457,7 @@ ga('send', 'pageview');
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2022-08-26 10:02:18 UTC
+Sist oppdatert 2023-07-03 12:48:08 UTC
 </div>
 </div>
 </body>
