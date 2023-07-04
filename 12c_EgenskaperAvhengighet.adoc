@@ -1,0 +1,17 @@
+=== Avhengighet (modelldcatno:Dependency) [[Avhengighet-egenskaper]]
+
+Klassen _Avhengighet_ er anbefalt.
+
+==== Anbefalte egenskaper for klassen _Avhengighet_ [[Anbefalte-egenskaper-avhengighet]]
+
+===== Avhengighet: er avhengig av (modelldcatno:dependentOn) [[Avhengighet-erAvhengigAv]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn|is dependent on
+|URI|modelldcatno:dependentOn
+|Range|modelldcatno:ModelElement
+|Beskrivelse|Brukes til å referere til modellelementet det aktuelle modellelementet er avhengig av.
+|Multiplisitet|0..1
+|Kravnivå|Anbefalt
+|===
