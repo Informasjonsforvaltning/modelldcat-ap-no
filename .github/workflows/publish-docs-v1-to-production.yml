@@ -43,7 +43,7 @@ jobs:
           files: |
             docs/index.html text/html nb
             docs/files/modelldcat-ap-no.pdf application/pdf nb files/modelldcat-ap-no.pdf
-            docs/files/ModellDcat_AP_NOv1_2_20220826.eapx application/octet-stream nb files/ModellDcat_AP_NOv1_2_20220826.eapx
+            docs/files/ModellDCAT-AP-NO_V1_3_20230703.eapx application/octet-stream nb files/ModellDCAT-AP-NO_V1_3_20230703.eapx
             docs/images/digitaliseringsdirektoratet.png image/png nb images/digitaliseringsdirektoratet.png
-            docs/images/ModellDcat_AP_NOv1_2_20220826.png image/png nb images/ModellDcat_AP_NOv1_2_20220826.png
+            docs/images/ModellDCAT-AP-NO_V1-3_20230703.png image/png nb images/ModellDCAT-AP-NO_V1-3_20230703.png
             docs/images/Digdir.png image/png nb images/Digdir.png
