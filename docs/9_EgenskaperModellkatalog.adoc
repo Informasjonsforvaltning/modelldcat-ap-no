@@ -41,6 +41,18 @@ Klassen _Modellkatalog_ er obligatorisk.
 |Kravnivå| Obligatorisk
 |===
 
+=====  Modellkatalog: kontaktpunkt (dcat:contactPoint) [[Modellkatalog-kontaktpunkt]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn | contact point
+|URI|dcat:contactPoint
+|Range|vcard:Organization
+|Beskrivelse|Referanse til kontaktpunktsobjekt med kontaktopplysninger. Disse kan brukes til å sende spørsmål om modellkatalogen.
+|Multiplisitet|1..n
+|Kravnivå|Obligatorisk
+|===
+
 ===== Modellkatalog: tittel (dct:title) [[Modellkatalog-tittel]]
 
 [cols="30s,70d"]

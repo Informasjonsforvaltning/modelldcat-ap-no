@@ -45,9 +45,9 @@
     dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ;
     dct:description "This document specifies the constraints on properties and classes expressed by ModellDCAT-AP-NO in SHACL."@en ;
     dct:title "The constraints of ModellDCAT-AP-NO"@en ;
-    owl:versionInfo "1.2.001";
-    adms:versionNote "Alligned with v.1.2.0 of ModellDCAT-AP-NO"@en ; 
-    dct:modified "2022-08-23"^^xsd:date ;
+    owl:versionInfo "1.3.000";
+    adms:versionNote "Alligned with v.1.3.0 of ModellDCAT-AP-NO"@en ; 
+    dct:modified "2023-07-03"^^xsd:date ;
     .
 
 # -+-+- Some "general" classes, though modified for modelldcatno when necessary -+-+-+-
@@ -624,6 +624,13 @@
         sh:severity sh:Violation ;
         sh:message "En katalog skal én og bare én identifikator (dct:identifier)."@nb ;
     ], [
+        sh:name "kontaktpunkt"@nb , "contact point"@en ;
+        sh:nodeKind vcard:Organization ;
+        sh:minCount 1 ;
+        sh:path dcat:contactPoint ;
+        sh:severity sh:Violation ;
+        sh:message "En katalog skal minst ett kontaktpunkt (dcat:contactPoint)."@nb ;
+    ], [
         sh:name "tittel"@nb , "title"@en ;
         sh:minCount 1 ;
         sh:nodeKind sh:Literal ;
@@ -877,6 +884,22 @@
         sh:message "En kompoisisjon kan inneholde (modelldcatno:contains) maks. ett Modellelement (instans av modelldcatno:ModelElement)."@nb ;
     ] ;
     sh:targetClass modelldcatno:Composition ;
+  .
+
+:Dependency_Shape
+    a sh:NodeShape ;
+    sh:name "Dependency"@en , "Avhengighet"@nb ;
+    sh:subClassOf modelldcatno:Property ;
+    sh:property [
+        sh:name "er avhengig av"@nb , "is dependent on"@en ;
+        sh:path modelldcatno:dependentOn ;
+        sh:class modelldcatno:ModelElement ;
+        sh:maxCount 1;
+        sh:subClassOf modelldcatno:hasType ;
+        sh:severity sh:Violation ;
+        sh:message "En avhengighet kan være avhengig av (modelldcatno:dependentOn) maks. ett Modellelement (instans av modelldcatno:ModelElement)."@nb ;
+    ] ;
+    sh:targetClass modelldcatno:Dependency ;
   .
 
 :Document_Shape

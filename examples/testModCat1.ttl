@@ -15,6 +15,7 @@
   a dcat:Catalog ;
   ###### mandatory:
     dct:identifier "https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/testModCat1.ttl"^^xsd:anyURI ; # identifikator
+    dcat:contactPoint [ a vcard:Organization; vcard:hasEmail <mailto:informasjonsforvaltning@digdir.no>; ] ; # kontaktpunkt
     dct:description "Et eksempel på en modellkatalog"@nb ,
           "An example of a catalog of information models"@en ; # beskrivelse
     modelldcatno:model <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/testMod1.ttl> ; # modell
