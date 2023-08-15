@@ -1242,6 +1242,13 @@ modelldcatno:DataType rdf:type owl:Class ;
                                  "Datatype"@nb .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#Dependency
+modelldcatno:Dependency rdf:type owl:Class ;
+                        rdfs:subClassOf modelldcatno:Property ;
+                        rdfs:label "Avhengighet"@nb ,
+                                   "Dependency"@en .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#InformationModel
 modelldcatno:InformationModel rdf:type owl:Class ;
                               rdfs:subClassOf dct:Standard ,
