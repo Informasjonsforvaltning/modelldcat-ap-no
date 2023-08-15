@@ -349,6 +349,15 @@ modelldcatno:containsObjectType rdf:type owl:ObjectProperty ;
                                            "inneholder objekttype"@nb .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#dependentOn
+modelldcatno:dependentOn rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf modelldcatno:hasType ;
+                         rdfs:domain modelldcatno:Dependency ;
+                         rdfs:range modelldcatno:ModelElement ;
+                         rdfs:label "er avhengig av"@nb ,
+                                    "is dependent on"@en .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#formsSymmetryWith
 modelldcatno:formsSymmetryWith rdf:type owl:ObjectProperty ,
                                         owl:SymmetricProperty ;
