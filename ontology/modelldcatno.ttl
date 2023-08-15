@@ -941,6 +941,11 @@ dcat:Catalog rdf:type owl:Class ;
                                owl:onClass foaf:Agent
                              ] ,
                              [ rdf:type owl:Restriction ;
+                               owl:onProperty dcat:contactPoint ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass vcard:Organization
+                             ] ,
+                             [ rdf:type owl:Restriction ;
                                owl:onProperty dct:issued ;
                                owl:someValuesFrom xsd:dateTime
                              ] ,
