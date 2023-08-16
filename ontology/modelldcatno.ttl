@@ -351,7 +351,6 @@ modelldcatno:containsObjectType rdf:type owl:ObjectProperty ;
 
 ###  https://data.norge.no/vocabulary/modelldcatno#dependentOn
 modelldcatno:dependentOn rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf modelldcatno:hasType ;
                          rdfs:domain modelldcatno:Dependency ;
                          rdfs:range modelldcatno:ModelElement ;
                          rdfs:label "er avhengig av"@nb ,
