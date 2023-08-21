@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="nb">
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
-	<title>ModellDCAT-AP-NO</title>
-	<meta name="generator" content="LibreOffice 7.3.0.3 (Windows)"/>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title>Ontologi for ModellDCAT-AP-NO</title>
+	<meta name="generator" content="LibreOffice 7.5.3.2 (Windows)"/>
 	<meta name="created" content="00:00:00"/>
 	<meta name="changed" content="00:00:00"/>
 	<style type="text/css">
@@ -13,6 +13,8 @@
 		pre.western { font-family: "Liberation Mono", monospace; font-size: 10pt }
 		pre.cjk { font-family: "NSimSun", monospace; font-size: 10pt }
 		pre.ctl { font-family: "Liberation Mono", monospace; font-size: 10pt }
+		a:link { color: #000080; text-decoration: underline }
+		a:visited { color: #800000; text-decoration: underline }
 	</style>
 </head>
 <body lang="nb-NO" link="#000080" vlink="#800000" dir="ltr"><pre class="western">@prefix : &lt;https://data.norge.no/vocabulary/modelldcatno/&gt; .
@@ -164,7 +166,7 @@ dct:language rdf:type owl:ObjectProperty ;
                          ] ;
              rdfs:range dct:LinguisticSystem ;
              rdfs:label &quot;language&quot;@en ,
-                        &quot;spr&Atilde;&yen;k&quot;@nb .
+                        &quot;sprÃ¥k&quot;@nb .
 
 
 ###  http://purl.org/dc/terms/license
@@ -195,7 +197,7 @@ dct:replaces rdf:type owl:ObjectProperty ;
 dct:spatial rdf:type owl:ObjectProperty ;
             rdfs:domain dcat:Resource ;
             rdfs:range dct:Location ;
-            rdfs:label &quot;dekningsomr&Atilde;&yen;de&quot;@nb ,
+            rdfs:label &quot;dekningsomrÃ¥de&quot;@nb ,
                        &quot;spatial coverage&quot;@en .
 
 
@@ -321,7 +323,7 @@ modelldcatno:belongsToModule rdf:type owl:ObjectProperty ,
                                          ] ;
                              rdfs:range modelldcatno:Module ;
                              rdfs:label &quot;belongs to module&quot;@en ,
-                                        &quot;konseptet tilh&Atilde;&cedil;rer modul&quot;@nb .
+                                        &quot;konseptet tilhÃ¸rer modul&quot;@nb .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#constrains
@@ -366,13 +368,21 @@ modelldcatno:containsObjectType rdf:type owl:ObjectProperty ;
                                            &quot;inneholder objekttype&quot;@nb .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#dependentOn
+modelldcatno:dependentOn rdf:type owl:ObjectProperty ;
+                         rdfs:domain modelldcatno:Dependency ;
+                         rdfs:range modelldcatno:ModelElement ;
+                         rdfs:label &quot;er avhengig av&quot;@nb ,
+                                    &quot;is dependent on&quot;@en .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#formsSymmetryWith
 modelldcatno:formsSymmetryWith rdf:type owl:ObjectProperty ,
                                         owl:SymmetricProperty ;
                                rdfs:domain modelldcatno:Property ;
                                rdfs:range modelldcatno:Property ;
                                rdfs:label &quot;forms symmetry with&quot;@en ,
-                                          &quot;utgj&Atilde;&cedil;r symetrisk relasjon med&quot;@nb .
+                                          &quot;utgjÃ¸r symetrisk relasjon med&quot;@nb .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#hasDataType
@@ -445,7 +455,7 @@ modelldcatno:hasSome rdf:type owl:ObjectProperty ;
                                                 modelldcatno:Property
                                               )
                                 ] ;
-                     rdfs:comment &quot;Brukes for &Atilde;&yen; betegne at en valgmulighet ikke er ekskusiv, dvs. at man kan velge mer enn en.&quot;@nb ;
+                     rdfs:comment &quot;Brukes for Ã¥ betegne at en valgmulighet ikke er ekskusiv, dvs. at man kan velge mer enn en.&quot;@nb ;
                      rdfs:label &quot;has some&quot;@en ,
                                 &quot;kan ha&quot;@nb .
 
@@ -460,7 +470,7 @@ modelldcatno:hasSupplier rdf:type owl:ObjectProperty ;
                                                     modelldcatno:Property
                                                   )
                                     ] ;
-                         rdfs:label &quot;har leverand&Atilde;&cedil;r&quot;@nb ,
+                         rdfs:label &quot;har leverandÃ¸r&quot;@nb ,
                                     &quot;has supplier&quot;@en .
 
 
@@ -679,7 +689,7 @@ xsd:pattern rdf:type owl:DatatypeProperty ,
                      owl:FunctionalProperty ;
             rdfs:domain modelldcatno:SimpleType ;
             rdfs:range xsd:string ;
-            rdfs:label &quot;m&Atilde;&cedil;nster&quot;@nb ,
+            rdfs:label &quot;mÃ¸nster&quot;@nb ,
                        &quot;pattern&quot;@en .
 
 
@@ -703,7 +713,7 @@ dcat:bbox rdf:type owl:DatatypeProperty ;
           rdfs:domain dct:Location ;
           rdfs:range rdfs:Literal ;
           rdfs:label &quot;bounding box&quot;@en ,
-                     &quot;geografisk omr&Atilde;&yen;de&quot;@nb .
+                     &quot;geografisk omrÃ¥de&quot;@nb .
 
 
 ###  http://www.w3.org/ns/dcat#centroid
@@ -835,7 +845,7 @@ modelldcatno:sequenceNumber rdf:type owl:DatatypeProperty ;
                                                       )
                                         ] ;
                             rdfs:range xsd:nonNegativeInteger ;
-                            rdfs:comment &quot;Der man har en modell der elementenes orden er vesentlig, f. eks. slik det kan v&Atilde;&brvbar;re i XML eller en kodeliste.&quot;@nb ;
+                            rdfs:comment &quot;Der man har en modell der elementenes orden er vesentlig, f. eks. slik det kan vÃ¦re i XML eller en kodeliste.&quot;@nb ;
                             rdfs:label &quot;Sekvensnummer&quot;@nb ,
                                        &quot;sequence number&quot;@en .
 
@@ -867,7 +877,7 @@ dct:LicenseDocument rdf:type owl:Class ;
 ###  http://purl.org/dc/terms/LinguisticSystem
 dct:LinguisticSystem rdf:type owl:Class ;
                      rdfs:label &quot;Linguistic System&quot;@en ,
-                                &quot;Spr&Atilde;&yen;ksystem&quot;@nb .
+                                &quot;SprÃ¥ksystem&quot;@nb .
 
 
 ###  http://purl.org/dc/terms/Location
@@ -956,6 +966,11 @@ dcat:Catalog rdf:type owl:Class ;
                                owl:onProperty dct:publisher ;
                                owl:qualifiedCardinality &quot;1&quot;^^xsd:nonNegativeInteger ;
                                owl:onClass foaf:Agent
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dcat:contactPoint ;
+                               owl:qualifiedCardinality &quot;1&quot;^^xsd:nonNegativeInteger ;
+                               owl:onClass vcard:Organization
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty dct:issued ;
@@ -1115,7 +1130,7 @@ dcat:Resource rdf:type owl:Class ;
 ###  http://xmlns.com/foaf/0.1/Agent
 foaf:Agent rdf:type owl:Class ;
            rdfs:label &quot;Agent&quot;@en ,
-                      &quot;Akt&Atilde;&cedil;r&quot;@nb .
+                      &quot;AktÃ¸r&quot;@nb .
 
 
 ###  http://xmlns.com/foaf/0.1/Document
@@ -1257,6 +1272,13 @@ modelldcatno:DataType rdf:type owl:Class ;
                       rdfs:subClassOf modelldcatno:ModelElement ;
                       rdfs:label &quot;Data type&quot;@en ,
                                  &quot;Datatype&quot;@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#Dependency
+modelldcatno:Dependency rdf:type owl:Class ;
+                        rdfs:subClassOf modelldcatno:Property ;
+                        rdfs:label &quot;Avhengighet&quot;@nb ,
+                                   &quot;Dependency&quot;@en .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#InformationModel
