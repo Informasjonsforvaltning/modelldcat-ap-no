@@ -349,6 +349,14 @@ modelldcatno:containsObjectType rdf:type owl:ObjectProperty ;
                                            "inneholder objekttype"@nb .
 
 
+###  https://data.norge.no/vocabulary/modelldcatno#dependentOn
+modelldcatno:dependentOn rdf:type owl:ObjectProperty ;
+                         rdfs:domain modelldcatno:Dependency ;
+                         rdfs:range modelldcatno:ModelElement ;
+                         rdfs:label "er avhengig av"@nb ,
+                                    "is dependent on"@en .
+
+
 ###  https://data.norge.no/vocabulary/modelldcatno#formsSymmetryWith
 modelldcatno:formsSymmetryWith rdf:type owl:ObjectProperty ,
                                         owl:SymmetricProperty ;
@@ -941,6 +949,11 @@ dcat:Catalog rdf:type owl:Class ;
                                owl:onClass foaf:Agent
                              ] ,
                              [ rdf:type owl:Restriction ;
+                               owl:onProperty dcat:contactPoint ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass vcard:Organization
+                             ] ,
+                             [ rdf:type owl:Restriction ;
                                owl:onProperty dct:issued ;
                                owl:someValuesFrom xsd:dateTime
                              ] ,
@@ -1240,6 +1253,13 @@ modelldcatno:DataType rdf:type owl:Class ;
                       rdfs:subClassOf modelldcatno:ModelElement ;
                       rdfs:label "Data type"@en ,
                                  "Datatype"@nb .
+
+
+###  https://data.norge.no/vocabulary/modelldcatno#Dependency
+modelldcatno:Dependency rdf:type owl:Class ;
+                        rdfs:subClassOf modelldcatno:Property ;
+                        rdfs:label "Avhengighet"@nb ,
+                                   "Dependency"@en .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#InformationModel
