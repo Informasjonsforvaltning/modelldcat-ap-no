@@ -436,11 +436,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- this docinfo contains several modifications to the default asciidoc-CSS -->
 
-<!-- 1) Generate a nice TOC, with modification -->
+<!-- 1) Generate a collapsible TOC -->
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js"></script>
-<!-- We do not need the tocify CSS because the asciidoc CSS already provides most of what we neeed -->
+<!-- We do not need the tocify CSS because the asciidoc CSS already provides most of what we need -->
 
 <style>
 .tocify-header {
@@ -481,6 +481,33 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
             ignoreSelector: ".discrete"
         });
 
+        // Make TOC items focusable
+        $("#generated-toc").find("a").attr("tabindex", "0");
+        // Make TOC items focusable
+        $("#generated-toc").find("a").attr("tabindex", "0");
+        // Collapse TOC initially, showing only level 1 headings
+        $("#generated-toc").find(".tocify-subheader").hide();
+        $("#generated-toc").find(".tocify-header").addClass("collapsed");
+        // Toggle collapse on click
+        $("#generated-toc").on("click", ".tocify-header", function() {
+          $(this).nextUntil(".tocify-header").toggle();
+          $(this).toggleClass("collapsed");
+        });
+
+/*
+        // Make TOC items focusable
+        toc.find("a").attr("tabindex", "0");
+
+        // Collapse TOC initially, showing only level 1 headings
+        toc.find(".tocify-subheader").hide();
+        toc.find(".tocify-header").addClass("collapsed");
+
+        // Toggle collapse on click
+        toc.on("click", ".tocify-header", function() {
+          $(this).nextUntil(".tocify-header").toggle();
+          $(this).toggleClass("collapsed");
+        });
+*/
         // Switch between static asciidoc toc and dynamic tocify toc based on browser size
         // This is set to match the media selectors in the asciidoc CSS
         // Without this, we keep the dynamic toc even if it is moved from the side to preamble
@@ -501,61 +528,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
         $(window).resize(handleTocOnResize);
         handleTocOnResize();
     });
-
-    /* the following is suggested by CoPilot */
-    $(document).ready(function() {
-    var toc = $("#generated-toc").tocify({
-      context: ".content",
-      selectors: "h1, h2, h3, h4, h5, h6",
-      showAndHide: true,
-      extendPage: false,
-      scrollTo: 0,
-      highlightDefault: true,
-      theme: "bootstrap",
-      smoothScroll: true,
-      scrollHistory: true,
-      hashGenerator: "compact"
-    }).attr("role", "navigation")
-      .attr("aria-label", "Table of Contents");
-
-    // Make TOC items focusable
-    toc.find("a").attr("tabindex", "0");
-
-    // Keyboard navigation
-    toc.on("keydown", "a", function(e) {
-      switch (e.key) {
-        case "ArrowDown":
-          $(this).next("a").focus();
-          break;
-        case "ArrowUp":
-          $(this).prev("a").focus();
-          break;
-        case "Enter":
-        case " ":
-          $(this).click();
-          break;
-      }
-    });
-
-    // Collapse TOC initially, showing only level 1 headings
-    toc.find(".tocify-subheader").hide();
-    toc.find(".tocify-header").addClass("collapsed");
-
-    // Toggle collapse on click
-    toc.on("click", ".tocify-header", function() {
-      $(this).nextUntil(".tocify-header").toggle();
-      $(this).toggleClass("collapsed");
-    });
-  });
 </script>
 
 
-<!-- 2) To make collapsible blocks outlined when focused, based on DeepSeek suggestion -->
+<!-- 2) To make collapsible blocks outlined when focused -->
 
 <style>
     /* Add outline to the summary element when focused */
     details summary:focus {
         outline: thin dotted; /* Adjust thickness and color as needed */
+        outline-offset: -2px; /* Adjust the offset to fit the text width */
+        display: inline-block; /* Ensure the element is inline-block */
+        width: auto /* Ensure the width is auto to fit the text */
     }
 </style>
 
@@ -578,89 +562,89 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Innhold</div>
 <ul class="sectlevel1">
-<li><a href="#formal">Formål</a></li>
-<li><a href="#omfang">Omfang og avgrensing</a></li>
-<li><a href="#forvaltningsregime">Forvaltningsregime</a></li>
-<li><a href="#om-kravene">Om kravene i denne spesifikasjonen</a></li>
-<li><a href="#URIer-som-er-i-bruk">URIer som er i bruk</a></li>
-<li><a href="#Forenklet-modell">Forenklet modell for ModellDCAT-AP-NO</a></li>
-<li><a href="#Oversikt-over-klasser">Klasser</a>
+<li><a href="#formal">1. Formål</a></li>
+<li><a href="#omfang">2. Omfang og avgrensing</a></li>
+<li><a href="#forvaltningsregime">3. Forvaltningsregime</a></li>
+<li><a href="#om-kravene">4. Om kravene i denne spesifikasjonen</a></li>
+<li><a href="#URIer-som-er-i-bruk">5. URIer som er i bruk</a></li>
+<li><a href="#Forenklet-modell">6. Forenklet modell for ModellDCAT-AP-NO</a></li>
+<li><a href="#Oversikt-over-klasser">7. Klasser</a>
 <ul class="sectlevel2">
-<li><a href="#Obligatoriske-klasser-i-katalogdelen">Obligatoriske klasser i katalogdelen</a>
+<li><a href="#Obligatoriske-klasser-i-katalogdelen">7.1. Obligatoriske klasser i katalogdelen</a>
 <ul class="sectlevel3">
-<li><a href="#klasse-aktor">Aktør (foaf:Agent)</a></li>
-<li><a href="#klasse-begrep-1">Begrep (skos:Concept)</a></li>
-<li><a href="#klasse-katalogisert-ressurs">Katalogisert ressurs (dcat:Resource)</a></li>
-<li><a href="#klasse-kontaktopplysning">Kontaktopplysning (vcard:Organization)</a></li>
-<li><a href="#klasse-literal">Literal (rdfs:Literal)</a></li>
-<li><a href="#klasse-modellkatalog">Modellkatalog (dcat:Catalog)</a></li>
-<li><a href="#klasse-tematisk-skjema">Tematisk skjema (skos:ConceptScheme)</a></li>
+<li><a href="#klasse-aktor">7.1.1. Aktør (foaf:Agent)</a></li>
+<li><a href="#klasse-begrep-1">7.1.2. Begrep (skos:Concept)</a></li>
+<li><a href="#klasse-katalogisert-ressurs">7.1.3. Katalogisert ressurs (dcat:Resource)</a></li>
+<li><a href="#klasse-kontaktopplysning">7.1.4. Kontaktopplysning (vcard:Organization)</a></li>
+<li><a href="#klasse-literal">7.1.5. Literal (rdfs:Literal)</a></li>
+<li><a href="#klasse-modellkatalog">7.1.6. Modellkatalog (dcat:Catalog)</a></li>
+<li><a href="#klasse-tematisk-skjema">7.1.7. Tematisk skjema (skos:ConceptScheme)</a></li>
 </ul>
 </li>
-<li><a href="#Anbefalte-klasser-i-katalogdelen">Anbefalte klasser i katalogdelen</a>
+<li><a href="#Anbefalte-klasser-i-katalogdelen">7.2. Anbefalte klasser i katalogdelen</a>
 <ul class="sectlevel3">
-<li><a href="#klasse-lisensdokument">Lisensdokument (dct:LicenseDocument)</a></li>
+<li><a href="#klasse-lisensdokument">7.2.1. Lisensdokument (dct:LicenseDocument)</a></li>
 </ul>
 </li>
-<li><a href="#Valgfri-klasser-i-katalogdelen">Valgfrie klasser i katalogdelen</a>
+<li><a href="#Valgfri-klasser-i-katalogdelen">7.3. Valgfrie klasser i katalogdelen</a>
 <ul class="sectlevel3">
-<li><a href="#klasse-lokasjon">Lokasjon (dct:Location)</a></li>
-<li><a href="#klasse-spraksystem">Språksystem (dct:LinguisticSystem)</a></li>
-<li><a href="#klasse-tema">Tema (skos:Concept)</a></li>
-<li><a href="#klasse-tidsrom">Tidsrom (dct:PeriodOfTime)</a></li>
+<li><a href="#klasse-lokasjon">7.3.1. Lokasjon (dct:Location)</a></li>
+<li><a href="#klasse-spraksystem">7.3.2. Språksystem (dct:LinguisticSystem)</a></li>
+<li><a href="#klasse-tema">7.3.3. Tema (skos:Concept)</a></li>
+<li><a href="#klasse-tidsrom">7.3.4. Tidsrom (dct:PeriodOfTime)</a></li>
 </ul>
 </li>
-<li><a href="#Obligatoriske-klasser-i-modelldelen">Obligatoriske klasser i modelldelen</a>
+<li><a href="#Obligatoriske-klasser-i-modelldelen">7.4. Obligatoriske klasser i modelldelen</a>
 <ul class="sectlevel3">
-<li><a href="#klasse-informasjonsmodell">Informasjonsmodell (modelldcatno:InformationModel)</a></li>
+<li><a href="#klasse-informasjonsmodell">7.4.1. Informasjonsmodell (modelldcatno:InformationModel)</a></li>
 </ul>
 </li>
-<li><a href="#Anbefalte-klasser-i-modelldelen">Anbefalte klasser i modelldelen</a>
+<li><a href="#Anbefalte-klasser-i-modelldelen">7.5. Anbefalte klasser i modelldelen</a>
 <ul class="sectlevel3">
-<li><a href="#klasse-assosiasjon">Assosiasjon (modelldcatno:Association)</a></li>
-<li><a href="#klasse-attributt">Attributt (modelldcatno:Attribute)</a></li>
-<li><a href="#klasse-avhengighet">Avhengighet (modelldcatno:Dependency)</a></li>
-<li><a href="#klasse-begrensningsregel">Begrensningsregel  (modelldcatno:ConstraintRule)</a></li>
-<li><a href="#klasse-datatype">Datatype (modelldcatno:DataType)</a></li>
-<li><a href="#klasse-egenskap">Egenskap (modelldcatno:Property)</a></li>
-<li><a href="#klasse-enkeltype">Enkeltype (modelldcatno:SimpleType)</a></li>
-<li><a href="#klasse-eller">Eller (modelldcatno:Or)</a></li>
-<li><a href="#klasse-enten-eller">Enten eller (modelldcatno:Xor)</a></li>
-<li><a href="#klasse-kodeelement">Kodeelement (modelldcatno:CodeElement)</a></li>
-<li><a href="#klasse-kodeliste">Kodeliste (modelldcatno:CodeList)</a></li>
-<li><a href="#klasse-modellelement">Modellelement (modelldcatno:ModelElement)</a></li>
-<li><a href="#klasse-objekttype">Objekttype (modelldcatno:ObjectType)</a></li>
-<li><a href="#klasse-rolle">Rolle (modelldcatno:Role)</a></li>
-<li><a href="#klasse-rotobjekttype">Rotobjekttype (modelldcatno:RootObjectType)</a></li>
-<li><a href="#klasse-spesialisering">Spesialisering (modelldcatno:Specialization)</a></li>
+<li><a href="#klasse-assosiasjon">7.5.1. Assosiasjon (modelldcatno:Association)</a></li>
+<li><a href="#klasse-attributt">7.5.2. Attributt (modelldcatno:Attribute)</a></li>
+<li><a href="#klasse-avhengighet">7.5.3. Avhengighet (modelldcatno:Dependency)</a></li>
+<li><a href="#klasse-begrensningsregel">7.5.4. Begrensningsregel  (modelldcatno:ConstraintRule)</a></li>
+<li><a href="#klasse-datatype">7.5.5. Datatype (modelldcatno:DataType)</a></li>
+<li><a href="#klasse-egenskap">7.5.6. Egenskap (modelldcatno:Property)</a></li>
+<li><a href="#klasse-enkeltype">7.5.7. Enkeltype (modelldcatno:SimpleType)</a></li>
+<li><a href="#klasse-eller">7.5.8. Eller (modelldcatno:Or)</a></li>
+<li><a href="#klasse-enten-eller">7.5.9. Enten eller (modelldcatno:Xor)</a></li>
+<li><a href="#klasse-kodeelement">7.5.10. Kodeelement (modelldcatno:CodeElement)</a></li>
+<li><a href="#klasse-kodeliste">7.5.11. Kodeliste (modelldcatno:CodeList)</a></li>
+<li><a href="#klasse-modellelement">7.5.12. Modellelement (modelldcatno:ModelElement)</a></li>
+<li><a href="#klasse-objekttype">7.5.13. Objekttype (modelldcatno:ObjectType)</a></li>
+<li><a href="#klasse-rolle">7.5.14. Rolle (modelldcatno:Role)</a></li>
+<li><a href="#klasse-rotobjekttype">7.5.15. Rotobjekttype (modelldcatno:RootObjectType)</a></li>
+<li><a href="#klasse-spesialisering">7.5.16. Spesialisering (modelldcatno:Specialization)</a></li>
 </ul>
 </li>
-<li><a href="#Valgfrie-klasser-i-modelldelen">Valgfrie klasser i modelldelen</a>
+<li><a href="#Valgfrie-klasser-i-modelldelen">7.6. Valgfrie klasser i modelldelen</a>
 <ul class="sectlevel3">
-<li><a href="#klasse-Abstraksjon">Abstraksjon (modelldcatno:Abstraction)</a></li>
-<li><a href="#klasse-alle">Alle (modelldcatno:AllOf)</a></li>
-<li><a href="#klasse-begrep-2">Begrep (skos:Concept)</a></li>
-<li><a href="#klasse-dokument">Dokument (foaf:Document)</a></li>
-<li><a href="#klasse-ikke">Ikke (modelldcatno:Not)</a></li>
-<li><a href="#klasse-komposisjon">Komposisjon (modelldcatno:Composition)</a></li>
-<li><a href="#klasse-medietype">Medietype (dct:MediaType)</a></li>
-<li><a href="#klasse-module">Modul (modelldcatno:Module)</a></li>
-<li><a href="#klasse-noen-av">Noen av (modelldcatno:AnyOf)</a></li>
-<li><a href="#klasse-note">Note (modelldcatno:Note)</a></li>
-<li><a href="#klasse-og">Og (modelldcatno:And)</a></li>
-<li><a href="#klasse-realisering">Realisering (modelldcatno:Realization)</a></li>
-<li><a href="#klasse-samling">Samling (modelldcatno:Collection)</a></li>
-<li><a href="#klasse-standard">Standard (dct:Standard)</a></li>
-<li><a href="#klasse-valg">Valg (modelldcatno:Choice)</a></li>
+<li><a href="#klasse-Abstraksjon">7.6.1. Abstraksjon (modelldcatno:Abstraction)</a></li>
+<li><a href="#klasse-alle">7.6.2. Alle (modelldcatno:AllOf)</a></li>
+<li><a href="#klasse-begrep-2">7.6.3. Begrep (skos:Concept)</a></li>
+<li><a href="#klasse-dokument">7.6.4. Dokument (foaf:Document)</a></li>
+<li><a href="#klasse-ikke">7.6.5. Ikke (modelldcatno:Not)</a></li>
+<li><a href="#klasse-komposisjon">7.6.6. Komposisjon (modelldcatno:Composition)</a></li>
+<li><a href="#klasse-medietype">7.6.7. Medietype (dct:MediaType)</a></li>
+<li><a href="#klasse-module">7.6.8. Modul (modelldcatno:Module)</a></li>
+<li><a href="#klasse-noen-av">7.6.9. Noen av (modelldcatno:AnyOf)</a></li>
+<li><a href="#klasse-note">7.6.10. Note (modelldcatno:Note)</a></li>
+<li><a href="#klasse-og">7.6.11. Og (modelldcatno:And)</a></li>
+<li><a href="#klasse-realisering">7.6.12. Realisering (modelldcatno:Realization)</a></li>
+<li><a href="#klasse-samling">7.6.13. Samling (modelldcatno:Collection)</a></li>
+<li><a href="#klasse-standard">7.6.14. Standard (dct:Standard)</a></li>
+<li><a href="#klasse-valg">7.6.15. Valg (modelldcatno:Choice)</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#Egenskaper-per-klasse">Egenskaper per klasse</a>
+<li><a href="#Egenskaper-per-klasse">8. Egenskaper per klasse</a>
 <ul class="sectlevel2">
-<li><a href="#Egenskaper-katalogdel">Katalogdel</a>
+<li><a href="#Egenskaper-katalogdel">8.1. Katalogdel</a>
 <ul class="sectlevel3">
-<li><a href="#Aktør-egenskaper">Aktør (foaf:Agent)</a>
+<li><a href="#Aktør-egenskaper">8.1.1. Aktør (foaf:Agent)</a>
 <ul class="sectlevel4">
 <li><a href="#Obligatoriske-egenskaper-for-Aktør">Obligatoriske egenskaper for klassen <em>Aktør</em></a>
 <ul class="sectlevel5">
@@ -675,7 +659,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#Lisensdokument-egenskaper">Lisensdokument (dct:LicenseDocument)</a>
+<li><a href="#Lisensdokument-egenskaper">8.1.2. Lisensdokument (dct:LicenseDocument)</a>
 <ul class="sectlevel4">
 <li><a href="#Anbefalte-egenskaper-Lisensdokument">Anbefalte egenskaper for klassen <em>Lisensdokument</em></a>
 <ul class="sectlevel5">
@@ -684,7 +668,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#Lokasjon-egenskaper">Lokasjon (dct:Location)</a>
+<li><a href="#Lokasjon-egenskaper">8.1.3. Lokasjon (dct:Location)</a>
 <ul class="sectlevel4">
 <li><a href="#Anbefalte-egenskaper-Lokasjon">Anbefalte egenskaper for klassen <em>Lokasjon</em></a>
 <ul class="sectlevel5">
@@ -699,7 +683,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#Modellkatalog-egenskaper">Modellkatalog (dcat:Catalog)</a>
+<li><a href="#Modellkatalog-egenskaper">8.1.4. Modellkatalog (dcat:Catalog)</a>
 <ul class="sectlevel4">
 <li><a href="#Obligatoriske-egenskaper-Modellkatalog">Obligatoriske egenskaper for klassen <em>Modellkatalog</em></a>
 <ul class="sectlevel5">
@@ -730,7 +714,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#TematiskSkjema-egenskaper">Tematisk skjema (skos:ConceptScheme)</a>
+<li><a href="#TematiskSkjema-egenskaper">8.1.5. Tematisk skjema (skos:ConceptScheme)</a>
 <ul class="sectlevel4">
 <li><a href="#Obligatoriske-egenskaper-TematiskSkjema">Obligatoriske egenskaper for klassen <em>Tematisk skjema</em></a>
 <ul class="sectlevel5">
@@ -741,9 +725,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#Modeldel">Modelldel</a>
+<li><a href="#Modeldel">8.2. Modelldel</a>
 <ul class="sectlevel3">
-<li><a href="#Abstraksjon-egenskaper">Abstraksjon (modelldcatno:Abstraction)</a>
+<li><a href="#Abstraksjon-egenskaper">8.2.1. Abstraksjon (modelldcatno:Abstraction)</a>
 <ul class="sectlevel4">
 <li><a href="#Anbefalte-egenskaper-abstraksjon">Anbefalte egenskaper for klassen <em>Abstraksjon</em></a>
 <ul class="sectlevel5">
@@ -752,7 +736,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#Assosiasjon-egenskaper">Assosiasjon (modelldcatno:Association)</a>
+<li><a href="#Assosiasjon-egenskaper">8.2.2. Assosiasjon (modelldcatno:Association)</a>
 <ul class="sectlevel4">
 <li><a href="#Anbefalte-egenskaper-for-assosiasjon">Anbefalte egenskaper for klassen <em>Assosiasjon</em></a>
 <ul class="sectlevel5">
@@ -761,7 +745,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#Attributt-egenskaper">Attributt (modelldcatno:Attribute)</a>
+<li><a href="#Attributt-egenskaper">8.2.3. Attributt (modelldcatno:Attribute)</a>
 <ul class="sectlevel4">
 <li><a href="#Anbefalte-egenskaper-attributt">Anbefalte egenskaper for klassen <em>Attributt</em></a>
 <ul class="sectlevel5">
@@ -773,7 +757,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#Avhengighet-egenskaper">Avhengighet (modelldcatno:Dependency)</a>
+<li><a href="#Avhengighet-egenskaper">8.2.4. Avhengighet (modelldcatno:Dependency)</a>
 <ul class="sectlevel4">
 <li><a href="#Anbefalte-egenskaper-avhengighet">Anbefalte egenskaper for klassen <em>Avhengighet</em></a>
 <ul class="sectlevel5">
@@ -782,7 +766,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#Begrensningsregel-egenskaper">Begrensningsregel (modelldcatno:ConstraintRule)</a>
+<li><a href="#Begrensningsregel-egenskaper">8.2.5. Begrensningsregel (modelldcatno:ConstraintRule)</a>
 <ul class="sectlevel4">
 <li><a href="#Obligatoriske-egenskaper-Begrensningsregel">Obligatoriske egenskaper for klassen <em>Begrensningsregel</em></a>
 <ul class="sectlevel5">
@@ -796,7 +780,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#Dokument-egenskaper">Dokument (foaf:Document)</a>
+<li><a href="#Dokument-egenskaper">8.2.6. Dokument (foaf:Document)</a>
 <ul class="sectlevel4">
 <li><a href="#Anbefalte-egenskaper-Dokument">Anbefalte egenskaper for klassen <em>Dokument</em></a>
 <ul class="sectlevel5">
@@ -812,7 +796,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#Egenskap-egenskaper">Egenskap (modelldcatno:Property)</a>
+<li><a href="#Egenskap-egenskaper">8.2.7. Egenskap (modelldcatno:Property)</a>
 <ul class="sectlevel4">
 <li><a href="#Anbefalte-egenskaper-Egenskap">Anbefalte egenskaper for klassen <em>Egenskap</em></a>
 <ul class="sectlevel5">
@@ -836,7 +820,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#Enkeltype-egenskaper">Enkeltype (modelldcatno:SimpleType)</a>
+<li><a href="#Enkeltype-egenskaper">8.2.8. Enkeltype (modelldcatno:SimpleType)</a>
 <ul class="sectlevel4">
 <li><a href="#Anbefalte-egenskaper-Enkelttype">Anbefalte egenskaper for klassen <em>Enkeltype</em></a>
 <ul class="sectlevel5">
@@ -859,7 +843,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#Informasjonsmodell-egenskaper">Informasjonsmodell (modelldcatno:InformationModel)</a>
+<li><a href="#Informasjonsmodell-egenskaper">8.2.9. Informasjonsmodell (modelldcatno:InformationModel)</a>
 <ul class="sectlevel4">
 <li><a href="#Obligatoriske-egenskaper-Informasjonsmodell">Obligatoriske egenskaper for klassen <em>Informasjonsmodell</em></a>
 <ul class="sectlevel5">
@@ -904,7 +888,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#Kodeelement-egenskaper">Kodeelement (modelldcatno:CodeElement)</a>
+<li><a href="#Kodeelement-egenskaper">8.2.10. Kodeelement (modelldcatno:CodeElement)</a>
 <ul class="sectlevel4">
 <li><a href="#Obligatoriske-egenskaper-Kodeelement">Obligatoriske egenskaper for klassen <em>Kodeelement</em></a>
 <ul class="sectlevel5">
@@ -936,7 +920,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#Kodeliste-egenskaper">Kodeliste (modelldcatno:CodeList)</a>
+<li><a href="#Kodeliste-egenskaper">8.2.11. Kodeliste (modelldcatno:CodeList)</a>
 <ul class="sectlevel4">
 <li><a href="#Valgfrie-egenskaper-Kodeliste">Valgfrie egenskaper for klassen <em>Kodeliste</em></a>
 <ul class="sectlevel5">
@@ -945,7 +929,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#Komposisjon-egenskaper">Komposisjon (modelldcatno:Composition)</a>
+<li><a href="#Komposisjon-egenskaper">8.2.12. Komposisjon (modelldcatno:Composition)</a>
 <ul class="sectlevel4">
 <li><a href="#Anbefalte-egenskaper-Komposisjon">Anbefalte egenskaper for klassen <em>Komposisjon</em></a>
 <ul class="sectlevel5">
@@ -954,7 +938,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#Modellelement-egenskaper">Modellelement (modelldcatno:ModelElement)</a>
+<li><a href="#Modellelement-egenskaper">8.2.13. Modellelement (modelldcatno:ModelElement)</a>
 <ul class="sectlevel4">
 <li><a href="#Obligatoriske-egenskaper-Modellelement">Obligatoriske egenskaper for klassen <em>Modellelement</em></a>
 <ul class="sectlevel5">
@@ -976,7 +960,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#Note-egenskaper">Note (modelldcatno:Note)</a>
+<li><a href="#Note-egenskaper">8.2.14. Note (modelldcatno:Note)</a>
 <ul class="sectlevel4">
 <li><a href="#Anbefalte-egenskaper-Note">Anbefalte egenskaper for klassen <em>Note</em></a>
 <ul class="sectlevel5">
@@ -993,7 +977,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#Realisering-egenskaper">Realisering (modelldcatno:Realization)</a>
+<li><a href="#Realisering-egenskaper">8.2.15. Realisering (modelldcatno:Realization)</a>
 <ul class="sectlevel4">
 <li><a href="#Anbefalte-egenskaper-Realisering">Anbefalte egenskaper for klassen <em>Realisering</em></a>
 <ul class="sectlevel5">
@@ -1002,7 +986,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#Rolle-egenskaper">Rolle (modelldcatno:Role)</a>
+<li><a href="#Rolle-egenskaper">8.2.16. Rolle (modelldcatno:Role)</a>
 <ul class="sectlevel4">
 <li><a href="#Anbefalte-egenskaper-Rolle">Anbefalte  egenskaper for klassen <em>Rolle</em></a>
 <ul class="sectlevel5">
@@ -1011,7 +995,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#Samling-egenskaper">Samling (modelldcatno:Collection)</a>
+<li><a href="#Samling-egenskaper">8.2.17. Samling (modelldcatno:Collection)</a>
 <ul class="sectlevel4">
 <li><a href="#Anbefalte-egenskaper-Samling">Anbefalte egenskaper for klassen <em>Samling</em></a>
 <ul class="sectlevel5">
@@ -1020,7 +1004,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#Spesialisering-egenskaper">Spesialisering (modelldcatno:Specialization)</a>
+<li><a href="#Spesialisering-egenskaper">8.2.18. Spesialisering (modelldcatno:Specialization)</a>
 <ul class="sectlevel4">
 <li><a href="#Anbefalte-egenskaper-Spesialisering">Anbefalte egenskaper for klassen <em>Spesialisering</em></a>
 <ul class="sectlevel5">
@@ -1029,7 +1013,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#Standard-egenskaper">Standard (dct:Standard)</a>
+<li><a href="#Standard-egenskaper">8.2.19. Standard (dct:Standard)</a>
 <ul class="sectlevel4">
 <li><a href="#Obligatoriske-egenskaper-Standard">Obligatoriske egenskaper for klassen <em>Standard</em></a>
 <ul class="sectlevel5">
@@ -1048,7 +1032,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#Tidsrom-egenskaper">Tidsrom (dct:PeriodOfTime)</a>
+<li><a href="#Tidsrom-egenskaper">8.2.20. Tidsrom (dct:PeriodOfTime)</a>
 <ul class="sectlevel4">
 <li><a href="#Anbefalte-egenskaper-Tidsrom">Anbefalte egenskaper for klassen <em>Tidsrom</em></a>
 <ul class="sectlevel5">
@@ -1058,7 +1042,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#valg-egenskaper">Valg (modelldcatno:Choice)</a>
+<li><a href="#valg-egenskaper">8.2.21. Valg (modelldcatno:Choice)</a>
 <ul class="sectlevel4">
 <li><a href="#Anbefalte-egenskaper-Valg">Anbefalte egenskaper for klassen <em>Valg</em></a>
 <ul class="sectlevel5">
@@ -1071,30 +1055,31 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#Kontrollerte-vokabularer">Kontrollerte vokabularer</a>
+<li><a href="#Kontrollerte-vokabularer">9. Kontrollerte vokabularer</a>
 <ul class="sectlevel2">
-<li><a href="#Krav-til-kontrollerte-vokabularer">Krav til kontrollerte vokabularer</a></li>
-<li><a href="#Kontrollerte-vobakularer-som-skal-brukes">Kontrollerte vobakularer som skal brukes</a>
+<li><a href="#Krav-til-kontrollerte-vokabularer">9.1. Krav til kontrollerte vokabularer</a></li>
+<li><a href="#Kontrollerte-vobakularer-som-skal-brukes">9.2. Kontrollerte vobakularer som skal brukes</a>
 <ul class="sectlevel3">
-<li><a href="#Skal-brukes-for-format">For egenskapen dct:format</a></li>
-<li><a href="#Skal-brukes-for-language">For egenskapen dct:language</a></li>
-<li><a href="#Skal-brukes-for-license">For egenskapen dct:license</a></li>
-<li><a href="#Skal-brukes-for-spatial">For egenskapen dct:spatial</a></li>
-<li><a href="#Skal-brukes-for-status">For egenskapen adms:status</a></li>
-<li><a href="#Skal-brukes-for-type">For egenskapen dct:type</a></li>
+<li><a href="#Skal-brukes-for-format">9.2.1. For egenskapen dct:format</a></li>
+<li><a href="#Skal-brukes-for-language">9.2.2. For egenskapen dct:language</a></li>
+<li><a href="#Skal-brukes-for-license">9.2.3. For egenskapen dct:license</a></li>
+<li><a href="#Skal-brukes-for-spatial">9.2.4. For egenskapen dct:spatial</a></li>
+<li><a href="#Skal-brukes-for-status">9.2.5. For egenskapen adms:status</a></li>
+<li><a href="#Skal-brukes-for-type">9.2.6. For egenskapen dct:type</a></li>
 </ul>
 </li>
-<li><a href="#Kontrollerte-vobakularer-som-bør-brukes">Kontrollerte vokabularer som bør og kan brukes</a>
+<li><a href="#Kontrollerte-vobakularer-som-bør-brukes">9.3. Kontrollerte vokabularer som bør og kan brukes</a>
 <ul class="sectlevel3">
-<li><a href="#Bør-brukes-for-spatial">For egenskapen dct:spatial</a></li>
-<li><a href="#Bør-brukes-for-theme">For egenskapen dcat:theme</a></li>
-<li><a href="#Bør-brukes-for-themeTaxonomy">For egenskapen dcat:themeTaxonomy</a></li>
+<li><a href="#Bør-brukes-for-spatial">9.3.1. For egenskapen dct:spatial</a></li>
+<li><a href="#Bør-brukes-for-theme">9.3.2. For egenskapen dcat:theme</a></li>
+<li><a href="#Bør-brukes-for-themeTaxonomy">9.3.3. For egenskapen dcat:themeTaxonomy</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#Endringslogg">Endringslogg</a>
+<li><a href="#Endringslogg">Vedlegg - Endringslogg</a>
 <ul class="sectlevel2">
+<li><a href="#Endringer_fra_v_1.3.1">Endringer fra v.1.3.0 til v.1.3.1</a></li>
 <li><a href="#Endringer_fra_v_1.2.x">Endringer fra v.1.2.x til v.1.3.0</a></li>
 <li><a href="#Endringer_fra_v_1.1.x">Endringer fra v.1.1.x til v.1.2.0</a></li>
 <li><a href="#Endringer_fra_v.1.1">Endringer fra v.1.1 til v.1.1.1</a></li>
@@ -1139,9 +1124,9 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 <div class="paragraph">
 <p><strong>Status</strong>: Gjeldende<br>
-<strong>Versjon</strong>: 1.3.0 (se <a href="#Endringslogg">endringsloggen</a>)<br>
+<strong>Versjon</strong>: 1.3.1 (se <a href="#Endringslogg">endringsloggen</a>)<br>
 <strong>Publisert</strong>: 2023-07-03 (v.1.3) 2022-08-26 (v.1.2) 2021-06-28 (v.1.1), 2020-12-18 (v.1.0) <br>
-<strong>Oppdatert</strong>: 2023-07-04 <br>
+<strong>Oppdatert</strong>: 2025-02-17 <br>
 <strong>Gjeldende versjon av spesifikasjon</strong>: <a href="https://data.norge.no/specification/modelldcat-ap-no/" class="bare">https://data.norge.no/specification/modelldcat-ap-no/</a><br>
 <strong>Gjeldende versjon av ontologi</strong>: <a href="https://data.norge.no/vocabulary/modelldcatno" class="bare">https://data.norge.no/vocabulary/modelldcatno</a><br>
 <strong>Redaktørens utkast av spesifikasjon</strong>: <a href="https://informasjonsforvaltning.github.io/modelldcat-ap-no/specification" class="bare">https://informasjonsforvaltning.github.io/modelldcat-ap-no/specification</a><br>
@@ -1155,7 +1140,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect1">
-<h2 id="formal"><a class="link" href="#formal">Formål</a></h2>
+<h2 id="formal"><a class="link" href="#formal">1. Formål</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Offentlige virksomheter forvalter en rekke informasjonsmodeller knyttet til prosesser og data som understøtter deres samfunnsoppdrag. Det er et stort potensial i å effektivisere informasjonsdelingen mellom virksomhetene ved å ha en felles tilnærming til utforming og forvaltning av modellene. Lik tilnærming gjør det også mulig å sammenligne informasjonsmodeller på tvers av virksomheter for å avdekke likheter som grunnlag for samordning og forenkling.</p>
@@ -1172,7 +1157,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect1">
-<h2 id="omfang"><a class="link" href="#omfang">Omfang og avgrensing</a></h2>
+<h2 id="omfang"><a class="link" href="#omfang">2. Omfang og avgrensing</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Spesifikasjonen er anbefalt brukt for å beskrive informasjonsmodeller. Den vil gjelde alle typer informasjonsmodeller <em>som beskrives med tanke på oppføring i en katalog eller «inventarliste» (intern eller ekstern)</em>.<br></p>
@@ -1186,7 +1171,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect1">
-<h2 id="forvaltningsregime"><a class="link" href="#forvaltningsregime">Forvaltningsregime</a></h2>
+<h2 id="forvaltningsregime"><a class="link" href="#forvaltningsregime">3. Forvaltningsregime</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Utarbeidelse av nye versjoner av denne spesifikasjonen initieres av Digitaliseringsdirektoratet. ModellDCAT-AP-NO er en nokså umoden spesifikasjon og vi forventer en del endringer fremover når den blir tatt mer i bruk. Digitaliseringsdirektoratet vil har ansvar for å følge opp innspillene som kommer og tilpasse spesifikasjonen etter behov. Endringer skal som vanlig forankres i relevante organer.  <br></p>
@@ -1197,7 +1182,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect1">
-<h2 id="om-kravene"><a class="link" href="#om-kravene">Om kravene i denne spesifikasjonen</a></h2>
+<h2 id="om-kravene"><a class="link" href="#om-kravene">4. Om kravene i denne spesifikasjonen</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Forklaringen under på ordene «obligatorisk», «anbefalt» og «valgfri», er en fornorsking av tilsvarende forklaring i
@@ -1255,7 +1240,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="URIer-som-er-i-bruk"><a class="link" href="#URIer-som-er-i-bruk">URIer som er i bruk</a></h2>
+<h2 id="URIer-som-er-i-bruk"><a class="link" href="#URIer-som-er-i-bruk">5. URIer som er i bruk</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Navnerom for dette vokabularet skal være <a href="https://data.norge.no/vocabulary/modelldcatno#" class="bare">https://data.norge.no/vocabulary/modelldcatno#</a></p>
@@ -1342,7 +1327,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="Forenklet-modell"><a class="link" href="#Forenklet-modell">Forenklet modell for ModellDCAT-AP-NO</a></h2>
+<h2 id="Forenklet-modell"><a class="link" href="#Forenklet-modell">6. Forenklet modell for ModellDCAT-AP-NO</a></h2>
 <div class="sectionbody">
 <div class="imageblock">
 <div class="content">
@@ -1356,12 +1341,12 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="Oversikt-over-klasser"><a class="link" href="#Oversikt-over-klasser">Klasser</a></h2>
+<h2 id="Oversikt-over-klasser"><a class="link" href="#Oversikt-over-klasser">7. Klasser</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="Obligatoriske-klasser-i-katalogdelen"><a class="link" href="#Obligatoriske-klasser-i-katalogdelen">Obligatoriske klasser i katalogdelen</a></h3>
+<h3 id="Obligatoriske-klasser-i-katalogdelen"><a class="link" href="#Obligatoriske-klasser-i-katalogdelen">7.1. Obligatoriske klasser i katalogdelen</a></h3>
 <div class="sect3">
-<h4 id="klasse-aktor"><a class="link" href="#klasse-aktor">Aktør (foaf:Agent)</a></h4>
+<h4 id="klasse-aktor"><a class="link" href="#klasse-aktor">7.1.1. Aktør (foaf:Agent)</a></h4>
 <div class="paragraph">
 <p>Det anbefales at URI til Aktør (foaf:Agent) er identisk med den URI som Enhetsregisteret (Brønnøysundregistrene) har på enheten/virksomheten dersom den finnes i registeret.</p>
 </div>
@@ -1391,7 +1376,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-begrep-1"><a class="link" href="#klasse-begrep-1">Begrep (skos:Concept)</a></h4>
+<h4 id="klasse-begrep-1"><a class="link" href="#klasse-begrep-1">7.1.2. Begrep (skos:Concept)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1418,7 +1403,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-katalogisert-ressurs"><a class="link" href="#klasse-katalogisert-ressurs">Katalogisert ressurs (dcat:Resource)</a></h4>
+<h4 id="klasse-katalogisert-ressurs"><a class="link" href="#klasse-katalogisert-ressurs">7.1.3. Katalogisert ressurs (dcat:Resource)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1449,7 +1434,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-kontaktopplysning"><a class="link" href="#klasse-kontaktopplysning">Kontaktopplysning (vcard:Organization)</a></h4>
+<h4 id="klasse-kontaktopplysning"><a class="link" href="#klasse-kontaktopplysning">7.1.4. Kontaktopplysning (vcard:Organization)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1476,7 +1461,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-literal"><a class="link" href="#klasse-literal">Literal (rdfs:Literal)</a></h4>
+<h4 id="klasse-literal"><a class="link" href="#klasse-literal">7.1.5. Literal (rdfs:Literal)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1503,7 +1488,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-modellkatalog"><a class="link" href="#klasse-modellkatalog">Modellkatalog (dcat:Catalog)</a></h4>
+<h4 id="klasse-modellkatalog"><a class="link" href="#klasse-modellkatalog">7.1.6. Modellkatalog (dcat:Catalog)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1530,7 +1515,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-tematisk-skjema"><a class="link" href="#klasse-tematisk-skjema">Tematisk skjema (skos:ConceptScheme)</a></h4>
+<h4 id="klasse-tematisk-skjema"><a class="link" href="#klasse-tematisk-skjema">7.1.7. Tematisk skjema (skos:ConceptScheme)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1558,9 +1543,9 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Anbefalte-klasser-i-katalogdelen"><a class="link" href="#Anbefalte-klasser-i-katalogdelen">Anbefalte klasser i katalogdelen</a></h3>
+<h3 id="Anbefalte-klasser-i-katalogdelen"><a class="link" href="#Anbefalte-klasser-i-katalogdelen">7.2. Anbefalte klasser i katalogdelen</a></h3>
 <div class="sect3">
-<h4 id="klasse-lisensdokument"><a class="link" href="#klasse-lisensdokument">Lisensdokument (dct:LicenseDocument)</a></h4>
+<h4 id="klasse-lisensdokument"><a class="link" href="#klasse-lisensdokument">7.2.1. Lisensdokument (dct:LicenseDocument)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1588,9 +1573,9 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Valgfri-klasser-i-katalogdelen"><a class="link" href="#Valgfri-klasser-i-katalogdelen">Valgfrie klasser i katalogdelen</a></h3>
+<h3 id="Valgfri-klasser-i-katalogdelen"><a class="link" href="#Valgfri-klasser-i-katalogdelen">7.3. Valgfrie klasser i katalogdelen</a></h3>
 <div class="sect3">
-<h4 id="klasse-lokasjon"><a class="link" href="#klasse-lokasjon">Lokasjon (dct:Location)</a></h4>
+<h4 id="klasse-lokasjon"><a class="link" href="#klasse-lokasjon">7.3.1. Lokasjon (dct:Location)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1617,7 +1602,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-spraksystem"><a class="link" href="#klasse-spraksystem">Språksystem (dct:LinguisticSystem)</a></h4>
+<h4 id="klasse-spraksystem"><a class="link" href="#klasse-spraksystem">7.3.2. Språksystem (dct:LinguisticSystem)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1644,7 +1629,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-tema"><a class="link" href="#klasse-tema">Tema (skos:Concept)</a></h4>
+<h4 id="klasse-tema"><a class="link" href="#klasse-tema">7.3.3. Tema (skos:Concept)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1671,7 +1656,7 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-tidsrom"><a class="link" href="#klasse-tidsrom">Tidsrom (dct:PeriodOfTime)</a></h4>
+<h4 id="klasse-tidsrom"><a class="link" href="#klasse-tidsrom">7.3.4. Tidsrom (dct:PeriodOfTime)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1699,9 +1684,9 @@ som er en utvidelse av DCAT-AP fra EU.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Obligatoriske-klasser-i-modelldelen"><a class="link" href="#Obligatoriske-klasser-i-modelldelen">Obligatoriske klasser i modelldelen</a></h3>
+<h3 id="Obligatoriske-klasser-i-modelldelen"><a class="link" href="#Obligatoriske-klasser-i-modelldelen">7.4. Obligatoriske klasser i modelldelen</a></h3>
 <div class="sect3">
-<h4 id="klasse-informasjonsmodell"><a class="link" href="#klasse-informasjonsmodell">Informasjonsmodell (modelldcatno:InformationModel)</a></h4>
+<h4 id="klasse-informasjonsmodell"><a class="link" href="#klasse-informasjonsmodell">7.4.1. Informasjonsmodell (modelldcatno:InformationModel)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1738,9 +1723,9 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Anbefalte-klasser-i-modelldelen"><a class="link" href="#Anbefalte-klasser-i-modelldelen">Anbefalte klasser i modelldelen</a></h3>
+<h3 id="Anbefalte-klasser-i-modelldelen"><a class="link" href="#Anbefalte-klasser-i-modelldelen">7.5. Anbefalte klasser i modelldelen</a></h3>
 <div class="sect3">
-<h4 id="klasse-assosiasjon"><a class="link" href="#klasse-assosiasjon">Assosiasjon (modelldcatno:Association)</a></h4>
+<h4 id="klasse-assosiasjon"><a class="link" href="#klasse-assosiasjon">7.5.1. Assosiasjon (modelldcatno:Association)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1771,7 +1756,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-attributt"><a class="link" href="#klasse-attributt">Attributt (modelldcatno:Attribute)</a></h4>
+<h4 id="klasse-attributt"><a class="link" href="#klasse-attributt">7.5.2. Attributt (modelldcatno:Attribute)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1802,7 +1787,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-avhengighet"><a class="link" href="#klasse-avhengighet">Avhengighet (modelldcatno:Dependency)</a></h4>
+<h4 id="klasse-avhengighet"><a class="link" href="#klasse-avhengighet">7.5.3. Avhengighet (modelldcatno:Dependency)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1833,7 +1818,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-begrensningsregel"><a class="link" href="#klasse-begrensningsregel">Begrensningsregel  (modelldcatno:ConstraintRule)</a></h4>
+<h4 id="klasse-begrensningsregel"><a class="link" href="#klasse-begrensningsregel">7.5.4. Begrensningsregel  (modelldcatno:ConstraintRule)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1864,7 +1849,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-datatype"><a class="link" href="#klasse-datatype">Datatype (modelldcatno:DataType)</a></h4>
+<h4 id="klasse-datatype"><a class="link" href="#klasse-datatype">7.5.5. Datatype (modelldcatno:DataType)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1895,7 +1880,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-egenskap"><a class="link" href="#klasse-egenskap">Egenskap (modelldcatno:Property)</a></h4>
+<h4 id="klasse-egenskap"><a class="link" href="#klasse-egenskap">7.5.6. Egenskap (modelldcatno:Property)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1926,7 +1911,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-enkeltype"><a class="link" href="#klasse-enkeltype">Enkeltype (modelldcatno:SimpleType)</a></h4>
+<h4 id="klasse-enkeltype"><a class="link" href="#klasse-enkeltype">7.5.7. Enkeltype (modelldcatno:SimpleType)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1957,7 +1942,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-eller"><a class="link" href="#klasse-eller">Eller (modelldcatno:Or)</a></h4>
+<h4 id="klasse-eller"><a class="link" href="#klasse-eller">7.5.8. Eller (modelldcatno:Or)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1992,7 +1977,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-enten-eller"><a class="link" href="#klasse-enten-eller">Enten eller (modelldcatno:Xor)</a></h4>
+<h4 id="klasse-enten-eller"><a class="link" href="#klasse-enten-eller">7.5.9. Enten eller (modelldcatno:Xor)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2027,7 +2012,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-kodeelement"><a class="link" href="#klasse-kodeelement">Kodeelement (modelldcatno:CodeElement)</a></h4>
+<h4 id="klasse-kodeelement"><a class="link" href="#klasse-kodeelement">7.5.10. Kodeelement (modelldcatno:CodeElement)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2054,7 +2039,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-kodeliste"><a class="link" href="#klasse-kodeliste">Kodeliste (modelldcatno:CodeList)</a></h4>
+<h4 id="klasse-kodeliste"><a class="link" href="#klasse-kodeliste">7.5.11. Kodeliste (modelldcatno:CodeList)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2085,7 +2070,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-modellelement"><a class="link" href="#klasse-modellelement">Modellelement (modelldcatno:ModelElement)</a></h4>
+<h4 id="klasse-modellelement"><a class="link" href="#klasse-modellelement">7.5.12. Modellelement (modelldcatno:ModelElement)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2120,7 +2105,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-objekttype"><a class="link" href="#klasse-objekttype">Objekttype (modelldcatno:ObjectType)</a></h4>
+<h4 id="klasse-objekttype"><a class="link" href="#klasse-objekttype">7.5.13. Objekttype (modelldcatno:ObjectType)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2151,7 +2136,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-rolle"><a class="link" href="#klasse-rolle">Rolle (modelldcatno:Role)</a></h4>
+<h4 id="klasse-rolle"><a class="link" href="#klasse-rolle">7.5.14. Rolle (modelldcatno:Role)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2182,7 +2167,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-rotobjekttype"><a class="link" href="#klasse-rotobjekttype">Rotobjekttype (modelldcatno:RootObjectType)</a></h4>
+<h4 id="klasse-rotobjekttype"><a class="link" href="#klasse-rotobjekttype">7.5.15. Rotobjekttype (modelldcatno:RootObjectType)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2213,7 +2198,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-spesialisering"><a class="link" href="#klasse-spesialisering">Spesialisering (modelldcatno:Specialization)</a></h4>
+<h4 id="klasse-spesialisering"><a class="link" href="#klasse-spesialisering">7.5.16. Spesialisering (modelldcatno:Specialization)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2245,9 +2230,9 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Valgfrie-klasser-i-modelldelen"><a class="link" href="#Valgfrie-klasser-i-modelldelen">Valgfrie klasser i modelldelen</a></h3>
+<h3 id="Valgfrie-klasser-i-modelldelen"><a class="link" href="#Valgfrie-klasser-i-modelldelen">7.6. Valgfrie klasser i modelldelen</a></h3>
 <div class="sect3">
-<h4 id="klasse-Abstraksjon"><a class="link" href="#klasse-Abstraksjon">Abstraksjon (modelldcatno:Abstraction)</a></h4>
+<h4 id="klasse-Abstraksjon"><a class="link" href="#klasse-Abstraksjon">7.6.1. Abstraksjon (modelldcatno:Abstraction)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2278,7 +2263,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-alle"><a class="link" href="#klasse-alle">Alle (modelldcatno:AllOf)</a></h4>
+<h4 id="klasse-alle"><a class="link" href="#klasse-alle">7.6.2. Alle (modelldcatno:AllOf)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2309,7 +2294,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-begrep-2"><a class="link" href="#klasse-begrep-2">Begrep (skos:Concept)</a></h4>
+<h4 id="klasse-begrep-2"><a class="link" href="#klasse-begrep-2">7.6.3. Begrep (skos:Concept)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2336,7 +2321,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-dokument"><a class="link" href="#klasse-dokument">Dokument (foaf:Document)</a></h4>
+<h4 id="klasse-dokument"><a class="link" href="#klasse-dokument">7.6.4. Dokument (foaf:Document)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2363,7 +2348,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-ikke"><a class="link" href="#klasse-ikke">Ikke (modelldcatno:Not)</a></h4>
+<h4 id="klasse-ikke"><a class="link" href="#klasse-ikke">7.6.5. Ikke (modelldcatno:Not)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2394,7 +2379,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-komposisjon"><a class="link" href="#klasse-komposisjon">Komposisjon (modelldcatno:Composition)</a></h4>
+<h4 id="klasse-komposisjon"><a class="link" href="#klasse-komposisjon">7.6.6. Komposisjon (modelldcatno:Composition)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2425,7 +2410,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-medietype"><a class="link" href="#klasse-medietype">Medietype (dct:MediaType)</a></h4>
+<h4 id="klasse-medietype"><a class="link" href="#klasse-medietype">7.6.7. Medietype (dct:MediaType)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2452,7 +2437,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-module"><a class="link" href="#klasse-module">Modul (modelldcatno:Module)</a></h4>
+<h4 id="klasse-module"><a class="link" href="#klasse-module">7.6.8. Modul (modelldcatno:Module)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2487,7 +2472,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-noen-av"><a class="link" href="#klasse-noen-av">Noen av (modelldcatno:AnyOf)</a></h4>
+<h4 id="klasse-noen-av"><a class="link" href="#klasse-noen-av">7.6.9. Noen av (modelldcatno:AnyOf)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2518,7 +2503,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-note"><a class="link" href="#klasse-note">Note (modelldcatno:Note)</a></h4>
+<h4 id="klasse-note"><a class="link" href="#klasse-note">7.6.10. Note (modelldcatno:Note)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2545,7 +2530,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-og"><a class="link" href="#klasse-og">Og (modelldcatno:And)</a></h4>
+<h4 id="klasse-og"><a class="link" href="#klasse-og">7.6.11. Og (modelldcatno:And)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2576,7 +2561,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-realisering"><a class="link" href="#klasse-realisering">Realisering (modelldcatno:Realization)</a></h4>
+<h4 id="klasse-realisering"><a class="link" href="#klasse-realisering">7.6.12. Realisering (modelldcatno:Realization)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2607,7 +2592,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-samling"><a class="link" href="#klasse-samling">Samling (modelldcatno:Collection)</a></h4>
+<h4 id="klasse-samling"><a class="link" href="#klasse-samling">7.6.13. Samling (modelldcatno:Collection)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2642,7 +2627,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-standard"><a class="link" href="#klasse-standard">Standard (dct:Standard)</a></h4>
+<h4 id="klasse-standard"><a class="link" href="#klasse-standard">7.6.14. Standard (dct:Standard)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2673,7 +2658,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-valg"><a class="link" href="#klasse-valg">Valg (modelldcatno:Choice)</a></h4>
+<h4 id="klasse-valg"><a class="link" href="#klasse-valg">7.6.15. Valg (modelldcatno:Choice)</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2707,12 +2692,12 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </div>
 </div>
 <div class="sect1">
-<h2 id="Egenskaper-per-klasse"><a class="link" href="#Egenskaper-per-klasse">Egenskaper per klasse</a></h2>
+<h2 id="Egenskaper-per-klasse"><a class="link" href="#Egenskaper-per-klasse">8. Egenskaper per klasse</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="Egenskaper-katalogdel"><a class="link" href="#Egenskaper-katalogdel">Katalogdel</a></h3>
+<h3 id="Egenskaper-katalogdel"><a class="link" href="#Egenskaper-katalogdel">8.1. Katalogdel</a></h3>
 <div class="sect3">
-<h4 id="Aktør-egenskaper"><a class="link" href="#Aktør-egenskaper">Aktør (foaf:Agent)</a></h4>
+<h4 id="Aktør-egenskaper"><a class="link" href="#Aktør-egenskaper">8.1.1. Aktør (foaf:Agent)</a></h4>
 <div class="paragraph">
 <p>Klassen <em>Aktør</em> er obligatorisk.</p>
 </div>
@@ -2720,9 +2705,9 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 <p>Det anbefales at URI til Aktør (<code>foaf:Agent</code>) er identisk med den URI som Enhetsregisteret (Brønnøysundregistrene) har på enheten/virksomheten dersom den finnes i registeret, f.eks. <code>dct:publisher &lt;<a href="https://organization-catalog.fellesdatakatalog.digdir.no/organizations/974760673" class="bare">https://organization-catalog.fellesdatakatalog.digdir.no/organizations/974760673</a>&gt;</code>.</p>
 </div>
 <div class="sect4">
-<h5 id="Obligatoriske-egenskaper-for-Aktør"><a class="link" href="#Obligatoriske-egenskaper-for-Aktør">Obligatoriske egenskaper for klassen <em>Aktør</em></a></h5>
+<h5 id="Obligatoriske-egenskaper-for-Aktør"><a class="link" href="#Obligatoriske-egenskaper-for-Aktør">8.1.1.1. Obligatoriske egenskaper for klassen <em>Aktør</em></a></h5>
 <div class="sect5">
-<h6 id="Aktør-navn"><a class="link" href="#Aktør-navn">Aktør: navn (foaf:name)</a></h6>
+<h6 id="Aktør-navn"><a class="link" href="#Aktør-navn">8.1.1.1.1. Aktør: navn (foaf:name)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2758,9 +2743,9 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </div>
 </div>
 <div class="sect4">
-<h5 id="Anbefalte-egenskaper-for-Aktør"><a class="link" href="#Anbefalte-egenskaper-for-Aktør">Anbefalte egenskaper for klassen <em>Aktør</em></a></h5>
+<h5 id="Anbefalte-egenskaper-for-Aktør"><a class="link" href="#Anbefalte-egenskaper-for-Aktør">8.1.1.2. Anbefalte egenskaper for klassen <em>Aktør</em></a></h5>
 <div class="sect5">
-<h6 id="Aktør-organisasjonsidentifikator"><a class="link" href="#Aktør-organisasjonsidentifikator">Aktør: organisasjonsidentifikator (dct:identifier)</a></h6>
+<h6 id="Aktør-organisasjonsidentifikator"><a class="link" href="#Aktør-organisasjonsidentifikator">8.1.1.2.1. Aktør: organisasjonsidentifikator (dct:identifier)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2795,7 +2780,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="Aktør-utgivertype"><a class="link" href="#Aktør-utgivertype">Aktør: utgivertype (dct:type)</a></h6>
+<h6 id="Aktør-utgivertype"><a class="link" href="#Aktør-utgivertype">8.1.1.2.2. Aktør: utgivertype (dct:type)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2832,14 +2817,14 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Lisensdokument-egenskaper"><a class="link" href="#Lisensdokument-egenskaper">Lisensdokument (dct:LicenseDocument)</a></h4>
+<h4 id="Lisensdokument-egenskaper"><a class="link" href="#Lisensdokument-egenskaper">8.1.2. Lisensdokument (dct:LicenseDocument)</a></h4>
 <div class="paragraph">
 <p>Klassen <em>Lisensdokument</em> er anbefalt.</p>
 </div>
 <div class="sect4">
-<h5 id="Anbefalte-egenskaper-Lisensdokument"><a class="link" href="#Anbefalte-egenskaper-Lisensdokument">Anbefalte egenskaper for klassen <em>Lisensdokument</em></a></h5>
+<h5 id="Anbefalte-egenskaper-Lisensdokument"><a class="link" href="#Anbefalte-egenskaper-Lisensdokument">8.1.2.1. Anbefalte egenskaper for klassen <em>Lisensdokument</em></a></h5>
 <div class="sect5">
-<h6 id="Lisensdokument-lisenstype"><a class="link" href="#Lisensdokument-lisenstype">Lisensdokument: lisenstype (dct:type)</a></h6>
+<h6 id="Lisensdokument-lisenstype"><a class="link" href="#Lisensdokument-lisenstype">8.1.2.1.1. Lisensdokument: lisenstype (dct:type)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2876,14 +2861,14 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Lokasjon-egenskaper"><a class="link" href="#Lokasjon-egenskaper">Lokasjon (dct:Location)</a></h4>
+<h4 id="Lokasjon-egenskaper"><a class="link" href="#Lokasjon-egenskaper">8.1.3. Lokasjon (dct:Location)</a></h4>
 <div class="paragraph">
 <p>Klassen <em>Lokasjon</em> er valgfri.</p>
 </div>
 <div class="sect4">
-<h5 id="Anbefalte-egenskaper-Lokasjon"><a class="link" href="#Anbefalte-egenskaper-Lokasjon">Anbefalte egenskaper for klassen <em>Lokasjon</em></a></h5>
+<h5 id="Anbefalte-egenskaper-Lokasjon"><a class="link" href="#Anbefalte-egenskaper-Lokasjon">8.1.3.1. Anbefalte egenskaper for klassen <em>Lokasjon</em></a></h5>
 <div class="sect5">
-<h6 id="Lokasjon-geografiskMidtpunkt"><a class="link" href="#Lokasjon-geografiskMidtpunkt">Lokasjon: geografisk midtpunkt (dcat:centroid)</a></h6>
+<h6 id="Lokasjon-geografiskMidtpunkt"><a class="link" href="#Lokasjon-geografiskMidtpunkt">8.1.3.1.1. Lokasjon: geografisk midtpunkt (dcat:centroid)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2918,7 +2903,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="Lokasjon-område"><a class="link" href="#Lokasjon-område">Lokasjon: område (dcat:bbox)</a></h6>
+<h6 id="Lokasjon-område"><a class="link" href="#Lokasjon-område">8.1.3.1.2. Lokasjon: område (dcat:bbox)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2954,9 +2939,9 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </div>
 </div>
 <div class="sect4">
-<h5 id="Valgfrie-egenskaper-Lokasjon"><a class="link" href="#Valgfrie-egenskaper-Lokasjon">Valgfrie egenskaper for klassen <em>Lokasjon</em></a></h5>
+<h5 id="Valgfrie-egenskaper-Lokasjon"><a class="link" href="#Valgfrie-egenskaper-Lokasjon">8.1.3.2. Valgfrie egenskaper for klassen <em>Lokasjon</em></a></h5>
 <div class="sect5">
-<h6 id="Lokasjon-geometri"><a class="link" href="#Lokasjon-geometri">Lokasjon: geometri (locn:geometry)</a></h6>
+<h6 id="Lokasjon-geometri"><a class="link" href="#Lokasjon-geometri">8.1.3.2.1. Lokasjon: geometri (locn:geometry)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2993,14 +2978,14 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Modellkatalog-egenskaper"><a class="link" href="#Modellkatalog-egenskaper">Modellkatalog (dcat:Catalog)</a></h4>
+<h4 id="Modellkatalog-egenskaper"><a class="link" href="#Modellkatalog-egenskaper">8.1.4. Modellkatalog (dcat:Catalog)</a></h4>
 <div class="paragraph">
 <p>Klassen <em>Modellkatalog</em> er obligatorisk.</p>
 </div>
 <div class="sect4">
-<h5 id="Obligatoriske-egenskaper-Modellkatalog"><a class="link" href="#Obligatoriske-egenskaper-Modellkatalog">Obligatoriske egenskaper for klassen <em>Modellkatalog</em></a></h5>
+<h5 id="Obligatoriske-egenskaper-Modellkatalog"><a class="link" href="#Obligatoriske-egenskaper-Modellkatalog">8.1.4.1. Obligatoriske egenskaper for klassen <em>Modellkatalog</em></a></h5>
 <div class="sect5">
-<h6 id="Modellkatalog-beskrivelse"><a class="link" href="#Modellkatalog-beskrivelse">Modellkatalog: beskrivelse (dct:description)</a></h6>
+<h6 id="Modellkatalog-beskrivelse"><a class="link" href="#Modellkatalog-beskrivelse">8.1.4.1.1. Modellkatalog: beskrivelse (dct:description)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -3035,7 +3020,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="Modellkatalog-harDel"><a class="link" href="#Modellkatalog-harDel">Modellkatalog: har del (dct:hasPart)</a></h6>
+<h6 id="Modellkatalog-harDel"><a class="link" href="#Modellkatalog-harDel">8.1.4.1.2. Modellkatalog: har del (dct:hasPart)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -3074,7 +3059,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="Modellkatalog-identifikator"><a class="link" href="#Modellkatalog-identifikator">Modellkatalog: identifikator (dct:identifier)</a></h6>
+<h6 id="Modellkatalog-identifikator"><a class="link" href="#Modellkatalog-identifikator">8.1.4.1.3. Modellkatalog: identifikator (dct:identifier)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -3109,7 +3094,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="Modellkatalog-kontaktpunkt"><a class="link" href="#Modellkatalog-kontaktpunkt">Modellkatalog: kontaktpunkt (dcat:contactPoint)</a></h6>
+<h6 id="Modellkatalog-kontaktpunkt"><a class="link" href="#Modellkatalog-kontaktpunkt">8.1.4.1.4. Modellkatalog: kontaktpunkt (dcat:contactPoint)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -3144,7 +3129,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="Modellkatalog-tittel"><a class="link" href="#Modellkatalog-tittel">Modellkatalog: tittel (dct:title)</a></h6>
+<h6 id="Modellkatalog-tittel"><a class="link" href="#Modellkatalog-tittel">8.1.4.1.5. Modellkatalog: tittel (dct:title)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -3179,7 +3164,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="Modellkatalog-utgiver"><a class="link" href="#Modellkatalog-utgiver">Modellkatalog: utgiver (dct:publisher)</a></h6>
+<h6 id="Modellkatalog-utgiver"><a class="link" href="#Modellkatalog-utgiver">8.1.4.1.6. Modellkatalog: utgiver (dct:publisher)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -3215,9 +3200,9 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </div>
 </div>
 <div class="sect4">
-<h5 id="Anbefalte-egenskaper-Modellkatalog"><a class="link" href="#Anbefalte-egenskaper-Modellkatalog">Anbefalte egenskaper for klassen <em>Modellkatalog</em></a></h5>
+<h5 id="Anbefalte-egenskaper-Modellkatalog"><a class="link" href="#Anbefalte-egenskaper-Modellkatalog">8.1.4.2. Anbefalte egenskaper for klassen <em>Modellkatalog</em></a></h5>
 <div class="sect5">
-<h6 id="Modellkatalog-endringsdato"><a class="link" href="#Modellkatalog-endringsdato">Modellkatalog: endringsdato (dct:modified)</a></h6>
+<h6 id="Modellkatalog-endringsdato"><a class="link" href="#Modellkatalog-endringsdato">8.1.4.2.1. Modellkatalog: endringsdato (dct:modified)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -3252,7 +3237,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="Modellkatalog-hjemmeside"><a class="link" href="#Modellkatalog-hjemmeside">Modellkatalog: hjemmeside (foaf:homepage)</a></h6>
+<h6 id="Modellkatalog-hjemmeside"><a class="link" href="#Modellkatalog-hjemmeside">8.1.4.2.2. Modellkatalog: hjemmeside (foaf:homepage)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -3287,7 +3272,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="Modellkatalog-lisens"><a class="link" href="#Modellkatalog-lisens">Modellkatalog: lisens (dct:license)</a></h6>
+<h6 id="Modellkatalog-lisens"><a class="link" href="#Modellkatalog-lisens">8.1.4.2.3. Modellkatalog: lisens (dct:license)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -3322,7 +3307,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="Modellkatalog-modell"><a class="link" href="#Modellkatalog-modell">Modellkatalog: modell (modelldcatno:model)</a></h6>
+<h6 id="Modellkatalog-modell"><a class="link" href="#Modellkatalog-modell">8.1.4.2.4. Modellkatalog: modell (modelldcatno:model)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -3365,7 +3350,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="Modellkatalog-språk"><a class="link" href="#Modellkatalog-språk">Modellkatalog: språk (dct:language)</a></h6>
+<h6 id="Modellkatalog-språk"><a class="link" href="#Modellkatalog-språk">8.1.4.2.5. Modellkatalog: språk (dct:language)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -3400,7 +3385,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="Modellkatalog-utgivelsesdato"><a class="link" href="#Modellkatalog-utgivelsesdato">Modellkatalog: utgivelsesdato (dct:issued)</a></h6>
+<h6 id="Modellkatalog-utgivelsesdato"><a class="link" href="#Modellkatalog-utgivelsesdato">8.1.4.2.6. Modellkatalog: utgivelsesdato (dct:issued)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -3436,9 +3421,9 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </div>
 </div>
 <div class="sect4">
-<h5 id="Valgfrie-egenskaper-Modellkatalog"><a class="link" href="#Valgfrie-egenskaper-Modellkatalog">Valgfrie egenskaper for klassen <em>Modellkatalog</em></a></h5>
+<h5 id="Valgfrie-egenskaper-Modellkatalog"><a class="link" href="#Valgfrie-egenskaper-Modellkatalog">8.1.4.3. Valgfrie egenskaper for klassen <em>Modellkatalog</em></a></h5>
 <div class="sect5">
-<h6 id="Modellkatalog-dekningsområde"><a class="link" href="#Modellkatalog-dekningsområde">Modellkatalog: dekningsområde (dct:spatial)</a></h6>
+<h6 id="Modellkatalog-dekningsområde"><a class="link" href="#Modellkatalog-dekningsområde">8.1.4.3.1. Modellkatalog: dekningsområde (dct:spatial)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -3473,7 +3458,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="Modellkatalog-erDelAv"><a class="link" href="#Modellkatalog-erDelAv">Modellkatalog: er del av (dct:isPartOf)</a></h6>
+<h6 id="Modellkatalog-erDelAv"><a class="link" href="#Modellkatalog-erDelAv">8.1.4.3.2. Modellkatalog: er del av (dct:isPartOf)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -3508,7 +3493,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="Modellkatalog-temaer"><a class="link" href="#Modellkatalog-temaer">Modellkatalog: temaer (dcat:themeTaxonomy)</a></h6>
+<h6 id="Modellkatalog-temaer"><a class="link" href="#Modellkatalog-temaer">8.1.4.3.3. Modellkatalog: temaer (dcat:themeTaxonomy)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -3545,14 +3530,14 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="TematiskSkjema-egenskaper"><a class="link" href="#TematiskSkjema-egenskaper">Tematisk skjema (skos:ConceptScheme)</a></h4>
+<h4 id="TematiskSkjema-egenskaper"><a class="link" href="#TematiskSkjema-egenskaper">8.1.5. Tematisk skjema (skos:ConceptScheme)</a></h4>
 <div class="paragraph">
 <p>Klassen <em>Tematisk skjema</em> er obligatorisk.</p>
 </div>
 <div class="sect4">
-<h5 id="Obligatoriske-egenskaper-TematiskSkjema"><a class="link" href="#Obligatoriske-egenskaper-TematiskSkjema">Obligatoriske egenskaper for klassen <em>Tematisk skjema</em></a></h5>
+<h5 id="Obligatoriske-egenskaper-TematiskSkjema"><a class="link" href="#Obligatoriske-egenskaper-TematiskSkjema">8.1.5.1. Obligatoriske egenskaper for klassen <em>Tematisk skjema</em></a></h5>
 <div class="sect5">
-<h6 id="TematiskSkjema-tittel"><a class="link" href="#TematiskSkjema-tittel">Tematisk skjema: tittel (dct:title)</a></h6>
+<h6 id="TematiskSkjema-tittel"><a class="link" href="#TematiskSkjema-tittel">8.1.5.1.1. Tematisk skjema: tittel (dct:title)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -3590,16 +3575,16 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Modeldel"><a class="link" href="#Modeldel">Modelldel</a></h3>
+<h3 id="Modeldel"><a class="link" href="#Modeldel">8.2. Modelldel</a></h3>
 <div class="sect3">
-<h4 id="Abstraksjon-egenskaper"><a class="link" href="#Abstraksjon-egenskaper">Abstraksjon (modelldcatno:Abstraction)</a></h4>
+<h4 id="Abstraksjon-egenskaper"><a class="link" href="#Abstraksjon-egenskaper">8.2.1. Abstraksjon (modelldcatno:Abstraction)</a></h4>
 <div class="paragraph">
 <p>Klassen <em>Abstraksjon</em> er valgfri.</p>
 </div>
 <div class="sect4">
-<h5 id="Anbefalte-egenskaper-abstraksjon"><a class="link" href="#Anbefalte-egenskaper-abstraksjon">Anbefalte egenskaper for klassen <em>Abstraksjon</em></a></h5>
+<h5 id="Anbefalte-egenskaper-abstraksjon"><a class="link" href="#Anbefalte-egenskaper-abstraksjon">8.2.1.1. Anbefalte egenskaper for klassen <em>Abstraksjon</em></a></h5>
 <div class="sect5">
-<h6 id="Abstraksjon-erAbstraksjonAv"><a class="link" href="#Abstraksjon-erAbstraksjonAv">Abstraksjon: er abstraksjon av (modelldcatno:isAbstractionOf)</a></h6>
+<h6 id="Abstraksjon-erAbstraksjonAv"><a class="link" href="#Abstraksjon-erAbstraksjonAv">8.2.1.1.1. Abstraksjon: er abstraksjon av (modelldcatno:isAbstractionOf)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -3640,14 +3625,14 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Assosiasjon-egenskaper"><a class="link" href="#Assosiasjon-egenskaper">Assosiasjon (modelldcatno:Association)</a></h4>
+<h4 id="Assosiasjon-egenskaper"><a class="link" href="#Assosiasjon-egenskaper">8.2.2. Assosiasjon (modelldcatno:Association)</a></h4>
 <div class="paragraph">
 <p>Klassen <em>Assosiasjon</em> er anbefalt.</p>
 </div>
 <div class="sect4">
-<h5 id="Anbefalte-egenskaper-for-assosiasjon"><a class="link" href="#Anbefalte-egenskaper-for-assosiasjon">Anbefalte egenskaper for klassen <em>Assosiasjon</em></a></h5>
+<h5 id="Anbefalte-egenskaper-for-assosiasjon"><a class="link" href="#Anbefalte-egenskaper-for-assosiasjon">8.2.2.1. Anbefalte egenskaper for klassen <em>Assosiasjon</em></a></h5>
 <div class="sect5">
-<h6 id="Assosiasjon_referererTil"><a class="link" href="#Assosiasjon_referererTil">Assosiasjon: refererer til (modelldcatno:refersTo)</a></h6>
+<h6 id="Assosiasjon_referererTil"><a class="link" href="#Assosiasjon_referererTil">8.2.2.1.1. Assosiasjon: refererer til (modelldcatno:refersTo)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -3688,7 +3673,7 @@ Klasse som representerer modellen som skal utveksles.</p></td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Attributt-egenskaper"><a class="link" href="#Attributt-egenskaper">Attributt (modelldcatno:Attribute)</a></h4>
+<h4 id="Attributt-egenskaper"><a class="link" href="#Attributt-egenskaper">8.2.3. Attributt (modelldcatno:Attribute)</a></h4>
 <div class="paragraph">
 <p>Klassen <em>Attributt</em> er anbefalt.</p>
 </div>
@@ -3705,9 +3690,9 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect4">
-<h5 id="Anbefalte-egenskaper-attributt"><a class="link" href="#Anbefalte-egenskaper-attributt">Anbefalte egenskaper for klassen <em>Attributt</em></a></h5>
+<h5 id="Anbefalte-egenskaper-attributt"><a class="link" href="#Anbefalte-egenskaper-attributt">8.2.3.1. Anbefalte egenskaper for klassen <em>Attributt</em></a></h5>
 <div class="sect5">
-<h6 id="Attributt-harDataType"><a class="link" href="#Attributt-harDataType">Attributt: har datatype (modelldcatno:hasDataType)</a></h6>
+<h6 id="Attributt-harDataType"><a class="link" href="#Attributt-harDataType">8.2.3.1.1. Attributt: har datatype (modelldcatno:hasDataType)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -3746,7 +3731,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Attributt-harEnkelType"><a class="link" href="#Attributt-harEnkelType">Attributt: har enkeltype (modelldcatno:hasSimpleType)</a></h6>
+<h6 id="Attributt-harEnkelType"><a class="link" href="#Attributt-harEnkelType">8.2.3.1.2. Attributt: har enkeltype (modelldcatno:hasSimpleType)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -3785,7 +3770,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Attributt-harVerdierFra"><a class="link" href="#Attributt-harVerdierFra">Attributt: har verdier fra (modelldcatno:hasValueFrom)</a></h6>
+<h6 id="Attributt-harVerdierFra"><a class="link" href="#Attributt-harVerdierFra">8.2.3.1.3. Attributt: har verdier fra (modelldcatno:hasValueFrom)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -3824,7 +3809,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Attributt-inneholderObjekttype"><a class="link" href="#Attributt-inneholderObjekttype">Attributt: inneholder objekttype (modelldcatno:containsObjectType)</a></h6>
+<h6 id="Attributt-inneholderObjekttype"><a class="link" href="#Attributt-inneholderObjekttype">8.2.3.1.4. Attributt: inneholder objekttype (modelldcatno:containsObjectType)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -3865,14 +3850,14 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </div>
 </div>
 <div class="sect3">
-<h4 id="Avhengighet-egenskaper"><a class="link" href="#Avhengighet-egenskaper">Avhengighet (modelldcatno:Dependency)</a></h4>
+<h4 id="Avhengighet-egenskaper"><a class="link" href="#Avhengighet-egenskaper">8.2.4. Avhengighet (modelldcatno:Dependency)</a></h4>
 <div class="paragraph">
 <p>Klassen <em>Avhengighet</em> er anbefalt.</p>
 </div>
 <div class="sect4">
-<h5 id="Anbefalte-egenskaper-avhengighet"><a class="link" href="#Anbefalte-egenskaper-avhengighet">Anbefalte egenskaper for klassen <em>Avhengighet</em></a></h5>
+<h5 id="Anbefalte-egenskaper-avhengighet"><a class="link" href="#Anbefalte-egenskaper-avhengighet">8.2.4.1. Anbefalte egenskaper for klassen <em>Avhengighet</em></a></h5>
 <div class="sect5">
-<h6 id="Avhengighet-erAvhengigAv"><a class="link" href="#Avhengighet-erAvhengigAv">Avhengighet: er avhengig av (modelldcatno:dependentOn)</a></h6>
+<h6 id="Avhengighet-erAvhengigAv"><a class="link" href="#Avhengighet-erAvhengigAv">8.2.4.1.1. Avhengighet: er avhengig av (modelldcatno:dependentOn)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -3909,14 +3894,14 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </div>
 </div>
 <div class="sect3">
-<h4 id="Begrensningsregel-egenskaper"><a class="link" href="#Begrensningsregel-egenskaper">Begrensningsregel (modelldcatno:ConstraintRule)</a></h4>
+<h4 id="Begrensningsregel-egenskaper"><a class="link" href="#Begrensningsregel-egenskaper">8.2.5. Begrensningsregel (modelldcatno:ConstraintRule)</a></h4>
 <div class="paragraph">
 <p>Klassen <em>Begrensningsregel</em> er anbefalt.</p>
 </div>
 <div class="sect4">
-<h5 id="Obligatoriske-egenskaper-Begrensningsregel"><a class="link" href="#Obligatoriske-egenskaper-Begrensningsregel">Obligatoriske egenskaper for klassen <em>Begrensningsregel</em></a></h5>
+<h5 id="Obligatoriske-egenskaper-Begrensningsregel"><a class="link" href="#Obligatoriske-egenskaper-Begrensningsregel">8.2.5.1. Obligatoriske egenskaper for klassen <em>Begrensningsregel</em></a></h5>
 <div class="sect5">
-<h6 id="Begrensningsregel-begrenser"><a class="link" href="#Begrensningsregel-begrenser">Begrensningsregel: begrenser (modelldcatno:constrains)</a></h6>
+<h6 id="Begrensningsregel-begrenser"><a class="link" href="#Begrensningsregel-begrenser">8.2.5.1.1. Begrensningsregel: begrenser (modelldcatno:constrains)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -3956,9 +3941,9 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </div>
 </div>
 <div class="sect4">
-<h5 id="Anbefalte-egenskaper-Begrensningsregel"><a class="link" href="#Anbefalte-egenskaper-Begrensningsregel">Anbefalte egenskaper for klassen <em>Begrensningsregel</em></a></h5>
+<h5 id="Anbefalte-egenskaper-Begrensningsregel"><a class="link" href="#Anbefalte-egenskaper-Begrensningsregel">8.2.5.2. Anbefalte egenskaper for klassen <em>Begrensningsregel</em></a></h5>
 <div class="sect5">
-<h6 id="Begrensningsregel-begrensningsuttrykk"><a class="link" href="#Begrensningsregel-begrensningsuttrykk">Begrensningsregel: begrensningsuttrykk (modelldcatno:constraintExpression)</a></h6>
+<h6 id="Begrensningsregel-begrensningsuttrykk"><a class="link" href="#Begrensningsregel-begrensningsuttrykk">8.2.5.2.1. Begrensningsregel: begrensningsuttrykk (modelldcatno:constraintExpression)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -3999,14 +3984,14 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </div>
 </div>
 <div class="sect3">
-<h4 id="Dokument-egenskaper"><a class="link" href="#Dokument-egenskaper">Dokument (foaf:Document)</a></h4>
+<h4 id="Dokument-egenskaper"><a class="link" href="#Dokument-egenskaper">8.2.6. Dokument (foaf:Document)</a></h4>
 <div class="paragraph">
 <p>Klassen <em>Dokument</em> er valgfri.</p>
 </div>
 <div class="sect4">
-<h5 id="Anbefalte-egenskaper-Dokument"><a class="link" href="#Anbefalte-egenskaper-Dokument">Anbefalte egenskaper for klassen <em>Dokument</em></a></h5>
+<h5 id="Anbefalte-egenskaper-Dokument"><a class="link" href="#Anbefalte-egenskaper-Dokument">8.2.6.1. Anbefalte egenskaper for klassen <em>Dokument</em></a></h5>
 <div class="sect5">
-<h6 id="Dokument-språk"><a class="link" href="#Dokument-språk">Dokument: språk (dct:language)</a></h6>
+<h6 id="Dokument-språk"><a class="link" href="#Dokument-språk">8.2.6.1.1. Dokument: språk (dct:language)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -4041,7 +4026,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Dokument-tittel"><a class="link" href="#Dokument-tittel">Dokument: tittel (dct:title)</a></h6>
+<h6 id="Dokument-tittel"><a class="link" href="#Dokument-tittel">8.2.6.1.2. Dokument: tittel (dct:title)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -4077,9 +4062,9 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </div>
 </div>
 <div class="sect4">
-<h5 id="Valgfrie-egenskaper-Dokument"><a class="link" href="#Valgfrie-egenskaper-Dokument">Valgfrie egenskaper for klassen <em>Dokument</em></a></h5>
+<h5 id="Valgfrie-egenskaper-Dokument"><a class="link" href="#Valgfrie-egenskaper-Dokument">8.2.6.2. Valgfrie egenskaper for klassen <em>Dokument</em></a></h5>
 <div class="sect5">
-<h6 id="Dokument-format"><a class="link" href="#Dokument-format">Dokument: format (dct:format)</a></h6>
+<h6 id="Dokument-format"><a class="link" href="#Dokument-format">8.2.6.2.1. Dokument: format (dct:format)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -4114,7 +4099,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Dokument-harReferanse"><a class="link" href="#Dokument-harReferanse">Dokument: har referanse (rdfs:seeAlso)</a></h6>
+<h6 id="Dokument-harReferanse"><a class="link" href="#Dokument-harReferanse">8.2.6.2.2. Dokument: har referanse (rdfs:seeAlso)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -4151,7 +4136,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </div>
 </div>
 <div class="sect3">
-<h4 id="Egenskap-egenskaper"><a class="link" href="#Egenskap-egenskaper">Egenskap (modelldcatno:Property)</a></h4>
+<h4 id="Egenskap-egenskaper"><a class="link" href="#Egenskap-egenskaper">8.2.7. Egenskap (modelldcatno:Property)</a></h4>
 <div class="paragraph">
 <p>Klassen <em>Egenskap</em> er anbefalt.</p>
 </div>
@@ -4159,9 +4144,9 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <p>Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av spesialiseringene.</p>
 </div>
 <div class="sect4">
-<h5 id="Anbefalte-egenskaper-Egenskap"><a class="link" href="#Anbefalte-egenskaper-Egenskap">Anbefalte egenskaper for klassen <em>Egenskap</em></a></h5>
+<h5 id="Anbefalte-egenskaper-Egenskap"><a class="link" href="#Anbefalte-egenskaper-Egenskap">8.2.7.1. Anbefalte egenskaper for klassen <em>Egenskap</em></a></h5>
 <div class="sect5">
-<h6 id="Egenskap-begrep"><a class="link" href="#Egenskap-begrep">Egenskap: begrep (dct:subject)</a></h6>
+<h6 id="Egenskap-begrep"><a class="link" href="#Egenskap-begrep">8.2.7.1.1. Egenskap: begrep (dct:subject)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -4196,7 +4181,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Egenskap-identifikator"><a class="link" href="#Egenskap-identifikator">Egenskap: identifikator (dct:identifier)</a></h6>
+<h6 id="Egenskap-identifikator"><a class="link" href="#Egenskap-identifikator">8.2.7.1.2. Egenskap: identifikator (dct:identifier)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -4231,7 +4216,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Egenskap-navigerbar"><a class="link" href="#Egenskap-navigerbar">Egenskap: navigerbar (modelldcatno:navigable)</a></h6>
+<h6 id="Egenskap-navigerbar"><a class="link" href="#Egenskap-navigerbar">8.2.7.1.3. Egenskap: navigerbar (modelldcatno:navigable)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -4266,7 +4251,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Egenskap-nedreMultiplisitet"><a class="link" href="#Egenskap-nedreMultiplisitet">Egenskap: nedre multiplisitet (modelldcatno:minOccurs)</a></h6>
+<h6 id="Egenskap-nedreMultiplisitet"><a class="link" href="#Egenskap-nedreMultiplisitet">8.2.7.1.4. Egenskap: nedre multiplisitet (modelldcatno:minOccurs)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -4301,7 +4286,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Egenskap-tittel"><a class="link" href="#Egenskap-tittel">Egenskap: tittel (dct:title)</a></h6>
+<h6 id="Egenskap-tittel"><a class="link" href="#Egenskap-tittel">8.2.7.1.5. Egenskap: tittel (dct:title)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -4336,7 +4321,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Egenskap-øvreMultiplisitet"><a class="link" href="#Egenskap-øvreMultiplisitet">Egenskap: øvre multiplisitet (modelldcatno:maxOccurs)</a></h6>
+<h6 id="Egenskap-øvreMultiplisitet"><a class="link" href="#Egenskap-øvreMultiplisitet">8.2.7.1.6. Egenskap: øvre multiplisitet (modelldcatno:maxOccurs)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -4378,9 +4363,9 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </div>
 </div>
 <div class="sect4">
-<h5 id="Valgfrie-egenskaper-Egenskap"><a class="link" href="#Valgfrie-egenskaper-Egenskap">Valgfrie egenskaper for klassen <em>Egenskap</em></a></h5>
+<h5 id="Valgfrie-egenskaper-Egenskap"><a class="link" href="#Valgfrie-egenskaper-Egenskap">8.2.7.2. Valgfrie egenskaper for klassen <em>Egenskap</em></a></h5>
 <div class="sect5">
-<h6 id="Egenskap-beskrivelse"><a class="link" href="#Egenskap-beskrivelse">Egenskap: beskrivelse (dct:description)</a></h6>
+<h6 id="Egenskap-beskrivelse"><a class="link" href="#Egenskap-beskrivelse">8.2.7.2.1. Egenskap: beskrivelse (dct:description)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -4415,7 +4400,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Egenskap-harType"><a class="link" href="#Egenskap-harType">Egenskap: har type (modelldcatno:hasType)</a></h6>
+<h6 id="Egenskap-harType"><a class="link" href="#Egenskap-harType">8.2.7.2.2. Egenskap: har type (modelldcatno:hasType)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -4450,7 +4435,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Egenskap-relasjonsegenskapsnavn"><a class="link" href="#Egenskap-relasjonsegenskapsnavn">Egenskap: relasjonsegenskapsnavn (modelldcatno:relationPropertyLabel)</a></h6>
+<h6 id="Egenskap-relasjonsegenskapsnavn"><a class="link" href="#Egenskap-relasjonsegenskapsnavn">8.2.7.2.3. Egenskap: relasjonsegenskapsnavn (modelldcatno:relationPropertyLabel)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -4485,7 +4470,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Egenskap-sekvensnummer"><a class="link" href="#Egenskap-sekvensnummer">Egenskap: sekvensnummer (modelldcatno:sequenceNumber)</a></h6>
+<h6 id="Egenskap-sekvensnummer"><a class="link" href="#Egenskap-sekvensnummer">8.2.7.2.4. Egenskap: sekvensnummer (modelldcatno:sequenceNumber)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -4520,7 +4505,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Egenskap-tilhørerModul"><a class="link" href="#Egenskap-tilhørerModul">Egenskap: tilhører modul (modelldcatno:belongsToModule)</a></h6>
+<h6 id="Egenskap-tilhørerModul"><a class="link" href="#Egenskap-tilhørerModul">8.2.7.2.5. Egenskap: tilhører modul (modelldcatno:belongsToModule)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -4555,7 +4540,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Egenskap-utgjørSymmetriskRelasjonMed"><a class="link" href="#Egenskap-utgjørSymmetriskRelasjonMed">Egenskap: utgjør symmetrisk relasjon med (modelldcatno:formsSymmetryWith)</a></h6>
+<h6 id="Egenskap-utgjørSymmetriskRelasjonMed"><a class="link" href="#Egenskap-utgjørSymmetriskRelasjonMed">8.2.7.2.6. Egenskap: utgjør symmetrisk relasjon med (modelldcatno:formsSymmetryWith)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -4592,14 +4577,14 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </div>
 </div>
 <div class="sect3">
-<h4 id="Enkeltype-egenskaper"><a class="link" href="#Enkeltype-egenskaper">Enkeltype (modelldcatno:SimpleType)</a></h4>
+<h4 id="Enkeltype-egenskaper"><a class="link" href="#Enkeltype-egenskaper">8.2.8. Enkeltype (modelldcatno:SimpleType)</a></h4>
 <div class="paragraph">
 <p>Klassen <em>Enkeltype</em> er anbefalt</p>
 </div>
 <div class="sect4">
-<h5 id="Anbefalte-egenskaper-Enkelttype"><a class="link" href="#Anbefalte-egenskaper-Enkelttype">Anbefalte egenskaper for klassen <em>Enkeltype</em></a></h5>
+<h5 id="Anbefalte-egenskaper-Enkelttype"><a class="link" href="#Anbefalte-egenskaper-Enkelttype">8.2.8.1. Anbefalte egenskaper for klassen <em>Enkeltype</em></a></h5>
 <div class="sect5">
-<h6 id="Enkeltype-typedefinisjon"><a class="link" href="#Enkeltype-typedefinisjon">Enkeltype: typedefinisjon (modelldcatno:typeDefinitionReference)</a></h6>
+<h6 id="Enkeltype-typedefinisjon"><a class="link" href="#Enkeltype-typedefinisjon">8.2.8.1.1. Enkeltype: typedefinisjon (modelldcatno:typeDefinitionReference)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -4635,9 +4620,9 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </div>
 </div>
 <div class="sect4">
-<h5 id="_valgfrie_egenskaper_for_klassen_enkeltype"><a class="link" href="#_valgfrie_egenskaper_for_klassen_enkeltype">Valgfrie egenskaper for klassen <em>Enkeltype</em></a></h5>
+<h5 id="_valgfrie_egenskaper_for_klassen_enkeltype"><a class="link" href="#_valgfrie_egenskaper_for_klassen_enkeltype">8.2.8.2. Valgfrie egenskaper for klassen <em>Enkeltype</em></a></h5>
 <div class="sect5">
-<h6 id="Enkeltype-antallDesimaler"><a class="link" href="#Enkeltype-antallDesimaler">Enkeltype: antall desimaler (xsd:fractionDigits)</a></h6>
+<h6 id="Enkeltype-antallDesimaler"><a class="link" href="#Enkeltype-antallDesimaler">8.2.8.2.1. Enkeltype: antall desimaler (xsd:fractionDigits)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -4672,7 +4657,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Enkeltype-lengde"><a class="link" href="#Enkeltype-lengde">Enkeltype: lengde (xsd:length)</a></h6>
+<h6 id="Enkeltype-lengde"><a class="link" href="#Enkeltype-lengde">8.2.8.2.2. Enkeltype: lengde (xsd:length)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -4707,7 +4692,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Enkeltype-maksimumIkkeInklusivt"><a class="link" href="#Enkeltype-maksimumIkkeInklusivt">Enkeltype: maksimum ikke-inklusivt (xsd:maxExclusive)</a></h6>
+<h6 id="Enkeltype-maksimumIkkeInklusivt"><a class="link" href="#Enkeltype-maksimumIkkeInklusivt">8.2.8.2.3. Enkeltype: maksimum ikke-inklusivt (xsd:maxExclusive)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -4742,7 +4727,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Enkeltype-maksimumInklusivt"><a class="link" href="#Enkeltype-maksimumInklusivt">Enkeltype: maksimum inklusivt (xsd:maxInclusive)</a></h6>
+<h6 id="Enkeltype-maksimumInklusivt"><a class="link" href="#Enkeltype-maksimumInklusivt">8.2.8.2.4. Enkeltype: maksimum inklusivt (xsd:maxInclusive)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -4777,7 +4762,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Enkeltype-maksLengde"><a class="link" href="#Enkeltype-maksLengde">Enkeltype: maks lengde (xsd:maxLength)</a></h6>
+<h6 id="Enkeltype-maksLengde"><a class="link" href="#Enkeltype-maksLengde">8.2.8.2.5. Enkeltype: maks lengde (xsd:maxLength)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -4812,7 +4797,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Enkeltype-minimumIkkeInklusivt"><a class="link" href="#Enkeltype-minimumIkkeInklusivt">Enkeltype: minimum ikke-inklusivt (xsd:minExclusive)</a></h6>
+<h6 id="Enkeltype-minimumIkkeInklusivt"><a class="link" href="#Enkeltype-minimumIkkeInklusivt">8.2.8.2.6. Enkeltype: minimum ikke-inklusivt (xsd:minExclusive)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -4847,7 +4832,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Enkeltype-minimumInklusivt"><a class="link" href="#Enkeltype-minimumInklusivt">Enkeltype: minimum inklusivt (xsd:minInclusive)</a></h6>
+<h6 id="Enkeltype-minimumInklusivt"><a class="link" href="#Enkeltype-minimumInklusivt">8.2.8.2.7. Enkeltype: minimum inklusivt (xsd:minInclusive)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -4882,7 +4867,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Enkeltype-minimumLengde"><a class="link" href="#Enkeltype-minimumLengde">Enkeltype: minimum lengde (xsd:minLength)</a></h6>
+<h6 id="Enkeltype-minimumLengde"><a class="link" href="#Enkeltype-minimumLengde">8.2.8.2.8. Enkeltype: minimum lengde (xsd:minLength)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -4917,7 +4902,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Enkeltype-mønster"><a class="link" href="#Enkeltype-mønster">Enkeltype: mønster (xsd:pattern)</a></h6>
+<h6 id="Enkeltype-mønster"><a class="link" href="#Enkeltype-mønster">8.2.8.2.9. Enkeltype: mønster (xsd:pattern)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -4952,7 +4937,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Enkeltype-totaltAntallSiffer"><a class="link" href="#Enkeltype-totaltAntallSiffer">Enkeltype: totalt antall siffer (xsd:totalDigits)</a></h6>
+<h6 id="Enkeltype-totaltAntallSiffer"><a class="link" href="#Enkeltype-totaltAntallSiffer">8.2.8.2.10. Enkeltype: totalt antall siffer (xsd:totalDigits)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -4989,14 +4974,14 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </div>
 </div>
 <div class="sect3">
-<h4 id="Informasjonsmodell-egenskaper"><a class="link" href="#Informasjonsmodell-egenskaper">Informasjonsmodell (modelldcatno:InformationModel)</a></h4>
+<h4 id="Informasjonsmodell-egenskaper"><a class="link" href="#Informasjonsmodell-egenskaper">8.2.9. Informasjonsmodell (modelldcatno:InformationModel)</a></h4>
 <div class="paragraph">
 <p>Klassen <em>Informasjonsmodell</em> er obligatorisk</p>
 </div>
 <div class="sect4">
-<h5 id="Obligatoriske-egenskaper-Informasjonsmodell"><a class="link" href="#Obligatoriske-egenskaper-Informasjonsmodell">Obligatoriske egenskaper for klassen <em>Informasjonsmodell</em></a></h5>
+<h5 id="Obligatoriske-egenskaper-Informasjonsmodell"><a class="link" href="#Obligatoriske-egenskaper-Informasjonsmodell">8.2.9.1. Obligatoriske egenskaper for klassen <em>Informasjonsmodell</em></a></h5>
 <div class="sect5">
-<h6 id="Informasjonsmodell-tittel"><a class="link" href="#Informasjonsmodell-tittel">Informasjonsmodell: tittel (dct:title)</a></h6>
+<h6 id="Informasjonsmodell-tittel"><a class="link" href="#Informasjonsmodell-tittel">8.2.9.1.1. Informasjonsmodell: tittel (dct:title)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5031,7 +5016,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Informasjonsmodell-utgiver"><a class="link" href="#Informasjonsmodell-utgiver">Informasjonsmodell: utgiver (dct:publisher)</a></h6>
+<h6 id="Informasjonsmodell-utgiver"><a class="link" href="#Informasjonsmodell-utgiver">8.2.9.1.2. Informasjonsmodell: utgiver (dct:publisher)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5067,9 +5052,9 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </div>
 </div>
 <div class="sect4">
-<h5 id="Anbefalte-egenskaper-Informasjonsmodell"><a class="link" href="#Anbefalte-egenskaper-Informasjonsmodell">Anbefalte egenskaper i klassen <em>Informasjonsmodell</em></a></h5>
+<h5 id="Anbefalte-egenskaper-Informasjonsmodell"><a class="link" href="#Anbefalte-egenskaper-Informasjonsmodell">8.2.9.2. Anbefalte egenskaper i klassen <em>Informasjonsmodell</em></a></h5>
 <div class="sect5">
-<h6 id="Informasjonsmodell-begrep"><a class="link" href="#Informasjonsmodell-begrep">Informasjonsmodell: begrep (dct:subject)</a></h6>
+<h6 id="Informasjonsmodell-begrep"><a class="link" href="#Informasjonsmodell-begrep">8.2.9.2.1. Informasjonsmodell: begrep (dct:subject)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5104,7 +5089,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Informasjonsmodell-beskrivelse"><a class="link" href="#Informasjonsmodell-beskrivelse">Informasjonsmodell: beskrivelse (dct:description)</a></h6>
+<h6 id="Informasjonsmodell-beskrivelse"><a class="link" href="#Informasjonsmodell-beskrivelse">8.2.9.2.2. Informasjonsmodell: beskrivelse (dct:description)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5139,7 +5124,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Informasjonsmodell-identifikator"><a class="link" href="#Informasjonsmodell-identifikator">Informasjonsmodell: identifikator (dct:identifier) </a></h6>
+<h6 id="Informasjonsmodell-identifikator"><a class="link" href="#Informasjonsmodell-identifikator">8.2.9.2.3. Informasjonsmodell: identifikator (dct:identifier) </a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5178,7 +5163,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="iInformasjonsmodell-informasjonsmodellidentifikator"><a class="link" href="#iInformasjonsmodell-informasjonsmodellidentifikator">Informasjonsmodell: informasjonsmodellidentifikator (modelldcatno:informationModelIdentifier)</a></h6>
+<h6 id="iInformasjonsmodell-informasjonsmodellidentifikator"><a class="link" href="#iInformasjonsmodell-informasjonsmodellidentifikator">8.2.9.2.4. Informasjonsmodell: informasjonsmodellidentifikator (modelldcatno:informationModelIdentifier)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5217,7 +5202,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Informasjonsmodell-inneholderModellelement"><a class="link" href="#Informasjonsmodell-inneholderModellelement">Informasjonsmodell: inneholder modellelement (modelldcatno:containsModelElement)</a></h6>
+<h6 id="Informasjonsmodell-inneholderModellelement"><a class="link" href="#Informasjonsmodell-inneholderModellelement">8.2.9.2.5. Informasjonsmodell: inneholder modellelement (modelldcatno:containsModelElement)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5252,7 +5237,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Informasjonsmodell-kontaktpunkt"><a class="link" href="#Informasjonsmodell-kontaktpunkt">Informasjonsmodell: kontaktpunkt (dcat:contactPoint)</a></h6>
+<h6 id="Informasjonsmodell-kontaktpunkt"><a class="link" href="#Informasjonsmodell-kontaktpunkt">8.2.9.2.6. Informasjonsmodell: kontaktpunkt (dcat:contactPoint)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5287,7 +5272,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Informasjonsmodell-lisens"><a class="link" href="#Informasjonsmodell-lisens">Informasjonsmodell: lisens (dct:license)</a></h6>
+<h6 id="Informasjonsmodell-lisens"><a class="link" href="#Informasjonsmodell-lisens">8.2.9.2.7. Informasjonsmodell: lisens (dct:license)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5322,7 +5307,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Informasjonsmodell-tema"><a class="link" href="#Informasjonsmodell-tema">Informasjonsmodell: tema (dcat:theme)</a></h6>
+<h6 id="Informasjonsmodell-tema"><a class="link" href="#Informasjonsmodell-tema">8.2.9.2.8. Informasjonsmodell: tema (dcat:theme)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5358,9 +5343,9 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </div>
 </div>
 <div class="sect4">
-<h5 id="Valgfrie-egenskaper-Informasjonsmodell"><a class="link" href="#Valgfrie-egenskaper-Informasjonsmodell">Valgfrie egenskaper til klassen <em>Informasjonsmodell</em></a></h5>
+<h5 id="Valgfrie-egenskaper-Informasjonsmodell"><a class="link" href="#Valgfrie-egenskaper-Informasjonsmodell">8.2.9.3. Valgfrie egenskaper til klassen <em>Informasjonsmodell</em></a></h5>
 <div class="sect5">
-<h6 id="Informasjonsmodell-dekningsområde"><a class="link" href="#Informasjonsmodell-dekningsområde">Informasjonsmodell: dekningsområde (dct:spatial)</a></h6>
+<h6 id="Informasjonsmodell-dekningsområde"><a class="link" href="#Informasjonsmodell-dekningsområde">8.2.9.3.1. Informasjonsmodell: dekningsområde (dct:spatial)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5395,7 +5380,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Informasjonsmodell-emneord"><a class="link" href="#Informasjonsmodell-emneord">Informasjonsmodell: emneord (dcat:keyword)</a></h6>
+<h6 id="Informasjonsmodell-emneord"><a class="link" href="#Informasjonsmodell-emneord">8.2.9.3.2. Informasjonsmodell: emneord (dcat:keyword)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5430,7 +5415,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Informasjonsmodell-endringsdato"><a class="link" href="#Informasjonsmodell-endringsdato">Informasjonsmodell: endringsdato (dct:modified)</a></h6>
+<h6 id="Informasjonsmodell-endringsdato"><a class="link" href="#Informasjonsmodell-endringsdato">8.2.9.3.3. Informasjonsmodell: endringsdato (dct:modified)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5465,7 +5450,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Informasjonsmodell-erDelAv"><a class="link" href="#Informasjonsmodell-erDelAv">Informasjonsmodell: er del av (dct:isPartOf)</a></h6>
+<h6 id="Informasjonsmodell-erDelAv"><a class="link" href="#Informasjonsmodell-erDelAv">8.2.9.3.4. Informasjonsmodell: er del av (dct:isPartOf)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5500,7 +5485,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Informasjonsmodell-erProfilAv"><a class="link" href="#Informasjonsmodell-erProfilAv">Informasjonsmodell: er profil av (prof:isProfileOf)</a></h6>
+<h6 id="Informasjonsmodell-erProfilAv"><a class="link" href="#Informasjonsmodell-erProfilAv">8.2.9.3.5. Informasjonsmodell: er profil av (prof:isProfileOf)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5535,7 +5520,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Informasjonsmodell-erErstattetAv"><a class="link" href="#Informasjonsmodell-erErstattetAv">Informasjonsmodell: er erstattet av (dct:isReplacedBy)</a></h6>
+<h6 id="Informasjonsmodell-erErstattetAv"><a class="link" href="#Informasjonsmodell-erErstattetAv">8.2.9.3.6. Informasjonsmodell: er erstattet av (dct:isReplacedBy)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5570,7 +5555,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Informasjonsmodell-erstatter"><a class="link" href="#Informasjonsmodell-erstatter">Informasjonsmodell: erstatter (dct:replaces)</a></h6>
+<h6 id="Informasjonsmodell-erstatter"><a class="link" href="#Informasjonsmodell-erstatter">8.2.9.3.7. Informasjonsmodell: erstatter (dct:replaces)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5605,7 +5590,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Informasjonsmodell-finnesIFormat"><a class="link" href="#Informasjonsmodell-finnesIFormat">Informasjonsmodell: finnes i format (dct:hasFormat)</a></h6>
+<h6 id="Informasjonsmodell-finnesIFormat"><a class="link" href="#Informasjonsmodell-finnesIFormat">8.2.9.3.8. Informasjonsmodell: finnes i format (dct:hasFormat)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5640,7 +5625,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Informasjonsmodell-gyldighetsperiode"><a class="link" href="#Informasjonsmodell-gyldighetsperiode">Informasjonsmodell: gyldighetsperiode (dct:temporal)</a></h6>
+<h6 id="Informasjonsmodell-gyldighetsperiode"><a class="link" href="#Informasjonsmodell-gyldighetsperiode">8.2.9.3.9. Informasjonsmodell: gyldighetsperiode (dct:temporal)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5675,7 +5660,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Informasjonsmodell-harDel"><a class="link" href="#Informasjonsmodell-harDel">Informasjonsmodell: har del (dct:hasPart)</a></h6>
+<h6 id="Informasjonsmodell-harDel"><a class="link" href="#Informasjonsmodell-harDel">8.2.9.3.10. Informasjonsmodell: har del (dct:hasPart)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5710,7 +5695,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Informasjonsmodell-hjemmeside"><a class="link" href="#Informasjonsmodell-hjemmeside">Informasjonsmodell: hjemmeside (foaf:homepage)</a></h6>
+<h6 id="Informasjonsmodell-hjemmeside"><a class="link" href="#Informasjonsmodell-hjemmeside">8.2.9.3.11. Informasjonsmodell: hjemmeside (foaf:homepage)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5745,7 +5730,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Informasjonsmodell-iSamsvarMed"><a class="link" href="#Informasjonsmodell-iSamsvarMed">Informasjonsmodell: i samsvar med (dct:conformsTo)</a></h6>
+<h6 id="Informasjonsmodell-iSamsvarMed"><a class="link" href="#Informasjonsmodell-iSamsvarMed">8.2.9.3.12. Informasjonsmodell: i samsvar med (dct:conformsTo)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5780,7 +5765,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Informasjonsmodell-modellstatus"><a class="link" href="#Informasjonsmodell-modellstatus">Informasjonsmodell: modellstatus (adms:status)</a></h6>
+<h6 id="Informasjonsmodell-modellstatus"><a class="link" href="#Informasjonsmodell-modellstatus">8.2.9.3.13. Informasjonsmodell: modellstatus (adms:status)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5815,7 +5800,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Informasjonsmodell-produsent"><a class="link" href="#Informasjonsmodell-produsent">Informasjonsmodell: produsent (dct:creator)</a></h6>
+<h6 id="Informasjonsmodell-produsent"><a class="link" href="#Informasjonsmodell-produsent">8.2.9.3.14. Informasjonsmodell: produsent (dct:creator)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5850,7 +5835,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Informasjonsmodell-språk"><a class="link" href="#Informasjonsmodell-språk">Informasjonsmodell: språk (dct:language)</a></h6>
+<h6 id="Informasjonsmodell-språk"><a class="link" href="#Informasjonsmodell-språk">8.2.9.3.15. Informasjonsmodell: språk (dct:language)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5885,7 +5870,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Informasjonsmodell-type"><a class="link" href="#Informasjonsmodell-type">Informasjonsmodell: type (dct:type)</a></h6>
+<h6 id="Informasjonsmodell-type"><a class="link" href="#Informasjonsmodell-type">8.2.9.3.16. Informasjonsmodell: type (dct:type)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5920,7 +5905,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Informasjonsmodell-utgivelsesdato"><a class="link" href="#Informasjonsmodell-utgivelsesdato">Informasjonsmodell: utgivelsesdato (dct:issued)</a></h6>
+<h6 id="Informasjonsmodell-utgivelsesdato"><a class="link" href="#Informasjonsmodell-utgivelsesdato">8.2.9.3.17. Informasjonsmodell: utgivelsesdato (dct:issued)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5955,7 +5940,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Informasjonsmodell-versjon"><a class="link" href="#Informasjonsmodell-versjon">Informasjonsmodell: versjon (owl:versionInfo)</a></h6>
+<h6 id="Informasjonsmodell-versjon"><a class="link" href="#Informasjonsmodell-versjon">8.2.9.3.18. Informasjonsmodell: versjon (owl:versionInfo)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -5990,7 +5975,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Informasjonsmodell-versjonsnote"><a class="link" href="#Informasjonsmodell-versjonsnote">Informasjonsmodell: versjonsnote (adms:versionNotes)</a></h6>
+<h6 id="Informasjonsmodell-versjonsnote"><a class="link" href="#Informasjonsmodell-versjonsnote">8.2.9.3.19. Informasjonsmodell: versjonsnote (adms:versionNotes)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -6027,14 +6012,14 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </div>
 </div>
 <div class="sect3">
-<h4 id="Kodeelement-egenskaper"><a class="link" href="#Kodeelement-egenskaper">Kodeelement (modelldcatno:CodeElement)</a></h4>
+<h4 id="Kodeelement-egenskaper"><a class="link" href="#Kodeelement-egenskaper">8.2.10. Kodeelement (modelldcatno:CodeElement)</a></h4>
 <div class="paragraph">
 <p>Klassen <em>Kodeelement</em> er anbefalt.</p>
 </div>
 <div class="sect4">
-<h5 id="Obligatoriske-egenskaper-Kodeelement"><a class="link" href="#Obligatoriske-egenskaper-Kodeelement">Obligatoriske egenskaper for klassen <em>Kodeelement</em></a></h5>
+<h5 id="Obligatoriske-egenskaper-Kodeelement"><a class="link" href="#Obligatoriske-egenskaper-Kodeelement">8.2.10.1. Obligatoriske egenskaper for klassen <em>Kodeelement</em></a></h5>
 <div class="sect5">
-<h6 id="Kodeelement-iKodeliste"><a class="link" href="#Kodeelement-iKodeliste">Kodeelement: i kodeliste (skos:inScheme)</a></h6>
+<h6 id="Kodeelement-iKodeliste"><a class="link" href="#Kodeelement-iKodeliste">8.2.10.1.1. Kodeelement: i kodeliste (skos:inScheme)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -6069,7 +6054,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Kodeelement-kode"><a class="link" href="#Kodeelement-kode">Kodeelement: kode (skos:notation)</a></h6>
+<h6 id="Kodeelement-kode"><a class="link" href="#Kodeelement-kode">8.2.10.1.2. Kodeelement: kode (skos:notation)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -6105,9 +6090,9 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </div>
 </div>
 <div class="sect4">
-<h5 id="Anbefalte-egenskaper-Kodeelement"><a class="link" href="#Anbefalte-egenskaper-Kodeelement">Anbefalte egenskaper for klassen <em>Kodeelement</em></a></h5>
+<h5 id="Anbefalte-egenskaper-Kodeelement"><a class="link" href="#Anbefalte-egenskaper-Kodeelement">8.2.10.2. Anbefalte egenskaper for klassen <em>Kodeelement</em></a></h5>
 <div class="sect5">
-<h6 id="Kodeelement-anbefaltKodetekst"><a class="link" href="#Kodeelement-anbefaltKodetekst">Kodeelement: anbefalt kodetekst (skos:prefLabel)</a></h6>
+<h6 id="Kodeelement-anbefaltKodetekst"><a class="link" href="#Kodeelement-anbefaltKodetekst">8.2.10.2.1. Kodeelement: anbefalt kodetekst (skos:prefLabel)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -6150,7 +6135,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Kodeelement-begrep"><a class="link" href="#Kodeelement-begrep">Kodeelement: begrep (dct:subject)</a></h6>
+<h6 id="Kodeelement-begrep"><a class="link" href="#Kodeelement-begrep">8.2.10.2.2. Kodeelement: begrep (dct:subject)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -6185,7 +6170,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="kodeelement-identifikator"><a class="link" href="#kodeelement-identifikator">Kodeelement: identifikator (dct:identifier)</a></h6>
+<h6 id="kodeelement-identifikator"><a class="link" href="#kodeelement-identifikator">8.2.10.2.3. Kodeelement: identifikator (dct:identifier)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -6220,7 +6205,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Kodeelement-toppelementTil"><a class="link" href="#Kodeelement-toppelementTil">Kodeelement: toppelement til (skos:topConceptOf)</a></h6>
+<h6 id="Kodeelement-toppelementTil"><a class="link" href="#Kodeelement-toppelementTil">8.2.10.2.4. Kodeelement: toppelement til (skos:topConceptOf)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -6256,9 +6241,9 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </div>
 </div>
 <div class="sect4">
-<h5 id="Valgfrie-egenskaper-Kodeelement"><a class="link" href="#Valgfrie-egenskaper-Kodeelement">Valgfrie egenskaper for klassen <em>Kodeelement</em></a></h5>
+<h5 id="Valgfrie-egenskaper-Kodeelement"><a class="link" href="#Valgfrie-egenskaper-Kodeelement">8.2.10.3. Valgfrie egenskaper for klassen <em>Kodeelement</em></a></h5>
 <div class="sect5">
-<h6 id="Kodeelement-definisjon"><a class="link" href="#Kodeelement-definisjon">Kodeelement: definisjon (skos:definition)</a></h6>
+<h6 id="Kodeelement-definisjon"><a class="link" href="#Kodeelement-definisjon">8.2.10.3.1. Kodeelement: definisjon (skos:definition)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -6297,7 +6282,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Kodeelement-eksempel"><a class="link" href="#Kodeelement-eksempel">Kodeelement: eksempel (skos:example)</a></h6>
+<h6 id="Kodeelement-eksempel"><a class="link" href="#Kodeelement-eksempel">8.2.10.3.2. Kodeelement: eksempel (skos:example)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -6336,7 +6321,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Kodeelement-eksklusjonsmerknad"><a class="link" href="#Kodeelement-eksklusjonsmerknad">Kodeelement: eksklusjonsmerknad (xkos:exclusionNote)</a></h6>
+<h6 id="Kodeelement-eksklusjonsmerknad"><a class="link" href="#Kodeelement-eksklusjonsmerknad">8.2.10.3.3. Kodeelement: eksklusjonsmerknad (xkos:exclusionNote)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -6375,7 +6360,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Kodeelement-forrigeKodeelement"><a class="link" href="#Kodeelement-forrigeKodeelement">Kodeelement: forrige kodeelement (xkos:previous)</a></h6>
+<h6 id="Kodeelement-forrigeKodeelement"><a class="link" href="#Kodeelement-forrigeKodeelement">8.2.10.3.4. Kodeelement: forrige kodeelement (xkos:previous)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -6410,7 +6395,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Kodeelement-frarådetKodetekst"><a class="link" href="#Kodeelement-frarådetKodetekst">Kodeelement: frarådet kodetekst (skos:hiddenLabel)</a></h6>
+<h6 id="Kodeelement-frarådetKodetekst"><a class="link" href="#Kodeelement-frarådetKodetekst">8.2.10.3.5. Kodeelement: frarådet kodetekst (skos:hiddenLabel)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -6449,7 +6434,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Kodeelement-inklusjonsmerknad"><a class="link" href="#Kodeelement-inklusjonsmerknad">Kodeelement: inklusjonsmerknad (xkos:inclusionNote)</a></h6>
+<h6 id="Kodeelement-inklusjonsmerknad"><a class="link" href="#Kodeelement-inklusjonsmerknad">8.2.10.3.6. Kodeelement: inklusjonsmerknad (xkos:inclusionNote)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -6488,7 +6473,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Kodeelement-merknad"><a class="link" href="#Kodeelement-merknad">Kodeelement: merknad (skos:note)</a></h6>
+<h6 id="Kodeelement-merknad"><a class="link" href="#Kodeelement-merknad">8.2.10.3.7. Kodeelement: merknad (skos:note)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -6523,7 +6508,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Kodeelement-nesteKodeelement"><a class="link" href="#Kodeelement-nesteKodeelement">Kodeelement: neste kodeelement (xkos:next)</a></h6>
+<h6 id="Kodeelement-nesteKodeelement"><a class="link" href="#Kodeelement-nesteKodeelement">8.2.10.3.8. Kodeelement: neste kodeelement (xkos:next)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -6558,7 +6543,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Kodeelement-omfangsmerknad"><a class="link" href="#Kodeelement-omfangsmerknad">Kodeelement: omfangsmerknad (skos:scopeNote)</a></h6>
+<h6 id="Kodeelement-omfangsmerknad"><a class="link" href="#Kodeelement-omfangsmerknad">8.2.10.3.9. Kodeelement: omfangsmerknad (skos:scopeNote)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -6597,7 +6582,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Kodeelement-tillattKodetekst"><a class="link" href="#Kodeelement-tillattKodetekst">Kodeelement: tillatt kodetekst (skos:altLabel)</a></h6>
+<h6 id="Kodeelement-tillattKodetekst"><a class="link" href="#Kodeelement-tillattKodetekst">8.2.10.3.10. Kodeelement: tillatt kodetekst (skos:altLabel)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -6638,14 +6623,14 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </div>
 </div>
 <div class="sect3">
-<h4 id="Kodeliste-egenskaper"><a class="link" href="#Kodeliste-egenskaper">Kodeliste (modelldcatno:CodeList)</a></h4>
+<h4 id="Kodeliste-egenskaper"><a class="link" href="#Kodeliste-egenskaper">8.2.11. Kodeliste (modelldcatno:CodeList)</a></h4>
 <div class="paragraph">
 <p>Klassen <em>Kodeliste</em> er anbefalt.</p>
 </div>
 <div class="sect4">
-<h5 id="Valgfrie-egenskaper-Kodeliste"><a class="link" href="#Valgfrie-egenskaper-Kodeliste">Valgfrie egenskaper for klassen <em>Kodeliste</em></a></h5>
+<h5 id="Valgfrie-egenskaper-Kodeliste"><a class="link" href="#Valgfrie-egenskaper-Kodeliste">8.2.11.1. Valgfrie egenskaper for klassen <em>Kodeliste</em></a></h5>
 <div class="sect5">
-<h6 id="Kodeliste-harReferanse"><a class="link" href="#Kodeliste-harReferanse">Kodeliste: har referanse (rdfs:seeAlso)</a></h6>
+<h6 id="Kodeliste-harReferanse"><a class="link" href="#Kodeliste-harReferanse">8.2.11.1.1. Kodeliste: har referanse (rdfs:seeAlso)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -6682,14 +6667,14 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </div>
 </div>
 <div class="sect3">
-<h4 id="Komposisjon-egenskaper"><a class="link" href="#Komposisjon-egenskaper">Komposisjon (modelldcatno:Composition)</a></h4>
+<h4 id="Komposisjon-egenskaper"><a class="link" href="#Komposisjon-egenskaper">8.2.12. Komposisjon (modelldcatno:Composition)</a></h4>
 <div class="paragraph">
 <p>Klassen <em>Komposisjon</em> er valgfri</p>
 </div>
 <div class="sect4">
-<h5 id="Anbefalte-egenskaper-Komposisjon"><a class="link" href="#Anbefalte-egenskaper-Komposisjon">Anbefalte egenskaper for klassen <em>Komposisjon</em></a></h5>
+<h5 id="Anbefalte-egenskaper-Komposisjon"><a class="link" href="#Anbefalte-egenskaper-Komposisjon">8.2.12.1. Anbefalte egenskaper for klassen <em>Komposisjon</em></a></h5>
 <div class="sect5">
-<h6 id="Komposisjon-inneholder"><a class="link" href="#Komposisjon-inneholder">Komposisjon: inneholder (modelldcatno:contains)</a></h6>
+<h6 id="Komposisjon-inneholder"><a class="link" href="#Komposisjon-inneholder">8.2.12.1.1. Komposisjon: inneholder (modelldcatno:contains)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -6730,7 +6715,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </div>
 </div>
 <div class="sect3">
-<h4 id="Modellelement-egenskaper"><a class="link" href="#Modellelement-egenskaper">Modellelement (modelldcatno:ModelElement)</a></h4>
+<h4 id="Modellelement-egenskaper"><a class="link" href="#Modellelement-egenskaper">8.2.13. Modellelement (modelldcatno:ModelElement)</a></h4>
 <div class="paragraph">
 <p>Klassen <em>Modellelement</em> er anbefalt.</p>
 </div>
@@ -6738,9 +6723,9 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 <p>Dette er en abstrakt klasse og skal i en konkret anvendelse erstattes med en av spesialiseringene.</p>
 </div>
 <div class="sect4">
-<h5 id="Obligatoriske-egenskaper-Modellelement"><a class="link" href="#Obligatoriske-egenskaper-Modellelement">Obligatoriske egenskaper for klassen <em>Modellelement</em></a></h5>
+<h5 id="Obligatoriske-egenskaper-Modellelement"><a class="link" href="#Obligatoriske-egenskaper-Modellelement">8.2.13.1. Obligatoriske egenskaper for klassen <em>Modellelement</em></a></h5>
 <div class="sect5">
-<h6 id="Modellelement-tittel"><a class="link" href="#Modellelement-tittel">Modellelement: tittel (dct:title)</a></h6>
+<h6 id="Modellelement-tittel"><a class="link" href="#Modellelement-tittel">8.2.13.1.1. Modellelement: tittel (dct:title)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -6776,9 +6761,9 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </div>
 </div>
 <div class="sect4">
-<h5 id="Anbefalte-egenskaper-Modellelement"><a class="link" href="#Anbefalte-egenskaper-Modellelement">Anbefalte egenskaper for klassen <em>Modellelement</em></a></h5>
+<h5 id="Anbefalte-egenskaper-Modellelement"><a class="link" href="#Anbefalte-egenskaper-Modellelement">8.2.13.2. Anbefalte egenskaper for klassen <em>Modellelement</em></a></h5>
 <div class="sect5">
-<h6 id="Modellelement-begrep"><a class="link" href="#Modellelement-begrep">Modellelement: begrep (dct:subject)</a></h6>
+<h6 id="Modellelement-begrep"><a class="link" href="#Modellelement-begrep">8.2.13.2.1. Modellelement: begrep (dct:subject)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -6813,7 +6798,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="modellelement-identifikator"><a class="link" href="#modellelement-identifikator">Modellelement: identifikator (dct:identifier)</a></h6>
+<h6 id="modellelement-identifikator"><a class="link" href="#modellelement-identifikator">8.2.13.2.2. Modellelement: identifikator (dct:identifier)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -6848,7 +6833,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Modellelement-harEgenskap"><a class="link" href="#Modellelement-harEgenskap">Modellelement: har egenskap (modelldcatno:hasProperty)</a></h6>
+<h6 id="Modellelement-harEgenskap"><a class="link" href="#Modellelement-harEgenskap">8.2.13.2.3. Modellelement: har egenskap (modelldcatno:hasProperty)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -6884,9 +6869,9 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </div>
 </div>
 <div class="sect4">
-<h5 id="Valgfrie-egenskaper-Modellelement"><a class="link" href="#Valgfrie-egenskaper-Modellelement">Valgfrie egenskaper for klassen <em>Modellelement</em></a></h5>
+<h5 id="Valgfrie-egenskaper-Modellelement"><a class="link" href="#Valgfrie-egenskaper-Modellelement">8.2.13.3. Valgfrie egenskaper for klassen <em>Modellelement</em></a></h5>
 <div class="sect5">
-<h6 id="Modellelement-beskrivelse"><a class="link" href="#Modellelement-beskrivelse">Modellelement: beskrivelse (dct:description)</a></h6>
+<h6 id="Modellelement-beskrivelse"><a class="link" href="#Modellelement-beskrivelse">8.2.13.3.1. Modellelement: beskrivelse (dct:description)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -6921,7 +6906,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Modellelement-tilhørerModul"><a class="link" href="#Modellelement-tilhørerModul">Modellelement: tilhører modul (modelldcatno:belongsToModule)</a></h6>
+<h6 id="Modellelement-tilhørerModul"><a class="link" href="#Modellelement-tilhørerModul">8.2.13.3.2. Modellelement: tilhører modul (modelldcatno:belongsToModule)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -6958,14 +6943,14 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </div>
 </div>
 <div class="sect3">
-<h4 id="Note-egenskaper"><a class="link" href="#Note-egenskaper">Note (modelldcatno:Note)</a></h4>
+<h4 id="Note-egenskaper"><a class="link" href="#Note-egenskaper">8.2.14. Note (modelldcatno:Note)</a></h4>
 <div class="paragraph">
 <p>Klassen <em>Note</em> er valgfri.</p>
 </div>
 <div class="sect4">
-<h5 id="Anbefalte-egenskaper-Note"><a class="link" href="#Anbefalte-egenskaper-Note">Anbefalte egenskaper for klassen <em>Note</em></a></h5>
+<h5 id="Anbefalte-egenskaper-Note"><a class="link" href="#Anbefalte-egenskaper-Note">8.2.14.1. Anbefalte egenskaper for klassen <em>Note</em></a></h5>
 <div class="sect5">
-<h6 id="Note-anmerker"><a class="link" href="#Note-anmerker">Note: anmerker (modelldcatno:annotates)</a></h6>
+<h6 id="Note-anmerker"><a class="link" href="#Note-anmerker">8.2.14.1.1. Note: anmerker (modelldcatno:annotates)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -7004,7 +6989,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Note-anmerkning"><a class="link" href="#Note-anmerkning">Note: anmerkning (modelldcatno:propertyNote)</a></h6>
+<h6 id="Note-anmerkning"><a class="link" href="#Note-anmerkning">8.2.14.1.2. Note: anmerkning (modelldcatno:propertyNote)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -7043,7 +7028,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Note-identifikator"><a class="link" href="#Note-identifikator">Note: identifikator (dct:identifier)</a></h6>
+<h6 id="Note-identifikator"><a class="link" href="#Note-identifikator">8.2.14.1.3. Note: identifikator (dct:identifier)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -7078,7 +7063,7 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </table>
 </div>
 <div class="sect5">
-<h6 id="Note-tittel"><a class="link" href="#Note-tittel">Note: tittel (dct:title)</a></h6>
+<h6 id="Note-tittel"><a class="link" href="#Note-tittel">8.2.14.1.4. Note: tittel (dct:title)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -7118,9 +7103,9 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </div>
 </div>
 <div class="sect4">
-<h5 id="Valgfrie-egenskaper-Note"><a class="link" href="#Valgfrie-egenskaper-Note">Valgfrie egenskaper for klassen <em>Note</em></a></h5>
+<h5 id="Valgfrie-egenskaper-Note"><a class="link" href="#Valgfrie-egenskaper-Note">8.2.14.2. Valgfrie egenskaper for klassen <em>Note</em></a></h5>
 <div class="sect5">
-<h6 id="NOte-tilhørerModul"><a class="link" href="#NOte-tilhørerModul">Note: tilhører modul (modelldcatno:belongsToModule)</a></h6>
+<h6 id="NOte-tilhørerModul"><a class="link" href="#NOte-tilhørerModul">8.2.14.2.1. Note: tilhører modul (modelldcatno:belongsToModule)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -7157,14 +7142,14 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </div>
 </div>
 <div class="sect3">
-<h4 id="Realisering-egenskaper"><a class="link" href="#Realisering-egenskaper">Realisering (modelldcatno:Realization)</a></h4>
+<h4 id="Realisering-egenskaper"><a class="link" href="#Realisering-egenskaper">8.2.15. Realisering (modelldcatno:Realization)</a></h4>
 <div class="paragraph">
 <p>Klassen <em>Realisering</em> er valgfri.</p>
 </div>
 <div class="sect4">
-<h5 id="Anbefalte-egenskaper-Realisering"><a class="link" href="#Anbefalte-egenskaper-Realisering">Anbefalte egenskaper for klassen <em>Realisering</em></a></h5>
+<h5 id="Anbefalte-egenskaper-Realisering"><a class="link" href="#Anbefalte-egenskaper-Realisering">8.2.15.1. Anbefalte egenskaper for klassen <em>Realisering</em></a></h5>
 <div class="sect5">
-<h6 id="Realsering-harLeverandør"><a class="link" href="#Realsering-harLeverandør">Realisering: har leverandør (modelldcatno:hasSupplier)</a></h6>
+<h6 id="Realsering-harLeverandør"><a class="link" href="#Realsering-harLeverandør">8.2.15.1.1. Realisering: har leverandør (modelldcatno:hasSupplier)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -7205,14 +7190,14 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </div>
 </div>
 <div class="sect3">
-<h4 id="Rolle-egenskaper"><a class="link" href="#Rolle-egenskaper">Rolle (modelldcatno:Role)</a></h4>
+<h4 id="Rolle-egenskaper"><a class="link" href="#Rolle-egenskaper">8.2.16. Rolle (modelldcatno:Role)</a></h4>
 <div class="paragraph">
 <p>Klassen <em>Rolle</em> er anbefalt.</p>
 </div>
 <div class="sect4">
-<h5 id="Anbefalte-egenskaper-Rolle"><a class="link" href="#Anbefalte-egenskaper-Rolle">Anbefalte  egenskaper for klassen <em>Rolle</em></a></h5>
+<h5 id="Anbefalte-egenskaper-Rolle"><a class="link" href="#Anbefalte-egenskaper-Rolle">8.2.16.1. Anbefalte  egenskaper for klassen <em>Rolle</em></a></h5>
 <div class="sect5">
-<h6 id="Rolle-harObjekttype"><a class="link" href="#Rolle-harObjekttype">Rolle: har objekttype (modelldcatno:hasObjectType)</a></h6>
+<h6 id="Rolle-harObjekttype"><a class="link" href="#Rolle-harObjekttype">8.2.16.1.1. Rolle: har objekttype (modelldcatno:hasObjectType)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -7253,14 +7238,14 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </div>
 </div>
 <div class="sect3">
-<h4 id="Samling-egenskaper"><a class="link" href="#Samling-egenskaper">Samling (modelldcatno:Collection)</a></h4>
+<h4 id="Samling-egenskaper"><a class="link" href="#Samling-egenskaper">8.2.17. Samling (modelldcatno:Collection)</a></h4>
 <div class="paragraph">
 <p>Klassen <em>Samling</em> er valgfri</p>
 </div>
 <div class="sect4">
-<h5 id="Anbefalte-egenskaper-Samling"><a class="link" href="#Anbefalte-egenskaper-Samling">Anbefalte egenskaper for klassen <em>Samling</em></a></h5>
+<h5 id="Anbefalte-egenskaper-Samling"><a class="link" href="#Anbefalte-egenskaper-Samling">8.2.17.1. Anbefalte egenskaper for klassen <em>Samling</em></a></h5>
 <div class="sect5">
-<h6 id="Samling-harMedlem"><a class="link" href="#Samling-harMedlem">Samling: har medlem (modelldcatno:hasMember)</a></h6>
+<h6 id="Samling-harMedlem"><a class="link" href="#Samling-harMedlem">8.2.17.1.1. Samling: har medlem (modelldcatno:hasMember)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -7301,14 +7286,14 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </div>
 </div>
 <div class="sect3">
-<h4 id="Spesialisering-egenskaper"><a class="link" href="#Spesialisering-egenskaper">Spesialisering (modelldcatno:Specialization)</a></h4>
+<h4 id="Spesialisering-egenskaper"><a class="link" href="#Spesialisering-egenskaper">8.2.18. Spesialisering (modelldcatno:Specialization)</a></h4>
 <div class="paragraph">
 <p>Klassen <em>Spesialisering</em> er anbefalt</p>
 </div>
 <div class="sect4">
-<h5 id="Anbefalte-egenskaper-Spesialisering"><a class="link" href="#Anbefalte-egenskaper-Spesialisering">Anbefalte egenskaper for klassen <em>Spesialisering</em></a></h5>
+<h5 id="Anbefalte-egenskaper-Spesialisering"><a class="link" href="#Anbefalte-egenskaper-Spesialisering">8.2.18.1. Anbefalte egenskaper for klassen <em>Spesialisering</em></a></h5>
 <div class="sect5">
-<h6 id="Spesialisering-harGenereltKonsept"><a class="link" href="#Spesialisering-harGenereltKonsept">Spesialisering: har generelt konsept (modelldcatno:hasGeneralConcept)</a></h6>
+<h6 id="Spesialisering-harGenereltKonsept"><a class="link" href="#Spesialisering-harGenereltKonsept">8.2.18.1.1. Spesialisering: har generelt konsept (modelldcatno:hasGeneralConcept)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -7349,14 +7334,14 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </div>
 </div>
 <div class="sect3">
-<h4 id="Standard-egenskaper"><a class="link" href="#Standard-egenskaper">Standard (dct:Standard)</a></h4>
+<h4 id="Standard-egenskaper"><a class="link" href="#Standard-egenskaper">8.2.19. Standard (dct:Standard)</a></h4>
 <div class="paragraph">
 <p>Klassen <em>Standard</em> er valgfri.</p>
 </div>
 <div class="sect4">
-<h5 id="Obligatoriske-egenskaper-Standard"><a class="link" href="#Obligatoriske-egenskaper-Standard">Obligatoriske egenskaper for klassen <em>Standard</em></a></h5>
+<h5 id="Obligatoriske-egenskaper-Standard"><a class="link" href="#Obligatoriske-egenskaper-Standard">8.2.19.1. Obligatoriske egenskaper for klassen <em>Standard</em></a></h5>
 <div class="sect5">
-<h6 id="_standard_har_tittel_dcttitle"><a class="link" href="#_standard_har_tittel_dcttitle">Standard: har tittel (dct:title)</a></h6>
+<h6 id="_standard_har_tittel_dcttitle"><a class="link" href="#_standard_har_tittel_dcttitle">8.2.19.1.1. Standard: har tittel (dct:title)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -7392,9 +7377,9 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </div>
 </div>
 <div class="sect4">
-<h5 id="Anbefalte-egenskaper-Standard"><a class="link" href="#Anbefalte-egenskaper-Standard">Anbefalte egenskaper for klassen <em>Standard</em></a></h5>
+<h5 id="Anbefalte-egenskaper-Standard"><a class="link" href="#Anbefalte-egenskaper-Standard">8.2.19.2. Anbefalte egenskaper for klassen <em>Standard</em></a></h5>
 <div class="sect5">
-<h6 id="_standard_har_referanse_rdfsseealso"><a class="link" href="#_standard_har_referanse_rdfsseealso">Standard: har referanse (rdfs:seeAlso)</a></h6>
+<h6 id="_standard_har_referanse_rdfsseealso"><a class="link" href="#_standard_har_referanse_rdfsseealso">8.2.19.2.1. Standard: har referanse (rdfs:seeAlso)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -7430,9 +7415,9 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </div>
 </div>
 <div class="sect4">
-<h5 id="Valgfrie-egenskaper-Standard"><a class="link" href="#Valgfrie-egenskaper-Standard">Valgfrie egenskaper for klassen <em>Standard</em></a></h5>
+<h5 id="Valgfrie-egenskaper-Standard"><a class="link" href="#Valgfrie-egenskaper-Standard">8.2.19.3. Valgfrie egenskaper for klassen <em>Standard</em></a></h5>
 <div class="sect5">
-<h6 id="_standard_har_versjonsnummer_owlversioninfo"><a class="link" href="#_standard_har_versjonsnummer_owlversioninfo">Standard: har versjonsnummer (owl:versionInfo)</a></h6>
+<h6 id="_standard_har_versjonsnummer_owlversioninfo"><a class="link" href="#_standard_har_versjonsnummer_owlversioninfo">8.2.19.3.1. Standard: har versjonsnummer (owl:versionInfo)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -7469,14 +7454,14 @@ Egenskapene til modelldcatno:Attribute er gjensidig utelukkende, dvs. at de ikke
 </div>
 </div>
 <div class="sect3">
-<h4 id="Tidsrom-egenskaper"><a class="link" href="#Tidsrom-egenskaper">Tidsrom (dct:PeriodOfTime)</a></h4>
+<h4 id="Tidsrom-egenskaper"><a class="link" href="#Tidsrom-egenskaper">8.2.20. Tidsrom (dct:PeriodOfTime)</a></h4>
 <div class="paragraph">
 <p>Klassen <em>Tidsrom</em> er valgfri.</p>
 </div>
 <div class="sect4">
-<h5 id="Anbefalte-egenskaper-Tidsrom"><a class="link" href="#Anbefalte-egenskaper-Tidsrom">Anbefalte egenskaper for klassen <em>Tidsrom</em></a></h5>
+<h5 id="Anbefalte-egenskaper-Tidsrom"><a class="link" href="#Anbefalte-egenskaper-Tidsrom">8.2.20.1. Anbefalte egenskaper for klassen <em>Tidsrom</em></a></h5>
 <div class="sect5">
-<h6 id="Tidsrom-sluttdato"><a class="link" href="#Tidsrom-sluttdato">Tidsrom: sluttdato/tid (dcat:endDate)</a></h6>
+<h6 id="Tidsrom-sluttdato"><a class="link" href="#Tidsrom-sluttdato">8.2.20.1.1. Tidsrom: sluttdato/tid (dcat:endDate)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -7523,7 +7508,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 </div>
 </div>
 <div class="sect5">
-<h6 id="Tidsrom-startdata"><a class="link" href="#Tidsrom-startdata">Tidsrom: startdato/tid (dcat:startDate)</a></h6>
+<h6 id="Tidsrom-startdata"><a class="link" href="#Tidsrom-startdata">8.2.20.1.2. Tidsrom: startdato/tid (dcat:startDate)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -7560,14 +7545,14 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 </div>
 </div>
 <div class="sect3">
-<h4 id="valg-egenskaper"><a class="link" href="#valg-egenskaper">Valg (modelldcatno:Choice)</a></h4>
+<h4 id="valg-egenskaper"><a class="link" href="#valg-egenskaper">8.2.21. Valg (modelldcatno:Choice)</a></h4>
 <div class="paragraph">
 <p>Klassen <em>Valg</em> er valgfri.</p>
 </div>
 <div class="sect4">
-<h5 id="Anbefalte-egenskaper-Valg"><a class="link" href="#Anbefalte-egenskaper-Valg">Anbefalte egenskaper for klassen <em>Valg</em></a></h5>
+<h5 id="Anbefalte-egenskaper-Valg"><a class="link" href="#Anbefalte-egenskaper-Valg">8.2.21.1. Anbefalte egenskaper for klassen <em>Valg</em></a></h5>
 <div class="sect5">
-<h6 id="Valg-kanHa"><a class="link" href="#Valg-kanHa">Valg: kan ha (modelldcatno:hasSome)</a></h6>
+<h6 id="Valg-kanHa"><a class="link" href="#Valg-kanHa">8.2.21.1.1. Valg: kan ha (modelldcatno:hasSome)</a></h6>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -7611,21 +7596,21 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 </div>
 </div>
 <div class="sect1">
-<h2 id="Kontrollerte-vokabularer"><a class="link" href="#Kontrollerte-vokabularer">Kontrollerte vokabularer</a></h2>
+<h2 id="Kontrollerte-vokabularer"><a class="link" href="#Kontrollerte-vokabularer">9. Kontrollerte vokabularer</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="Krav-til-kontrollerte-vokabularer"><a class="link" href="#Krav-til-kontrollerte-vokabularer">Krav til kontrollerte vokabularer</a></h3>
+<h3 id="Krav-til-kontrollerte-vokabularer"><a class="link" href="#Krav-til-kontrollerte-vokabularer">9.1. Krav til kontrollerte vokabularer</a></h3>
 <div class="paragraph">
 <p>Se <a href="https://informasjonsforvaltning.github.io/dcat-ap-no/#Krav-til-kontrollerte-vokabularer">Krav til kontrollerte vokabularer i DCAT-AP-NO</a>.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Kontrollerte-vobakularer-som-skal-brukes"><a class="link" href="#Kontrollerte-vobakularer-som-skal-brukes">Kontrollerte vobakularer som skal brukes</a></h3>
+<h3 id="Kontrollerte-vobakularer-som-skal-brukes"><a class="link" href="#Kontrollerte-vobakularer-som-skal-brukes">9.2. Kontrollerte vobakularer som skal brukes</a></h3>
 <div class="paragraph">
 <p>Under følger en oversikt over kontrollerte vokabular som skal brukes (= obligatorisk) for egenskapene i listen, dette for å sikre et minimum av samhandlingsevne.</p>
 </div>
 <div class="sect3">
-<h4 id="Skal-brukes-for-format"><a class="link" href="#Skal-brukes-for-format">For egenskapen dct:format</a></h4>
+<h4 id="Skal-brukes-for-format"><a class="link" href="#Skal-brukes-for-format">9.2.1. For egenskapen dct:format</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -7664,7 +7649,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 </table>
 </div>
 <div class="sect3">
-<h4 id="Skal-brukes-for-language"><a class="link" href="#Skal-brukes-for-language">For egenskapen dct:language</a></h4>
+<h4 id="Skal-brukes-for-language"><a class="link" href="#Skal-brukes-for-language">9.2.2. For egenskapen dct:language</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -7707,7 +7692,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 </table>
 </div>
 <div class="sect3">
-<h4 id="Skal-brukes-for-license"><a class="link" href="#Skal-brukes-for-license">For egenskapen dct:license</a></h4>
+<h4 id="Skal-brukes-for-license"><a class="link" href="#Skal-brukes-for-license">9.2.3. For egenskapen dct:license</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -7750,7 +7735,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 </table>
 </div>
 <div class="sect3">
-<h4 id="Skal-brukes-for-spatial"><a class="link" href="#Skal-brukes-for-spatial">For egenskapen dct:spatial</a></h4>
+<h4 id="Skal-brukes-for-spatial"><a class="link" href="#Skal-brukes-for-spatial">9.2.4. For egenskapen dct:spatial</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -7795,7 +7780,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 </table>
 </div>
 <div class="sect3">
-<h4 id="Skal-brukes-for-status"><a class="link" href="#Skal-brukes-for-status">For egenskapen adms:status</a></h4>
+<h4 id="Skal-brukes-for-status"><a class="link" href="#Skal-brukes-for-status">9.2.5. For egenskapen adms:status</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -7826,7 +7811,7 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 </table>
 </div>
 <div class="sect3">
-<h4 id="Skal-brukes-for-type"><a class="link" href="#Skal-brukes-for-type">For egenskapen dct:type</a></h4>
+<h4 id="Skal-brukes-for-type"><a class="link" href="#Skal-brukes-for-type">9.2.6. For egenskapen dct:type</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -7932,9 +7917,9 @@ Vær oppmerksom på at selv om begge egenskapene anbefales, må en av de to vær
 </div>
 </div>
 <div class="sect2">
-<h3 id="Kontrollerte-vobakularer-som-bør-brukes"><a class="link" href="#Kontrollerte-vobakularer-som-bør-brukes">Kontrollerte vokabularer som bør og kan brukes</a></h3>
+<h3 id="Kontrollerte-vobakularer-som-bør-brukes"><a class="link" href="#Kontrollerte-vobakularer-som-bør-brukes">9.3. Kontrollerte vokabularer som bør og kan brukes</a></h3>
 <div class="sect3">
-<h4 id="Bør-brukes-for-spatial"><a class="link" href="#Bør-brukes-for-spatial">For egenskapen dct:spatial</a></h4>
+<h4 id="Bør-brukes-for-spatial"><a class="link" href="#Bør-brukes-for-spatial">9.3.1. For egenskapen dct:spatial</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -7980,7 +7965,7 @@ Kommune <a href="https://data.geonorge.no/administrativeEnheter/kommune/id/" cla
 </table>
 </div>
 <div class="sect3">
-<h4 id="Bør-brukes-for-theme"><a class="link" href="#Bør-brukes-for-theme">For egenskapen dcat:theme</a></h4>
+<h4 id="Bør-brukes-for-theme"><a class="link" href="#Bør-brukes-for-theme">9.3.2. For egenskapen dcat:theme</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -8011,7 +7996,7 @@ Kommune <a href="https://data.geonorge.no/administrativeEnheter/kommune/id/" cla
 </table>
 </div>
 <div class="sect3">
-<h4 id="Bør-brukes-for-themeTaxonomy"><a class="link" href="#Bør-brukes-for-themeTaxonomy">For egenskapen dcat:themeTaxonomy</a></h4>
+<h4 id="Bør-brukes-for-themeTaxonomy"><a class="link" href="#Bør-brukes-for-themeTaxonomy">9.3.3. For egenskapen dcat:themeTaxonomy</a></h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -8045,8 +8030,14 @@ Kommune <a href="https://data.geonorge.no/administrativeEnheter/kommune/id/" cla
 </div>
 </div>
 <div class="sect1">
-<h2 id="Endringslogg"><a class="link" href="#Endringslogg">Endringslogg</a></h2>
+<h2 id="Endringslogg"><a class="link" href="#Endringslogg">Vedlegg - Endringslogg</a></h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="Endringer_fra_v_1.3.1"><a class="link" href="#Endringer_fra_v_1.3.1">Endringer fra v.1.3.0 til v.1.3.1</a></h3>
+<div class="paragraph">
+<p>Kapitler og underkapitler er nå nummerert slik at kravene i spesifikasjonen har hvert sitt nøyaktige referansenummer.</p>
+</div>
+</div>
 <div class="sect2">
 <h3 id="Endringer_fra_v_1.2.x"><a class="link" href="#Endringer_fra_v_1.2.x">Endringer fra v.1.2.x til v.1.3.0</a></h3>
 <div class="paragraph">
@@ -8520,7 +8511,7 @@ ga('send', 'pageview');
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2025-02-14 07:52:46 UTC
+Sist oppdatert 2025-02-17 10:32:57 UTC
 </div>
 </div>
 </body>
