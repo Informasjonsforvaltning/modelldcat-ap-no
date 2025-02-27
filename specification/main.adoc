@@ -15,7 +15,7 @@ image::images/Digdir.png[width=30%, pdfwidth=30vw, link=https://digdir.no/]
 
 include::locale/attributes-nb.adoc[]
 
-include::shared/download.adoc[]
+include::download.adoc[]
 
 include::locale/attributes.adoc[]
 
@@ -118,5 +118,5 @@ include::xx_Kontrollerte_vokabularer.adoc[]
 include::yy_Endringslogg.adoc[]
 
 
-// statistikk:
-include::./shared/stats.adoc[]
+// Analytics
+include::./shared/analytics.adoc[]
