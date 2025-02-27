@@ -18,6 +18,18 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Build html en
+        id: adocbuild_html_en
+        uses: tonynv/asciidoctor-action@master
+        with:
+          program: "asciidoctor -a data-uri -D ontology -o index-en.html -a lang=en ontology/main-en.adoc"
+
+      - name: Build html nb
+        id: adocbuild_html_nb
+        uses: tonynv/asciidoctor-action@master
+        with:
+          program: "asciidoctor -a data-uri -D ontology -o index-nb.html -a lang=nb ontology/main-nb.adoc"
+
       - name: Upload rdf to static-rdf-server
         uses: Informasjonsforvaltning/upload-files-to-static-rdf-server-action@v3.2.0
         id: upload-rdf
@@ -28,4 +40,5 @@ jobs:
           api-key: ${{ secrets.STATIC_RDF_SERVER_API_KEY }}
           files: |
             ontology/modelldcatno.ttl text/turtle en
-            ontology/index.html text/html nb
+            ontology/index-nb.html text/html nb
+            ontology/index-en.html text/html en
