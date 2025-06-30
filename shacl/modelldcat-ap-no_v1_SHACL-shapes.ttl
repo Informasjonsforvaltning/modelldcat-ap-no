@@ -297,11 +297,9 @@
 :Abstraction_Shape
     a sh:NodeShape ;
     sh:name "Abstraction"@en , "Abstraksjon"@nb ;
-    sh:subClassOf modelldcatno:Property ;
     sh:property [
         sh:name "er abstraksjon av"@nb , "is abstraction of"@en ;
         sh:maxCount 1 ;
-        sh:subClassOf modelldcatno:hasType ;
         sh:path modelldcatno:isAbstractionOf ;
         sh:or ( [sh:class modelldcatno:ModelElement]
                 [sh:class modelldcatno:Property] ) ; # v.1.1
@@ -315,11 +313,9 @@
 :Association_Shape
     a sh:NodeShape ;
     sh:name "Association"@en , "Assosiasjon"@nb ;
-    sh:subClassOf modelldcatno:Property ;
     sh:property [
         sh:name "refererer til"@nb, "refers to"@en ;
         sh:maxCount 1;
-        sh:subClassOf modelldcatno:hasType ;
         sh:path modelldcatno:refersTo ;
         sh:class modelldcatno:ModelElement ;
         sh:severity sh:Violation ;
@@ -332,7 +328,6 @@
 :Attribute_Shape
     a sh:NodeShape ;
     sh:name "Attribute"@en , "Attributt"@nb ;
-    sh:subClassOf modelldcatno:Property ;
 
     ### sh:or under er for å uttrykke at alle egenskape er gjensidig utelukkende:
     sh:or (
@@ -343,7 +338,6 @@
                   sh:property [
                     sh:name "inneholder objekttype"@nb , "contains object type"@en ;
                     sh:path modelldcatno:containsObjectType ;
-                    sh:subClassOf modelldcatno:hasType ;
                     sh:class modelldcatno:ObjectType ;
                     sh:message "Egenskap `inneholder objekttype` (modelldcatno:hasType) kan ha maks. én verdi, som skal være instans av modelldcatno:ObjectType."@nb ;
                   ] ;
@@ -353,7 +347,6 @@
                     sh:name "har datatype"@nb , "has data type"@en ;
                     sh:maxCount 0 ;
                     sh:path modelldcatno:hasDataType ;
-                    sh:subClassOf modelldcatno:hasType ;
                     sh:class modelldcatno:DataType ;
                   ] ;
                 ]
@@ -362,7 +355,6 @@
                     sh:name "har enkeltype"@nb , "has simple type"@en ;
                     sh:maxCount 0 ;
                     sh:path modelldcatno:hasSimpleType ;
-                    sh:subClassOf modelldcatno:hasType ;
                     sh:class modelldcatno:SimpleType ;
                   ] ;
                 ]
@@ -371,7 +363,6 @@
                     sh:name "har verdi fra"@nb , "has value from"@en ;
                     sh:maxCount 0 ;
                     sh:path modelldcatno:hasValueFrom ;
-                    sh:subClassOf modelldcatno:hasType ;
                     sh:class modelldcatno:CodeList ;
                   ] ;
                 ]
@@ -385,7 +376,6 @@
                     sh:name "inneholder objekttype"@nb , "contains object type"@en ;
                     sh:maxCount 0 ;
                     sh:path modelldcatno:containsObjectType ;
-                    sh:subClassOf modelldcatno:hasType ;
                     sh:class modelldcatno:ObjectType ;
                   ] ;
                 ]
@@ -393,7 +383,6 @@
                   sh:property [
                     sh:name "har datatype"@nb , "has data type"@en ;
                     sh:path modelldcatno:hasDataType ;
-                    sh:subClassOf modelldcatno:hasType ;
                     sh:class modelldcatno:DataType ;
                     sh:message "Egenskap `har datatype` (modelldcatno:hasDataType) kan ha maks. én verdi, som skal være instans av modelldcatno:DataType."@nb ;
                   ] ;
@@ -403,7 +392,6 @@
                     sh:name "har enkeltype"@nb , "has simple type"@en ;
                     sh:maxCount 0 ;
                     sh:path modelldcatno:hasSimpleType ;
-                    sh:subClassOf modelldcatno:hasType ;
                     sh:class modelldcatno:SimpleType ;
                   ] ;
                 ]
@@ -412,7 +400,6 @@
                     sh:name "har verdi fra"@nb , "has value from"@en ;
                     sh:maxCount 0 ;
                     sh:path modelldcatno:hasValueFrom ;
-                    sh:subClassOf modelldcatno:hasType ;
                     sh:class modelldcatno:CodeList ;
                   ] ;
                 ]
@@ -426,7 +413,6 @@
                     sh:name "inneholder objekttype"@nb , "contains object type"@en ;
                     sh:maxCount 0 ;
                     sh:path modelldcatno:containsObjectType ;
-                    sh:subClassOf modelldcatno:hasType ;
                     sh:class modelldcatno:ObjectType ;
                   ] ;
                 ]
@@ -435,7 +421,6 @@
                     sh:name "har datatype"@nb , "has data type"@en ;
                     sh:maxCount 0 ;
                     sh:path modelldcatno:hasDataType ;
-                    sh:subClassOf modelldcatno:hasType ;
                     sh:class modelldcatno:DataType ;
                   ] ;
                 ]
@@ -443,7 +428,6 @@
                   sh:property [
                     sh:name "har enkeltype"@nb , "has simple type"@en ;
                     sh:path modelldcatno:hasSimpleType ;
-                    sh:subClassOf modelldcatno:hasType ;
                     sh:class modelldcatno:SimpleType ;
                     sh:message "Egenskap `har enkeltype` (modelldcatno:hasSimpleType) kan ha maks. én verdi, som skal være instans av modelldcatno:SimpleType."@nb ;
                   ] ;
@@ -453,7 +437,6 @@
                     sh:name "har verdi fra"@nb , "has value from"@en ;
                     sh:maxCount 0 ;
                     sh:path modelldcatno:hasValueFrom ;
-                    sh:subClassOf modelldcatno:hasType ;
                     sh:class modelldcatno:CodeList ;
                   ] ;
                 ]
@@ -467,7 +450,6 @@
                     sh:name "inneholder objekttype"@nb , "contains object type"@en ;
                     sh:maxCount 0 ;
                     sh:path modelldcatno:containsObjectType ;
-                    sh:subClassOf modelldcatno:hasType ;
                     sh:class modelldcatno:ObjectType ;
                   ] ;
                 ]
@@ -476,7 +458,6 @@
                     sh:name "har datatype"@nb , "has data type"@en ;
                     sh:maxCount 0 ;
                     sh:path modelldcatno:hasDataType ;
-                    sh:subClassOf modelldcatno:hasType ;
                     sh:class modelldcatno:DataType ;
                   ] ;
                 ]
@@ -485,7 +466,6 @@
                     sh:name "har enkeltype"@nb , "has simple type"@en ;
                     sh:maxCount 0 ;
                     sh:path modelldcatno:hasSimpleType ;
-                    sh:subClassOf modelldcatno:hasType ;
                     sh:class modelldcatno:SimpleType ;
                     sh:message "Egenskap `har enkeltype` (modelldcatno:hasSimpleType) kan ha maks. én verdi, som skal være instans av modelldcatno:SimpleType."@nb ;
                   ] ;
@@ -494,7 +474,6 @@
                   sh:property [
                     sh:name "har verdi fra"@nb , "has value from"@en ;
                     sh:path modelldcatno:hasValueFrom ;
-                    sh:subClassOf modelldcatno:hasType ;
                     sh:class modelldcatno:CodeList ;
                   ] ;
                 ]
@@ -507,7 +486,6 @@
 :ConstraintRule_Shape # hele klassen er ny i v.1.1
     a sh:NodeShape ;
     sh:name "Constraint rule"@en , "Begrensningsregel"@nb ;
-    sh:subClassOf modelldcatno:Note ;
     sh:property [ # arvet fra modelldcatno:Note
         sh:name "tittel"@nb , "title"@en ;
         sh:path dct:title;
@@ -721,14 +699,12 @@
 :Choice_Shape
     a sh:NodeShape ;
     sh:name "Valg"@nb , "Choice"@en ;
-    sh:subClassOf modelldcatno:Property ;
     sh:property [
         sh:name "kan ha"@nb , "has some"@en ;
         sh:path modelldcatno:hasSome ;
         sh:or (
             [sh:class modelldcatno:ModelElement]
             [sh:class modelldcatno:Property] ) ;
-        sh:subClassOf modelldcatno:hasType ;
         sh:severity sh:Violation ;
         sh:message "Egenskap `kan ha` (modelldcatno:hasSome) kan bare ha verdi som er instans av modelldcatno:ModelElement."@nb ;
     ] ;
@@ -844,7 +820,6 @@
 :CodeList_Shape
     a sh:NodeShape ;
     sh:name "Codelist"@en , "Kodeliste"@nb ;
-    sh:subClassOf modelldcatno:ModelElement ;
     sh:property [
         sh:name "har referanse"@nb , "has reference"@en ;
         sh:nodeKind sh:IRIOrLiteral ;
@@ -857,12 +832,10 @@
 :Collection_Shape
     a sh:NodeShape ;
     sh:name "Samling"@nb , "Collection"@en ;
-    sh:subClassOf modelldcatno:Property ;
     sh:property [
         sh:name "har medlem"@nb , "has member"@en ;
         sh:path modelldcatno:hasMember ;
         sh:class modelldcatno:ModelElement ;
-        sh:subClassOf modelldcatno:hasType ;
         sh:maxCount 1;
         sh:severity sh:Violation ;
         sh:message "Egenskap `har medlem` (modelldcatno:hasMember) kan bare ha verdi som er instans av modelldcatno:ModelElement."@nb ;
@@ -873,13 +846,11 @@
 :Composition_Shape
     a sh:NodeShape ;
     sh:name "Composition"@en , "Komposisjon"@nb ;
-    sh:subClassOf modelldcatno:Property ;
     sh:property [
         sh:name "inneholder"@nb , "contains"@en ;
         sh:path modelldcatno:contains ;
         sh:class modelldcatno:ModelElement ;
         sh:maxCount 1;
-        sh:subClassOf modelldcatno:hasType ;
         sh:severity sh:Violation ;
         sh:message "En kompoisisjon kan inneholde (modelldcatno:contains) maks. ett Modellelement (instans av modelldcatno:ModelElement)."@nb ;
     ] ;
@@ -889,13 +860,11 @@
 :Dependency_Shape
     a sh:NodeShape ;
     sh:name "Dependency"@en , "Avhengighet"@nb ;
-    sh:subClassOf modelldcatno:Property ;
     sh:property [
         sh:name "er avhengig av"@nb , "is dependent on"@en ;
         sh:path modelldcatno:dependentOn ;
         sh:class modelldcatno:ModelElement ;
         sh:maxCount 1;
-        sh:subClassOf modelldcatno:hasType ;
         sh:severity sh:Violation ;
         sh:message "En avhengighet kan være avhengig av (modelldcatno:dependentOn) maks. ett Modellelement (instans av modelldcatno:ModelElement)."@nb ;
     ] ;
@@ -1341,13 +1310,11 @@
 :Realization_Shape
     a sh:NodeShape ;
     sh:name "Realization"@en , "Realisering"@nb ;
-    sh:subClassOf modelldcatno:Property ;
     sh:property [
         sh:name "har leverandør"@nb , "has supplier"@en ;
         sh:path modelldcatno:hasSupplier ;
         sh:or ( [sh:class modelldcatno:ModelElement]
                 [sh:class modelldcatno:Property ] ) ; # v.1.1
-        sh:subClassOf modelldcatno:hasType ;
         sh:maxCount 1;
         sh:severity sh:Violation ;
         sh:message "Egenskap `har leverandør` (modelldcatno:hasSupplier) kan bare ha verdi som er instans av modelldcatno:ModelElement eller modelldcatno:Property."@nb ;
@@ -1358,13 +1325,11 @@
 :Role_Shape
     a sh:NodeShape ;
     sh:name "Rolle"@nb , "Role"@en ;
-    sh:subClassOf modelldcatno:Property ;
     sh:property [
         sh:name "har objekttype"@nb , "has object type"@en ;
         sh:minCount 1 ;
         sh:path modelldcatno:hasObjectType ;
         sh:class modelldcatno:ObjectType ;
-        sh:subClassOf modelldcatno:hasType ;
         sh:severity sh:Violation ;
         sh:message "Egenskap `modelldcatno:hasObjectType` (modelldcatno:hasObjectType) kan bare ha verdi som er instans av modelldcatno:ObjectType."@nb ;
     ] ;
@@ -1374,7 +1339,6 @@
 :SimpleType_Shape
     a sh:NodeShape ;
     sh:name "Simple type"@en , "Enkeltype"@nb ;
-    sh:subClassOf modelldcatno:ModelElement ;
     sh:property [
         sh:name "typedefinisjon"@nb , "type definition reference"@en ;
         sh:maxCount 1 ;
@@ -1460,12 +1424,10 @@
 :Specialization_Shape
     a sh:NodeShape ;
     sh:name "Spesialisering"@nb , "Specialization"@en ;
-    sh:subClassOf modelldcatno:Property ;
     sh:property [
         sh:name "har generelt konsept"@nb , "has general concept"@en ;
         sh:path modelldcatno:hasGeneralConcept ;
         sh:class modelldcatno:ModelElement ;
-        sh:subClassOf modelldcatno:hasType ;
         sh:maxCount 1;
         sh:severity sh:Violation ;
         sh:message "Egenskap `har generelt konsept` (modelldcatno:hasGeneralConcept) kan ha maks. én verdi, som skal være instans av modelldcatno:ModelElement."@nb ;
