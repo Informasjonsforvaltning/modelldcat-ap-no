@@ -16,6 +16,6 @@ Navnerom for dette vokabularet skal være https://data.norge.no/vocabulary/model
 |prof|https://www.w3.org/ns/dx/prof/|The Profiles Vocabulary
 |skos|http://www.w3.org/2004/02/skos/core#|SKOS Simple Knowledge Organization System - Reference
 |vcard|http://www.w3.org/2006/vcard/ns#|vCard Ontology
-|xkos | https://ddialliance.org/Specification/XKOS/1.2/OWL/xkos.html |An SKOS extension for representing statistical classifications
+|xkos | http://rdf-vocabulary.ddialliance.org/xkos# | An SKOS extension for representing statistical classifications
 |xsd|http://www.w3.org/2001/XMLSchema#|XML Schema Part 2: Datatypes Second Edition
 |===
