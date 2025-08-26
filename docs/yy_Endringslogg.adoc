@@ -1,6 +1,10 @@
 = Vedlegg - Endringslogg [[Endringslogg]]
 
-== Endringer fra v.1.3.0 til v.1.3.1 [[Endringer_fra_v_1.3.1]]
+== Endringer fra v.1.3.1 til v.1.3.x [[Endringer_v_1.3.x]]
+
+Kun redaksjonelle justeringer (bl.a. å rette opp brutte lenker).
+
+== Endringer fra v.1.3.0 til v.1.3.1 [[Endringer_v_1.3.1]]
 
 Kapitler og underkapitler er nå nummerert slik at kravene i spesifikasjonen har hvert sitt nøyaktige referansenummer. 
 
