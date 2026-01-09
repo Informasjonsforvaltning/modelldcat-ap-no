@@ -1,5 +1,9 @@
 name: Build and publish docs to GitHub pages
 
+permissions:
+  contents: read
+  pages: write
+
 on:
   push:
     branches:
