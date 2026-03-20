@@ -509,7 +509,7 @@ dcat:endDate rdf:type owl:DatatypeProperty ;
 
 ###  http://www.w3.org/ns/dcat#keyword
 dcat:keyword rdf:type owl:DatatypeProperty ;
-             rdfs:label "emneord"@nb ,
+             rdfs:label "nøkkelord"@nb ,
                         "keyword"@en .
 
 
