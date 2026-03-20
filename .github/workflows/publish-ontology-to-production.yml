@@ -1,5 +1,8 @@
 name: Publish ontology to data.norge.no/vocabulary
 
+permissions:
+  contents: read
+
 on:
   push:
     branches:
@@ -16,7 +19,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           ref: v1
           submodules: true

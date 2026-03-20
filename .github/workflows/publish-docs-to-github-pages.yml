@@ -1,5 +1,9 @@
 name: Build and publish docs to GitHub pages
 
+permissions:
+  contents: write
+  pages: write
+
 on:
   push:
     branches:
@@ -15,7 +19,7 @@ jobs:
     steps:
 
       - name: Checkout code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           submodules: true
           fetch-depth: 0

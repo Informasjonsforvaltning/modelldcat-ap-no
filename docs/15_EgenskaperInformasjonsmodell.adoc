@@ -150,14 +150,14 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Kravnivå|Valgfri
 |===
 
-=====  Informasjonsmodell: emneord (dcat:keyword) [[Informasjonsmodell-emneord]]
+=====  Informasjonsmodell: nøkkelord (dcat:keyword) [[Informasjonsmodell-nøkkelord]]
 
 [cols="30s,70d"]
 |===
 |Engelsk navn | keyword
 |URI|dcat:keyword
 |Range|rdfs:Literal
-|Beskrivelse|Inneholder emneord (eller tag) som beskriver modellen.
+|Beskrivelse|Inneholder nøkkelord som beskriver modellen.
 |Multiplisitet|0..n
 |Kravnivå|Valgfri
 |===
