@@ -30,7 +30,7 @@
     dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ; # lisens
   ###### optional:
     dct:spatial <http://publications.europa.eu/resource/authority/country/NOR/> ; # dekningsområde
-    dcat:keyword "stikkord1"@nb , "keyword1"@en ; # emneord, dummydata
+    dcat:keyword "stikkord1"@nb , "keyword1"@en ; # nøkkelord, dummydata
     dct:modified "2020-11-11"^^xsd:date ; # endringsdato
     dct:isPartOf <https://example.com/models/dummyMod101> ; # er del av, dummydata
     prof:isProfileOf <https://example.com/models/dummyxMod102> ; # er profil av, dummydata

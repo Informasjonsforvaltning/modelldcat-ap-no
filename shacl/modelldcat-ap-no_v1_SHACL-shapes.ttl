@@ -985,7 +985,7 @@
     ],
         :SpatialProperty_Shape ,
     [
-        sh:name "emneord"@nb , "keyword"@en ;
+        sh:name "nøkkelord"@nb , "keyword"@en ;
         sh:nodeKind sh:Literal ;
         sh:path dcat:keyword ;
         sh:severity sh:Violation ;
