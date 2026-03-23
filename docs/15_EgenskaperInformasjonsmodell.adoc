@@ -150,18 +150,6 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Kravnivå|Valgfri
 |===
 
-=====  Informasjonsmodell: nøkkelord (dcat:keyword) [[Informasjonsmodell-nøkkelord]]
-
-[cols="30s,70d"]
-|===
-|Engelsk navn | keyword
-|URI|dcat:keyword
-|Range|rdfs:Literal
-|Beskrivelse|Inneholder nøkkelord som beskriver modellen.
-|Multiplisitet|0..n
-|Kravnivå|Valgfri
-|===
-
 =====  Informasjonsmodell: endringsdato (dct:modified) [[Informasjonsmodell-endringsdato]]
 
 [cols="30s,70d"]
@@ -293,6 +281,18 @@ Klassen _Informasjonsmodell_ er obligatorisk
 |Range|skos:Concept
 |Beskrivelse|Modellens modenhet. Må ha en av verdiene Completed, Deprecated, Under Development, Withdrawn.
 |Multiplisitet|0..1
+|Kravnivå|Valgfri
+|===
+
+=====  Informasjonsmodell: nøkkelord (dcat:keyword) [[Informasjonsmodell-nøkkelord]]
+
+[cols="30s,70d"]
+|===
+|Engelsk navn | keyword
+|URI|dcat:keyword
+|Range|rdfs:Literal
+|Beskrivelse|Inneholder nøkkelord som beskriver modellen.
+|Multiplisitet|0..n
 |Kravnivå|Valgfri
 |===
 
