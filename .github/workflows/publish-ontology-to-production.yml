@@ -14,6 +14,7 @@ on:
 jobs:
   upload-files-to-production:
     name: Upload vocabulary to static-rdf-server
+    if: github.event_name != 'workflow_dispatch' || github.ref == 'refs/heads/v1'
     uses: Informasjonsforvaltning/workflows/.github/workflows/specification-upload-files.yaml@main
     with:
       ref: v1

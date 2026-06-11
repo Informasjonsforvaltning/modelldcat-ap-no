@@ -14,6 +14,7 @@ on:
 jobs:
   build-adocs:
     name: asciidoctor build
+    if: github.event_name != 'workflow_dispatch' || github.ref == 'refs/heads/develop'
     uses: Informasjonsforvaltning/workflows/.github/workflows/specification-github-pages.yaml@main
     with:
       program_html: |
