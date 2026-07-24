@@ -1,0 +1,38 @@
+name: build adocs and publish v1.3 to production subfolder
+
+permissions:
+  contents: read
+
+on:
+  push:
+    branches:
+      - v1.3
+    paths:
+      - docs/**
+  workflow_dispatch:
+
+jobs:
+  upload-files-to-production:
+    name: Upload specification to static-rdf-server
+    if: github.event_name != 'workflow_dispatch' || github.ref == 'refs/heads/v1'
+    uses: Informasjonsforvaltning/workflows/.github/workflows/specification-upload-files.yaml@main
+    with:
+      ref: v1
+      program_html: |
+        asciidoctor -D docs -o index.html -a lang=nb docs/main.adoc
+      program_pdf: |
+        asciidoctor-pdf -D docs -o files/modelldcat-ap-no.pdf -a lang=nb docs/main.adoc
+      program_pdf_continue_on_error: true
+      host: https://data.norge.no
+      ontology: modelldcat-ap-no
+      ontology-type: specification
+      version: v1.3
+      files: |
+        docs/index.html text/html nb
+        docs/files/modelldcat-ap-no.pdf application/pdf nb files/modelldcat-ap-no.pdf
+        docs/files/ModellDCAT-AP-NO_V1_3_20230703.eapx application/octet-stream nb files/ModellDCAT-AP-NO_V1_3_20230703.eapx
+        docs/images/digitaliseringsdirektoratet.png image/png nb images/digitaliseringsdirektoratet.png
+        docs/images/ModellDCAT-AP-NO_V1-3_20230703.png image/png nb images/ModellDCAT-AP-NO_V1-3_20230703.png
+        docs/images/Digdir.png image/png nb images/Digdir.png
+    secrets:
+      STATIC_RDF_SERVER_API_KEY: ${{ secrets.STATIC_RDF_SERVER_API_KEY }}

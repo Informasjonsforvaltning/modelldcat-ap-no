@@ -75,7 +75,6 @@ http://sws.geonames.org/
 ------
 <> dct:spatial <http://publications.europa.eu/resource/authority/country/NOR> . # Norge
 ------
-|
 |===
 
 === For egenskapen adms:status [[Skal-brukes-for-status]]
