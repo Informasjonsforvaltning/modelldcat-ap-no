@@ -1,0 +1,7 @@
+=== Om bruk av egenskap «identifikator» (`dct:identifier`) [[om-identifikator]]
+
+Egenskapen `dct:identifier` brukes til å angi identifikatoren til subjektet (første leddet) i en RDF-trippel. Subjektet i en RDF-trippel er per definisjon en identifikator (URI). I en konkret realisering vil instanser av klassene (inkl. deres subklasser) Modellkatalog (`dcat:Catalog`), Informasjonsmodell (`modelldcatno:InformationModel`), Modellelement (`modelldcatno:ModelElement`), Egenskap (`modelldcatno:Property`), Kodeliste (`modelldcatno:CodeListe`) og Kodeelement (`modelldcatno:CodeElement`) derfor få en «innebygd» identifikator. Det er med andre ord strengt tatt ikke nødvendig å ha en identifikator (`dct:identifier`) i tillegg til den «innebygde» identifikatoren.
+
+Egenskapen `dct:identifier` er derfor satt som anbefalt og ikke obligatorisk i de nevnte klasser og deres subklasser.
+
+Identifikatoren bør utformes i henhold til https://www.digdir.no/digitale-felleslosninger/peikarar-til-offentlege-ressursar-pa-nett/1492[_Standard for pekere til offentlige ressurser på nett_].

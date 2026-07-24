@@ -1,0 +1,18 @@
+
+=== Klassen Rotobjekttype (`modelldcatno:RootObjectType`) [[Rotobjekttype]]
+
+[[img-KlassenRotobjekttype]]
+.Klassen Rotobjekttype (`modelldcatno:RootObjectType`)
+[link=images/KlassenRotobjekttype.png]
+image::images/KlassenRotobjekttype.png[alt="UML-diagram med klassen Rotobjekttype og dens egenskaper. Innholdet i diagrammet er forklart i teksten."]
+
+[cols="30s,70d"]
+|===
+| __English name__ | __Root Object Type__
+| URI | `modelldcatno:RootObjectType`
+| Subklasse av / __Subclass of__ | Modellelement (`modelldcatno:ModelElement`)
+| Anvendelse / __Usage note__ | Klassen brukes til å representere den overordnede objekttypen som omslutter alle de andre modellelementene i en modell.
+
+__This class is used to represent the root object type in a model.__
+|===
+

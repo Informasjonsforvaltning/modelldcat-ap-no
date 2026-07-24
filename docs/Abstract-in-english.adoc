@@ -1,0 +1,9 @@
+== __Abstract in English__
+
+.__**English speaking readers, you may click here** to read what this specification is about and how you may read it.__
+[%collapsible]
+====
+__This specification, ModellDCAT-AP-NO, is the Norwegian application profile of DCAT, for describing information models.__ 
+
+__The specification is mainly in Norwegian. However, in <<Spesifikasjon-per-klasse, Chap. 3>> which requires a certain level of knowledge in RDF, the specification of the classes and properties is in both Norwegian and English.__
+====
