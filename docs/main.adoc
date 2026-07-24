@@ -34,7 +34,7 @@ include::locale/attributes.adoc[]
 
 *Status*: #Utfaset# +
 *Versjon*: 1.3.3 (se <<Endringslogg, endringsloggen>>) +
-*Publisert*: 2026-07-24 Utfaset, 2023-07-03 (v.1.3) 2022-08-26 (v.1.2) 2021-06-28 (v.1.1), 2020-12-18 (v.1.0)  +
+*Publisert*: 2026-07-24 Utfaset, 2023-07-03 (v.1.3) 2022-08-26 (v.1.2) 2021-06-28 (v.1.1), 2020-12-18 (v.1.0) +
 *Oppdatert*: 2026-03-20 (v.1.3.x)  +
 *Gjeldende versjon av spesifikasjon*: https://data.norge.no/specification/modelldcat-ap-no/ +
 *Gjeldende versjon av ontologi*: https://data.norge.no/vocabulary/modelldcatno +
