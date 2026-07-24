@@ -26,7 +26,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 *Status*: Gjeldende +
 *Versjon*: 1.4.0 (se <<Endringslogg, endringsloggen>>) +
 *Publisert*: 2026-07-24 (v.1.4), 2023-07-03 (v.1.3), 2022-08-26 (v.1.2), 2021-06-28 (v.1.1), 2020-12-18 (v.1.0)  +
-*Oppdatert*: #under utarbeidelse# (v.1.4.0)  +
+*Oppdatert*: 2026-07-24 (v.1.4.0)  +
 *Gjeldende versjon av spesifikasjon*: https://data.norge.no/specification/modelldcat-ap-no/ +
 *Forrige versjon av spesifikasjon*: https://data.norge.no/specification/modelldcat-ap-no/v1.3 +
 *Gjeldende versjon av ontologi*: https://data.norge.no/vocabulary/modelldcatno +
