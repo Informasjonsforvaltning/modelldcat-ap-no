@@ -165,6 +165,7 @@ En enkel beskrivelse av informasjonsmodellen vist i <<img-KlasseOversikt>> kan s
 <digdir> a vcard:Organization ; # Kontaktpunkt - organisasjon
     vcard:fn "Digitaliseringsdirektoratet"@nb , "The Norwegian Digitalisation Agency"@en ; # fullt navn - obligatorisk
     vcard:hasEmail <mailto:informasjonsforvaltning@digdir.no> ; # e-post - anbefalt
+    .
 
 <png-visning> a foaf:Document ; # Dokument
     dct:format <http://publications.europa.eu/resource/authority/file-type/PNG> ; # format - valgfritt

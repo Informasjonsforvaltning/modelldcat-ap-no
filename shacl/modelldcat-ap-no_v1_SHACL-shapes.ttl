@@ -511,7 +511,7 @@
         sh:path modelldcatno:belongsToModule;
         sh:class modelldcatno:Module ;
         sh:severity sh:Violation ;
-        sh:message "Egenskap `tilhører modul` (modelldcatno:belongsToModule skal være instans av modelldcatno:Module."@nb ;
+        sh:message "Egenskap `tilhører modul` (modelldcatno:belongsToModule) skal være instans av modelldcatno:Module."@nb ;
     ] ;
     sh:property [ # egen egenskap
         sh:name "begrenser"@nb , "constrains"@en ;
