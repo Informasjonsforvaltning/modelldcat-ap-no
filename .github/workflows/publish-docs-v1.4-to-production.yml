@@ -6,7 +6,7 @@ permissions:
 on:
   push:
     branches:
-      - v1.40
+      - v1.4
     paths:
       - docs/**
   workflow_dispatch:
