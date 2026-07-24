@@ -1,4 +1,4 @@
-name: build adocs and publish v1.4 to staging
+name: build adocs and publish v1.4 to production
 
 permissions:
   contents: read
@@ -6,7 +6,7 @@ permissions:
 on:
   push:
     branches:
-      - v1.4
+      - v1.40
     paths:
       - docs/**
   workflow_dispatch:
@@ -23,7 +23,7 @@ jobs:
       program_pdf: |
         asciidoctor-pdf -D docs -o files/modelldcat-ap-no.pdf -a lang=nb docs/main.adoc
       program_pdf_continue_on_error: true
-      host: https://staging.fellesdatakatalog.digdir.no
+      host: https://data.norge.no
       ontology: modelldcat-ap-no
       ontology-type: specification
       files: |
@@ -83,4 +83,4 @@ jobs:
         docs/images/ModellDCAT-AP-NO-klasser.png image/png nb images/ModellDCAT-AP-NO-klasser.png
         docs/images/sammenheng.png image/png nb images/sammenheng.png
     secrets:
-      STATIC_RDF_SERVER_API_KEY: ${{ secrets.STATIC_RDF_SERVER_API_KEY_STAGING }}
+      STATIC_RDF_SERVER_API_KEY: ${{ secrets.STATIC_RDF_SERVER_API_KEY }}
