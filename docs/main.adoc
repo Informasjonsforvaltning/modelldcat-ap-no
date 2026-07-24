@@ -42,7 +42,7 @@ include::locale/attributes.adoc[]
 *Redaktørens utkast av ontologi*: https://informasjonsforvaltning.github.io/modelldcat-ap-no/vocabulary +
 *Veileder*: https://data.norge.no/guide/veileder-modelldcat-ap-no/
 
-Denne spesifikasjonen skal sikre at beskrivelser av informasjonsmodeller utføres på en felles, strukturert måte og i en maskinlesbar form. Spesifikasjonen stiller krav til hva som _skal_, _bør_ og _kan_ være med i beskrivelsene, med spesifikasjon av dataformat.
+Denne spesifikasjonen skal sikre at beskrivelser av informasjonsmodeller utføres på en felles, strukturert måte og i en maskinlesbar form. Spesifikasjonen stiller krav til hva som _skal_, _bør_ og _kan_ være med i beskrivelsene, med spesifikasjon av dataformat. 
 
 // For PDF, TOC kommer her:
 toc::[]
