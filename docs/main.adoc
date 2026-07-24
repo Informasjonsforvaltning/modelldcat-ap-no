@@ -26,15 +26,15 @@ include::locale/attributes.adoc[]
 // markere denne som "utgått" med fixed textbox her kodet direkte i html
 ++++
 <div style="position: fixed; top: 40%; left: 50%; transform: translateX(-50%); background-color: #ffffff; border: 1px solid black; padding: 15px; box-shadow: 15px 15px 15px red; opacity: 0.85">
-  <p> <strong>NB! Denne versjonen av ModellDCAT-AP-NO er utfaset og vil ikke bli vedlikeholdt (inkl. ev. kjente feil/mangler). </p>
-  <p>Vi oppfordrer sterkt til å bruke <a href=https://data.norge.no/specification/modelldcat-ap-no>den til enhver tid gjeldende versjonen av ModellDCAT-AP-NO</a>. </strong> </p>
+  <p> <strong>NB! Denne versjonen av ModellDCAT-AP-NO er utfaset og vil ikke bli vedlikeholdt (inkl. ev. kjente feil/mangler). </strong> </p>
+  <p> <strong>Vi oppfordrer sterkt til å bruke <a href=https://data.norge.no/specification/modelldcat-ap-no>den til enhver tid gjeldende versjonen av ModellDCAT-AP-NO</a>. </strong> </p>
 </div>
 ++++
-
+ 
 
 *Status*: #Utfaset# +
 *Versjon*: 1.3.3 (se <<Endringslogg, endringsloggen>>) +
-*Publisert*: 2026-07-24 Utfaset, 2023-07-03 (v.1.3) 2022-08-26 (v.1.2) 2021-06-28 (v.1.1), 2020-12-18 (v.1.0) +
+*Publisert*: 2026-07-24 #Utfaset#, 2023-07-03 (v.1.3) 2022-08-26 (v.1.2) 2021-06-28 (v.1.1), 2020-12-18 (v.1.0) +
 *Oppdatert*: 2026-03-20 (v.1.3.x)  +
 *Gjeldende versjon av spesifikasjon*: https://data.norge.no/specification/modelldcat-ap-no/ +
 *Gjeldende versjon av ontologi*: https://data.norge.no/vocabulary/modelldcatno +
