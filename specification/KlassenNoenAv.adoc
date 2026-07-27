@@ -5,6 +5,8 @@
 [link=images/KlassenNoenAv.png]
 image::images/KlassenNoenAv.png[alt="UML-diagram med klassen Noen av og dens egenskaper. Innholdet i diagrammet er forklart i teksten."]
 
+NOTE: Se <<Valg>> for egenskaper som SKAL/BØR/KAN brukes.
+
 [cols="30s,70d"]
 |===
 | __English name__ | __Any of__

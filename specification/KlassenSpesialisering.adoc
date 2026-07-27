@@ -6,6 +6,8 @@
 [link=images/KlassenSpesialisering.png]
 image::images/KlassenSpesialisering.png[alt="UML-diagram med klassen Spesialisering og dens egenskaper. Innholdet i diagrammet er forklart i teksten."]
 
+NOTE: Se <<Egenskap>> for egenskaper som SKAL/BØR/KAN brukes, i tillegg til egenskapen(e) spesifisert her for denne klassen.
+
 [cols="30s,70d"]
 |===
 | __English name__ | __Specialization__

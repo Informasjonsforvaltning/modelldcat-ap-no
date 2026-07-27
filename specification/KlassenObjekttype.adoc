@@ -6,6 +6,8 @@
 [link=images/KlassenObjekttype.png]
 image::images/KlassenObjekttype.png[alt="UML-diagram med klassen Objekttype og dens egenskaper. Innholdet i diagrammet er forklart i teksten."]
 
+NOTE: Se <<Modellelement>> for egenskaper som SKAL/BØR/KAN brukes.
+
 [cols="30s,70d"]
 |===
 | __English name__ | __Object Type__
