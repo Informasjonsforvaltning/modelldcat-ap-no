@@ -17,7 +17,28 @@
 @prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
 @base <https://data.norge.no/vocabulary/modelldcatno> .
 
-<https://data.norge.no/vocabulary/modelldcatno> rdf:type owl:Ontology .
+<https://data.norge.no/vocabulary/modelldcatno> rdf:type owl:Ontology ;
+   rdfs:label "Ontology for ModellDCAT-AP-NO"@en , "Ontologi for ModellDCAT-AP-NO"@nb ;
+   rdfs:comment "Ontologi for ModellDCAT-AP-NO."@nb ,
+      "Ontology for ModellDCAT-AP-NO."@en ;
+   rdfs:isDefinedBy "Digitaliseringsdirektoratet"@nb , "Norwegian Digitalisation Agency"@en ;
+   dct:creator [
+      foaf:homepage <https://www.digdir.no/> ;
+      foaf:name "Digitaliseringsdirektoratet"@nb , "Norwegian Digitalisation Agency"@en ;
+      ];
+   foaf:homepage <https://github.com/Informasjonsforvaltning/modelldcat-ap-no> ;
+   foaf:maker [
+      foaf:mbox <mailto:informasjonsforvaltning@digdir.no> ;
+      foaf:name "Informasjonsforvaltning, Digitaliseringsdirektoratet" ;
+      foaf:page <https://www.digdir.no>
+      ];
+   dct:license <https://creativecommons.org/licenses/by/4.0> ;
+   dct:modified "2027-07-27"^^xsd:date ;
+   owl:versionInfo "v.1.4" ;
+   adms:versionNotes "Manuelt redigert av Jim, for å tilpasse v.1.4 av ModellDCAT-AP-NO."@nb ,
+      "Manually edited by Jim, to align with v1.4 of ModellDCAT-AP-NO."@en
+   .
+
 
 #################################################################
 #    Annotation properties
