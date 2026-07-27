@@ -1,22 +1,69 @@
-= Vedlegg - Endringslogg [[Endringslogg]]
+== Vedlegg B – Endringslogg [[Endringslogg]]
 
-== Endringer fra v.1.3.1 til v.1.3.x [[Endringer_v_1.3.x]]
+=== Endringer fra v.1.3.x til v.1.4.0 [[Endringer_v_1.4.0]]
+
+Hovedsakelig følgende endringer: 
+
+. Total omstrukturering av dokumentet - for å samkjøre med de andre tilsvarende spesifikasjonene innen fagområde Informasjonsforvaltning og datadeling: 
+** Et "Astract in English" helt innledningsvis i dokumentet, som skal gjøre det lettere for engelsk talende lesere å kunne vite hva spesifikasjonen handler om og hvordan de ev. kan dra nytte av spesifikasjonen. 
+** Et eget kapittel (kap. 2) med en forenklet fremstilling av noen av kravene, dessuten uavhengig av RDF.
+** Et eget kapittel (kap. 3) med krav til RDF-representasjon.
+*** Hver klasse har nå kun ett kapittel (istedenfor tidlgiere to kapitler), slik at spesifikasjon av klassen og dens egenskaper er samlet i ett kapittel.
+*** Istedenfor å samle alle krav til bruk av kontrollerte vokabularer i et eget kapittel, er nå et slikt krav tatt med under spesifikasjonen av egenskapen som kravet gjelder.
+** Et eget kapittel (kap. 4) med «spesielle temaer», som (over tid) skal erstatte en egen, separat veileder. 
+*** Denne versjonen inneholder nesten kopi (med noe modifisering) av relevant innhold fra den nåværende versjonen av https://data.norge.no/guide/veileder-modelldcat-ap-no[veilederen &#x29C9;, window="_blank", role="ext-link"]. 
+*** Tabelloppsett for spesifikasjon av klasser og egenskaper er endret og samkjørt med de andre tilsvarende spesifikasjonene. Her er det også tatt med engelsk tekst som vil gjøre det enklere for engelsk talende lesere å kunne bruke spesifikasjonen. 
+
+. Endring av kravene:
+** Noen generelle, gjennomgående endringer: 
+*** Kravnivå (obligatorisk/anbefalt/valgfri) for klassene er fjernet, samkjørt med de andre tilsvarende spesifikasjonene. 
+*** Kravnivået for egenskapen «kontaktpunkt» (`dcat:contactPoint`) i klassene «Modellkatalog» (`dcat:Catalog`) og «Informasjonsmodell» (`modelldcatno:InformationModel`) er endret fra 'anbefalt' til 'obligatorisk', fordi det er viktig å kunne ta kontakt med den som har tilgjengeliggjort en modellkatalog/informasjonsmodell. Multiplisiteten for egenskapene er følgelig endret fra 0..1 til 1..1. 
+*** «Subegenskap av» er fjernet for skos-egenskapene, fordi det ikke er hensiktsmessig å re-definere skos-egenskaper.
+*** Verdiområde/range for egenskapene «endringsdato» (`dct:modified`) og «utgivelsesdato» (`dct:issued`) er nå alle «`xsd:date` or `xsd:dateTime`» (istendenfor tidligere «`xsd:dateTime`» for noen og «`xsd:dat`e or `xsd:dateTime`» for andre).
+*** Verdiområde/range for fritekst-egenskapene (f.eks. «tittel/navn» (`dct:title`), «beskrivelse» (`dct:description`), «nøkkelord» (`dct:keyword`) osv.) er endret fra `rdfs:Literal` til `rdf:langString`. Dette for å presisere at fritekst skal ha språkangivelse med seg, som muliggjør flerspråklighet. 
+*** Krav til bruk kontrollerte vokabularer er endret
+**** `adms:staus` i Informasjonsmodell (`modelldcatno:InformationModel`) skal velges fra EUs kontrollerte vokabular for produktstatus.
+**** `dct:language` i Dokument (`foaf:Document`), modellkatalog (`dcat:Catalog`) og Informasjonsmodell (`modelldcatno:InformationModel`) skal velges fra EUs kontrollerte vokabular for språk.
+**** `dct:format` i Dokument (`foaf:Document`) skal velges fra EUs kontrollerte vokabular for filtype.
+**** `dct:spatial` i Modellkatalog (`dcat:Catalog`) og Informasjonsmodell (`modelldcatno:InformationModel`) skal velges fra EUs kontrollerte vokabular for sted, land og kontinent, ev. geonames.
+
+** Følgende klasser er ikke eksplisitt spesifisert med egenskaper (fordi det ikke er behov for å beskrive instanser av slike klasser) og dermed ikke lenger har egne kapitler i spesifikasjonen:
+*** Klassen Begrep (`skos:Concept`), fordi det ikke er ment å definere nye begreper, men å henvise/peke til eksternt definerte/beskrevne begreper. 
+*** Klassen Lisensdokument (`dct:LicenseDocument`), fordi verdien skal velges fra EUs kontrollerte vokabular for lisens. 
+*** Klassen Lokasjon (`dct:Location`), fordi verdien skal velges fra kontrollerte vokabularer.
+*** Klassen MediaType (`dct:MediaType`), fordi verdien skal velges fra EUs kontrollerte vokabular for filtype.
+*** Klassen Språksystem (`dct:LinguisticSystem`), fordi verdien skal velges fra EUs kontrollerte vokabular for språk.
+*** Klassen Tematisk skjema (`skos:ConceptScheme`), fordi verdien bær være ferdigpubliserte taksonomier.
+
+** Følgende klasser er eksplisitt spesifisert med egenskaper (fordi det er behov for å beskrive instanser av slike klasser): 
+*** Klassen Kontaktpunkt (`vcard:Organization`), fordi vi har fått spørsmål om hvordan vcard brukes.
+
+** Endringer i klassen Aktør (`foaf:Agent`): 
+*** Egenskapsnavn «utgivertype» er endret til «type», for en aktør er ikke bare en utgiver.
+
+** Endringer i klassen Kontaktpunkt (`vcard:Organization`)
+*** Klassenavnet er endret fra «Kontaktopplysning» til «Kontaktpunkt» for `vcard:Organization`. Dette for å samkjøre med de andre tilsvarende spesifikasjonene. 
+
+** Endringer i klassen Modellkatalog (`dcat:Catalog`):
+*** Kravnivået til «identifikator» (`dct:identifier`) er endret fra 'obligatorisk' til 'anbefalt', og følgelig også multiplisitet. Dette fordi obligatorisk krav var for å samkjøre med DCAT-AP-NO som den gang hadde denne egenskapen obligatorisk, men ikke nå lenger.
+
+=== Endringer fra v.1.3.1 til v.1.3.x [[Endringer_v_1.3.x]]
 
 Kun redaksjonelle justeringer (bl.a. å rette opp brutte lenker).
 
-== Endringer fra v.1.3.0 til v.1.3.1 [[Endringer_v_1.3.1]]
+=== Endringer fra v.1.3.0 til v.1.3.1 [[Endringer_v_1.3.1]]
 
 Kapitler og underkapitler er nå nummerert slik at kravene i spesifikasjonen har hvert sitt nøyaktige referansenummer. 
 
-== Endringer fra v.1.2.x til v.1.3.0 [[Endringer_fra_v_1.2.x]]
+=== Endringer fra v.1.2.x til v.1.3.0 [[Endringer_fra_v_1.2.x]]
 
 I tillegg til noen redaksjonelle justeringer, er følgende endret:
 
 * Det er føyet til en ny obligatorisk <<Modellkatalog-kontaktpunkt, egenskap  kontaktpunkt (dcat:contactPoint) i klassen Modellkatalog (dcat:Catalog)>>, slik at det er mulig å kunne ta kontakt med den som har publisert en modellkatalog. 
 
-* Det er føyet til en ny anbefalt <<Avhengighet-egenskaper, klasse Avhengighet (modelldcatno:Dependency)>>, slik at det er mulig å eksplisitt modellere avhengighet mellom to modellelementer. 
+* Det er føyet til en ny anbefalt <<Avhengighet, klasse Avhengighet (modelldcatno:Dependency)>>, slik at det er mulig å eksplisitt modellere avhengighet mellom to modellelementer. 
 
-== Endringer fra v.1.1.x til v.1.2.0 [[Endringer_fra_v_1.1.x]]
+=== Endringer fra v.1.1.x til v.1.2.0 [[Endringer_fra_v_1.1.x]]
 
 I tillegg til noen redaksjonelle justeringer, er følgende endret:
 
@@ -27,26 +74,25 @@ I tillegg til noen redaksjonelle justeringer, er følgende endret:
 
 * URIen for det kontrollerte vokabularet som skal brukes for egenskapen <<Informasjonsmodell-type>> er endret til https://data.norge.no/vocabulary/information-model-type#. Dette fordi vokabularet er nå publisert som en egen publisering (istedenfor tidligere gjemt inne i ontologifilen for ModellDCAT-AP-NO).
 
-* Kravnivå for <<Rolle-harObjekttype>> er endret fra 'anbefalt' til 'obligatorisk', fordi en rolle må være relatert til noe.
+* Kravnivå for <<Rolle-har-objekttype>> er endret fra 'anbefalt' til 'obligatorisk', fordi en rolle må være relatert til noe.
 
 * Følgende multiplisiteter er endret, for å kunne tillate "multiple range":
-** <<Attributt-harDataType>>, endret fra `0..1` til `0..n`
-** <<Attributt-harEnkelType>>, endret fra `0..1` til `0..n`
-** <<Attributt-harVerdierFra>>, endret fra `0..1` til `0..n`
-** <<Attributt-inneholderObjekttype>>, endret fra `0..1` til `0..n`
-** <<Rolle-harObjekttype>>, endret fra `0..1` til `1..n`
+** <<Attributt-har-datatype>>, endret fra `0..1` til `0..n`
+** <<Attributt-har-enkeltype>>, endret fra `0..1` til `0..n`
+** <<Attributt-har-verdi-fra>>, endret fra `0..1` til `0..n`
+** <<Attributt-inneholder-objekttype>>, endret fra `0..1` til `0..n`
+** <<Rolle-har-objekttype>>, endret fra `0..1` til `1..n`
 
 * Følgende nye klasser er føyet til:
-** <<klasse-alle>> og <<klasse-noen-av>>, begge er valgfrie og er subklasser av <<klasse-valg>>. Dette for å kunne dekke behov for å uttrykke slike konstruksjoner som finnes f.eks. i JSON.
-** <<klasse-ikke>> og <<klasse-og>>, begge er valgfrie og er subklasser av <<klasse-begrensningsregel>>. Dette for å kunne støtte disse to vanlige begrensningsregler.
+** <<Alle>> og <<NoenAv>>, begge er valgfrie og er subklasser av <<Valg>>. Dette for å kunne dekke behov for å uttrykke slike konstruksjoner som finnes f.eks. i JSON.
+** <<Ikke>> og <<Og>>, begge er valgfrie og er subklasser av <<Begrensningsregel>>. Dette for å kunne støtte disse to vanlige begrensningsregler.
 
 
-== Endringer fra v.1.1 til v.1.1.1 [[Endringer_fra_v.1.1]]
+=== Endringer fra v.1.1 til v.1.1.1 [[Endringer_fra_v.1.1]]
 
-* Multiplisiteten for egenskapen <<Dokument-harReferanse>> er endret fra 0..n til 0..1 (for å rette opp en feil)
+* Multiplisiteten for egenskapen <<Dokument-har-referanse>> er endret fra 0..n til 0..1 (for å rette opp en feil)
 
-== Endringer fra v.1.0 til v.1.1 [[Endringer_fra_v1.0]]
-
+=== Endringer fra v.1.0 til v.1.1 [[Endringer_fra_v1.0]]
 
 Tabellen under gir en oversikt over endringene i klasser og egenskaper, fra v.1.0 til v.1.1 av ModellDCAT-AP-NO. Redaksjonelle endringer av tekster (inkl. engelske navn, tekstlige beskrivelser, kommentarer og eksempler) er ikke tatt med i oversikten.
 

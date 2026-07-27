@@ -1,0 +1,40 @@
+== Vedlegg A – Navnerom som er brukt i spesifikasjonen [[Navnerom]]
+
+Navnerom for denne spesifikasjonen er `\https://data.norge.no/vocabulary/modelldcatno#`
+
+[cols="10s,45d,45d"]
+|===
+|Prefiks |*Navnerom* |*Forklaring/navn*
+|adms | `\http://www.w3.org/ns/adms#` | https://www.w3.org/TR/vocab-adms/[Asset Description Metadata Schema &#x29C9;, window="_blank", role="ext-link"]
+|dcat | `\http://www.w3.org/ns/dcat#` | https://www.w3.org/TR/vocab-dcat-2/[Data Catalog Vocabulary &#x29C9;, window="_blank", role="ext-link"]
+|dct | `\http://purl.org/dc/terms/` | https://www.dublincore.org/specifications/dublin-core/dcmi-terms/[DCMI Metadata Terms &#x29C9;, window="_blank", role="ext-link"]
+|foaf | `\http://xmlns.com/foaf/0.1/` | http://xmlns.com/foaf/0.1/[FOAF Vocabulary &#x29C9;, window="_blank", role="ext-link"]
+|locn | `\http://www.w3.org/ns/locn#` | https://semiceu.github.io/Core-Location-Vocabulary/[Core Location Vocabulary (CLV) &#x29C9;, window="_blank", role="ext-link"]
+|modelldcatno| `\https://data.norge.no/vocabulary/modelldcatno#` | Denne spesifikasjonen
+|owl| `\http://www.w3.org/2002/07/owl#` | https://www.w3.org/OWL/[OWL Web Ontology Language &#x29C9;, window="_blank", role="ext-link"]
+|prof| `\https://www.w3.org/ns/dx/prof/`| https://www.w3.org/TR/dx-prof/[The Profiles Vocabulary &#x29C9;, window="_blank", role="ext-link"]
+|rdf | `\http://www.w3.org/1999/02/22-rdf-syntax-ns#` | https://www.w3.org/TR/rdf-syntax-grammar/[RDF 1.1 XML Syntax &#x29C9;, window="_blank", role="ext-link"]
+|rdfs | `\http://www.w3.org/2000/01/rdf-schema#` | https://www.w3.org/TR/rdf-schema/[RDF Schema 1.1 &#x29C9;, window="_blank", role="ext-link"]
+|skos | `\http://www.w3.org/2004/02/skos/core#` | https://www.w3.org/TR/skos-reference/[SKOS Simple Knowledge Organization System &#x29C9;, window="_blank", role="ext-link"]
+|vcard | `\http://www.w3.org/2006/vcard/ns#` | https://www.w3.org/TR/vcard-rdf/[vCard Ontology – for describing People and Organizations &#x29C9;, window="_blank", role="ext-link"]
+|xkos | `\http://rdf-vocabulary.ddialliance.org/xkos#` | https://rdf-vocabulary.ddialliance.org/xkos.html[XKOS - An SKOS extension for representing statistical classifications &#x29C9;, window="_blank", role="ext-link"]
+|xsd | `\http://www.w3.org/2001/XMLSchema#` | https://www.w3.org/TR/xmlschema-2/[XML Schema Part 2: Datatypes Second Edition &#x29C9;, window="_blank", role="ext-link"]
+|===
+
+Eksempel på prefiksene ovenfor uttrykt i RDF Turtle:
+-----
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@orefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <https://www.w3.org/ns/dx/prof/> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+-----

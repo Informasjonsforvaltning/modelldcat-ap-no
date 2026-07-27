@@ -1,0 +1,9 @@
+=== Om bruk av egenskapene «utgiver» (`dct:publisher`) og «produsent» (`dct:creator`) [[om-utgiver-og-produsent]]
+
+Det anbefales å bruke følgende mønster for URI til utgiver (`dct:publisher`) og produsent (`dct:creator`), der det siste leddet er organisasjonsnummeret:
+-----
+<enInfoModell> a modelldcatno:InformationModel ;
+  dct:publisher <https://organization-catalog.fellesdatakatalog.digdir.no/organizations/974760673> .
+-----
+
+Når det er behov for å oppgi «eieren» for en informasjonsmodell som ikke er den samme som utgiveren (`dct:publisher`), anbefales det å bruke produsent (`dct:creator`).

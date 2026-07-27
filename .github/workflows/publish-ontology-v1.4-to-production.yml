@@ -1,0 +1,32 @@
+name: Publish ontology v.14 to data.norge.no/vocabulary
+
+permissions:
+  contents: read
+
+on:
+  push:
+    branches:
+      - v1.4
+    paths:
+      - ontology/**
+  workflow_dispatch:
+
+jobs:
+  upload-files-to-production:
+    name: Upload vocabulary to static-rdf-server
+    if: github.event_name != 'workflow_dispatch' || github.ref == 'refs/heads/v1'
+    uses: Informasjonsforvaltning/workflows/.github/workflows/specification-upload-files.yaml@main
+    with:
+      ref: v1.4
+      program_html: |
+        asciidoctor -a data-uri -D ontology -o index-en.html -a lang=en ontology/main-en.adoc
+        asciidoctor -a data-uri -D ontology -o index-nb.html -a lang=nb ontology/main-nb.adoc
+      host: https://data.norge.no
+      ontology: modelldcatno
+      ontology-type: vocabulary
+      files: |
+        ontology/modelldcatno.ttl text/turtle en
+        ontology/index-nb.html text/html nb
+        ontology/index-en.html text/html en
+    secrets:
+      STATIC_RDF_SERVER_API_KEY: ${{ secrets.STATIC_RDF_SERVER_API_KEY }}

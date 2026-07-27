@@ -1,7 +1,0 @@
-= Forenklet modell for ModellDCAT-AP-NO [[Forenklet-modell]]
-
-.Forenklet modell for ModellDCAT-AP-NO.
-[link=images/ModellDCAT-AP-NO_V1-3_20230703.png]
-image::images/ModellDCAT-AP-NO_V1-3_20230703.png[]
-
-Last ned modell: link:images/ModellDCAT-AP-NO_V1-3_20230703.png[png] | link:files/ModellDCAT-AP-NO_V1_3_20230703.eapx[XMI for EA]

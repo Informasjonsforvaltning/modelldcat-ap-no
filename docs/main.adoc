@@ -1,14 +1,13 @@
-include::locale/attributes.adoc[]
+include::locale/attributes-nb.adoc[]
 = Spesifikasjon for beskrivelse av informasjonsmodeller (ModellDCAT-AP-NO)
 :doctype: book
 :docinfo: shared
 :icons: font
 :toc: left
 ifdef::backend-pdf[:toc: macro]
-:toclevels: 5
+:toclevels: 6
 :sectlinks:
 :table-stripes: even
-:leveloffset: +1
 :title-logo-image: image:images/Digdir.png[pdfwidth=30vw]
 
 image::images/Digdir.png[width=30%, pdfwidth=30vw, link=https://digdir.no/]
@@ -23,17 +22,19 @@ include::locale/attributes.adoc[]
 NOTE: *Innmelding av feil og mangler:* +
 Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på https://github.com/Informasjonsforvaltning/modelldcat-ap-no/issues[GitHub Issues]. Dersom du ikke allerede har bruker på GitHub kan du opprette bruker gratis.
 
+*Lisens*: https://creativecommons.org/licenses/by/4.0/[CC BY 4.0 &#x29C9;, window="_blank", role="ext-link"] + 
 *Status*: Gjeldende +
-*Versjon*: 1.3.3 (se <<Endringslogg, endringsloggen>>) +
-*Publisert*: 2023-07-03 (v.1.3) 2022-08-26 (v.1.2) 2021-06-28 (v.1.1), 2020-12-18 (v.1.0)  +
-*Oppdatert*: 2026-03-20 (v.1.3.x)  +
+*Versjon*: 1.4.0 (se <<Endringslogg, endringsloggen>>) +
+*Publisert*: 2026-07-27 (v.1.4), 2023-07-03 (v.1.3), 2022-08-26 (v.1.2), 2021-06-28 (v.1.1), 2020-12-18 (v.1.0)  +
+*Oppdatert*: 2026-07-27 (v.1.4.0)  +
 *Gjeldende versjon av spesifikasjon*: https://data.norge.no/specification/modelldcat-ap-no/ +
+*Forrige versjon av spesifikasjon*: https://data.norge.no/specification/modelldcat-ap-no/v1.3 +
 *Gjeldende versjon av ontologi*: https://data.norge.no/vocabulary/modelldcatno +
 *Redaktørens utkast av spesifikasjon*: https://informasjonsforvaltning.github.io/modelldcat-ap-no/specification +
-*Redaktørens utkast av ontologi*: https://informasjonsforvaltning.github.io/modelldcat-ap-no/vocabulary +
-*Veileder*: https://data.norge.no/guide/veileder-modelldcat-ap-no/
+// *Redaktørens utkast av ontologi*: https://informasjonsforvaltning.github.io/modelldcat-ap-no/vocabulary +
+// *Veileder*: https://data.norge.no/guide/veileder-modelldcat-ap-no/
 
-Denne spesifikasjonen skal sikre at beskrivelser av informasjonsmodeller utføres på en felles, strukturert måte og i en maskinlesbar form. Spesifikasjonen stiller krav til hva som _skal_, _bør_ og _kan_ være med i beskrivelsene, med spesifikasjon av dataformat.
+include::Abstract-in-english.adoc[]
 
 // For PDF, TOC kommer her:
 toc::[]
@@ -44,76 +45,88 @@ toc::[]
 :sectnums:
 :sectnumlevels: 10
 
-include::1_Formaal.adoc[]
+include::Om_spesifikasjonen.adoc[]
 
-include::2_Omfang.adoc[]
+include::Forenklet-fremstilling.adoc[]
 
-include::3_Forvaltningsregime.adoc[]
+include::Spesifikasjon-per-klasse.adoc[]
 
-include::4_Om kravene.adoc[]
+include::KlassenAbstraksjon.adoc[]
 
-include::5_URIer_i_bruk.adoc[]
+include::KlassenAktør.adoc[]
 
-include::6_Modell.adoc[]
+include::KlassenAlle.adoc[]
 
-include::7_klasser.adoc[]
+include::KlassenAssosiasjon.adoc[]
 
-include::8_EgenskaperPrKlasse_Aktor.adoc[]
+include::KlassenAttributt.adoc[]
 
-include::10_EgenskaperLisensdok.adoc[]
+include::KlassenAvhengighet.adoc[]
 
-include::11_EgenskaperLokasjon.adoc[]
+include::KlassenBegrensningsregel.adoc[]
 
-include::9_EgenskaperModellkatalog.adoc[]
+include::KlassenDatatype.adoc[]
 
-include::9b_EgenskaperTematiskskjema.adoc[]
+include::KlassenDokument.adoc[]
 
-include::12a_EgenskaperAbstraksjon.adoc[]
+include::KlassenEgenskap.adoc[]
 
-include::12b_EgenskaperAssosiasjon.adoc[]
+include::KlassenEller.adoc[]
 
-include::12c_EgenskaperAttributt.adoc[]
+include::KlassenEnkeltype.adoc[]
 
-include::12c_EgenskaperAvhengighet.adoc[]
+include::KlassenEntenEller.adoc[]
 
-include::EgenskaperBegrensningsregel.adoc[]
+include::KlassenIkke.adoc[]
 
-include::12d_EgenskaperDokument.adoc[]
+include::KlassenInformasjonsmodell.adoc[]
 
-include::13_EgenskaperEgenskap.adoc[]
+include::KlassenKatalogisertRessurs.adoc[]
 
-include::14_EgenskaperEnkeltype.adoc[]
+include::KlassenKodeelement.adoc[]
 
-include::15_EgenskaperInformasjonsmodell.adoc[]
+include::KlassenKodeliste.adoc[]
 
-include::16_EgenskaperKodeelement.adoc[]
+include::KlassenKomposisjon.adoc[]
 
-include::17_EgenskaperKodeliste.adoc[]
+include::KlassenKontaktpunkt.adoc[]
 
-include::17b_EgenskaperKomposisjon.adoc[]
+include::KlassenModellelement.adoc[]
 
-include::18_EgenskaperModellelement.adoc[]
+include::KlassenModellkatalog.adoc[]
 
-include::18a_EgenskaperNote.adoc[]
+include::KLassenModul.adoc[]
 
-include::18b_EgenskaperRealisering.adoc[]
+include::KlassenNoenAv.adoc[]
 
-include::19_EgenskaperRolle.adoc[]
+include::KlassenNote.adoc[]
 
-include::19b_EgenskaperSamling.adoc[]
+include::KlassenOg.adoc[]
 
-include::20_EgenskaperSpesialisering.adoc[]
+include::KlassenObjekttype.adoc[]
 
-include::20a_EgenskaperStandard.adoc[]
+include::KlassenRealisering.adoc[]
 
-include::20b_EgenskaperTidsrom.adoc[]
+include::KlassenRolle.adoc[]
 
-include::21_EgenskaperValg.adoc[]
+include::KlassenRotobjekttype.adoc[]
 
-include::xx_Kontrollerte_vokabularer.adoc[]
+include::KlassenSamling.adoc[]
+
+include::KlassenSpesialisering.adoc[]
+
+include::KlassenStandard.adoc[]
+
+include::KlassenTidsrom.adoc[]
+
+include::KlassenValg.adoc[]
+
+include::Spesielle-temaer.adoc[]
 
 // Appendix, section number off
 :sectnums!:
+
+include::Navnerom.adoc[]
 
 include::yy_Endringslogg.adoc[]
 
