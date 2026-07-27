@@ -42,12 +42,12 @@
     ];
     dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
     rdfs:commet "Validated SUCCESS at https://www.itb.ec.europa.eu/shacl/shacl/upload"@en ;
-    dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ;
+    dct:publisher <https://organization-catalog.fellesdatakatalog.digdir.no/organizations/991825827> ;
     dct:description "This document specifies the constraints on properties and classes expressed by ModellDCAT-AP-NO in SHACL."@en ;
     dct:title "The constraints of ModellDCAT-AP-NO"@en ;
-    owl:versionInfo "1.3.000";
-    adms:versionNote "Alligned with v.1.3.0 of ModellDCAT-AP-NO"@en ; 
-    dct:modified "2023-07-03"^^xsd:date ;
+    owl:versionInfo "1.4.000";
+    adms:versionNote "Alligned with v.1.4.0 of ModellDCAT-AP-NO"@en ; 
+    dct:modified "2026-07-27"^^xsd:date ;
     .
 
 # -+-+- Some "general" classes, though modified for modelldcatno when necessary -+-+-+-
@@ -86,62 +86,62 @@
             [sh:targetObjectsOf dct:creator] ) ;
     .
 
-:ConceptScheme_Shape
-    a sh:NodeShape ;
-    sh:name "Thematic Scheme"@en , "Tematisk skjema"@nb ;
-    sh:property [
-        sh:name "tittel"@nb , "title"@en ;
-        sh:minCount 1 ;
-        sh:nodeKind sh:Literal ;
-        sh:path dct:title ;
-        sh:severity sh:Violation ;
-        sh:message "Thematic scheme must have at least one title (dct:title)."@en ,
-            "Tematisk skjema må ha minst én tittel (dct:title)."@nb ;
-    ] ;
-    # sh:targetClass skos:ConceptScheme ;
-    sh:sh:targetObjectsOf dcat:themeTaxonomy ;
-    .
+# :ConceptScheme_Shape
+#     a sh:NodeShape ;
+#     sh:name "Thematic Scheme"@en , "Tematisk skjema"@nb ;
+#     sh:property [
+#         sh:name "tittel"@nb , "title"@en ;
+#         sh:minCount 1 ;
+#         sh:datatype rdf:langString ;
+#         sh:path dct:title ;
+#         sh:severity sh:Violation ;
+#         sh:message "Thematic scheme must have at least one title (dct:title) som skal være av type rdf:langString."@en ,
+#             "Tematisk skjema må ha minst én tittel (dct:title) which must be of type rdf:langString."@nb ;
+#     ] ;
+#     # sh:targetClass skos:ConceptScheme ;
+#     sh:sh:targetObjectsOf dcat:themeTaxonomy ;
+#     .
 
-:LicenceDocument_Shape
-    a sh:NodeShape ;
-    sh:name "Licence Document"@en , "Lisensdokument"@nb ;
-    sh:property
-        :TypeLicenseDocumentProperty_Shape ; # sjekker kontrollert vokabular
-    # sh:targetClass dct:LicenseDocument ;
-    sh:targetObjectsOf dct:license ;
-    .
+# :LicenceDocument_Shape
+#     a sh:NodeShape ;
+#     sh:name "Licence Document"@en , "Lisensdokument"@nb ;
+#     sh:property
+#         :TypeLicenseDocumentProperty_Shape ; # sjekker kontrollert vokabular
+#     # sh:targetClass dct:LicenseDocument ;
+#     sh:targetObjectsOf dct:license ;
+#     .
 
-:Location_Shape
-    a sh:NodeShape ;
-    sh:name "Location"@en , "Lokasjon"@nb ;
-    sh:property [
-        sh:name "område"@nb, "bounding box"@en ;
-        sh:maxCount 1 ;
-        sh:nodeKind sh:Literal ;
-        sh:path dcat:bbox ;
-        sh:severity sh:Violation ;
-        sh:message "Location may have max. one bouding box (dcat:bbox)."@en ,
-            "Lokasjon kan ha maks. et område (dcat:bbox)."@nb ;
-    ], [
-        sh:name "geografisk midtpunkt"@nb , "centroid"@en ;
-        sh:maxCount 1 ;
-        sh:nodeKind sh:Literal ;
-        sh:path dcat:centroid ;
-        sh:severity sh:Violation ;
-        sh:message "Location may have max. one centroid (dcat:centroid)."@en ,
-            "Lokasjon kan ha maks. ett geografisk midtpunnt (dcat:centroid)."@nb ;
-    ], [
-        sh:name "geometri"@nb , "geometry"@en ;
-        sh:maxCount 1 ;
-        sh:nodeKind sh:Literal ;
-        sh:path locn:geometry ;
-        sh:severity sh:Violation ;
-        sh:message "Location may have max. one geometry (locn:geometry)."@en ,
-            "Lokasjon kan ha maks. en geometri (locn:geometry)."@nb ;
-    ] ;
-    # sh:targetClass dct:Location ;
-    sh:targetObjectsOf dct:spatial ;
-    .
+# :Location_Shape
+#     a sh:NodeShape ;
+#     sh:name "Location"@en , "Lokasjon"@nb ;
+#     sh:property [
+#         sh:name "område"@nb, "bounding box"@en ;
+#         sh:maxCount 1 ;
+#         sh:nodeKind sh:Literal ;
+#         sh:path dcat:bbox ;
+#         sh:severity sh:Violation ;
+#         sh:message "Location may have max. one bouding box (dcat:bbox)."@en ,
+#             "Lokasjon kan ha maks. et område (dcat:bbox)."@nb ;
+#     ], [
+#         sh:name "geografisk midtpunkt"@nb , "centroid"@en ;
+#         sh:maxCount 1 ;
+#         sh:nodeKind sh:Literal ;
+#         sh:path dcat:centroid ;
+#         sh:severity sh:Violation ;
+#         sh:message "Location may have max. one centroid (dcat:centroid)."@en ,
+#             "Lokasjon kan ha maks. ett geografisk midtpunnt (dcat:centroid)."@nb ;
+#     ], [
+#         sh:name "geometri"@nb , "geometry"@en ;
+#         sh:maxCount 1 ;
+#         sh:nodeKind sh:Literal ;
+#         sh:path locn:geometry ;
+#         sh:severity sh:Violation ;
+#         sh:message "Location may have max. one geometry (locn:geometry)."@en ,
+#             "Lokasjon kan ha maks. en geometri (locn:geometry)."@nb ;
+#     ] ;
+#     # sh:targetClass dct:Location ;
+#     sh:targetObjectsOf dct:spatial ;
+#     .
 
 :PeriodOfTime_Shape
     a sh:NodeShape ;
@@ -254,9 +254,9 @@
     a sh:PropertyShape ;
     sh:name "status"@nb , "status"@en ;
     sh:path adms:status ;
-    sh:pattern "^http://purl.org/adms/status/" ;
+    sh:pattern "^http://publications.europa.eu/resource/authority/product-status/" ;
     sh:flags "i" ;
-    sh:message "Status (adms:status) skal være en av verdiene fra http://purl.org/adms/status/."@nb ;
+    sh:message "Status (adms:status) skal være en av verdiene fra http://publications.europa.eu/resource/authority/product-status/."@nb ;
     sh:severity sh:Violation ;
   .
 
@@ -270,15 +270,15 @@
     sh:severity sh:Violation ;
   .
 
-:TypeLicenseDocumentProperty_Shape
-    a sh:PropertyShape ;
-    sh:name "type (Lisensdokument)"@nb , "type (License document)"@en ;
-    sh:path dct:type ;
-    sh:pattern "^http://purl.org/adms/licencetype/" ;
-    sh:flags "i" ;
-    sh:message "Lisensdokumenttype (dct:type) skal være en av verdiene fra http://purl.org/adms/licencetype/."@nb ;
-    sh:severity sh:Violation ;
-  .
+# :TypeLicenseDocumentProperty_Shape
+#     a sh:PropertyShape ;
+#     sh:name "type (Lisensdokument)"@nb , "type (License document)"@en ;
+#     sh:path dct:type ;
+#     sh:pattern "^http://purl.org/adms/licencetype/" ;
+#     sh:flags "i" ;
+#     sh:message "Lisensdokumenttype (dct:type) skal være en av verdiene fra http://purl.org/adms/licencetype/."@nb ;
+#     sh:severity sh:Violation ;
+#   .
 
 :ThemePropertyLOS_Shape
     a sh:PropertyShape ;
@@ -489,7 +489,7 @@
     sh:property [ # arvet fra modelldcatno:Note
         sh:name "tittel"@nb , "title"@en ;
         sh:path dct:title;
-        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
         sh:severity sh:Violation ;
     ] ;
     sh:property [ # arvet fra modelldcatno:Note
@@ -556,7 +556,7 @@
         sh:severity sh:Violation ;
         sh:message "OR/XOR kan ha maks. én identifikator (dct:identifier)."@nb ;
     ], [
-        sh:name "tilhører modul"@nb , "title"@en ;
+        sh:name "tilhører modul"@nb , "belongs to module"@en ;
         sh:path modelldcatno:belongsToModule;
         sh:nodeKind sh:IRIOrLiteral ;
         sh:severity sh:Violation ;
@@ -572,9 +572,9 @@
     sh:property [
         sh:name "tittel"@nb , "title"@en ;
         sh:path dct:title;
-        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
         sh:severity sh:Violation ;
-        sh:message "Egenskap `tittel` (dct:title) kan bare være Literal."@nb ;
+        sh:message "Egenskap `tittel` (dct:title) kan bare være Literal som skal være av type rdf:langString."@nb ;
         ] ;
     sh:or (
       [sh:targetClass modelldcatno:Or ]
@@ -589,32 +589,24 @@
     sh:property [
         sh:name "beskrivelse"@nb , "description"@en ;
         sh:minCount 1 ;
-        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
         sh:path dct:description ;
         sh:severity sh:Violation ;
-        sh:message "En katalog skal ma minst én beskrivelse (dct:description)."@nb ;
-    ], [
-        sh:name "identifikator"@nb , "identifier"@en ;
-        sh:nodeKind sh:Literal ;
-        sh:maxCount 1 ;
-        sh:minCount 1 ;
-        sh:path dct:identifier ;
-        sh:severity sh:Violation ;
-        sh:message "En katalog skal én og bare én identifikator (dct:identifier)."@nb ;
+        sh:message "En katalog skal ha minst én beskrivelse (dct:description) som skal være av type rdf:langString."@nb ;
     ], [
         sh:name "kontaktpunkt"@nb , "contact point"@en ;
-        sh:nodeKind vcard:Organization ;
+        sh:class vcard:Organization ;
         sh:minCount 1 ;
         sh:path dcat:contactPoint ;
         sh:severity sh:Violation ;
-        sh:message "En katalog skal minst ett kontaktpunkt (dcat:contactPoint)."@nb ;
+        sh:message "En katalog skal ha minst ett kontaktpunkt (dcat:contactPoint)."@nb ;
     ], [
         sh:name "tittel"@nb , "title"@en ;
         sh:minCount 1 ;
-        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
         sh:path dct:title ;
         sh:severity sh:Violation ;
-        sh:message "En katalog skal ma minst én tittel (dct:title)."@nb ;
+        sh:message "En katalog skal ha minst én tittel (dct:title) som skal være av type rdf:langString."@nb ;
     ], [
         sh:name "utgiver"@nb , "publisher"@en ;
         sh:class foaf:Agent ;
@@ -622,13 +614,21 @@
         sh:minCount 1 ;
         sh:path dct:publisher ;
         sh:severity sh:Violation ;
-        sh:message "En katalog skal én og bare én utgiver (dct:publisher)."@nb ;
+        sh:message "En katalog skal ha én og bare én utgiver (dct:publisher)."@nb ;
     ], [
         sh:name "hjemmeside"@nb , "homepage"@en ;
         sh:class foaf:Document ;
         sh:path foaf:homepage ;
         sh:severity sh:Violation ;
         sh:message "Egenskap `hjemmeside` (foaf:homepage) kan bare ha verdi som er instans av foaf:Document."@nb ;
+    ], [
+        sh:name "identifikator"@nb , "identifier"@en ;
+        sh:nodeKind sh:Literal ;
+        sh:maxCount 1 ;
+        # sh:minCount 1 ;
+        sh:path dct:identifier ;
+        sh:severity sh:Violation ;
+        sh:message "En katalog skal én og bare én identifikator (dct:identifier)."@nb ;
     ], [
         sh:name "utgivelsesdato"@nb , "issued (release date)"@en ;
         sh:maxCount 1 ;
@@ -749,7 +749,7 @@
     ], [
         sh:name "anbefalt kodetekst"@nb , "preferred label"@en ;
         # @v.1.1 # sh:minCount 1 ;
-        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
         sh:path skos:prefLabel ;
         sh:severity sh:Violation ;
     ], [
@@ -761,17 +761,17 @@
         sh:message "Et kodeelement kan ha maks. ett begrep (instans av skos:Concept) tilknyttet (vha. dct:subject)."@nb ;
     ], [
         sh:name "definisjon"@nb , "definition"@en ;
-        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
         sh:path skos:definition ;
         sh:severity sh:Violation
     ], [
         sh:name "eksempel"@nb , "example"@en ;
-        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
         sh:path skos:example ;
         sh:severity sh:Violation
     ], [
         sh:name "eksklusjonsmerknad"@nb , "exclusion note"@en ;
-        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
         sh:path xkos:exclusionNote ;
         sh:severity sh:Violation
     ], [
@@ -783,17 +783,17 @@
         sh:message "Et kodeelement kan ha maks. ett forrige kodeelement (xkos:previous)."@nb ;
     ], [
         sh:name "frarådet kodetekst"@nb , "hidden label"@en ;
-        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
         sh:path skos:hiddenLabel ;
         sh:severity sh:Violation
     ], [
         sh:name "inklusjonsmerknad"@nb , "inclusion note"@en ;
-        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
         sh:path xkos:inclusionNote ;
         sh:severity sh:Violation
     ], [
         sh:name "merknad"@nb , "note"@en ;
-        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
         sh:path skos:note ;
         sh:severity sh:Violation
     ], [
@@ -805,12 +805,12 @@
         sh:message "Et kodeelement kan ha maks. ett neste kodeelement (xkos:next)."@nb ;
     ], [
         sh:name "omfangsmerknad"@nb , "scope note"@en ;
-        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
         sh:path skos:scopeNote ;
         sh:severity sh:Violation
     ], [
         sh:name "tillatt kodetekst"@nb , "alternative label"@en ;
-        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
         sh:path skos:altLabel ;
         sh:severity sh:Violation ;
     ] ;
@@ -883,7 +883,7 @@
         sh:severity sh:Violation ;
     ], [
         sh:name "tittel"@nb, "title"@en ;
-        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
         sh:path dct:title ;
         sh:severity sh:Violation ;
     ],
@@ -912,17 +912,17 @@
     sh:property [
         sh:name "tittel"@nb , "title"@en ;
         sh:minCount 1 ;
-        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
         sh:path dct:title ;
         sh:severity sh:Violation ;
-        sh:message "En informasjonsmodell skal ha minst én tittel (dct:title)."@nb ;
-    ], [
-        sh:name "beskrivelse"@nb , "description"@en ;
-        # @v.1.1 # sh:minCount 1 ;
-        sh:nodeKind sh:Literal ;
-        sh:path dct:description ;
+        sh:message "En informasjonsmodell skal ha minst én tittel (dct:title) som skal være av type rdf:langString."@nb ;
+     ], [
+        sh:name "kontaktpunkt"@nb , "contact point"@en ;
+        sh:class vcard:Organization ;
+        sh:minCount 1 ;
+        sh:path dcat:contactPoint ;
         sh:severity sh:Violation ;
-    ], [
+   ], [
         sh:name "utgiver"@nb , "publisher"@en ;
         sh:class foaf:Agent ;
         sh:minCount 1 ;
@@ -937,6 +937,12 @@
         # sh:class skos:Concept ;
         # @v.1.1 # sh:minCount 1 ;
         sh:path dcat:theme ;
+        sh:severity sh:Violation ;
+    ], [
+        sh:name "beskrivelse"@nb , "description"@en ;
+        # @v.1.1 # sh:minCount 1 ;
+        sh:datatype rdf:langString ;
+        sh:path dct:description ;
         sh:severity sh:Violation ;
     ], [
         sh:name "identifikator"@nb , "identifier"@en ;
@@ -967,11 +973,6 @@
         sh:severity sh:Violation ;
         sh:message "Egenskap ìnneholder modellelement` (modelldcatno:containsModelElement) kan bare ha verdi som er instans av modelldcatno:ModelElement."@nb ;
     ], [
-        sh:name "kontaktpunkt"@nb , "contact point"@en ;
-        sh:class vcard:Organization ;
-        sh:path dcat:contactPoint ;
-        sh:severity sh:Violation ;
-    ], [
         sh:name "lisens"@nb , "license"@en ;
         # sh:class dct:LicenseDocument ;
         sh:maxCount 1 ;
@@ -986,7 +987,7 @@
         :SpatialProperty_Shape ,
     [
         sh:name "nøkkelord"@nb , "keyword"@en ;
-        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
         sh:path dcat:keyword ;
         sh:severity sh:Violation ;
     ], [
@@ -1077,7 +1078,7 @@
         sh:message "Egenskap `versjon` (owl:versionInfo) kan ha maks. én verdi."@nb ;
     ], [
         sh:name "versjonsnote"@nb , "version notes"@en ;
-        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
         sh:path adms:versionNotes ;
         sh:severity sh:Violation ;
     ], [ # @v.1.1
@@ -1102,10 +1103,10 @@
     sh:property [
         sh:name "tittel"@nb , "title"@en ;
         sh:minCount 1 ;
-        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
         sh:path dct:title ;
         sh:severity sh:Violation ;
-        sh:message "Et modellelement må ha minst én tittel (dct:title)."@nb ;
+        sh:message "Et modellelement må ha minst én tittel (dct:title) som skal være av type rdf:langString."@nb ;
     ], [
         sh:name "identifikator"@nb , "identifier"@en ;
         sh:nodeKind sh:Literal ;
@@ -1129,7 +1130,7 @@
         sh:message "Egenskap `har egenskap` (modelldcatno:hasProperty) kan bare ha verdi som er instans av modelldcatno:Property."@nb ;
     ], [
         sh:name "beskrivelse"@nb , "description"@en ;
-        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
         sh:path dct:description ;
         sh:severity sh:Violation ;
     ], [
@@ -1171,6 +1172,7 @@
     sh:property [
         sh:name "identifikator"@nb , "identifier"@en ;
         sh:nodeKind sh:Literal ;
+        sh:maxCount 1 ;
         sh:path dct:identifier ;
         sh:severity sh:Violation ;
     ] ;
@@ -1188,7 +1190,7 @@
           sh:name "tittel"@nb , "title"@en ;
           sh:minCount 1 ;
           sh:path dct:title;
-          sh:nodeKind sh:Literal ;
+          sh:datatype rdf:langString ;
           sh:severity sh:Violation ;
           sh:message "En Note, med unntak av subklassen Beregningsregel (modelldcatno:ConstraintRule), må som minimum ha enten en tittel (dct:title) eller anmerkning (modelldcatno:propertyNote)."@nb ;
         ]
@@ -1238,7 +1240,7 @@
         sh:message "Egenskap `nedre multiplisitet` (modelldcatno:minOccurs) kan ha maks. én verdi, som skal være en xsd:nonNegativeInteger."@nb ;
     ], [
         sh:name "tittel"@nb , "title"@en ;
-        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
         sh:path dct:title ;
         sh:severity sh:Violation
     ], [
@@ -1257,7 +1259,7 @@
         sh:message "Egenskap `øvre multiplisitet` (modelldcatno:maxOccurs) kan ha maks. én verdi, som skal være en xsd:nonNegativeInteger, `*` eller `n`."@nb ;
     ], [
         sh:name "beskrivelse"@nb , "description"@en ;
-        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
         sh:path dct:description ;
         sh:severity sh:Violation
     ], [
@@ -1441,10 +1443,10 @@
     sh:property [
         sh:name "har tittel"@nb , "has title"@en ;
         sh:minCount 1;
-        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
         sh:path dct:title ;
         sh:severity sh:Violation ;
-        sh:message "En standard skal ha minst én tittel (dct:title)."@nb ;
+        sh:message "En standard skal ha minst én tittel (dct:title) som skal være av type rdf:langString."@nb ;
     ], [
         sh:name "har versjonsnummer"@nb , "has version number"@en ;
         sh:maxCount 1 ;
@@ -1460,3 +1462,48 @@
     ] ;
     sh:targetClass dct:Standard ;
   .
+
+:vcardOrg_Shape
+    a sh:NodeShape ;
+    sh:name "Contact point"@en , "Kontaktpunkt"@nb ;
+    sh:property [
+        sh:name "fullt navn"@nb , "full name"@en ;
+        sh:minCount 1;
+        sh:datatype rdf:langString ;
+        sh:path foaf:fn ;
+        sh:severity sh:Violation ;
+        sh:message "Kontaktpunkt (vcard:Organization) skal ha minst ett fullt navn (foaf:fn) som skal være av type rdf:langString."@nb ;
+    ], [
+        sh:name "har e-postadresse"@nb , "has email"@en ;
+        sh:datatype xsd:anyURI ;
+        sh:path vcard:hasEmail ;
+        sh:severity sh:Violation ;
+        sh:message "Egenskap `har e-postadresse` (vcard:hasEmail) skal ha URI som verdi"@nb ;
+    ], [
+        sh:name "har hjemmeside"@nb , "has URL"@en ;
+        sh:datatype xsd:anyURI ;
+        sh:path vcard:hasURL ;
+        sh:severity sh:Violation ;
+        sh:message "Egenskap `har hjemmeside` (vcard:hasURL) skal ha URI som verdi"@nb ;
+    ], [
+        sh:name "har telefon"@nb , "has telephone"@en ;
+        sh:datatype xsd:anyURI ;
+        sh:path vcard:hasTelephone ;
+        sh:severity sh:Violation ;
+        sh:message "Egenskap `har telefon` (vcard:hasTelephone) skal ha URI som verdi"@nb ;
+    ], [
+        sh:name "organisasjonsnavn"@nb , "organization-name"@en ;
+        sh:datatype rdf:langString ;
+        sh:path vcard:organization-name ;
+        sh:severity sh:Violation ;
+        sh:message "Egenskap `organisasjonsnavn` (vcard:organization-name) skal være av type rdf:langString"@nb ;
+    ], [
+        sh:name "organisatorisk enhet"@nb , "organizational unit"@en ;
+        sh:datatype rdf:langString ;
+        sh:path vcard:organizational-unit ;
+        sh:severity sh:Violation ;
+        sh:message "Egenskap `organisatorisk enhet` (vcard:organizational-unit) skal være av type rdf:langString"@nb ;
+    ] ;
+    sh:targetClass vcard:Organization ;
+  .
+
