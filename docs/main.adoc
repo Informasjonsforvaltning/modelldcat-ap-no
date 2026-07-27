@@ -31,8 +31,8 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 *Forrige versjon av spesifikasjon*: https://data.norge.no/specification/modelldcat-ap-no/v1.3 +
 *Gjeldende versjon av ontologi*: https://data.norge.no/vocabulary/modelldcatno +
 *Redaktørens utkast av spesifikasjon*: https://informasjonsforvaltning.github.io/modelldcat-ap-no/specification +
-*Redaktørens utkast av ontologi*: https://informasjonsforvaltning.github.io/modelldcat-ap-no/vocabulary +
-*Veileder*: https://data.norge.no/guide/veileder-modelldcat-ap-no/
+// *Redaktørens utkast av ontologi*: https://informasjonsforvaltning.github.io/modelldcat-ap-no/vocabulary +
+// *Veileder*: https://data.norge.no/guide/veileder-modelldcat-ap-no/
 
 include::Abstract-in-english.adoc[]
 
