@@ -6,11 +6,13 @@
 [link=images/KlassenBegrensningsregel.png]
 image::images/KlassenBegrensningsregel.png[alt="UML-diagram med klassen Begrensningsregel og dens egenskaper. Innholdet i diagrammet er forklart i teksten."]
 
+NOTE: Se <<Note>> for egenskaper som SKAL/BØR/KAN brukes, i tillegg til egenskapen(e) spesifisert her for denne klassen.
+
 [cols="30s,70d"]
 |===
 | __English name__ | __Constraint Rule__
 | URI | `modelldcatno:ConstraintRule`
-| Subklasse av / __Subclass of__ | Egenskap (`modelldcatno:Property`)
+| Subklasse av / __Subclass of__ | Note (modelldcatno:Note)
 | Anvendelse / __Usage note__ | Klassen brukes til å representere en begrensningsregel.
 
 __This class is used to represent a constraint rule.__

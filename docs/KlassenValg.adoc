@@ -6,6 +6,8 @@
 [link=images/KlassenValg.png]
 image::images/KlassenValg.png[alt="UML-diagram med klassen Valg og dens egenskaper. Innholdet i diagrammet er forklart i teksten."]
 
+NOTE: Se <<Egenskap>> for egenskaper som SKAL/BØR/KAN brukes, i tillegg til egenskapen(e) spesifisert her for denne klassen.
+
 [cols="30s,70d"]
 |===
 | __English name__ | __Choice__

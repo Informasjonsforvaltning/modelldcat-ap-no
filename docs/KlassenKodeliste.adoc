@@ -6,6 +6,8 @@
 [link=images/KlassenKodeliste.png]
 image::images/KlassenKodeliste.png[alt="UML-diagram med klassen Kodeliste og dens egenskaper. Innholdet i diagrammet er forklart i teksten."]
 
+NOTE: Se <<Modellelement>> for egenskaper som SKAL/BØR/KAN brukes, i tillegg til egenskapen(e) spesifisert her for denne klassen.
+
 [cols="30s,70d"]
 |===
 | __English name__ | __Code List__

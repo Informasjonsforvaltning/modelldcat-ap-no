@@ -5,6 +5,8 @@
 [link=images/KlassenOg.png]
 image::images/KlassenOg.png[alt="UML-diagram med klassen Og og dens egenskaper. Innholdet i diagrammet er forklart i teksten."]
 
+NOTE: Se <<Begrensningsregel>> for egenskaper som SKAL/BØR/KAN brukes.
+
 [cols="30s,70d"]
 |===
 | __English name__ | __And__
