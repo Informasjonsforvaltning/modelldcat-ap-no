@@ -19,7 +19,7 @@ Hovedsakelig følgende endringer:
 *** Kravnivå (obligatorisk/anbefalt/valgfri) for klassene er fjernet, samkjørt med de andre tilsvarende spesifikasjonene. 
 *** Kravnivået for egenskapen «kontaktpunkt» (`dcat:contactPoint`) i klassene «Modellkatalog» (`dcat:Catalog`) og «Informasjonsmodell» (`modelldcatno:InformationModel`) er endret fra 'anbefalt' til 'obligatorisk', fordi det er viktig å kunne ta kontakt med den som har tilgjengeliggjort en modellkatalog/informasjonsmodell. Multiplisiteten for egenskapene er følgelig endret fra 0..1 til 1..1. 
 *** «Subegenskap av» er fjernet for skos-egenskapene, fordi det ikke er hensiktsmessig å re-definere skos-egenskaper.
-*** Verdiområde/range for egenskapene «endringsdato» (`dct:modified`) og «utgivelsesdato» (`dct:issued`) er nå alle «`xsd:date` or `xsd:dateTime`» (istendenfor tidligere «`xsd:dateTime`» for noen og «`xsd:dat`e or `xsd:dateTime`» for andre).
+*** Verdiområde/range for egenskapene «endringsdato» (`dct:modified`) og «utgivelsesdato» (`dct:issued`) er nå alle «`xsd:date` or `xsd:dateTime`» (istendenfor tidligere «`xsd:dateTime`» for noen og «`xsd:date` or `xsd:dateTime`» for andre).
 *** Verdiområde/range for fritekst-egenskapene (f.eks. «tittel/navn» (`dct:title`), «beskrivelse» (`dct:description`), «nøkkelord» (`dct:keyword`) osv.) er endret fra `rdfs:Literal` til `rdf:langString`. Dette for å presisere at fritekst skal ha språkangivelse med seg, som muliggjør flerspråklighet. 
 *** Krav til bruk kontrollerte vokabularer er endret
 **** `adms:staus` i Informasjonsmodell (`modelldcatno:InformationModel`) skal velges fra EUs kontrollerte vokabular for produktstatus.

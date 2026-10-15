@@ -451,7 +451,7 @@ Eksempel i RDF Turtle:
 |===
 | __English name__ | __issued__
 | URI | `dct:issued`
-| Verdiområde / __Range__ | `xsd:dateTime`
+| Verdiområde / __Range__ | `xsd:date` or `xsd:dateTime`
 | Anvendelse / __Usage note__ | Egenskapen brukes til å angi utgivelsesdato for modellen.
 
 __This property is used to specify the date of issue for the model.__
