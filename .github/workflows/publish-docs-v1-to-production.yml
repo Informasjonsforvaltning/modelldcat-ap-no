@@ -29,9 +29,58 @@ jobs:
       files: |
         docs/index.html text/html nb
         docs/files/modelldcat-ap-no.pdf application/pdf nb files/modelldcat-ap-no.pdf
-        docs/files/ModellDCAT-AP-NO_V1_3_20230703.eapx application/octet-stream nb files/ModellDCAT-AP-NO_V1_3_20230703.eapx
-        docs/images/digitaliseringsdirektoratet.png image/png nb images/digitaliseringsdirektoratet.png
-        docs/images/ModellDCAT-AP-NO_V1-3_20230703.png image/png nb images/ModellDCAT-AP-NO_V1-3_20230703.png
         docs/images/Digdir.png image/png nb images/Digdir.png
+        docs/images/eksempelAbstraksjon.png image/png nb images/eksempelAbstraksjon.png
+        docs/images/eksempelAssosiasjon.png image/png nb images/eksempelAssosiasjon.png
+        docs/images/eksempelBegrensningsregel.png image/png nb images/eksempelBegrensningsregel.png
+        docs/images/eksempelBegrepsreferanse.png image/png nb images/eksempelBegrepsreferanse.png
+        docs/images/eksempelEksternKodeliste.png image/png nb images/eksempelEksternKodeliste.png
+        docs/images/eksempelEnEnkelModell.png image/png nb images/eksempelEnEnkelModell.png
+        docs/images/eksempelEnkelvalg.png image/png nb images/eksempelEnkelvalg.png
+        docs/images/eksempelFarger.png image/png nb images/eksempelFarger.png
+        docs/images/eksempelFlervalg.png image/png nb images/eksempelFlervalg.png
+        docs/images/eksempelKomposisjonOgSamling.png image/png nb images/eksempelKomposisjonOgSamling.png
+        docs/images/eksempelModul.png image/png nb images/eksempelModul.png
+        docs/images/eksempelNote.png image/png nb images/eksempelNote.png
+        docs/images/eksempelRealisering.png image/png nb images/eksempelRealisering.png
+        docs/images/eksempelRelasjonsegenskap.png image/png nb images/eksempelRelasjonsegenskap.png
+        docs/images/eksempelRotobjekttype.png image/png nb images/eksempelRotobjekttype.png
+        docs/images/KlassenAbstraksjon.png image/png nb images/KlassenAbstraksjon.png
+        docs/images/KlassenAktør.png image/png nb images/KlassenAktør.png
+        docs/images/KlassenAlle.png image/png nb images/KlassenAlle.png
+        docs/images/KlassenAssosiasjon.png image/png nb images/KlassenAssosiasjon.png
+        docs/images/KlassenAttributt.png image/png nb images/KlassenAttributt.png
+        docs/images/KlassenAvhengighet.png image/png nb images/KlassenAvhengighet.png
+        docs/images/KlassenDatatype.png image/png nb images/KlassenDatatype.png
+        docs/images/KlassenDokument.png image/png nb images/KlassenDokument.png
+        docs/images/KlassenEgenskap.png image/png nb images/KlassenEgenskap.png
+        docs/images/KlassenEller.png image/png nb images/KlassenEller.png
+        docs/images/KlassenEnkeltype.png image/png nb images/KlassenEnkeltype.png
+        docs/images/KlassenEntenEller.png image/png nb images/KlassenEntenEller.png
+        docs/images/KlassenIkke.png image/png nb images/KlassenIkke.png
+        docs/images/KlassenInformasjonsmodell.png image/png nb images/KlassenInformasjonsmodell.png
+        docs/images/KlassenKatalogisertRessurs.png image/png nb images/KlassenKatalogisertRessurs.png
+        docs/images/KlassenKodeelement.png image/png nb images/KlassenKodeelement.png
+        docs/images/KlassenKodeliste.png image/png nb images/KlassenKodeliste.png
+        docs/images/KlassenKomposisjon.png image/png nb images/KlassenKomposisjon.png
+        docs/images/KlassenKontaktpunkt.png image/png nb images/KlassenKontaktpunkt.png
+        docs/images/KlassenModellElement.png image/png nb images/KlassenModellElement.png
+        docs/images/KlassenModellkatalog.png image/png nb images/KlassenModellkatalog.png
+        docs/images/KlassenModul.png image/png nb images/KlassenModul.png
+        docs/images/KlassenNoenAv.png image/png nb images/KlassenNoenAv.png
+        docs/images/KlassenNote.png image/png nb images/KlassenNote.png
+        docs/images/KlassenObjekttype.png image/png nb images/KlassenObjekttype.png
+        docs/images/KlassenOg.png image/png nb images/KlassenOg.png
+        docs/images/KlassenRealisering.png image/png nb images/KlassenRealisering.png
+        docs/images/KlassenRolle.png image/png nb images/KlassenRolle.png
+        docs/images/KlassenRotobjekttype.png image/png nb images/KlassenRotobjekttype.png
+        docs/images/KlassenSamling.png image/png nb images/KlassenSamling.png
+        docs/images/KlassenSpesialisering.png image/png nb images/KlassenSpesialisering.png
+        docs/images/KlassenStandard.png image/png nb images/KlassenStandard.png
+        docs/images/KlassenTidsrom.png image/png nb images/KlassenTidsrom.png
+        docs/images/KlassenValg.png image/png nb images/KlassenValg.png
+        docs/images/ModellDCAT-AP-NO-forenklet-fremstilling.png image/png nb images/ModellDCAT-AP-NO-forenklet-fremstilling.png
+        docs/images/ModellDCAT-AP-NO-klasser.png image/png nb images/ModellDCAT-AP-NO-klasser.png
+        docs/images/sammenheng.png image/png nb images/sammenheng.png
     secrets:
       STATIC_RDF_SERVER_API_KEY: ${{ secrets.STATIC_RDF_SERVER_API_KEY }}

@@ -14,18 +14,21 @@
 ex-simpleModel:Katalog  a               dcat:Catalog ; #Modellkatalog
         ###### mandatory:
         dct:description         "Modellkatalog med modelleksempel."@nb ; #beskrivelse
-        dct:identifier          "https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exSimpleModel#Katalog"^^xsd:anyURI ; #identifikator
-        dct:publisher           <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ; #utgiver
+        dcat:contactPoint       ex-contactPoint ; #kontaktpunkt
         dct:title               "Modellkatalogeksempel"@nb ; #tittel
+        modelldcatno:model      ex-simpleModel:EnkelModell ; #modell (subegenskap av dct:hasPart)
+        dct:publisher           <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ; #utgiver
         ###### recommended:
-        modelldcatno:model      ex-simpleModel:EnkelModell . #modell
+        dct:identifier          "https://github.com/Informasjonsforvaltning/modelldcat-ap-no/examples/exSimpleModel#Katalog"^^xsd:anyURI ; #identifikator
+        .
 
 #Kun obligatoriske egenskaper er tatt med for informasjonsmodell (modelldcatno:InformationModel), samt modelldcatno:containsModelElement for å beskrive modellinnholdet.
 ex-simpleModel:EnkelModell  a         modelldcatno:InformationModel ; #Informasjonsmodell
         ###### mandatory:
-        dct:publisher           <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ; #utgiver
+        dcat:contactPoint       ex-contactPoint ; #kontaktpunkt
         dct:title               "Enkel modell"@nb ; #tittel
-         ###### recommended:
+        dct:publisher           <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ; #utgiver
+        ###### recommended:
         modelldcatno:containsModelElement #inneholder modellelement
                 ex-simpleModel:Aktør , ex-simpleModel:Person , ex-simpleModel:Kjønn , ex-simpleModel:Personnavn , ex-simpleModel:Tekst , ex-simpleModel:GeografiskAdresse .
 
@@ -179,3 +182,8 @@ ex-simpleModel:ModulTyper   a      modelldcatno:Module ; #Modul
 ex-simpleModel:ModulAdresse   a      modelldcatno:Module ; #Modul
         ###### mandatory:
         dct:title       "Adresse"@nb . #tittel
+
+ex-contactPoint a vcard:Organization ; # Kontaktpunkt - organisasjon
+    vcard:fn "Digitaliseringsdirektoratet"@nb , "The Norwegian Digitalisation Agency"@en ; # fullt navn - obligatorisk
+    vcard:hasEmail <mailto:informasjonsforvaltning@digdir.no> ; # e-post - anbefalt
+    .

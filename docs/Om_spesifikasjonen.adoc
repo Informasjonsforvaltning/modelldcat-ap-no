@@ -1,0 +1,43 @@
+== Om spesifikasjonen [[Om-spesifikasjonen]]
+
+=== Formål [[Formal]]
+
+Offentlige virksomheter forvalter en rekke informasjonsmodeller knyttet til prosesser og data som understøtter deres samfunnsoppdrag. Det er et stort potensial i å effektivisere informasjonsdelingen mellom virksomhetene ved å ha en felles tilnærming til utforming og forvaltning av modellene. Lik tilnærming gjør det også mulig å sammenligne informasjonsmodeller på tvers av virksomheter for å avdekke likheter som grunnlag for samordning og forenkling.
+
+Denne spesifikasjonen skal sikre at beskrivelser av informasjonsmodeller utføres på en felles, strukturert måte og i en maskinlesbar form. Spesifikasjonen stiller krav til hva som _skal_, _bør_ og _kan_ være med i beskrivelsene, med spesifikasjon av dataformat. Dette vil gjøre det enklere å oppdage og forstå informasjonsmodeller i offentlig sektor, utveksle informasjonsmodeller maskinelt, samt gjenbruke informasjonsmodeller eller elementer i dem.
+
+ModellDCAT-AP-NO er basert på https://data.norge.no/specification/dcat-ap-no[DCAT-AP-NO &#x29C9;, window="_blank", role="ext-link"] og inngår i https://www.digdir.no/informasjonsforvaltning/rammeverk-informasjonsforvaltning/3626[Rammeverk for informasjonsforvaltning &#x29C9;, window="_blank", role="ext-link"] .
+
+Egenskapsnavnene fra den underliggende DCAT-standarden er gitt norske navn. Siden ModellDCAT-AP-NO legger til rette for internasjonal utveksling, skal engelske egenskapsnavn i form av URI-er benyttes.
+
+=== Omfang og avgrensing [[Omfang]]
+
+Spesifikasjonen er anbefalt brukt for å beskrive informasjonsmodeller. Den vil gjelde alle typer informasjonsmodeller _som beskrives med tanke på oppføring i en katalog eller «inventarliste» (intern eller ekstern)_. 
+
+Denne spesifikasjonen, ModellDCAT-AP-NO, er en norsk applikasjonsprofil av DCAT for beskrivelse og utveksling av informasjonsmodeller, som ett av flere aspekter ved datasett/datatjenester. Men informasjonsmodeller kan beskrives uavhengig av om man har tilknyttet datasett og/eller datatjenester. I ModellDCAT-AP-NO er informasjonsmodell subklasse av Standard (`dct:Standard`). Ved å bruke egenskapen `dct:conformsTo` for datasett og datatjeneste i DCAT-AP-NO, kan et datasett eller en datatjeneste referere til en informasjonsmodell.
+
+=== Målgrupper [[Målgrupper]]
+
+Spesifikasjonen har som sin målgruppe
+
+* deg som skal beskrive din virksomhets informasjonsmodeller 
+* deg som søker etter og ønsker å gjenbruke informasjonsmodeller fra andre virksomheter
+* deg som skal utvikle/tilpasse verktøystøtte for ovennevnte beskrivelser og/eller for tilgjengeliggjøring/utveksling av beskrivelsene
+
+De påfølgende kapitlene er rettet mot ulike målgrupper:
+
+* <<Forenklet-fremstilling>> gir en introduksjon for ikke‑tekniske lesere, med en overordnet og forenklet fremstilling av kravene i denne spesifikasjonen. 
+* <<Spesifikasjon-per-klasse>> forutsetter et visst kunnskapsnivå om RDF og retter seg mot tekniske lesere som skal utvikle eller tilpasse verktøystøtte. 
+* <<Spesielle-temaer>> er relevante for begge målgrupper og bør leses samlet for best forståelse. 
+
+=== Forvaltningsregime [[Forvaltningsregime]]
+
+Spesifikasjonen forvaltes av https://digdir.no[Digitaliseringsdirektoratet (Digdir) &#x29C9;, window="_blank", role="ext-link"].
+
+Digdir initierer arbeidet med nye versjoner av spesifikasjonen, og håndterer selv løpende mindre endringer. Ved behov for større endringer vil Digdir vurdere å sette sammen en arbeidsgruppe med representanter fra relevante virksomheter, for utarbeidelse av forslag til den reviderte versjonen som sendes ut til bred kommentering før fastsetting.
+
+Gjeldende og eventuelle tidligere versjoner av spesifikasjonen skal være tilgjengelige på Digdirs nettsider, slik at det er enkelt å finne ut når tidligere versjoner var gyldige, og hvilke endringer som er foretatt mellom to versjoner.
+
+=== Om kravnivåene i spesifikasjonen [[Om-kravene]]
+
+Spesifikasjonen bruker ordene «obligatorisk» ("_mandatory_"), «anbefalt» ("_recommended_") og «valgfri» ("_optional_"). Disse er https://data.norge.no/specification/dcat-ap-no/#Om-kravene[forklart i DCAT-AP-NO &#x29C9;, window="_blank", role="ext-link"], og forklaringene gjentas ikke her.

@@ -17,7 +17,28 @@
 @prefix modelldcatno: <https://data.norge.no/vocabulary/modelldcatno#> .
 @base <https://data.norge.no/vocabulary/modelldcatno> .
 
-<https://data.norge.no/vocabulary/modelldcatno> rdf:type owl:Ontology .
+<https://data.norge.no/vocabulary/modelldcatno> rdf:type owl:Ontology ;
+   rdfs:label "Ontology for ModellDCAT-AP-NO"@en , "Ontologi for ModellDCAT-AP-NO"@nb ;
+   rdfs:comment "Ontologi for ModellDCAT-AP-NO."@nb ,
+      "Ontology for ModellDCAT-AP-NO."@en ;
+   rdfs:isDefinedBy "Digitaliseringsdirektoratet"@nb , "Norwegian Digitalisation Agency"@en ;
+   dct:creator [
+      foaf:homepage <https://www.digdir.no/> ;
+      foaf:name "Digitaliseringsdirektoratet"@nb , "Norwegian Digitalisation Agency"@en ;
+      ];
+   foaf:homepage <https://github.com/Informasjonsforvaltning/modelldcat-ap-no> ;
+   foaf:maker [
+      foaf:mbox <mailto:informasjonsforvaltning@digdir.no> ;
+      foaf:name "Informasjonsforvaltning, Digitaliseringsdirektoratet" ;
+      foaf:page <https://www.digdir.no>
+      ];
+   dct:license <https://creativecommons.org/licenses/by/4.0> ;
+   dct:modified "2027-07-27"^^xsd:date ;
+   owl:versionInfo "v.1.4" ;
+   adms:versionNotes "Manuelt redigert av Jim, for å tilpasse v.1.4 av ModellDCAT-AP-NO."@nb ,
+      "Manually edited by Jim, to align with v1.4 of ModellDCAT-AP-NO."@en
+   .
+
 
 #################################################################
 #    Annotation properties
@@ -77,7 +98,7 @@ skos:scopeNote rdf:type owl:AnnotationProperty ;
 ###  http://purl.org/dc/terms/conformsTo
 dct:conformsTo rdf:type owl:ObjectProperty ;
                rdfs:label "conforms to"@en ,
-                          "i henhold til"@nb .
+                          "i samsvar med"@nb .
 
 
 ###  http://purl.org/dc/terms/creator
@@ -269,7 +290,7 @@ modelldcatno:dependentOn rdf:type owl:ObjectProperty ;
 modelldcatno:formsSymmetryWith rdf:type owl:ObjectProperty ,
                                         owl:SymmetricProperty ;
                                rdfs:label "forms symmetry with"@en ,
-                                          "utgjør symetrisk relasjon med"@nb .
+                                          "utgjør symmetrisk relasjon med"@nb .
 
 
 ###  https://data.norge.no/vocabulary/modelldcatno#hasDataType
@@ -320,7 +341,7 @@ modelldcatno:hasSimpleType rdf:type owl:ObjectProperty ;
 ###  https://data.norge.no/vocabulary/modelldcatno#hasSome
 modelldcatno:hasSome rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf modelldcatno:hasType ;
-                     rdfs:comment "Brukes for å betegne at en valgmulighet ikke er ekskusiv, dvs. at man kan velge mer enn en."@nb ;
+                     rdfs:comment "Brukes for å betegne at en valgmulighet ikke er eksklusiv, dvs. at man kan velge mer enn en."@nb ;
                      rdfs:label "has some"@en ,
                                 "kan ha"@nb .
 
@@ -342,7 +363,7 @@ modelldcatno:hasType rdf:type owl:ObjectProperty ;
 ###  https://data.norge.no/vocabulary/modelldcatno#hasValueFrom
 modelldcatno:hasValueFrom rdf:type owl:ObjectProperty ;
                           rdfs:subPropertyOf modelldcatno:hasType ;
-                          rdfs:label "har verdier fra"@nb ,
+                          rdfs:label "har verdi fra"@nb ,
                                      "has value from"@en .
 
 
@@ -452,14 +473,14 @@ xsd:maxLength rdf:type owl:DatatypeProperty ,
 xsd:minExclusive rdf:type owl:DatatypeProperty ,
                           owl:FunctionalProperty ;
                  rdfs:label "min exclusive"@en ,
-                            "minimum eksklusive"@nb .
+                            "minimum eksklusiv"@nb .
 
 
 ###  http://www.w3.org/2001/XMLSchema#minInclusive
 xsd:minInclusive rdf:type owl:DatatypeProperty ,
                           owl:FunctionalProperty ;
                  rdfs:label "min inclusive"@en ,
-                            "minimum inklusive"@nb .
+                            "minimum inklusiv"@nb .
 
 
 ###  http://www.w3.org/2001/XMLSchema#minLength
@@ -716,7 +737,7 @@ dcat:Catalog rdf:type owl:Class ;
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty dct:identifier ;
-                               owl:minCardinality "1"^^xsd:nonNegativeInteger
+#                                owl:minCardinality "1"^^xsd:nonNegativeInteger
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty dct:title ;
@@ -834,7 +855,7 @@ thesaurus, taxonomy) used to classify Datasets in a Registry Catalogue."""@nb
    owl:annotatedProperty rdfs:subClassOf ;
    owl:annotatedTarget [ rdf:type owl:Restriction ;
                          owl:onProperty dct:identifier ;
-                         owl:minCardinality "1"^^xsd:nonNegativeInteger
+#                          owl:minCardinality "1"^^xsd:nonNegativeInteger
                        ] ;
    rdfs:comment "This property contains an identifier for the catalogue."@en
  ] .
@@ -1108,12 +1129,31 @@ modelldcatno:InformationModel rdf:type owl:Class ;
    owl:annotatedSource modelldcatno:InformationModel ;
    owl:annotatedProperty rdfs:subClassOf ;
    owl:annotatedTarget [ rdf:type owl:Restriction ;
-                         owl:onProperty dct:description ;
-                         owl:minCardinality "1"^^xsd:nonNegativeInteger
+                         owl:onProperty dct:title ;
+                         owl:minCardinality "1"^^xsd:nonNegativeInteger # title mandatory
                        ] ;
-   rdfs:comment "This property contains descriptive textual information about the Information Model. This property should be repeated in case there are various versions of the text in different languages."@en
+   rdfs:comment "This property contains the title of the Information Model. This property should be repeated in case there are various versions of the title in different languages."@en
  ] .
 
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource modelldcatno:InformationModel ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dcat:contactPoint ;
+                         owl:minCardinality "1"^^xsd:nonNegativeInteger # contact point mandatory
+                       ] ;
+   rdfs:comment "This property contains refers to a contact point (as vcard:Organization)."@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource modelldcatno:InformationModel ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty dct:publisher ;
+                         owl:minCardinality "1"^^xsd:nonNegativeInteger # publisher mandatory
+                       ] ;
+   rdfs:comment "This property contains refers to an Agent (foaf:Agent)."@en
+ ] .
 
 ###  https://data.norge.no/vocabulary/modelldcatno#ModelElement
 modelldcatno:ModelElement rdf:type owl:Class ;

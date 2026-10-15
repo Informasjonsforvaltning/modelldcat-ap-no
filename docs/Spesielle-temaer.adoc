@@ -1,0 +1,13 @@
+== Noen spesielle temaer [[Spesielle-temaer]]
+
+_Denne delen er ment for både den ikke-tekniske og den tekniske målgruppen, fortrinnsvis sammen._
+
+include::Spesielt-om-informasjonsmodeller.adoc[]
+
+include::Spesielt-om-modellelementer.adoc[]
+
+include::Spesielt-om-modellkatalog.adoc[]
+
+include::Spesielt-om-identifikator.adoc[]
+
+include::Spesielt-om-utgiver-og-produsent.adoc[]

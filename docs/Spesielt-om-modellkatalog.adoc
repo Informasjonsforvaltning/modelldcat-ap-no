@@ -1,0 +1,26 @@
+=== Å beskrive en modellkatalog [[om-modellkatalog]]
+
+==== Hva bruker du en modellkatalog til? [[hva-brukes-modellkatalog-til]]
+
+Informasjonsmodeller fra en eller flere virksomheter samles i en modellkatalog. En modellkatalog kan ses som et omslag til eller innbinding av modellene. En modellkatalog skal ha én utgiver, og en og samme virksomhet kan være utgiver av flere modellkataloger.
+
+====  Hvordan beskriver du en modellkatalog? [[hvordan-beskrive-en-modellkatalog]]
+
+Som minimum skal følgende egenskaper ha verdier:
+
+* «beskrivelse» (`dct:description`): en kort og presis beskrivelse av modellkatalogen skal gjøre det lett for andre å se hva katalogen inneholder. Beskrivelse er et obligatorisk felt. Den bør gjentas når beskrivelsen finnes i flere ulike språk/målformer.
+
+*  «tittel» (`dct:title`): et kortfattet navn på katalogen. Angi, uten å liste, hvilke modeller den omfatter, f.eks. «Informasjonsmodellene til Digitaliseringsdirektoratet». Den bør gjentas når tittelen finnes i flere ulike språk/målformer.
+
+* «modell» (`modelldcatno:model`): en eller flere informasjonsmodeller som er inkludert i modellkatalogen
+** med mindre det er en modellkatalog som bare består av modellkataloger, er det obligatorisk å inkludere minst én informasjonsmodell i en modellkatalog ved å bruke denne egenskapen. 
+
+*  «utgiver» (`dct:publisher`): utgiveren av katalogen, se ogs <<om-utgiver-og-produsent, Om ... «utgiver»>>.
+
+* «kontaktpunkt» (`dcat:contactPoint`): kontaktpunkt som kan brukes ved spørsmål om katalogen. 
+
+Se https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/examples/testModCat1.ttl[eksemplet i RDF Turtle #x29C9;, window="_blank", role="ext-link"].
+
+====  Hvordan publiserer du en modellkatalog til data.norge.no? [[hvordan-publisere-på-datanorge]]
+
+Når du har beskrevet din modellkatalog med dine modeller i henhold til denne spesifikasjonen, kan katalogens innhold automatisk høstes til den felles modellkatalogen på data.norge.no, se hvordan du kan https://data.norge.no/nb/docs/sharing-data/how-to-dataset/6-harvesting[sette opp datakilde som data.norge.no henter fra #x29C9;, window="_blank", role="ext-link"]. 
